@@ -380,240 +380,281 @@ export default function Dashboard({ user, onLogout }) {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
+    <div className="min-h-screen bg-background flex text-on-surface overflow-hidden">
 
       {/* LEFT SIDEBAR */}
-      <aside className="w-64 bg-white border-r border-slate-200 flex flex-col justify-between fixed top-0 bottom-0 left-0 z-30">
+      <aside className="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest border-r border-outline-variant flex flex-col justify-between py-6 px-4 z-50">
         
         {/* Top Branding & Nav */}
-        <div className="p-6 space-y-8">
+        <div className="space-y-10">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
-              </svg>
+          <div className="mb-10 px-2 flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+              <span className="material-symbols-outlined text-white" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
             </div>
-            <span className="text-lg font-bold tracking-tight text-slate-900">Campusly</span>
+            <div>
+              <h1 className="font-headline-lg text-headline-lg font-black text-on-surface leading-none">Campusly</h1>
+              <p className="font-label-md text-label-md text-on-surface-variant">Admin Portal</p>
+            </div>
           </div>
 
           {/* Navigation Links */}
-          <nav className="space-y-1.5">
+          <nav className="space-y-1">
             <button 
               onClick={() => { setActiveTab('overview'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg font-body-md text-body-md transition-all active:scale-95 duration-150 ${
                 activeTab === 'overview' 
-                  ? 'bg-[#EFF6FF] text-secondary' 
-                  : 'text-neutral hover:text-primary hover:bg-slate-50'
+                  ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-bold' 
+                  : 'text-on-surface-variant hover:bg-surface-container-low'
               }`}
             >
-              <span className="material-symbols-outlined text-[20px]">dashboard</span>
+              <span className="material-symbols-outlined" style={activeTab === 'overview' ? { fontVariationSettings: "'FILL' 1" } : {}}>dashboard</span>
               <span>Overview</span>
             </button>
             <button 
               onClick={() => { setActiveTab('students'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg font-body-md text-body-md transition-all active:scale-95 duration-150 ${
                 activeTab === 'students' 
-                  ? 'bg-[#EFF6FF] text-secondary' 
-                  : 'text-neutral hover:text-primary hover:bg-slate-50'
+                  ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-bold' 
+                  : 'text-on-surface-variant hover:bg-surface-container-low'
               }`}
             >
-              <span className="material-symbols-outlined text-[20px]">person</span>
+              <span className="material-symbols-outlined" style={activeTab === 'students' ? { fontVariationSettings: "'FILL' 1" } : {}}>person</span>
               <span>Students</span>
             </button>
             <button 
               onClick={() => { setActiveTab('departments'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg font-body-md text-body-md transition-all active:scale-95 duration-150 ${
                 activeTab === 'departments' 
-                  ? 'bg-[#EFF6FF] text-secondary' 
-                  : 'text-neutral hover:text-primary hover:bg-slate-50'
+                  ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-bold' 
+                  : 'text-on-surface-variant hover:bg-surface-container-low'
               }`}
             >
-              <span className="material-symbols-outlined text-[20px]">account_balance</span>
+              <span className="material-symbols-outlined" style={activeTab === 'departments' ? { fontVariationSettings: "'FILL' 1" } : {}}>account_balance</span>
               <span>Departments & Classes</span>
             </button>
             <button 
               onClick={() => { setActiveTab('faculty'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg font-body-md text-body-md transition-all active:scale-95 duration-150 ${
                 activeTab === 'faculty' 
-                  ? 'bg-[#EFF6FF] text-secondary' 
-                  : 'text-neutral hover:text-primary hover:bg-slate-50'
+                  ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-bold' 
+                  : 'text-on-surface-variant hover:bg-surface-container-low'
               }`}
             >
-              <span className="material-symbols-outlined text-[20px]">group</span>
+              <span className="material-symbols-outlined" style={activeTab === 'faculty' ? { fontVariationSettings: "'FILL' 1" } : {}}>group</span>
               <span>Faculty Directory</span>
             </button>
           </nav>
         </div>
 
         {/* Bottom Profile & Logout */}
-        <div className="p-6 border-t border-slate-100 space-y-4">
-          <div className="min-w-0">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider leading-none mb-1">Administrator</p>
-            <p className="text-sm font-bold text-slate-800 truncate" title={user?.email}>{user?.email || 'codewithsachin10@gmail.com'}</p>
+        <div className="mt-auto border-t border-outline-variant pt-6 space-y-4">
+          <div className="px-2">
+            <p className="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 leading-none">Administrator</p>
+            <p className="text-xs font-bold text-on-surface truncate" title={user?.email}>{user?.email || 'codewithsachin10@gmail.com'}</p>
           </div>
           <button 
             onClick={onLogout}
-            className="w-full py-2 px-3 bg-slate-50 hover:bg-red-50 hover:text-red-600 border border-slate-200 hover:border-red-100 rounded-lg font-bold text-xs text-slate-700 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg font-body-md text-error hover:bg-red-50 transition-colors cursor-pointer"
           >
-            <span className="material-symbols-outlined text-[16px]">logout</span>
-            Logout
+            <span className="material-symbols-outlined">logout</span>
+            <span>Logout</span>
           </button>
         </div>
 
       </aside>
 
       {/* MAIN WORKSPACE CANVAS */}
-      <main className="flex-1 ml-64 min-h-screen p-8 relative">
+      <main className="ml-[260px] min-h-screen flex flex-col relative overflow-y-auto h-screen custom-scrollbar w-[calc(100vw-260px)]">
 
-        {/* Loading skeleton loader state */}
-        {loading ? (
-          <div className="space-y-6">
-            <div className="h-6 w-48 bg-slate-200 rounded animate-pulse"></div>
-            <div className="h-4 w-64 bg-slate-200 rounded animate-pulse"></div>
-            <div className="grid grid-cols-4 gap-6 pt-6">
-              {[1, 2, 3, 4].map(n => (
-                <div key={n} className="bg-white border border-slate-200 p-6 rounded-xl space-y-3 shadow-sm h-32 animate-pulse">
-                  <div className="h-4 w-20 bg-slate-200 rounded"></div>
-                  <div className="h-8 w-24 bg-slate-200 rounded"></div>
-                </div>
-              ))}
-            </div>
-            <div className="bg-white border border-slate-200 rounded-xl h-[400px] animate-pulse"></div>
+        {/* Top App Bar */}
+        <header className="sticky top-0 z-40 h-16 px-10 bg-surface flex justify-between items-center border-b border-outline-variant flex-shrink-0">
+          <div className="flex items-center gap-4">
+            <span className="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-surface-container rounded-full p-2 transition-all">menu_open</span>
+            <h2 className="font-title-lg text-title-lg text-on-surface font-semibold capitalize">
+              {activeTab === 'departments' ? 'Departments & Classes' : activeTab === 'faculty' ? 'Faculty Directory' : activeTab}
+            </h2>
           </div>
-        ) : (
-          <div className="max-w-[1200px] mx-auto space-y-8 animate-fade-in">
-            
-            {/* ============================== PAGE 3: OVERVIEW TAB ============================== */}
-            {activeTab === 'overview' && (
-              <div className="space-y-8">
-                <div>
-                  <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Overview</h1>
-                  <p className="text-sm text-slate-500">Campusly system overview.</p>
-                </div>
+          <div className="flex items-center gap-6">
+            <span className="font-label-md text-label-md text-on-surface-variant">Last synced: 2m ago</span>
+            <button className="font-label-md text-label-md text-primary font-bold hover:bg-surface-container p-2 rounded-lg transition-all flex items-center gap-1">
+              <span className="material-symbols-outlined text-[18px]">refresh</span> Refresh
+            </button>
+            <div className="relative">
+              <span className="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-surface-container rounded-full p-2 transition-all">notifications</span>
+              <span className="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+            </div>
+            <div className="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[12px]">
+              AD
+            </div>
+          </div>
+        </header>
 
-                {/* 4 Statistics grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Total Students</p>
-                    <p className="text-3xl font-black text-slate-900">1,248</p>
+        {/* Canvas area wrapper */}
+        <div className="flex-1 px-10 py-8 max-w-[1440px] w-full">
+          {loading ? (
+            <div className="space-y-6">
+              <div className="h-6 w-48 bg-slate-200 rounded animate-pulse"></div>
+              <div className="h-4 w-64 bg-slate-200 rounded animate-pulse"></div>
+              <div className="grid grid-cols-4 gap-6 pt-6">
+                {[1, 2, 3, 4].map(n => (
+                  <div key={n} className="bg-white border border-outline-variant p-6 rounded-xl space-y-3 shadow-sm h-32 animate-pulse">
+                    <div className="h-4 w-20 bg-slate-200 rounded"></div>
+                    <div className="h-8 w-24 bg-slate-200 rounded"></div>
                   </div>
-                  <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Active Students</p>
-                    <p className="text-3xl font-black text-slate-900">1,186</p>
-                  </div>
-                  <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Faculty</p>
-                    <p className="text-3xl font-black text-slate-900">86</p>
-                  </div>
-                  <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Departments</p>
-                    <p className="text-3xl font-black text-slate-900">8</p>
-                  </div>
-                </div>
-
-                {/* Current System Status Block */}
-                <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm space-y-4">
-                  <h3 className="text-base font-bold text-slate-900">Current System Status</h3>
-                  <div className="divide-y divide-slate-100">
-                    <div className="py-3 flex items-center justify-between">
-                      <span className="text-sm font-semibold text-slate-700">Students</span>
-                      <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-100 uppercase tracking-wide">Active</span>
-                    </div>
-                    <div className="py-3 flex items-center justify-between">
-                      <span className="text-sm font-semibold text-slate-700">Faculty Directory</span>
-                      <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-100 uppercase tracking-wide">Active</span>
-                    </div>
-                    <div className="py-3 flex items-center justify-between">
-                      <span className="text-sm font-semibold text-slate-700">Academic Structure</span>
-                      <span className="px-2.5 py-0.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Configured</span>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
-            )}
+              <div className="bg-white border border-outline-variant rounded-xl h-[400px] animate-pulse"></div>
+            </div>
+          ) : (
+            <div className="space-y-8 animate-fade-in">
+              
+              {/* ============================== PAGE 3: OVERVIEW TAB ============================== */}
+              {activeTab === 'overview' && (
+                <div className="space-y-8">
+                  {/* Page Header */}
+                  <div>
+                    <h3 className="font-headline-lg text-headline-lg text-on-surface mb-1">Overview</h3>
+                    <p className="font-body-md text-body-md text-on-surface-variant">Campusly system overview.</p>
+                  </div>
+
+                  {/* 4 Statistics grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div className="bg-white border border-outline-variant p-5 rounded-xl shadow-sm">
+                      <p className="font-label-md text-label-md text-on-surface-variant mb-1">Total Students</p>
+                      <div className="flex items-end gap-2">
+                        <span className="font-headline-lg text-headline-lg">1,248</span>
+                        <span className="font-label-md text-emerald-600 mb-1 flex items-center gap-0.5">
+                          <span className="material-symbols-outlined text-[14px]">trending_up</span> 4.2%
+                        </span>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-outline-variant p-5 rounded-xl shadow-sm">
+                      <p className="font-label-md text-label-md text-on-surface-variant mb-1">Active Students</p>
+                      <div className="flex items-end gap-2">
+                        <span className="font-headline-lg text-headline-lg">1,186</span>
+                        <span className="text-on-surface-variant font-label-md mb-1">95.0%</span>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-outline-variant p-5 rounded-xl shadow-sm">
+                      <p className="font-label-md text-label-md text-on-surface-variant mb-1">Faculty</p>
+                      <div className="flex items-end gap-2">
+                        <span className="font-headline-lg text-headline-lg">86</span>
+                        <span className="text-on-surface-variant font-label-md mb-1">Directory</span>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-outline-variant p-5 rounded-xl shadow-sm">
+                      <p className="font-label-md text-label-md text-on-surface-variant mb-1">Departments</p>
+                      <div className="flex items-end gap-2">
+                        <span className="font-headline-lg text-headline-lg">8</span>
+                        <span className="text-on-surface-variant font-label-md mb-1">Configured</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Current System Status Block */}
+                  <div className="bg-white border border-outline-variant rounded-xl p-6 shadow-sm space-y-4">
+                    <h3 className="text-base font-bold text-on-surface">Current System Status</h3>
+                    <div className="divide-y divide-outline-variant">
+                      <div className="py-3.5 flex items-center justify-between">
+                        <span className="text-sm font-semibold text-on-surface-variant">Students</span>
+                        <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full border border-emerald-200/50 uppercase tracking-wide">Active</span>
+                      </div>
+                      <div className="py-3.5 flex items-center justify-between">
+                        <span className="text-sm font-semibold text-on-surface-variant">Faculty Directory</span>
+                        <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full border border-emerald-200/50 uppercase tracking-wide">Active</span>
+                      </div>
+                      <div className="py-3.5 flex items-center justify-between">
+                        <span className="text-sm font-semibold text-on-surface-variant">Academic Structure</span>
+                        <span className="px-2.5 py-0.5 bg-blue-100 text-blue-800 text-xs font-bold rounded-full border border-blue-200/50 uppercase tracking-wide">Configured</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
             {/* ============================== PAGE 4: STUDENTS TAB ============================== */}
             {activeTab === 'students' && (
               <div className="space-y-6">
                 
-                {/* Header row */}
-                <div className="flex justify-between items-center">
+                {/* Page Header */}
+                <div className="flex justify-between items-end mb-8">
                   <div>
-                    <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Students</h1>
-                    <p className="text-sm text-slate-500">Manage registered students.</p>
+                    <h3 className="font-headline-lg text-headline-lg text-on-surface mb-1">Students</h3>
+                    <p className="font-body-md text-body-md text-on-surface-variant">Manage registered students.</p>
                   </div>
                   <button 
                     onClick={() => setModalType('add_student')}
-                    className="py-2 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-lg transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer"
+                    className="bg-primary text-white px-6 py-2.5 rounded-lg flex items-center gap-2 font-semibold shadow-sm hover:opacity-90 active:scale-95 transition-all cursor-pointer text-sm"
                   >
-                    <span className="material-symbols-outlined text-[18px]">add</span>
-                    Add Student
+                    <span className="material-symbols-outlined text-[20px]">add</span>
+                    <span>Add Student</span>
                   </button>
                 </div>
 
-                {/* SEARCH AND FILTERS */}
-                <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4">
-                  <div className="flex-1 relative">
-                    <span className="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-slate-400">search</span>
-                    <input 
-                      type="text" 
-                      value={studentSearch}
-                      onChange={(e) => setStudentSearch(e.target.value)}
-                      placeholder="Search students..."
-                      className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm text-slate-800 focus:outline-none focus:border-slate-400 placeholder:text-slate-400"
-                    />
+                {/* UNIFIED SEARCH, FILTERS & TABLE CONTAINER CARD */}
+                <div className="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm mb-8">
+                  
+                  {/* Filters header bar */}
+                  <div className="px-6 py-4 border-b border-outline-variant bg-surface flex flex-wrap gap-4 items-center justify-between">
+                    <div className="flex items-center gap-4 flex-1">
+                      <div className="relative max-w-md w-full">
+                        <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+                        <input 
+                          type="text" 
+                          value={studentSearch}
+                          onChange={(e) => setStudentSearch(e.target.value)}
+                          placeholder="Search by name, email..."
+                          className="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-body-md transition-all outline-none bg-white"
+                        />
+                      </div>
+                      <select 
+                        value={studentDeptFilter} 
+                        onChange={(e) => setStudentDeptFilter(e.target.value)}
+                        className="border border-outline-variant rounded-lg px-4 py-2 text-body-md focus:ring-2 focus:ring-secondary focus:border-secondary bg-white outline-none text-xs font-semibold text-slate-700"
+                      >
+                        <option value="All">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                      </select>
+                      <select 
+                        value={studentYearFilter} 
+                        onChange={(e) => setStudentYearFilter(e.target.value)}
+                        className="border border-outline-variant rounded-lg px-4 py-2 text-body-md focus:ring-2 focus:ring-secondary focus:border-secondary bg-white outline-none text-xs font-semibold text-slate-700"
+                      >
+                        <option value="All">All Years</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                      </select>
+                      <select 
+                        value={studentSecFilter} 
+                        onChange={(e) => setStudentSecFilter(e.target.value)}
+                        className="border border-outline-variant rounded-lg px-4 py-2 text-body-md focus:ring-2 focus:ring-secondary focus:border-secondary bg-white outline-none text-xs font-semibold text-slate-700"
+                      >
+                        <option value="All">All Sections</option>
+                        <option value="Section A">Section A</option>
+                        <option value="Section B">Section B</option>
+                        <option value="Section C">Section C</option>
+                      </select>
+                      <select 
+                        value={studentStatusFilter} 
+                        onChange={(e) => setStudentStatusFilter(e.target.value)}
+                        className="border border-outline-variant rounded-lg px-4 py-2 text-body-md focus:ring-2 focus:ring-secondary focus:border-secondary bg-white outline-none text-xs font-semibold text-slate-700"
+                      >
+                        <option value="All">All Statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="Suspended">Suspended</option>
+                      </select>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap items-center gap-3">
-                    <select 
-                      value={studentDeptFilter} 
-                      onChange={(e) => setStudentDeptFilter(e.target.value)}
-                      className="border border-slate-200 rounded-lg p-2 text-xs font-semibold text-slate-700 bg-white"
-                    >
-                      <option value="All">All Departments</option>
-                      <option value="Computer Science">Computer Science</option>
-                      <option value="Electrical Engineering">Electrical Engineering</option>
-                    </select>
-                    <select 
-                      value={studentYearFilter} 
-                      onChange={(e) => setStudentYearFilter(e.target.value)}
-                      className="border border-slate-200 rounded-lg p-2 text-xs font-semibold text-slate-700 bg-white"
-                    >
-                      <option value="All">All Years</option>
-                      <option value="1st Year">1st Year</option>
-                      <option value="2nd Year">2nd Year</option>
-                      <option value="3rd Year">3rd Year</option>
-                      <option value="4th Year">4th Year</option>
-                    </select>
-                    <select 
-                      value={studentSecFilter} 
-                      onChange={(e) => setStudentSecFilter(e.target.value)}
-                      className="border border-slate-200 rounded-lg p-2 text-xs font-semibold text-slate-700 bg-white"
-                    >
-                      <option value="All">All Sections</option>
-                      <option value="Section A">Section A</option>
-                      <option value="Section B">Section B</option>
-                      <option value="Section C">Section C</option>
-                    </select>
-                    <select 
-                      value={studentStatusFilter} 
-                      onChange={(e) => setStudentStatusFilter(e.target.value)}
-                      className="border border-slate-200 rounded-lg p-2 text-xs font-semibold text-slate-700 bg-white"
-                    >
-                      <option value="All">All Statuses</option>
-                      <option value="Active">Active</option>
-                      <option value="Suspended">Suspended</option>
-                    </select>
-                  </div>
-                </div>
 
-                {/* STUDENT TABLE */}
-                <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                  {/* Table area */}
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                       <thead>
-                        <tr className="bg-slate-50 border-b border-slate-100 text-slate-400 font-bold text-xs uppercase tracking-wider">
+                        <tr className="bg-slate-50 border-b border-outline-variant text-slate-500 font-bold text-xs uppercase tracking-wider">
                           <th className="px-6 py-4">Name</th>
                           <th className="px-6 py-4">Email</th>
                           <th className="px-6 py-4">Department</th>
@@ -632,7 +673,7 @@ export default function Dashboard({ user, onLogout }) {
                             <td className="px-6 py-4">{s.year || '1st Year'}</td>
                             <td className="px-6 py-4">{s.section || 'Section A'}</td>
                             <td className="px-6 py-4">
-                              <span className={`px-2 py-0.5 text-xs font-bold rounded-full border ${
+                              <span className={`px-2.5 py-0.5 text-xs font-bold rounded-full border ${
                                 s.status === 'Suspended' 
                                   ? 'bg-red-50 text-red-700 border-red-100' 
                                   : 'bg-emerald-50 text-emerald-700 border-emerald-100'
@@ -1002,50 +1043,54 @@ export default function Dashboard({ user, onLogout }) {
             {activeTab === 'faculty' && (
               <div className="space-y-6">
                 
-                {/* Header row */}
-                <div className="flex justify-between items-center">
+                {/* Page Header */}
+                <div className="flex justify-between items-end mb-8">
                   <div>
-                    <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Faculty Directory</h1>
-                    <p className="text-sm text-slate-500">Manage faculty and cabin information.</p>
+                    <h3 className="font-headline-lg text-headline-lg text-on-surface mb-1">Faculty Directory</h3>
+                    <p className="font-body-md text-body-md text-on-surface-variant">Manage faculty profiles and cabin locations available to students.</p>
                   </div>
                   <button 
                     onClick={() => setModalType('add_faculty')}
-                    className="py-2 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-lg transition-colors flex items-center gap-1.5 shadow-sm cursor-pointer"
+                    className="bg-primary text-white px-6 py-2.5 rounded-lg flex items-center gap-2 font-semibold shadow-sm hover:opacity-90 active:scale-95 transition-all cursor-pointer text-sm"
                   >
-                    <span className="material-symbols-outlined text-[18px]">add</span>
-                    Add Faculty
+                    <span className="material-symbols-outlined text-[20px]">add</span>
+                    <span>Add Faculty</span>
                   </button>
                 </div>
 
-                {/* SEARCH AND FILTER */}
-                <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex flex-col md:flex-row gap-4">
-                  <div className="flex-1 relative">
-                    <span className="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-slate-400">search</span>
-                    <input 
-                      type="text" 
-                      value={facultySearch}
-                      onChange={(e) => setFacultySearch(e.target.value)}
-                      placeholder="Search faculty..."
-                      className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm text-slate-800 focus:outline-none focus:border-slate-400 placeholder:text-slate-400"
-                    />
+                {/* UNIFIED SEARCH, FILTERS & TABLE CONTAINER CARD */}
+                <div className="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-sm mb-8">
+                  
+                  {/* Filters header bar */}
+                  <div className="px-6 py-4 border-b border-outline-variant bg-surface flex flex-wrap gap-4 items-center justify-between">
+                    <div className="flex items-center gap-4 flex-1">
+                      <div className="relative max-w-md w-full">
+                        <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+                        <input 
+                          type="text" 
+                          value={facultySearch}
+                          onChange={(e) => setFacultySearch(e.target.value)}
+                          placeholder="Search by name, email, or room..."
+                          className="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary focus:border-secondary text-body-md transition-all outline-none bg-white"
+                        />
+                      </div>
+                      <select 
+                        value={facultyDeptFilter} 
+                        onChange={(e) => setFacultyDeptFilter(e.target.value)}
+                        className="border border-outline-variant rounded-lg px-4 py-2 text-body-md focus:ring-2 focus:ring-secondary focus:border-secondary bg-white outline-none text-xs font-semibold text-slate-700"
+                      >
+                        <option value="All">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                      </select>
+                    </div>
                   </div>
-                  <select 
-                    value={facultyDeptFilter} 
-                    onChange={(e) => setFacultyDeptFilter(e.target.value)}
-                    className="border border-slate-200 rounded-lg p-2 text-xs font-semibold text-slate-700 bg-white"
-                  >
-                    <option value="All">All Departments</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Electrical Engineering">Electrical Engineering</option>
-                  </select>
-                </div>
 
-                {/* FACULTY TABLE */}
-                <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                  {/* Table area */}
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                       <thead>
-                        <tr className="bg-slate-50 border-b border-slate-100 text-slate-400 font-bold text-xs uppercase tracking-wider">
+                        <tr className="bg-slate-50 border-b border-outline-variant text-slate-500 font-bold text-xs uppercase tracking-wider">
                           <th className="px-6 py-4">Name</th>
                           <th className="px-6 py-4">Email</th>
                           <th className="px-6 py-4">Department</th>
@@ -1163,6 +1208,7 @@ export default function Dashboard({ user, onLogout }) {
           </div>
         )}
 
+      </div>
       </main>
 
       {/* ========================================================================= */}
