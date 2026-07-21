@@ -330,7 +330,8 @@ export default function Dashboard({ user, onLogout }) {
 
       {/* Main Content Area */}
       <main className="ml-[260px] pt-16 min-h-screen">
-        <div className="p-[32px] max-w-[1440px] mx-auto space-y-[24px]">
+        <div className="p-[32px] max-w-[1440px] mx-auto">
+          <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-soft min-h-[calc(100vh-128px)] space-y-6">
           
           {/* ==================== OVERVIEW TAB ==================== */}
           {activeTab === 'overview' && (
@@ -931,6 +932,7 @@ export default function Dashboard({ user, onLogout }) {
             </div>
           )}
 
+          </div>
         </div>
       </main>
     </div>
