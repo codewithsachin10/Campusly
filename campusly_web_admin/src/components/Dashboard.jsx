@@ -241,53 +241,69 @@ export default function Dashboard({ user, onLogout }) {
           </div>
         </div>
 
-        <nav className="flex-grow space-y-1">
+        <nav className="flex-grow space-y-3">
+          {/* Card Item: Overview */}
           <div 
             onClick={() => setActiveTab('overview')}
-            className={`flex items-center gap-3 py-3 px-4 cursor-pointer rounded-lg font-body-md text-body-md transition-all active:scale-95 ${
+            className={`p-4 cursor-pointer rounded-xl border transition-all duration-200 active:scale-95 flex flex-col gap-1.5 shadow-sm ${
               activeTab === 'overview' 
-                ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-semibold' 
-                : 'text-on-surface-variant hover:bg-surface-container-low'
+                ? 'bg-surface-container-high border-secondary text-secondary font-semibold shadow-soft' 
+                : 'bg-white border-outline-variant text-on-surface-variant hover:border-outline hover:bg-surface-bright'
             }`}
           >
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'overview' ? "'FILL' 1" : "'FILL' 0" }}>dashboard</span>
-            <span>Overview</span>
+            <div className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeTab === 'overview' ? "'FILL' 1" : "'FILL' 0" }}>dashboard</span>
+              <span className="font-semibold text-body-md">Overview</span>
+            </div>
+            <p className="text-[11px] text-on-surface-variant/75 leading-tight">System stats & current live version</p>
           </div>
 
+          {/* Card Item: App Updates */}
           <div 
             onClick={() => setActiveTab('updates')}
-            className={`flex items-center gap-3 py-3 px-4 cursor-pointer rounded-lg font-body-md text-body-md transition-all active:scale-95 ${
+            className={`p-4 cursor-pointer rounded-xl border transition-all duration-200 active:scale-95 flex flex-col gap-1.5 shadow-sm ${
               activeTab === 'updates' 
-                ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-semibold' 
-                : 'text-on-surface-variant hover:bg-surface-container-low'
+                ? 'bg-surface-container-high border-secondary text-secondary font-semibold shadow-soft' 
+                : 'bg-white border-outline-variant text-on-surface-variant hover:border-outline hover:bg-surface-bright'
             }`}
           >
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'updates' ? "'FILL' 1" : "'FILL' 0" }}>system_update</span>
-            <span>App Updates</span>
+            <div className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeTab === 'updates' ? "'FILL' 1" : "'FILL' 0" }}>system_update</span>
+              <span className="font-semibold text-body-md">App Updates</span>
+            </div>
+            <p className="text-[11px] text-on-surface-variant/75 leading-tight">Manage APK releases & build parameters</p>
           </div>
 
+          {/* Card Item: Notice Board */}
           <div 
             onClick={() => setActiveTab('notices')}
-            className={`flex items-center gap-3 py-3 px-4 cursor-pointer rounded-lg font-body-md text-body-md transition-all active:scale-95 ${
+            className={`p-4 cursor-pointer rounded-xl border transition-all duration-200 active:scale-95 flex flex-col gap-1.5 shadow-sm ${
               activeTab === 'notices' 
-                ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-semibold' 
-                : 'text-on-surface-variant hover:bg-surface-container-low'
+                ? 'bg-surface-container-high border-secondary text-secondary font-semibold shadow-soft' 
+                : 'bg-white border-outline-variant text-on-surface-variant hover:border-outline hover:bg-surface-bright'
             }`}
           >
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'notices' ? "'FILL' 1" : "'FILL' 0" }}>campaign</span>
-            <span>Notice Board</span>
+            <div className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeTab === 'notices' ? "'FILL' 1" : "'FILL' 0" }}>campaign</span>
+              <span className="font-semibold text-body-md">Notice Board</span>
+            </div>
+            <p className="text-[11px] text-on-surface-variant/75 leading-tight">Broadcast notices and push alerts</p>
           </div>
 
+          {/* Card Item: Faculty Directory */}
           <div 
             onClick={() => setActiveTab('faculty')}
-            className={`flex items-center gap-3 py-3 px-4 cursor-pointer rounded-lg font-body-md text-body-md transition-all active:scale-95 ${
+            className={`p-4 cursor-pointer rounded-xl border transition-all duration-200 active:scale-95 flex flex-col gap-1.5 shadow-sm ${
               activeTab === 'faculty' 
-                ? 'bg-surface-container-high text-secondary border-l-[3px] border-secondary font-semibold' 
-                : 'text-on-surface-variant hover:bg-surface-container-low'
+                ? 'bg-surface-container-high border-secondary text-secondary font-semibold shadow-soft' 
+                : 'bg-white border-outline-variant text-on-surface-variant hover:border-outline hover:bg-surface-bright'
             }`}
           >
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: activeTab === 'faculty' ? "'FILL' 1" : "'FILL' 0" }}>group</span>
-            <span>Faculty Directory</span>
+            <div className="flex items-center gap-2.5">
+              <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeTab === 'faculty' ? "'FILL' 1" : "'FILL' 0" }}>group</span>
+              <span className="font-semibold text-body-md">Faculty Directory</span>
+            </div>
+            <p className="text-[11px] text-on-surface-variant/75 leading-tight">Manage cabin locations & directories</p>
           </div>
         </nav>
 
@@ -342,42 +358,58 @@ export default function Dashboard({ user, onLogout }) {
 
               {/* Stats Counters Grid */}
               <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary transition-colors">
+                {/* KPI 1: Enrolled Students */}
+                <div className="bg-surface-container-low/40 p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary transition-all">
                   <div>
                     <p className="text-on-surface-variant font-label-md text-label-md uppercase tracking-tight">Total Enrolled Students</p>
                     <h3 className="font-headline-lg text-headline-lg mt-1 font-bold">{stats.usersCount}</h3>
                   </div>
-                  <div className="p-2 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+                  <div className="p-2 rounded-lg bg-white text-secondary flex items-center justify-center border border-outline-variant/30">
                     <span className="material-symbols-outlined">person</span>
                   </div>
                 </div>
 
-                <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary transition-colors">
+                {/* KPI 2: Active Notices -> Notice Board */}
+                <div 
+                  onClick={() => setActiveTab('notices')}
+                  className="bg-surface-container-low/40 p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary hover:bg-surface-container-low/60 cursor-pointer active:scale-95 transition-all"
+                >
                   <div>
                     <p className="text-on-surface-variant font-label-md text-label-md uppercase tracking-tight">Active Notices</p>
                     <h3 className="font-headline-lg text-headline-lg mt-1 font-bold">{stats.noticesCount}</h3>
+                    <span className="text-[10px] text-secondary font-semibold underline mt-2 block">Manage notices &rarr;</span>
                   </div>
-                  <div className="p-2 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+                  <div className="p-2 rounded-lg bg-white text-secondary flex items-center justify-center border border-outline-variant/30">
                     <span className="material-symbols-outlined">campaign</span>
                   </div>
                 </div>
 
-                <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary transition-colors">
+                {/* KPI 3: Faculty Directory -> Faculty Tab */}
+                <div 
+                  onClick={() => setActiveTab('faculty')}
+                  className="bg-surface-container-low/40 p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary hover:bg-surface-container-low/60 cursor-pointer active:scale-95 transition-all"
+                >
                   <div>
                     <p className="text-on-surface-variant font-label-md text-label-md uppercase tracking-tight">Faculty Directory</p>
                     <h3 className="font-headline-lg text-headline-lg mt-1 font-bold">{stats.facultyCount}</h3>
+                    <span className="text-[10px] text-secondary font-semibold underline mt-2 block">Manage faculty &rarr;</span>
                   </div>
-                  <div className="p-2 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+                  <div className="p-2 rounded-lg bg-white text-secondary flex items-center justify-center border border-outline-variant/30">
                     <span className="material-symbols-outlined">group</span>
                   </div>
                 </div>
 
-                <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary transition-colors">
+                {/* KPI 4: Current App Version -> Updates Tab */}
+                <div 
+                  onClick={() => setActiveTab('updates')}
+                  className="bg-surface-container-low/40 p-6 rounded-xl border border-outline-variant shadow-soft flex justify-between items-start hover:border-secondary hover:bg-surface-container-low/60 cursor-pointer active:scale-95 transition-all"
+                >
                   <div>
                     <p className="text-on-surface-variant font-label-md text-label-md uppercase tracking-tight">Current App Version</p>
                     <h3 className="font-headline-lg text-headline-lg mt-1 font-bold">v{updatesConfig.latestVersionName}</h3>
+                    <span className="text-[10px] text-secondary font-semibold underline mt-2 block">Release update &rarr;</span>
                   </div>
-                  <div className="p-2 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+                  <div className="p-2 rounded-lg bg-white text-secondary flex items-center justify-center border border-outline-variant/30">
                     <span className="material-symbols-outlined">deployed_code</span>
                   </div>
                 </div>
