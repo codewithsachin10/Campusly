@@ -3,11 +3,13 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './firebase';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import Unauthorized from './components/Unauthorized';
 
 const ADMIN_EMAIL = 'codewithsachin10@gmail.com';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [unauthorizedUser, setUnauthorizedUser] = useState(null);
   const [initializing, setInitializing] = useState(true);
 
   useEffect(() => {
@@ -15,19 +17,26 @@ function App() {
       if (currentUser) {
         if (currentUser.email === ADMIN_EMAIL) {
           setUser(currentUser);
+          setUnauthorizedUser(null);
         } else {
-          // Force sign out non-admins
-          await signOut(auth);
+          setUnauthorizedUser(currentUser);
           setUser(null);
         }
       } else {
         setUser(null);
+        setUnauthorizedUser(null);
       }
       setInitializing(false);
     });
 
     return () => unsubscribe();
   }, []);
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+    setUser(null);
+    setUnauthorizedUser(null);
+  };
 
   if (initializing) {
     return (
@@ -37,25 +46,44 @@ function App() {
           alignItems: 'center',
           justifyContent: 'center',
           minHeight: '100vh',
-          background: '#0b0f19',
-          color: '#f3f4f6',
+          background: '#f8f9ff',
+          color: '#0d1c2f',
           fontFamily: 'system-ui'
         }}
       >
         <div style={{ textAlign: 'center' }}>
-          <h2 style={{ letterSpacing: '1px', marginBottom: '8px' }}>CAMPUSLY</h2>
-          <p style={{ color: '#9ca3af', fontSize: '14px' }}>Loading admin credentials...</p>
+          <h2 style={{ letterSpacing: '1px', marginBottom: '8px', fontWeight: 'bold' }}>CAMPUSLY</h2>
+          <p style={{ color: '#45464d', fontSize: '14px' }}>Loading admin credentials...</p>
         </div>
       </div>
+    );
+  }
+
+  if (unauthorizedUser) {
+    return (
+      <Unauthorized 
+        user={unauthorizedUser} 
+        onSignOut={handleSignOut} 
+        onReturnToLogin={handleSignOut}
+      />
     );
   }
 
   return (
     <div>
       {user ? (
-        <Dashboard user={user} onLogout={() => setUser(null)} />
+        <Dashboard user={user} onLogout={handleSignOut} />
       ) : (
-        <Login onLoginSuccess={(loggedInUser) => setUser(loggedInUser)} />
+        <Login 
+          onLoginSuccess={(loggedInUser) => {
+            setUser(loggedInUser);
+            setUnauthorizedUser(null);
+          }} 
+          onUnauthorizedAttempt={(failedUser) => {
+            setUnauthorizedUser(failedUser);
+            setUser(null);
+          }}
+        />
       )}
     </div>
   );
