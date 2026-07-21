@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1144756968",
+    "project_id": "campusly-app-2026",
+    "storage_bucket": "campusly-app-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1144756968:android:296f3cef7a3277b05a075d",
+        "android_client_info": {
+          "package_name": "com.campusly.campusly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1144756968-bebmbtqmh0eu66jsf8noj0gmvupbuafh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.campusly.campusly",
+            "certificate_hash": "6cab2c65ba2338cf0ba06773dfbce5716c7880e6"
+          }
+        },
+        {
+          "client_id": "1144756968-k9k91c90cn4m82jmkq23o4tq89cqrr9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqu2mmonaDncF6lM3bHEUiCZXA_Mt1ZKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1144756968-k9k91c90cn4m82jmkq23o4tq89cqrr9u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1144756968-ipmq7a8stfg519086g6q25731sa3phqd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.campusly.campusly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
