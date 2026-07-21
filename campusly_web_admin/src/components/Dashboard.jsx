@@ -402,10 +402,10 @@ export default function Dashboard({ user, onLogout }) {
           <nav className="space-y-1.5">
             <button 
               onClick={() => { setActiveTab('overview'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                 activeTab === 'overview' 
-                  ? 'bg-slate-100 text-slate-900' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#EFF6FF] text-secondary' 
+                  : 'text-neutral hover:text-primary hover:bg-slate-50'
               }`}
             >
               <span className="material-symbols-outlined text-[20px]">dashboard</span>
@@ -413,10 +413,10 @@ export default function Dashboard({ user, onLogout }) {
             </button>
             <button 
               onClick={() => { setActiveTab('students'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                 activeTab === 'students' 
-                  ? 'bg-slate-100 text-slate-900' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#EFF6FF] text-secondary' 
+                  : 'text-neutral hover:text-primary hover:bg-slate-50'
               }`}
             >
               <span className="material-symbols-outlined text-[20px]">person</span>
@@ -424,10 +424,10 @@ export default function Dashboard({ user, onLogout }) {
             </button>
             <button 
               onClick={() => { setActiveTab('departments'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                 activeTab === 'departments' 
-                  ? 'bg-slate-100 text-slate-900' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#EFF6FF] text-secondary' 
+                  : 'text-neutral hover:text-primary hover:bg-slate-50'
               }`}
             >
               <span className="material-symbols-outlined text-[20px]">account_balance</span>
@@ -435,10 +435,10 @@ export default function Dashboard({ user, onLogout }) {
             </button>
             <button 
               onClick={() => { setActiveTab('faculty'); setSelectedStudent(null); setSelectedFaculty(null); }}
-              className={`w-full flex items-center gap-3 px-3 py-2 text-sm font-semibold rounded-lg transition-all ${
+              className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                 activeTab === 'faculty' 
-                  ? 'bg-slate-100 text-slate-900' 
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50'
+                  ? 'bg-[#EFF6FF] text-secondary' 
+                  : 'text-neutral hover:text-primary hover:bg-slate-50'
               }`}
             >
               <span className="material-symbols-outlined text-[20px]">group</span>
