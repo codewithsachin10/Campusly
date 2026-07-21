@@ -268,9 +268,13 @@ export default function Dashboard({ user, onLogout }) {
       </header>
 
       {/* Main Content Area */}
-      <main className="pt-16 min-h-screen">
+      <main className={`pt-16 ${activeTab === 'overview' ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
         <div className="p-[32px] max-w-[1440px] mx-auto">
-          <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-soft min-h-[calc(100vh-128px)] space-y-6">
+          <div className={`bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 shadow-soft ${
+            activeTab === 'overview' 
+              ? 'h-[calc(100vh-128px)] overflow-hidden flex flex-col justify-center space-y-8' 
+              : 'min-h-[calc(100vh-128px)] space-y-6'
+          }`}>
           
           {/* ==================== OVERVIEW TAB (Centered Console Hub) ==================== */}
           {activeTab === 'overview' && (
