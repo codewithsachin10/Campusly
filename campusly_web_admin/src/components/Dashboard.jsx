@@ -274,226 +274,301 @@ export default function Dashboard({ user, onLogout }) {
           
           {/* ==================== OVERVIEW TAB (Centered Console Hub) ==================== */}
           {activeTab === 'overview' && (
-            <div className="space-y-12 animate-fade-in py-6">
+            <div className="space-y-10 animate-fade-in py-4">
               {/* Header Branding */}
               <div className="text-center space-y-3">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-secondary flex items-center justify-center text-white shadow-soft">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
-                  </svg>
-                </div>
-                <h1 className="font-brand text-display-lg font-black text-on-surface tracking-tight">Campusly Workspace</h1>
-                <p className="text-on-surface-variant font-body-md text-body-md max-w-md mx-auto">
-                  Click on any module card below to begin managing the ecosystem.
+                <h1 className="font-brand text-headline-lg font-black text-on-surface tracking-tight flex items-center justify-center gap-2">
+                  <span className="material-symbols-outlined text-secondary text-[32px]">school</span>
+                  Campusly Control Center
+                </h1>
+                <p className="text-on-surface-variant font-label-md text-label-md max-w-md mx-auto leading-none">
+                  Select a console module below to manage your college application settings.
                 </p>
-              </div>
-
-              {/* 1. Overview Single Card (Highlighted) */}
-              <div className="max-w-md mx-auto">
-                <div 
-                  onClick={() => setActiveModal('Overview')}
-                  className="bg-surface-container-low/50 hover:bg-surface-container-low border border-secondary/30 rounded-xl p-5 shadow-soft flex items-center gap-4 cursor-pointer transition-all hover:-translate-y-0.5 active:scale-[0.98] group"
-                >
-                  <div className="p-3 bg-secondary text-white rounded-lg">
-                    <span className="material-symbols-outlined text-[24px]">dashboard</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-body-lg text-on-surface">📊 Workspace Overview</h3>
-                    <p className="text-[11px] text-on-surface-variant/80">View overall statistics & live releases</p>
-                  </div>
-                  <span className="material-symbols-outlined text-secondary opacity-65 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-                </div>
-              </div>
-
-              {/* Grid of Categories */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                {/* 🏫 CAMPUS */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>🏫</span> Campus
-                  </h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    <div 
-                      onClick={() => setActiveModal('Students')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">person</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Students</p>
-                        <p className="text-[10px] text-on-surface-variant/70">Enrolled accounts: {stats.usersCount}</p>
+                {/* Stats Pill Badges Row */}
+                <div className="flex flex-wrap justify-center gap-3 text-label-sm font-label-sm text-on-surface-variant pt-2">
+                  <span className="px-3 py-1 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Students: <strong>{stats.usersCount}</strong>
+                  </span>
+                  <span className="px-3 py-1 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Active Notices: <strong>{stats.noticesCount}</strong>
+                  </span>
+                  <span className="px-3 py-1 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Faculty: <strong>{stats.facultyCount}</strong>
+                  </span>
+                  <span className="px-3 py-1 bg-surface-container-low border border-outline-variant/40 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Live Version: <strong>v{updatesConfig.latestVersionName}</strong>
+                  </span>
+                </div>
+              </div>
+
+              {/* 3-Column Uniform Grid Layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1280px] mx-auto items-start">
+                
+                {/* COLUMN 1: CAMPUS & ANALYTICS */}
+                <div className="space-y-8">
+                  {/* Category: CAMPUS */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>🏫</span> CAMPUS
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveModal('Students')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">person</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Students</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Enrolled student accounts</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Departments & Classes')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">account_balance</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Departments & Classes</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Configure branches & batches</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveTab('faculty')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">group</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Faculty Directory</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Cabin office mappings</p>
+                        </div>
                       </div>
                     </div>
-                    <div 
-                      onClick={() => setActiveModal('Departments & Classes')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">account_balance</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Departments & Classes</p>
-                        <p className="text-[10px] text-on-surface-variant/70">Configure branches & class metadata</p>
+                  </div>
+
+                  {/* Category: ANALYTICS */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>📈</span> ANALYTICS
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveModal('Usage Analytics')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">analytics</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Usage Analytics</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Student app usage charts</p>
+                        </div>
                       </div>
-                    </div>
-                    <div 
-                      onClick={() => setActiveTab('faculty')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">group</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Faculty Directory</p>
-                        <p className="text-[10px] text-on-surface-variant/70">Cabins registered: {stats.facultyCount}</p>
+
+                      <div 
+                        onClick={() => setActiveModal('Device & App Analytics')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">device_hub</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Device & App Analytics</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Platform performance stats</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* 📚 ACADEMICS */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>📚</span> Academics
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div 
-                      onClick={() => setActiveModal('Timetable')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">calendar_month</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Timetable</p>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Attendance')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">how_to_reg</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Attendance</p>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Assignments')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">assignment</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Assignments</p>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Exams')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">menu_book</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Exams</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 🌐 CAMPUS ACTIVITIES */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>🌐</span> Campus Activities
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div 
-                      onClick={() => setActiveModal('Events & Activities')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">local_activity</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Events & Activities</p>
+                {/* COLUMN 2: ACADEMICS & SUPPORT */}
+                <div className="space-y-8">
+                  {/* Category: ACADEMICS */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>📚</span> ACADEMICS
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveModal('Timetable')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">calendar_month</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Timetable</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Schedules & slot configurations</p>
+                        </div>
                       </div>
-                    </div>
-                    <div 
-                      onClick={() => setActiveTab('notices')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">campaign</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Notifications</p>
-                        <p className="text-[10px] text-on-surface-variant/70">Notices live: {stats.noticesCount}</p>
+
+                      <div 
+                        onClick={() => setActiveModal('Attendance')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">how_to_reg</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Attendance</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Logs & absence percentages</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Assignments')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">assignment</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Assignments</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Submission deadlines & details</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Exams')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">menu_book</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Exams</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Rosters & mid-sem dates</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                {/* 📈 ANALYTICS */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>📈</span> Analytics
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div 
-                      onClick={() => setActiveModal('Usage Analytics')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">analytics</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Usage Analytics</p>
-                      </div>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Device & App Analytics')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">device_hub</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Device & App Analytics</p>
+                  {/* Category: SUPPORT */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>🛠️</span> SUPPORT
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveModal('Support Center')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">contact_support</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Support Center</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Helpdesk & query tickets</p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* ⚙️ SYSTEM */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>⚙️</span> System
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div 
-                      onClick={() => setActiveTab('updates')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">system_update</span>
-                      <div className="flex-grow">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors leading-tight">App Updates</p>
-                        <p className="text-[10px] text-on-surface-variant/70 mt-1">v{updatesConfig.latestVersionName}</p>
+                {/* COLUMN 3: ACTIVITIES & SYSTEM */}
+                <div className="space-y-8">
+                  {/* Category: CAMPUS ACTIVITIES */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>🌐</span> CAMPUS ACTIVITIES
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveModal('Events & Activities')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">local_activity</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Events & Activities</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Fest schedules & culture board</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveTab('notices')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">campaign</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Notifications</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Live announcements board</p>
+                        </div>
                       </div>
                     </div>
-                    <div 
-                      onClick={() => setActiveModal('Campus Configuration')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">settings_applications</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors leading-tight">Campus Config</p>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Feature Flags')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">toggle_on</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors leading-tight">Feature Flags</p>
-                    </div>
-                    <div 
-                      onClick={() => setActiveModal('Audit Logs')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex flex-col gap-2 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">history_toggle_off</span>
-                      <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors leading-tight">Audit Logs</p>
-                    </div>
                   </div>
-                </div>
 
-                {/* 🛠️ SUPPORT */}
-                <div className="space-y-3">
-                  <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
-                    <span>🛠️</span> Support
-                  </h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    <div 
-                      onClick={() => setActiveModal('Support Center')}
-                      className="bg-white border border-outline-variant hover:border-secondary rounded-xl p-4 shadow-sm flex items-center gap-3 cursor-pointer transition-all hover:bg-surface-bright active:scale-[0.99] group"
-                    >
-                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">contact_support</span>
-                      <div className="flex-1">
-                        <p className="font-semibold text-body-md text-on-surface group-hover:text-secondary transition-colors">Support Center</p>
-                        <p className="text-[10px] text-on-surface-variant/70">Raise requests & system helpdesk</p>
+                  {/* Category: SYSTEM */}
+                  <div className="space-y-3">
+                    <h3 className="font-bold text-label-sm text-outline uppercase tracking-wider flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+                      <span>⚙️</span> SYSTEM
+                    </h3>
+                    <div className="space-y-3">
+                      <div 
+                        onClick={() => setActiveTab('updates')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">system_update</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">App Updates</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Release config settings</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Campus Configuration')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">settings_applications</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Campus Config</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Global app config variables</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Feature Flags')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">toggle_on</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Feature Flags</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Toggle live features & beta flags</p>
+                        </div>
+                      </div>
+
+                      <div 
+                        onClick={() => setActiveModal('Audit Logs')}
+                        className="flex items-center gap-3 p-4 bg-white border border-outline-variant/60 rounded-xl hover:border-secondary hover:bg-surface-bright active:scale-[0.98] transition-all cursor-pointer shadow-sm group h-[76px]"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-200 flex-shrink-0">
+                          <span className="material-symbols-outlined text-[20px]">history_toggle_off</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-body-md text-on-surface truncate">Audit Logs</p>
+                          <p className="text-[11px] text-on-surface-variant/75 truncate mt-0.5">Access history logs</p>
+                        </div>
                       </div>
                     </div>
                   </div>
