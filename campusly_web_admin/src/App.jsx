@@ -5,7 +5,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Unauthorized from './components/Unauthorized';
 
-const ADMIN_EMAIL = 'codewithsachin10@gmail.com';
+const ADMIN_EMAILS = ['codewithsachin10@gmail.com', 'test@gmail.com'];
 
 function App() {
   const [user, setUser] = useState(null);
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
-        if (currentUser.email === ADMIN_EMAIL) {
+        if (ADMIN_EMAILS.includes(currentUser.email)) {
           setUser(currentUser);
           setUnauthorizedUser(null);
         } else {

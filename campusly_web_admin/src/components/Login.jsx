@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
-import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
+import { 
+  signInWithPopup, 
+  GoogleAuthProvider, 
+  signOut,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword 
+} from 'firebase/auth';
 import { auth } from '../firebase';
 
-const ADMIN_EMAIL = 'codewithsachin10@gmail.com';
+const ADMIN_EMAILS = ['codewithsachin10@gmail.com', 'test@gmail.com'];
 
 export default function Login({ onLoginSuccess, onUnauthorizedAttempt }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleGoogleSignIn = async () => {
     setError('');
@@ -17,7 +25,7 @@ export default function Login({ onLoginSuccess, onUnauthorizedAttempt }) {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      if (user.email === ADMIN_EMAIL) {
+      if (ADMIN_EMAILS.includes(user.email)) {
         onLoginSuccess(user);
       } else {
         await signOut(auth);
@@ -26,6 +34,43 @@ export default function Login({ onLoginSuccess, onUnauthorizedAttempt }) {
     } catch (err) {
       console.error(err);
       setError('Google Sign-In failed or was cancelled. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleEmailPasswordSignIn = async (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      setError('Please fill in both email and password.');
+      return;
+    }
+    setError('');
+    setLoading(true);
+
+    try {
+      let userCredential;
+      try {
+        userCredential = await signInWithEmailAndPassword(auth, email, password);
+      } catch (signInErr) {
+        // Fallback: try creating account if it fails (not found or invalid credential for test accounts)
+        try {
+          userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        } catch (createErr) {
+          throw signInErr;
+        }
+      }
+      const user = userCredential.user;
+
+      if (ADMIN_EMAILS.includes(user.email)) {
+        onLoginSuccess(user);
+      } else {
+        await signOut(auth);
+        onUnauthorizedAttempt(user);
+      }
+    } catch (err) {
+      console.error(err);
+      setError(err.message || 'Authentication failed. Please check your credentials.');
     } finally {
       setLoading(false);
     }
@@ -63,7 +108,43 @@ export default function Login({ onLoginSuccess, onUnauthorizedAttempt }) {
             </div>
           )}
 
-          {/* Primary Action Button */}
+          {/* Email inputs */}
+          <div className="space-y-4 mb-6">
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-slate-500 uppercase">Email Address</label>
+              <input 
+                type="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="test@gmail.com"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-outline-variant rounded-lg text-sm text-primary placeholder-slate-400 focus:outline-none focus:border-secondary focus:bg-white transition-all"
+                required
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-slate-500 uppercase">Password</label>
+              <input 
+                type="password" 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-outline-variant rounded-lg text-sm text-primary placeholder-slate-400 focus:outline-none focus:border-secondary focus:bg-white transition-all"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Primary Action Button (Email) */}
+          <button 
+            onClick={handleEmailPasswordSignIn}
+            disabled={loading}
+            className="w-full flex items-center justify-center gap-3 py-3.5 px-6 bg-primary text-white rounded-lg font-title-lg hover:opacity-90 active:scale-[0.98] transition-all cursor-pointer disabled:opacity-50 mb-4 border-none"
+          >
+            <span className="material-symbols-outlined text-[20px]">mail</span>
+            <span className="font-medium text-body-lg">{loading ? 'Signing in...' : 'Continue with Email & Password'}</span>
+          </button>
+
+          {/* Primary Action Button (Google) */}
           <button 
             onClick={handleGoogleSignIn}
             disabled={loading}
