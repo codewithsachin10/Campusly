@@ -3,11 +3,11 @@ service cloud.firestore {
   match /databases/{database}/documents {
     // Allow authenticated users to read/write their own profile and all nested subcollections
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-      allow read: if request.auth != null; // Allow classmates to see names
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.uid == userId || request.auth.token.email == 'codewithsachin10@gmail.com');
     }
     match /users/{userId}/{document=**} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if request.auth != null && (request.auth.uid == userId || request.auth.token.email == 'codewithsachin10@gmail.com');
     }
     
     // Classes and schedule slots
@@ -17,6 +17,16 @@ service cloud.firestore {
       match /schedule/{itemId} {
         allow read, write: if request.auth != null;
       }
+    }
+
+    // Departments and sections
+    match /departments/{document=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email == 'codewithsachin10@gmail.com';
+    }
+    match /sections/{document=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email == 'codewithsachin10@gmail.com';
     }
 
     // Faculties directory
