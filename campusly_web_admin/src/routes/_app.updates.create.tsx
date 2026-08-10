@@ -1,20 +1,6 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useState } from 'react'
-import { AppSidebar } from '@/components/layout/app-sidebar'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
-import { Separator } from '@/components/ui/separator'
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from '@/components/ui/sidebar'
+import { PageHeader } from '@/components/page-header'
 import { supabase } from '@/lib/supabase'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -125,37 +111,17 @@ function CreateReleasePage() {
   }
 
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Campusly App</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/updates">App Updates</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Create Release</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </header>
-
-        <main className="flex-1 overflow-auto p-8">
-          <div className="mx-auto max-w-3xl space-y-8">
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight">Create New Release</h1>
-              <p className="text-muted-foreground mt-2">
-                Upload a signed Android APK and configure how students will receive this update.
-              </p>
-            </div>
+    <>
+      <PageHeader
+        title="Create New Release"
+        description="Upload a signed Android APK and configure how students will receive this update."
+        crumbs={[
+          { label: "App Updates", to: "/updates" },
+          { label: "Create Release" },
+        ]}
+      />
+      
+      <div className="mx-auto max-w-3xl space-y-8">
 
             <Card>
               <form onSubmit={handlePublish}>
@@ -329,9 +295,7 @@ function CreateReleasePage() {
                 </CardFooter>
               </form>
             </Card>
-          </div>
-        </main>
-      </SidebarInset>
-    </SidebarProvider>
+      </div>
+    </>
   )
 }

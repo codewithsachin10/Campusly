@@ -1,19 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { AppSidebar } from '@/components/layout/app-sidebar'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb'
-import { Separator } from '@/components/ui/separator'
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from '@/components/ui/sidebar'
+import { PageHeader } from '@/components/page-header'
 import { supabase } from '@/lib/supabase'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -51,42 +37,22 @@ function UpdatesOverviewPage() {
   })
 
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Campusly App</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>App Updates</BreadcrumbPage>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Overview</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </header>
-
-        <main className="flex-1 overflow-auto p-8">
-          <div className="mx-auto max-w-5xl space-y-8">
-            <div className="flex justify-between items-end">
-              <div>
-                <h1 className="text-3xl font-bold tracking-tight">Campusly App Updates</h1>
-                <p className="text-muted-foreground mt-2">
-                  Manage releases, track adoption, and enforce mandatory updates.
-                </p>
-              </div>
-              <Button asChild>
-                <Link to="/updates/create">Create New Release</Link>
-              </Button>
-            </div>
+    <>
+      <PageHeader
+        title="Campusly App Updates"
+        description="Manage releases, track adoption, and enforce mandatory updates."
+        crumbs={[
+          { label: "App Updates" },
+          { label: "Overview" },
+        ]}
+        actions={
+          <Button asChild>
+            <Link to="/updates/create">Create New Release</Link>
+          </Button>
+        }
+      />
+      
+      <div className="mx-auto max-w-5xl space-y-8 mt-8">
 
             {isLoading ? (
               <div className="flex justify-center p-12">
@@ -210,9 +176,7 @@ function UpdatesOverviewPage() {
               </CardContent>
             </Card>
 
-          </div>
-        </main>
-      </SidebarInset>
-    </SidebarProvider>
+      </div>
+    </>
   )
 }
