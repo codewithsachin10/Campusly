@@ -54,7 +54,6 @@ const schema = z.object({
   remember: z.boolean(),
 });
 
-// A modern, geometric mark for the Campusly brand
 function CampuslyMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
@@ -149,12 +148,10 @@ function LoginPage() {
       
       <WarpStarField />
 
-      {/* Subtle central radial gradient to ensure form readability over the stars */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.6)_100%)]" />
 
       <div className="relative z-10 w-full max-w-md flex flex-col items-center">
         
-        {/* Branding Hierarchy */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -171,7 +168,6 @@ function LoginPage() {
           </p>
         </motion.div>
 
-        {/* Translucent Authentication Panel */}
         <AnimatePresence mode="wait">
           {!successState ? (
             <motion.div
@@ -180,152 +176,167 @@ function LoginPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="w-full rounded-[24px] border-2 border-zinc-900 shadow-[0_0_24px_rgba(0,0,0,0.15)] p-8 backdrop-blur-xl"
-              style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
+              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px] bg-zinc-200/50"
             >
-              <div className="mb-6 text-center">
-                <h3 className="text-2xl font-semibold tracking-tight text-zinc-900">Welcome back</h3>
-                <p className="mt-1.5 text-sm text-zinc-500">Sign in to your Campusly Admin Console</p>
-              </div>
-
-              <Button
-                type="button"
-                variant="outline"
-                className="h-12 w-full rounded-xl border-zinc-200 bg-white/50 text-zinc-900 hover:bg-zinc-100/80 transition-colors"
-                disabled={googleLoading || form.formState.isSubmitting}
-                onClick={handleGoogleSignIn}
+              {/* Spinning Conic Gradient Border */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                className="absolute inset-[-100%] z-0"
+                style={{
+                  background: "conic-gradient(from 0deg, transparent 0 280deg, #18181b 360deg)",
+                }}
+              />
+              
+              {/* Inner Translucent Panel */}
+              <div 
+                className="relative z-10 h-full w-full rounded-[22px] p-8 backdrop-blur-3xl"
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.92)" }}
               >
-                {googleLoading ? <Loader2 className="mr-2 size-4 animate-spin" /> : <GoogleMark className="mr-2 size-4" />}
-                Continue with Google
-              </Button>
+                <div className="mb-6 text-center">
+                  <h3 className="text-2xl font-semibold tracking-tight text-zinc-900">Welcome back</h3>
+                  <p className="mt-1.5 text-sm text-zinc-500">Sign in to your Campusly Admin Console</p>
+                </div>
 
-              <div className="my-6 flex items-center gap-4">
-                <span className="h-px flex-1 bg-zinc-200" />
-                <span className="text-xs font-medium uppercase tracking-wider text-zinc-400">
-                  Or continue with email
-                </span>
-                <span className="h-px flex-1 bg-zinc-200" />
-              </div>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-12 w-full rounded-xl border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 transition-colors"
+                  disabled={googleLoading || form.formState.isSubmitting}
+                  onClick={handleGoogleSignIn}
+                >
+                  {googleLoading ? <Loader2 className="mr-2 size-4 animate-spin" /> : <GoogleMark className="mr-2 size-4" />}
+                  Continue with Google
+                </Button>
 
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-zinc-700">Work email</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            autoComplete="email"
-                            placeholder="you@college.edu.in"
-                            className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50"
-                            disabled={form.formState.isSubmitting}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage className="text-red-500" />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="password"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-zinc-700">Password</FormLabel>
-                        <FormControl>
-                          <div className="relative">
+                <div className="my-6 flex items-center gap-4">
+                  <span className="h-px flex-1 bg-zinc-200" />
+                  <span className="text-xs font-medium uppercase tracking-wider text-zinc-400">
+                    Or continue with email
+                  </span>
+                  <span className="h-px flex-1 bg-zinc-200" />
+                </div>
+
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-zinc-700">Work email</FormLabel>
+                          <FormControl>
                             <Input
-                              type={showPassword ? "text" : "password"}
-                              autoComplete="current-password"
-                              placeholder="•••••••••••••••••"
-                              className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50 pr-10"
+                              type="email"
+                              autoComplete="email"
+                              placeholder="you@college.edu.in"
+                              className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50"
                               disabled={form.formState.isSubmitting}
                               {...field}
                             />
-                            <button
-                              type="button"
-                              onClick={() => setShowPassword(!showPassword)}
-                              className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
-                              tabIndex={-1}
-                            >
-                              {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
-                            </button>
-                          </div>
-                        </FormControl>
-                        <FormMessage className="text-red-500" />
-                      </FormItem>
-                    )}
-                  />
-
-                  <div className="flex items-center justify-between pt-2 pb-2">
-                    <FormField
-                      control={form.control}
-                      name="remember"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-row items-center gap-2 space-y-0">
-                          <FormControl>
-                            <Checkbox 
-                              checked={field.value} 
-                              onCheckedChange={field.onChange} 
-                              disabled={form.formState.isSubmitting} 
-                              className="border-zinc-300 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white"
-                            />
                           </FormControl>
-                          <FormLabel className="text-sm font-normal text-zinc-500 cursor-pointer hover:text-zinc-700">
-                            Keep me signed in
-                          </FormLabel>
+                          <FormMessage className="text-red-500" />
                         </FormItem>
                       )}
                     />
-                    <button
-                      type="button"
-                      className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors hover:underline"
-                      onClick={() => setForgotOpen(true)}
-                    >
-                      Forgot password?
-                    </button>
-                  </div>
+                    <FormField
+                      control={form.control}
+                      name="password"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-zinc-700">Password</FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Input
+                                type={showPassword ? "text" : "password"}
+                                autoComplete="current-password"
+                                placeholder="•••••••••••••••••"
+                                className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50 pr-10"
+                                disabled={form.formState.isSubmitting}
+                                {...field}
+                              />
+                              <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                                tabIndex={-1}
+                              >
+                                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                              </button>
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text-red-500" />
+                        </FormItem>
+                      )}
+                    />
 
-                  {error && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-50 p-4 text-sm text-red-600"
-                    >
-                      <TriangleAlert className="mt-0.5 size-4 shrink-0 text-red-500" />
-                      <div className="flex flex-col gap-1">
-                        <span className="font-semibold text-red-700">Access Denied</span>
-                        <span className="text-red-600/90">{error}</span>
-                      </div>
-                    </motion.div>
-                  )}
+                    <div className="flex items-center justify-between pt-2 pb-2">
+                      <FormField
+                        control={form.control}
+                        name="remember"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-center gap-2 space-y-0">
+                            <FormControl>
+                              <Checkbox 
+                                checked={field.value} 
+                                onCheckedChange={field.onChange} 
+                                disabled={form.formState.isSubmitting} 
+                                className="border-zinc-300 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white"
+                              />
+                            </FormControl>
+                            <FormLabel className="text-sm font-normal text-zinc-500 cursor-pointer hover:text-zinc-700">
+                              Keep me signed in
+                            </FormLabel>
+                          </FormItem>
+                        )}
+                      />
+                      <button
+                        type="button"
+                        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors hover:underline"
+                        onClick={() => setForgotOpen(true)}
+                      >
+                        Forgot password?
+                      </button>
+                    </div>
 
-                  <Button
-                    type="submit"
-                    className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800 text-base font-medium transition-all"
-                    disabled={form.formState.isSubmitting || googleLoading}
-                  >
-                    {form.formState.isSubmitting ? (
-                      <>
-                        <Loader2 className="mr-2 size-4 animate-spin" />
-                        Signing in...
-                      </>
-                    ) : (
-                      "Sign in"
+                    {error && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-50 p-4 text-sm text-red-600"
+                      >
+                        <TriangleAlert className="mt-0.5 size-4 shrink-0 text-red-500" />
+                        <div className="flex flex-col gap-1">
+                          <span className="font-semibold text-red-700">Access Denied</span>
+                          <span className="text-red-600/90">{error}</span>
+                        </div>
+                      </motion.div>
                     )}
-                  </Button>
-                </form>
-              </Form>
 
-              <div className="mt-6 flex flex-col items-center justify-center gap-1.5 text-center text-xs text-zinc-500">
-                <div className="flex items-center gap-1.5 font-medium text-zinc-600">
-                  <Lock className="size-3.5" />
-                  Protected admin environment
+                    <Button
+                      type="submit"
+                      className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800 text-base font-medium transition-all"
+                      disabled={form.formState.isSubmitting || googleLoading}
+                    >
+                      {form.formState.isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 size-4 animate-spin" />
+                          Signing in...
+                        </>
+                      ) : (
+                        "Sign in"
+                      )}
+                    </Button>
+                  </form>
+                </Form>
+
+                <div className="mt-6 flex flex-col items-center justify-center gap-1.5 text-center text-xs text-zinc-500">
+                  <div className="flex items-center gap-1.5 font-medium text-zinc-600">
+                    <Lock className="size-3.5" />
+                    Protected admin environment
+                  </div>
+                  <span>Access is restricted to authorized Campusly administrators.</span>
                 </div>
-                <span>Access is restricted to authorized Campusly administrators.</span>
               </div>
             </motion.div>
           ) : (
@@ -333,16 +344,28 @@ function LoginPage() {
               key="success-state"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center justify-center text-center w-full rounded-[24px] border-2 border-zinc-900 shadow-[0_0_24px_rgba(0,0,0,0.15)] p-12 backdrop-blur-xl"
-              style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
+              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px] bg-zinc-200/50"
             >
-              <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100">
-                <CheckCircle2 className="size-8" />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+                className="absolute inset-[-100%] z-0"
+                style={{
+                  background: "conic-gradient(from 0deg, transparent 0 280deg, #18181b 360deg)",
+                }}
+              />
+              <div 
+                className="relative z-10 flex flex-col items-center justify-center text-center h-full w-full rounded-[22px] p-12 backdrop-blur-3xl"
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.92)" }}
+              >
+                <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100">
+                  <CheckCircle2 className="size-8" />
+                </div>
+                <h2 className="text-2xl font-semibold tracking-tight text-zinc-900">Authentication successful</h2>
+                <p className="mt-3 text-sm text-zinc-500 flex items-center gap-2 justify-center">
+                  <Loader2 className="size-3.5 animate-spin text-blue-600" /> Loading your campus...
+                </p>
               </div>
-              <h2 className="text-2xl font-semibold tracking-tight text-zinc-900">Authentication successful</h2>
-              <p className="mt-3 text-sm text-zinc-500 flex items-center gap-2 justify-center">
-                <Loader2 className="size-3.5 animate-spin text-blue-600" /> Loading your campus...
-              </p>
             </motion.div>
           )}
         </AnimatePresence>
