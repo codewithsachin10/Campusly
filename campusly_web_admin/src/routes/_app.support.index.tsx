@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { StatCard } from "@/components/stat-card";
 import { supabase } from "@/lib/supabase";
 import { LifeBuoy, AlertCircle, Clock, CheckCircle2 } from "lucide-react";
@@ -77,6 +77,17 @@ function SupportPage() {
     }
   };
 
+  const getStatusBorderColor = (s: string) => {
+    switch (s) {
+      case "Open": return "border-l-rose-500";
+      case "In Progress": return "border-l-amber-500";
+      case "Waiting for Student": return "border-l-blue-500";
+      case "Resolved":
+      case "Closed": return "border-l-emerald-500";
+      default: return "border-l-border";
+    }
+  };
+
   return (
     <div className="space-y-6">
       <PageHeader 
@@ -128,54 +139,51 @@ function SupportPage() {
             </div>
           </div>
 
-          <div className="rounded-md border bg-card">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Ticket ID</TableHead>
-                  <TableHead>Student</TableHead>
-                  <TableHead>Subject</TableHead>
-                  <TableHead>Priority</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead>Date</TableHead>
-                  <TableHead className="text-right">Action</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {loading ? (
-                  <TableRow>
-                    <TableCell colSpan={7} className="h-24 text-center">Loading tickets...</TableCell>
-                  </TableRow>
-                ) : tickets.length === 0 ? (
-                  <TableRow>
-                    <TableCell colSpan={7} className="h-24 text-center text-muted-foreground">
-                      No tickets found.
-                    </TableCell>
-                  </TableRow>
-                ) : (
-                  tickets.map((t) => (
-                    <TableRow key={t.id}>
-                      <TableCell className="font-medium text-xs font-mono">{t.ticket_number}</TableCell>
-                      <TableCell>{t.students?.name || "Unknown"}</TableCell>
-                      <TableCell className="max-w-[200px] truncate">{t.subject}</TableCell>
-                      <TableCell>
-                        <Badge variant={getPriorityColor(t.priority) as any}>{t.priority}</Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Badge variant={getStatusColor(t.status) as any}>{t.status}</Badge>
-                      </TableCell>
-                      <TableCell className="text-muted-foreground">{new Date(t.created_at).toLocaleDateString()}</TableCell>
-                      <TableCell className="text-right">
-                        <Button variant="ghost" size="sm" asChild>
-                          <Link to="/support/$ticketId" params={{ ticketId: t.ticket_number }}>View</Link>
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))
-                )}
-              </TableBody>
-            </Table>
-          </div>
+          {loading ? (
+            <div className="flex justify-center p-12 bg-card rounded-md border">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
+          ) : tickets.length === 0 ? (
+            <div className="p-12 text-center text-muted-foreground bg-card rounded-md border">
+              No tickets found.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {tickets.map((t) => (
+                <Card key={t.id} className={`border-l-4 ${getStatusBorderColor(t.status)}`}>
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-between items-start gap-2">
+                      <CardTitle className="text-base font-semibold line-clamp-1" title={t.subject}>
+                        {t.subject}
+                      </CardTitle>
+                      <Badge variant={getStatusColor(t.status) as any} className="shrink-0">{t.status}</Badge>
+                    </div>
+                    <div className="text-sm text-muted-foreground flex items-center justify-between mt-1">
+                      <span className="font-mono text-xs">{t.ticket_number}</span>
+                      <span>{new Date(t.created_at).toLocaleDateString()}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pb-4">
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between items-center">
+                        <span className="text-muted-foreground">Student:</span>
+                        <span className="font-medium truncate max-w-[150px]">{t.students?.name || "Unknown"}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-muted-foreground">Priority:</span>
+                        <Badge variant={getPriorityColor(t.priority) as any} className="h-5">{t.priority}</Badge>
+                      </div>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="pt-0 justify-end">
+                    <Button variant="outline" size="sm" asChild>
+                      <Link to="/support/$ticketId" params={{ ticketId: t.ticket_number }}>View Details</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          )}
         </TabsContent>
 
         <TabsContent value="faqs">
