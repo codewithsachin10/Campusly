@@ -11,8 +11,18 @@ interface Star {
   color: string;
 }
 
-export function WarpStarField() {
+interface WarpStarFieldProps {
+  speedMultiplier?: number;
+}
+
+export function WarpStarField({ speedMultiplier = 1.0 }: WarpStarFieldProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const speedRef = useRef(speedMultiplier);
+
+  // Keep the ref updated with the latest prop without triggering effect re-runs
+  useEffect(() => {
+    speedRef.current = speedMultiplier;
+  }, [speedMultiplier]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -26,21 +36,17 @@ export function WarpStarField() {
     canvas.width = width;
     canvas.height = height;
 
-    // Respect prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const STARS_COUNT = 400; // Controlled density for readability
+    const STARS_COUNT = 400; 
     const Z_MAX = 2000;
-    const FOV = 800; // Field of view multiplier
+    const FOV = 800; 
     const BASE_SPEED = prefersReducedMotion ? 0 : 2.5;
 
     const stars: Star[] = [];
 
-    // Colors: mostly white/gray, 10% Campusly Blue (#76cefa or #3b82f6)
     const getStarColor = () => {
-      return Math.random() > 0.9 ? "59, 130, 246" : "0, 0, 0"; // Campusly Blue or Black
+      return Math.random() > 0.9 ? "59, 130, 246" : "0, 0, 0"; 
     };
 
     for (let i = 0; i < STARS_COUNT; i++) {
@@ -54,7 +60,6 @@ export function WarpStarField() {
       });
     }
 
-    // Ensure pz is initialized correctly
     stars.forEach((s) => {
       s.pz = s.z;
     });
@@ -65,11 +70,13 @@ export function WarpStarField() {
 
       const cx = width / 2;
       const cy = height / 2;
+      const currentSpeedMultiplier = speedRef.current;
 
       stars.forEach((star) => {
         if (!prefersReducedMotion) {
           star.pz = star.z;
-          star.z -= star.speed;
+          // Apply speed multiplier dynamically every frame!
+          star.z -= star.speed * currentSpeedMultiplier;
 
           if (star.z <= 0) {
             star.z = Z_MAX;
@@ -79,14 +86,11 @@ export function WarpStarField() {
           }
         }
 
-        // Projection
         const sx = (star.x / star.z) * FOV + cx;
         const sy = (star.y / star.z) * FOV + cy;
         const px = (star.x / star.pz) * FOV + cx;
         const py = (star.y / star.pz) * FOV + cy;
 
-        // Depth-based attributes
-        // Far away (Z_MAX) -> opacity 0. Close (0) -> opacity 1
         const depthRatio = 1 - star.z / Z_MAX;
         const opacity = Math.min(1, Math.max(0.1, depthRatio * 1.2));
         const lineWidth = Math.max(0.5, depthRatio * 3);
@@ -96,12 +100,10 @@ export function WarpStarField() {
         ctx.lineWidth = lineWidth;
         
         if (prefersReducedMotion) {
-          // Draw just a dot if no motion
           ctx.arc(sx, sy, lineWidth, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(${star.color}, ${opacity})`;
           ctx.fill();
         } else {
-          // Draw a streak
           ctx.moveTo(px, py);
           ctx.lineTo(sx, sy);
           ctx.stroke();
@@ -114,7 +116,7 @@ export function WarpStarField() {
     };
 
     if (prefersReducedMotion) {
-      render(); // Render once
+      render(); 
     } else {
       animationFrameId = requestAnimationFrame(render);
     }
@@ -125,7 +127,7 @@ export function WarpStarField() {
       canvas.width = width;
       canvas.height = height;
       if (prefersReducedMotion) {
-        render(); // Re-render on resize if static
+        render(); 
       }
     };
 
@@ -137,7 +139,7 @@ export function WarpStarField() {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, []);
+  }, []); // Run only once to avoid jumpy stars!
 
   return (
     <canvas

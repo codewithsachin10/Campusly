@@ -7,6 +7,7 @@ import {
   Lock,
   TriangleAlert,
   CheckCircle2,
+  Settings2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
@@ -32,6 +33,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Slider } from "@/components/ui/slider";
+
 import { useAuth } from "@/lib/auth";
 import { WarpStarField } from "@/components/ui/warp-star-field";
 
@@ -85,6 +93,26 @@ function CampuslyMark({ className }: { className?: string }) {
   );
 }
 
+function buildConicGradient(count: number, color: string) {
+  if (count <= 0) return "none";
+  const segment = 360 / count;
+  const stops = [];
+  for (let i = 0; i < count; i++) {
+    const start = i * segment;
+    const end = start + (segment * 0.7); 
+    stops.push(`transparent ${start}deg, ${color} ${end}deg, transparent ${end}deg`);
+  }
+  return `conic-gradient(from 0deg, ${stops.join(", ")})`;
+}
+
+const SHINE_COLORS = [
+  { name: "Black", value: "#18181b" },
+  { name: "Blue", value: "#2563eb" },
+  { name: "Purple", value: "#9333ea" },
+  { name: "Emerald", value: "#059669" },
+  { name: "Rose", value: "#e11d48" },
+];
+
 function LoginPage() {
   const { admin, loading, signInWithEmail, signInWithGoogle, resetPassword } = useAuth();
   const navigate = useNavigate();
@@ -95,6 +123,13 @@ function LoginPage() {
   const [resetting, setResetting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [successState, setSuccessState] = useState(false);
+
+  // Customizer State
+  const [warpSpeed, setWarpSpeed] = useState(1);
+  const [loginBorderCount, setLoginBorderCount] = useState(2);
+  const [loginBorderColor, setLoginBorderColor] = useState("#18181b");
+  const [inputBorderCount, setInputBorderCount] = useState(2);
+  const [inputBorderColor, setInputBorderColor] = useState("#18181b");
 
   useEffect(() => {
     if (!loading && admin) navigate({ to: "/dashboard", replace: true });
@@ -146,7 +181,7 @@ function LoginPage() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white px-4 py-12 sm:px-6 lg:px-8">
       
-      <WarpStarField />
+      <WarpStarField speedMultiplier={warpSpeed} />
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.6)_100%)]" />
 
@@ -176,15 +211,16 @@ function LoginPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px] bg-zinc-200/50"
+              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px]"
             >
-              {/* Spinning Conic Gradient Border */}
+              <div className="absolute inset-0 bg-zinc-200/50" />
+              {/* Spinning Conic Gradient Border - Login Container */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
                 className="absolute inset-[-100%] z-0"
                 style={{
-                  background: "conic-gradient(from 0deg, transparent 0 280deg, #18181b 360deg)",
+                  background: buildConicGradient(loginBorderCount, loginBorderColor),
                 }}
               />
               
@@ -201,7 +237,7 @@ function LoginPage() {
                 <Button
                   type="button"
                   variant="outline"
-                  className="h-12 w-full rounded-xl border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 transition-colors"
+                  className="h-12 w-full rounded-xl border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 transition-colors relative z-20"
                   disabled={googleLoading || form.formState.isSubmitting}
                   onClick={handleGoogleSignIn}
                 >
@@ -209,7 +245,7 @@ function LoginPage() {
                   Continue with Google
                 </Button>
 
-                <div className="my-6 flex items-center gap-4">
+                <div className="my-6 flex items-center gap-4 relative z-20">
                   <span className="h-px flex-1 bg-zinc-200" />
                   <span className="text-xs font-medium uppercase tracking-wider text-zinc-400">
                     Or continue with email
@@ -218,7 +254,7 @@ function LoginPage() {
                 </div>
 
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 relative z-20">
                     <FormField
                       control={form.control}
                       name="email"
@@ -226,14 +262,27 @@ function LoginPage() {
                         <FormItem>
                           <FormLabel className="text-zinc-700">Work email</FormLabel>
                           <FormControl>
-                            <Input
-                              type="email"
-                              autoComplete="email"
-                              placeholder="you@college.edu.in"
-                              className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50"
-                              disabled={form.formState.isSubmitting}
-                              {...field}
-                            />
+                            <div className="relative w-full overflow-hidden rounded-xl p-[2px] shadow-sm">
+                              <div className="absolute inset-0 bg-zinc-200/50" />
+                              <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+                                className="absolute inset-[-100%] z-0"
+                                style={{
+                                  background: buildConicGradient(inputBorderCount, inputBorderColor),
+                                }}
+                              />
+                              <div className="relative z-10 h-full w-full rounded-[10px] bg-white">
+                                <Input
+                                  type="email"
+                                  autoComplete="email"
+                                  placeholder="you@college.edu.in"
+                                  className="h-12 border-none bg-transparent text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-0 shadow-none px-4"
+                                  disabled={form.formState.isSubmitting}
+                                  {...field}
+                                />
+                              </div>
+                            </div>
                           </FormControl>
                           <FormMessage className="text-red-500" />
                         </FormItem>
@@ -246,23 +295,34 @@ function LoginPage() {
                         <FormItem>
                           <FormLabel className="text-zinc-700">Password</FormLabel>
                           <FormControl>
-                            <div className="relative">
-                              <Input
-                                type={showPassword ? "text" : "password"}
-                                autoComplete="current-password"
-                                placeholder="•••••••••••••••••"
-                                className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50 pr-10"
-                                disabled={form.formState.isSubmitting}
-                                {...field}
+                            <div className="relative w-full overflow-hidden rounded-xl p-[2px] shadow-sm">
+                              <div className="absolute inset-0 bg-zinc-200/50" />
+                              <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+                                className="absolute inset-[-100%] z-0"
+                                style={{
+                                  background: buildConicGradient(inputBorderCount, inputBorderColor),
+                                }}
                               />
-                              <button
-                                type="button"
-                                onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
-                                tabIndex={-1}
-                              >
-                                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
-                              </button>
+                              <div className="relative z-10 h-full w-full rounded-[10px] bg-white flex items-center pr-3">
+                                <Input
+                                  type={showPassword ? "text" : "password"}
+                                  autoComplete="current-password"
+                                  placeholder="•••••••••••••••••"
+                                  className="h-12 border-none bg-transparent text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-0 shadow-none px-4 flex-1"
+                                  disabled={form.formState.isSubmitting}
+                                  {...field}
+                                />
+                                <button
+                                  type="button"
+                                  onClick={() => setShowPassword(!showPassword)}
+                                  className="text-zinc-400 hover:text-zinc-600 transition-colors z-20 shrink-0 ml-1"
+                                  tabIndex={-1}
+                                >
+                                  {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                                </button>
+                              </div>
                             </div>
                           </FormControl>
                           <FormMessage className="text-red-500" />
@@ -281,10 +341,10 @@ function LoginPage() {
                                 checked={field.value} 
                                 onCheckedChange={field.onChange} 
                                 disabled={form.formState.isSubmitting} 
-                                className="border-zinc-300 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white"
+                                className="border-zinc-300 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white z-20"
                               />
                             </FormControl>
-                            <FormLabel className="text-sm font-normal text-zinc-500 cursor-pointer hover:text-zinc-700">
+                            <FormLabel className="text-sm font-normal text-zinc-500 cursor-pointer hover:text-zinc-700 z-20 relative">
                               Keep me signed in
                             </FormLabel>
                           </FormItem>
@@ -292,7 +352,7 @@ function LoginPage() {
                       />
                       <button
                         type="button"
-                        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors hover:underline"
+                        className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors hover:underline z-20 relative"
                         onClick={() => setForgotOpen(true)}
                       >
                         Forgot password?
@@ -303,7 +363,7 @@ function LoginPage() {
                       <motion.div
                         initial={{ opacity: 0, y: -5 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-50 p-4 text-sm text-red-600"
+                        className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-50 p-4 text-sm text-red-600 relative z-20"
                       >
                         <TriangleAlert className="mt-0.5 size-4 shrink-0 text-red-500" />
                         <div className="flex flex-col gap-1">
@@ -315,7 +375,7 @@ function LoginPage() {
 
                     <Button
                       type="submit"
-                      className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800 text-base font-medium transition-all"
+                      className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800 text-base font-medium transition-all relative z-20 shadow-lg shadow-zinc-900/20"
                       disabled={form.formState.isSubmitting || googleLoading}
                     >
                       {form.formState.isSubmitting ? (
@@ -330,7 +390,7 @@ function LoginPage() {
                   </form>
                 </Form>
 
-                <div className="mt-6 flex flex-col items-center justify-center gap-1.5 text-center text-xs text-zinc-500">
+                <div className="mt-6 flex flex-col items-center justify-center gap-1.5 text-center text-xs text-zinc-500 relative z-20">
                   <div className="flex items-center gap-1.5 font-medium text-zinc-600">
                     <Lock className="size-3.5" />
                     Protected admin environment
@@ -344,25 +404,26 @@ function LoginPage() {
               key="success-state"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px] bg-zinc-200/50"
+              className="relative w-full overflow-hidden rounded-[24px] shadow-[0_0_24px_rgba(0,0,0,0.15)] p-[2px]"
             >
+              <div className="absolute inset-0 bg-zinc-200/50" />
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
                 className="absolute inset-[-100%] z-0"
                 style={{
-                  background: "conic-gradient(from 0deg, transparent 0 280deg, #18181b 360deg)",
+                  background: buildConicGradient(loginBorderCount, loginBorderColor),
                 }}
               />
               <div 
                 className="relative z-10 flex flex-col items-center justify-center text-center h-full w-full rounded-[22px] p-12 backdrop-blur-3xl"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.92)" }}
               >
-                <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100">
+                <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100 relative z-20">
                   <CheckCircle2 className="size-8" />
                 </div>
-                <h2 className="text-2xl font-semibold tracking-tight text-zinc-900">Authentication successful</h2>
-                <p className="mt-3 text-sm text-zinc-500 flex items-center gap-2 justify-center">
+                <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 relative z-20">Authentication successful</h2>
+                <p className="mt-3 text-sm text-zinc-500 flex items-center gap-2 justify-center relative z-20">
                   <Loader2 className="size-3.5 animate-spin text-blue-600" /> Loading your campus...
                 </p>
               </div>
@@ -412,6 +473,111 @@ function LoginPage() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Floating Settings Customizer Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button 
+              size="icon" 
+              className="h-12 w-12 rounded-full bg-zinc-900 text-white shadow-xl hover:bg-zinc-800 transition-transform hover:scale-105"
+            >
+              <Settings2 className="size-5" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent 
+            align="end" 
+            sideOffset={16} 
+            className="w-80 rounded-2xl border-zinc-200 bg-white p-6 shadow-2xl"
+          >
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-zinc-900 mb-1">Customize Experience</h4>
+                <p className="text-xs text-zinc-500">Tweak the cinematic login effects.</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-sm font-medium text-zinc-700">Warp Speed</label>
+                    <span className="text-xs font-semibold text-zinc-500">{warpSpeed.toFixed(1)}x</span>
+                  </div>
+                  <Slider 
+                    value={[warpSpeed]} 
+                    onValueChange={([val]) => setWarpSpeed(val)} 
+                    max={5} 
+                    min={0.1} 
+                    step={0.1} 
+                  />
+                </div>
+
+                <div className="h-px bg-zinc-100" />
+
+                <div className="space-y-3">
+                  <h5 className="text-sm font-semibold text-zinc-800">Login Card Border</h5>
+                  <div className="flex justify-between items-center">
+                    <label className="text-xs text-zinc-600">Beams Count</label>
+                    <span className="text-xs font-semibold text-zinc-500">{loginBorderCount}</span>
+                  </div>
+                  <Slider 
+                    value={[loginBorderCount]} 
+                    onValueChange={([val]) => setLoginBorderCount(val)} 
+                    max={10} 
+                    min={0} 
+                    step={1} 
+                  />
+                  <div className="flex justify-between items-center pt-1">
+                    <label className="text-xs text-zinc-600">Shine Color</label>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    {SHINE_COLORS.map(c => (
+                      <button
+                        key={c.name}
+                        onClick={() => setLoginBorderColor(c.value)}
+                        className={`size-6 rounded-full border-2 transition-all ${loginBorderColor === c.value ? "border-zinc-900 scale-110" : "border-transparent hover:scale-105"}`}
+                        style={{ backgroundColor: c.value }}
+                        title={c.name}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="h-px bg-zinc-100" />
+
+                <div className="space-y-3">
+                  <h5 className="text-sm font-semibold text-zinc-800">Input Fields Border</h5>
+                  <div className="flex justify-between items-center">
+                    <label className="text-xs text-zinc-600">Beams Count</label>
+                    <span className="text-xs font-semibold text-zinc-500">{inputBorderCount}</span>
+                  </div>
+                  <Slider 
+                    value={[inputBorderCount]} 
+                    onValueChange={([val]) => setInputBorderCount(val)} 
+                    max={10} 
+                    min={0} 
+                    step={1} 
+                  />
+                  <div className="flex justify-between items-center pt-1">
+                    <label className="text-xs text-zinc-600">Shine Color</label>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    {SHINE_COLORS.map(c => (
+                      <button
+                        key={c.name}
+                        onClick={() => setInputBorderColor(c.value)}
+                        className={`size-6 rounded-full border-2 transition-all ${inputBorderColor === c.value ? "border-zinc-900 scale-110" : "border-transparent hover:scale-105"}`}
+                        style={{ backgroundColor: c.value }}
+                        title={c.name}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
+      </div>
     </main>
   );
 }
