@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -16,29 +17,52 @@ class AttendanceDashboardView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(authControllerProvider).value;
     final currentClass = ref.watch(currentClassProvider);
+    final joinedCustomTimetablesAsync = ref.watch(joinedCustomTimetablesProvider);
 
     if (user == null) {
       return const Center(child: Text('Please sign in to view attendance.'));
     }
 
-    if (currentClass == null) {
+    if (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty)) {
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(LucideIcons.graduationCap, size: 64, color: AppColors.primary),
+              const Icon(
+                LucideIcons.graduationCap,
+                size: 64,
+                color: AppColors.primary,
+              ),
               const SizedBox(height: 16),
               Text(
                 'No Class Joined',
-                style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                style: AppTypography.titleLarge.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 8),
               Text(
                 'Join or search for an academic section to start tracking your attendance.',
                 textAlign: TextAlign.center,
-                style: AppTypography.bodyMedium.copyWith(color: AppColors.textSecondary),
+                style: AppTypography.bodyMedium.copyWith(
+                  color: AppColors.textSecondary,
+                ),
+              ),
+              const SizedBox(height: 24),
+              FilledButton.icon(
+                onPressed: () => context.push('/join-class-choice'),
+                icon: const Icon(LucideIcons.search, size: 18),
+                label: const Text('Find a Class'),
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
               ),
             ],
           ),
@@ -50,13 +74,15 @@ class AttendanceDashboardView extends ConsumerWidget {
 
     return asyncSchedule.when(
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (err, stack) => Center(child: Text('Error loading schedule: $err')),
+      error: (err, stack) =>
+          Center(child: Text('Error loading schedule: $err')),
       data: (items) {
         // Filter out breaks and map to distinct subject code/title pairs
         final subjects = <String, String>{};
         for (final item in items) {
           if (!item.isBreak) {
-            final code = (item.subjectCode != null && item.subjectCode!.isNotEmpty)
+            final code =
+                (item.subjectCode != null && item.subjectCode!.isNotEmpty)
                 ? item.subjectCode!
                 : item.title;
             subjects[code] = item.title;
@@ -70,17 +96,25 @@ class AttendanceDashboardView extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(LucideIcons.calendarDays, size: 64, color: AppColors.primary),
+                  const Icon(
+                    LucideIcons.calendarDays,
+                    size: 64,
+                    color: AppColors.primary,
+                  ),
                   const SizedBox(height: 16),
                   Text(
                     'No Classes Scheduled',
-                    style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                    style: AppTypography.titleLarge.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'This section has no active classes in the timetable yet.',
                     textAlign: TextAlign.center,
-                    style: AppTypography.bodyMedium.copyWith(color: AppColors.textSecondary),
+                    style: AppTypography.bodyMedium.copyWith(
+                      color: AppColors.textSecondary,
+                    ),
                   ),
                 ],
               ),
@@ -88,10 +122,7 @@ class AttendanceDashboardView extends ConsumerWidget {
           );
         }
 
-        return _AttendanceListContent(
-          userId: user.id,
-          subjects: subjects,
-        );
+        return _AttendanceListContent(userId: user.id, subjects: subjects);
       },
     );
   }
@@ -101,10 +132,7 @@ class _AttendanceListContent extends ConsumerWidget {
   final String userId;
   final Map<String, String> subjects;
 
-  const _AttendanceListContent({
-    required this.userId,
-    required this.subjects,
-  });
+  const _AttendanceListContent({required this.userId, required this.subjects});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -158,7 +186,10 @@ class _AttendanceListContent extends ConsumerWidget {
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [AppColors.primary, AppColors.primary.withValues(alpha: 0.85)],
+                colors: [
+                  AppColors.primary,
+                  AppColors.primary.withValues(alpha: 0.85),
+                ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -187,7 +218,9 @@ class _AttendanceListContent extends ConsumerWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        totalClasses > 0 ? '${overallPercentage.toStringAsFixed(1)}%' : '0.0%',
+                        totalClasses > 0
+                            ? '${overallPercentage.toStringAsFixed(1)}%'
+                            : '0.0%',
                         style: AppTypography.displayLarge.copyWith(
                           color: AppColors.onPrimary,
                           fontSize: 42,
@@ -205,7 +238,10 @@ class _AttendanceListContent extends ConsumerWidget {
                       ),
                       const SizedBox(height: 12),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 6,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(10),
@@ -214,8 +250,8 @@ class _AttendanceListContent extends ConsumerWidget {
                           overallPercentage >= 85.0
                               ? '🏆 Excellent target completion!'
                               : overallPercentage >= 75.0
-                                  ? '🎉 On track (Above 75% REC criterion)'
-                                  : '⚠️ Below 75% REC criterion!',
+                              ? '🎉 On track (Above 75% REC criterion)'
+                              : '⚠️ Below 75% REC criterion!',
                           style: AppTypography.labelSmall.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -233,14 +269,20 @@ class _AttendanceListContent extends ConsumerWidget {
                       width: 90,
                       height: 90,
                       child: CircularProgressIndicator(
-                        value: totalClasses > 0 ? (overallPercentage / 100).clamp(0.0, 1.0) : 0.0,
+                        value: totalClasses > 0
+                            ? (overallPercentage / 100).clamp(0.0, 1.0)
+                            : 0.0,
                         strokeWidth: 8,
                         backgroundColor: Colors.white.withValues(alpha: 0.15),
                         color: Colors.white,
                         strokeCap: StrokeCap.round,
                       ),
                     ),
-                    const Icon(LucideIcons.award, color: Colors.white, size: 36),
+                    const Icon(
+                      LucideIcons.award,
+                      color: Colors.white,
+                      size: 36,
+                    ),
                   ],
                 ),
               ],
@@ -263,7 +305,7 @@ class _AttendanceListContent extends ConsumerWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: subjects.length,
-            separatorBuilder: (_, __) => const SizedBox(height: 12),
+            separatorBuilder: (_, _) => const SizedBox(height: 12),
             itemBuilder: (context, index) {
               final code = subjects.keys.elementAt(index);
               final name = subjects[code]!;
@@ -324,7 +366,9 @@ class _SubjectAttendanceCard extends ConsumerWidget {
             loading: () => const Center(child: CircularProgressIndicator()),
             error: (err, _) => Text('Error: $err'),
             data: (att) {
-              final pct = att.totalCount > 0 ? (att.presentCount / att.totalCount) * 100 : 0.0;
+              final pct = att.totalCount > 0
+                  ? (att.presentCount / att.totalCount) * 100
+                  : 0.0;
               final isUnderTarget = pct < 75.0;
 
               // Calculate Bunk Predictor Text
@@ -346,7 +390,8 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                     }
                   }
                   if (safeBunks > 0) {
-                    bunkStatus = "Safe to miss next $safeBunks class${safeBunks > 1 ? 'es' : ''}!";
+                    bunkStatus =
+                        "Safe to miss next $safeBunks class${safeBunks > 1 ? 'es' : ''}!";
                     bunkBadgeColor = AppColors.success;
                   } else {
                     bunkStatus = "⚠️ Cannot miss today's class!";
@@ -364,7 +409,8 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                       break;
                     }
                   }
-                  bunkStatus = "Must attend next $requiredAttends class${requiredAttends > 1 ? 'es' : ''} to reach 75%";
+                  bunkStatus =
+                      "Must attend next $requiredAttends class${requiredAttends > 1 ? 'es' : ''} to reach 75%";
                   bunkBadgeColor = AppColors.error;
                 }
               }
@@ -381,15 +427,22 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
                               decoration: BoxDecoration(
-                                color: AppColors.getSubjectAccentColor(subjectCode).withValues(alpha: 0.15),
+                                color: AppColors.getSubjectAccentColor(
+                                  subjectCode,
+                                ).withValues(alpha: 0.15),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Text(
                                 subjectCode,
                                 style: AppTypography.labelSmall.copyWith(
-                                  color: AppColors.getSubjectAccentColor(subjectCode),
+                                  color: AppColors.getSubjectAccentColor(
+                                    subjectCode,
+                                  ),
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -410,9 +463,13 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            att.totalCount > 0 ? '${pct.toStringAsFixed(1)}%' : '0.0%',
+                            att.totalCount > 0
+                                ? '${pct.toStringAsFixed(1)}%'
+                                : '0.0%',
                             style: AppTypography.headlineMedium.copyWith(
-                              color: isUnderTarget ? AppColors.error : AppColors.primary,
+                              color: isUnderTarget
+                                  ? AppColors.error
+                                  : AppColors.primary,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -429,7 +486,10 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                   const SizedBox(height: 14),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 10,
+                    ),
                     decoration: BoxDecoration(
                       color: bunkBadgeColor.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
@@ -437,7 +497,9 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                     child: Row(
                       children: [
                         Icon(
-                          pct >= 75.0 ? LucideIcons.checkCircle : LucideIcons.alertTriangle,
+                          pct >= 75.0
+                              ? LucideIcons.checkCircle
+                              : LucideIcons.alertTriangle,
                           color: bunkBadgeColor,
                           size: 16,
                         ),

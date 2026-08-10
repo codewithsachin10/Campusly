@@ -1,0 +1,1205 @@
+
+--- PAGE 1 ---
+ 
+  
+RAJALAKSHMI ENGINEERING COLLEGE  
+CURRICULUM AND SYLLABUS  
+  
+B.E. COMPUTER SCIENCE AND DESIGN  
+REGULATIONS 2023 
+  
+  
+Vision  
+  
+To develop Innovative and highly Ethical Computer Science and Design Professionals through excellence in teaching, 
+research and training.  
+  
+Mission  
+  
+• To produce globally competent professionals, motivated to learn the emerging technologies in Computer Science 
+and Design and to be creative and innovative in solving real world problems.  
+  
+• To promote research activities amongst the faculty and students that could benefit the society.  
+  
+• To impart ethical values in their profession.  
+  
+PROGRAMME EDUCATIONAL OBJECTIVES (PEOs)  
+  
+  
+PEO 1: To equip students with essential background in computer science and design, and applied mathematics by 
+adopting best practices to meet the demands of academia, industry and media.  
+  
+  
+PEO 2: To prepare students with fundamental knowledge in programming languages, and tools and enable them to 
+improve and develop applications.  
+  
+  
+PEO 3: To develop professionally ethical and socially responsible computer science and design professionals with 
+enhanced analytical skills, communication skills, lifelong learning, creativity, innovation, organizing ability and 
+leadership quality to meet industry requirements. 
+ 
+ 
+ 
+ 
+
+--- PAGE 2 ---
+PROGRAMME OUTCOMES (POs)  
+  
+PO1: Engineering knowledge: Apply the knowledge of Mathematics, Science, Engineering fundamentals, and an 
+engineering specialization to the solution of complex engineering problems.  
+  
+  
+PO2: Problem analysis: Identify, formulate, review research literature, and analyze complex engineering problems 
+reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.  
+  
+  
+PO3: De sign/development of solutions: Design solutions for complex engineering problems and design system 
+components or processes that meet the specified needs with appropriate consideration for the public health and safety, 
+and the cultural, societal, and environmental considerations.  
+  
+  
+PO 4: Conduct investigations of complex problems: Use research-based knowledge and research methods including 
+design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.  
+  
+  
+PO 5: Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT 
+tools including prediction and modeling to complex engineering activities with an understanding of the limitations.  
+  
+  
+PO 6: The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, 
+safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.  
+  
+  
+PO 7: Environment and sustainability: Understand the impact of the professional engineering solutions in societal 
+and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.  
+  
+PO 8: Ethics: Apply ethical principles and commit to pro fessional ethics and responsibilities and norms of the 
+engineering practice.  
+  
+PO 9: Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, 
+and in multidisciplinary settings.  
+  
+PO 10: Communication: Communicate effectively on complex engineering activities with the engineering community 
+and with society at large, such as, being able to comprehend and write effective reports and design documentation, make 
+effective presentations, and give and receive clear instructions.  
+  
+PO11: Project management and finance: Demonstrate knowledge and understanding of the engineering and 
+management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and 
+in multidisciplinary environments.  
+  
+PO12: Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent and 
+life-long learning in the broadest context of technological change. 
+   
+ 
+ 
+--- PAGE 3 ---
+PROGRAM SPECIFIC OUTCOMES (PSOs)  
+  
+A graduate of the Computer Science and Design Program will have  
+  
+PSO 1: Strength in the foundations of programming languages and competence in computing technologies and tools to 
+design and implement efficient software solutions using suitable algorithms, data structures and other computing 
+techniques.  
+  
+PSO 2: A Skill to Independently investigate problems which can be solved by a Human Computer Interaction (HCI) 
+design process and design an end -to-end solution from user need identification to UI design to technical coding and 
+evaluation. Ability to effectively use suitable to ols and platforms, as well as enhance them, to design and develop 
+applications/products in animation, gaming, augmented and virtual reality, etc.  
+  
+PSO 3: An Ability to apply knowledge in various domains to identify research gaps and to provide solution t o new 
+ideas, inculcate passion towards higher studies, creating innovative career paths to be an entrepreneur and evolve as an 
+ethically social responsible computer science and design professional.  
+--- PAGE 4 ---
+CURRICULUM 
+B. E. COMPUTER SCIENCE AND DESIGN 
+Regulation 2023 | Total Credits: 160 
+ SEMESTER I       
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES       
+1.  HS23111  Technical Communication I HS  2  2  0  0  2  
+2.  MA23113  Mathematics for Design  BS  4  3  1  0  4  
+3.  CD23111  Design Drawing and Sketching  PC  3  2  1  0  3  
+4.  GE23117  தமிழ்மரபு /Heritage of Tamils  HS  1  1  0  0  1  
+LAB ORIENTED THEORY COURSES       
+5.  GE23131  Programming using C  ES  7  1  0  6  4  
+6.  PH23132  Physics for Information Science  BS  5  3  0  2  4  
+LABORATORY COURSE       
+7.  GE23123 Engineering Practices -Electrical, Electronics 
+and Computer systems  
+ES  2  0 0 4 2 
+MANDATORY COURSE       
+8.  MC23111  Indian Constitution and Freedom Movement  MC  3  3  0  0  0  
+ TOTAL  27  15  2  12  20 
+.  
+SEMESTER II       
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES       
+1.  MA23214  Probability and Inferential Statistics  BS  4  3  1  0  4  
+2.  CD23211  Foundation in Digital Storytelling  PC  3  3  0  0  3  
+3.  GE23217  தமிழர்களும் ததொழில்நுட்பமும் 
+ / Tamils and Technology  HS  1  1  0  0  1  
+LAB ORIENTED THEORY COURSES       
+4.  CD23231  Visual Communication Foundations PC  6  2  0  4  4  
+5.  IT23231  Digital Principles and Computer 
+Architecture  
+PC  5  3  0  2  4  
+6.  CS23231  Data Structures  PC  7  3  0  4  5  
+--- PAGE 5 ---
+LABORATORY COURSE       
+7.  HS23221/HS 
+23222  
+Technical Communication II / English for 
+Professional Competence  HS  2  0  0  2  1  
+MANDATORY COURSE       
+8.  MC23112  Environmental Science and Engineering  MC  3  3  0  0  0  
+ TOTAL  31 18  1  12 22  
+   
+SEMESTER III      
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES      
+1.  MA23313  Discrete Mathematics for AI  BS  4  3  1  0  4  
+LAB ORIENTED THEORY COURSES      
+2.  CD23331  Design Processes and Perspectives  PC  5  3  0  2  4  
+3.  CS23331  Design and Analysis of Algorithms  PC  5  3  0  2  4  
+4.  CD23332  UI and UX design  PC  6  2  0  4  4  
+5.  CS23332  Database Management Systems  PC  7  3  0  4  5  
+LABORATORY COURSE      
+6.  CD23321  Python Programming for Design  PC  6  0  0  6  3  
+TOTAL  33  14  1  18  24  
+  
+SEMESTER IV       
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES       
+1.    Open Elective-I  OE  3  3  0  0  3  
+LAB ORIENTED THEORY COURSES       
+2.  MA23433  Mathematical Modelling and Simulation  BS  5  3  0  2  4  
+3.  AI23231  Principles of Artificial Intelligence  PC  5  3  0  2  4  
+4.  CS23432  Software Construction  PC  5  3  0  2  4  
+5.  CS23532  Computer Networks  PC  5  3  0  2  4  
+6.  CS23333  Object Oriented Programming using Java  PC  7  1  0  6  4  
+EMPLOYABILITY ENHANCEMENT COURSES       
+7.  GE23421  Soft Skills – I  EEC  2  0  0  2  1  
+--- PAGE 6 ---
+8.  CD23421  Industry Internship (2/4 weeks)  EEC  0  0  0  0  1  
+ TOTAL  32  16  0  16  25  
+  
+SEMESTER V       
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES       
+1.    Professional Elective-I  PE  3  3  0  0  3  
+LAB ORIENTED THEORY COURSES       
+2.  CD23531  3D Modelling and Texturing  PC  4 2 0 2 3 
+3.  CS23431  Operating Systems  PC  7  3  0  4  5  
+4.  CS23531  Web Programming  PC  7  1  0  6  4  
+5.  GE23627 Design Thinking for Innovation EEC  3  1  0  2  2  
+EMPLOYABILITY ENHANCEMENT COURSES       
+6.  GE23521  Soft Skills – II  EEC  2  0  0  2  1  
+ TOTAL  26 10  0  16  18 
+  
+SEMESTER VI      
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES      
+1.    Open Elective – II  OE  3  3  0  0  3  
+LAB ORIENTED THEORY COURSES      
+2.    Professional Elective-II  PE  5  3  0  2  4  
+3.  CD23631  Game Design and Development  PC  6  2  0  4  4  
+4.  AI23331  Fundamentals of Machine Learning  PC  5  3  0  2  4  
+5.  CD23632 3D Rigging and Animation EEC  6 2 0 4 4 
+LABORATORY COURSES      
+6.  CD23621  Mobile Application Design and 
+Development Laboratory  PC  4  0  0  4  2  
+EMPLOYABILITY ENHANCEMENT COURSES      
+7.  GE23622  Problem Solving Techniques  EEC  2  0  0  2  1  
+TOTAL  31 13  0  18 22  
+  
+ 
+--- PAGE 7 ---
+SEMESTER VII       
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+THEORY COURSES       
+1.    Professional Elective-III  PE  3  3  0  0  3  
+LAB ORIENTED THEORY COURSES       
+2.    Professional Elective-IV  PE  4  2 0 4 4 
+3.  CD23731  Film Making and Radio Podcasting  PC  4  2  0  2  3  
+LABORATORY COURSES       
+4.  CD23721  Visual Effects  PC  6  0  0  6  3  
+5.  CD23722  Capstone Project Phase 1*  EEC  8  0  0  8  4  
+ TOTAL  26  8  0  18  17  
+   
+SEMESTER VIII      
+SI.  
+NO.  
+COURSE 
+CODE  COURSE TITLE  Category  
+Contact 
+Periods  L  T  P  C  
+1.    Professional Elective-V  PE  3  3  0  0  3  
+2.    Professional Elective-VI  PE  3  3  0  0  3  
+LABORATORY COURSES      
+3.  CD23821  Capstone Project Phase 2*  EEC  12  0  0  12  6  
+TOTAL  18  6  0  12  12  
+  
+ 
+ 
+ 
+*Should have focus on Design Aspects                                             TOTAL NO. OF CREDITS: 160 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 8 ---
+PROFESSIONAL ELECTIVES (PE) 
+  
+  
+ Emerging Technologies      
+  
+SI.  
+NO.  
+  
+COURSE 
+CODE  
+  
+  
+COURSE TITLE  
+  
+  
+Category  
+  
+Contact  
+Periods  
+  
+  
+L  
+  
+  
+T  
+  
+  
+P  
+  
+  
+C  
+1  CS23A32  Robotic Process Automation  PE  5  1  0  4  3  
+2  MCB2302 Digital Marketing and Web Analytics  PE  3  3  0  0  3  
+3  CS23A36  3D Printing and Design  PE  4  2  0  2  3  
+4  IT23A31  Internet of Things  PE  4  3 0 0 3 
+5  CS23A33  Cyber security and Forensics  PE  4  2  0  2  3  
+6  CS23632  Cryptography and Network Security  PE  4  2  0  2  3  
+7  AI23B36  Cognitive Science  PE  4  3 0 0 3 
+8  AI23P39  Soft Computing  PE  4  2  0  2  3  
+  
+  Full Stack Development      
+  
+SI.  
+NO.  
+  
+COURSE 
+CODE  
+   
+COURSE TITLE  
+   
+Category  
+  
+Contact  
+Periods  
+   
+L  
+   
+T  
+   
+P  
+   
+C  
+1  IT23C31 Software Testing  PE  3 2 0 2 3  
+2 IT23B32  Advanced Web Programming  PE  4  1  0 4 3  
+3 IT23B33  DevOps  PE  4  2  0  2  3  
+4  IT23B34  Advanced Java Programming  PE  4  3  0 0 3  
+5  IT23C12  Software Project Management  PE  3  3  0  0  3  
+6 IT23C18  Agile Methodologies  PE  3  3  0  0  3  
+   
+  Cyber Security        
+SI.  
+NO. 
+COURSE  
+ CODE  COURSE TITLE  Category  Contact 
+Periods  L  T  P  C  
+1. CR23A11  Security Assessment and Risk Analysis  PE  3  3  0  0  3  
+2. CS23A11  Malware Detection and Analysis  PE  3  3  0  0  3  
+3. CR23A31  Ethical Hacking and Security  PE  4  2  0  2  3  
+4. CR23A32  Digital and Mobile Forensics  PE  4  2  0  2  3  
+5 CR23A34  Security and Privacy in Cloud  PE  4  2  0  2  3  
+6 CR23A35  Social Network Security  PE  4  2  0  2  3  
+7 CS23A35  Web Application Security  PE  4  2  0  2  3  
+8 CR23A36  Information Security and Management  PE  4  2  0  2  3  
+ 
+ 
+ 
+FROM CSD 
+--- PAGE 9 ---
+Elective Courses offered by CSD 
+ 
+  Open Electives        
+SL.NO COURSE 
+CODE 
+COURSE TITLE CATEGORY CONTACT 
+PERIOD 
+L T P C 
+1.  CD23O31  3D MAYA  PC  4  2  0  2  3  
+2.  CD23O32  UI /UX PC  4  2  0  2  3  
+ 
+Group-1(PE-4 CREDITS) 
+VIRTUAL AND AUGMENTED REALITY 
+SL.
+NO 
+COURSE 
+CODE 
+COURSE TITLE CATEG
+ORY 
+CONTACT 
+PERIOD 
+L T P C 
+1 CD23A31 Multimedia Technologies PE 6 2 0 4 4 
+2 CD23A32 Fundamentals Of Augmented 
+Reality 
+PE 6 2 0 4 4 
+3 CD23A33 Fundamentals Of Virtual Reality PE 6 2 0 4 4 
+5 CD23A34 Metaverse PE 6 2 0 4 4 
+7 CD23A35 Digital Video Production PE 6 2 0 4 4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Group-2(PE-3 CREDITS) 
+Digital Media  Management 
+ 
+SI. 
+NO. 
+ 
+COURSE 
+CODE 
+ 
+ 
+COURSE TITLE 
+ 
+ 
+Category 
+ 
+Contact 
+Periods 
+ 
+ 
+L 
+ 
+ 
+T 
+ 
+ 
+P 
+ 
+ 
+C 
+1 CD23B11 Aesthetics And Art PE 4 3 0 0 3 
+2 CD23B12 Digital Media Entrepreneurship PE 3 3 0 0 3 
+3 CD23B13 Interactive Marketing Fundamentals PE 3 3 0 0 3 
+4 CD23B31 Digital Audio Design And Synthesis PE 4 2 0 2 3 
+5 CD23B32 Design Digital Advertising PE 4 2 0 2 3 
+6   IT23B31 C# AND .NET PROGRAMMING PE 4 2 0 2 3 
+Group-3(PE-4 CREDITS) 
+Data And Vision Analytics 
+ 
+SI. 
+NO. 
+ 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+ 
+CATEGORY 
+ 
+CONTACT 
+PERIODS 
+ 
+L 
+ 
+T 
+ 
+P 
+ 
+C 
+1 CD23C31 Introduction To Motion Graphics PE 6 2 0 4 4 
+2 CD23C32 Data Visualization PE 5 3 0 2 4 
+3 CD23C33 Hadoop And Big Data Analytics PE 6 1 0 6 4 
+--- PAGE 10 ---
+Subject 
+Code  
+Subject Name (Theory course)  Category  L  T  P  C 
+HS23111  Technical Communication I  HS  2  0  0  2  
+Common to all branches of B.E/B. Tech programmes – First Semester 
+  
+  
+Objectives:  
+To facilitate students develop their comprehension skills  
+To enable students to improve their receptive skills  
+To equip learners with better vocabulary and enhance their writing skills  
+To aid students speak effectively in all kinds of communicative contexts.  
+To improve the learners’ basic proficiency in workplace communication  
+  
+  
+UNIT-I  DEVELOPING COMPREHENSION SKILLS  6  
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages.  
+Speaking: Introducing Oneself, Narrating a Story / Incident.  
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process 
+Description Grammar: Verbs –Main& Auxiliary: Simple Tenses – Form, Function and Meaning.  
+Vocabulary: Word formation – Prefix, Suffix, Compound Words.  
+UNIT-II  LISTENING AND EXTENDED READING   6  
+Listening: Deep Listening – Listening to Talk Shows and Debates  
+Reading: In-depth Reading - Scanning Passages  
+Speaking: Describing Current Issues, Happenings, etc..,  
+Writing: Note Making, Note Taking – Paragraph Writing  
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary:One Word Substitutes, Phrasal Verbs.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 11 ---
+UNIT-III  FORMAL WRITING AND VERBAL ABILITY  6  
+Listening: Listening to Lectures and Taking Notes  
+Reading: Interpretation of Tables, Charts and Graphs  
+Speaking:SWOT Analysis on Oneself  
+Writing:Formal Letter Writing and Email Writing  
+Grammar:Perfect Tenses, Phrases and Clauses, Discourse Markers  
+Vocabulary :Verbal Analogy / Cloze Exercise  
+UNIT-IV  ENHANCING SPEAKING ABILITY  6  
+Listening:Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul 
+Kalam, etc..) 
+ Reading:Timed Reading, Filling KWL Chart. Speaking:Just a Minute, Impromptu 
+Writing:Check-list, Instructions.  
+Grammar:‘Wh’Questions / ‘Yes’ or ‘No’Questions, Imperatives  
+Vocabulary:Synonyms, Antonyms, Different forms of the same words.  
+UNIT-V  LANGUAGE FOR WORKPLACE  6  
+Listening: Extensive Listening (Audiobooks, rendering of poems, etc.)  
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels)  
+Speaking: Short Presentationson Technical Topics  
+Writing:Recommendations,Essay Writing  
+Grammar:Impersonal Passive, Reported Speech,Concord  
+Vocabulary :Informal Vocabulary and Formal Substitutes  
+Total Contact Hours: 30  
+  
+  
+Course Outcomes:  
+On completion of the course students will be able to  
+apply their comprehension skills and interpret different contents effortlessly  
+read and comprehend various texts and audio visual contents  
+infer data from graphs and charts and communicate it efficiently in varied contexts  
+participate effectively in diverse speaking situations  
+to present, discuss and coordinate with their peers in workplace using their language skills  
+   
+--- PAGE 12 ---
+SUGGESTED ACTIVITIES    
+ Ice breaker  
+ Just A Minute  
+ Ship wreck  
+ Hot seat  
+ Vocabulary building  
+ Chinese whispers  
+ Case study  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+Text Book(s):  
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback 2017  
+2. Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth 
+Edition (June 28, 2004)  
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension.  
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMengGoh, 
+Cambridge University Press  
+  
+  
+Reference Books(s) / Web links:  
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With 
+Answers 2nd Edition by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting 
+(Contributor)  
+2. Reading Development and Difficulties By Kate Cain  
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK  
+4. Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by 
+Ann Handley (Author)  
+  
+SUGGESTED EVALUATION METHODS 
+Assignment topics  
+Quizzes  
+Class Presentation/Discussion  
+Continuous Assessment Tests 
+--- PAGE 13 ---
+  
+Course 
+Code  
+Course Title  Category  L  T  P  C 
+MA23113  MATHEMATICS FOR DESIGN  BS  3  1  0  4  
+  
+Objectives:  
+ ● To express various matrix techniques and to illustrate the nature of the matrix.  
+ ● To gather the matrix algebra techniques and the concepts of basis and dimension in vector spaces.  
+ ● To formulate and analyse complex engineering problems using the concepts of Geometric algebra.  
+ ● To explain techniques of calculus which are applied in the Engineering problems.  
+ ● To apply the techniques of Integration in finding area and volumes.  
+  
+UNIT-I  MATRICES AND QUADRATIC FORMS  12  
+Matrices: Types - Symmetric and Skew – symmetric matrices, Hermitian matrix, Unitary matrix and 
+Orthogonal matrices – Rank, Inverse and Trace of a matrix - Eigen values and eigenvectors- Diagonalization 
+of matrices using orthogonal transformation -Quadratic forms -Reduction to canonical form using 
+orthogonal transformation.  
+UNIT-II  VECTOR SPACES  12  
+Vector spaces – Subspaces – Linear combinations and system of Linear equations – Linear independence 
+and Linear dependence – Bases and Dimensions – Linear Transformation – Matrix representation of Linear 
+Transformation - Null space, Range space and dimension theorem (without proof).  
+UNIT-III  GEOMETRIC ALGEBRA  12  
+Two dimensional objects: Straight lines, Circles, Polygons -Three dimensional objects : Prisms, Cones, 
+Cylinders, Spheres, Torus - Coordinate System :Cartesian and polar -Vectors: Scalar products and Vector 
+products- Quaternion :  
+arithmetic, quaternion as matrix- Transformation in plane- Rotation, Translation and Reflections- 
+Introduction to parametric curves in planes.  
+UNIT-IV  FUNCTIONS OF SEVERAL VARIABLES  12  
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit 
+functions– Taylor’s series for functions of two variables–Maxima and minima of functions of two variables–
+Lagrange’s method of undetermined multipliers.  
+UNIT-V  MULTIPLE INTEGRALS  12  
+Double integrals–Change of order of integration–Area enclosed by plane curves–Triple integrals–Volume of 
+solids– Numerical computation of double integrals -Trapezoidal rule.  
+Total Contact Hours: 60  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 14 ---
+Course Outcomes: On completion of the course students will be able to  
+ ● Demonstrate various matrix techniques in solving the related problems in engineering and technology.  
+● Apply the concepts of basis and dimension in vector spaces to the solution of related complex 
+engineering problems.  
+ ● Formulate and analyse complex engineering problems using the concepts of Geometric algebra.  
+ ● Interpret the problems in Engineering and Technology using the principles of mathematical calculus.  
+ ● Evaluate multiple integrals to conduct investigations of complex problems.  
+  
+SUGGESTED ACTIVITIES:         Problem solving sessions (will be explain through online calculator)  
+  
+ 
+ 
+ 
+ 
+ 
+Text Book(s):  
+1.  Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 2014.  
+2.  Introduction to linear algebra, 5th Edition, Gilbert Strang, 2016. Wellesley Publishers.  
+3.  John Vince., “ Geometric algebra for computer graphics” Springer.  
+  
+Reference Books(s) / Web links:  
+1.  Friedberg, A.H., Insel, A.J. and Spence, L., Elementary Linear Algebra, a matrix approach,2nd edition, 
+Pearson, 2014.  
+2.  Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, New 
+Delhi, 2016.  
+3.  Bali, N.P. and Manish Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. 
+Ltd., New Delhi, 2006.  
+4.  T Veerarajan, Engineering Mathematics –I , McGraw Hill Education, 2018.  
+5.  Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 
+2018.  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+SUGGESTED EVALUATION METHODS 
+Problem solving in Tutorial sessions  
+Assignment problems  
+Quizzes and class test  
+Discussion in classroom 
+--- PAGE 15 ---
+ Subject Code  Subject Name (Theory Course)  Category  L  T  P  C  
+CD23111  DESIGN DRAWING AND SKETCHING  PC  2  1  0  3  
+ 
+Objectives:  
+●  To enable drawing as a medium for observing, representing, conceptualizing, visualizing and communicating 
+design ideas.  
+●  To develop an understanding of spatial concepts and the critical ability to think and visualize in three 
+dimensions through the tactile nature of drawing.  
+  
+●  
+To develop observational skills through the study of the environment and as a tool for visual 
+representation, ideation/conceptualization, visualization and communication or presentation of design 
+ideas through sketching and drawing from both observation and memory.  
+   
+UNIT-I  INTRODUCTION TO DESIGN DRAWING  9  
+Introduction to Materials, Tools & Methods - different grades of pencils & exploring- Developing free finger, wrist, 
+hand & arm movement and initiate muscle - Introduction to Observation – Scrutinize, Examine, Study, Inspect, 
+Perceive, Sense, Feel, Notice, Identify, Understand- Training the eye to observe accurately to educate the visual sense- 
+Introduction to Perception – View, Opinion, Insight, Discernment- Introduction to Perspective – Eye level, Vanishing  
+Point  
+UNIT-II  DRAWING OF CUBES and PERSPECTIVES  9  
+Introduction to Vanishing Points, View Point, Eye Level, Horizon, Parallel & Converging Lines-One Point  
+Perspective- Two Point Perspective-Three Point Perspective-Perspective in the Environment, Interior Spaces and 
+Objects.  
+ UNIT-III   OBJECT DRAWING and HUMAN FORM DRAWING   9  
+Introduction to other geometric forms like cylinder, cuboids etc. - Introduction to Object Drawing -How to 
+observe – shape, proportions, effect of light on the objects etc.- Introduction to Human Form Proportions-Human 
+Form – Object  
+Relationships  
+UNIT-IV  GEOMETRY & STRUCTURE  9  
+Construction of Basic Polygons-Proportioning Systems: Golden Proportion- Interrelation of Polygons- Orthographic 
+Projection of Planes and Solids -. Isometric Projection -Architectonic Drawing - Isometric Circles -Architectonic 
+Planes with rounded surfaces, tu be with square cross section with ellipse at different planes and tube with circular 
+cross- section.  
+UNIT-V  VISUALISATION DRAWING  9  
+Introduction to Mental Imagery- Compositions inclusive of human forms, object, perspective etc- Sketching a mini 
+environment outside the campus from memory- Sketching a visualized composition from imagination  
+  Total Contact Hours  :  45  
+ 
+ 
+ 
+ 
+ 
+--- PAGE 16 ---
+Course Outcomes:  On completion of the course students will be able to  
+●  Develop the skill & ability to observe and visually represent all the elements in their environment with 
+a focus on human forms, objects and nature and the way they interact.  
+●  
+inculcate skills and develop the ability to explain the importance of precision in design through drawings 
+using instruments/tools and concept of figures/configuration through basic geometrical patterns on 2D 
+surfaces.  
+●  Develop the ability to discuss orthographic and isometric projections as fundamental tools of technical 
+drawing and use technical drawings as a tool for visual communication.  
+●  Develop the ability to analyse visual structure of 3D forms on 2D surfaces with an exposure to the 
+complexities of imagination and visualization.  
+●  Develop the ability to analyse complex images and in turn develop the ability to create mental imageries 
+and visualise concepts.  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+ 
+ 
+ 
+Text Book(s):  
+1  Erik Olofsson, Klara Sjolen, Design Sketching, KEEOS Design Books, 2005.  
+2  K . Morling, Geometric and Engineering Drawing, Third Edition, Graduate of the Institution of Mechanical 
+Engineers, SI Units, Elsevier, 2010.  
+3  Brom, Sketching from the Imagination: An Insight into Creative Drawing, 3dtotal publishing, 2013.  
+4  Flint, Tom, Anatomy for the Artist: The Dynamic of the Human Form, London, Arcturus Publishing, 2017.  
+  
+Reference Books(s):  
+1  Koos Eissen, Roselien Steur, Sketching: The Basics, BIS Publishers, 2014.  
+2  Edwards, Betty, drawing on the Artist Within: An Inspirational and Practical Guide to Increasing Your 
+Creative Powers, Simon & Schuster Inc., New York, 1987.  
+  
+ 
+ 
+SUGGESTED EVALUATION METHODS 
+Character Sketching  
+Sketch from Memory  
+Digital Art Creation  
+Live Sketching  
+Story Board Development 
+SUGGESTED EVALUATION METHODS 
+Use of Various level of pencils  
+Quality of Drawing  
+Picture Perfect  
+Similarity of Script 
+--- PAGE 17 ---
+GE23117  தமிழர் மரபு   L T P C   
+1 0  0 1  
+அலகு I  மமமமொழி மற் றும் இலக்கியம் :  3  
+இந்திய தததமொழிக் குடும் பங் கள் - திததரொவிட தததமொழிகள் - தமிழ் ஒரு ததம் தததமொழி - 
+தமிழ ததவ் விலக்கியங் கள் - த ங் க இலக்கியத்தின்  த மய த த த ொரபற்ற தன் மம - த ங் க 
+இலககிய் 
+   த்தில் பகிரதல  
+அறம்  -  திருக்குறளில்  மமததலொண ் மமக்  கருத்Fக்கள்  -  தமிழிக்  ததகொப்பியங் கள் ,  
+தமிழகததி ் ல்  த மண 
+ தததபௌத்த   த மயங் களின்ள் மற்றும்    ததநொயன் ததமொரக  ள் - 
+  
+தததொக்கம்    -   பக்தி    
+இலக்கியம் ,   
+ஆழ்ததவொரக  
+  
+சிற்றிலக்கியங் கள்   -   
+தமிழில்   நவீன   
+இலக்கியத்தின்   
+வளதரசி 
+ததபொரதிததயொர் 
+மற்றும்  
+ததபொரதிதததொத ன்  
+ஆகிமததயொரின்  பங் 
+களிப்பு.  
+-   தமிழ்   இலக்கிய   
+வளதரசி  
+யில 
+ அலகு II மரபு - ம ம ொறற ஓவியங் கள் முதல் நவீன ஓவியங் கள் வறர - சிற் க் கறல:  
+3  
+நடுகல்  முதல்  நவீன  சிற்பங் கள்  வமர  -  ஐம் தததபொன்  சிமலகள்  -  பழங் குடியினர்  மற்றும்  
+அவரகள தததயொரிக்கும்  மகவிமனப் தததபொருட்கள் , தததபொம் மமகள்  - மதர் ததய் யும்  
+கமல - சுடுமண ்   சிற்பங் கள்  - ததநொடடுப்புறத்    ததய் வங் கள் -    குமரிமுமனயில் 
+   திருவள்ளுவர்   சிமல    -    இதமக்    கருவிகள்  - 
+மிருதங் கம் ,   பமற,   வீமண,   ததயொழ் ,    ளின்   த மூக   தததபொருததளொதததொர   
+ததவொழ் வில ததநொதஸ ் வரம்   -   தமிழரக மததகொவில் களின்  பங் கு.  
+ அலகு III  மமநொடடு  ்புறக் கறலகள் மற் றும் வீர விறளமமயொடடுகள் :   3  
+ததருக்கூத்F,  கரததகொடட்ம் ,  வில் லுப்ததபொடடு,  கணிததயொன்   கூத்F,  ஒயிததலொடட்ம் ,  
+மதததொல் ததபொமவக்  கூத்F, சிலம் ததபொட்டம் , வளரி, ளின்  விமளததயொடடு கள் . 
+புலிததயொட்டம் , தமிழரக  
+ அலகு IV  தமிழரக்ளின்  திறறக் கமமகொடம் ம ொடுகள் :   3  
+தமிழகத்தின் தததொவரங் களும் , விலங் குகளும் - ததததொல் ததகொப்பியம் மற்றும் த ங் க 
+இலக்கியத்தில் அகம  
+மற்றும்  புறக் மததகொடத் தபொடுகள்  - தமிழரகள்  மததபொற்றிய அறகம்   ததகொடத் தபொடு - த 
+ங் கததகொலத்தில்  தமிழத்தில எழுத்தறிவும் ,  கல் வியும்  -  த ங் கததகொல  நகரங் களும்  Fமற  
+முகங் களும்  -  த ங் கததகொலத்தில்  ஏற்றுமதி மற்றும் இறக்குமதி - கடல் கடந்த ததநொடுகளில் 
+தததமொழரகளின்  தவற்றி.  
+--- PAGE 18 ---
+ அலகு V  இந்திய கதசிய இயக்கம் மற் றும் இந்திய ற  ்  ம ம ொட்டிற்குத்  
+ தமிழரக்ளின  ங் களி  ்பு:  3  
+இந்திய விடுதமலப்மததபொரில் தமிழரகளின் பங் கு - இந்திததயொவின் பிறப்பகுதிகளில் தமிழ் 
+ப் பண ் ததபொடடி்ன்   தததொக்கம்  -  சுயமரிததயொமத  இயக்கம்  -  இந்திய  மருத்Fவத்தில் ,  சித்த  
+மருத்Fவத்தின பங் கு - கல் தவடடுகள் , மகதயழுத்Fப்படிகள் - வரததலொறு. தமிழ் ப் புத்தகங் 
+களின்  தஅசு  
+TOTAL : 15 PERIODS 
+  
+TEXT-CUM-REFERENCE BOOKS  
+1. தமிழக  வரததலொறு  - மக்களும்  பண ் ததபொடும்  - மக.மக.  பிள்மள  (தவளியீடு: தமிழ் 
+ததநொடு  ததபொடநூல் மற்றும் கல் வியியல் பணிகள் கழகம் ).  
+2. கணினித் தமிழ் - முமனவர் இல. சுந்தரம் . (விகடன் பிரசுரம் ).  
+3. கீழடி - மவமக நதிக்கமரயில் த ங் கததகொல நகர ததநொகரிகம் (ததததொல் லியல் Fமற 
+தவளியீடு)  
+4. தததபொருமந - ஆற்றங் கமர ததநொகரிகம் . (ததததொல் லியல் Fமற தவளியீடு)  
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+  
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of 
+Tamil Studies.  
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by:  
+International Institute of Tamil Studies).  
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute of 
+Tamil Studies).  
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of 
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu)  
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The Author)  
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and 
+Educational Services Corporation, Tamil Nadu)  
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book.  
+--- PAGE 19 ---
+Subject Code  Subject Name  Category  L  T  P  C  
+GE23131  PROGRAMMING USING C  ES  1  0  6  4  
+Common to         
+  
+Objectives:  
+ ● To develop simple algorithms for arithmetic and logical problems.  
+ ● To develop C Programs using basic programming constructs  
+ ● To develop C programs using arrays and strings  
+ ● To develop applications in C using functions , pointers and structures  
+ ● To develop applications using structures and union  
+   
+List of Experiments   
+1. Overview of C, Constants, Variables and Data Types   
+2. Operators and Expressions, Managing Input and Output Operations   
+3. Decision Making and Branching   
+4. Decision Making and Looping   
+5. Nested Loops - while and for, Jumps in Loops   
+6. One-Dimensional Arrays   
+7. Searching Algorithms - Linear and Binary   
+8. Sorting Algorithms - Bubble and Selection   
+9. Two-Dimensional and Multi-dimensional Arrays   
+10. Character Arrays and Strings Handling Functions   
+11. User-Defined Functions - Recursive Functions   
+12. Passing Arrays and Strings to Functions   
+13. Scope, Visibility and Lifetime of Variables   
+14. Structures and Unions   
+15. Pointers   
+16. The Preprocessor   
+ Platform Needed: GCC Compiler for Windows/Linux   
+ Total Contact Hours: 90  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 20 ---
+Text Book(s):  
+ 1. Brian W. Kernighan and Dennis M. Ritchie, “The C Programming Language”, Second Edition, PHI  
+ 2. Byron Gottfried, “Programming in C”, Second Edition, Schaum Outline Series  
+Reference Books(s) / Web links:  
+ ● Herbert Schildt, “C: The Complete Reference”, Fourth Edition, McGraw Hill.  
+ ● Yashavant Kanetkar, “Let Us C”, BPB Publications  
+ ● E. Balaguruswamy, Programming in ANSI C, Tata McGraw-Hill  
+ ●  NPTEL course , “Problem Solving Through Programming In C”, By Prof. Anupam Basu, IIT    
+              Kharagpur  
+ Course Outcomes:  
+On completion of the course, the students will be able to  
+●   Formulate simple algorithms for arithmetic and logical problems.  
+●   Implement conditional branching, iteration and recursion.  
+●   Decompose a problem into functions and synthesize a complete program using divide and conquer 
+approach.  
+●   Use arrays, pointers and structures to formulate algorithms and programs.  
+●   Apply programming to solve matrix addition and multiplication problems and searching and sorting 
+problems.  
+  Suggested Activities  
+Practice small and tricky codes  
+Practice problems in portals like Digital Café  
+Debugging the codes  
+Completing the function definitions etc.  
+ 
+CO - PO – PSO matrices of course 
+  
+PO/PSO  
+  
+  
+CO  
+PO 
+1  
+PO 
+2  
+PO 
+3  
+PO 
+4  
+PO 
+5  
+PO 
+6  
+PO 
+7  
+PO 
+8  
+PO 
+9  
+PO  
+10  
+PO  
+11  
+PO  
+12  
+PSO 
+1  
+PSO 
+2  
+  
+PSO 
+3  
+GE19141.1  1  2  2  2  1  -  -  -  1  2  1  1  2  3  -  
+GE19141.2  1  1  1  1  1  -  -  -  -  -  1  1  2  2  -  
+GE19141.3  1  1  2  1  1  -  -  -  -  -  1  1  2  2  -  
+GE19141.4  2  2  3  2  1  -  -  -  1  -  2  1  2  2  2  
+GE19141.5  2  2  3  2  1  -  -  -  -  -  2  1  2  2  2  
+Average  1.4  1.6  2.2  1.6  1.0  -  -  -  1.0  2.0  1.4  1.0  2.0  2.2  2.0  
+   
+Correlation levels 1, 2 or 3 are as defined below: 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High)No correlation: “-“ 
+--- PAGE 21 ---
+Subject 
+Code  
+Subject Name  Category  L  T  P  C 
+PH23132  PHYSICS FOR INFORMATION SCIENCE 
+(Common to -B.E.-CSE, CSD, Cyber Security &B.Tech.- IT, 
+AIML) 
+BS  3  0  2  4  
+Objectives:  
+●  To understand the principles of laser and fiber optics in engineering and technology.  
+●  To analyze the properties of magnetic and superconducting materials.  
+●  To understand the advanced concept of quantum theory and applications.  
+●  To become proficient in semiconductor applications  
+●  To become proficient in optoelectronic devices  
+UNIT-I  LASERS AND FIBER OPTICS  9  
+Lasers: Characteristics, Einstein’s A and B coefficients derivation – resonant cavity, optical amplification 
+(qualitative)  
+–Nd-YAG Laser, Semiconductor lasers: Homojunction and Heterojunction - Applications of Lasers. Fiber 
+optics: principle, numerical ape rture and acceptance angle - types of optical fibers (material, mode and 
+refractive index) – losses associated with optical fibers -Fiber optic communication system - fiber optic 
+sensors: pressure and displacement.  
+UNIT-II  MAGNETIC AND SUPERCONDUCTING MATERIALS  9  
+Magnetic dipole moment – atomic magnetic moments- magnetic permeability and susceptibility -Magnetic 
+material classification: diamagnetism – paramagnetism – ferromagnetism – antiferromagnetism – 
+ferrimagnetism – Domain Theory- M versus H behaviour – Hard and soft magnetic materials – examples 
+and uses -– Magnetic principle in computer data storage. Superconductors: Properties - BCS theory 
+(Qualitative)- Type-I and Type II superconductors - Magnetic levitation-SQUID-Cryotron.  
+UNIT-
+III  
+QUANTUM PHYSICS  9  
+Introduction- Quantum free electron theory -De Broglie’s concept -Schrodinger wave equation -Time 
+independent and time dependent equations -Physical significance of wave function - Particle in a one 
+dimensional box – electrons in metals -degenerate states – Fermi- Dirac statistics – Density of energy states 
+-Size dependence of Fermi energy – Quantum confinement – Quantum wells, Quantum wires, Quantum 
+dots and Quantum clusters - Band gap of nanomaterials.  
+UNIT-
+IV  
+SEMICONDUCTOR PHYSICS  9  
+Intrinsic Semiconductors – Energy band diagram – direct and indirect band gap semiconductors – Carrier 
+concentration in intrinsic semiconductors – Band gap determination - extrinsic   semiconductors 
+(Qualitative)-Hall effect -determination of Hall co -efficient-Formation of P -N junction -Forward bias - 
+Reverse bias -Ohmic contact-Schottky diode- Tunnel diode.  
+UNIT-V  OPTOELECTRONICS  9  
+Classification of optical materials – carrier generation and recombination processes – Absorption, emission 
+and scattering of light in metals, insulators and semiconductors (concepts only) – Photo electric effect-Photo 
+current in a P- N diode – Photo transistor-solar cell - LED – Organic LED- Non Linear Optical materials-
+properties and applications.  
+  Contact Hours  :  45  
+  
+--- PAGE 22 ---
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 23 ---
+List of Equipment Available  
+(Common to B.E. CSD and CSE &B.Tech. AI&DS, AI & ML, IT)  
+  
+S.  
+No  
+  
+Name of the equipment  
+Quantity 
+Required  
+Quantity 
+Available  
+  
+Deficiency  
+1  Wavelength of Laser and Characteristics -Laser source 
+and grating plate  
+7  15  -  
+2  Laser - angle of divergence and NA acceptance angle  6  8  -  
+3  Determination of permeability of free space - Helmholtz coil 
+setup  
+5  5  -  
+4  B-H curve Setup and CRO  6  7  -  
+5  Band gap of a semiconductor Setup  6  19  -  
+6  Hall coefficient of Semiconductor Setup  4  4  -  
+7  Determine specific resistance of the material of given wires-
+metre bridge  
+6  6  -  
+8  LCR circuit kit  6  7  -  
+9  Solar cell parameters setup  6  8  -  
+10  Thickness of thin wire-Air wedge method-Travelling 
+Microscope, Glass Plate  
+8  13  -  
+  
+CO - PO – PSO matrices of course 
+  
+PO/PSO  
+  
+CO  
+  
+PO1  
+  
+PO2  
+  
+PO3  
+  
+PO4  
+  
+PO5  
+  
+PO6  
+  
+PO7  
+  
+PO8  
+  
+PO9  
+PO1  
+0  
+PO1  
+1  
+PO1  
+2  
+PSO  
+1  
+PSO  
+2  
+PSO  
+3  
+CO 1  3  3  2  2  2  1  -  -  -  -  -  2  1  1  1  
+CO 2  3  3  2  2  3  1  1  -  -  -  -  2  1  1  1  
+CO 3  3  3  2  2  3  1  1  -  -  -  -  2  2  1  1  
+CO 4  3  3  2  2  3  1  1  -  -  -  -  2  2  1  1  
+CO 5  3  3  2  2  3  1  1  -  -  -  -  2  2  1  1  
+Average  3.00  3.00  2.00  2.00  2.80  1.00  0.00  0.00  0.00  0.00  0.00  2.00  1.80  1.00  1.00  
+   
+Correlation levels 1, 2 or 3 are as defined below: 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High)No correlation: “-“ 
+ 
+ 
+  
+ 
+--- PAGE 24 ---
+  
+Course Code Subject Name (Lab Courses) Category L T P C 
+GE23123 Engineering Practices -Electrical, Electronics and Computer 
+systems 
+ES 0 0 4 2 
+For B.E. Programme CSE, CSE-CS, CSD, ECE and B.Tech. Programme in IT, AIML & AIDS 
+ 
+Objectives: 
+● To provide hands-on experience on various basic engineering practices in Electrical Engineering. 
+● To provide hands-on experience on various basic engineering practices in Electronics Engineering. 
+● To provide hands-on experience on trouble shooting  PC and software installation 
+ 
+List of Experiments 
+A. ELECTRICAL ENGINEERING PRACTICES  (20 Hours) 
+1 Study of power tools, 
+2 Residential house wiring using switches, fuses, indicators, lamp and energy meter. 
+3 Fluorescent lamp wiring. 
+4 Stair case wiring. 
+5 Measurement of electrical quantities – voltage, current, power & power factor in RL circuit. 
+6 Measurement of earth resistance using Megger. 
+7 Study of Ceiling Fan and Iron Box 
+8 Study of Air conditioning,  
+B. ELECTRONICS ENGINEERING PRACTICES (20 Hours) 
+1 Study of electronic components and equipment – Resistor, colour coding, measurement of AC signal 
+parameters (peak-peak, rms period, frequency) using CRO/DSO. 
+2 (a) Measurement of electrical quantities using Multimeter 
+(b) Testing of electronic components. 
+3 Study of logic gates: AND, OR, EXOR and NOT. 
+4 Generation of Clock Signals. 
+5 Soldering practice – Components Devices and Circuits – Using general purpose PCB. 
+6 Measurement of ripple factor of Half-wave and Full-wave Rectifiers. 
+C. COMPUTER SYSTEMS PRACTICES (20 Hours) 
+1 Assembling of Desktop computer 
+2 Installation of Operating system 
+3 Installation of application software 
+4 Disc Partition  
+5 Trouble shooting – PC & Hand held devices 
+ Total Contact Hours : 60 
+ 
+Course Outcomes: On completion of the course, the students will be able to 
+● Fabricate the basic electrical circuits 
+● Implement the house wiring circuits 
+● Fabricate the electronic circuits 
+● Verify the truth table of logic gates 
+● Design the Half-wave and Full-wave Rectifiers using diodes and passive components 
+● Trouble shooting PCs and install the OS and Application software   
+ 
+Reference Books(s) / Web links: 
+1 Bawa H.S., “Workshop Practice”, Tata McGraw – Hill Publishing Company Limited, 2007. 
+--- PAGE 25 ---
+2 Jeyachandran K., Natarajan S. & Balasubramanian S., “A Primer on Engineering Practices Laboratory”, 
+Anuradha Publications, 2007. 
+3 Jeyapoovan T., Saravanapandian M. &Pranitha S., “Engineering Practices Lab Manual”,Vikas 
+Publishing House Pvt.Ltd, 2006. 
+4 Rajendra Prasad A. &Sarma P.M.M.S., “Workshop Practice”, SreeSai Publication, 2002. 
+5 https://ccit.in/courses/desktop-support-and-troubleshooting/ 
+Lab Equipment Required: 
+S. No. Name of the Equipment 
+1 Residential house wiring using switches, fuse, indicator, lamp and energy meter. 
+2 Fluorescent lamp wiring. 
+3 Stair case wiring 
+4 Measurement of electrical quantities – voltage, current, power & power factor in RL circuit. 
+5 Study purpose items: Iron box, Ceiling fan. 
+6 Megger (250V/500V) 
+7 Soldering guns 
+8 Assorted electronic components for making circuits 
+9 Small PCBs 
+10 Multimeters 
+11 Digital trainer kit 
+12 CRO 
+13 Transformer 
+14 Function Generator 
+15 Computer Systems 
+    
+   CO - PO – PSO matrices of course 
+PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO1
+0 
+PO1
+1 PO12 PSO1 PSO2 PSO3 
+GE23123.1 3 3 3 2 - - 2 - 3 2 - 3 - - - 
+GE23123.2 3 3 2 2 - - 2 - 3 2 - 3 - - - 
+GE23123.3 3 3 3 2 - - 2 - 3 2 - 3 - - - 
+GE23123.4 3 3 3 2 - - - - 3 2 - 3 - - - 
+GE23123.5 3 3 3 2 - - - - 3 2 - 3 - - - 
+Average 3 3 2.67 2 - - 2 - 3 2 - 3 - - - 
+Correlation levels 1, 2 or 3 are as defined below: 
+1: Slight (Low)      2: Moderate Medium)      3: Substantial (High)         No correlation: “-“  

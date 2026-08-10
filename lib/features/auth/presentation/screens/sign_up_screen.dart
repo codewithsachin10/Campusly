@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/widgets/campusly_logo.dart';
+import '../../../../core/widgets/google_logo.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../../../../shared/widgets/three_d_pushable_button.dart';
 import '../providers/auth_provider.dart';
@@ -20,33 +21,25 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _customDeptController = TextEditingController();
+  final _rollNumberController = TextEditingController();
 
-  String? _selectedDepartment;
   bool _obscurePassword = true;
   bool _agreedToTerms = false;
-
-  final List<String> _departments = [
-    'Computer Science & Engineering (CSE)',
-    'Computer Science & Business Systems (CSBS)',
-    'Information Technology (IT)',
-    'Artificial Intelligence & Data Science (AI&DS)',
-    'Electronics & Communication (ECE)',
-    'Electrical & Electronics (EEE)',
-    'Mechanical Engineering (MECH)',
-    'Civil Engineering (CIVIL)',
-    'Biotechnology (BIO)',
-    'Management Studies (MBA/BBA)',
-    'Other Department',
-  ];
 
   @override
   void dispose() {
     _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
-    _customDeptController.dispose();
+    _rollNumberController.dispose();
     super.dispose();
+  }
+
+  Future<void> _handleGoogleSignIn() async {
+    await ref.read(authControllerProvider.notifier).signInWithGoogle();
+    if (mounted && !ref.read(authControllerProvider).hasError) {
+      // The router should automatically handle the redirect based on auth state and is_profile_completed
+    }
   }
 
   Future<void> _handleSignUp() async {
@@ -62,17 +55,13 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
       return;
     }
     if (_formKey.currentState?.validate() ?? false) {
-      final departmentValue = _selectedDepartment == 'Other Department'
-          ? _customDeptController.text.trim()
-          : (_selectedDepartment ?? 'General');
-
       await ref
           .read(authControllerProvider.notifier)
           .signUp(
             name: _nameController.text.trim(),
-            department: departmentValue,
             email: _emailController.text.trim(),
             password: _passwordController.text,
+            rollNumber: _rollNumberController.text.trim(),
           );
       if (mounted && !ref.read(authControllerProvider).hasError) {
         context.go('/verify-email', extra: _emailController.text.trim());
@@ -150,6 +139,51 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       ),
                     ),
                     const SizedBox(height: 32),
+                    
+                    // Primary Google Sign In Button
+                    SizedBox(
+                      width: double.infinity,
+                      height: 54,
+                      child: OutlinedButton.icon(
+                        onPressed: isLoading ? null : _handleGoogleSignIn,
+                        icon: const GoogleLogo(size: 24),
+                        label: Text(
+                          'Continue with Google',
+                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                            fontSize: 16,
+                            color: AppColors.onSurface,
+                          ),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          side: BorderSide(color: AppColors.outlineVariant),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 24),
+                    
+                    Row(
+                      children: [
+                        Expanded(child: Divider(color: AppColors.outlineVariant)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            'OR',
+                            style: AppTypography.textTheme.labelMedium?.copyWith(
+                              color: AppColors.onSurfaceVariant,
+                            ),
+                          ),
+                        ),
+                        Expanded(child: Divider(color: AppColors.outlineVariant)),
+                      ],
+                    ),
+
+                    const SizedBox(height: 24),
+
                     // Full Name Field
                     Text(
                       'FULL NAME',
@@ -178,71 +212,39 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       },
                     ),
                     const SizedBox(height: 20),
-                    // Department Field
+                    
+                    // Roll Number Field
                     Text(
-                      'DEPARTMENT',
+                      'ROLL NUMBER',
                       style: AppTypography.textTheme.labelLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         letterSpacing: 1.2,
                       ),
                     ),
                     const SizedBox(height: 8),
-                    DropdownButtonFormField<String>(
-                      initialValue: _selectedDepartment,
-                      isExpanded: true,
+                    TextFormField(
+                      controller: _rollNumberController,
+                      textInputAction: TextInputAction.next,
                       style: AppTypography.textTheme.bodyMedium,
                       decoration: const InputDecoration(
-                        hintText: 'Select your department',
+                        hintText: 'e.g. 211520104001',
                         prefixIcon: Icon(
-                          Icons.business_center_outlined,
+                          Icons.badge_outlined,
                           size: 20,
                         ),
                       ),
-                      items: _departments.map((dept) {
-                        return DropdownMenuItem<String>(
-                          value: dept,
-                          child: Text(
-                            dept,
-                            overflow: TextOverflow.ellipsis,
-                            style: AppTypography.textTheme.bodyMedium,
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          _selectedDepartment = value;
-                        });
-                      },
                       validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please select your department';
+                        if (value == null || value.trim().isEmpty) {
+                          return 'Please enter your roll number';
                         }
                         return null;
                       },
                     ),
-                    if (_selectedDepartment == 'Other Department') ...[
-                      const SizedBox(height: 12),
-                      TextFormField(
-                        controller: _customDeptController,
-                        textInputAction: TextInputAction.next,
-                        style: AppTypography.textTheme.bodyMedium,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter your department name',
-                          prefixIcon: Icon(Icons.edit_outlined, size: 20),
-                        ),
-                        validator: (value) {
-                          if (_selectedDepartment == 'Other Department' &&
-                              (value == null || value.trim().isEmpty)) {
-                            return 'Please enter your custom department';
-                          }
-                          return null;
-                        },
-                      ),
-                    ],
                     const SizedBox(height: 20),
+
                     // Email Field
                     Text(
-                      'EMAIL ID',
+                      'COLLEGE EMAIL ID',
                       style: AppTypography.textTheme.labelLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         letterSpacing: 1.2,
@@ -255,14 +257,14 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                       textInputAction: TextInputAction.next,
                       style: AppTypography.textTheme.bodyMedium,
                       decoration: const InputDecoration(
-                        hintText: 'student@college.edu',
+                        hintText: 'student@rajalakshmi.edu.in',
                         prefixIcon: Icon(Icons.mail_outline_rounded, size: 20),
                       ),
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
                           return 'Please enter your email ID';
                         }
-                        if (!value.contains('@')) {
+                        if (!value.contains('@rajalakshmi.edu.in')) {
                           return 'Please enter a valid college email ID';
                         }
                         return null;
@@ -348,8 +350,9 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                     const SizedBox(height: 24),
                     // Footer Navigation
                     Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           Text(
                             'Already have an account? ',

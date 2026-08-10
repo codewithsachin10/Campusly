@@ -1,0 +1,572 @@
+{
+  "regulation": {
+    "name": "B.E. ELECTRONICS AND COMMUNICATION ENGINEERING",
+    "regulation_year": 2023,
+    "batch": "2026-2030",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமி\u0003ழர்\u0006மிர்பு /Heritage of Tamils",
+          "credits": 3,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23111",
+          "name": "Linear Algebra and Calculus",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "EC23131",
+          "name": "Electron Devices",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CY23131",
+          "name": "Chemistry for Electronics Engineering",
+          "credits": 7,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23131",
+          "name": "Programming using C 7 1 0 6 4 MANDATORY COURSE",
+          "credits": 8,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-6-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "EE23132",
+          "name": "Basic Electrical Engineering",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23123",
+          "name": "Engineering Practices-Electrical, Electronics and Computer systems 4 0 0 4 2 MANDATORY COURSE",
+          "credits": 8,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "of1857",
+          "name": "Early Resistance to British Rule-Rise of Nationalism in India-Indian Freedom Struggle under Mahatma Gandhi-Non- Cooperation Movement-Civil Disobedience Movement- Quit India Movement-British Official response to National movement- Independence of India Act 1947-Freedom and Partition. UNIT-II CONSTITUTION OF INDIA 9 Historical Background - Indian Constitution: Constitution’ meaning of the term, Sources and constitutional history, Constituent Assembly of India - Philosophical foundations of the Indian Constitution - Preamble - Fundamental Rights - Directive Principles of State Policy - Fundamental Duties - Citizenship - Constitutional Remedies for citizens. UNIT-III STRUCTURE AND FUNCTIONS OF CENTRAL GOVERNMENT 9 Union Government - Structure of the Union Government and Functions - President - Vice President - Prime Minister - Cabinet - Parliament - Supreme Court of India - Judicial Review. UNIT-IV STRUCTURE AND FUNCTION OF STATE GOVERNMENT AND LOCAL BODY 9 State Government - Structure and Functions - Governor - Chief Minister - Cabinet - State Legislature - Judicial System in States - High Courts and other Subordinate Courts- Role and Importance, Municipalities: Introduction, Mayor and role of Elected Representative, CEO of Municipal Corporation, Pachayati Raj: Introduction, Elected officials and their roles, Village level: Role of Elected and Appointed officials. UNIT-V CONSTITUTIONAL FUNCTIONS AND BODIES 9 Indian Federal System - Centre - State Relations - President’s Rule - Constitutional Functionaries - Assessment of working of the Parliamentary System in India- CAG, Election Commission, UPSC, GST Council and other Constitutional bodies-. NITI Aayog, Lokpal, National Development Council and other Non -Constitutional bodies",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "9-9-9",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex Variables",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமி\u0003ழருமி\u0006 தொத ழ\u0003ல்\u0006நுட்\u0006பமுமி\u0006 / Tamils and Technology",
+          "credits": 3,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "PH23232",
+          "name": "Physics for Electronics Engineering",
+          "credits": 5,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CS23231",
+          "name": "Data Structures",
+          "credits": 6,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-5",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 7,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23312",
+          "name": "Fourier Series and Number Theory",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "EC23311",
+          "name": "Analog Circuits-I",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23312",
+          "name": "Electromagnetic Fields",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23313",
+          "name": "Digital Principles and System Design",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23332",
+          "name": "Principles of Microprocessor and Microcontrollers",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23336",
+          "name": "Introduction to Python Programming 5 1 0 4 3 LABORATORY COURSE",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "EC23321",
+          "name": "Analog and Digital Circuits Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "EC23411",
+          "name": "Signals and Systems",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23412",
+          "name": "Transmission Lines and Waveguides",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23413",
+          "name": "Communication Theory",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23431",
+          "name": "Analog Circuits-II",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23436",
+          "name": "Probability and Random Processes",
+          "credits": 6,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "SoftSkills-IEEC2002",
+          "name": "Soft Skills-I EEC 2 0 0 2",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine Learning",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "EC23511",
+          "name": "Control System Engineering",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23512",
+          "name": "Modern Digital Communication",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-IOE330",
+          "name": "Open Elective-I OE 3 3 0",
+          "credits": 4,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ProfessionalElective-IP",
+          "name": "Professional Elective-I P",
+          "credits": 5,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-II",
+          "name": "3 3 0 0 3 LAB ORIENTED THEORY COURSE",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "EC23531",
+          "name": "Digital Signal Processing",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "1-2-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23521",
+          "name": "Communication Systems Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "InternshipEEC60063",
+          "name": "Internship EEC 6 0 0 6 3",
+          "credits": 9,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-6-3",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC200",
+          "name": "Soft Skills-II EEC 2 0 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "EC23611",
+          "name": "Antenna Theory and Wave Propagation",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-IIOE330",
+          "name": "Open Elective-II OE 3 3 0",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "EC23631",
+          "name": "VLSI and Chip Design",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23632",
+          "name": "Communication Networks",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23633",
+          "name": "Wireless Communication",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-III",
+          "name": "Professional Elective-III",
+          "credits": 2,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-IV",
+          "name": "Professional Elective- IV",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "EC23731",
+          "name": "Optical Communication and Networks",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23732",
+          "name": "RF and Microwave Engineering",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23733",
+          "name": "Embedded and Real Time Systems 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23721",
+          "name": "Artificial Intelligence and Machine Learning for Electronic Engineering",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-VP",
+          "name": "Professional Elective-V P",
+          "credits": 2,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-VI",
+          "name": "3 3 0 0 3 LABORATORY COURSE",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectworkEEC16001",
+          "name": "Project work EEC 16 0 0 1",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-16",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "EC23E18",
+          "name": "Industry 4.0 and IIoT",
+          "credits": 0,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23F18",
+          "name": "Drone Technology in Engineering --- PAGE 7 --- Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        }
+      ]
+    }
+  ]
+}

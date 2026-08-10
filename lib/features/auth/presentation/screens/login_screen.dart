@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -86,8 +87,23 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Brand Logo Icon
-                    const CampuslyLogo(size: 80, borderRadius: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const CampuslyLogo(size: 80, borderRadius: 20),
+                        const SizedBox(width: 16),
+                        Text(
+                          'Campusly',
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 42,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -1.5,
+                            color: AppColors.primary,
+                          ),
+                        ),
+                      ],
+                    ),
                     const SizedBox(height: 24),
                     // Header Title & Subtitle
                     Text(
@@ -252,8 +268,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     ),
                     const SizedBox(height: 32),
                     // Footer Sign Up Link
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
                         Text(
                           "Don't have an account? ",

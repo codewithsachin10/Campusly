@@ -1,0 +1,1401 @@
+
+--- PAGE 1 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 1 
+ 
+RAJALAKSHMI ENGINEERING COLLEGE 
+(An AUTONOMOUS Institution and Affiliated to Anna University, Chennai) 
+ 
+DEPARTMENT OF BIOMEDICAL ENGINEERING 
+ 
+B.E BIOMEDICAL ENGINEERING  
+REGULATIONS 2023 
+CHOICE BASED CREDIT SYSTEM (CBCS) 
+CURRICULUM AND SYLLABUS 
+DEPARTMENT VISION 
+To create a center of academic excellence in the field of Biomedical engineering through 
+innovative research contributions and industrial oriented teaching and training for betterment 
+in healthcare. 
+ 
+DEPARTMENT MISSION 
+● To motivate faculty members and students to explode their creativity to develop 
+innovative products by utilizing modern technologies to serve the society 
+● To inculcate the industrial need of the biomedical engineers among the students 
+through relevant training and value added courses. 
+● To produce technically intense engineers by practicing innovative teaching 
+methodologies  
+ 
+PROGRAMME EDUCATIONAL OBJECTIVES (PEO) 
+PEO I: To provide students with sound foundation in the mathematical, scientific and 
+engineering fundamentals necessary to formulate, analyze and solve engineering problems 
+and to prepare them for graduate studies and for successful careers in healthcare sector. 
+PEO II: To impart students with skills for research, design and development of biomedical 
+devices and allied integrated systems for betterment of human society 
+ 
+PEO III: To instill the ethical values, skills, leadership and team spirit for comprehensive and 
+wholesome personality, to promote entrepreneurial interest among students and to create 
+fervour for use of Engineering in addressing societal concerns. 
+ 
+PROGRAMME OUTCOMES (PO) 
+Engineering knowledge: Apply the knowledge of mathematics, science, engineering 
+fundamentals, and an engineering specialization to the solution of complex engineering 
+problems. 
+Problem analysis: Identify, formulate, review research literature, and analyze complex 
+engineering problems reaching substantiated conclusions using first principles of 
+mathematics, natural sciences, and engineering sciences. 
+Design/development of solutions: Design solutions for complex engineering problems and 
+design system components or processes that meet the specified needs with appropriate 
+consideration for the public health and safety, and the cultural, societal, and environmental 
+considerations. 
+--- PAGE 2 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 2 
+ 
+Conduct investigations of complex problems: Use research-based knowledge and 
+research methods including design of experiments, analysis and interpretation of data, and 
+synthesis of the information to provide valid conclusions. 
+Modern tool usage: Create, select, and apply appropriate techniques, resources, and 
+modern engineering and IT tools including prediction and modelling to complex engineering 
+activities with an understanding of the limitations. 
+The engineer and society: Apply reasoning informed by the contextual knowledge to 
+assess societal, health, safety, legal and cultural issues and the consequent responsibilities 
+relevant to the professional engineering practice. 
+Environment and sustainability: Understand the impact of the professional engineering 
+solutions in societal and environmental contexts, and demonstrate the knowledge of, and 
+need for sustainable development. 
+Ethics: Apply ethical principles and commit to professional ethics and responsibilities and 
+norms of the engineering practice. 
+Individual and team work: Function effectively as an individual, and as a member or leader 
+in diverse teams, and in multidisciplinary settings. 
+Communication: Communicate effectively on complex engineering activities with the 
+engineering community and with society at large, such as, being able to comprehend and 
+write effective reports and design documentation, make effective presentations, and give and 
+receive clear instructions. 
+Project management and finance: Demonstrate knowledge and understanding of the 
+engineering and management principles and apply these to one’s own work, as a member 
+and leader in a team, to manage projects and in multidisciplinary environments. 
+Life-long learning: Recognize the need for, and have the preparation and ability to engage 
+in independent and life-long learning in the broadest context of technological change.  
+ 
+PROGRAM SPECIFIC OUTCOMES (PSO) 
+PSO 1: An ability to apply advanced technology for measurement and interpretation of data 
+acquired from biological system addressing the problems associated with the interaction 
+between living and non-living materials and systems  
+PSO 2: An ability to use software tools, mathematics, science and engineering for precise 
+diagnosis and therapeutic applications  
+PSO 3: An ability to develop healthcare information system for automation and remote 
+access 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 3 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 3 
+ 
+CREDIT DISTRIBUTION 
+R-2023 
+CATEGORY CREDITS AS PER SEMESTER CREDITS 
+TOTAL 
+I II III IV V VI VII VIII  
+Humanities and Social 
+sciences (HS)    2 1       3 
+Basic Sciences (BS) 9 9 4 4     26 
+Engineering Sciences (ES)  5 14  4 2    25 
+Professional Core (PC)    20 11 15 12 4  62 
+Professional Elective (PE)      3 6 9  18 
+Open Elective (OE)     3 3    6 
+Project, Seminar & 
+Internship (EEC)    1 1 4  7 8 21 
+TOTAL  16 24 24 23 24 22 20 8 161 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 4 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 4 
+ 
+CURRICULUM 
+ 
+Semester I 
+ 
+SL.  
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 HS23111 HS Technical Communication I 2 0 0 2 2 
+2 MA23111 BS Linear Algebra and Calculus 3 1 0 4 4 
+3 GE23111 ES Engineering Graphics 2 0 4 6 4 
+4 GE23117 BS த௘ழர் மர௖ /Heritage of Tamils 1 0 0 1 1 
+5 MC23112 HS Environmental Science and 
+Engineering 3 0 0 3 0 
+Lab Integrated Theory Course 
+6 CY23131 BS Chemistry For Electronics 
+Engineering 3 0 2 5 4 
+Laboratory Course 
+7 GE23121 ES Engineering Practices - Civil and 
+Mechanical 0 0 2 2 1 
+    14 1 8 23  
+   TOTAL CREDITS 16 
+ 
+ 
+Semester II 
+SL.  
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 MA23212 BS Differential Equations and 
+Complex Variables 3 1 0 4 4 
+2 ME23211 ES Engineering Mechanics for 
+Biomedical Engineers 3 1 0 4 4 
+3 GE23217 BS த௘ழ௠ம ் ெதா௯ல ்௎ட்ப௚ம ் / 
+Tamils Technology/  
+1 0 0 1      1 
+Lab Integrated Theory Courses 
+4 CS23232 ES Fundamentals of Data Structures 
+using C       3 0 4 7 5 
+5 PH23231 BS Physics for Bioscience 3 0 2 5      4 
+6 BM23231 ES Electric Circuits and Machines 3 0 2 5 4 
+--- PAGE 5 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 5 
+ 
+Laboratory Courses 
+7 HS23221/ 
+HS23222 HS 
+Technical Communication II/ 
+English for professional 
+competence  
+0 0 2 2 1 
+8 GE23122 ES Engineering Practices - Electrical 
+and Electronics 0 0 2 2 1 
+    16 2 12 30  
+   TOTAL CREDITS 24 
+ 
+Semester III 
+ 
+SL. 
+No 
+Course 
+code Category Course Title  L T P Contact 
+Periods Credits 
+Theory Courses 
+1 MA23312 BS   Fourier series and Number theory 3 1 0 4 4 
+2 BM23311 PC Human Anatomy and Physiology 3 0 0 3 3 
+3 BM23312 PC Biomedical Instrumentation 3 0 0 3 3 
+4 BM23313 PC Biochemical Science 3 0 0 3 3 
+Lab Integrated Theory Courses 
+5 BM23331 PC Electronic Devices and Circuits  3 0 2 5 4 
+6 BM23332 PC Sensors and Measurements 2 0 2 4 3 
+Laboratory Courses 
+7 BM23321 PC Biochemistry and Physiology 
+Laboratory 0 0 4 4 2 
+8 BM23322 PC Biomedical Instrumentation 
+Laboratory 0 0 4  4 2 
+    17 1 12 30  
+TOTAL CREDITS 24   
+ 
+ 
+Semester IV 
+SL. 
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 BM23411 PC Analog and Digital Integrated 
+Circuits 3 0 0 3 3 
+2 BM23412 PC Communication Systems and 
+Standards 3 0 0   3 3 
+3 MC23111 HS Indian Constitution and Freedom 
+Movement 3 0 0  0 0 
+--- PAGE 6 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 6 
+ 
+4  OE OE 1 3 0 0 3 3 
+Lab Integrated Theory Courses 
+5 MA23436 BS Probability and Random 
+Processes 3 0 2 4 4 
+6 BM23431 PC Pathology and Microbiology 2 0 2 4 3 
+7 CS23336 ES Introduction to Python 
+Programming 1 0 4   5 3 
+Laboratory Courses 
+8 BM23421 PC Analog and Digital Integrated 
+Circuits Laboratory 0 0 4 4 2 
+9 BM23422 ES PCB Design Laboratory  0 0 2       2 1 
+10 GE23421 EEC Soft Skills-I 0 0 2 2 1 
+    18 0  16 30  
+   TOTAL CREDITS 23     
+ 
+Semester V 
+SL. 
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 BM23511 PC Biocontrol systems 3 0 0 3 3 
+2 BM23512 PC Diagnostic and Therapeutic 
+Equipment   3 0 0 3 3 
+3  OE  OE 2 3 0 0 3 3 
+4  PE PE 1 3  0 0 3 3 
+Lab Integrated Theory Courses 
+4 BM23531 PC   Signals and Systems Analysis 1 1 2 4 3 
+5 BM23532 PC Microcontroller and Embedded 
+System Design 3 0 2 5 4 
+6 CS23422 ES Python Programming for Machine 
+learning 0 0 4 4 2 
+Laboratory Courses 
+7 BM23521 PC Diagnostic and Therapeutic 
+Equipment  Laboratory 0 0 4 4 2 
+8 GE23521 EEC Soft Skills –II 0 0 2 2 1 
+    16 1 14  31  
+   TOTAL CREDITS 24 
+ 
+ 
+--- PAGE 7 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 7 
+ 
+Semester VI 
+ 
+SL. 
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 BM23611 PC Radiological Equipment   3 0 0 3 3 
+2 BM23612 PC Biomechanics 3 1 0 4 4 
+3  PE  PE 2 3 0 0 3 3 
+4  PE  PE 3 3 0 0 3 3 
+Lab Integrated Theory Courses 
+5 BM23631 PC Biosignal Processing  1 1 2 4 3 
+6 BM23632 PC Physiological Modeling Laboratory 1 0 2 3 2 
+7 GE23627 EEC Design Thinking and Innovation 0 0 4 4 2 
+Laboratory Courses 
+8 BM23621 EEC Medical Industrial Training 0 0 2 2 1 
+9 GE23621 EEC Problem solving techniques 0 0 2 2 1 
+     14 2 12 28  
+   TOTAL CREDITS 22 
+ 
+Semester VII 
+SL.
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Theory Courses 
+1 BM23711 EEC Comprehension In Biomedical 
+Engineering 1 0 0 1 1 
+2  PE PE 4 3 0 0 3 3 
+3  PE PE 5 3 0 0 3 3 
+4  PE PE 6 3 0 0 3 3 
+Lab Integrated Theory Courses 
+5 BM23731 PC Medical Image Processing  2 1 2 5 4 
+Laboratory Courses 
+6 BM23721     EEC 
+Artificial Intelligence and Machine 
+learning for Biomedical 
+Engineering 
+0 0 4 4 2 
+7 BM23722 EEC Project Phase-I 0 0 6 6 3 
+--- PAGE 8 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 8 
+ 
+8 BM23723 EEC Hospital Training 0 0 2 2 1 
+    12 1 14 27  
+   TOTAL CREDITS 20 
+ 
+Semester VIII 
+SL. 
+No 
+Course 
+code Category Course Title L T P Contact 
+Periods Credits 
+Laboratory Course 
+1 BM23821 EEC Project Phase-II 0 0 16 16 8 
+    0 0 16 16  
+   TOTAL CREDITS 8 
+ 
+TOTAL CREDITS: 161 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 9 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 9 
+ 
+PROFESSIONAL ELECTIVES 
+MEDICAL INSTRUMENTATION 
+SLNo Course 
+code Course Title Category Contact 
+Periods L T  P C 
+1 BM23A11 MEDICAL OPTICS PE 3 3 0 0 3 
+2 BM23A12 BIOMEMS TECHNOLOGIES 
+AND APPLICATIONS  PE 3 3 0 0 3 
+3 BM23A13 SURGICAL OPTICAL 
+DEVICES PE 3 3 0 0 3 
+4 BM23A14 INTERNET OF THINGS IN 
+MEDICINE PE 3 3 0 0 3 
+5 BM23A15 BIOSENSORS PE 3 3 0 0 3 
+6 BM23A16 
+VLSI DESIGN FOR 
+BIOMEDICAL 
+APPLICATIONS PE 3 3 0 0 3 
+BIO-ENGINEERING 
+1 BM23B11 NEURAL ENGINEERING PE 3 3 0 0 3 
+2 BM23B12 TISSUE ENGINEERING PE 3 3 0 0 3 
+3 BM23B13 DRUG DELIVERY IN 
+BIOLOGICAL SYSTEM PE 3 3 0 0 3 
+4 BM23B14 BIOMATERIALS AND 
+APPLICATIONS PE 3 3 0 0 3 
+5 BM23B15 MEDICAL CODING PE 3 3 0 0 3 
+8 BM23B16 NANOTECHNOLOGY AND 
+APPLICATIONS PE 3 3 0 0 3 
+7 BM23B17 MEDICAL PHYSICS PE 3 3 0 0 3 
+MEDICAL IMAGING MODALITIES 
+1 BM23C11 PATTERN RECOGNITION 
+AND NEURAL NETWORKS PE 3 3 0 0 3 
+2 BM23C12 BIOMETRIC SYSTEMS PE 3 3 0 0 3 
+3 BM23C13 SOFT COMPUTING 
+TECHNIQUES PE 3 3 0 0 3 
+4 BM23C14 
+DEEP LEARNING AND 
+DEPLOYMENT OF AI 
+MODELS PE 3 3 0 0 3 
+5 BM23C15 
+APPLICATIONS OF 
+EXTENDED REALITIES IN 
+HEALTHCARE PE 3 3 0 0 3 
+--- PAGE 10 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 10 
+ 
+6 BM23C16 MEDICAL INFORMATICS PE 3 3 0 0 3 
+ASSISTIVE TECHNOLOGY 
+1 BM23D11 MEDICAL TEXTILES 
+FUNDAMENTALS PE 3 3 0 0 3 
+2 BM23D12 MEDICAL ROBOTICS PE 3 3 0 0 3 
+3 BM23D13 ASSIST DEVICES PE 3 3 0 0 3 
+4 BM23D14 REHABILITATION 
+ENGINEERING PE 3 3 0 0 3 
+5 BM23D15 WEARABLE SYSTEMS PE 2 2 0 0 2 
+6 BM23D16 TELEHEALTH 
+TECHNOLOGY PE 1 1 0 0 1 
+MODELLING AND  SIMULATION 
+1 BM23E11 3D PRINTING IN MEDICAL 
+APPLICATIONS PE 3 3 0 0 3 
+2 BM23E12 PHYSIOLOGICAL 
+MODELLING PE 3 3 0 0 3 
+3 BM23E13 BIOFLUID DYNAMICS PE 3 3 0 0 3 
+4 BM23E14 MICRO FLUIDICS PE 3 3 0 0 3 
+5 BM23E15 BIOSTATISTICS PE 3 3 0 0 3 
+6 BM23E16 VIRTUAL 
+BIOINSTRUMENTATION PE 3 3 0 0 3 
+PRODUCT DEVELOPMENT AND MANAGEMENT 
+1 BM23F11 MEDICAL ETHICS  AND 
+STANDARDS PE 3 3 0 0 3 
+2 BM23F12 HOSPITAL ENGINEERING  
+AND  MANAGEMENT PE 3 3 0 0 3 
+3 BM23F13 HEALTH CARE PRODUCT 
+DEVELOPMENT PE 2 2 0 0 2 
+4 BM23F14 
+ENTREPRENEURSHIP in 
+BIOMEDICAL 
+ENGINEERING PE 1 1 0 0 1 
+5 BM23F15 
+MEDICAL SAFETY, 
+QUALITY ASSURANCE AND 
+REGULATORY AFFAIRS PE 3 3 0 0 3 
+6 BM23F16 INDUSTRIAL SAFETY  AND  
+MANAGEMENT PE 3 3 0 0 3 
+7 BM23F17 ENGINEERING 
+ECONOMICS PE 3 3 0 0 3 
+--- PAGE 11 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 11 
+ 
+ 
+SEMESTER I 
+ 
+ 
+ 
+ 
+HS 23111                                TECHNICAL COMMUNICATION I Category L T P C 
+      Common to all branches of B.E/B. Tech programme                       HS 2 0 0 2 
+ 
+ 
+OBJECTIVES 
+ To facilitate students develop their comprehension skills 
+ To enable students to improve their receptive skills  
+ To equip learners with better vocabulary and enhance their writing skills 
+ To aid students speak effectively in all kinds of communicative contexts. 
+ To improve the learners’ basic proficiency in workplace communication 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), 
+Process Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+ 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages  
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+ 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking:SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers  
+Vocabulary : Verbal Analogy / Cloze Exercise  
+ 
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, 
+etc.) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives  
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+ 
+--- PAGE 12 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 12 
+ 
+ 
+UNIT-V LANGUAGE FOR WORKPLACE  6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+Contact Hours: 30 
+ 
+COURSE OUTCOMES 
+On completion of the course, students will be able to 
+ apply their comprehension skills and interpret different contents effortlessly  
+ read and comprehend various texts and audio visual contents 
+ infer data from graphs and charts and communicate it efficiently in varied contexts 
+ participate effectively in diverse speaking situations 
+ to present, discuss and coordinate with their peers in workplace using their language skills 
+ 
+TEXT BOOK(S): 
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback 
+2017. 
+2. Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. 
+Martin’s: Fifth Edition (June 28, 2004). 
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine 
+ChuenMengGoh, Cambridge University Press. 
+ 
+RFERENCE BOOKS(S) / WEB LINKS: 
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With 
+Answers 2nd Edition by Michael McCarthy (Author), Felicity O'Dell (Author), John D. 
+Bunting (Contributor) 
+2. Reading Development and Difficulties By Kate Cain 
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+4. Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by 
+Ann Handley. 
+ 
+ 
+CO/ PO PO1 PO
+2 
+PO
+3 
+PO
+4 
+PO
+5 
+PO
+6 
+PO
+7 
+PO
+8 
+PO
+9 
+PO
+10 
+PO
+11 
+PO
+12 
+PSO 
+1 
+PSO2 PSO 
+3 
+CO 1 - - - 1 - - - - - 3 - - - - - 
+CO 2 - - - 1 - - - - - 3 - - - - - 
+CO 3 - 1 - 1 - - - - - 3 - - - - - 
+CO 4 - - - 2 - - - - 1 3 - - - - - 
+CO 5 - - - 1 - - - - 1 3 - - - - - 
+AVG. - 1 - 1.2 - - - - 1 3 - - - - - 
+ 
+ 
+ 
+ 
+--- PAGE 13 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 13 
+ 
+ 
+ 
+MA23111 LINEAR ALGEBRA AND CALCULUS Category L 
+ 
+T 
+ 
+P 
+ 
+C 
+ 
+ Common to I sem. B.E. - CSE, EEE, ECE, BME and 
+B.Tech. IT. 
+BS 3 1 0 4 
+  
+ 
+OBJECTIVES 
+● To introduce the matrix techniques and to explain the nature of the matrix. 
+● To collect the matrix algebra techniques and the concepts of basis and dimension in 
+vector spaces. 
+● To construct normalization of vectors and ortho-normal vectors. 
+● To understand techniques of calculus which are applied in the Engineering problems. 
+● To apply the techniques of Integration in finding area and volumes. 
+ 
+UNIT-I MATRICES 12 
+ Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal 
+transformation - Cayley-Hamilton Theorem(without proof) - Quadratic forms - Reduction to 
+canonical form using orthogonal transformation -  Numerical computation of  Eigen value using 
+Power method. 
+ 
+UNIT-II LINEAR TRANSFORMATION 12 
+Vector spaces – Subspaces – Linear combinations and system of  Linear equations – Linear 
+independence and Linear dependence – Bases and Dimensions – Linear Transformation – Matrix 
+representation  of  Linear Transformation - Null space, Range space and dimension theorem 
+(without proof). 
+ 
+UNIT-III INNER PRODUCT SPACES 12 
+Inner product and norms - Gram Schmidt orthonormalization process - QR Factorization - 
+Singular value decomposition. 
+ 
+UNIT-IV FUNCTIONS  OF SEVERAL VARIABLES 12 
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of 
+implicit functions– Taylor’s series for functions of two variables–Maxima and minima of functions 
+of two variables–Lagrange’s method of undetermined multipliers. 
+ 
+UNIT-V MULTIPLE INTEGRALS 12 
+Double integrals–Change of order of integration–Area enclosed by plane curves–Triple integrals–
+Volume of solids– Numerical computation of double integrals-trapezoidal rule. 
+Total Contact Hours: 60 
+ 
+COURSE OUTCOMES 
+On completion of the course, students will be able to 
+● Demonstrate the matrix techniques in solving the related problems in engineering and 
+technology.  
+● Apply the concepts of basis and dimension in vector spaces to the solution of related 
+complex engineering problems. 
+--- PAGE 14 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 14 
+ 
+● Construct orthonormal basis by the concepts of normalization in inner products and to 
+analyse complex engineering problems. 
+● Interpret the problems in Engineering and Technology using the principles of mathematical 
+calculus.    
+● Evaluate multiple integrals to conduct investigations of complex problems.  
+ 
+TEXT BOOK(S): 
+1. Grewal B.S., “Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd 
+Edition, 2014. 
+2. T Veerarajan, Linear Algebra and Partial Differential Equations, McGraw Hill Education, 
+2019. 
+3. 
+ 
+Friedberg, A.H., Insel, A.J. and Spence, L., Elementary Linear Algebra, a matrix approach, 
+2nd edition Pearson, 2014. 
+ 
+REFERENCE BOOKS(S) / WEB LINKS: 
+1. Ramana. B.V., “Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New 
+Delhi, 2018. 
+2. 
+ 
+ 
+Erwin Kreyszig, "Advanced Engineering Mathematics", John Wiley and Sons, 10th 
+Edition,   New Delhi, 2016. 
+ 
+ 
+ 
+ 
+GE23111 ENGINEERING GRAPHICS Category L T P C
+  ES 2 0  4 4  
+OBJECTIVES: 
+● To understand the importance of the drawing in engineering applications 
+● To develop graphic skills for communication of concepts, ideas and design of 
+engineering products 
+● To expose them to existing national standards related to technical drawings. 
+● To improve their visualization skills so that they can apply this skill in developing new 
+products. 
+● To improve their technical communication skill in the form of communicative drawings 
+ 
+CO/ PO PO 1 PO          
+2 
+PO       
+3 
+PO        
+4 
+PO        
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO           
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 3 2 1 - - - - - - - 1 - 1 1 - 
+CO 2 3 3 - - - - - - - - - - 1 - - 
+CO 3 3 2 - - - - - - - - - - - - - 
+CO 4 2 2 - - - - - - - - 1 1 - - - 
+CO 5 2 2 - - - - - - - - - 1 1 1 - 
+AVG. 2.6 2.2 1 - - - - - - - 1 1 1 1 - 
+--- PAGE 15 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 15 
+ 
+ 
+CONCEPTS AND CONVENTIONS (Not for Examination)                        1 
+Importance of graphics in engineering applications–Use of drafting instruments– BIS 
+conventions and specifications–Size, layout and folding of drawing sheets– Lettering and 
+dimensioning. Basic Geometrical constructions. 
+ 
+UNIT-I  PLANE CURVES AND PROJECTION OF POINTS     5+12 
+Curves used in engineering practices: Conics–Construction of ellipse, parabola and hyperbola 
+by eccentricity method – Cycloidal Curves–Construction of cycloid, epicycloid and hypocycloid – 
+Construction of involutes of square and circle–Drawing of tangents and normal to the above 
+curves, Principles of Projection and Projection of points. 
+ 
+UNIT-II PROJECTION OF LINES AND PLANE SURFACES      6+12 
+Projection of straight lines (First angle projection) inclined to both the principal planes – 
+Determination of true lengths and true inclinations by rotating line method 
+ 
+Projection of planes (polygonal and circular surfaces) inclined to both the principal planes by 
+rotating object method. 
+ 
+UNIT-III PROJECTION OF SOLIDS AND PROJECTION OF SECTIONED SOLIDS        6+12 
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to 
+one of the principal planes by rotating object method. 
+Sectioning of solids in simple vertical position when the cutting plane is inclined to HP and 
+perpendicular to VP – obtaining true shape of the section. 
+Practicing three-dimensional modeling of simple objects by CAD software (Not for examination) 
+UNIT-IV DEVELOPMENT OF SURFACE AND ISOMETRIC PROJECTIONS           6+12 
+Development of lateral surfaces of simple and sectioned solids – Prisms, pyramids cylinders 
+and cones. 
+Principles of isometric projection–isometric scale–Isometric projections of simple solids and 
+truncated solids - Prisms, pyramids, cylinders and cones 
+Model making of isometric projection of combination of solids as assignment (Not for End 
+semester). 
+UNIT-V FREE HAND SKETCHING AND PERSPECTIVE PROJECTIONS                          6+12 
+Free Hand sketching: Freehand sketching of multiple views from pictorial views of objects - 
+Freehand sketching of pictorial views of object from multiple views 
+Perspective projection of simple solids-Prisms, pyramids, cylinder and cone by visual ray 
+method.       
+     Total Contact Hours: (L=30; P=60) 90 Periods 
+ 
+ 
+--- PAGE 16 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 16 
+ 
+ 
+COURSE OUTCOMES: 
+On completion of the course, students will be able 
+● To construct different plane curves and to comprehend the theory of projection. 
+● To draw the basic views related to projection of lines and planes. 
+● To draw the projection of simple solids and to draw the projection of development of 
+surfaces of Sectioned solids in simple vertical position. 
+●  To draw the orthographic projection from pictorial objects and Isometric projections of 
+simple solids 
+● To visualize Perspective view of simple solids  
+ 
+TEXTBOOK(S): 
+1. Bhatt N.D. and PanchalV.M., “Engineering Drawing”, Charotar Publishing House, 50th 
+Edition, 2010. 
+2. NatarajanK.V., “A textbook of Engineering Graphics”, Dhanalakshmi Publishers, 
+Chennai, 2017. 
+ 
+REFERENCE BOOKS(S) / WEB LINKS:: 
+1. Varghese P I., “Engineering Graphics”, McGraw Hill Education (I) Pvt.Ltd. 2013. 
+2. V.B.Sikka “Civil Engineering Drawing”, S.K Kataria& Sons, New Delhi. 
+3. Venugopal K. and PrabhuRaja V., “Engineering Graphics”, New Age International (P) 
+Limited, 2008. 
+4. Gopalakrishna K.R., “Engineering Drawing” (Vol. I&II combined), Subhas Stores, 
+Bangalore, 2017. 
+5. Basant Agarwal and Agarwal C.M., “Engineering Drawing”, McGraw Hill Publishing 
+Company Limited, New Delhi, 2018. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CO/ PO PO  
+1 
+PO          
+2 
+PO       
+3 
+PO        
+4 
+PO           
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO           
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+CO 2 3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+CO 3 3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+CO 4 3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+CO 5 3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+AVG.    3 2 2 1 - 1 - 2 2 2 - 2 - - - 
+--- PAGE 17 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 17 
+ 
+ 
+OBJECTIVES: 
+ 
+ 
+ To develop the understanding of environmental and associated issues 
+ To develop an attitude of concern for the environment 
+ To promote enthusiasm in participating environmental protection initiatives 
+ To nurture skills to solve environmental degradation issues. 
+ To develop the knowledge about the environmental laws. 
+UNIT I       AIR AND NOISE POLLUTION 9 
+Definition –sources of air pollution –chemical and photochemical reactions in the atmosphere 
+- formation of smog, PAN, acid rain, ozone depletion, particulate pollutants-Air quality 
+standards-Air quality indices - control of particulate air pollutants-gravitational settling 
+chambers, cyclone separators, wet collectors, fabric filters (Bag-house filter), electrostatic 
+precipitators (ESP)-catalytic converters. 
+Noise pollution –sources - health effects - standards- measurement and control methods. 
+UNIT II     WATER POLLUTION AND ITS MANAGEMENT 9 
+Definition-causes-effects of water pollution-point and nonpoint sources of wastewater-marine 
+pollution - thermal pollution - Control of water pollution by physical, chemical and biological 
+methods – wastewater treatment-primary, secondary and tertiary treatment-sources and 
+Characteristics of industrial effluents- zero liquid discharge. 
+UNIT III    SOLID WASTE AND HAZARDOUS WASTE MANAGEMENT 9 
+Solid waste – types- municipal solid waste management: sources, characteristics, collection, 
+and transportation- sanitary landfill, recycling, composting, incineration, energy recovery 
+options from waste - Hazardous waste – types, characteristics, and health impact - 
+hazardous waste management: neutralization, oxidation reduction, precipitation, 
+solidification, stabilization, incineration and final disposal. 
+E-waste-definition-sources-effects on human health and environment- E-waste management- 
+steps involved - Role of E-waste management within the initiatives of the Govt. of India- 
+Swachh Bharat Mission. 
+ 
+UNIT IV     SUSTAINABLE DEVELOPMENT 9 
+Sustainable development- concept-dimensions-sustainable development goals - value 
+education- gender equality – food security - poverty – hunger - famine - Twelve principles 
+of  green chemistry - Green technology - definition, importance - Cleaner development 
+mechanism -  carbon credits, carbon trading, carbon sequestration, eco labeling-International 
+conventions and protocols-Disaster management. 
+ 
+ 
+ 
+ 
+MC23112 ENVIRONMENTAL SCIENCE AND ENGINEERING Category L T P C 
+ 
+ 
+Common to all branches of B.E./B.Tech. courses 
+(Except B.Tech-CSBS) HS 3  0 0 0 
+--- PAGE 18 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 18 
+ 
+ 
+UNIT V        ENVIRONMENTAL MANAGEMENT AND LEGISLATION 9 
+Environmental Management systems - ISO 14000 series- Environmental audit-Environmental 
+Impact Assessment- life cycle assessment-  human health risk assessment - Environmental 
+Laws and Policy- Objectives - Polluter pays principle, Precautionary principle - The 
+Environment (Protection) Act 1986 - Role of Information technology in environment and 
+human health. 
+  Contact Hours: 45 
+ 
+COURSE OUTCOMES: 
+On completion of the course, the students should be able to: 
+ associate air and noise quality standards with environment and human health. 
+ illustrate the significance of water and devise control measures for water pollution. 
+ analyze solid wastes and hazardous wastes. 
+ outline the goals of sustainable development in an integrated perspective. 
+ comprehend the significance of environmental laws. 
+ 
+TEXT BOOK(S): 
+1. Benny Joseph, ‘Environmental Science and Engineering’, Tata McGraw-Hill, New Delhi, 
+2016. 
+2. AnubhaKaushik and C. P. Kaushik’s “Perspectives in Environmental Studies”, 6th 
+Edition, New Age International Publishers, 2018. 
+3. Johri R., E-waste: implications, regulations, and management in India and current global 
+best practices, TERI Press, New Delhi 
+REFERENCE BOOKS(S) / WEB LINKS: 
+1. R.K. Trivedi, ‘Handbook of Environmental Laws, Rules, Guidelines, Compliances and 
+Standards’, Vol. I and II, Enviro Media. 38. Edition 2010. 
+2. Cunningham, W.P. Cooper, T.H. Gorhani, ‘Environmental Encyclopedia’, Jaico Publ., 
+House, Mumbai, 2001. 
+3. Fowler B, Electronic Waste – 1 st Edition (Toxicology and Public Health Issues), 
+2017Elsevier 
+ 
+ 
+ 
+ 
+CO/ PO PO 
+1 
+PO          
+2 
+PO       
+3 
+PO        
+4 
+PO           
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO        
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 1 2 3 1 - 2 2 2 1 1 1 2 - 2 - 
+CO 2 1 2 3 1 - 2 2 2 1 1 1 2 - 2 - 
+CO 3 - - 3 1 - 2 3 2 1 - 1 2 - 2 - 
+CO 4 - 1 2 1 1 3 3 2 1 1 1 2 - 2 - 
+CO 5 - 1 2 - - 2 2 2 1 2 2 2 - 2 - 
+AVG. 0.4 1.2 2.6 0.8 0.2 2.2 2.4 2 1 1 1.2 2 - 2 - 
+--- PAGE 19 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 19 
+ 
+ 
+ 
+CY23131 CHEMISTRY FOR ELECTRONICS ENGINEERING Category L T P C 
+ 
+ Common to B.E. - ECE, BME, EEE, MCT and R&A BS 3 0 2 4 
+OBJECTIVES 
+ To understand the principles of electrochemical processes 
+ To explore the functioning of sensors and their applications in industries and health care 
+ To get familiarized with the functioning batteries of and fuel cells 
+ To acquire knowledge on polymeric materials used in electronics 
+ To develop proficiency in nanomaterials 
+ 
+UNIT-I       DYNAMIC ELECTROCHEMISTRY                                             9 
+Applied Electrochemistry: Electrode Potential - EMF series - Corrosion- Causes, 
+Consequences and Prevention. Surface Preparation- electro polishing -Electroplating of 
+copper, electrophoretic deposition - Electrochemical machining, electrochemical etching - 
+electrochemical etching of Cu from PCB. 
+UNIT-II      ELECTROCHEMICAL SENSORS                                             9 
+Electrodes - reference electrodes - ion-selective electrode, determination of electrode 
+potential - Galvanic and concentration cells - potentiometric, amperometric and conduct 
+metric methods of analysis - potentiometric sensor, optical sensor, thermal sensor, chemical 
+biosignals - sensors for health care – glucose and urea sensors, gas sensors for CO2, O2 
+and NH3 sensing- blood oxygen sensor. 
+ 
+UNIT-III     ELECTROCHEMICAL ENERGY SYSTEMS                                             9 
+Batteries- types - characteristics-fabrication and working of lead-acid battery- NICAD battery 
+– Nickel metal hydride batteries -lithium-ion battery – Super capacitors- introduction - types - 
+electrochemical double layer capacitor - activated carbon - carbon aerogels. Fuel cells - 
+classification – principle, working and applications of hydrogen-oxygen fuel cell - solid oxide 
+fuel cell - direct methanol fuel cell and proton exchange membrane fuel cells-biofuel cells. 
+ 
+UNIT-IV      POLYMERS IN ELECTRONICS                                              9 
+Conducting polymers - conducting mechanisms- polyaniline, Poly pyrrole - photonic polymers 
+- photo resists - Introduction, Liquid crystalline phases, Identification of the mesophases, 
+Lyotropic main chain liquid crystalline polymers, Thermotropic main chain liquid crystal 
+polymers, Applications of liquid Crystals in Displays (LCDs) - Organic LEDs- functioning-
+advantages and disadvantages over conventional LEDs- commercial uses. 
+ 
+UNIT-V       NANO MATERIALS  9 
+Introduction-Types of nanomaterials-Emergence and challenges in nanotechnology- 
+Synthesis routes for nanomaterials: Bottom-up and top-down approaches- Sol-gel, 
+precipitation, Hydrothermal, Solvothermal, Microwave irradiation, Chemical Vapour 
+Deposition (CVD), Electro deposition- Properties of nanomaterials- Mechanical properties, 
+Chemical, Optical, Electrical and Magnetic properties-applications of nanomaterials. 
+ 
+Total Contact Hours:45 
+--- PAGE 20 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 20 
+ 
+LIST OF THE EXPERIMENTS 
+1. Construction and determination of EMF of simple electrochemical cells and 
+concentration cells 
+2. Estimation of acids by pH metry 
+3. Determination of corrosion rate on mild steel by weight loss method 
+4. Estimation of mixture of acids by conductometry 
+5. Estimation of extent of corrosion of iron pieces by potentiometry 
+6. Estimation of copper / ferrous ions by spectrophotometry 
+7. Estimation of DO by using sensors 
+8. Estimation of concentration of ions in the given sample solution. 
+9. Determination of molecular weight of a polymer by viscometry method 
+10. Synthesis of nanomaterials by simple precipitation method 
+Total Contact Hours: 30 
+COURSE OUTCOMES: 
+  On completion of the course, the students should be able to: 
+ Apply the knowledge of electrochemistry in exploring electrochemical processes. 
+ Associate the knowledge of sensors in health care and in pollution abatement. 
+ Recognize the types of batteries and fuel cells. 
+ Employ advanced materials in industrial applications and display techniques. 
+ Develop nano and biomaterials for medical applications. 
+ 
+TEXT BOOK(S): 
+1. P. C. Jain and Monika Jain, “Engineering Chemistry”, DhanpatRai Publishing Company 
+(P) Ltd,New Delhi, 2015. 
+2. O.G.Palanna, “Engineering Chemistry”, McGraw Hill Education (India) Pvt, Ltd, New 
+Delhi, 2017. 
+3. ShikhaAgarwal “Engineering Chemistry-Fundamentals and applications”, Cambridge 
+University Press, New Delhi, 2015 
+REFERENCE BOOKS(S) / WEB LINKS: 
+1. Gowarikar V. R., ViswanathanN.V. and Jayadev Sreedhar, ―Polymer Science, New 
+Age International (P) Ltd., New Delhi, 2011. 
+2. Sujata V Bhat, “Biomaterials”, Narosa Publishing House, New Delhi, 2002 
+3. PradeepT, “A Text Book of Nanoscience and Nanotechnology”, Tata McGraw Hill, New 
+Delhi, 2012. 
+4. An Introduction To Nanomaterials And Nanoscience (PB 2020) : Asim K DAS, Mahua 
+Das, CBS publishers and distributors Pvt. Ltd. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 21 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 21 
+ 
+ 
+ 
+GE23121 ENGINEERING PRACTICES - CIVIL AND MECHANICAL Category L T P C 
+  ES 0 0 2 1 
+ 
+OBJECTIVES 
+To provide exposure to the students with hands on experience on various basic engineering 
+practices in Civil and Mechanical Engineering. 
+List of  Experiments 
+CIVIL ENGINEERING PRACTICE                  
+1. Study of pipeline joints, its location and functions: valves, taps, couplings, unions, 
+reducers, and elbows in household fittings.  
+2. Preparation of basic plumbing line sketches for wash basins, water heaters, etc. 
+3. Hands-on-exercise: Basic pipe connections – Pipe connections with different joining 
+components.   
+Carpentry Works:   
+4. Study of joints in roofs, doors, windows and furniture.   
+5. Hands-on-exercise:  Woodwork, joints by sawing, planning and chiselling.   
+ 
+MECHANICAL ENGINEERING PRACTICE    
+6. Preparation of butt joints, lap joints and T- joints by Shielded metal arc welding.   
+7 Gas welding practice.  
+Basic Machining:  
+8 Simple Turning and Taper turning 
+9 Drilling Practice 
+Sheet Metal Work:  
+10 Forming & Bending: 
+11 Model making – Trays and funnels 
+12 Different type of joints.   
+Machine Assembly Practice:  
+13 Study of centrifugal pump 
+14 Study of air conditioner 
+ Total Contact Hours : 30 
+ 
+ 
+ 
+ 
+   
+CO/ PO PO 
+1 
+PO          
+2 
+PO       
+3 
+PO        
+4 
+PO           
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO           
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 2 2 1 - - - - - - - - 1 - - - 
+CO 2 3 2 1 - - 1 1 - - - - 1 1 1 1 
+CO 3 2 1 1 - - - - - - - - - - - - 
+CO 4 2 1 1 - - - - - - - - 1 - - - 
+CO 5 3 2 2 - - - - - - - - 1 - - - 
+AVG. 2.4 1.6 1.2 - - 1` 1 - - - - 1 1 1 1 
+--- PAGE 22 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 22 
+ 
+COURSE OUTCOMES 
+On completion of the course, the students should be  
+ 
+ Able to perform plumbing activities for residential and industrial buildings considering 
+safety aspects while gaining clear understanding on pipeline location and functions of 
+joints like valves, taps, couplings, unions, reducers, elbows, etc. 
+  Able to perform wood working carpentry activities like sawing, planning, cutting, etc. 
+while having clear understanding of the joints in roofs, doors, windows and furniture. 
+ 
+ Able to produce joints like L joint, T joint, Lap joint, Butt joint, etc. through arc welding 
+process while acquiring in depth knowledge in the principle of operation of welding and 
+other accessories 
+ 
+  Able to perform operations like Turning, Step turning, Taper turning, etc. in lathe and 
+Drilling operation in drilling machine 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CO/ PO PO 
+1 
+PO          
+2 
+PO       
+3 
+PO        
+4 
+PO           
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO           
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 1 - - - - 1 - - - - - 1 - 1 1 
+CO 2 1 - - - - 1 - - - - - 1 - 1 1 
+CO 3 1 - - - - 1 - - - - - 1 - 1 1 
+CO 4 1 - - - - 1 - - - - - 1 - 1 1 
+CO 5 1 - - - - 1 - - - - - 1 - 1 1 
+AVG. 1 - - - - 1 - - - - - 1 - 1 1 
+--- PAGE 23 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 23 
+ 
+ 
+SEMESTER II 
+ 
+ 
+ 
+MA23212 DIFFERENTIAL EQUATIONS AND COMPLEX 
+VARIABLES 
+Category L T P C 
+ Common to II Sem. B.E. –AERO, AUTO, BME, CIVIL, EEE, 
+ECE, MECH, MCT, R&A and B. Tech. - BT, FT &CHEM BS 3 1 0 4  
+ 
+OBJECTIVES 
+● To provide students with an introduction to the theory of ordinary differential equations 
+through applications, methods of solution, and numerical approximations. 
+● To introduce students to how to solve linear Partial Differential with different methods. 
+● To enable the students to study the Laplace Transforms, properties of Laplace Transform, 
+inverse Laplace Transform and some applications  to solve the differential equations and 
+integral equations. 
+● To explain the concept of a vector integration in a plane and in space. 
+● To describe basic properties of complex variables and to have the ability to compute 
+complex integrals. 
+ 
+UNIT-I ORDINARY DIFFERENTIAL EQUATIONS 12 
+Second and higher order Linear differential equations with constant coefficients - Method of 
+variation of parameters – Legendre’s linear equations – Numerical solution of ODE - Single Step 
+methods: Taylor’s series method, Euler’s method. 
+ 
+UNIT-II PARTIAL DIFFERENTIAL EQUATIONS 12 
+Formation of partial differential equations - Classification of PDE –  Solutions of standard types of 
+first order partial differential equations - Lagrange’s linear equation –Linear homogeneous partial 
+differential equations of second and higher order with constant coefficients. 
+ 
+UNIT-III LAPLACE TRANSFORM 12 
+Laplace transform –Basic properties – Transforms of derivatives and integrals of functions - 
+Transforms of unit step function and impulse functions, periodic functions. Inverse Laplace 
+transform – Problems using Convolution theorem – Solution of linear ODE of second order with 
+constant coefficients using Laplace transformation techniques. 
+ 
+UNIT-IV VECTOR CALCULUS 12 
+Gradient, divergence and curl – Directional derivative – Irrotational and Solenoidal vector fields – 
+Vector integration – Green’s theorem in a plane, Gauss divergence theorem and Stokes’ theorem 
+(excluding proofs) – Simple applications involving cubes and rectangular parallelepipeds. 
+ 
+UNIT-V COMPLEX VARIABLES 12 
+Analytic functions –– Construction of analytic function - Bilinear transformation –Singularities – 
+Cauchy’s integral theorem (without proof) - Residues – Residue theorem (without proof) -  Simple 
+problems - Contour integral over |z|=1. 
+Total Contact Hours: 60 
+--- PAGE 24 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 24 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+COURSE OUTCOMES 
+On completion of the course, students will be able to 
+● Apply the methods as a potent tool in the solution of a variety of problems in the natural 
+sciences and technology.  
+● Develop specific methodologies, techniques and resources in Partial differential equations 
+to conduct research and produce innovative results in the area of specialization.  
+● Use Laplace transform and inverse transform techniques to solve the complex problems in 
+engineering and technology.   
+● Apply the concepts in multivariable analysis, including space curves; directional derivative; 
+gradient; multiple integrals; line and surface integrals; vector fields; divergence, curl; the 
+theorems of Green and Stokes, and the divergence theorem in different fields of 
+engineering.  
+● Demonstrate the concept of Analytic functions, conformal mapping and complex 
+integration in solving Engineering problems. 
+ 
+TEXT BOOK(S): 
+1. Grewal B.S., “Higher Engineering Mathematics”, Khanna Publishers, New Delhi, 43rd 
+Edition, 2014. 
+2. Veerarajan. T, Engineering Mathematics –II, McGraw Hill Education, 2018. 
+3. Erwin Kreyszig," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, 
+New Delhi, 2016. 
+4. 
+ 
+Glyn James, “Advanced Modern Engineering Mathematics”, Pearson Education, 4th 
+Edition, New Delhi, 2011. 
+5. 
+ 
+Jain R.K. and Iyengar S.R.K., “Advanced Engineering Mathematics”, Narosa Publications, 
+5 th Edition, New Delhi, 2017. 
+ 
+ 
+REFERENCE BOOKS(S) / WEB LINKS: 
+1. Ramana. B.V., "Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New 
+Delhi, 2016. 
+2. T Veerarajan, Transforms and Partial Differential Equations, Third Edition, 2018. 
+ 
+3. Bali, N.P. and Manish Goyal, A Text Book of Engineering Mathematics, Lakshmi 
+Publications Pvt. Ltd., New Delhi, 4th Edition 2006. 
+ 
+4. Peter V.O’Neil, “Advanced Engineering Mathematics”, Cengage Learning India Pvt, Ltd, 
+7th Edition, New Delhi, 2012. 
+--- PAGE 25 ---
+     Department of BME, REC 
+Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 25 
+ 
+ 
+ 
+ME23211 ENGINEERING MECHANICS FOR BIOMEDICAL 
+ENGINEERS 
+Category L T  P C 
+  ES 3  1  0 4 
+OBJECTIVES: 
+ To understand the fundamental  basics and  principles of mechanics 
+ To learn the concept of equilibrium  and  to understand the effect of force on bodies 
+ To Understand the fundamental concepts related to motion, forces and friction and 
+ability to apply these principles to analyze  the effects on  rigid body    
+ To learn about the  deformation of rigid and non-rigid bodies and to learn to find the  
+centroid , center of gravity and moment of inertia of objects 
+ To learn basics of fluid mechanics and relate it to bio-fluids. 
+UNIT I  BASICS AND STATICS OF PARTICLES                                                          12 
+Introduction – Units and Dimensions – Laws of Mechanics – Lami’s theorem, Parallelogram and 
+triangular Law of forces –– Vectorial representation of forces – Vector operations of forces -
+additions, subtraction, dot product, cross product – Coplanar Forces – rectangular components 
+– Equilibrium of a particle – Forces in space – Equilibrium of a particle in space. Equivalent 
+systems of forces – Principle of transmissibility. 
+     UNIT II       EQUILIBRIUM OF RIGID BODIES                        12 
+Free body diagram – Types of supports –Action and reaction forces –stable equilibrium – 
+Moments and Couples – Moment of a force about a point and about an axis – Vectorial 
+representation of moments and couples – Scalar components of a moment – Varignon’s 
+theorem – Single equivalent force - Equilibrium of Rigid bodies in two and three dimensions. 
+UNIT III DYNAMICS OF PARTICLES                                                                               12 
+Displacements, Velocity and acceleration, their relationship – Relative motion – Newton’s laws 
+of motion – Work Energy Equation– Friction force – Laws of sliding friction – equilibrium 
+analysis of simple systems with sliding friction. 
+CO/ PO PO 
+1 
+PO          
+2 
+PO       
+3 
+PO        
+4 
+PO           
+5 
+PO        
+6 
+PO           
+7 
+PO        
+8 
+PO         
+9 
+PO         
+10 
+PO           
+11 
+PO  
+12 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+CO 1 3 2 1 - - - - - - - - 1 1 1 - 
+CO 2 3 2 1 - - - - - - - - 1 1 - - 
+CO 3 3 2 1 - - - - - - - - - 1 - - 
+CO 4 2 2 1 - - - - - - - - - 1 - - 
+CO 5 3 2 1 - - - - - - - - 1 1 - - 
+AVG. 2.8 2 1 - - - - - - - - 1 1 1 - 

@@ -1,0 +1,590 @@
+{
+  "regulation": {
+    "name": "B.E. Civil Engineering",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர் மரபு / Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "Algebra and Calculus",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CE23111",
+          "name": "Building Materials",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23112",
+          "name": "Engineering Drawing for Civil Engineers",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "PH23131",
+          "name": "Physics of Materials",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23121",
+          "name": "Engineering Practices - Civil and Mechanical 0 0 2 2 1 MANDATORY COURSE",
+          "credits": 1,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "EE23133",
+          "name": "Basic Electrical and Electronics Engineering",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23122",
+          "name": "Engineering Practices - Electrical and Electronics 0 0 2 2 1 MANDATORY COURSE",
+          "credits": 1,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழரும்் ததொ் ழில்் ந் ட்்பம் ம்் / Tamils and Technology",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex Variables",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23211",
+          "name": "Engineering Mechanics",
+          "credits": 3,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "1-0-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CY23233",
+          "name": "Engineering Chemistry",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23231",
+          "name": "Programming Using Python",
+          "credits": 3,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-5",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CE23221",
+          "name": "Computer Aided Building Drawing for Civil Engineers",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "CE23311",
+          "name": "Strength of Materials I",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23312",
+          "name": "Fluid Mechanics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23313",
+          "name": "Construction Techniques, Equipment and Practice",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23331",
+          "name": "Surveying",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23331",
+          "name": "Transforms and Statistics",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CE23321",
+          "name": "Construction Materials Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine Learning",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CE23411",
+          "name": "Strength of Materials II",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23412",
+          "name": "Hydraulics and Irrigation Structures",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23413",
+          "name": "Water Supply Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23414",
+          "name": "Highway and Railway Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23431",
+          "name": "Soil Mechanics",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElectiveIOE300",
+          "name": "Open Elective I OE 3 0 0",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "CE23421",
+          "name": "Strength of Materials and Hydraulic Engineering Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IEEC002",
+          "name": "Soft Skills - I EEC 0 0 2",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "CE23511",
+          "name": "Design of Reinforced Concrete Elements",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23512",
+          "name": "Foundation Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23513",
+          "name": "Waste Water Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23531",
+          "name": "Structural Analysis",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIP",
+          "name": "Professional Elective I P",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-IIOE30",
+          "name": "Open Elective - II OE 3 0",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "CE23521",
+          "name": "Water and Waste Water Analysis Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23522",
+          "name": "Survey Camp",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC00",
+          "name": "Soft Skills - II EEC 0 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "CE23611",
+          "name": "Design of Steel Structures",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23612",
+          "name": "Construction, Planning, Scheduling and Management",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23613",
+          "name": "Structural Dynamics and Earthquake Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveII",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CE23631",
+          "name": "Structural Design and Drawing",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "CE23711",
+          "name": "Estimation, Costing and Valuation Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23712",
+          "name": "Hydrology",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIII",
+          "name": "Professional Elective III",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIV",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CE23721",
+          "name": "Building Information Modelling",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CE23722",
+          "name": "Design Project",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CE23723",
+          "name": "Artificial Intelligence and Machine Learning for Civil Engineers",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "InternshipEEC00221",
+          "name": "Internship EEC 0 0 2 2 1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElectiveVP",
+          "name": "Professional Elective V P",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveVI",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectWorkEEC00121",
+          "name": "Project Work EEC 0 0 12 1",
+          "credits": 6,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-12-12",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CE23F17",
+          "name": "Traffic Engineering and Management --- PAGE 9 --- Curriculum and Syllabus | B.E. Civil Engineering |R",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        }
+      ]
+    }
+  ]
+}

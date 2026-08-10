@@ -17,7 +17,11 @@ class SubjectNotesHubSheet extends ConsumerStatefulWidget {
     required this.subjectName,
   });
 
-  static void show(BuildContext context, {required String subjectCode, required String subjectName}) {
+  static void show(
+    BuildContext context, {
+    required String subjectCode,
+    required String subjectName,
+  }) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -30,13 +34,16 @@ class SubjectNotesHubSheet extends ConsumerStatefulWidget {
   }
 
   @override
-  ConsumerState<SubjectNotesHubSheet> createState() => _SubjectNotesHubSheetState();
+  ConsumerState<SubjectNotesHubSheet> createState() =>
+      _SubjectNotesHubSheetState();
 }
 
 class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
   void _showNoteDialog({NoteModel? existingNote}) {
     final titleCtrl = TextEditingController(text: existingNote?.title ?? '');
-    final contentCtrl = TextEditingController(text: existingNote?.content ?? '');
+    final contentCtrl = TextEditingController(
+      text: existingNote?.content ?? '',
+    );
 
     showDialog(
       context: context,
@@ -45,7 +52,9 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Text(
           existingNote == null ? 'Create Subject Note' : 'Edit Note',
-          style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold),
+          style: AppTypography.titleMedium.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -75,16 +84,24 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
           ),
           ElevatedButton(
             onPressed: () {
-              if (titleCtrl.text.trim().isEmpty && contentCtrl.text.trim().isEmpty) {
+              if (titleCtrl.text.trim().isEmpty &&
+                  contentCtrl.text.trim().isEmpty) {
                 Navigator.pop(context);
                 return;
               }
               final user = ref.read(authControllerProvider).value;
               if (user != null) {
-                final key = NotesQueryKey(userId: user.id, subjectCode: widget.subjectCode);
-                ref.read(notesProvider(key).notifier).saveNote(
+                final key = NotesQueryKey(
+                  userId: user.id,
+                  subjectCode: widget.subjectCode,
+                );
+                ref
+                    .read(notesProvider(key).notifier)
+                    .saveNote(
                       existingId: existingNote?.id,
-                      title: titleCtrl.text.trim().isEmpty ? 'Untitled Note' : titleCtrl.text.trim(),
+                      title: titleCtrl.text.trim().isEmpty
+                          ? 'Untitled Note'
+                          : titleCtrl.text.trim(),
                       content: contentCtrl.text.trim(),
                     );
               }
@@ -147,7 +164,11 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                   color: AppColors.primary.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: const Icon(LucideIcons.fileText, color: AppColors.primary, size: 26),
+                child: const Icon(
+                  LucideIcons.fileText,
+                  color: AppColors.primary,
+                  size: 26,
+                ),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -156,11 +177,15 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                   children: [
                     Text(
                       widget.subjectName,
-                      style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                      style: AppTypography.titleLarge.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       'Subject Notes & Study Material',
-                      style: AppTypography.labelMedium.copyWith(color: AppColors.textSecondary),
+                      style: AppTypography.labelMedium.copyWith(
+                        color: AppColors.textSecondary,
+                      ),
                     ),
                   ],
                 ),
@@ -172,7 +197,9 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
                   foregroundColor: AppColors.onPrimary,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ],
@@ -189,17 +216,25 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(LucideIcons.folderPlus, size: 64, color: AppColors.border),
+                        Icon(
+                          LucideIcons.folderPlus,
+                          size: 64,
+                          color: AppColors.border,
+                        ),
                         const SizedBox(height: 16),
                         Text(
                           'No study notes saved for ${widget.subjectName} yet.',
-                          style: AppTypography.bodyLarge.copyWith(color: AppColors.textSecondary),
+                          style: AppTypography.bodyLarge.copyWith(
+                            color: AppColors.textSecondary,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           'Tap New Note above to jot down important formulas, lab deadlines, or syllabus checklists.',
                           textAlign: TextAlign.center,
-                          style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
+                          style: AppTypography.bodySmall.copyWith(
+                            color: AppColors.textSecondary,
+                          ),
                         ),
                       ],
                     ),
@@ -227,21 +262,34 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                               Expanded(
                                 child: Text(
                                   note.title,
-                                  style: AppTypography.titleSmall.copyWith(fontWeight: FontWeight.bold),
+                                  style: AppTypography.titleSmall.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                               Row(
                                 children: [
                                   IconButton(
-                                    onPressed: () => _showNoteDialog(existingNote: note),
-                                    icon: const Icon(LucideIcons.edit2, size: 18, color: AppColors.primary),
+                                    onPressed: () =>
+                                        _showNoteDialog(existingNote: note),
+                                    icon: const Icon(
+                                      LucideIcons.edit2,
+                                      size: 18,
+                                      color: AppColors.primary,
+                                    ),
                                     constraints: const BoxConstraints(),
                                     padding: const EdgeInsets.all(4),
                                   ),
                                   const SizedBox(width: 8),
                                   IconButton(
-                                    onPressed: () => ref.read(notesProvider(key).notifier).removeNote(note.id),
-                                    icon: const Icon(LucideIcons.trash2, size: 18, color: AppColors.error),
+                                    onPressed: () => ref
+                                        .read(notesProvider(key).notifier)
+                                        .removeNote(note.id),
+                                    icon: const Icon(
+                                      LucideIcons.trash2,
+                                      size: 18,
+                                      color: AppColors.error,
+                                    ),
                                     constraints: const BoxConstraints(),
                                     padding: const EdgeInsets.all(4),
                                   ),
@@ -252,12 +300,18 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                           const SizedBox(height: 8),
                           Text(
                             note.content,
-                            style: AppTypography.bodyMedium.copyWith(color: AppColors.textSecondary),
+                            style: AppTypography.bodyMedium.copyWith(
+                              color: AppColors.textSecondary,
+                            ),
                           ),
                           const SizedBox(height: 12),
                           Text(
                             'Updated: ${_formatDate(note.updatedAt)}',
-                            style: AppTypography.labelSmall.copyWith(color: AppColors.textSecondary.withValues(alpha: 0.7)),
+                            style: AppTypography.labelSmall.copyWith(
+                              color: AppColors.textSecondary.withValues(
+                                alpha: 0.7,
+                              ),
+                            ),
                           ),
                         ],
                       ),

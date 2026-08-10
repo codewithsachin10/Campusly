@@ -1,0 +1,653 @@
+{
+  "regulation": {
+    "name": "B.TECH. FOOD TECHNOLOGY",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "Algebra and Calculus",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CY23132",
+          "name": "Chemistry for Technologists",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-6-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23121",
+          "name": "Engineering Practices - Civil and Mechanical",
+          "credits": 6,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 7,
+          "course_type": "Mandatory Course",
+          "l_t_p": "0-3-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "/Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "EE23133",
+          "name": "Basic Electrical and Electronics Engineering",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 8,
+          "course_type": "Mandatory Course",
+          "l_t_p": "0-3-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equation and Complex Variables",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "PH23231",
+          "name": "Physics for Bioscience",
+          "credits": 5,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23233",
+          "name": "Problem Solving and Python Programming",
+          "credits": 6,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-4-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "FT23201",
+          "name": "Food Chemistry",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "/ Tamils and Technology",
+          "credits": 9,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-1-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "FT23211",
+          "name": "Food Chemistry Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "HS23221",
+          "name": "TECHNICAL COMMUNICATION - II 0 0 2 1 Common to all branches of B.E/B. Tech programmes -Second Semester Objectives:  To facilitate students to improve their vocabulary for a better communication  To enable learners to understand and reproduce language  To aid students to write technical reports in a convincing manner  To expose students to different sentence structures  To equip learners to present their ideas in an efficient manner UNIT-I VOCABULARY FOR BETTER COMMUNICATION 6 Listening: Telephonic Conversations and TV News Reading: Newspapers and Magazines Speaking: Conversational Practice: Speaking in a given situation, Asking permission and requesting etc.., Writing: Job Application Letter and Resume Grammar: Reference words: pronouns and determiners Vocabulary: Guessing meanings of words in different contexts. UNIT-II FUNCTIONAL LANGUAGE ASPECTS 6 Listening: Motivational listening - listening to real life challenges Reading: Articles and Technical reports Speaking: Using Polite Expressions, Indirect Questions Writing: Paraphrasing a Text, Poem Grammar: Purpose Statements, Cause and Effect Expressions Vocabulary: Neologisms. UNIT-III TECHNICAL REPORTWRITING 6 Listening: Empathetic Listening - Giving Solutions to Problems Reading: Inferential Reading Speaking: Dialogues - Interviewing Celebrities / Leaders / Sportspersons, etc.., Writing: Report Writing Grammar: Functional Usage of Expressions - used to, gone / been, etc.., Vocabulary: Words Often Confused UNIT-IV STRUCTURAL GRAMMAR 6 Listening: Comprehension (IELTS practice tests) Reading: Intensive Reading for specific information Speaking: Pick and Talk Writing: Proposals Grammar: Sentence Structures - Simple, Compound, Complex Sentences --- PAGE 23 --- PA GE 75 Vocabulary: Replacing dull words with vivid ones UNIT-V PRESENTATION SKILLS 6 Listening: Discriminative listening - sarcasm, irony, pun, etc.., Reading: Practice of chunking - breaking up reading materials Speaking: Mini presentation on some topic Writing: Minutes of the meeting Grammar: Correction of Errors Vocabulary: Advanced vocabulary - fixing appropriate words in the given context",
+          "credits": 6,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "6-23-75",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23311",
+          "name": "Transforms and Applied Partial Differential Equations",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "FT23301",
+          "name": "Food Microbiology",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23302",
+          "name": "Biochemistry and Nutrition",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23303",
+          "name": "Thermodynamics for Food Technologists",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "FT23304",
+          "name": "Food Process Calculations",
+          "credits": 6,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "FT23305",
+          "name": "Food Additives",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23311",
+          "name": "Food Microbiology Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23312",
+          "name": "Biochemistry and Nutrition Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23311",
+          "name": "Fundamentals of Management for Engineers",
+          "credits": 7,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "MA23431",
+          "name": "Probability, Statistics and Reliability",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "FT23401",
+          "name": "Unit Operations in Food Industries",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23402",
+          "name": "Food Processing and Preservation Technology",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23403",
+          "name": "Fluid Mechanics in Food Processes",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "FT23404",
+          "name": "Refrigeration and Cold Chain Management",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-I3003",
+          "name": "Open Elective - I 3 0 0 3",
+          "credits": 7,
+          "course_type": "Open Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "FT23411",
+          "name": "Unit Operations in Food Industries Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23412",
+          "name": "Food Processing and Preservation Laboratory-I",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine Learning",
+          "credits": 10,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "SoftSkills-I00221",
+          "name": "Soft Skills - I 0 0 2 2 1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "FT23501",
+          "name": "Food Analysis",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23502",
+          "name": "Food Process Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23503",
+          "name": "Heat and Mass Transfer in Food Processing",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveI3",
+          "name": "Professional Elective I 3",
+          "credits": 5,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveII",
+          "name": "Professional Elective II",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "FT23511",
+          "name": "Food Analysis Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23512",
+          "name": "Food Processing and Preservation Laboratory-II",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-II00221",
+          "name": "Soft Skills-II 0 0 2 2 1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "FT23601",
+          "name": "Food Product Technology",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23602",
+          "name": "Food Packaging Technology",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23603",
+          "name": "Start-up Ecosystems for Food Technologists",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIII",
+          "name": "Professional Elective III",
+          "credits": 5,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIV",
+          "name": "Professional Elective IV",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "FT23611",
+          "name": "Food Packaging Technology Laboratory",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23612",
+          "name": "Food Product Technology Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design thinking and Innovation",
+          "credits": 9,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "FT23613",
+          "name": "Microfluidics Laboratory for Food Technology",
+          "credits": 10,
+          "course_type": "Professional Core",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "FT23701",
+          "name": "Food Quality, Safety Standards and Certification",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23702",
+          "name": "Comprehension in Food Technologists",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "FT23703",
+          "name": "Functional Foods and Nutraceuticals",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-II300",
+          "name": "Open Elective - II 3 0 0",
+          "credits": 5,
+          "course_type": "Open Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveV3",
+          "name": "Professional Elective V 3",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveVI",
+          "name": "Professional Elective VI",
+          "credits": 7,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "FT23711",
+          "name": "Problem Solving using AI- ML for Food Technologists",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "Internship00221EEC",
+          "name": "Internship 0 0 2 2 1 EEC",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProjectWork00202010",
+          "name": "Project Work 0 0 20 20 10",
+          "credits": 10,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-20-20",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "IS10711",
+          "name": "2001: Technical products Documentation - Size and lay out of drawing sheets",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "10711-2001-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IS9609",
+          "name": "(Parts 0 & 1) - 2001: Technical products Documentation - Lettering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-1-2001",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IS10714",
+          "name": "(Part 20) - 2001 & SP 46 - 2003: Lines for technical drawings",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "2001-46-2003",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IS11669",
+          "name": "1986 & SP 46 - 2003: Dimensioning of Technical Drawings",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "1986-46-2003",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    }
+  ]
+}

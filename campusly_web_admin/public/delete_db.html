@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Deleting Database...</h1>
+  <div id="log"></div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBTegv3BzW9RTiuZcy-5-ElcUVMtG5IZEk",
+      appId: "1:1144756968:web:6dc2d5ec3256f4fe5a075d",
+      messagingSenderId: "1144756968",
+      projectId: "campusly-app-2026",
+      authDomain: "campusly-app-2026.firebaseapp.com",
+      storageBucket: "campusly-app-2026.firebasestorage.app",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const log = (msg) => {
+      console.log(msg);
+      document.getElementById('log').innerHTML += `<p>${msg}</p>`;
+    };
+
+    async function wipeCollection(collectionName) {
+      log(`Fetching ${collectionName}...`);
+      const snapshot = await getDocs(collection(db, collectionName));
+      log(`Found ${snapshot.docs.length} docs in ${collectionName}`);
+      for (const d of snapshot.docs) {
+        await deleteDoc(d.ref);
+        log(`Deleted ${d.id} from ${collectionName}`);
+      }
+    }
+
+    async function wipeNested(collectionName, subcollectionName) {
+      log(`Fetching parents in ${collectionName}...`);
+      const snapshot = await getDocs(collection(db, collectionName));
+      for (const d of snapshot.docs) {
+        await wipeCollection(`${collectionName}/${d.id}/${subcollectionName}`);
+      }
+    }
+
+    async function run() {
+      try {
+        const collections = [
+          "faculty", "departments", "events", "announcements", "timetables", "colleges", "settings"
+        ];
+        
+        for (const c of collections) {
+          await wipeCollection(c);
+        }
+
+        // Wipe schedule subcollections in classes
+        await wipeNested("classes", "schedule");
+        
+        // Also wipe the classes collection itself
+        await wipeCollection("classes");
+
+        log("<strong>ALL DONE! Database Wiped (Users kept).</strong>");
+      } catch (e) {
+        log(`ERROR: ${e.message}`);
+      }
+    }
+
+    run();
+  </script>
+</body>
+</html>

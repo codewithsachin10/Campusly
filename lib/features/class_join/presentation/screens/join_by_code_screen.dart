@@ -8,6 +8,8 @@ import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/class_model.dart';
 import '../providers/class_provider.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../../timetable/presentation/providers/timetable_provider.dart';
 
 class JoinByCodeScreen extends ConsumerStatefulWidget {
   const JoinByCodeScreen({super.key});
@@ -45,17 +47,94 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
     });
 
     try {
+      // 1. Try to find an academic class
       final classModel = await ref
           .read(classControllerProvider.notifier)
           .lookupByCode(code);
 
+      if (classModel != null) {
+        if (mounted) {
+          setState(() {
+            _isLoadingPreview = false;
+            _previewClass = classModel;
+            _errorMessage = null;
+          });
+        }
+        return;
+      }
+
+      // 2. Try to find a custom timetable if academic class not found
+      final cleanCode = code.trim();
+      
+      // Check if it's a URL
+      String finalCode = cleanCode;
+      if (cleanCode.toUpperCase().startsWith('CAMPUSLY://')) {
+        final uri = Uri.tryParse(cleanCode.toLowerCase());
+        if (uri != null && uri.queryParameters.containsKey('code')) {
+          finalCode = uri.queryParameters['code']!.toUpperCase();
+        }
+      }
+
+      final supabase = Supabase.instance.client;
+      final response = await supabase
+          .from('custom_timetables')
+          .select()
+          .eq('join_code', finalCode.toUpperCase())
+          .eq('status', 'published')
+          .maybeSingle();
+
+      if (response != null) {
+        // Auto-join the custom timetable immediately!
+        final user = ref.read(authControllerProvider).value;
+        if (user != null) {
+          final existing = await supabase
+              .from('student_timetable_members')
+              .select()
+              .eq('student_id', user.id)
+              .eq('timetable_id', response['id'])
+              .maybeSingle();
+
+          if (existing != null) {
+            if (mounted) {
+               setState(() => _isLoadingPreview = false);
+               AppErrorHandler.showErrorSnackBar(
+                 context,
+                 'You have already joined "${response['title']}".',
+               );
+               context.go('/home');
+            }
+            return;
+          }
+
+          await supabase.from('student_timetable_members').insert({
+            'student_id': user.id,
+            'timetable_id': response['id'],
+            'joined_at': DateTime.now().toIso8601String(),
+          });
+          
+          if (mounted) {
+             setState(() => _isLoadingPreview = false);
+             ref.invalidate(weeklyScheduleProvider);
+             ref.invalidate(todayScheduleProvider);
+             ref.invalidate(dailyScheduleProvider);
+             ref.invalidate(joinedCustomTimetablesProvider);
+             
+             AppErrorHandler.showSuccessSnackBar(
+               context,
+               '🎉 Successfully joined custom timetable "${response['title']}"!',
+             );
+             context.go('/home');
+          }
+          return;
+        }
+      }
+
+      // 3. Not found in either
       if (mounted) {
         setState(() {
           _isLoadingPreview = false;
-          _previewClass = classModel;
-          if (classModel == null) {
-            _errorMessage = 'No class found with code "$code". Please verify.';
-          }
+          _previewClass = null;
+          _errorMessage = 'No class or timetable found with code "$code". Please verify.';
         });
       }
     } catch (e) {
@@ -63,7 +142,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
         setState(() {
           _isLoadingPreview = false;
           _previewClass = null;
-          _errorMessage = AppErrorHandler.getMessage(e);
+          _errorMessage = AppErrorHandler.getErrorMessage(e);
         });
       }
     }
@@ -176,7 +255,9 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                             color: AppColors.secondary,
                             boxShadow: [
                               BoxShadow(
-                                color: AppColors.secondary.withValues(alpha: 0.8),
+                                color: AppColors.secondary.withValues(
+                                  alpha: 0.8,
+                                ),
                                 blurRadius: 8,
                                 spreadRadius: 2,
                               ),

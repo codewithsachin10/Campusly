@@ -1,0 +1,1717 @@
+
+--- PAGE 1 ---
+1 
+ 
+ 
+ 
+ 
+ 
+CHOICE BASED CREDIT SYSTEM 
+    
+   
+ 
+CURRICULUM AND SYLLABUS 
+(2023-27 Batch) 
+ 
+ 
+ 
+B.TECH. FOOD TECHNOLOGY 
+ 
+ 
+ 
+REGULATION   
+2023  
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 2 ---
+2 
+ 
+CURRICULUM AND SYLLABUS 
+B.TECH. FOOD TECHNOLOGY 
+REGULATION 2023 
+ 
+ 
+Institute Vision 
+ 
+ To be an institution of excellence in Engineering, Technology and Management Education & 
+Research 
+ 
+ To provide competent and ethical professionals with a concern for society 
+  
+Institute Mission 
+ 
+ To impart quality technical education imbibed with proficiency and humane values 
+ 
+ To provide right ambience and opportunities for the students to develop into creative, talented 
+and globally competent professionals 
+ 
+ To promote research and development in technology and management for the benefit of the 
+society 
+ 
+ 
+     Department Vision 
+ 
+ To develop food technologists with academic excellence focused on education, research and 
+development to cater the needs of industry as well as society 
+ 
+    Department Mission  
+ 
+ To impart quality technical education in the different areas of Food technology 
+ 
+ To provide a platform for overall development of the students, to be more creative,  
+innovative and globally competent ethical professionals 
+ 
+ To promote research and develop technologies for the sustenance and wellbeing of the society 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+--- PAGE 3 ---
+3 
+ 
+1. PROGRAMME EDUCATIONAL OBJECTIVES (PEOs): 
+This program enables Food Technology students to 
+ 
+ 
+1. Adapt the fundamental concepts of science, technology and engineering to 
+excel in their  professional career 
+ 
+2.  Solve problems, develop feasible products and process technology to cater the 
+needs of the  society 
+ 
+3. Develop the professional and ethical values to pursue higher education and 
+nurture innovative research  
+ 
+2. PROGRAMME OUTCOMES (POs): 
+After completion of four years of study, the Food Technology graduates will be able to: 
+ 
+PO Graduate Attribute Programme Outcome 
+1 Engineering Knowledge Apply knowledge of mathematics, basic science 
+and engineering. 
+2 Problem Analysis Identify, formulate and solve problems using 
+Technology. 
+3 Design/ development of solutions Design a system or process for improvement of 
+performance, satisfying the constraints. 
+4 Conduct investigations of complex 
+Problems 
+Conduct experiments & collect, analyze and 
+interpret the data. 
+5 Modern tool usage Apply various tools and techniques to improve 
+the efficiency of the system. 
+6 The Engineer and society Conduct themselves to uphold the professional 
+and social obligations. 
+7 Environment and sustainability Design the system with environment 
+consciousness and sustainable development. 
+8 Ethics Interact with industry, business and society in a 
+professional and ethical manner. 
+9 Individual and team work Ability to work in a multidisciplinary team. 
+10 Communication Proficiency in oral and written communication. 
+11 Project management and finance Implementation of cost effective and improved 
+system. 
+12 Life-long learning Continue professional development and learning 
+as a life-long activity. 
+--- PAGE 4 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+3. PROGRAMME SPECIFIC OUTCOMES (PSOs) : 
+ 
+By the completion of Food Technology B. Tech program, the student will 
+ 
+1) Apply theoretical and practical knowledge in the area of Food Technology as well as 
+acquire effective communication and cognitive skills 
+ 
+2) Analyse and solve pivotal problems in order to effectively address the challenges in 
+food  industry 
+ 
+3) Implement the multidisciplinary approach to ensure food safety and quality for wellbeing of 
+the     society 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 5 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+CURRICULUM B.TECH. FOOD TECHNOLOGY 
+REGULATION 2023: BATCH: 2023-27 
+ 
+SEMESTER  I 
+ 
+S. No COURSE 
+CODE COURSE TITLE L T P Total 
+Hours Credits Category 
+1 HS23111 Technical Communication I 2 0 0 2 2 HS 
+2 MA23112 Algebra and Calculus 3 1 0 4 4 BS 
+3 CY23132 Chemistry for Technologists 3 0 2 5 4 BS 
+4 GE23111 Engineering Graphics 2 0 4 6 4 ES 
+5 GE23121 Engineering Practices - Civil 
+and Mechanical 0 0 2 2 1 ES 
+6 MC23112 Environmental Science and 
+Engineering  3 0 0 3 0 MC 
+7 GE23117            /Heritage of 
+Tamils 1 0 0 1 1 HS 
+TOTAL 14 1 8 23 16  
+ 
+SEMESTER  II 
+ 
+S. No COURSE 
+CODE COURSE TITLE L T P Total 
+Hours Credits Category 
+1 HS23221/ 
+HS23222 
+Technical Communication  II / 
+English for Professional 
+Competence 
+0 0 2 2 1 HS 
+2 MA23212 Differential Equation and 
+Complex Variables  3 1 0 4 4 BS 
+3 EE23133 Basic Electrical and Electronics 
+Engineering 3 0 2 5 4 ES 
+4 PH23231 Physics for Bioscience 3 0 2 5 4 BS 
+5 GE23233 Problem Solving and Python 
+Programming 2 0 4 4 4 ES 
+6 FT23201 Food Chemistry 3 0 0 3 3 PC 
+7 MC23111 Indian Constitution and 
+Freedom Movement 3 0 0 3 0 MC 
+8 
+GE23217 
+       
+              / 
+Tamils and Technology 
+1 0 0 1 1 HS 
+9 FT23211 Food Chemistry Laboratory 0 0 4 4 2 PC 
+TOTAL 18 1 14 31 23  
+ 
+ 
+ 
+ 
+  
+--- PAGE 6 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SEMESTER III 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 MA23311 Transforms and Applied 
+Partial Differential Equations 
+3 1 0 4 4 BS 
+2 FT23301 Food Microbiology 3 0 0 3 3 PC 
+3 FT23302 Biochemistry and Nutrition   3 0 0 3 3 PC 
+4 FT23303 Thermodynamics for Food 
+Technologists 
+3 0 0 3 3 ES 
+5 FT23304 Food Process Calculations 3 0 0 3 3 ES 
+6 FT23305 Food Additives 3 
+ 
+0 
+ 
+0 
+ 
+3 
+ 
+3 
+ 
+PC 
+7 FT23311 Food Microbiology Laboratory 0 0 4 4 2 PC 
+8 FT23312 Biochemistry and Nutrition 
+Laboratory 
+0 0 4 4 2 PC 
+TOTAL 18 1 8 27 23  
+ 
+SEMESTER IV 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 MA23431 Probability, Statistics and 
+Reliability 
+3 0 2 5 4 BS 
+2 FT23401 Unit Operations in Food 
+Industries 
+3 0 0 3 3 PC 
+3 FT23402 Food Processing and 
+Preservation Technology 
+3 0 0 3 3 PC 
+4 FT23403 Fluid Mechanics in Food 
+Processes 
+3 0 0 3 3 ES 
+5 FT23404 Refrigeration and Cold Chain 
+Management 3 0 0 3 3 PC 
+6  Open Elective - I 3 0 0 3 3 OE 
+7 FT23411 Unit Operations in Food       
+Industries Laboratory 
+0 0 4 4 2 PC 
+8 FT23412 Food Processing and 
+Preservation Laboratory-I 
+0 0 4 4 2 PC 
+9 CS23422 Python Programming for 
+Machine Learning  
+0 0 4 4 2 ES 
+10 GE23421 Soft Skills – I 0 0 2 2 1 EEC 
+TOTAL 18 0 16 34 26  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 7 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SEMESTER V 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 FT23501 Food Analysis 3 0 0 3 3 PC 
+2 FT23502 Food Process Engineering 3 0 0 3 3 PC 
+3 FT23503 Heat and Mass Transfer in 
+Food Processing 3 0 0 3 3 PC 
+4  Professional Elective I 3 0 0 3 3 PE 
+5  Professional Elective II 3 0 0 3 3 PE 
+6 GE23311 Fundamentals of Management 
+for Engineers 3 0 0 3 3 HS 
+7 FT23511 Food Analysis Laboratory 0 0 4 4 2 PC 
+8 FT23512 Food Processing and 
+Preservation Laboratory-II 0 0 4 4 2 PC 
+9 GE23521 Soft Skills-II 0 0 2 2 1 EEC 
+TOTAL 18 0 10 28 23  
+ 
+ 
+SEMESTER VI 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 FT23601 Food Product Technology 3 0 0 3 3 PC 
+2 FT23602 Food Packaging Technology  3 0 0 3 3 PC 
+3 FT23603 Start-up Ecosystems for Food 
+Technologists 
+3 0 0 3 3 PC 
+4  Professional Elective III 3 0 0 3 3 PE 
+5  Professional Elective IV 3 0 0 3 3 PE 
+6 FT23611 Food Packaging Technology 
+Laboratory  
+0 0 4 4 2 PC 
+7 FT23612 Food Product  Technology 
+Laboratory 
+0 0 4 4 2 PC 
+8 GE23627 Design thinking and 
+Innovation  
+0 0 4 4 2 EEC 
+9 FT23613 Microfluidics Laboratory for 
+Food Technology 
+0 0 2 2 1 PC 
+10 GE23621 Problem Solving Techniques  0 0 2 2 1 EEC 
+TOTAL 15 0 16 31 23  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 8 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SEMESTER VII 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 FT23701 Food Quality, Safety 
+Standards and Certification 3 0 0 3 3 PC 
+2 FT23702 Comprehension in Food 
+Technologists 3 0 0 3 3 PC 
+3 FT23703 Functional Foods and 
+Nutraceuticals  3 0 0 3 3 PC 
+4  Open Elective – II 3 0 0 3 3 OE 
+5  Professional Elective V 3 0 0 3 3 PE 
+6  Professional Elective VI 3 0 0 3 3 PE 
+7 FT23711 Problem Solving using AI-
+ML for Food Technologists 0 0 4 4 2 EEC 
+8 FT23712 Internship 0 0 2 2 1 EEC 
+TOTAL 18 0 6 24 21  
+ 
+ 
+ 
+ 
+SEMESTER VIII 
+ 
+S. No COURSE 
+CODE 
+COURSE TITLE L T P Total 
+Hours 
+Credits Category 
+1 FT23811 Project Work 0 0 20 20 10 EEC 
+TOTAL 0 0 20 20 10  
+ 
+ 
+TOTAL CREDITS: 165 
+ 
+Note: 0-Theory, 1-Laboratory, 2-LOT 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 9 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SUMMARY 
+ 
+ S. No.  
+SUBJECT 
+AREA 
+ 
+CREDITS PER SEMESTER 
+ 
+CREDITS 
+TOTAL 
+I II III IV V VI VII VIII  
+1. HS 3 2   3    8 
+2. BS 8 8 4 4     24 
+3. ES 5 8 6 5     24 
+4. PC  5 13 13 13 14 9  67 
+5. PE     6 6 6  18 
+6. OE    3   3  6 
+7. EEC    1 1 3 3 10 18 
+8 MC          
+Total 16 23 23 26 23 23 21 10 165 
+ 
+--- PAGE 10 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+PROFESSIONAL ELECTIVE COURSES: VERTICALS 
+ 
+Vertical I 
+ 
+Dairy 
+Technology 
+Vertical II 
+ 
+Meat, Marine 
+and Poultry 
+Technology 
+Vertical III 
+ 
+Grain Science 
+Technology 
+and  
+Plantation 
+Crops 
+Vertical IV 
+ 
+Technology 
+for Fruit, 
+Vegetable 
+and 
+Beverages 
+Vertical V 
+ 
+Food 
+Biotechnolo
+gy  
+Vertical VI 
+ 
+Baking and 
+Confectionery 
+Technology 
+Vertical VII 
+Advanced 
+Food 
+Processing 
+Technology  
+FT23A01 
+Basic 
+Principles of 
+Dairy 
+Processing  
+FT23B01 
+Meat and 
+Poultry 
+Processing 
+FT23C01 
+Processing of 
+Cereals, Oil 
+Seeds and 
+Pulses 
+FT23D01 
+Post-Harvest 
+Technology of 
+Fruits and 
+Vegetables 
+FT23E01 
+Microbial 
+Technology 
+ 
+FT23F01 
+Bakery 
+Ingredients and 
+Flour Rheology 
+FT23G01 
+Radiation in  
+Preservation 
+and Processing 
+of Food  
+Products 
+FT23A02 
+Technology of  
+Milk Products 
+FT23B02 
+By-Products in 
+Meat and 
+Poultry 
+Processing 
+FT23C02 
+Infestation and 
+Pest Control in 
+Grain Storage  
+FT23D02 
+Value-Added 
+Fruit and 
+Vegetable 
+Products 
+FT23E02 
+Bioprocess 
+Technology 
+FT23F02 
+Technology of 
+Bread, Buns, 
+Cakes and 
+Pastries 
+FT23G02 
+Non- Thermal 
+Processing 
+Techniques 
+FT23A03 
+Frozen and 
+Fermented 
+Dairy Products 
+FT23B03 
+Preservation 
+Technology of 
+Eggs, Meat and 
+Poultry  
+FT23C03 
+Oils and Fats 
+Processing 
+Technology 
+FT23D03 
+Packaging and 
+Storage 
+Techniques in 
+Fruit and 
+Vegetable 
+FT23E03 
+Food 
+Allergens and 
+Toxicology 
+FT23F03 
+Technology of 
+Biscuits, 
+Crackers, and 
+Cookies 
+FT23G03 
+Food Process 
+Equipment  
+Design and  
+Plant Layout 
+FT23A04 
+Traditional 
+Dairy Products 
+FT23B04 
+Marine Food 
+Processing 
+ 
+FT23C04 
+Spice 
+Processing 
+Technology 
+FT23D04 
+Carbonated 
+Beverages 
+FT23E04 
+Enzyme 
+Technology 
+FT23F04 
+Sugar and Gum 
+Based 
+Confectionery 
+Technology 
+FT23G04 
+Food Sensors 
+FT23A05 
+Dairy by 
+Products 
+Technology 
+FT23B05 
+Technology of 
+Packaging 
+Meat, Poultry 
+and Marine 
+Products 
+FT23C05 
+Plantation Crops 
+ 
+FT23D05 
+Non-
+Alcoholic 
+Beverages 
+FT23E05 
+Food 
+Fermentation 
+Technology 
+FT23F05 
+Cocoa and 
+Chocolate Based 
+Confectionery 
+Technology 
+FT23G05 
+3D Printing of 
+Foods  
+FT23A06 
+Dairy Plant 
+Design and 
+Layout 
+FT23B06 
+Quality, Laws 
+and Regulations 
+in Meat, Poultry 
+and Seafood 
+Industries 
+ 
+FT23C06 
+Quality 
+Standards and 
+Regulatory 
+Compliance in 
+Grain and Crop 
+Processing 
+Industries 
+FT23D06 
+Fermented 
+Beverages 
+ 
+FT23E06 
+Genetic 
+Engineering 
+and 
+Genetically 
+Modified 
+Foods 
+FT23F06 
+Shelf-Life and 
+Regulatory 
+Aspects of 
+Bakery and 
+Confectionery 
+Products 
+FT23G06 
+Applications 
+of Nano 
+Technology 
+and 
+Cryogenics in 
+Food 
+Processing 
+ 
+Registration of Professional Elective Courses from Verticals: 
+ 
+ Professional Elective Courses will be registered in Semesters V and VI. These courses are listed in groups called 
+verticals that represent a parti cular area of specialization. Students are permitted to choose all Professional 
+Electives from a particular vertical or from different verticals.  Further, only one Professional Elective course shall 
+be chosen in a semester horizontally (row -wise). However , two courses are permitted from the same row, 
+provided one course is enrolled in Semester V and another in semester VI.  
+ 
+ The registration of courses for B.E./B.Tech (Honors) or Minor degree shall be done from Semester V to VIII.  The 
+procedure for registration of courses explained above shall be followed for the courses of B.E/B.Tech (Honors) or 
+Minor degree also. For more details on B.E./B.Tech ( Honors) or Minor degree refer to Regulations 2021 Clause 
+4.10. 
+--- PAGE 11 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+HS23111 TECHNICAL COMMUNICATION  I HS 2 0 0 2 
+ Common to all branches of B.E/B. Tech programmes – First Semester 
+ 
+Objectives: 
+To facilitate students develop their comprehension skills 
+To enable students to improve their receptive skills  
+To equip learners with better vocabulary and enhance their writing skills 
+To aid students speak effectively in all kinds of communicative contexts. 
+To improve the learners‟ basic proficiency in workplace communication 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process 
+Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages  
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers  
+Vocabulary : Verbal Analogy / Cloze Exercise  
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one‟s interest (Martin Luther King, APJ Abdul Kalam, etc..) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: „Wh‟ Questions / „Yes‟ or „No‟ Questions, Imperatives  
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT-V LANGUAGE FOR WORKPLACE  6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+apply their comprehension skills and interpret different contents effortlessly  
+read and comprehend various texts and audio visual contents 
+infer data from graphs and charts and communicate it efficiently in varied contexts 
+participate effectively in diverse speaking situations 
+to present, discuss and coordinate with their peers in workplace using their language skills 
+ 
+ 
+--- PAGE 12 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SUGGESTED ACTIVITIES  
+● Ice breaker 
+● Just A Minute 
+● Ship wreck 
+● Hot seat 
+● Vocabulary building 
+● Chinese whispers  
+● Case study 
+ 
+SUGGESTED EVALUATION METHODS  
+● Assignment topics 
+● Quizzes 
+● Class Presentation/Discussion 
+● Continuous Assessment Tests 
+ 
+Text Book(s): 
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback  2017 
+2. Sylvan Barnet and Hugo Bedau, „Critical Thinking Reading and Writing‟, Bedford/st. Martin‟s: 
+Fifth Edition (June 28, 2004) 
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, 
+Cambridge University Press 
+ 
+Reference Books(s) / Web links: 
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With 
+Answers 2nd Edition by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting 
+(Contributor) 
+2. Reading Development and Difficulties By Kate Cain 
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+4. Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann 
+Handley (Author)                                                                                                                                                                                                                                    
+ 
+ 
+   PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO1
+0 
+PO1
+1 
+PO1
+2 
+PSO
+1 
+PSO
+2 
+PSO
+3 
+HS23111. 1 - - - 1 - - - - - 3 - - - - - 
+HS23111. 2 - - - 1 - - - - - 3 - - 1 - - 
+HS23111. 3 - 1 - 1 - - - - - 3 - - - - - 
+HS23111. 4 - - - 2 - - - - 1 3 - - 1 - - 
+HS23111. 5 - - - 1 - - - - 1 3 - - 1 - - 
+Average - 1 - 1.2 - - - - 1 3 - - 1 - - 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+MA23112 ALGEBRA AND CALCULUS BS 3 1 0 4 
+Common to I sem. B.E. - AERO, AUTO, MECH, MCT, R&A, CIVIL  and B.Tech. - BT, FT & 
+CHEM 
+ 
+Objectives: 
+● To introduce the matrix techniques and to illustrate the nature of the matrix. 
+● To address data and synthesis of the information to provide valid conclusions. 
+● To explain techniques of calculus which are applied in the solutions of engineering problems. 
+● To analyse special types of integrals by analytical methods and numerical techniques. 
+● To practice the techniques of Integration in finding area and volumes. 
+ 
+--- PAGE 13 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+UNIT-I MATRICES 12 
+Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation - 
+Cayley-Hamilton Theorem(without proof) -Quadratic forms- Reduction to canonical form using orthogonal 
+transformation- Numerical computation of Eigen value using Power method 
+UNIT-II FUNCTIONS OF SEVERAL VARIABLES 12 
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit 
+functions– Taylor‟s series for functions of two variables–Maxima and minima of functions of two 
+variables–Lagrange‟s method of undetermined multipliers. 
+UNIT-III INTEGRAL CALCULUS 12 
+Integral Calculus: Definite Integrals as a limit of sums - Applications of integration to area, volume - 
+Improper integrals: Beta and Gamma integrals - Numerical computation of integrals: Trapezoidal rule - 
+Gaussian Two point quadrature 
+UNIT-IV MULTIPLE INTEGRALS 12 
+Double integrals – Change of order of integration – Area enclosed by plane curves–Triple integrals–
+Volume of solids– Numerical computation of double integrals: Trapezoidal rule. 
+UNIT-V REGRESSION 12 
+Scatter diagram - Karl Pearson coefficient of correlation for raw data –Spearman rank correlation 
+coefficient - Lines of regression - Regression equation X on Y and Y on X- Curve fitting by Principle of 
+least squares - Fitting a straight line y = ax+b and a parabola                 
+Total Contact Hours:60 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Demonstrate the matrix techniques in solving the related problems in engineering and technology. 
+● Analyse and interpret data, and synthesize information to provide valid conclusions. 
+● Interpret the problems in Engineering and Technology using the principles of mathematical 
+calculus. 
+● Apply the analytical methods and numerical techniques to solve the related engineering problems. 
+● Evaluate multiple integrals to conduct investigations of complex problems. 
+ 
+SUGGESTED ACTIVITIES 
+● Problem solving sessions 
+● Activity Based Learning 
+● Implementation of small module 
+ 
+SUGGESTED EVALUATION METHODS 
+● Problem solving in Tutorial sessions 
+● Assignment problems 
+● Quizzes and class test 
+● Discussion in classroom 
+ 
+Text Book(s): 
+1.  Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 
+2014. 
+2.  Gupta S.C. and Kapoor V.K.”Fundamentals of Mathematical Statistics”, Sultan and Sons 10th 
+Edition,2000. 
+3.  T Veerarajan, Engineering Mathematics –I , Mc Graw Hill Education, 2018. 
+ 
+Reference Books(s) / Web links: 
+1.  
+ 
+Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 
+2018. 
+2.  
+ 
+T Veerarajan ,Fundamentals of Mathematical Statistics , yesdee publications, 2017. 
+3.  
+ 
+ 
+Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, 
+  New 
+Delhi, 2016. 
+ 
+--- PAGE 14 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+     
+      PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23112.1 3 2 1 - - - - - - - 1 - - - 1 
+MA23112.2 3 2 - 1 - - - - - - 1 1 1 - - 
+MA23112.3 2 2 - - - - - - - - 1 1 - - - 
+MA23112.4 3 3 1 - - - - - - - 1 1 - - - 
+MA23112.5 2 2 - - - - - - - - - - - - - 
+Average 2.6 2.2 1 1 - - - - - - 1 1 - - - 
+ 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+CY23132 CHEMISTRY FOR TECHNOLOGISTS BS 3 0 2 4 
+Common to B.TECH.  -  CHEMICAL ENGG., FOOD TECH. & BIO TECH 
+ 
+Objectives: 
+● To acquire knowledge on Surface chemistry for industrial and domestic uses. 
+● To impart the knowledge on principles of electrochemistry for engineering applications. 
+● To provide an insight into the latest Nanotechnology to pursue further research. 
+● To appreciate the need for and importance of Polymer materials and Heterocyclic compounds. 
+● To enhance the knowledge in line with the modern techniques for material analysis. 
+ 
+UNIT-I SURFACE CHEMISTRY 9 
+Introduction – Adsorption- difference between adsorption and absorption - types of adsorption - Factors 
+influencing adsorption - Adsorption from solutions- Types of adsorption isotherms - Freundlich adsorption 
+isotherm - Langmuir adsorption isotherm - Industrial applications of adsorption – Adsorption 
+Chromatography - Role of adsorption in Catalysis - Enzyme catalysis-Michael‟s Menten equation. 
+UNIT-II ELECTROCHEMISTRY 9 
+Terminology involved in electrochemistry – Types of Cells - Galvanic and concentration cells-  Derivation 
+of Nernst equation - Applications of Electrochemical series - Types of  Electrodes - Hydrogen, Calomel, 
+ion-selective electrode - Determination of pH using glass electrode - Determination of electrode potentials -
+ Conductometric titrations - Potentiometric titration-Redox titration. 
+UNIT-III NANO CHEMISTRY 9 
+Basic Definitions - Distinction between nanoparticles and bulk materials - size-dependent properties - 
+Mechanical, Chemical, Optical, Electrical and Magnetic properties – Nanoparticles - nanoclusters, 
+nanorods, nanotubes and nanowires - Synthesis of nanoparticles - Precipitation method - Hydrothermal 
+synthesis - Solvothermal synthesis - Sonochemical synthesis - Chemical vapor deposition – 
+Electrodeposition - biogenic synthesis - Applications of nanomaterials. 
+UNIT-IV POLYMERS AND HETEROCYC 9 
+Polymers – Introduction - Polymerization - Types of Polymerization - Condensation, Addition, 
+Coordination, Copolymerization - Mechanism of Polymerization - Free Radical Mechanism - Biopolymers 
+- PLA and PHB - Synthesis properties and applications. 
+Heterocyclic compounds - Synthesis and electrophilic and nucleophilic substitution reactions of pyrrole - 
+furan - thiophene- pyridine- quinoline - isoquinoline. 
+UNIT-V ANALYTICAL TECHNIQUES 9 
+Electromagnetic spectrum - absorption of radiation - electronic, vibrational and rotational transitions - 
+Thermal methods of analysis - TGA, DTA – Principle, instrumentation and applications - Spectro 
+Analytical methods - Colorimetry, IR, UV-visible spectroscopy - Principles instrumentation and 
+applications. 
+Total Contact Hours:45 
+ 
+ 
+ 
+ 
+ 
+Total Contact Hours:30 
+--- PAGE 15 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+Description of the Experiments 
+1. Construction and determination of EMF of simple electrochemical cells and concentration cells 
+2. Estimation of acids by pH metry 
+3. Determination of corrosion rate on mild steel by weight loss method 
+4. Estimation of mixture of acids by conductometry 
+5. Estimation of extent of corrosion of iron pieces by potentiometry 
+6. Estimation of copper / ferrous ions by spectrophotometry 
+7. Estimation of DO by using sensors 
+8. Estimation of concentration of ions in the given sample solution. 
+9. Determination of molecular weight of a polymer by viscometry method 
+10. Synthesis of nanomaterials by simple precipitation method 
+11. Verification of adsorption isotherms ( acetic acid on charcoal) 
+12. Determination of phase change temperature of a solid. 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+ Explore the applications of Surface Chemistry in domestic and industrial uses. 
+ Employ the basic principles of Electrochemistry in our daily life appliances. 
+ Synthesize Nano materials for modern engineering applications. 
+ Recognize the need of advanced polymer and heterocyclic compounds in industrial applications. 
+ Identify the structure of unknown/new compounds with the help of spectroscopy. 
+ 
+SUGGESTED ACTIVITIES 
+● Electroplating process can be done by a group of students. 
+● Determination of alkali content in the soap. 
+● Biogenic synthesis of nanomaterials 
+ 
+SUGGESTED EVALUATION METHODS 
+● Continuous assessment tests 
+● Assignments 
+● Model lab examination 
+● End semester examination 
+ 
+Text Book(s): 
+1. P. C. Jain and Monika Jain, “Engineering Chemistry”, DhanpatRai Publishing Company (P) 
+Ltd,New Delhi, 2015 
+2. O.G.Palanna, “Engineering Chemistry”, McGraw Hill Education (India) Pvt, Ltd, New Delhi, 2017 
+3. Shikha Agarwal “Engineering Chemistry-Fundamentals and applications”, Cambridge University 
+Press, New Delhi, 2015 
+ 
+Reference Books(s) 
+● A Text Book of Engg. Chemistry, Shashi Chawla, Dhanpat Rai & Co. (P) Ltd. 
+ 
+● B.K. Sharma, “Industrial chemistry”, Krishna Prakashan Media (P) Ltd, Meerut, 2016. 
+● Polymer Science, V R Gowariker, N V Viswanathan, Jayadev, Sreedhar, Newage Int. Publishers, 
+4th Edition, 2021. 
+● PradeepT, “A Text Book of Nanoscience and Nanotechnology”, Tata McGraw Hill, New Delhi, 
+2012 
+● An Introduction to nanomaterials and nanoscience (PB 2020) : Asim K DAS, Mahua Das, CBS 
+publishers and distributors Pvt. Ltd. 
+● Laboratory Manual Engg. Chemistry, Anupma Rajput, Dhanpat Rai & Co 
+Weblinks: 
+       1.   NPTEL course Elementary Electrochemistry course url 
+            https://onlinecourses.nptel.ac.in/noc23_cy19/preview 
+2. For downloading text/reference books the weblink is given below can be used 
+http://libgen.rs/ 
+3. https://nptel.ac.in/courses/104/103/104103019/ 
+--- PAGE 16 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+ 
+ 
+   PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+CY23132.1 2 1 1 - - - 1 1 - - - - - 1 - 
+CY23132.2 2 2 1 - - - - - - - - 1 1 - - 
+CY23132.3 3 2 2 - - - - - - - - - 1 1 - 
+CY23132.4 2 2 1 - - - 1 1 - - - - - 1 - 
+CY23132.5 2 1 1 - - - - - - - - - - - - 
+Average 2.2 1.6 1.2 - - - 1 1 - - - 1 1 1 - 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+GE23111 ENGINEERING GRAPHICS ES 2 0 4 4 
+ 
+Objectives: 
+ To understand the importance of the drawing in engineering applications 
+ To develop graphic skills for communication of concepts, ideas and design of engineering products 
+ To expose them to existing national standards related to technical drawings. 
+ To improve their visualization skills so that they can apply this skill in developing new products. 
+ To improve their technical communication skill in the form of communicative drawings 
+ 
+CONCEPTS AND CONVENTIONS (Not for Examination)                   1 
+Importance of graphics in engineering applications–Use of drafting instruments– BIS conventions and 
+specifications–Size, layout and folding of drawing sheets– Lettering and dimensioning. Basic Geometrical 
+constructions. 
+ 
+UNIT-I PLANE CURVES AND PROJECTION OF POINTS 11 
+Curves used in engineering practices: Conics –Construction of ellipse, parabola and hyperbola by 
+eccentricity method – Cycloidal Curves –Construction of cycloid, epicycloid and hypocycloid – 
+Construction of involutes of square and circle –Drawing of tangents and normal to the above curves. 
+Principles of Projection and Projection of points. 
+UNIT-II PROJECTION OF LINES AND PLANE SURFACE 12 
+Projection of straight lines (First angle projection) inclined to both the principal planes – Determination of 
+true lengths and true inclinations by rotating line method 
+Projection of planes (polygonal and circular surfaces) inclined to both the principal planes by rotating 
+object method. 
+UNIT-III PROJECTION OF SOLIDS AND DEVELOPMENT OF SURFACE OF 
+SECTIONED SOLIDS 
+12 
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to one of the 
+principal planes by rotating object method. Sectioning of solids in simple vertical position when the cutting 
+plane is inclined to HP an d perpendicular to VP. Development of lateral surfaces of sectioned solids – 
+Prisms, pyramids cylinders and cones 
+UNIT-IV ORTHOGRAPHIC PROJECTION AND ISOMETRIC PROJECTIONS 12 
+Orthographic projection – Principles–Principal planes – Layout of views –.Orthographic projection from 
+pictorial views of objects Principles of isometric projection–isometric scale–Isometric projections of simple 
+solids and truncated solids - Prisms, pyramids, cylinders and cones 
+UNIT-V PERSPECTIVE PROJECTIONS AND BUILDING DRAWING 12 
+Perspective projection of simple solids-Prisms, pyramids, cylinder and cone by visual ray method. 
+--- PAGE 17 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+Building Drawing-Conventional signs , symbols and component parts of the residential buildings , Drawing  
+of detailed working plan, elevation and section of a single storey residential building from a given line plan 
+or from the given data showing details of foundations, roof and parapet 
+ Total Contact Hours : 60 
+ 
+Course Outcomes:  
+After learning the course, the students should be able 
+ To construct different plane curves and to comprehend the theory of projection 
+ To draw the basic views related to projection of lines and planes 
+ To draw the projection of simple solids and to draw the projection of  development of surfaces of 
+Sectioned solids in simple vertical position 
+ To draw the orthographic projection from pictorial objects and Isometric projections of simple solids 
+ To visualize Perspective view of simple solids and to draw Plan view, Elevation view and Cross 
+sectional view of single storey building 
+ 
+Text Book (s): 
+1 Bhatt N.D. and Panchal V.M., “Engineering Drawing”, Charotar Publishing House, 50th Edition, 2010. 
+2 Natrajan K.V., “A text book of Engineering Graphics”, DhanalakshmiPublishers, Chennai, 2017. 
+ 
+Reference Books(s) / Web links: 
+1 Varghese P I., “Engineering Graphics”, McGraw Hill Education (I) Pvt.Ltd., 2013. 
+2 Venugopal K. and PrabhuRaja V., “Engineering Graphics”, New Age International (P)Limited, 2008. 
+3 Gopalakrishna K.R., “Engineering Drawing” (Vol. I&II combined), Subhas Stores, Bangalore, 2017. 
+4 
+BasantAgarwal and Agarwal C.M., “Engineering Drawing”, McGraw Hill Publishing Company 
+Limited, New Delhi, 2018. 
+ 
+ 
+Publication of Bureau of Indian Standards 
+1 IS 10711 – 2001: Technical products Documentation – Size and lay out of drawing sheets. 
+2 IS 9609 (Parts 0 & 1) – 2001: Technical products Documentation – Lettering. 
+3 IS 10714 (Part 20) – 2001 & SP 46 – 2003: Lines for technical drawings. 
+4 IS 11669 – 1986 & SP 46 – 2003: Dimensioning of Technical Drawings. 
+5 IS 15021 (Parts 1 to 4) – 2001: Technical drawings – Projection Methods. 
+ 
+Special Points Applicable to End Semester Examination on Engineering Graphics 
+1 There will be five questions, each of either or type covering all units of the syllabus 
+2 All questions will carry equal marks of 20 each making a total of 100. 
+3 
+The answer paper shall consist of drawing sheets of A3 size only. The students will be permitted to use 
+appropriate scale to fit solution within A3 size 
+4 The examination will be conducted in appropriate sessions on the same day 
+ 
+ 
+ 
+--- PAGE 18 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+   PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+GE23111.1 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+GE23111.2 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+GE23111.3 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+GE23111.4 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+GE23111.5 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+Average 3 2 2 1 - 1 - 2 2 2 - 2 1 2 1 
+ 
+ 
+Subject Code Subject Name  Category L T P C 
+GE23121 ENGINEERING PRACTICES – CIVIL AND 
+MECHANICAL 
+ES 0 0 2 1 
+ 
+Objectives: 
+ To provide exposure to the students with hands on experience on various basic engineering practices 
+in Civil and Mechanical Engineering 
+ 
+List of Experiments 
+CIVIL ENGINEERING PRACTICE 
+1. Study of pipeline joints, its location and functions: valves, taps, couplings, unions, reducers, 
+and elbows in household fittings. 
+2. Preparation of basic plumbing line sketches for wash basins, water heaters, etc. 
+3. Hands-on-exercise: Basic pipe connections – Pipe connections with different joining components. 
+Carpentry Works: 
+4. Study of joints in roofs, doors, windows and furniture. 
+5. Hands-on-exercise: Woodwork, joints by sawing, planning and chiselling. 
+MECHANICAL ENGINEERING PRACTICE 
+6. Preparation of butt joints, lap joints and T- joints by Shielded metal arc welding. 
+7 Gas welding practice. 
+Basic Machining: 
+8 Simple Turning and Taper turning 
+9 Drilling Practice 
+Sheet Metal Work: 
+10 Forming & Bending: 
+11 Model making – Trays and funnels 
+12 Different type of joints. 
+Machine Assembly Practice: 
+13 Study of centrifugal pump 
+14 Study of air conditioner 
+ Total Contact 
+Hours 
+: 30 
+ 
+Course Outcomes: 
+  
+Able to perform plumbing activities for residential and industrial buildings considering safety 
+aspects while gaining clear understanding on pipeline location and functions of joints like valves, 
+taps,couplings, unions, reducers, elbows, etc. 
+  Able to perform wood working carpentry activities like sawing, planning, cutting, etc. while 
+having clear understanding of the joints in roofs, doors, windows and furniture. 
+  Able to produce joints like L joint, T joint, Lap joint, Butt joint, etc. through arc welding process 
+while acquiring in depth knowledge in the principle of operation of welding and other accessories 
+  Able to perform operations like Turning, Step turning, Taper turning, etc. in lathe and Drilling 
+operation in drilling machine 
+--- PAGE 19 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+  Able to perform sheet metal operations like Forming, Bending, etc. and fabricating models like 
+Trays, funnels, etc. 
+ 
+ 
+         PO/PSO 
+ 
+      CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+GE23121.1 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.2 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.3 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.4 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.5 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+Average 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+ 
+MC23112 ENVIRONMENTAL SCIENCE AND  ENGINEERING 
+Common to all branches of B.E./B.Tech. courses (Except 
+B.Tech-CSBS) 
+ 
+MC 
+ 
+3 
+ 
+0 
+ 
+0 
+ 
+0 
+ 
+Objectives: 
+ 
+ 
+ 
+ To develop the understanding of environmental and associated issues 
+ To develop an attitude of concern for the environment 
+ To promote enthusiasm in participating environmental protection initiatives 
+ To nurture skills to solve environmental degradation issues 
+ 
+UNIT-I AIR AND NOISE POLLUTION  
+9 
+Definition –sources of air pollution –chemical and photochemical reactions in the atmosphere - formation of 
+smog, PAN, acid rain, ozone depletion, particulate pollutants-Air quality standards-Air quality indices - 
+control of particulate air pollutants -gravitational settling chambers, cyclone separators, wet collectors, fabric 
+filters (Bag-house filter), electrostatic precipitators (ESP)-catalytic converters.  Noise pollution –sources - 
+health effects - standards- measurement and control methods. 
+UNIT-II WATER POLLUTION AND ITS MANAGEMENT  
+9 
+Definition-causes-effects of water pollution-point and nonpoint sources of wastewater -marine pollution - 
+thermal pollution - Control of water pollution by physical, chemical and biological methods – wastewater 
+treatment-primary, secondary and tertiary treatment-sources and characteristics of industrial effluents- 
+zero liquid discharge. 
+UNIT-III SOLID WASTE AND HAZARDOUS WASTE MANAGEMENT  
+9 
+Solid waste – types- municipal solid waste management: sources, characteristics, collection, and 
+transportation- sanitary landfill, recycling, composting, incineration, energy recovery options from waste - 
+Hazardous waste – types, characteristics, and health impact - hazardous waste management: 
+neutralization, oxidation reduction, precipitation, solidification, stabilization, incineration and final disposal. 
+E-waste-definition-sources-effects on human health and environment- E-waste management- steps involved 
+- Role of E-waste management within the initiatives of the Govt. of India- Swachh Bharat Mission. 
+UNIT-IV SUSTAINABLE DEVELOPMENT  
+9 
+Sustainable development- concept-dimensions-sustainable development goals - value education- gender 
+equality – food security - poverty – hunger - famine - Twelve principles of  green chemistry - Green 
+technology - definition, importance - Cleaner development mechanism -  carbon credits, carbon trading, 
+carbon sequestration, eco labeling-International conventions and protocols-Disaster management. 
+--- PAGE 20 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+UNIT-V ENVIRONMENTAL MANAGEMENT AND LEGISLATION  
+9 
+Environmental Management systems - ISO 14000 series- Environmental audit-Environmental Impact 
+Assessment- life cycle assessment-  h uman health risk assessment - Environmental Laws and Policy- 
+Objectives - Polluter pays principle, Precautionary principle - The Environment (Protection) Act 1986 - Role 
+of Information technology in environment and human health. 
+Total Contact Hours : 45 
+  
+Course Outcomes: 
+ 
+On completion of the course, the students will be able to 
+CO1  
+Associate air and noise quality standards with environment and human health. 
+CO2 Illustrate the significance of water and devise control measures for water pollution. 
+CO3 Analyze solid wastes and hazardous wastes. 
+CO4 Outline the goals of sustainable development in an integrated perspective. 
+CO5 Comprehend the significance of environmental laws. 
+ 
+ 
+ 
+Web links: 
+1 https://onlinecourses.nptel.ac.in/noc19_ge22/ 
+2 NPTEL 
+3 https://news.mit.edu/2013/ewaste-mit 
+ 
+Suggested activities 
+1. Case studies presentation 
+ 
+ Method of evaluation 
+1. Classroom presentations on case studies (or) Site visits, instead of CAT-I (or)            CAT-II or CAT 
+III 
+ 
+Text Books: 
+1 Benny Joseph, „Environmental Science and Engineering‟, Tata McGraw-Hill, New Delhi, 2016 
+2 Anubha Kaushik and C. P. Kaushik‟s “Perspectives in Environmental Studies”, 6th Edition, New Age 
+International Publishers ,2018. 
+3 Johri R., E-waste: implications, regulations, and management in India and current global best 
+practices, TERI Press, New Delhi 
+Reference Books 
+1 R.K. Trivedi, „Handbook of Environmental Laws, Rules, Guidelines, Compliances and Standards‟, Vol. 
+I and II, Enviro Media. 38. Edition 2010. 
+2 Cunningham, W.P. Cooper, T.H. Gorhani, „Environmental Encyclopedia‟, Jaico Publ., House, Mumbai, 
+2001. 
+3 Fowler B, Electronic Waste – 1 st Edition (Toxicology and Public Health Issues), 2017.Elsevier 
+--- PAGE 21 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+ 
+   PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PS01 PSO2 PSO3 
+MC23112.1 1 2 3 1 - 2 2 2 1 1 1 2 - - - 
+MC23112.2 1 2 3 1 - 2 2 2 1 1 1 2 - - - 
+MC23112.3 - - 3 1 - 2 3 2 1 - 1 2 - 1 - 
+MC23112.4 - 1 2 1 1 3 3 2 1 1 1 2 - - - 
+MC23112.5 - 1 2 - - 2 2 2 1 2 2 2 - - - 
+Average 0.4 1.2 2.6 0.8 0.2 2.2 2.4 2 1 1 1.2 2 - 0.2 - 
+ 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+GE23117          / HERITAGE OF TAMILS HS 1 0 0 1 
+ 
+ 
+    I                      :                                                                                            3 
+                        -               -                  -      
+                -                                     -                  
+             -                                  -                  , 
+                                        -              ,                   
+             -                -                               -      
+                                                                . 
+    II         -                                     -           : 3 
+                             -                 -                   
+                                    ,            -                  - 
+                -                        -                          - 
+             -         ,    ,    ,     ,           -                
+                                  . 
+    III                                          :                             3 
+         ,          ,            ,             ,          ,             
+    ,            ,     ,          ,                       . 
+    IV                               :                                                                 3 
+                    ,           -                                       
+                             -                               -              
+                  ,         -                                - 
+                                   -                                     . 
+    V                                                           
+         :                                                                                                     3 
+                                     -                               
+                   -                   -                  ,      
+                 -            ,                 -                          
+     . 
+ 
+TOTAL : 15 PERIODS 
+ 
+TEXT-CUM-REFERENCE BOOKS 
+1.            -                  -   .  .       (      :         
+                                   ). 
+2.              -          .        . (            ). 
+--- PAGE 22 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+3.     -                                      (              
+      ) 
+4.        -                   . (                    ) 
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of 
+Tamil Studies. 
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: 
+International Institute of Tamil Studies). 
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute of 
+Tamil Studies). 
+9. Keeladi – „Sangam City Civilization on the banks of river Vaigai‟ (Jointly Published by: Department of 
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu) 
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The Author) 
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and 
+Educational Services Corporation, Tamil Nadu) 
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+HS23221 TECHNICAL COMMUNICATION - II HS 0 0 2 1 
+ Common to all branches of B.E/B. Tech programmes –Second Semester 
+ 
+Objectives: 
+ To facilitate students to improve their vocabulary for a better communication 
+ To enable learners to understand and reproduce language 
+ To aid students to write technical reports in a convincing manner 
+ To expose students to different sentence structures 
+ To equip learners to present their ideas in an efficient manner 
+ 
+UNIT-I VOCABULARY FOR BETTER COMMUNICATION 6 
+Listening: Telephonic Conversations and TV News 
+Reading: Newspapers and Magazines 
+Speaking: Conversational Practice: Speaking in a given situation, Asking permission and requesting etc.., 
+Writing: Job Application Letter and  Resume 
+Grammar: Reference words: pronouns and determiners 
+Vocabulary: Guessing meanings of words in different contexts. 
+UNIT-II FUNCTIONAL LANGUAGE ASPECTS 6 
+Listening: Motivational listening – listening to real life challenges 
+Reading:  Articles and Technical reports 
+Speaking: Using Polite Expressions, Indirect Questions 
+Writing: Paraphrasing a Text, Poem 
+Grammar:  Purpose Statements, Cause and Effect Expressions 
+Vocabulary: Neologisms. 
+ 
+UNIT-III TECHNICAL REPORTWRITING 6 
+Listening: Empathetic Listening – Giving Solutions to Problems 
+Reading:  Inferential Reading 
+Speaking:  Dialogues – Interviewing Celebrities / Leaders / Sportspersons, etc.., 
+Writing: Report Writing 
+Grammar:  Functional Usage of Expressions – used to, gone / been, etc.., 
+Vocabulary:  Words Often Confused 
+UNIT-IV STRUCTURAL GRAMMAR 6 
+Listening: Comprehension (IELTS practice tests) 
+Reading:  Intensive Reading for specific information 
+Speaking:  Pick and Talk 
+Writing: Proposals 
+Grammar: Sentence Structures – Simple, Compound, Complex Sentences 
+--- PAGE 23 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+Vocabulary: Replacing dull words with vivid ones 
+UNIT-V PRESENTATION SKILLS 6 
+Listening: Discriminative listening – sarcasm, irony, pun, etc.., 
+Reading: Practice of chunking – breaking up reading materials 
+Speaking:  Mini presentation on some topic 
+Writing: Minutes of the meeting 
+Grammar: Correction of Errors 
+Vocabulary: Advanced vocabulary – fixing appropriate words in the given context. 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+ communicate effectively using appropriate vocabulary 
+ use the acquired language skills to comprehend various types of language contents 
+ evaluate different texts and write effective technical content 
+ use appropriate sentence structures to convey their thoughts  in varied contexts 
+ present their concepts and ideas in an effective manner 
+ 
+SUGGESTED ACTIVITIES 
+● Story Lines 
+● One truth and two lies 
+● Hang Man 
+● Pictionary 
+● Word Scramble 
+● Case study 
+ 
+ 
+SUGGESTED EVALUATION METHODS 
+● Assignment topics 
+● Quizzes 
+● Class Presentation/Discussion 
+● Continuous Assessment Tests 
+ 
+Text Book(s): 
+5. Raymond Murphy, “Intermediate English Grammar,” Second Edition , Cambridge University 
+Press, 2018 
+6. Meenakshi Raman & Sangeeta Sharma, “Technical Communication” Third Edition, Oxford 
+University Press, 2015 
+7. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, 
+Cambridge University Press 
+ 
+Reference Books(s) / Web links: 
+1. Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor), “Basic Vocabulary 
+in Use: 60 Units of Vocabulary Practice in North American English With Answers” 2nd Edition 
+2. Dale Carnegie, “The Art of Public Speaking,” Insight Press 
+3. Jack C. Richards & Theodore S. Rodgers, “ Approaches and Methods in Language Teaching, Second 
+Edition,       Cambridge University Press 
+ 
+PO/PSO 
+ 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS23221. 1 - - - 1 - - - - - 2 - - - - - 
+HS23221. 2 - - - 1 - - - - - 3 - - 1 - - 
+HS23221. 3 - 2 - 1 - - - - - 3 - - - - - 
+HS23221. 4 - - - 1 - - - - 2 3 - - 1 - - 
+HS23221. 5 - - - 1 - - - - 2 2 - - 1 - - 
+Average - 2 - 1 0 0 0 0 2 2.6 - - 1 - - 
+--- PAGE 24 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+HS 23222 ENGLISH FOR PROFESSIONAL COMPETENCE 
+Common to all branches of B.E/B. Tech programmes –
+Second Semester 
+HS 0 0 2 1 
+Objectives: 
+ To facilitate the learners in acquiring listening and reading competence 
+ To enable the learners to communicate effectively through written and oral medium 
+ To assist the learners in preparing for competitive examinations 
+ To train the students in acquiring corporate skills 
+ To inculcate professional standards among the students and make them realize their responsibility in 
+addressing the challenges 
+ 
+UNIT-I RECEPTIVE SKILLS 6 
+Listening – Comprehensive Listening – Watching the news – Listening to a peer giving presentation, etc. – 
+Critical Listening – Watching a televised debate, Listening to poems – Reading – Extensive Reading – Short 
+stories and One-act Plays – Intensive Reading – Articles or Editorials in Magazines, Blog posts on topics like 
+science and technology, arts, etc. 
+ 
+UNIT-II PRODUCTIVE SKILLS 6 
+Speaking – Demonstrative Speaking – Process description through visual aids – Persuasive Speaking – 
+Convincing the listener with the speaker‟s view – Writing – Descriptive Writing -  Describing a place, 
+person, process – Subjective Writing – Autobiography, Writing based on personal opinions and 
+interpretations 
+UNIT-III ENGLISH FOR COMPETITIVE EXAMS 6 
+An introduction to International English Language Testing System (IELTS) – Test of English as a Foreign 
+Language (TOEFL) – Graduate Record Examination (GRE) – Civil Service, Indian Economic Service 
+Examination, Indian Statistical Service Examination, Combined Defence Services Examination, Staff 
+Selection- (Language Related) – Aptitude tests. 
+UNIT-IV CORPORATE SKILLS 6 
+Critical Thinking and Problem Solving – Case Study, Brainstorming, Q & A Discussion – Team work 
+and Collaboration – Activities like Office Debates, Perfect Square, Blind Retriever, etc. Professionalism 
+and Strong Work Ethics – Integrity, Resilience, Accountability, Adaptability, Growth Mind set 
+UNIT-V PROJECT  WORK 6 
+Case Study based on the challenges faced by the employers and the employees – Devise Plan, Provide 
+Solution 
+ Total Contact Hours  30 
+Course Outcomes: 
+On completion of the course, students will be able to 
+ interpret and respond appropriately in the listening and reading contexts. 
+ express themselves effectively in spoken and written communication 
+ apply their acquired language skills in writing the competitive examinations 
+ exhibit their professional skills in their work place 
+ identify the challenges in the work place and suggest strategies solutions 
+ 
+SUGGESTED ACTIVITIES 
+● Online Quizzes on Vocabulary 
+● Online Quizzes on grammar 
+● Communication Gap Exercises 
+● Presentations 
+● Word Building Games 
+● Case study 
+ 
+ 
+ 
+ 
+--- PAGE 25 ---
+ 
+PA
+GE 
+75 
+ 
+ 
+SUGGESTED EVALUATION METHODS 
+● Assignment topics 
+● Quizzes 
+● Class Presentation/Discussion 
+● Continuous Assessment Tests 
+ 
+Text Book(s): 
+1 How to Read Better & Faster, Norman Lewis, Goyal Publishers 
+2 Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine Chuen Meng Goh, 
+Cambridge University Press 
+3 The Official Cambridge Guide To IELTS by Pauline Cullen, Cambridge University Press 
+4 The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+ 
+Reference Books(s) / Web links: 
+1. Board of Editors. Sure Outcomes. A Communication Skills Course for Undergraduate Engineers 
+and Technologists. Orient Black Swan Limited, Hyderabad, 2013. 
+2. Hartley, Mary. “The Power of Listening,” JaicoPublishing House; First Edition (2015). 
+3. Chambers, Harry.  “Effective Communication Skills for Scientific and Technical Professionals,” 
+Persues Publishing, Cambridge, Massachusetts, 2000. 
+ 
+PO/PSO 
+ 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PS
+O2 
+PS
+O3 
+HS23222. 1 - 1 - - - - - - - 3 - - - - - 
+HS23222. 2 - 1 - - - - - - - 3 - - - - - 
+HS23222. 3 - - - - - - - - - 3 - - - - - 
+HS23222. 4 - - - - - - 2 2 - 3 - - - - - 
+HS23222. 5 - - 1 - - - 2 - - 3 - - 2 - - 
+Average - 1 1 - - - 2 2 - 3 - - 2 - - 
+ 
+ 
+ 
+Subject 
+Code 
+Subject Name Category L T P C 
+MA23212 DIFFERENTIAL EQUATIONS AND COMPLEX 
+VARIABLES 
+BS 3 1 0 4 
+Common to II Sem. B.E. –AERO, AUTO, BME, CIVIL, EEE, ECE, MECH, MCT, R&A 
+and B. Tech. - BT, FT & CHEM 
+ 
+Objectives: 
+● To provide students with an introduction to the theory of ordinary differential equations through 
+applications, methods of solution, and numerical approximations. 
+● To introduce students to how to solve linear Partial Differential with different methods. 
+● To enable the students to study the Laplace Transforms, properties of Laplace Transform, inverse 
+Laplace Transform and some applications  to solve the differential equations and integral equations. 
+● To explain the concept of a vector integration in a plane and in space. 
+● To describe basic properties of complex variables and to have the ability to compute complex 
+integrals. 
+ 
+UNIT-I ORDINARY DIFFERENTIAL EQUATIONS 12 
+Second and higher order Linear differential equations with constant coefficients - Method of variation of 
+parameters – Legendre‟s linear equations – Numerical solution of ODE - Single Step methods: Taylor‟s 
+series method, Euler‟s method. 
+UNIT-II PARTIAL DIFFERENTIAL EQUATIONS 12 
+Formation of partial differential equations - Classification of PDE  –  Solutions of standard types of first 
+order partial differential equations - Lagrange‟s linear equation –Linear homogeneous partial differential 
+equations of second and higher order with constant coefficients. 

@@ -1,6 +1,8 @@
-import 'package:flutter/foundation.dart';
+import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import '../../features/timetable/domain/models/timetable_item.dart';
@@ -82,6 +84,11 @@ class NotificationService {
   final FlutterLocalNotificationsPlugin _notificationsPlugin =
       FlutterLocalNotificationsPlugin();
   bool _initialized = false;
+  final StreamController<String?> onNotificationClick =
+      StreamController<String?>.broadcast();
+
+  final Set<String> _seenNotificationIds = {};
+  bool _seenIdsLoaded = false;
 
   Future<void> init() async {
     if (_initialized) return;
@@ -113,6 +120,7 @@ class NotificationService {
       settings: initializationSettings,
       onDidReceiveNotificationResponse: (NotificationResponse response) {
         debugPrint('Notification clicked: ${response.payload}');
+        onNotificationClick.add(response.payload);
       },
     );
 
@@ -136,10 +144,171 @@ class NotificationService {
       enableVibration: true,
     );
 
-    await androidPlugin?.createNotificationChannel(channel);
+    const AndroidNotificationChannel systemChannel = AndroidNotificationChannel(
+      'campusly_system_notifications',
+      'Campus Notifications & Alerts',
+      description: 'Real-time campus notices, circulars, and reminders',
+      importance: Importance.max,
+      playSound: true,
+      enableVibration: true,
+    );
 
+    const AndroidNotificationChannel chatChannel = AndroidNotificationChannel(
+      'campusly_chat_messages',
+      'Chat Messages',
+      description: 'Direct messages and group chats',
+      importance: Importance.high,
+      playSound: true,
+      enableVibration: true,
+    );
+
+    await androidPlugin?.createNotificationChannel(channel);
+    await androidPlugin?.createNotificationChannel(systemChannel);
+    await androidPlugin?.createNotificationChannel(chatChannel);
+
+    await _loadSeenIds();
     _initialized = true;
     debugPrint('NotificationService initialized successfully.');
+  }
+
+  Future<void> _loadSeenIds() async {
+    if (_seenIdsLoaded) return;
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final list = prefs.getStringList('seen_system_notification_ids') ?? [];
+      _seenNotificationIds.addAll(list);
+      _seenIdsLoaded = true;
+    } catch (_) {}
+  }
+
+  Future<void> _saveSeenId(String id) async {
+    _seenNotificationIds.add(id);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final list = _seenNotificationIds.toList();
+      if (list.length > 500) {
+        list.removeRange(0, list.length - 500);
+      }
+      await prefs.setStringList('seen_system_notification_ids', list);
+    } catch (_) {}
+  }
+
+  Future<bool> hasSeenNotification(String id) async {
+    if (!_seenIdsLoaded) {
+      await _loadSeenIds();
+    }
+    return _seenNotificationIds.contains(id);
+  }
+
+  Future<void> markSeenNotification(String id) async {
+    if (!_seenIdsLoaded) {
+      await _loadSeenIds();
+    }
+    if (!_seenNotificationIds.contains(id)) {
+      await _saveSeenId(id);
+    }
+  }
+
+  Future<void> showSystemNotification({
+    required int id,
+    required String title,
+    required String body,
+    String? payload,
+    bool isEmergency = false,
+  }) async {
+    await init();
+    await _notificationsPlugin.show(
+      id: id,
+      title: title,
+      body: body,
+      notificationDetails: NotificationDetails(
+        android: AndroidNotificationDetails(
+          'campusly_system_notifications',
+          'Campus Notifications & Alerts',
+          channelDescription:
+              'Real-time campus notices, circulars, and reminders',
+          importance: isEmergency ? Importance.max : Importance.high,
+          priority: isEmergency ? Priority.max : Priority.high,
+          icon: '@mipmap/ic_launcher',
+          color: isEmergency
+              ? const Color(0xFFEF4444)
+              : const Color(0xFF4F46E5),
+          styleInformation: BigTextStyleInformation(body, contentTitle: title),
+        ),
+        iOS: DarwinNotificationDetails(
+          presentAlert: true,
+          presentBadge: true,
+          presentSound: true,
+          interruptionLevel: isEmergency
+              ? InterruptionLevel.critical
+              : InterruptionLevel.active,
+        ),
+      ),
+      payload: payload,
+    );
+  }
+
+  Future<void> showChatMessageNotification({
+    required int id,
+    required String senderName,
+    required String message,
+    required String chatId,
+    bool isSilent = false,
+  }) async {
+    await init();
+
+    final groupKey = 'chat_$chatId';
+
+    // Show the actual message notification
+    await _notificationsPlugin.show(
+      id: id,
+      title: senderName,
+      body: message,
+      notificationDetails: NotificationDetails(
+        android: AndroidNotificationDetails(
+          'campusly_chat_messages',
+          'Chat Messages',
+          channelDescription: 'Direct messages and group chats',
+          importance: Importance.high,
+          priority: Priority.high,
+          groupKey: groupKey,
+          playSound: !isSilent,
+          enableVibration: !isSilent,
+          icon: '@mipmap/ic_launcher',
+          color: const Color(0xFF4F46E5),
+        ),
+        iOS: DarwinNotificationDetails(
+          presentAlert: true,
+          presentBadge: true,
+          presentSound: !isSilent,
+          threadIdentifier: groupKey,
+        ),
+      ),
+      payload: 'chat_$chatId',
+    );
+
+    // Show group summary (required for Android 7.0+)
+    await _notificationsPlugin.show(
+      id: id * 1000,
+      title: 'Messages',
+      body: 'New messages',
+      notificationDetails: NotificationDetails(
+        android: AndroidNotificationDetails(
+          'campusly_chat_messages',
+          'Chat Messages',
+          channelDescription: 'Direct messages and group chats',
+          importance: Importance.high,
+          priority: Priority.high,
+          groupKey: groupKey,
+          setAsGroupSummary: true,
+          playSound: false,
+          enableVibration: false,
+          icon: '@mipmap/ic_launcher',
+          color: const Color(0xFF4F46E5),
+        ),
+        iOS: DarwinNotificationDetails(threadIdentifier: groupKey),
+      ),
+    );
   }
 
   Future<void> scheduleClassReminders(

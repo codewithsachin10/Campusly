@@ -17,7 +17,11 @@ class AttendanceDetailsSheet extends ConsumerStatefulWidget {
     required this.subjectName,
   });
 
-  static void show(BuildContext context, {required String subjectCode, required String subjectName}) {
+  static void show(
+    BuildContext context, {
+    required String subjectCode,
+    required String subjectName,
+  }) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -30,20 +34,31 @@ class AttendanceDetailsSheet extends ConsumerStatefulWidget {
   }
 
   @override
-  ConsumerState<AttendanceDetailsSheet> createState() => _AttendanceDetailsSheetState();
+  ConsumerState<AttendanceDetailsSheet> createState() =>
+      _AttendanceDetailsSheetState();
 }
 
-class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet> {
+class _AttendanceDetailsSheetState
+    extends ConsumerState<AttendanceDetailsSheet> {
   void _showEditCountsDialog(AttendanceModel current) {
-    final presentCtrl = TextEditingController(text: current.presentCount.toString());
-    final totalCtrl = TextEditingController(text: current.totalCount.toString());
+    final presentCtrl = TextEditingController(
+      text: current.presentCount.toString(),
+    );
+    final totalCtrl = TextEditingController(
+      text: current.totalCount.toString(),
+    );
 
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppColors.surface,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: Text('Edit Attendance Counts', style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold)),
+        title: Text(
+          'Edit Attendance Counts',
+          style: AppTypography.titleMedium.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -73,7 +88,8 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
           ),
           ElevatedButton(
             onPressed: () {
-              final present = int.tryParse(presentCtrl.text) ?? current.presentCount;
+              final present =
+                  int.tryParse(presentCtrl.text) ?? current.presentCount;
               final total = int.tryParse(totalCtrl.text) ?? current.totalCount;
               final user = ref.read(authControllerProvider).value;
               if (user != null) {
@@ -82,7 +98,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                   subjectCode: widget.subjectCode,
                   subjectName: widget.subjectName,
                 );
-                ref.read(attendanceProvider(key).notifier).updateCounts(present, total);
+                ref
+                    .read(attendanceProvider(key).notifier)
+                    .updateCounts(present, total);
               }
               Navigator.pop(context);
             },
@@ -147,7 +165,11 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                   color: AppColors.primary.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: const Icon(LucideIcons.calendarCheck, color: AppColors.primary, size: 26),
+                child: const Icon(
+                  LucideIcons.calendarCheck,
+                  color: AppColors.primary,
+                  size: 26,
+                ),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -156,11 +178,15 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                   children: [
                     Text(
                       widget.subjectName,
-                      style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                      style: AppTypography.titleLarge.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Text(
                       'Attendance & Smart Bunk Calculator',
-                      style: AppTypography.labelMedium.copyWith(color: AppColors.textSecondary),
+                      style: AppTypography.labelMedium.copyWith(
+                        color: AppColors.textSecondary,
+                      ),
                     ),
                   ],
                 ),
@@ -172,7 +198,7 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                   tooltip: 'Edit Counts',
                 ),
                 loading: () => const SizedBox.shrink(),
-                error: (_, __) => const SizedBox.shrink(),
+                error: (_, _) => const SizedBox.shrink(),
               ),
             ],
           ),
@@ -214,7 +240,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                             child: _buildStatBox(
                               label: 'Attendance %',
                               value: '${pct.toStringAsFixed(1)}%',
-                              color: isRisk ? AppColors.error : AppColors.success,
+                              color: isRisk
+                                  ? AppColors.error
+                                  : AppColors.success,
                             ),
                           ),
                         ],
@@ -237,8 +265,12 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                         child: Row(
                           children: [
                             Icon(
-                              isRisk ? LucideIcons.alertTriangle : LucideIcons.shieldCheck,
-                              color: isRisk ? AppColors.error : AppColors.success,
+                              isRisk
+                                  ? LucideIcons.alertTriangle
+                                  : LucideIcons.shieldCheck,
+                              color: isRisk
+                                  ? AppColors.error
+                                  : AppColors.success,
                               size: 28,
                             ),
                             const SizedBox(width: 14),
@@ -247,10 +279,14 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    isRisk ? '⚠️ Attendance Alert' : '✅ Smart Bunk Predictor',
+                                    isRisk
+                                        ? '⚠️ Attendance Alert'
+                                        : '✅ Smart Bunk Predictor',
                                     style: AppTypography.titleSmall.copyWith(
                                       fontWeight: FontWeight.bold,
-                                      color: isRisk ? AppColors.error : AppColors.success,
+                                      color: isRisk
+                                          ? AppColors.error
+                                          : AppColors.success,
                                     ),
                                   ),
                                   const SizedBox(height: 4),
@@ -272,7 +308,12 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                       const SizedBox(height: 24),
 
                       // Quick Log Section
-                      Text('Log Today\'s Class Status', style: AppTypography.titleSmall.copyWith(fontWeight: FontWeight.bold)),
+                      Text(
+                        'Log Today\'s Class Status',
+                        style: AppTypography.titleSmall.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       const SizedBox(height: 12),
                       Row(
                         children: [
@@ -280,7 +321,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                             child: _buildActionButton(
                               title: 'Present ✅',
                               color: AppColors.success,
-                              onTap: () => ref.read(attendanceProvider(key).notifier).markStatus('present'),
+                              onTap: () => ref
+                                  .read(attendanceProvider(key).notifier)
+                                  .markStatus('present'),
                             ),
                           ),
                           const SizedBox(width: 10),
@@ -288,7 +331,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                             child: _buildActionButton(
                               title: 'Absent ❌',
                               color: AppColors.error,
-                              onTap: () => ref.read(attendanceProvider(key).notifier).markStatus('absent'),
+                              onTap: () => ref
+                                  .read(attendanceProvider(key).notifier)
+                                  .markStatus('absent'),
                             ),
                           ),
                           const SizedBox(width: 10),
@@ -296,7 +341,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                             child: _buildActionButton(
                               title: 'Cancelled 🚫',
                               color: AppColors.warning,
-                              onTap: () => ref.read(attendanceProvider(key).notifier).markStatus('cancelled'),
+                              onTap: () => ref
+                                  .read(attendanceProvider(key).notifier)
+                                  .markStatus('cancelled'),
                             ),
                           ),
                         ],
@@ -304,7 +351,12 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                       const SizedBox(height: 24),
 
                       // History Log
-                      Text('Recent Class Log Details', style: AppTypography.titleSmall.copyWith(fontWeight: FontWeight.bold)),
+                      Text(
+                        'Recent Class Log Details',
+                        style: AppTypography.titleSmall.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       const SizedBox(height: 12),
                       if (model.history.isEmpty)
                         Container(
@@ -317,7 +369,9 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                           child: Text(
                             'No dates marked yet. Tap Present or Absent above when your class finishes!',
                             textAlign: TextAlign.center,
-                            style: AppTypography.bodyMedium.copyWith(color: AppColors.textSecondary),
+                            style: AppTypography.bodyMedium.copyWith(
+                              color: AppColors.textSecondary,
+                            ),
                           ),
                         )
                       else
@@ -331,40 +385,53 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
                             final isA = log.status == 'absent';
                             return Container(
                               margin: const EdgeInsets.only(bottom: 8),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 12,
+                              ),
                               decoration: BoxDecoration(
                                 color: AppColors.background,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(color: AppColors.border),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(log.dateString, style: AppTypography.bodyMedium.copyWith(fontWeight: FontWeight.w600)),
+                                  Text(
+                                    log.dateString,
+                                    style: AppTypography.bodyMedium.copyWith(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
                                   Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 4,
+                                    ),
                                     decoration: BoxDecoration(
-                                      color: (isP
-                                              ? AppColors.success
-                                              : isA
+                                      color:
+                                          (isP
+                                                  ? AppColors.success
+                                                  : isA
                                                   ? AppColors.error
                                                   : AppColors.warning)
-                                          .withValues(alpha: 0.15),
+                                              .withValues(alpha: 0.15),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: Text(
                                       isP
                                           ? 'Present ✅'
                                           : isA
-                                              ? 'Absent ❌'
-                                              : 'Cancelled 🚫',
+                                          ? 'Absent ❌'
+                                          : 'Cancelled 🚫',
                                       style: AppTypography.labelSmall.copyWith(
                                         fontWeight: FontWeight.bold,
                                         color: isP
                                             ? AppColors.success
                                             : isA
-                                                ? AppColors.error
-                                                : AppColors.warning,
+                                            ? AppColors.error
+                                            : AppColors.warning,
                                       ),
                                     ),
                                   ),
@@ -384,7 +451,11 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
     );
   }
 
-  Widget _buildStatBox({required String label, required String value, required Color color}) {
+  Widget _buildStatBox({
+    required String label,
+    required String value,
+    required Color color,
+  }) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
       decoration: BoxDecoration(
@@ -394,15 +465,31 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
       ),
       child: Column(
         children: [
-          Text(value, style: AppTypography.headlineMedium.copyWith(color: color, fontWeight: FontWeight.bold)),
+          Text(
+            value,
+            style: AppTypography.headlineMedium.copyWith(
+              color: color,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           const SizedBox(height: 4),
-          Text(label, style: AppTypography.labelSmall.copyWith(color: AppColors.textSecondary, fontWeight: FontWeight.w600)),
+          Text(
+            label,
+            style: AppTypography.labelSmall.copyWith(
+              color: AppColors.textSecondary,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildActionButton({required String title, required Color color, required VoidCallback onTap}) {
+  Widget _buildActionButton({
+    required String title,
+    required Color color,
+    required VoidCallback onTap,
+  }) {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(14),
@@ -414,7 +501,13 @@ class _AttendanceDetailsSheetState extends ConsumerState<AttendanceDetailsSheet>
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: color),
         ),
-        child: Text(title, style: AppTypography.labelMedium.copyWith(color: color, fontWeight: FontWeight.bold)),
+        child: Text(
+          title,
+          style: AppTypography.labelMedium.copyWith(
+            color: color,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }

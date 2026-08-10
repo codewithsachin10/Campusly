@@ -1,0 +1,1275 @@
+
+--- PAGE 1 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 1
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+REGULATIONS - 2023
+CHOICE BASED CREDIT SYSTEM 
+VISION 
+To produce globally competent Electronics and Communication Engineers with a commitment to serve 
+the society.
+MISSION
+M1 To impart training with the best of teaching expertise supported by excellent laboratory infrastructure  
+and exposure to recent trends in the industry.
+M2 To ensure that the students are molded into competent Electronics and Communication Engineers  
+with the knowledge of computer applications and worthy citizens of the country.
+PROGRAMME EDUCATIONAL OBJECTIVES (PEOS)
+PEO I 
+To provide students with sound foundation in the mathematical, scientific and engineering fundamentals  
+necessary to formulate, analyze and solve engineering problems and to prepare them for post graduate  
+studies and for successful careers in industries.
+PEO II
+To develop the ability among students to define engineering problems in the fields of electronics and  
+communication engineering, and to employ necessary techniques, hardware, and communication tools for  
+modern engineering applications.
+PEO III
+To instil the values, skills, leadership and team spirit for comprehensive and wholesome personality, to  
+promote  entrepreneurial  interest  among  students  and  to  create  a  fervor  for  use  of  engineering  in  
+addressing societal concerns.
+PROGRAM OUTCOMES (POs)
+Engineering graduates will be able to:
+PO1:  Engineering  knowledge:  Apply  the  knowledge  of  mathematics,  science,  engineering  
+fundamentals, and an engineering specialization to the solution of complex engineering problems. 
+--- PAGE 2 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 2
+PO2: Problem analysis: Identify, formulate, review research literature, and analyze complex engineering 
+problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and  
+engineering sciences. 
+PO3: Design/development of solutions:  Design solutions for complex engineering problems and design  
+system components or processes that meet the specified needs with appropriate consideration for the  
+public health and safety, and the cultural, societal, and environmental considerations. 
+PO4:  Conduct  investigations  of  complex  problems :  Use  research-based  knowledge  and  research  
+methods  including  design  of  experiments,  analysis  and  interpretation  of  data,  and  synthesis  of  the  
+information to provide valid conclusions. 
+PO5:  Modern tool  usage:  Create, select,  and  apply appropriate  techniques,  resources, and modern  
+engineering and IT tools including prediction and modeling to complex engineering activities with an  
+understanding of the limitations. 
+PO6: The engineer and society : Apply reasoning informed by the contextual knowledge to assess  
+societal,  health,  safety,  legal  and  cultural  issues  and  the  consequent  responsibilities  relevant  to  the  
+professional engineering practice. 
+PO7: Environment and sustainability: Understand the impact of the professional engineering solutions  
+in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable  
+development. 
+PO8: Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms  
+of the engineering practice. 
+PO9: Individual and team work:  Function effectively as an individual, and as a member or leader in  
+diverse teams, and in multidisciplinary settings. 
+PO10:  Communication:  Communicate  effectively  on  complex  engineering  activities  with  the  
+engineering community and with society at large, such as, being able to comprehend and write effective  
+reports and design documentation, make effective presentations, and give and receive clear instructions. 
+PO11: Project management and finance: Demonstrate knowledge and understanding of the engineering 
+and management principles and apply these to one’s own work, as a member and leader in a team, to  
+manage projects and in multidisciplinary environments. 
+PO12: Life-long learning:  Recognize the need for, and have the preparation and ability to engage in  
+independent and life-long learning in the broadest context of technological change. 
+PROGRAM SPECIFIC OUTCOMES (PSOs) 
+PSO1:  An  ability  to  formulate  solutions  for  practical  societal  requirements  using  communication  
+engineering.
+PSO2:  To  design  and  formulate  solutions  for  industrial  requirements  using  electronics  and  
+communication engineering.
+PSO3: To understand and develop solutions required in multidisciplinary engineering fields.
+--- PAGE 3 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 3
+CURRICULUM
+SEMESTER I
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 HS23111 Technical Communication  I HS 2 2 0 0 2
+2 GE23117 தமிழர்மிர்பு /Heritage of Tamils HS 1 1 0 0 1
+3 MA23111 Linear Algebra and Calculus BS 4 3 1 0 4
+4 GE23111 Engineering Graphics ES 6 2 0 4 4
+LAB ORIENTED THEORY COURSES
+5 EC23131 Electron Devices PC 5 3 0 2 4
+6 CY23131 Chemistry for Electronics Engineering BS 5 3 0 2 4
+7 GE23131 Programming using C ES 7 1 0 6 4
+MANDATORY COURSE
+8 MC23111 Indian Constitution and Freedom Movement MC 3 3 0 0 0
+TOTAL 33 18 1 14 23
+SEMESTER II
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 MA23212 Differential Equations and Complex Variables BS 4 3 1 0 4
+2 GE23217 தமிழருமி தொத
+ழல்நுட்பமுமி /
+Tamils and Technology HS 1 1 0 0 1
+LAB ORIENTED THEORY COURSES
+3 EE23132 Basic Electrical Engineering ES 5 3 0 2 4
+4 PH23232 Physics for Electronics Engineering BS 5 3 0 2 4
+5 CS23231 Data Structures ES 7 3 0 4 5
+LABORATORY COURSES
+6 HS23221/
+HS23222
+Technical Communication  II /
+English for Professional Competence HS 2 0 0 2 1
+7 GE23123 Engineering Practices-Electrical, Electronics
+and Computer systems ES 4 0 0 4 2
+MANDATORY COURSE
+8 MC23112 Environmental Science and Engineering MC 3 3 0 0 0
+TOTAL 31 16 1 14 21
+--- PAGE 4 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 4
+SEMESTER III
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 MA23312 Fourier Series and Number Theory BS 4 3 1 0 4
+2 EC23311 Analog Circuits–I PC 3 3 0 0 3
+3 EC23312 Electromagnetic Fields PC 3 3 0 0 3
+4 EC23313 Digital Principles and System Design PC 3 3 0 0 3
+LAB ORIENTED THEORY COURSES
+5 EC23332 Principles of Microprocessor and 
+Microcontrollers PC 5 3 0 2 4
+6 CS23336 Introduction to Python Programming ES 5 1 0 4 3
+LABORATORY COURSE
+7 EC23321 Analog and Digital Circuits Laboratory PC 4 0 0 4 2
+TOTAL 27 16 1 10 22
+SEMESTER IV
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 EC23411 Signals and Systems PC 3 3 0 0 3
+2 EC23412 Transmission Lines and Waveguides PC 3 3 0 0 3
+3 EC23413 Communication Theory PC 3 3 0 0 3
+LAB ORIENTED THEORY COURSES
+4 EC23431 Analog Circuits-II PC 5 3 0 2 4
+5 MA23436 Probability and Random Processes BS 5 3 0 2 4
+LABORATORY COURSES
+6 GE23421 Soft Skills-I EEC 2 0 0 2 1
+7 CS23422 Python Programming for Machine Learning ES 4 0 0 4 2
+TOTAL 25 15 0 10 20
+SEMESTER V
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 EC23511 Control System Engineering PC 3 2 1 0 3
+2 EC23512 Modern Digital Communication PC 3 3 0 0 3
+3 Open Elective-I OE 3 3 0 0 3
+4 Professional Elective-I PE 3 3 0 0 3
+5 Professional Elective-II PE 3 3 0 0 3
+LAB ORIENTED THEORY COURSE
+6 EC23531 Digital Signal Processing PC 5 2 1 2 4
+LABORATORY COURSES
+7 EC23521 Communication Systems Laboratory PC 4 0 0 4 2
+8 EC23522 Internship EEC 6 0 0 6 3
+9 GE23521 Soft Skills-II EEC 2 0 0 2 1
+TOTAL 32 16 2 14 25
+--- PAGE 5 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 5
+SEMESTER VI
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 EC23611 Antenna Theory and Wave Propagation PC 3 3 0 0 3
+2 Open Elective-II OE 3 3 0 0 3
+LAB ORIENTED THEORY COURSES
+3 EC23631 VLSI and Chip Design PC 5 3 0 2 4
+4 EC23632 Communication Networks PC 5 3 0 2 4
+5 EC23633 Wireless Communication PC 4 2 0 2 3
+LABORATORY COURSES
+6 GE23621 Problem Solving Techniques EEC 2 0 0 2 1
+7 GE23627 Design Thinking and Innovation EEC 4 0 0 4 2
+TOTAL 26 14 0 12 20
+SEMESTER VII
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 Professional Elective-III PE 3 3 0 0 3
+2 Professional Elective- IV PE 3 3 0 0 3
+LAB ORIENTED THEORY COURSES
+3 EC23731 Optical Communication and Networks PC 4 2 0 2 3
+4 EC23732 RF and Microwave Engineering PC 4 2 0 2 3
+5 EC23733 Embedded and Real Time Systems PC 5 3 0 2 4
+LABORATORY COURSE
+6 EC23721 Artificial Intelligence and Machine Learning for 
+Electronic Engineering EEC 4 0 0 4 2
+TOTAL 23 13 0 10 18
+SEMESTER VIII
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+THEORY COURSES
+1 Professional Elective-V PE 3 3 0 0 3
+2 Professional Elective-VI PE 3 3 0 0 3
+LABORATORY COURSE
+3 EC23821 Project work EEC 16 0 0 16 8
+TOTAL 22 6 0 16 14
+TOTAL NUMBER OF CREDITS: 163
+--- PAGE 6 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 6
+B.E ELECTRONICS AND COMMUNICATION ENGINEERING
+CREDITS DISTRIBUTION
+S.
+NO
+COURSE CATEGORY
+CREDITS PER SEMESTER
+1 2 3 4 5 6 7 8
+PROPOSED CURRICULUM
+1 HS 3 2 5
+2 BS 8 8 4 4 24
+3 ES 5 14 3 2 24
+4 PC 4 15 13 12 14 10 68
+5 PE 6 6 6 18
+6 OE 3 3 6
+7 GE 0
+8 EEC 1 2 3 2 10 18
+9 MC * * Non credits
+Total 20 24 22 20 23 20 18 16 163
+VERTICAL 1 VERTICAL 2 VERTICAL 3 VERTICAL 4 VERTICAL 5 VERTICAL 6
+SIGNAL AND 
+IMAGE 
+PROCESSING
+RF AND 
+ADVANCED 
+COMMUNICA
+TIONS
+SEMICONDUCT
+OR AND VLSI 
+DESIGN
+HIGH SPEED 
+NETWORKS
+MEMS AND 
+IOT
+SPACE 
+TECHNOLOGIES
+EC23A11 - 
+Medical 
+Electronics
+EC23B11 - 
+Information 
+Theory and 
+Coding
+EC23C11 - System 
+on Chip and FPGA 
+Testing
+EC23D11 - 
+Wireless Networks
+EC23E11 - 
+Introduction to 
+MEMS
+EC23F11 - Satellite 
+Communication
+EC23A12 - 
+Biosensing and its 
+Analysis
+EC23B12 - 
+Cognitive Radio
+EC23C12 - 
+Physical Design 
+Automation
+EC23D12 - 
+Wireless Sensor 
+Networks
+EC23E12 - 
+MEMS and 
+Microfluidic 
+Technologies
+EC23F12 - Radar 
+Technologies
+EC23A13 - 
+Statistical Signal 
+Processing
+EC23B13 - 
+Advanced 
+Communication 
+Systems
+EC23C13 - Digital 
+IC Design
+EC23D13 - 
+Network Routing 
+Algorithms
+EC23E13 - 
+BioMEMS
+EC23F13 - Avionics 
+Systems
+EC23A14 - 
+Digital Image 
+Processing
+EC23B14 - 
+Electromagnetic 
+Interference and 
+Compatibility
+EC23C14 - 
+Functional 
+Verification of 
+SOCs
+EC23D14 - 
+Multimedia 
+Compression and 
+Networking
+EC23E14 – 
+Biomaterial 
+Science and 
+Applications
+EC23F14 - 
+Positioning and 
+Navigation Systems
+EC23A15 - Image 
+and Video 
+Analysis
+EC23B15 - 
+Millimeter Wave 
+Communication
+EC23C15 - 
+Computer System 
+Architecture
+EC23D15 - 
+Internetworking 
+Multimedia
+EC23E15 - 
+Nanotechnology 
+for Engineering 
+Applications
+EC23F15–
+Fundamentals of 
+Remote Sensing
+EC23A16 - 
+Speech and Audio 
+Processing
+EC23B16 - 
+Advanced 
+Antenna 
+Technologies
+EC23C16 - 
+Semiconductor 
+Packaging
+EC23D16 –
+Principles of 
+Cryptography and 
+Network Security
+EC23E16 - 
+Sensor 
+Technology
+EC23F16 - Space 
+Mechanics
+EC23A17 - 
+Principles of 
+Machine Learning
+EC23B17 - RF 
+Circuit Design 
+and RADAR 
+Engineering
+EC23C17 - VLSI 
+Testing and 
+Testability
+EC23D17 - 
+Software Defined 
+Networks
+EC23E17 - IoT 
+Communication 
+Technologies
+EC23F17 - Rocket 
+Propulsion
+EC23A18 - 
+Introduction to 
+Deep Learning
+EC23B18 - 5G 
+Physical Layer 
+Technologies
+EC23C18 - 
+Computational 
+VLSI and IoT for 
+AI
+EC23D18 - High 
+Performance 
+Computing for 
+Cyber Physical 
+Systems
+EC23E18 - 
+Industry 4.0 and 
+IIoT
+EC23F18 - Drone 
+Technology in 
+Engineering
+--- PAGE 7 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 7
+PROFESSIONAL ELECTIVES (PE)
+VERTICAL 1 - SIGNAL AND IMAGE PROCESSING
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23A11 Medical Electronics PE 3 3 0 0 3
+2 EC23A12 Biosensing and its Analysis PE 3 3 0 0 3
+3 EC23A13 Statistical Signal Processing PE 3 3 0 0 3
+4 EC23A14 Digital Image Processing PE 3 3 0 0 3
+5 EC23A15 Image and Video Analysis PE 3 3 0 0 3
+6 EC23A16 Speech and Audio Processing PE 3 3 0 0 3
+7 EC23A17 Principles of Machine Learning PE 3 3 0 0 3
+8 EC23A18 Introduction to Deep Learning PE 3 3 0 0 3
+VERTICAL 2 - RF AND ADVANCED COMMUNICATIONS
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23B11 Information Theory and Coding PE 3 3 0 0 3
+2 EC23B12 Cognitive Radio PE 3 3 0 0 3
+3 EC23B13 Advanced Communication Systems PE 3 3 0 0 3
+4 EC23B14 Electromagnetic Interference and Compatibility PE 3 3 0 0 3
+5 EC23B15 Millimeter Wave Communication PE 3 3 0 0 3
+6 EC23B16 Advanced Antenna Technologies PE 3 3 0 0 3
+7 EC23B17 RF Circuit Design and RADAR Engineering PE 3 3 0 0 3
+8 EC23B18 5G Physical Layer Technologies PE 3 3 0 0 3
+VERTICAL 3 - SEMICONDUCTOR AND VLSI DESIGN
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23C11 System on Chip and FPGA Testing PE 3 3 0 0 3
+2 EC23C12 Physical Design Automation PE 3 3 0 0 3
+3 EC23C13 Digital IC Design PE 3 3 0 0 3
+4 EC23C14 Functional Verification of SOCs PE 3 3 0 0 3
+5 EC23C15 Computer System Architecture PE 3 3 0 0 3
+6 EC23C16 Semiconductor Packaging PE 3 3 0 0 3
+7 EC23C17 VLSI Testing and Testability PE 3 3 0 0 3
+8 EC23C18 Computational VLSI and IoT for AI PE 3 3 0 0 3
+VERTICAL 4 - HIGH SPEED NETWORKS
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23D11 Wireless Networks PE 3 3 0 0 3
+2 EC23D12 Wireless Sensor Networks PE 3 3 0 0 3
+3 EC23D13 Network Routing Algorithms PE 3 3 0 0 3
+4 EC23D14 Multimedia Compression and Networking PE 3 3 0 0 3
+5 EC23D15 Internet working Multimedia PE 3 3 0 0 3
+6 EC23D16 Principles of Cryptography and Network 
+Security PE 3 3 0 0 3
+7 EC23D17 Software Defined Networks PE 3 3 0 0 3
+8 EC23D18 High Performance Computing for Cyber 
+Physical Systems PE 3 3 0 0 3
+--- PAGE 8 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 8
+VERTICAL 5 - MEMS AND IOT
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23E11 Introduction to MEMS PE 3 3 0 0 3
+2 EC23E12 MEMS and Microfluidic Technologies PE 3 3 0 0 3
+3 EC23E13 BioMEMS PE 3 3 0 0 3
+4 EC23E14 Biomaterial Science and Applications PE 3 3 0 0 3
+5 EC23E15 Nanotechnology for Engineering Applications PE 3 3 0 0 3
+6 EC23E16 Sensor Technology PE 3 3 0 0 3
+7 EC23E17 IoT Communication Technologies PE 3 3 0 0 3
+8 EC23E18 Industry 4.0 and IIoT PE 3 3 0 0 3
+VERTICAL 6 - SPACE TECHNOLOGIES
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 EC23F11 Satellite Communication PE 3 3 0 0 3
+2 EC23F12 Radar Technologies PE 3 3 0 0 3
+3 EC23F13 Avionics Systems PE 3 3 0 0 3
+4 EC23F14 Positioning and Navigation Systems PE 3 3 0 0 3
+5 EC23F15 Fundamentals of Remote Sensing PE 3 3 0 0 3
+6 EC23F16 Space Mechanics PE 3 3 0 0 3
+7 EC23F17 Rocket Propulsion PE 3 3 0 0 3
+8 EC23F18 Drone Technology in Engineering PE 3 3 0 0 3
+OPEN ELECTIVES OFFERED BY ECE TO OTHER DEPARTMENTS
+S.NO COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C
+1 OEC2311 MEMS and its applications OE 3 3 0 0 3
+2 OEC2312 Consumer Electronics OE 3 3 0 0 3
+3 OEC2313 Electronics Engineering OE 3 3 0 0 3
+--- PAGE 9 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 9
+SEMESTER – I
+Subject Code Subject Name (Theory course) Category L T P C
+HS23111 TECHNICAL COMMUNICATION I HS 2 0 0 2
+Common to all branches of B.E/B. Tech programmes – First Semester
+Objectives:
+ To facilitate students develop their comprehension skills
+ To enable students to improve their receptive skills
+ To equip learners with better vocabulary and enhance their writing skills
+ To aid students speak effectively in all kinds of communicative contexts
+ To improve the learners’ basic proficiency in workplace communication
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6
+Listening: Introduction to Informational listening – Listening to Podcasts, News
+Reading: Intentional Reading - Short Narratives and Passages.
+Speaking: Introducing Oneself, Narrating a Story / Incident.
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process Description
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning.
+Vocabulary: Word formation – Prefix, Suffix, Compound Words.
+UNIT-II LISTENING AND EXTENDED READING 6
+Listening: Deep Listening – Listening to Talk Shows and Debates
+Reading: In-depth Reading - Scanning Passages
+Speaking: Describing Current Issues, Happenings, etc..,
+Writing: Note Making, Note Taking – Paragraph Writing
+Grammar: Continuous Tenses, Prepositions, Articles
+Vocabulary: One Word Substitutes, Phrasal Verbs.
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6
+Listening: Listening to Lectures and Taking Notes
+Reading: Interpretation of Tables, Charts and Graphs
+Speaking: SWOT Analysis on Oneself
+Writing: Formal Letter Writing and Email Writing
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers
+Vocabulary : Verbal Analogy / Cloze Exercise
+UNIT-IV ENHANCING SPEAKING ABILITY 6
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..)
+Reading: Timed Reading, Filling KWL Chart.
+Speaking: Just a Minute, Impromptu
+Writing: Check-list, Instructions.
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives
+Vocabulary: Synonyms, Antonyms, Different forms of the same words.
+UNIT-V LANGUAGE FOR WORKPLACE 6
+Listening: Extensive Listening (Audio books, rendering of poems, etc.)
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels)
+Speaking: Short Presentations on Technical Topics
+Writing: Recommendations, Essay Writing
+Grammar: Impersonal Passive, Reported Speech, Concord
+Vocabulary : Informal Vocabulary and Formal Substitutes
+Total Contact Hours: 30
+Course Outcomes:On completion of the course, students will be able to
+ apply their comprehension skills and interpret different contents effortlessly
+ read and comprehend various texts and audio visual contents
+ infer data from graphs and charts and communicate it efficiently in varied contexts
+ participate effectively in diverse speaking situations
+--- PAGE 10 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 10
+ to present, discuss and coordinate with their peers in workplace using their language skills
+Suggested Activities:
+ Ice breaker
+ Just A Minute
+ Ship wreck
+ Hot seat
+ Vocabulary building
+ Chinese whispers
+ Case study
+Suggested Evaluation Methods:
+ Assignment topics
+ Quizzes
+ Class Presentation/Discussion
+ Continuous Assessment Tests
+Text Book(s):
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback  2017
+2. Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth Edition 
+(June 28, 2004)
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension.
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press
+Reference Book(s) / Web links:
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With Answers 2nd Edition 
+by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor)
+2. Reading Development and Difficulties By Kate Cain
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK
+4. Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann Handley 
+(Author)
+PO/PSO
+CO
+PO1
+PO2
+PO3
+PO4
+PO5
+PO6
+PO7
+PO8
+PO9
+PO10
+PO11
+PO12
+PSO1
+PSO2
+PSO3
+HS23111. 1 - - - 1 - - - - - 3 - - - - -
+HS23111. 2 - - - 1 - - - - - 3 - - - - -
+HS23111. 3 - 1 - 1 - - - - - 3 - - - - -
+HS23111. 4 - - - 2 - - - - 1 3 - - - - -
+HS23111. 5 - - - 1 - - - - 1 3 - - - - -
+Average - 1 - 1.2 - - - - 1 3 - - - - -
+--- PAGE 11 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 11
+GE23117தமிழர்மிர்பு/HERITAGE OF TAMILS L  T  P  C
+1  0  0  1
+அல்கு I  தொமி
+ழமிற்றுமிஇல்க்க்யமி:                                                                    3
+இந்தயதொமி
+ழக்குடுமிபங்க்ள் -  தர்
+விட்தொமி
+ழக்ள் -  தமிழஒருதொமிதொமி
+ழ -  தமிழதொவிவில்க்க்யங்க்ள் - 
+ங்க்இல்க்க்யததன்மிய
+ர்பற்ற்தன்மைமி -  ங்க்இல்க்க்யததல்பக்ர்தல்அற்மி - 
+தருக்குற்ள்ல்மேமில்
+ண்மைமிக்க்ருததுக்க்ள் -  தமிழக்க்
+பபயங்க்ள்,  தமிழக்ததல்மிண்தொப#ததமியங்க்ள்ன்த
+க்க்மி - 
+பக்தஇல்க்க்யமி,  ஆழவி
+ர்க்ள்மிற்றுமிந்
+யன்மி
+ர்க்ள் -  ற்ற்ல்க்க்யங்க்ள் -  தமிழல்ந்வி%ன்இல்க்க்யததன்விள்ர் - 
+தமிழஇல்க்க்யவிள்ர்யல்ப
+ர்தய
+ர்மிற்றுமிப
+ர்தத
+ன்ஆக்மேய
+ர்ன்பங்க்ள்பபு.
+அல்கு II மிர்பு -  ப
+மைற்ஓவியங்க்ள்முதல்ந்வி%ன்ஓவியங்க்ள்விமைர் -  ற்பக்க்மைல்: 
+3                          
+ந்டுக்ல்முதல்ந்வி%ன்ற்பங்க்ள்விமைர் -  ஐமிதொப
+ன்மைல்க்ள் - 
+பழங்குடியன்ர்மிற்றுமிஅவிர்க்ள்தய
+ர்க்குமிமைக்விமைன்பதொப
+ருட்க்ள்,  தொப
+மிமைமிக்ள் -  மேதர்தொயயுமிக்மைல் - 
+சுடுமிண்ற்பங்க்ள் - ந்
+ட்டுபபுற்ததொதயவிங்க்ள் - குமிர்முமைன்யல்தருவிள்ளுவிர்மைல் - இமைக்க்ருவிக்ள் - மிருதங்க்மி, 
+பமைற், வி%மைண், ய
+ழ, ந்
+தஸ்விர்மி - தமிழர்க்ள்ன்மூக்தொப
+ருள்
+த
+ர்வி
+ழவில்மேக்
+வில்க்ள்ன்பங்கு.
+அல்கு III ந்
+ட்டுபபுற்க்க்மைல்க்ள்மிற்றுமிவி%ர்விமைள்ய
+ட்டுக்ள்:                        3
+தொதருக்கூதது,  க்ர்க்
+ட்ட்மி,  வில்லுபப
+ட்டு,  க்ண்ய
+ன்கூதது,  ஒயல்
+ட்ட்மி,  மேத
+ல்ப
+மைவிக்கூதது,  ல்மிப
+ட்ட்மி,  விள்ர், 
+புல்ய
+ட்ட்மி, தமிழர்க்ள்ன்விமைள்ய
+ட்டுக்ள்.
+அல்கு IV  தமிழர்க்ள்ன்தமைண்க்மேக்
+ட்ப
+டுக்ள்:                                                        3
+தமிழக்ததன்த
+விர்ங்க்ளுமி, வில்ங்குக்ளுமி - தொத
+ல்க்
+பபயமிமிற்றுமிங்க்இல்க்க்யததல்அக்மிமிற்றுமிபுற்க்மேக்
+ட்ப
+டுக்ள் 
+-  தமிழர்க்ள்மேப
+ற்ற்யஅற்க்மேக்
+ட்ப
+டு -  ங்க்க்
+ல்ததல்தமிழததல்எழுததற்வுமி,  க்ல்வியுமி - 
+ங்க்க்
+ல்ந்க்ர்ங்க்ளுமிதுமைற்முக்ங்க்ளுமி -  ங்க்க்
+ல்ததல்ஏற்றுமிதமிற்றுமிஇற்க்குமித - 
+க்ட்ல்க்ட்ந்தந்
+டுக்ள்ல்மே
+ழர்க்ள்ன்தொவிற்ற்.
+அல்கு V இந்தயமேதயஇயக்க்மிமிற்றுமிஇந்தயபண்ப
+ட்டிற்குததமிழர்க்ள்ன்பங்க்ள்பபு: 
+3
+இந்தயவிடுதமைல்பமேப
+ர்ல்தமிழர்க்ள்ன்பங்கு -  இந்தய
+வின்பற்பபகுதக்ள்ல்தமிழபபண்ப
+ட்டின்த
+க்க்மி - 
+சுயமிர்ய
+மைதஇயக்க்மி -  இந்தயமிருததுவிததல்,  ததமிருததுவிததன்பங்கு -  க்ல்தொவிட்டுக்ள்,  மைக்தொயழுததுபபடிக்ள் - 
+தமிழபபுததக்ங்க்ள்ன்அசுவிர்ல்
+று.  
+Total Contact Hours: 15 PERIODS
+TEXT-CUM-REFERENCE BOOKS
+1. தமிழக்விர்ல்
+று -  மிக்க்ளுமிபண்ப
+டுமி -  மேக்.மேக்.  பள்மைள் (தொவிள்ய%டு: 
+தமிழந்
+டுப
+ட்நூல்மிற்றுமிக்ல்வியயல்பண்க்ள்க்ழக்மி).
+2. க்ண்ன்ததமிழ - முமைன்விர்இல். சுந்தர்மி. (விக்ட்ன்பர்சுர்மி).
+3. க்%ழடி - மைவிமைக்ந்தக்க்மைர்யல்ங்க்க்
+ல்ந்க்ர்ந்
+க்ர்க்மி (தொத
+ல்ல்யல்துமைற்தொவிள்ய%டு)
+4. தொப
+ருமைந் - ஆற்ற்ங்க்மைர்ந்
+க்ர்க்மி. (தொத
+ல்ல்யல்துமைற்தொவிள்ய%டு)
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print)
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute  
+of Tamil Studies.
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by:  
+International Institute of Tamil Studies).
+--- PAGE 12 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 12
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute  
+of Tamil Studies).
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of  
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu)
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The  
+Author)
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and  
+Educational Services Corporation, Tamil Nadu)
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book.
+--- PAGE 13 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 13
+Course Code Course Title Category L T P C
+MA23111 LINEAR ALGEBRA AND CALCULUS BS 3 1 0 4
+Common to I sem. B.E. - CSE, EEE, ECE, BME and B.Tech. - IT.
+Objectives:
+ To introduce the matrix techniques and to explain the nature of the matrix.
+ To collect the matrix algebra techniques and the concepts of basis and dimension in vector spaces.
+ To construct normalization of vectors and ortho-normal vectors.
+ To understand techniques of calculus which are applied in the Engineering problems.
+ To apply the techniques of Integration in finding area and volumes.
+UNIT-I MATRICES 12
+ Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation - Cayley-Hamilton 
+Theorem(without proof) - Quadratic forms - Reduction to canonical form using orthogonal transformation -  Numerical 
+computation of  Eigen value using Power method.
+UNIT-II LINEAR TRANSFORMATION 12
+Vector spaces – Subspaces – Linear combinations and system of  Linear equations – Linear independence and Linear 
+dependence – Bases and Dimensions – Linear Transformation – Matrix representation  of  Linear Transformation - Null 
+space, Range space and dimension theorem (without proof).
+UNIT-III INNER PRODUCT SPACES 12
+Inner product and norms - Gram Schmidt orthonormalization process - QR Factorization - Singular value decomposition.
+UNIT-IV FUNCTIONS  OF SEVERAL VARIABLES 12
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit functions– 
+Taylor’s series for functions of two variables–Maxima and minima of functions of two variables–Lagrange’s method of 
+undetermined multipliers.
+UNIT-V MULTIPLE INTEGRALS 12
+Double integrals–Change of order of integration–Area enclosed by plane curves–Triple integrals–Volume of solids– 
+Numerical computation of double integrals-trapezoidal rule.
+Total Contact Hours: 60
+Course Outcomes:On completion of the course, students will be able to
+ Demonstrate the matrix techniques in solving the related problems in engineering and technology.
+ Apply the concepts of basis and dimension in vector spaces to the solution of related complex engineering 
+problems.
+ Construct orthonormal basis by the concepts of normalization in inner products and to analyse complex 
+engineering problems.
+ Interpret the problems in Engineering and Technology using the principles of mathematical calculus.
+ Evaluate multiple integrals to conduct investigations of complex problems.
+Suggested Activities:
+ Problem solving sessions
+ Activity based learning
+ Implementation of small module
+Suggested Evaluation Methods:
+ Problem solving in tutorial sessions
+ Assignment problems
+ Quizzes and class test
+ Discussion in classroom
+--- PAGE 14 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 14
+Text Book(s):
+1. Grewal B.S., “Higher Engineering Mathematics”, Khanna Publishers, New Delhi, 43rd Edition, 2014.
+2. T Veerarajan, Linear Algebra and Partial Differential Equations, Mc Graw Hill Education,2019.
+3. Friedberg, A.H., Insel, A.J. and Spence, L., Elementary Linear Algebra, a matrix approach, 2nd edition, Pearson, 
+2014.
+4. T Veerarajan, Engineering Mathematics –I, McGraw Hill Education, 2018.
+5. Introduction to linear algebra, 5th Edition, Gilbert Strang, 2016. Wellesley Publishers.
+Reference Book(s) / Web links:
+1. Ramana. B.V., "Higher Engineering Mathematics", McGraw Hill Education Pvt. Ltd, New Delhi, 2018.
+2. Erwin Kreyszig, "Advanced Engineering Mathematics", John Wiley and Sons, 10th Edition,   New Delhi, 2016.
+3. Bali, N.P. and Manish Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. Ltd., New 
+Delhi, 2006.
+4. Advanced Engineering Mathematics, (Seventh Edition), Peter V. O'Neil, Thomson Learning, 2020.
+5. Williams, G, “Linear Algebra with Applications”, Jones & Bartlett Learning, First Indian Edition, New Delhi, 
+2017.
+    PO/PSO
+CO
+PO1
+PO2
+PO3
+PO4
+PO5
+PO6
+PO7
+PO8
+PO9
+PO10
+PO11
+PO12
+PSO1
+PSO2
+PSO3
+MA23111. 1 3 2 1 - - - - - - - 1 - - 1 -
+MA23111.2 3 3 - - - - - - - - - - - 1 -
+MA23111.3 3 2 - - - - - - - - - - - - -
+MA23111.4 2 2 - - - - - - - - 1 1 - - -
+MA23111.5 2 2 - - - - - - - - - 1 1 - -
+Average 2.6 2.2 1 - - - - - - - 1 1 1 1 -
+--- PAGE 15 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 15
+Course Code Course Title Category L T P C
+GE23111 ENGINEERING GRAPHICS ES 2 0 4 4
+Objectives:
+ To understand the importance of the drawing in engineering applications
+ To develop graphic skills for communication of concepts, ideas and design of engineering products
+ To expose them to existing national standards related to technical drawings.
+ To improve their visualization skills so that they can apply this skill in developing new products.
+ To improve their technical communication skill in the form of communicative drawings
+CONCEPTS AND CONVENTIONS (Not for Examination) 1
+Importance of graphics in engineering applications–Use of drafting instruments– BIS conventions and specifications–Size, 
+layout and folding of drawing sheets– Lettering and dimensioning. Basic Geometrical constructions.
+UNIT-I PLANE CURVES AND PROJECTION OF POINTS 5 + 12
+Curves used in engineering practices: Conics–Construction of ellipse, parabola and hyperbola by eccentricity method –  
+Cycloidal Curves–Construction of cycloid, epicycloid and hypocycloid – Construction of involutes of square and circle–
+Drawing of tangents and normal to the above curves.
+Principles of Projection and Projection of points.
+UNIT-II PROJECTION OF LINES AND PLANE SURFACES 6 + 12
+Projection of straight lines (First angle projection) inclined to both the principal planes – Determination of true lengths and  
+true inclinations by rotating line method
+Projection of planes (polygonal and circular surfaces) inclined to both the principal planes by rotating object method.
+UNIT-III PROJECTION OF SOLIDS AND PROJECTION OF SECTIONED SOLIDS 6 + 12
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to one of the principal planes  
+by rotating object method.
+Sectioning of solids in simple vertical position when the cutting plane is inclined to HP and perpendicular to VP – obtaining  
+true shape of the section.
+Practicing three-dimensional modeling of simple objects by CAD software (Not for examination)
+UNIT-IV DEVELOPMENT OF SURFACE AND ISOMETRIC PROJECTIONS 6 + 12
+Development of lateral surfaces of simple and sectioned solids – Prisms, pyramids cylinders and cones.
+Principles of isometric projection–isometric scale–Isometric projections of simple solids and truncated solids - Prisms,  
+pyramids, cylinders and cones
+Model making of isometric projection of combination of solids as assignment (Not for End semester)
+UNIT-V FREE HAND SKETCHING AND PERSPECTIVE PROJECTIONS 6 + 12
+Free Hand sketching: Freehand sketching of multiple views from pictorial views of objects - Freehand sketching of pictorial  
+views of object from multiple views
+Perspective projection of simple solids-Prisms, pyramids, cylinder and cone by visual ray method.
+Total Contact Hours:  (L=30; P=60) 90 Periods
+Course Outcomes:On completion of the course, students will be able to
+ To construct different plane curves and to comprehend the theory of projection
+ To draw the basic views related to projection of lines and planes
+ To draw the projection of simple solids and to draw the projection of development of surfaces of  Sectioned 
+solids in simple vertical position
+ To draw the orthographic projection from pictorial objects and Isometric projections of simple solids
+--- PAGE 16 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 16
+ To visualize Perspective view of simple solids
+Text Book(s):
+1. Bhatt N.D. and Panchal V.M., “Engineering Drawing”, Charotar Publishing House, 50th Edition, 2010.
+2. Natarajan K.V., “A text book of Engineering Graphics”, Dhanalakshmi Publishers, Chennai, 2017.
+Reference Book(s) / Web links:
+1. Varghese P I., “Engineering Graphics”, McGraw Hill Education (I) Pvt.Ltd., 2013.
+2. V.B Sikka “Civil Engineering Drawing”, S.K Kataria & Sons, New Delhi.
+3. Venugopal K. and PrabhuRaja V., “Engineering Graphics”, New Age International (P)Limited, 2008.
+4. Gopalakrishna K.R., “Engineering Drawing” (Vol. I&II combined), Subhas Stores, Bangalore, 2017.
+5. Basant Agarwal and Agarwal C.M., “Engineering Drawing”, McGraw Hill Publishing Company Limited, New  
+Delhi, 2018.
+    PO/PSO
+CO
+PO1
+PO2
+PO3
+PO4
+PO5
+PO6
+PO7
+PO8
+PO9
+PO10
+PO11
+PO12
+PSO1
+PSO2
+PSO3
+GE23111.1 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+GE23111.2 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+GE23111.3 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+GE23111.4 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+GE23111.5 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+Average 3 2 2 1 - 1 - 2 2 2 - 2 - - -
+--- PAGE 17 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 17
+CourseCode CourseTitle Category L T P C
+EC23131 ELECTRON DEVICES PC 3 0 2 4
+Course Outcomes:On completion of the course, students will be able to
+ Demonstrate the operation and characteristics of the PN junction diode
+ Develop a high degree of familiarity with the terminal characteristics of the BJT
+ Identify the characteristics of FETs and MOSFETs
+ Analyze various types of biasing for the BJT
+ Identify a suitable semiconductor device for any given application
+Objectives:
+ To acquire knowledge about the PN junction diode
+ To study in detail about the operation and characteristic features of the BJT
+ To introduce the operation and characteristic features of JFET and MOSFET
+ To study the biasing techniques of BJT,JFETand MOSFET
+ To understand the operation and characteristic features of special semiconductor devices
+UNIT-I SEMICONDUCTOR DIODE 9
+Introduction  to  Semiconductor  Physics,  PN  junction  diode,current  equations,energy  band  diagram,diffusion  and
+drift  current  densities,  forward  and  reverse  bias  characteristics,  Transition  and  Diffusion  capacitances,  Switching  
+characteristics,Applications of PN junction diode-Rectifiers, clippers and clampers.
+UNIT-II BJT 9
+NPN and PNP configurations and their characteristics,Early effect,current equations,input and output characteristics of CE, 
+CB and CC, h-parameter model, Hybrid-π model, Eber’s Moll model
+UNIT-III JFET AND MOSFET 9
+JFET: N-channel and P-channel,drain and transfer characteristics,MOSFET: D-MOSFET,E-MOSFET,Drain and Transfer 
+characteristics.
+UNIT-IV BIASING OF FET AND BJT AMPLIFIERS 9
+BJT – DC Loadline,operating point, various biasing methods of BJT,Bias compensation, Thermal stability, Biasing ofJ FET 
+and MOSFET
+UNIT-V SPECIAL SEMICONDUCTOR DEVICES 9
+Schottky barrier diode, Zener diode, Varactor diode, Tunnel diode, UJT, SCR, DIAC, TRIAC, Dual-Gate MOSFETS, FinFET, 
+PIN-FET
+TotalContactHours:45
+Description of the Experiments: TotalContact Hours:30
+1. Characteristics of PN junction diode.
+2. Characteristics of Zener diode.
+3. Characteristics of BJT.
+4. Clippers and Clampers.
+5. Characteristics of JFET.
+6. Characteristics of UJT.
+7. SCR Characteristics.
+Suggested Activities:
+ Video lecture 
+ PPT 
+ Role Play
+ Quizzes
+ VLAB
+--- PAGE 18 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 18  
+ 
+Suggested Evaluation Methods: 
+• MCQ 
+• Assignment 
+ 
+Text Book(s): 
+1. RobertL. Boylestad, Louis Nashelsky,“Electronic Devices and Circuit Theory,”11thedition,PrenticeHall, 2012. 
+2. D.Neamen, D.Biswas" Semiconductor Physics and Devices,"4/e,McGraw-HillEducation,2012. 
+3. Salivahanan.S, “Electronic Devices”, 3/e, McGraw-Hill Education, 2019. 
+ 
+Reference Book(s)/ Weblinks: 
+1. G.Streetman  and S.K.Banerjee, “Solid State Electronic Devices,”7thedition,Pearson,2014. 
+2. S.M.Szeand K.N.Kwok,“Physics of Semiconductor Devices,”3rdedition,JohnWiley&Sons,2006. 
+3. C.T.Sah,“Fundamentals of solid state electronics, ”World Scientific Publishing Co.Inc, 1991. 
+4. Y.Tsividis and M.Colin, “Operation and Modeling of the MOS Transistor, ”Oxford Univ.Press,2011 
+5. All-in-One Electronic Simplified, A.K.Maini,Khanna Publishing House. 
+ 
+Lab equipment required: 
+ 
+S.No. Name of the Equipment Quantity 
+Required 
+1 CRO 18 
+Function generator 18 
+Power supply 35 
+Voltmeters 60 
+Ammeters 60 
+Multimeters 10 
+2 BJT,FET,PN DIODE, Zener diode, UJT, SCR Each 50 
+3 Breadboard 30 
+4 Connecting wires As required 
+ 
+ 
+Suggested Evaluation Methods: 
+• Model Practical 
+• Viva 
+• Observation and Record 
+ 
+ 
+--- PAGE 19 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 19  
+ 
+ 
+ 
+ 
+       PO 
+ 
+CO 
+/PSO 
+PO1 
+PO2 
+PO3 
+PO4 
+PO5 
+PO6 
+PO7 
+PO8 
+PO9 
+PO10 
+PO11 
+PO12 
+PSO1 
+PSO2 
+PSO3 
+EC23131.1 3 3 2 3 1 1 1 2 1 1 2 2 2 2 2 
+EC23131.2 3 3 2 3 1 1 1 2 1 1 2 2 2 2 2 
+EC23131.3 3 3 2 3 2 1 1 2 1 1 2 2 3 3 2 
+EC23131.4 3 2 3 2 2 2 1 2 2 1 2 2 2 2 2 
+EC23131.5 3 2 3 2 1 2 1 2 2 1 2 2 2 2 2 
+Average 3 2.6 2.4 2.6 1.4 1.4 1 2 1.4 1 2 2 2.2 2.2 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\ 
+--- PAGE 20 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 20
+Course Code Course Title Category L T P C
+CY23131 CHEMISTRY FOR ELECTRONICS ENGINEERING BS 3 0 2 4
+Common to B.E. - ECE, BME, EEE, MCT and R&A
+Objectives:
+ To understand the principles of electrochemical processes
+ To explore the functioning of sensors and their applications in industries and health care
+ To get familiarized with the functioning of batteries and fuel cells
+ To acquire knowledge on polymeric materials used in electronics
+ To develop proficiency in nanomaterials
+UNIT-I DYNAMIC ELECTROCHEMISTRY 9
+Applied Electrochemistry: Electrode Potential - EMF series - Corrosion- Causes, Consequences and Prevention. Surface  
+Preparation-  electropolishing  -Electroplating  of  copper,  electrophoretic  deposition  -  Electrochemical  machining,  
+electrochemical etching - electrochemical etching of Cu from PCB.
+UNIT-II ELECTROCHEMICAL SENSORS 9
+Electrodes  -  reference  electrodes  -  ion-selective  electrode,  determination  of  electrode  potential-  Galvanic  and  
+concentration cells - potentiometric, amperometric and conductometric methods of analysis - potentiometric sensor,  
+optical sensor, thermal sensor, chemical biosignals- sensors for health care – glucose and urea sensors, gas sensors for  
+CO2, O2 and NH3 sensing- blood oxygen sensor.
+UNIT-III ELECTROCHEMICAL ENERGY SYSTEMS 9
+Batteries- types - characteristics-fabrication and working of lead-acid battery- NICAD battery – Nickel metal hydride  
+batteries -lithium-ion battery - Supercapacitors- introduction - types - electrochemical double layer capacitor - activated  
+carbon - carbon aerogels.
+Fuel cells - classification – principle, working and applications of hydrogen-oxygen fuel cell - solid oxide fuel cell -  
+direct methanol fuel cell and proton exchange membrane fuel cells-biofuel cells.
+UNIT-IV POLYMERS IN ELECTRONICS 9
+Conducting  polymers -  c onducting  mechanisms-  polyaniline,  Poly  pyrrole  -  photonic  polymers  -  photo  resists  -  
+Introduction, Liquid crystalline phases, Identification of the mesophases, Lyotropic main chain liquid crystalline polymers,  
+Thermotropic main chain liquid crystal polymers, Applications of liquid Crystals in Displays (LCDs) - Organic LEDs-  
+functioning-advantages and disadvantages over conventional LEDs- commercial uses.
+UNIT-V NANO MATERIALS 9
+Introduction-Types of nanomaterials-Emergence and challenges in nanotechnology- Synthesis routes for nanomaterials:  
+Bottom-up and top-down approaches- Sol-gel, precipitation, Hydrothermal, Solvothermal, Microwave irradiation, Chemical 
+Vapour Deposition (CVD), Electro deposition- Properties of nanomaterials- Mechanical properties, Chemical, Optical,  
+Electrical and Magnetic properties-applications of nanomaterials.
+Total Contact Hours: 45
+Description of the Experiments: Total Contact Hours:30
+1. Construction and determination of EMF of simple electro chemical cells and concentration cells
+2. Estimation of acids by pH metry
+3. Determination of corrosion rate on mild steel by weight loss method
+4. Estimation of mixture of acids by conductometry
+5. Estimation of extent of corrosion of iron pieces by potentiometry
+6. Estimation of copper / ferrous ions by spectrophotometry
+7. Estimation of DO by using sensors
+8. Estimation of concentration of sulphate/chloride ions in the given sample solution.
+9. Determination of molecular weight of a polymer by viscometry method
+10. Synthesis of nanomaterials by simple precipitation method
+--- PAGE 21 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 21
+Suggested Activities:
+ Electroplating process by group of students
+ Ceramic coating on implant materials
+ Electropolishing of metals and alloys
+Course Outcomes:On completion of the course, students will be able to
+ Apply the knowledge of electrochemistry in exploring electrochemical processes.
+ Associate the knowledge of sensors in health care and in pollution abatement
+ Recognize the types of batteries and fuel cells
+ Employ advanced materials in industrial applications and display techniques
+ Develop nano and biomaterials for medical applications
+Suggested Evaluation Methods:
+ Continuous assessment tests
+ Assignments
+ Model lab examination
+ End semester examination
+Text Book(s):
+1. P. C. Jain and Monika Jain, “Engineering Chemistry”, DhanpatRai Publishing Company (P) Ltd, New Delhi, 2015
+2. O.G.Palanna, “Engineering Chemistry”, McGraw Hill Education (India) Pvt, Ltd, New Delhi, 2017
+3. Shikha Agarwal “Engineering Chemistry-Fundamentals and applications”, Cambridge University Press, New Delhi, 
+2015
+Reference Book(s) / Web links:
+1. Gowarikar V. R., Viswanathan N.V. and Jayadev Sreedhar, ―Polymer Science, New Age International (P)  
+Ltd., New Delhi, 2011
+2. Sujata V Bhat, “Biomaterials”, Narosa Publishing House, New Delhi, 2002
+3. PradeepT, “A Text Book of Nanoscience and Nanotechnology”, Tata McGraw Hill, New Delhi, 2012
+4. An Introduction to Nanomaterials and Nanoscience (PB 2020) : Asim K Das, Mahua Das, CBS publishers and  
+distributors Pvt. Ltd.
+5. NPTEL course Elementary Electrochemistry course url -
+https://onlinecourses.nptel.ac.in/noc23_cy19/preview
+6. For downloading text/reference books the weblink is given below can be used http://libgen.rs/
+Lab equipment required:
+S. No. Name of the Equipment Quantity Required
+1. Oxygen sensors 10
+2. Ion selective electrodes for various ions in solution 10
+3 Spectrophotometer 4
+4 Magnetic stirrer with hot plate 10
+Suggested Evaluation Methods:
+ Experiment based viva
+ Quizzes
+Web links for virtual lab (if any)
+https://drive.google.com/drive/folders/1k8g7fGRJ0Dl8FPbjQYg4l5jS1U9qIXnJ
+--- PAGE 22 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 22
+    PO/PSO
+CO
+PO1
+PO2
+PO3
+PO4
+PO5
+PO6
+PO7
+PO8
+PO9
+PO10
+PO11
+PO12
+PSO1
+PSO2
+PSO3
+CY23131. 1 2 2 1 - - - - - - - - 1 - 1 1
+CY23131.2 3 2 1 - - 1 1 - - - - 1 - 1 1
+CY23131.3 2 1 1 - - - - - - - - - - - 1
+CY23131.4 2 1 1 - - - - - - - - 1 - - 1
+CY23131.5 3 2 2 - - - - - - - - 1 - - 1
+Average 2.4 1.6 1.2 - - 1` 1 - - - - 1 - 1 1
+--- PAGE 23 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 23
+Course Code Course Title Category L T P C
+GE23131 PROGRAMMING USING C ES 1 0 6 4
+Objectives:
+ To develop C programs using basic programming constructs
+ To develop C programs using arrays and strings
+ To do searching and sorting algorithms in C
+ To  develop applications in C using user defined functions and recursive functions
+ To  develop applications  in C using pointers and structures
+List of Experiments:
+1. Overview of C,Constants,Variables and DataTypes
+2. Operators and Expressions,Managing Input and Output Operations
+3. Decision Making and Branching
+4. Decision Making and Looping
+5. Nested Loops-while and for,Jumps in Loops
+6. One-Dimensional Arrays
+7. Searching Algorithms-Linear and Binary
+8. Sorting Algorithms-Bubble and Selection
+9. Two-Dimensional and Multi-dimensional Arrays
+10. Character Arrays and Strings Handling Functions
+11. User-Defined Functions-Recursive Functions
+12. Passing Arrays and Strings to Functions
+13. Scope,Visibility and Lifetime of Variables
+14. Structures and Unions
+15. Pointers
+16. The Preprocessor
+TotalContactHours: 105
+Lab Requirement:GCC Compiler for Windows/Linux
+TextBook(s):
+1. BrianW.Kernighan and DennisM.Ritchie,“The C Programming Language”,Second Edition,PHI
+2. Byron Gottfried,“Programming in C”,Second Edition,Schaum Outline Series
+Reference Book(s)/Weblinks:
+ Herbert Schildt,“C:The Complete Reference”,Fourth Edition,McGrawHill.
+ Yashavant Kanetkar,“Let Us C”,BPB Publications
+ E.Balaguruswamy,Programming in ANSIC,Tata McGraw-Hill
+ NPTEL course ,“Problem Solving Through Programming In C”,By Prof.AnupamBasu, IIT Kharagpur
+Suggested Activities:
+ Practice small and tricky codes
+ Practice problems in portals like Digital 
+café
+ Debugging the codes
+ Completing the function definitions etc
+Course Outcomes:On completion of the course,the students will be able to
+ Formulate simple algorithms for arithmetic and logical problems.
+ Implement conditional branching,iteration and recursion.
+ Decompose a problem into functions and synthesize a complete program using divide and conquer approach.
+ Use arrays,pointers and structures to formulate algorithms and programs.
+ Apply programming to solve matrix addition and multiplication problems and searching and sorting problems.
+--- PAGE 24 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 24
+    PO/PSO
+CO
+PO1
+PO2
+PO3
+PO4
+PO5
+PO6
+PO7
+PO8
+PO9
+PO10
+PO11
+PO12
+PSO1
+PSO2
+PSO3
+GE23131.1 1 2 2 2 1 - - - 1 2 1 1 2 3 -
+GE23131.2 1 1 1 1 1 - - - - - 1 1 2 2 -
+GE23131.3 1 1 2 1 1 - - - - - 1 1 2 2 -
+GE23131.4 2 2 3 2 1 - - - 1 - 2 1 2 2 2
+GE23131.5 2 2 3 2 1 - - - - - 2 1 2 2 2
+Average 1.4 1.6 2.2 1.6 1.0 - - - 1.0 2.0 1.4 1.0 2.0 2.2 2.0
+--- PAGE 25 ---
+Curriculum and Syllabus | B.E. ELECTRONICS AND COMMUNICATION ENGINEERING| R2023 25
+Course Code Course Title Category L T P C
+MC23111 INDIAN CONSTITUTION AND FREEDOM MOVEMENT MC 3 0 0 0
+Common to all branches of B.E/B. Tech Programmes – First / Second/ Third Semester
+Objectives:
+ To apprehend the sacrifices made by the freedom fighters.
+ To inculcate the values enshrined in the Indian constitution.
+ To instil a sense of responsibility as the citizens of India.
+ To familiarise about the functions of the various levels of Government.
+ To be informed about Constitutional and Non- Constitutional bodies.
+UNIT-I INDIAN FREEDOM MOVEMENT 9
+British Colonialism in India-Colonial administration till 1857- Revolt of 1857- Early Resistance to British Rule-Rise of 
+Nationalism in India-Indian Freedom Struggle under Mahatma Gandhi-Non- Cooperation Movement-Civil Disobedience 
+Movement- Quit India Movement-British Official response to National movement- Independence of India Act 1947-Freedom 
+and Partition.
+UNIT-II CONSTITUTION OF INDIA 9
+Historical Background – Indian Constitution: Constitution’ meaning of the term, Sources and constitutional history, 
+Constituent Assembly of India – Philosophical foundations of the Indian Constitution – Preamble – Fundamental Rights – 
+Directive Principles of State Policy – Fundamental Duties – Citizenship – Constitutional Remedies for citizens.
+UNIT-III STRUCTURE AND FUNCTIONS OF CENTRAL GOVERNMENT 9
+Union Government – Structure of the Union Government and Functions – President – Vice President – Prime Minister – 
+Cabinet – Parliament – Supreme Court of India – Judicial Review.
+UNIT-IV STRUCTURE AND FUNCTION OF STATE GOVERNMENT AND LOCAL BODY 9
+State Government – Structure and Functions – Governor – Chief Minister – Cabinet – State Legislature – Judicial System in 
+States – High Courts and other Subordinate Courts- Role and Importance, Municipalities: Introduction, Mayor and role of 
+Elected Representative, CEO of Municipal Corporation, Pachayati Raj: Introduction, Elected officials and their roles, Village 
+level: Role of Elected and Appointed officials.
+UNIT-V CONSTITUTIONAL FUNCTIONS AND BODIES 9
+Indian Federal System – Centre – State Relations – President’s Rule –  Constitutional Functionaries – Assessment of working 
+of the Parliamentary System in India- CAG, Election Commission, UPSC, GST Council and other Constitutional bodies-. 
+NITI Aayog, Lokpal, National Development Council and other Non –Constitutional bodies.
+Total Contact Hours: 45
+Course Outcomes: On completion of the course, students will be able to
+ appreciate the sacrifices made by freedom fighters during freedom movement.
+ be responsible citizens and abide by the rules of the Indian constitution.
+ be aware of  the functions of the Indian government.
+ be knowledge able about the functions of the state Government and the Local bodies.
+ apply the knowledge on constitutional functions and role of constitutional bodies and non-constitutional bodies.
+Suggested Activities:
+ Famous speeches from around the world relating to independence
+ Case study
+ Quiz on Portfolio and Cabinet
+ Discussions on International Associations like the UN, BRICS, QUAD
+ Presentation on issues around the world
+Suggested Evaluation Methods:
+ Assignment topics
+ Quizzes

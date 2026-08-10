@@ -1,0 +1,1214 @@
+
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+VISION: 
+RAJALAKSHMI ENGINEERING COLLEGE 
+(An Autonomous Institution Affiliated to Anna University Chennai) 
+Choice Based Credit System 
+DEPARTMENT OF AUTOMOBILE ENGINEERING 
+CURRICULUM AND SYLLABUS REGULATIONS – 2023 
+B.E. AUTOMOBILE ENGINEERING 
+To be a department of excellence in the domain of Automotive Engineering and develop competent 
+engineers imbibed with entrepreneurial and innovative skills with a concern for the society. 
+ 
+MISSION: 
+● To provide accessible quality education well grounding the students in the fundamental principles of 
+Automotive Engineering and humane values. 
+● To provide a conducive environment for the students to get transformed themselves into 
+professionals who can design, develop and effectuate automotive systems for industry and societal 
+needs. 
+● To explore, develop and create innovations in Automotive Engineering thereby furthering research 
+activities resulting in products satisfying industrial and social needs. 
+ 
+PROGRAMME EDUCATIONAL OBJECTIVES (PEO’S) 
+ 
+1. To provide students with sound foundation in the mathematical, scientific and engineering 
+fundamentals necessary to formulate, analyze and solve engineering problems and to prepare them for 
+higher studies and for successful careers in automobile industry. 
+ 
+2. To impart students with knowledge, innovation and skills towards research, design and development 
+of Automotive Systems and allied integrated systems of global standards for betterment of society. To 
+impart knowledge in usage of alternate fuels and emission control in IC engines. 
+ 
+3. To instill the values, skills, leadership, team spirit and professional ethics for comprehensive and 
+wholesome personality and to promote entrepreneurial interest among students so that they can 
+compete globally in the field and to create a fervor for use of Engineering in addressing societal 
+concerns. 
+ 
+PROGRAM OUTCOMES (PO) 
+ 
+1. Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, 
+and an engineering specialization to the solution of complex engineering problems. 
+ 
+ 
+2. Problem analysis: Identify, formulate, review research literature, and analyze complex engineering 
+problems reaching substantiated conclusions using first principles of mathematics, natural sciences, 
+and engineering sciences. 
+--- PAGE 2 ---
+3. Design/development of solutions : Design solutions for complex engineering problems and design 
+system components or processes that meet the specified needs with appropriate consideration for the 
+public health and safety, and the cultural, societal, and environmental considerations. 
+4. Conduct investigations of complex problems : Use research -based knowledge and research  
+methods including design of experiments, analysis and interpretation of data, and synthesis of the 
+information to provide valid conclusions. 
+5. Modern tool usage : Create, select, and apply appropriate techniques, resources, and modern 
+engineering and IT tools including prediction and modelling to complex engineering activities with 
+an understanding of the limitations. 
+6. The engineer and society : Apply reasoning informed by the contextual knowledge to assess  
+societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the 
+professional engineering practice. 
+7. Environment and sustainability : Understand the impact of the professional engineering solutions  
+in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable 
+development. 
+8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of 
+the engineering practice. 
+9. Individual and team work : Function effectively as an individual, and as a member or leader in 
+diverse teams, and in multidisciplinary settings. 
+10. Communication: Communicate effectively on complex engineering activities with the engineering 
+community and with society at large, such as, being able to comprehend and write effective reports 
+and design documentation, make effective presentations, and give and receive clear instructions. 
+11. Project management and finance : Demonstrate knowledge and understanding of the engineering 
+and management principles and apply these to one’s own work, as a member and leader in a team, to 
+manage projects and in multidisciplinary environments. 
+12. Life-long learning : Recognize the need for, and have the preparation and ability to engage in 
+independent and life-long learning in the broadest context of technological change. 
+ 
+PROGRAM SPECIFIC OUTCOMES (PSO’s) 
+PSO1. Will be able to design and develop power plant and chassis systems in a view to meet the dynamic 
+needs of the society by harnessing the potential of electronic systems and modern software tools. 
+ 
+PSO2. Will be able to explore possibilities of viable alternate fuels and to develop emission control 
+technologies and safety systems 
+ 
+PSO3. Will be able to work in an industry as a team member as well as an individual with professional 
+qualities and evolve oneself for lifelong learning. 
+--- PAGE 3 ---
+Rajalakshmi Engineering College 
+Department of Automobile Engineering 
+R2023 CURRICULUM 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 I HS 23111 Technical 
+Communication I 
+HS 2 2 0 0 2 
+2 I MA23112 Algebra and Calculus BS 4 3 1 0 4 
+3 I GE23111 Engineering Graphics ES 6 2 0 4 4 
+4 I AT23111 Production Technology - 
+I 
+PC 3 3 0 0 3 
+5 I GE23117 தமிழர்மரபு / Heritage 
+of Tamils 
+HS 1 1 0 0 1 
+6 I PH23131 Physics of Materials BS 5 3 0 2 4 
+7 I GE23121 Engineering Practices – 
+Civil and Mechanical 
+ES 2 0 0 2 1 
+8 I MC23112 Environmental Science 
+and Engineering  
+MC 3 3 0 0 0 
+Total 24 17 1 8 19 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 II MA23212 Differential Equations 
+and Complex Variables 
+BS 4 3 1 0 4 
+2 II GE23211 Engineering Mechanics ES 3 2 1 0 3 
+3 II GE23217 தமிழரும் 
+ததொழில்நுட்பமும் / 
+Tamils and Technology 
+HS 1 1 0 0 1 
+4 II CY23233 Engineering Chemistry BS 5 3 0 2 4 
+5 II EE23133 Basic Electrical and 
+Electronics Engineering 
+ES 5 3 0 2 4 
+6 II GE23231 Programming Using 
+Python 
+ES 5 1 0 4 3 
+7 II HS 23221 Technical 
+Communication II 
+HS 2 0 0 2 1 
+HS 23222 English for Professional 
+Competence 
+8 II GE23122 Engineering Practices - 
+Electrical and 
+Electronics 
+ES 2 0 0 2 1 
+9 II MC23111 Indian Constitution and 
+Freedom Movement  
+MC 3 3 0 0 0 
+Total 30 16 2 12 21 
+ 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 III MA23331 Transforms and Statistics BS 5 3 0 2 4 
+2 III AT23331 Automotive Engines PC 5 3 0 2 4 
+3 III AT23332 Applied PC 5 2 1 2 4 
+--- PAGE 4 ---
+Thermodynamics 
+4 III AT23333 Strength of Materials for 
+Automobile Engineers 
+PC 5 2 1 2 4 
+5 III AT23334 Production Technology - 
+II 
+PC 5 3 0 2 4 
+6 III AT23321 Computer Aided 
+Machine Drawing 
+Laboratory 
+PC 4 0 0 4 2 
+Total 29 13 2 14 22 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 IV AT23411 Electric and Hybrid 
+Vehicles - I 
+PC 3 3 0 0 3 
+2 IV AT23412 Material Science and 
+Metallurgy 
+ES 3 3 0 0 3 
+3 IV AT23431 Automotive Drive Line 
+and Chassis 
+PC 5 3 0 2 4 
+4 IV AT23432 Fluid Mechanics and 
+Machinery for 
+Automobile Engineers 
+PC 5 2 1 2 4 
+5 IV AT23433 Theory of Machines PC 5 2 1 2 4 
+6 IV CS23422 Python Programming for 
+Machine Learning 
+ES 4 0 0 4 2 
+7 IV GE23421 Soft Skills - I EEC 2 0 0 2 1 
+Total 27 13 2 12 21 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 V AT23511 Design of Machine 
+Elements 
+PC 3 2 1 0 3 
+2 V  GE23311 Fundamentals of 
+Management for 
+Engineers 
+HS 3 3 0 0 3 
+3 V   Professional Elective – I PE 3 3 0 0 3 
+4 V   Open Elective - I OE 3 3 0 0 3 
+5 V AT23531 Automotive Electrical 
+and Electronics 
+PC 5 3 0 2 4 
+6 V AT23532 Electric and Hybrid 
+Vehicles - II 
+PC 5 3 0 2 4 
+7 V AT23521 Two and Three wheelers 
+Laboratory 
+PC 2 0 0 2 1 
+8 V AT23522 Computer Aided Vehicle 
+Design Data 
+Characteristics 
+Laboratory 
+PC 2 0 0 2 1 
+9 V GE23521 Soft Skills - II EEC 2 0 0 2 1 
+Total 28 17 1 10 23 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 VI 
+ 
+Professional Elective – II PE 3 3 0 0 3 
+2 VI 
+ 
+Open Elective - II OE 3 3 0 0 3 
+--- PAGE 5 ---
+3 VI AT23631 Automotive System Design PC 5 2 1 2 4 
+4 VI AT23632 Vehicle Dynamics PC 5 2 1 2 4 
+5 VI AT23633 Automotive Fuels and 
+Lubricants 
+PC 5 3 0 2 4 
+6 VI GE23621 Problem Solving 
+Techniques 
+EEC 2 0 0 2 1 
+7 VI GE23627 Design Thinking and 
+Innovation  
+EEC 4 0 0 4 2 
+8 VI AT23621 Industrial Training EEC 2 0 0 2 2 
+Total 29 13 2 14 23 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name  Category Total 
+Hrs 
+L T P C 
+1 VII AT23711 Automotive Pollution and 
+Control 
+PC 3 3 0 0 3 
+2 VII AT23712 Intelligent Vehicle System PC 3 3 0 0 3 
+3 VII AT23713 Automotive Safety PC 3 3 0 0 3 
+4 VII 
+ 
+Professional Elective – III PE 3 3 0 0 3 
+5 VII AT23721 AI and ML for Automobile 
+Engineers  
+PC 4 0 0 4 2 
+6 VII AT23722 Vehicle Maintenance 
+Laboratory 
+PC 2 0 0 2 1 
+7 VII AT23723 Computer Aided Analysis 
+laboratory 
+PC 2 0 0 2 1 
+8 VII AT23724 Internship  EEC 2 0 0 2 1 
+Total 22 12 0 10 17 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 VIII   Professional Elective – IV PE 3 3 0 0 3 
+2 VIII   Professional Elective – V PE 3 3 0 0 3 
+3 VIII  AT23821 Project Work EEC 16 0 0 16 8 
+Total 22 6 0 16 14 
+ 
+ 
+ 
+--- PAGE 6 ---
+Vertical subjects with Specialization 
+ 
+Category 
+Common Vertical / Professional Electives 
+Vertical 1/ COMPUTATIONAL ENGINEERING 
+Offered in Course Code / Name 
+V Sem ME23A11- Machine Learning for Intelligent Systems 
+V Sem ME23A12 - CAD and CAE 
+VI Sem ME23A13 - Numerical heat transfer 
+VI Sem ME23A14 - Theory on Computation and Visualization 
+VII Sem ME23A15 - Computational Bio-Mechanics 
+VII Sem ME23A16 - Advanced Statistics and Data Analytics 
+VII Sem ME23A17 - Noise Acoustics and Vibration 
+VIII Sem ME23A18 - Computational Solid Mechanics 
+VIII Sem ME23A19 - Computational Fluid Dynamics 
+--- PAGE 7 ---
+ 
+ 
+Sl. 
+No
+. 
+ 
+SEM 
+ 
+VERTICAL 3/ ELECTRIC VEHICLES 
+Course Name Course 
+Code 
+Categor
+y 
+Total 
+Hrs 
+L T P C 
+1 V/VI Fuel cell Technologies AT23C11 Vertical 3 3 0 0 3 
+2 V/VI Automotive Power Electronics AT23C12 Vertical 3 3 0 0 3 
+3 V/VI Sensors and Actuators AT23C13 Vertical 3 3 0 0 3 
+4 VII/VIII Smart charging of Electric and 
+Hybrid Vehicles AT23C14 Vertical 3 3 0 0 3 
+5 VII/VIII 
+Electric and Plug-in Hybrid 
+Vehicle Networks_ 
+Optimization and Control 
+AT23C15 Vertical 3 3 0 0 3 
+6 VII/VIII Energy Systems for Electric and 
+Hybrid Vehicles AT23C16 Vertical 3 3 0 0 3 
+7 VII/VIII Automotive Functional Safety AT23C17 Vertical 3 3 0 0 3 
+8 VII/VIII Modelling of Electric and 
+Hybrid Vehicles AT23C18 Vertical 3 3 0 0 3 
+ 
+ 
+ 
+Sl. 
+No
+. 
+ 
+SEM 
+ 
+Vertical 4/ VEHICLE RESEARCH AND VALIDATION 
+Course Name Course 
+Code 
+Categor
+y 
+Total 
+Hrs 
+L T P C 
+1 V/VI Advanced Automotive 
+Materials AT23D11 Vertical 3 3 0 0 3 
+2 V/VI Noise, Vibration and Harshness AT23D12 Vertical 3 3 0 0 3 
+3 V/VI Combustion Thermodynamics 
+and Heat Transfer AT23D13 Vertical 3 3 0 0 3 
+Sl. 
+No
+. 
+ 
+SEM 
+ 
+VERTICAL 2/ SOFTWARE DEFINED, CONNECTED AND AUTONOMOUS 
+VEHICLES 
+Course Name Course 
+Code 
+Categor
+y 
+Total 
+Hrs 
+L T P C 
+1 V/VI Fundamentals of Software 
+Defined Vehicles 
+AT23B11 Vertical 3 3 0 0 3 
+2 V/VI Automotive Embedded Systems 
+and AUTOSAR 
+AT23B12 Vertical 3 3 0 0 3 
+3 V/VI Connected Vehicles and 
+Vehicle Communication 
+Systems 
+AT23B13 Vertical 3 3 0 0 3 
+4 VII/VIII Advanced Driver Assistance 
+Systems (ADAS) 
+AT23B14 Vertical 3 3 0 0 3 
+5 VII/VIII Sensors and Perception Systems 
+for Intelligent Vehicles 
+AT23B15 Vertical 3 3 0 0 3 
+6 VII/VIII Autonomous Vehicle Systems 
+and Motion Planning 
+AT23B16 Vertical 3 3 0 0 3 
+7 VII/VIII Artificial Intelligence for 
+Mobility Applications 
+AT23B17 Vertical 3 3 0 0 3 
+8 VII/VIII Automotive Cybersecurity, 
+Functional Safety and OTA 
+Systems 
+AT23B18 Vertical 3 3 0 0 3 
+--- PAGE 8 ---
+4 VII/VIII Automotive Instrumentation AT23D14 Vertical 3 3 0 0 3 
+5 VII/VIII Testing and Measurement 
+Systems AT23D15 Vertical 3 3 0 0 3 
+6 VII/VIII Homologation AT23D16 Vertical 3 3 0 0 3 
+7 VII/VIII IC Engine Process Modelling AT23D17 Vertical 3 3 0 0 3 
+8 VII/VIII Vehicle Control Systems AT23D18 Vertical 3 3 0 0 3 
+ 
+ 
+ 
+ 
+ 
+Sl. 
+No
+. 
+ 
+SEM 
+ 
+VERTICAL 5 / SPECIAL PURPOSE VEHICLES 
+1 V/VI Hydraulics and Pneumatics 
+for Automobile Engineers AT23E11 Vertical 3 3 0 0 3 
+2 V/VI Agricultural Vehicles AT23E12 Vertical 3 3 0 0 3 
+3 V/VI Defence Vehicles AT23E13 Vertical 3 3 0 0 3 
+4 VII/VIII Constructions Vehicles AT23E14 Vertical 3 3 0 0 3 
+5 VII/VIII Marine Vehicles AT23E15 Vertical 3 3 0 0 3 
+6 VII/VIII 
+Off-road Vehicle Dynamics - 
+Analysis, Modelling and 
+Optimization 
+AT23E16 Vertical 3 3 0 0 3 
+7 VII/VIII 
+Mechatronics and Intelligent 
+Systems for Off-road 
+Vehicles 
+AT23E17 Vertical 3 3 0 0 3 
+8 VII/VIII Terra-mechanics and Off-
+Road Vehicle Engineering AT23E18 Vertical 3 3 0 0 3 
+--- PAGE 9 ---
+ 
+ 
+ 
+ 
+ 
+ 
+Sl. 
+No. SEM 
+VERTICAL 7/VEHICLE SYSTEMS AND OPERATIONS 
+  Course 
+Code Category Total 
+Hrs L T P C 
+1 V/VI Engine and Vehicle Management 
+Systems AT23G11 Vertical 3 3 0 0 3 
+2 V/VI Automotive Transmission AT23H12 Vertical 3 3 0 0 3 
+3 V/VI Two and Three Wheelers  AT23G12 Vertical 3 3 0 0 3 
+4 V/VI Road Vehicle Aerodynamics AT23H13 Vertical 3 3 0 0 3 
+5 VII/VIII Transport Management AT23G13 Vertical 3 3 0 0 3 
+6 VII/VIII Vehicle Body Engineering AT23G14 Vertical 3 3 0 0 3 
+7 VII/VIII Total Productive Maintenance AT23G15 Vertical 3 3 0 0 3 
+8 VII/VIII Vehicle maintenance  AT23G16 Vertical 3 3 0 0 3 
+9 VII/VIII Automotive Air-Conditioning AT23H15 Vertical 3 3 0 0 3 
+ 
+ 
+ 
+ 
+ 
+Sl. 
+No. SEM 
+VERTICAL 8/DIVERSIFIED COURSES GROUP 
+  Course 
+Code Category Total 
+Hrs L T P C 
+1 V/VI Numerical Methods AT23H11 Vertical 3 3 0 0 3 
+2 V/VI Control Engineering AE23G12 Vertical 3 3 0 0 3 
+3 VII/VIII Entrepreneurship Development ME23G16 Vertical 3 3 0 0 3 
+4 VII/VIII Lean Six Sigma AT23H14 Vertical 3 3 0 0 3 
+5 VII/VIII Operations Research ME23B17 Vertical 3 3 0 0 3 
+6 VII/VIII Supply chain and Logistics 
+Management ME23B18 Vertical 3 3 0 0 3 
+7 VII/VIII Total Quality Management ME23712 Vertical 3 3 0 0 3 
+8 VII/VIII Renewable Sources of Energy ME23F13 Vertical 3 3 0 0 3 
+Sl. 
+No. SEM 
+VERTICAL 6/ PRODUCT AND PROCESS DEVELOPMENT 
+  Course Code Category Total 
+Hrs L T P C 
+1 V/VI Automotive Product Design AT23F11 Vertical 3 3 0 0 3 
+2 V/VI Ergonomics in Automotive Design AT23F12 Vertical 3 3 0 0 3 
+3 V/VI Additive Manufacturing AT23F13 Vertical 3 3 0 0 3 
+4 VII/VIII New Product Development Process AT23F14 Vertical 3 3 0 0 3 
+5 VII/VIII 
+Automotive Product Life Cycle 
+Management AT23F15 Vertical 3 3 0 0 3 
+6 VII/VIII 
+Production of Automotive 
+Components AT23F16 Vertical 3 3 0 0 3 
+7 VII/VIII Instrumentation and Metrology  AT23F17 Vertical 3 3 0 0 3 
+8 VII/VIII Finite Element Analysis ME23613 Vertical 3 3 0 0 3 
+9 VII/VIII 
+Geometric Dimensioning and 
+Tolerancing ME23D13 Vertical 3 3 0 0 3 
+--- PAGE 10 ---
+9 VII/VIII Industrial Safety ME23G12 Vertical 3 3 0 0 3 
+ 
+--- PAGE 11 ---
+Open Elective Course Offered by Automobile Department 
+ 
+Sl. 
+No. 
+SEM Course 
+Code 
+Course Name Category Total 
+Hrs 
+L T P C 
+1 OE OAT2311 Automotive Systems OE 3 3 0 0 3 
+2 OE OAT2312 Elements of Electric and 
+Hybrid Vehicles 
+OE 3 3 0 0 3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEM I SEM 
+II 
+SEM 
+III 
+SEM 
+IV 
+SEM 
+V 
+SEM 
+VI 
+SEM 
+VII 
+SEM 
+VIII 
+Credits % 
+HS 3 2   3    8 5.0 
+BS 8 8 4      20 12.5 
+ES 5 11  5     21 13.1 
+PC 3  18 15 13 12 13  74 46.3 
+PE     3 3 3 6 15 9.4 
+OE     3 3   6 3.8 
+EEC    1 1 3 1 10 16 10.0 
+Credit 19 21 22 21 23 21 17 16 160 100.0 
+--- PAGE 12 ---
+SEMESTER – I 
+ 
+Course 
+Code 
+ 
+ 
+Title of course 
+ 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practical 
+Credits 
+HS 23111 Technical Communication I HS 2 0 0 2 
+Course Objective: 
+1. To facilitate students, develop their comprehension skills. 
+2. To enable students to improve their receptive skills 
+3. To equip learners with better vocabulary and enhance their writing skills 
+4. To aid students speak effectively in all kinds of communicative contexts. 
+5. To improve the learners’ basic proficiency in workplace communication 
+UNIT – I DEVELOPING COMPREHENSION SKILLS 6 Periods 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process 
+Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT II LISTENING AND EXTENDED READING 6 Periods 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages 
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT III FORMAL WRITING AND VERBAL ABILITY 6 Periods 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers 
+Vocabulary : Verbal Analogy / Cloze Exercise. 
+UNIT IV ENHANCING SPEAKING ABILITY 6 Periods 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu  
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives 
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT V LANGUAGE FOR WORKPLACE 6 Periods 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+Total Contact hours: 30 
+--- PAGE 13 ---
+SUGGESTED ACTIVITIES 
+● Ice breaker 
+● Just A Minute 
+● Ship wreck 
+● Hot seat 
+● Vocabulary building 
+● Chinese whispers 
+● Case study 
+SUGGESTED EVALUATION METHODS 
+• Assignment topics 
+• Quizzes 
+• Class Presentation/Discussion 
+• Continuous Assessment Tests 
+TEXT BOOKS: 
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback 
+2017. 
+2. Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. 
+Martin’s: Fifth Edition (June 28, 2004) 
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension 
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng 
+Goh, Cambridge University Press 
+ 
+ 
+ 
+ 
+ 
+ 
+COURSE OUTCOMES: 
+On completion of the course students will be able to : 
+1. Apply their comprehension skills and interpret different contents effortlessly 
+2. Read and comprehend various texts and audio visual contents 
+3. Infer data from graphs and charts and communicate it efficiently in varied contexts 
+4. Participate effectively in diverse speaking situations 
+5. To present, discuss and coordinate with their peers in workplace using their language skills 
+--- PAGE 14 ---
+ 
+ 
+ 
+ 
+PO/PS
+O 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS23111.1 - - - 1 - - - - - 3 - - - - - 
+HS23111.2 - - - 1 - - - - - 3 - - - - - 
+HS23111.3 - 1 - 1 - - - - - 3 - - - - - 
+HS23111.4 - - - 2 - - - - 1 3 - - - - - 
+HS23111.5 - - - 1 - - - - 1 3 - - - - - 
+Average - 1 - 1.2 - - - - 1 3 - - - - - 
+REFERENCE BOOKS/WEB RESOURCES: 
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With 
+Answers 2nd Edition by Michael McCarthy (Author), Felicity O'Dell (Author), John D. 
+Bunting (Contributor) 
+2. Reading Development and Difficulties by Kate Cain 
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by 
+Ann Handley (Author) 
+--- PAGE 15 ---
+COURSE OUTCOMES: 
+On completion of the course students will be able to : 
+1. Demonstrate the matrix techniques in solving the related problems in engineering and 
+technology. 
+2. Analyse and interpret data, and synthesize information to provide valid conclusions. 
+3. Interpret the problems in Engineering and Technology using the principles of mathematical 
+calculus. 
+4. Apply the analytical methods and numerical techniques to solve the related engineering 
+problems. 
+5. Evaluate multiple integrals to conduct investigations of complex problems 
+ 
+ 
+Course 
+Code 
+ 
+Title of course 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practical 
+Credits 
+MA23112 ALGEBRA AND CALCULUS BS 3 1 0 4 
+Common to I sem. B.E. - AERO, AUTO, MECH, MCT, R&A, CIVIL and B.Tech. - BT, FT & 
+CHEM 
+Course Objective: 
+1. To introduce the matrix techniques and to illustrate the nature of the matrix. 
+2. To address data and synthesis of the information to provide valid conclusions. 
+3. To explain techniques of calculus which are applied in the solutions of engineering problems. 
+4. To analyse special types of integrals by analytical methods and numerical techniques 
+5. To practice the techniques of Integration in finding area and volumes. 
+UNIT – I MATRICES 12 Periods 
+Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation 
+- Cayley-Hamilton Theorem(without proof) -Quadratic forms- Reduction to canonical form using 
+orthogonal transformation- Numerical computation of Eigen value using Power method. 
+UNIT II FUNCTIONS OF SEVERAL VARIABLES 12 Periods 
+Partial differentiation –Total derivative –Change of variables –Jacobians–Partial differentiation of 
+implicit functions– Taylor’s series for functions of two variables–Maxima and minima of functions of 
+two variables–Lagrange’s method of undetermined multipliers. 
+UNIT III INTEGRAL CALCULUS 12 Periods 
+Integral Calculus: Definite Integrals as a limit of sums - Applications of integration to area, volume - 
+Improper integrals: Beta and Gamma integrals - Numerical computation of integrals: Trapezoidal rule 
+- Gaussian Two point quadrature. 
+UNIT IV MULTIPLE INTEGRALS 12 Periods 
+Double integrals – Change of order of integration – Area enclosed by plane curves–Triple integrals– 
+Volume of solids– Numerical computation of double integrals: Trapezoidal rule. 
+UNIT V REGRESSION 12 Periods 
+Scatter diagram - Karl Pearson coefficient of correlation for raw data –Spearman rank correlation 
+coefficient - Lines of regression - Regression equation X on Y and Y on X- Curve fitting by Principle 
+of least squares - Fitting a straight line y = ax+b and a parabola y = ax2 + bx + c. 
+Total Contact hours: 60 
+--- PAGE 16 ---
+SUGGESTED EVALUATION METHODS 
+• Problem solving in Tutorial sessions 
+• Assignment problems 
+• Quizzes and class test 
+• Discussion in classroom 
+TEXT BOOKS: 
+1. Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd 
+Edition, 2014. 
+2. Gupta S.C. and Kapoor V.K.”Fundamentals of Mathematical Statistics”, Sultan and Sons 10th 
+Edition,2000. 
+3. T Veerarajan, Engineering Mathematics –I , Mc Graw Hill Education, 2018. 
+ 
+REFERENCE BOOKS/WEB RESOURCES: 
+1. Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New 
+Delhi, 2018. 
+2. T Veerarajan ,Fundamentals of Mathematical Statistics , yesdee publications, 2017. 
+3. Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th 
+Edition, New Delhi, 2016. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PO/PSO 
+CO  
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+MA23112.1 3 2 1 - - - - - - - 1 - 1 - - 
+MA23112.2 3 2 - 1 - - - - - - 1 1 1 - - 
+MA23112.3 2 2 - - - - - - - - 1 1 - - - 
+MA23112.4 3 3 1 - - - - - - - 1 1 1 - - 
+MA23112.5 2 2 - - - - - - - - - - - - - 
+Average 2.6 2.2 1 1 - - - - - - 1 1 1 - - 
+SUGGESTED ACTIVITIES 
+• Problem solving sessions 
+• Activity Based Learning 
+• Implementation of small module 
+--- PAGE 17 ---
+ 
+ 
+Course 
+Code 
+ 
+Title of course 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practical 
+Credits 
+GE23111 ENGINEERING GRAPHICS ES 2 0 4 4 
+Course Objective: 
+1. To understand the importance of the drawing in engineering applications 
+2. To develop graphic skills for communication of concepts, ideas and design of engineering 
+products 
+3. To expose them to existing national standards related to technical drawings. 
+4. To improve their visualization skills so that they can apply this skill in developing new products 
+5. To improve their technical communication skill in the form of communicative drawings. 
+CONCEPTS AND CONVENTIONS (Not for Examination) 1 Period 
+Importance of graphics in engineering applications–Use of drafting instruments– BIS conventions and 
+specifications–Size, layout and folding of drawing sheets – Lettering and dimensioning. Basic 
+Geometrical constructions. 
+UNIT – I PLANE CURVES AND PROJECTION OF POINTS 5+12 
+Periods 
+Curves used in engineering practices: Conics –Construction of ellipse, parabola and hyperbola by 
+eccentricity method – Cycloidal Curves –Construction of cycloid, epicycloid and hypocycloid – 
+Construction of involutes of square and circle–Drawing of tangents and normal to the above curves. 
+Principles of Projection and Projection of points. 
+UNIT II PROJECTION OF LINES AND PLANE SURFACES 6+12 
+Periods 
+Projection of straight lines (First angle projection) inclined to both the principal planes – Determination 
+of true lengths and true inclinations by rotating line method 
+Projection of planes (polygonal and circular surfaces) inclined to both the principal planes by rotating 
+object method. 
+UNIT III PROJECTION OF SOLIDS AND PROJECTION OF SECTIONED 
+SOLIDS 
+6+12 
+Periods 
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to one of 
+the principal planes by rotating object method. 
+Sectioning of solids in simple vertical position when the cutting plane is inclined to HP and 
+perpendicular to VP – obtaining true shape of the section. 
+Practicing three-dimensional modeling of simple objects by CAD software (Not for examination). 
+UNIT IV DEVELOPMENT OF SURFACE AND ISOMETRIC 
+PROJECTIONS 
+6+12 
+Periods 
+Development of lateral surfaces of simple and sectioned solids – Prisms, pyramids cylinders and cones. 
+Principles of isometric projection–isometric scale–Isometric projections of simple solids and truncated 
+solids - Prisms, pyramids, cylinders and cones 
+Model making of isometric projection of combination of solids as assignment (Not for End semester). 
+UNIT V FREE HAND SKETCHING AND PERSPECTIVE PROJECTIONS 6+12 
+Periods 
+Free Hand sketching: Freehand sketching of multiple views from pictorial views of objects - Freehand 
+sketching of pictorial views of object from multiple views 
+Perspective projection of simple solids-Prisms, pyramids, cylinder and cone by visual ray method. 
+Total Contact hours (L=30:P=60) : 90 
+--- PAGE 18 ---
+TEXT BOOKS: 
+1. Bhatt N.D. and Panchal V.M., “Engineering Drawing”, Charotar Publishing House, 
+50th Edition, 2010. 
+2. Natarajan K.V., “A text book of Engineering Graphics”, Dhanalakshmi Publishers, 
+Chennai, 2017. 
+REFERENCE BOOKS/WEB RESOURCES: 
+1. Varghese P I., “Engineering Graphics”, McGraw Hill Education (I) Pvt.Ltd., 2013. 
+2. V.B Sikka “Civil Engineering Drawing”, S.K Kataria & Sons, New Delhi. 
+3. Venugopal K. and PrabhuRaja V., “Engineering Graphics”, New Age 
+International (P)Limited, 2008. 
+4. Gopalakrishna K.R., “Engineering Drawing” (Vol. I&II combined), Subhas 
+Stores, Bangalore, 2017. 
+5. Basant Agarwal and Agarwal C.M., “Engineering Drawing”, McGraw Hill 
+Publishing Company Limited, New Delhi, 2018. 
+ 
+ 
+ 
+ 
+COURSE OUTCOMES: 
+After learning the course, the students should be able to: 
+1. To construct different plane curves and to comprehend the theory of projection 
+ 
+2. To draw the basic views related to projection of lines and planes 
+3. To draw the projection of simple solids and to draw the projection of development of surfaces 
+of Sectioned solids in simple vertical position 
+4. To draw the orthographic projection from pictorial objects and Isometric projections of simple 
+solids 
+5. To visualize Perspective view of simple solids. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CO/PO &PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+CO 1 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+CO 2 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+CO 3 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+CO 4 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+CO 5 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+Avg 3 2 2 1 - 1 - 2 2 2 - 2 1 - 2 
+--- PAGE 19 ---
+ 
+ 
+Course 
+Code 
+ 
+Title of course 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practica 
+Credits 
+AT23111 Production Technology – I PC 3 0 0 3 
+Course Objective: 
+ 
+1. To learn about various metal casting process principle and procedure involved 
+2. To rephrase the process principle and application of powder metallurgy and polymer processing 
+3. To learn about the process principle of various types of welding and its applications. 
+4. To understand the process principles of metal forming techniques. 
+5. To understand various sheet metal operations and processing techniques. 
+UNIT – I METAL CASTING PROCESSES 9 Periods 
+Sand Casting : Sand Mould – Type of patterns - Pattern Materials – Pattern allowances –Moulding sand 
+Properties and testing – Cores –Types and applications – Moulding machines– Types and applications; 
+Melting furnaces : Blast and Cupola Furnaces; Principle of special casting processes : Shell - 
+investment – Ceramic mould – Pressure die casting - Centrifugal Casting - Defects in Sand casting. 
+Design of patterns, moulds and cores; riser and gating design. 
+UNIT II POWDER METALLURGY AND POLYMER PROCESSING 9 Periods 
+Historical and modern developments in Powder Metallurgy. Advantages, limitations and applications of 
+Powder Metallurgy. Basic Steps for Powder Metallurgy. Powder Compaction Methods, Powder Forming 
+Methods and Sintering. 
+Types of plastics- Working principles and typical applications of - Injection Moulding- Compression 
+moulding- Extrusion- Thermoforming- Transfer moulding -Rotational Moulding and Film blow 
+moulding. 
+UNIT III JOINING PROCESSES 9 Periods 
+Operating principle, basic equipment, merits and applications of: Fusion welding processes: Gas welding 
+- Types – Flame characteristics; Manual metal arc welding – Gas Tungsten arc welding - Gas metal arc 
+welding – Submerged arc welding - Operating principle and applications of: Resistance welding - Plasma 
+arc welding – Thermit welding – Electron beam welding –Laser Beam welding, Friction welding and 
+Friction Stir Welding; Weld defects: types, causes and cure. Principles of brazing, soldering. 
+UNIT IV METAL FORMING PROCESSES 9 Periods 
+Hot working and cold working of metals – Forging processes – Open, impression and closed die forging 
+– forging operations. Rolling of metals– Types of Rolling – Flat strip rolling – shape rolling operations – 
+Defects in rolled parts. Principle of rod and wire drawing – Tube drawing – Principles of Extrusion – 
+Types – Hot and Cold extrusion. Load estimation for bulk (forging, rolling, extrusion and drawing). 
+UNIT V SHEET METAL PROCESSES 9 Periods 
+Sheet metal characteristics – shearing, bending and drawing operations – Stretch forming operations – 
+Formability of sheet metal – Test methods –special forming processes-Working principle and applications 
+– Hydro forming – Rubber pad forming – Metal spinning– Introduction of Explosive forming, magnetic 
+pulse forming, peen forming, Super plastic forming – Micro forming. 
+Total Contact hours: 45 
+--- PAGE 20 ---
+TEXT BOOKS: 
+1. P N Rao, “Manufacturing Technology: Vol. I”,4th Edition, McGraw hill Education, 2013. 
+2. 2013S SK HajraChoudhury and A K HajraChoudhury, Nirjhar Roy, “Elements of 
+WorkshopTechnology Volume I: Manufacturing Processes' ', Media Publishers and Promoters 
+Pvt. Ltd.,2008. 
+REFERENCE BOOKS/WEB RESOURCES: 
+1. Mikell P Groover, “Fundamentals of Modern Manufacturing Materials processes and 
+systems”Fourth Edition, Wiley Publication. 
+2. Roy. A. Lindberg, “Processes and Materials of Manufacture”, PHI / Pearson education, 2006 
+3. J. T. Black, Ronald A. Kohser, “DeGarmo's Materials and Processes in Manufacturing” 
+Twelfth Edition, John Wiley & Sons, 2017. 
+4. Steven R. Schmid and SeropeKalpakjian, “Manufacturing Engineering and Technology” 
+Seventh Edition, Pearson Education, 2014. 
+ 
+ 
+CO PO Mapping 
+CO/PO&PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+CO 1 3 2 2 - - - - - - 1 - 1 - - 1 
+CO 2 3 2 2 - - - - - - 1 - 1 - - 1 
+CO 3 3 2 2 - - - - - - 1 - 1 - - 1 
+CO 4 3 2 2 - - - - - - 1 - 1 - - 1 
+CO 5 3 2 2 - - - - - - 1 - 1 - - 1 
+Avg 3 2 2 - - - - - - 1 - 1 - - 1 
+COURSE OUTCOMES: 
+1. The students will be able to comprehend various metal casting process principle and procedure 
+2. The students will be able to demonstrate the working principle and application of powder 
+metallurgy and polymer processing. 
+3. The students will be to explain principle of various types of welding and its applications 
+4. The students will be able to illustrate the working principles of metal forming techniques. 
+5. The students will be able to demonstrate various sheet metal operations and processing 
+techniques. 
+--- PAGE 21 ---
+ 
+ 
+Course 
+Code 
+ 
+ 
+Title of course 
+ 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practical 
+Credits 
+GE23117 தமிழர் மரபு  1 0 0 1 
+அலகு I மமமொழி மற் றும ் இலக்கியம ்: 3 Periods 
+இந்திய மഥத ொழிக் குடுഥ ்பங்கள் - திதரொவிட மഥத ொழிகள் - தமிழ் ஒரு தமഥ ்மഥத ொழி - 
+தமிழ் தமவ்விலக்கியங்கள் - த ங்க இலக்கியத்தின் தഥய த த ொர்பற்ற தன்மഥ - த ங்க 
+இலக்கியத்தில் பகிர்தல் அறഥ ் - திருக்குறளில் மഥதலொண ் மഥக் கருத்Fக்கள் - தமிழிக் 
+தகொப்பியங்கள், தமிழகத்தில் தഥண மதபௌத்த தഥயங்களின் ததொக்கഥ ் - பக்தி 
+இலக்கியഥ ், ஆழ்தவொர்கள் ഥற்றுഥ ் தநொயன்ഥத ொர்கள் - சிற்றிலக்கியங்கள் - தமிழில் 
+நவீன இலக்கியத்தின் வளர்த  ்சி - தமிழ் இலக்கிய வளர்த  ்சியில் தபொரதிதயொர் ഥற்றுഥ ் 
+தபொரதிததொத ன் ஆகிமதயொரின் பங்களிப்பு. 
+அலகு II மரபு - ம ொறற ஓவியங ் கள ் முதல ் நவீன ஓவியங ் கள ் வறர - 
+சிற் க்  கறல: 3 Periods 
+நடுகல் முதல் நவீன சிற்பங்கள் வமர - ஐഥ ்மதபொன் சிமலகள் - பழங்குடியினர் ഥற்றுഥ ் 
+அவர்கள் ததயொரிக்குഥ ் மகவிமனப் மதபொருட்கள், மதபொഥ ்மഥகள் - மதர் தமய்யுഥ ் கமல - 
+சுடுഥண் சிற்பங்கள் - தநொட்டுப்புறத் மதய்வங்கள் - குഥரிமுமனயில் திருவள்ளுவர் சிமல 
+- இதமக் கருவிகள் - மிருதங்கഥ ், பமற, வீமண, தயொழ், தநொதஸ ் வரഥ ் - தமிழர்களின் 
+த மூக மதபொருதளொததொர தவொழ்வில் மதகொவில்களின் பங்கு. 
+அலகு III மநொட்டு ்புறக் கறலகள ் மற ்றும ் வீர விறளமயொட்டுகள ்: 3 Periods 
+மதருக்கூத்F, கரதகொட்டഥ ், வில்லுப்தபொட்டு, கணிதயொன் கூத்F, ஒயிதலொட்டഥ ், மததொல்தபொமவக் 
+கூத்F, சிலഥ ்தபொட்டഥ ், வளரி, புலிதயொட்டഥ ், தமிழர்களின் விமளதயொட்டுகள். 
+அலகு IV தமிழர்களின ் திறறக் கமகொட்ம ொடுகள ்: 3 Periods 
+தமிழகத்தின் ததொவரங்களுഥ ், விலங்குகளுഥ ் - மததொல்தகொப்பியഥ ் ഥற்றுഥ ்
+ த ங்க இலக்கியத்தில் அகഥ ் ഥற்றுഥ ் புறக் மதகொட்தபொடுகள் - தமிழர்கள் 
+மதபொற்றிய அறக்மதகொட்தபொடு 
+- த ங்கதகொலத்தில் தமிழத்தில் எழுத்தறிவுഥ ், கல்வியுഥ ் - த ங்கதகொல நகரங்களுഥ ் 
+Fமற முகங்களுഥ ் - த ங்கதகொலத்தில் ஏற்றுഥதி ഥற்றுഥ ் இறக்குഥதி - கடல்கடந்த 
+தநொடுகளில் 
+ததமொழர்களின் மவற்றி. 
+அலகு V இந்திய கதசிய இயக்கம ் மற ் றும ் இந்திய ற ்ம ொட்டிற ் குத் 
+தமிழர்களின ்  ங ் களி ்பு: 3 Periods 
+இந்திய விடுதமலப்மதபொரில் தமிழர்களின் பங்கு - இந்திதயொவின் பிறப்பகுதிகளில் தமிழ்ப் 
+பண ் தபொட்டின் ததொக்கഥ ் - சுயഥரிதயொமத இயக்கഥ ் - இந்திய ഥருத்Fவத்தில், சித்த 
+ഥருத்Fவத்தின்  பங்கு  -  கல்மவட்டுகள்,  மகமயழுத்Fப்படிகள்  -  தமிழ்ப்  
+புத்தகங்களின் 
+தஅ்சு வரதலொறு. 
+Total Contact hours: 15 
+--- PAGE 22 ---
+TEXT-CUM-REFERENCE BOOKS: 
+1. தமிழக வரதலொறு - ഥக்களுഥ ் பண ் தபொடுഥ ் - மக.மக. பிள்மள (மவளியீடு: 
+தமிழ்தநொடு தபொடநூல் ഥற்றுഥ ் கல்வியியல் பணிகள் கழகഥ ்). 
+2. கணினித் தமிழ் - முமனவர் இல. சுந்தரഥ ். (விகடன் பிரசுரഥ ்). 
+3. கீழடி - மவமக நதிக்கமரயில் த ங்கதகொல நகர தநொகரிகഥ ் (மததொல்லியல் Fமற 
+மவளியீடு) 
+4. மதபொருமந - ஆற்றங்கமர தநொகரிகഥ ். (மததொல்லியல் Fமற மவளியீடு) 
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in 
+print) 
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: 
+International Institute of Tamil Studies. 
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) 
+(Published by: International Institute of Tamil Studies). 
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: 
+International Institute of Tamil Studies). 
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: 
+Department of archaeology & Tamil Nadu Text Book and Educational Services Corporation, 
+Tamil Nadu) 
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) 
+(Published by: The Author) 
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text 
+Book and Educational Services Corporation, Tamil Nadu) 
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference 
+Book. 
+--- PAGE 23 ---
+ 
+Course 
+Code 
+ 
+Title of course 
+ 
+Type of Course 
+Lecture 
+Tutorial 
+Practical 
+Credits 
+ 
+PH23131 
+PHYSICS OF MATERIALS 
+Common to I sem. B.E. - Aero, Auto, Civil, 
+Mech, MCT and R&A 
+ 
+BS 
+ 
+3 
+ 
+0 
+ 
+2 
+ 
+4 
+Course Objective: 
+1. To enhance the fundamental knowledge of elasticity and its applications relevant to engineering 
+streams. 
+2. To become proficient in crystal growth and crystal systems 
+3. To introduce the essential of phase transformation in materials. 
+4. To impart knowledge on the structure, properties, treatment, testing and applications of metals 
+and alloys 
+5. To familiarize students with thermal properties and applications. 
+UNIT – I PROPERTIES OF MATTER 9 Periods 
+Elasticity–Hooke’s law -stress–strain-modulus of elasticity -stress-strain diagram -Poisson’s ratio - 
+rigidity modulus -twisting couple on a cylinder -moment of inertia - torsional pendulum method. 
+Bending of beams -bending moment-cantilever depression-theory and experiment - Young’s modulus 
+determination–uniform and non-uniform bending-I-shape girders. Viscosity-flow of motion-Reynolds 
+number. 
+UNIT II THERMAL PHYSICS 9 Periods 
+Transfer of heat energy – thermal expansion of solids and liquids – expansion joints - bimetallic strips 
+- thermal conduction, convection and radiation –rectilinear heat flow – thermal conductivity - Forbe’s 
+and Lee’s disc method: theory and experiment - conduction through compound media (series and 
+parallel) – thermal insulation – applications: heat exchangers, refrigerators, ovens and solar water 
+heaters. 
+UNIT III PHASE DIAGRAMS 9 Periods 
+Solid solutions - Hume-Rothery’s rules –Gibb’s phase rule – unary phase diagram- binary phase 
+diagrams -isomorphous systems - tie-line and lever rule - eutectic, eutectoid, peritectic, peritectoid, 
+monotectic and syntectic systems - formation of microstructures-homogeneous and non-homogenous 
+cooling – nucleation (Qualitative)– iron-carbon phase diagram - eutectoid steel – hypo-eutectoid and 
+hyper-eutectoid steel – diffusion - Fick’s laws – T-T-T diagrams. 
+UNIT IV CRYSTAL PHYSICS 9 Periods 
+Basis – lattices – unit cell-crystal systems – Bravais lattices –number of atoms, atomic radius, co- 
+ordination number and packing fraction - SC, BCC, FCC, HCP lattices and diamond structure - 
+polymorphism and allotropy-graphite structure - Miller indices – determination of d-space-crystal 
+growth techniques-solution growth –melt growth- Bridgmann and Czochralski - crystal defects. 
+UNIT V ADVANCED MATERIALS & TESTING 9 Periods 
+Metallic glasses – preparation, properties and applications - Composites – types and properties - Shape 
+memory alloys – properties and applications - Nano-materials – top down and bottom up approaches – 
+sol-gel method -pulsed laser deposition -ball milling - properties-applications - Tensile strength – 
+Hardness – Fatigue - Impact strength – Creep - Fracture – types of fracture. 
+Total Contact hours: 45 
+--- PAGE 24 ---
+COURSE OUTCOMES: 
+On completion of the course students will be able to: 
+1. Apply the elastic nature of materials and determine the elastic moduli of different materials. 
+2. Apply the basic knowledge of crystal structure in solids. 
+3. Analyse and measure the properties of alloys. 
+4. Analyse various material testing methods and use them in suitable applications. 
+5. Understand the concepts of heat transfer in various applications. 
+Suggested Activities : 
+ 
+1.  Problem solving sessions 
+Suggested Evaluation Methods : 
+1. Quizzes 
+2. Class Presentation / Discussion 
+ PHYSICS OF MATERIALS 
+ List of Experiments 
+1. Determination of Young’s modulus of given material by non-uniform bending method. 
+2. Determination of moment of inertia of a disc and rigidity modulus of a given wire using 
+Torsional pendulum. 
+3. Determination of Young’s modulus of given beam by cantilever method. 
+4. Determination of viscosity of the given liquid using Poiseuille’s method. 
+5. Determination of Thermal conductivity of a bad conductor – Lee’s Disc method. 
+6. Determination of Velocity of ultrasound and compressibility of given liquid – Ultrasonic 
+interferometer. 
+7. Determination of the wavelength of Laser and particle size of given powder. 
+8. Determination of the Hysteresis loss of ferromagnetic material by B-H curve experiment. 
+9. Find the thickness of a given thin wire – Air wedge method. 
+10. Study the characteristics of solar cell parameters. 
+Total: 30 Periods 
+ 
+ 
+ 
+ 
+--- PAGE 25 ---
+ 
+ 
+List of Equipment Available 
+(Common to B.E. Aero, Auto, Civil, Mechanical, Mechatronics Engineering and 
+R&A) 
+ 
+S. No Name of the equipment Quantity 
+Required 
+Quantity 
+Available Deficiency 
+1 
+Young’s modulus by Non - Uniform bending 
+method 
+Travelling Microscopes, Meter scale etc., 
+6 13 - 
+2 Rigidity Modulus - Torsional Pendulum 
+Setup 6 19 - 
+3 Velocity of sound and compressibility of 
+liquid – Ultrasonic Interferometer 6 14 - 
+4 
+Wavelength of Laser and Characteristics - 
+Laser source 
+And grating plate 
+6 15 - 
+5 B-H curve Setup and CRO 6 7 - 
+6 Thermal conductivity of bad conductor- 
+Lee’s Disc setup 6 16 - 
+7 LCR circuit kit 6 7 - 
+8 Thickness of a thin wire-Air wedge method – 
+Travelling microscope 6 13 - 
+9 Solar cell parameters setup 6 8 - 
+10 Poiseuille’s method set up 6 10 - 
+TEXT BOOKS: 
+1. Bhattacharya, D.K. &Poonam, T. “Engineering Physics”.Oxford University Press, 2018. 
+2. Gaur, R.K. & Gupta, S.L. “Engineering Physics”.DhanpatRai Publishers, 2018. 
+3. Raghavan, V. “Physical Metallurgy: Principles and Practice”. PHI Learning, 2019. 
+ 
+REFERENCE BOOKS/WEB RESOURCES: 
+1. Balasubramaniam, R. “Callister's Materials Science and Engineering”.Wiley India Pvt. Ltd., 
+2017. 
+2. Resnick, R., Halliday, D., & Walker, J. “Principles of Physics”, Wiley India Pvt., 2018. 
+3. Raghavan, V. “Materials Science and Engineering: A First course”. PHI Learning, 2019. 
+4. https://nptel.ac.in/courses/113104068 
+5. https://archive.nptel.ac.in/courses/115/105/115105099/ 

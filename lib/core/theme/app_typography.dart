@@ -86,12 +86,15 @@ class AppTypography {
   static TextStyle get headlineMedium => textTheme.headlineMedium!;
   static TextStyle get headlineSmall => textTheme.headlineSmall!;
   static TextStyle get titleLarge => textTheme.titleLarge!;
-  static TextStyle get titleMedium => textTheme.headlineSmall!; // fallback or mapping
-  static TextStyle get titleSmall => textTheme.labelLarge!; // fallback or mapping
+  static TextStyle get titleMedium =>
+      textTheme.headlineSmall!; // fallback or mapping
+  static TextStyle get titleSmall =>
+      textTheme.labelLarge!; // fallback or mapping
   static TextStyle get bodyLarge => textTheme.bodyLarge!;
   static TextStyle get bodyMedium => textTheme.bodyMedium!;
   static TextStyle get bodySmall => textTheme.bodySmall!;
   static TextStyle get labelLarge => textTheme.labelLarge!;
   static TextStyle get labelMedium => textTheme.labelMedium!;
-  static TextStyle get labelSmall => textTheme.labelMedium!; // fallback or mapping
+  static TextStyle get labelSmall =>
+      textTheme.labelMedium!; // fallback or mapping
 }

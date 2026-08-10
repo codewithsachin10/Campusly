@@ -1,0 +1,1379 @@
+
+--- PAGE 1 ---
+ 
+1 
+ 
+ 
+ 
+ 
+RAJALAKSHMI ENGINEERING COLLEGE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CURRICULUM AND SYLLABUS 
+B.Tech. COMPUTER SCIENCE AND BUSINESS SYSTEMS  
+REGULATION 2023 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 2 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 2  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+VISION 
+RAJALAKSHMI ENGINEERING COLLEGE 
+CURRICULUM AND SYLLABUS 
+B.Tech. COMPUTER SCIENCE AND BUSINESS SYSTEMS 
+REGULATION 2023
+ 
+ To promote highly ethical and innovative computer professionals through excellence in teaching, training  and research.  
+ 
+MISSION  
+ 
+● To produce globally competent professionals, motivated to learn the emerging technologies and to be  innovative in   
+solving real world problems.  
+● To promote research activities amongst the students and the members of faculty that could benefit  the society.  
+● To impart moral and ethical values in their profession. 
+ 
+PROGRAM EDUCATIONAL OBJECTIVES (PEOs) 
+  
+1. To equip students with state-of-the-art contemporary technology in computer science and basic engineering science. 
+2. To expose students to the business principles aligned with their domain. 
+3. To educate on the service orientation principles for various business disciplines. 
+4. To encourage innovative research through creative thinking and critical analytical ability. 
+5. To inculcate ethical and moral values in the individuals benefitting the society. 
+ 
+PROGRAM OUTCOMES (POs) 
+ 
+A graduate of the Computer Science and Business Systems program will demonstrate:  
+ 
+PO1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and 
+an engineering specialization to the solution of complex engineering problems.  
+PO2: Problem analysis: Identify, formulate, review research literature, and analyze complex engineering 
+problems reaching substantiated conclusions  using first principles of mathematics, natural sciences, and 
+engineering sciences. 
+PO3: Design/development of solutions: Design solutions for complex engineering problems and design 
+system components or processes that meet the specified needs with appropr iate consideration for the public 
+health and safety, and the cultural, societal, and environmental considerations. 
+
+--- PAGE 3 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 3  
+ 
+ 
+PO4: Conduct investigations of complex problems: Use research -based knowledge and research methods including 
+design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.  
+ 
+PO5: Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT 
+tools including prediction and modelling to complex engineering activities with an understanding of the limitations. 
+PO6: The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, 
+legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice. 
+ 
+PO7: Environment and sustainability: Understand the impact of the professional engineering solutions in societal and 
+environmental contexts, and demonstrate the knowledge of, and need for sustainable development. 
+ 
+PO8: Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering 
+practice. 
+ 
+PO9: Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, and 
+in multidisciplinary settings. 
+PO10: Communication: Communicate effectively on complex engineering activities with the engineering community 
+and with society at large, such as, being able to comprehend and write effective reports and d esign documentation, make 
+effective presentations, and give and receive clear instructions. 
+PO11: Project management and finance: Demonstrate knowledge and understanding of the engineering and 
+management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in 
+multidisciplinary environments. 
+PO12: Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent and 
+life-long learning in the broadest context of technological change. 
+ 
+ 
+PROGRAM SPECIFIC OUTCOMES (PSOs) 
+ 
+A graduate of the Computer Science and Business Systems program will demonstrate:  
+ 
+1. The students graduating will have sound knowledge in Computer Science with equal appreciation of humanities, 
+management sciences and human values. 
+2. The students will explore emerging topics such as Analytics, Machine Learning, Cloud Computing, and Internet of 
+Things and apply the knowledge to design and develop solutions to societal needs. 
+3. The students will be industry ready with required business skills in service orientation. 
+--- PAGE 4 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 4  
+ 
+CURRICULUM 
+ 
+ 
+ 
+ 
+SEMESTER I 
+B. Tech COMPUTER SCIENCE AND BUSINESS SYSTEMS 
+Regulation 2023 | Total Credits: 165 
+ 
+CHOICE BASED CREDIT SYSTEM 
+Sl.No. 
+COURSE 
+CODE COURSE TITLE CATEGORY 
+CONTACT 
+PERIODS    L T P C 
+THEORY COURSES 
+1. HS23112 Business Communication and Value 
+Science – I  
+HS  2 2 0 0 2 
+2. MA23115 Discrete Mathematics  BS 4 3 1 0 4 
+3. MA23114 Probability and Calculus BS 4 3 1 0 4 
+4. GE23117 
+ தமிழர் மரபு / Heritage of 
+Tamils HS 1 1 0 0 1 
+ LAB ORIENTED THEORY COURSES 
+5. CB23131 Fundamentals of Computer 
+Science PC 6 2 0 4 4 
+6. EE23131 
+Principles of Electrical 
+Engineering ES 4 2 0 2 3 
+7. PH23133   Physics for Computing Science BS 5 3 0 2 4 
+  MANDATORY COURSES 
+ 
+8. MC23111 
+ 
+Indian Constitution and Freedom 
+Movement  
+ 
+MC 
+ 
+3 
+ 
+3 
+ 
+   0 
+ 
+0 
+ 
+0 
+TOTAL 29 19 2 8 22 
+ 
+SEMESTER II 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1. MA23211 Linear Algebra BS 4 3 1 0 4 
+2. BA23217 Fundamentals of Economics MS 2 2 0 0 2 
+3. GE23217 தமிழரும ் ததொழில ் நுட்பமும ் / Tamils 
+and Technology 
+HS 1 1 0 0 1 
+ LAB ORIENTED THEORY COURSES 
+4. MA23231 Statistical Modeling BS 5 3 0 2 4 
+5. CB23231 
+ 
+Data Structures and Algorithms PC 7 2 1 4 5 
+6. EC23242 Principles of Electronics ES 4 2 0 2 3 
+  LABORATORY COURSES  
+7. CS23221 Python Programming Lab PC 4 0 0 4 2 
+8. HS23223 Business Communication 
+and Value Science – II 
+HS 4 0 0 4 2 
+TOTAL 31 13 2 16 23 
+--- PAGE 5 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 5  
+ 
+SEMESTER III 
+ 
+ 
+SEMESTER IV 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1. CB23411 
+Introduction to Innovation, IP 
+Management and 
+Entrepreneurship 
+EEC 
+3 3 0 0 3 
+2. BA23412 Fundamentals of Management MS 2 2 0 0 2 
+LAB ORIENTED THEORY COURSES 
+3. CB23431 Operating System Concepts PC 5 3 0 2 4 
+4. CB23432 Software Design with UML PC 4 2 0 2 3 
+5. CB23433 Analysis of Algorithms and 
+Design PC 5 2 1 2 4 
+6. MA23437 Optimization Techniques BS 5 3 0 2 4 
+LABORATORY COURSES 
+7. HS23421 Business Communication and 
+Value Science – III HS 4 0 0 4 2 
+EMPLOYABILITY ENHANCEMENT COURSES 
+8. GE23421 Soft Skills-I EEC 2 0 0 2 1 
+TOTAL 30 15 1 14 23 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1. CB23311 Formal Language and Automata 
+Theory 
+PC 3 3 0 0 3 
+2. CB23312 Computer Organization 
+and Architecture 
+PC 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES  
+3. CB23331 Computational Statistics PC 5 3 0 2 4 
+4. CB23332 Software Engineering PC 5 3 0 2 4 
+5. CB23333 Database Technology PC 5 3 0 2 4 
+6. CS23333 Object Oriented Programming Using 
+Java PC 7 1 0 6 4 
+MANDATORY COURSES 
+7. MC23313 
+Environmental Sciences  MC 3 3 0 0 0 
+TOTAL 31 19 0 12 22 
+--- PAGE 6 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 6  
+ 
+SEMESTER V 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1. BA23511 Principles of Financial 
+Management MS 2 2 0 0 2 
+2.  Open Elective I OE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES 
+3. CB23531 Computer Network Technology PC 5 3 0 2 4 
+4. CB23532 Artificial Intelligence PC 5 3 0 2 4 
+5.  Professional Elective I PE 5 2 1 2 4 
+LABORATORY COURSE 
+6. GE23627 Design Thinking and Innovation  PC 4 0 0 4 2 
+EMPLOYABILITY ENHANCEMENT COURSES 
+ 7. GE23521 Soft Skills- II EEC 2 0 0 2 1 
+TOTAL 26 13 1 12 20 
+ 
+SEMESTER VI 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1. BA23611 Financial and Cost Accounting MS 2 2 0 0 2 
+2. 
+ 
+BA23612 Business Strategy MS 2 2 0 0 2 
+LAB ORIENTED THEORY COURSES 
+3. CB23631 Machine Learning PC 5 2 1 2 4 
+4. CB23632 Cloud, Micro services and 
+Application PC 
+ 
+5 
+ 
+2 
+ 
+1 
+ 
+2 
+ 
+ 4 
+5. CB23633 Usability Design of Software 
+Applications 
+PC 4 2 0 2 3 
+6.  Professional Elective II PE 3 3 0 0 3 
+LABORATORY COURSES 
+7. HS23621 Business Communication 
+and Value Science – IV 
+HS 4 0 0 4 2 
+EMPLOYABILITY ENHANCEMENT COURSES 
+8. GE23621 Problem Solving Techniques EEC 2 0 0 2 1 
+9. CB23622 Internship EEC 6 0 0 6 3 
+                                                                                                                TOTAL 33 13 2 18 24 
+--- PAGE 7 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 7  
+ 
+ 
+SEMESTER VII 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSES 
+1.  Open Elective – II OE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES  
+2. CB23731 Data Visualization Techniques PC 4 2 0 2 3 
+3. CB23732 IT Project Management PC 4 2 0 2 3 
+4. 
+ 
+Professional Elective III 
+ 
+PE 5 3 0 2 4 
+5.  Professional Elective IV PE 3 3 0 0 3 
+LABORATORY COURSES 
+6. CB23721 Project Evaluation I EEC 4 0 0 4 2 
+                                                                                                           TOTAL 23 13 0 10 18 
+ 
+ 
+SEMESTER VIII 
+Sl.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+LAB ORIENTED THEORY COURSES 
+1.  Professional Elective V PE 5 3 0 2 4 
+2.  Professional Elective VI PE 3 3 0 0 3 
+LABORATORY COURSES 
+3. CB23822 Project Evaluation II EEC 12 0 0 12 6 
+TOTAL 20 6 0 14 13 
+ 
+TOTAL NO. OF CREDITS: 165 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 8 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 8  
+ 
+PROFESSIONAL ELECTIVES 
+Business Analytics 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+1.  MCB2301 Fundamentals of Business Statistics PE 3 3 0 0 3 
+2.  MCB2302 Digital Marketing and Web Analytics PE 3 3 0 0 3 
+3.  MCB2303 Operation and Supply Chain Analytics PE 3 3 0 0 3 
+4.  CB23A11 Enterprise Resource planning and 
+Development PE 3 2 0 2 3 
+5.  MCB2341 Data Science for Business Analytics PE 5 3 0 2 4 
+6.  MCB2342 Programming for Data Analytics PE 6 2 0 4 4 
+ 
+Business Systems 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+7.  BA23B11 Behavioral Economics PE 3 3 0 0 3 
+8.  BA23B31 Computational Finance and Modeling PE 3 3 0 0 3 
+9.  BA23B12 Industrial Psychology PE 3 3 0 0 3 
+10.  BA23B13 Advance Finance PE 3 3 0 0 3 
+11.  BA23B14 Essentials of Human Resources Management PE 3 3 0 0 3 
+12.  BA23B15 Marketing Research and Marketing 
+Management PE 3 3 0 0 3 
+13.  BA23P12    Fintech and Blockchain Applications in 
+  Finance  PE 3 3 0 0 3 
+14.  BA23B16 
+Services Science and Service Operational 
+Management 
+PE 3 3 0 0 3 
+ 
+AI Systems 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+15.  CB23C11 Cognitive Science and Analytics PE   3 3 0 0 3 
+16.  CB23C31 
+Image Processing and Pattern 
+Recognition PE  4 2 0 2 3 
+17.  CB23C12 Generative Artificial Intelligence PE   3 3 0 0 3 
+18.  CB23C32 Conversational Systems PE 4 2 0 2 3 
+19.  CB23C33 Algorithmic Business Thinking PE 3 3 0 0 3 
+20.  AI23632 Natural Language Processing PE 5 3 0 2 4 
+21.  IT23531 Computer Vision  PE 5 3 0 2 4 
+--- PAGE 9 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 9  
+ 
+ 
+Data Analytics 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+22.  CB23D31 Data Mining and Analytics PE            5 3 0 2 4 
+23.  CB23D32 Decision Support Systems PE            5 3 0 2 4 
+24.   
+CB23D33 
+Advanced Social, Text and 
+Media Analytics PE 5 3 0 2 4 
+25.  AI23531 Deep Learning  PE 5 3 0 2 4 
+26.  AI23A36 Big Data Analytics  
+ PE 5 2 0 2 3 
+27.  AD23A35 Healthcare Analytics   PE 4 2 0 2 3 
+ 
+Cloud, IoT and Security 
+S.No. COURSE CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+28.  CB23E31 Information Security  PE 5 3 0 2 4 
+29.  CB23E32 Fundamentals of IoT PE 5 2 1 2 4 
+30.  CB23E33 Mobile Computing PE 4 2 0 2 3 
+31.  CB23E34 Cyber security for Business PE 4 2 0 2 3 
+32.  CB23E35 Enterprise Systems PE 4 2 0 2 3 
+33.  CR23A34 Security and Privacy in cloud 
+ 
+PE 4 2 0 2 3 
+34.  CB23E36 Cryptology PE 5 2 1 2 4 
+ 
+Programming and Testing 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+35.  CB23F31 Modern Web Applications PE            4 2 0 2 3 
+36.  CB23F32 Scripting Languages PE 4 2 0 2 3 
+37.  IT23B31 C# and .Net programming PE 4 2 0 2 3 
+38.  IT23C31 Software Testing  PE 4 2 0 2 3 
+39.  IT23B33 DevOps  PE 4 2 0 2 3 
+40.  CB23F33 IT Workshop PE 4 2 0 2 3 
+41.  CB23F34 Compiler Design Techniques PE 5 2 1 2 4 
+42.  CB23F35 Low-Code Application Development using  
+Zoho Creator PE 4 2 0 2 3 
+--- PAGE 10 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 10  
+ 
+ 
+Emerging Technologies 
+S.No. COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+43.  CB23G11 Quantum Computation and Quantum 
+Information PE            3 3 0 0 3 
+44.  CB23G31 Robotics and Embedded Systems PE 4 2 0 2 3 
+45.  CS23A32 Robotic Process Automation  PE 5 1 0 4 3 
+46.  CR23A33 Cryptocurrency and Blockchain 
+Technologies  PE 4 2 0 2 3 
+47.  CS23B31 Introduction to Metaverse PE 4 2 0 2 3 
+48.  CS23A39 Game Development PE 4 2 0 2 3 
+ 
+OPEN ELECTIVE 
+S. 
+No 
+Course 
+Code Course Title Category Contact 
+Periods L T P C 
+1 
+OCB 
+2331 
+No-Code Application Development 
+using Zoho Creator 
+OE 4 2 0 2 3 
+ 
+Summary: 
+ 
+ 
+ 
+B.Tech Computer Science and Business Systems 
+ 
+S.No. 
+ 
+Category 
+Credits per semester Total Credits 
+1 2 3 4 5 6 7 8  
+1. HS 3 3  2  2   10 
+2. BS 12 8  4     24 
+3. ES 3 3       6 
+4. PC 4 7 22 11 10 11 6  71 
+5. MS  2  2 2 4 0  10 
+6. PE     4 3 7 7 21 
+7. OE     3  3  6 
+8. EEC    4 1 4 2 6 17 
+9. Mandatory 
+Course 0 0 0 0 0 0 0 0 0 
+Total 22 23 22 23 20 24 18 13 165 
+--- PAGE 11 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 11  
+ 
+I SEMESTER 
+ 
+Course Code Course Title Category L T P C 
+ 
+HS23112 
+BUSINESS COMMUNICATION AND VALUE SCIENCE – I 
+For I Semester B.Tech. - CSBS 
+ 
+HS 
+ 
+2 
+ 
+0 
+ 
+0 
+ 
+2 
+ 
+Objectives: 
+ To enable learners, understand what life skills are and their importance in leading a happy life.  
+ To equip students with better grammar and vocabulary skills 
+ To improve the learners’ basic proficiency in workplace communication 
+ To aid students write effectively in all kinds of communicative contexts. 
+ Introduce them to key concepts of values, life skills and business communication.  
+ 
+UNIT-I HUMAN VALUES  6 
+Values – Self exploration – Values of individuals: Presentation on favorite personality and the skills and values they demonstrate 
+– interviewing a maid, watchman, sweeper, cab driver, beggar and narrate what you think are the values that drive them – Writing: 
+Good and bad writing - Common errors, punctuation rules, use of words - newspaper report on an IPL match – record conversation 
+between a celebrity and an interviewer. 
+UNIT-II GRAMMAR AND LANGUAGE DEVELOPMENT 6 
+Parts of Speech  - Applications of tenses - Sentence formation, sentence structure, show sequence - Voices – Questioning – 
+Vocabulary: Word formation: - Synonyms, antonyms, abbreviations - compound words –single word substitution. 
+UNIT-III ESSENTIALS OF TECHNICAL COMMUNICATION  6 
+Email - : Formal and informal emails - words from General Service List (GSL) by West, Academic word list (AWL) - technical 
+specific terms related to the field of technology - phrases,  idioms, significant abbreviations - formal business vocabulary.  
+UNIT-IV BASIC WRITING SKILLS  6 
+Reading articles – Summary writing, story writing - writing your comprehensive CV - Create a podcast on a topic - Promote a play 
+through a social media and gather audience 
+UNIT-V APPLICATION OF LIFE SKILLS 6 
+Life Skills: Movie based learning – identifying skills and values - critical life skills - appreciation of diversity 
+ Total Contact Hours : 30 
+ 
+Course Outcomes:  
+On completion of the course, students will be able to  
+ Recognize the need for life skills and values 
+ Frame grammatically correct sentences with appropriate vocabulary 
+ Communicate proficiently at the workplace. 
+ Write efficiently in various communicative contexts. 
+  Understand and follow the basic values and dogmas in life 
+ 
+ 
+SUGGESTED ACTIVITIES  
+● Ice breaker 
+● Story telling 
+● Just a Minute (JAM) 
+● Green Screen 
+● Vocabulary building 
+●  Case study 
+--- PAGE 12 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 12  
+ 
+SUGGESTED EVALUATION METHODS  
+● Assignment topics 
+● Quizzes 
+● Class Presentation/Discussion 
+● Continuous Assessment Tests 
+ 
+Reference Books / Web links: 
+1 Alan Mc’Carthy and O’dell , “English vocabulary in use”,Fourth Edition, Cambridge University Press, 2017. 
+2 APAART: Speak Well 1 (English language and communication) 
+3 APAART: Speak Well 2 (Soft Skills)  
+4 Dr. Saroj Hiremath, “Business Communication”, Fourth Edition, NIRALI PRAKASHAN Publication,2017   
+Web References 
+1 Train your mind to perform under pressure- Simon sinek  
+https://curiosity.com/videos/simon-sinek-on-training-your-mind-to-perform-under-pressure-capture-your-flag/ 
+2 Brilliant way one CEO rallied his team in the middle of layoffs  
+https://www.inc.com/video/simon-sinek-explains-why-you-should-put-people-before-numbers.html  
+3 Will Smith's Top Ten rules for successhttps://www.youtube.com/watch?v=bBsT9omTeh0 
+Online Resources 
+1 https://www.coursera.org/learn/learning-how-to-learn 
+2 https://www.coursera.org/specializations/effective-business-communication 
+ 
+ 
+CO- PO – PSO matrices of course 
+                                                          1: Slight (Low) 
+                                              2: Moderate (Medium) 
+                                                          3: Substantial (High) If there is no correlation, put “-” 
+ PO/PSO 
+CO 
+P
+O
+1 
+PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS23112. 
+1 
+- - 1 - 1 3 1 3 3 3 2 - 3 - 2 
+HS23112.  
+2 
+- - 1 - 1 1 1 2 3 3 1 - 3 - 1 
+HS23112.  
+3 
+- - 2 2 2 2 1 1 3 3 1 3 2 - 3 
+HS23112.  
+4 
+- - - 1 - - 1 - 2 3 1 1 2 - 2 
+HS23112.  
+5 
+- - - 2 - 2 1 2 2 3 1 1 1 - 3 
+Average - - 1.33 1.66 1.33 2.0 1 2.0 2.6 3 1.2 1.66 2.2 - 2.2 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 13 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 13  
+ 
+Course Code Course Title Category L T P C 
+MA23115 DISCRETE MATHEMATICS BS 3 1 0 4 
+For I sem. B.Tech. – CSBS 
+ 
+Objectives: 
+● To extend student’s Logical and Mathematical maturity and ability to deal with abstraction.   
+● To give an understanding of relations and functions and to determine their properties. 
+● To Model problems in Computer Science using graphs and trees. 
+● To provide the basic principles of sets and operations in sets and to prove basic set equalities.  
+● To construct truth tables and logic gates in Boolean algebra.  
+ 
+ 
+ 
+Course Outcomes:  
+On completion of the course, students will be able to 
+● Demonstrate the ability to write and evaluate a proof or outline the basic structure and give examples of each 
+proof technique described. 
+● Apply counting principles to determine probabilities in engineering problems. 
+● Demonstrate different traversal methods for trees and graphs arising in the field of engineering 
+and technology.  
+● Analyze the concepts and properties of algebraic structures in the solving complex engineering 
+problems. 
+● Construct truth tables and logic gates in Boolean algebra and provide valid conclusions.  
+ 
+UNIT-I MATHEMATICAL LOGIC   12 
+Propositional calculus - Propositions and Connectives, Syntax -  Semantics – Truth assignments and Truth tables - 
+Validity and Satisfiability, tautology – Functionally complete set of connectives -  Equivalence and normal forms -  
+Compactness and resolution  - Formal reducibility - Natural deduction system and axiom system. 
+ 
+UNIT-II COMBINATORICS                                                                                     12 
+Basic counting sum and product- Balls and bins problems – Generating functions - Recurrence relations- Proof 
+Techniques – Principle of Mathematical Induction -  Pigeon hole principle. 
+ 
+UNIT-III GRAPH THEORY 12 
+Graphs and digraphs -  Complement – Isomorphism  -  Connectedness and Reachability -  Adjacency matrix - Eulerian 
+paths and Circuits in graphs and digraphs -  Hamiltonian paths , Circuits and tournaments in graphs -  Trees -  Planar 
+graphs :Euler’s formula, dual of a planar graph, independence number and clique number, chromatic number - Statement 
+of Four-color theorem. 
+ 
+UNIT-IV ABSTRACT ALGEBRA 12 
+Set – Relation: Equivalence and Partial Ordered Relations - Algebraic System: Groups, sub groups, homomorphism, 
+Cosets, Lagrange’s theorem – Ring and Field (definition). 
+ 
+UNIT-V BOOLEAN ALGEBRA 12 
+Introduction of Boolean algebra -  Truth table - Basic logic gate -  Basic postulates of Boolean algebra -Principle of 
+duality -  Canonical form - Karnaugh map. 
+ 
+Total Contact Hours: 60 
+--- PAGE 14 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 14  
+ 
+SUGGESTED ACTIVITIES  
+● Problem solving sessions 
+● Activity Based Learning  
+● Implementation of small module 
+ 
+ 
+SUGGESTED EVALUATION METHODS  
+● Problem solving in Tutorial sessions 
+● Assignment problems  
+● Quizzes and class test 
+● Discussion in classroom 
+ 
+Text Book(s): 
+1.  M. Morris Mano ,”Digital Logic and Computer Design”- Pearson,2017. 
+2.  C. L. Liu,”Elements of Discrete Mathematics”,Second Edition, McGraw Hill ,New Delhi,1985. 
+3.  R. A. Brualdi ,”Introductory Combinatorics”,Fifth Edition, Holland, New York,2004. 
+4.  J. A. Bondy and U. S. R. Murty ,”Graph Theory with Applications”, Macmlillan Press, London, 1976. 
+5.  I. N. Herstein , John Wiley and Sons,”Topics in Algebra”,Second Edition, Wiley,NewYork,2013. 
+ 
+Reference Books(s) / Web links: 
+1.  Gilbert Strang “Introduction to linear algebra”, 5th Edition,, 2016. 
+2.  
+ 
+N. Deo “Graph Theory with Applications to Engineering and Computer Science”, Prentice Hall, Englewood  
+Cliffs, 1979. 
+3.  E. Mendelsohn, “Introduction to Mathematical Logic,(Second Edition)”, Van-Nostrand, London, 1996. 
+4.  L. Zhongwan ,“Mathematical Logic for Computer Science”, World Scientific, Singapore, 1998.  
+5.  Tremblay, J.P. and Manohar. R, andquot; Discrete Mathematical Structures with Applications to Computer 
+Scienceandquot;,Tata McGraw Hill Pub. Co. Ltd, New Delhi, 30th Reprint, 2011. 
+ 
+ 
+CO - PO – PSO matrices of course 
+                                                          1: Slight (Low)  
+                2: Moderate (Medium)  
+                                                              3: Substantial (High) If there is no correlation, put “-“ 
+ 
+ PO/PSO 
+CO PO
+1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PS
+O3 
+MA2311
+5.1 
+3 2 1 - 
+ 
+- - - - - - 
+ 
+- - 1 - - 
+MA2311
+5.2 
+3 2 1 - - - - - - - - - 1 - - 
+MA2311
+5.3 
+3 2 3 - - - - - - - - - 1 - - 
+MA2311
+5.4 
+3 1 1 - - - - - - - - - 1 - - 
+MA2311
+5.5 
+3 2 1 - - - - - - - - - 1 - - 
+Average 3 1.8 1.4 - - - - - - - - - 1 - - 
+ 
+--- PAGE 15 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 15  
+ 
+Course Code Course Title Category L T P C 
+MA23114 PROBABILITY AND CALCULUS BS 3 1 0 4 
+                                                                     For I sem. B.Tech. – CSBS 
+ 
+Objectives: 
+● To practice the basic rules and methods of differential calculus in the solution of Complex engineering problems.  
+● To analyse multiple integrals using different methods and analyze the problems in engineering and technology.  
+● To manipulate data and synthesis of the information to provide valid conclusions. 
+● To apply the concepts of probability and interpretation of data, and synthesis of the information to provide valid 
+conclusions. 
+● To exhibit various probability distributions to solve engineering problems.  
+ 
+UNIT-I DIFFERENTIAL CALCULUS 12 
+Limits and Continuity – Differentiation – Rules of Differentiation – Maxima and Minima of single variable  
+UNIT-II INTEGRAL CALCULUS 12 
+Definite and indefinite integrals – Integration by parts – Double and Triple integrals in Cartesian form – Area and Volume. 
+UNIT-III INTRODUCTION TO STATISTICS 12 
+Definition of Statistics: Basic objectives, applications in various branches of science with examples - Collection of Data: 
+Internal and external data, Primary and secondary Data - Population and sample, Representative sample - Descriptive 
+Statistics: Classification and tabulation of univariate data, graphical representation, Frequency curves - Descriptive measures - 
+Central tendency and Dispersion - Bivariate data: Summarization, marginal and conditional frequency distribution  
+UNIT-IV PROBABILITY AND RANDOM VARIABLES 12 
+Random experiments, sample space, event - Definition of Combinatorial Probability - Conditional Probability - Bayes 
+Theorem - Random Variables: Discrete and Continuous Random Variables - Mathematical expectation and its properties - 
+Moments (including variance) and their properties - Moment Generating Function. 
+UNIT-V PROBABILITY DISTRIBUTIONS 12 
+Discrete and Continuous distributions: Binomial, Poisson and Geometric distributions, Uniform, Exponential, Normal, Chi -
+square, t and F distributions 
+Total Contact Hours: 60 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Apply the basic rules and methods of differential calculus in the solution of Complex engineering problems.  
+● Evaluate multiple integrals using different methods and analyse the problems in engineering and technology. 
+● Manage the data and synthesis of the information to provide valid conclusions. 
+● Apply the concepts of probability in the solution of complex engineering problems.  
+● Demonstrate various probability distributions in solving engineering problems. 
+SUGGESTED ACTIVITIES  
+● Problem solving sessions 
+● Activity Based Learning 
+● Implementation of small module (Explain probability distribution  and  descriptive statistics using R program)  
+ 
+SUGGESTED EVALUATION METHODS  
+● Problem solving in Tutorial sessions 
+● Assignment problems  
+● Quizzes and class test 
+● Discussion in classroom 
+ 
+--- PAGE 16 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 16  
+ 
+Text Book(s): 
+1 A. Goon, M. Gupta and B. Dasgupta, “Fundamentals of Statistics”, vol. I and II, World Press, 2019. 
+2 Grewal B.S., “ Higher Engineering Mathematics ”, Forty Three Edition Khanna Publishers, New Delhi, 2014. 
+3 S.M. Ross, “A first course in Probability”, Tenth Edition ,Prentice Hall,2013. 
+4 I.R. Miller, J.E. Freund and R. Johnson, “Probability and Statistics for Engineers”, Nineth Edition ,PHI,2017.  
+5 T. Veerarajan, ‘Probability, Statistics and Random Processes with Queueing Theory and Queueing Networks’,  Third 
+Edition ,McGraw Hill,2016. 
+ 
+Reference Books(s) / Web links: 
+1.  A.M. Mood, F.A. Graybill and D.C. Boes, “Introduction to the Theory of Statistics”, McGraw Hill Education, 2017.  
+2.  Peter V. O'Neil, “Advanced Engineering Mathematics”, (Seventh Edition), Thomson Learning, 2020.  
+3.  M. D. Greenberg, “Advanced Engineering Mathematics”, (Second Edition) Pearson Education,2012.  
+4.  P. N. Wartikar and J. N. Wartikar, “Applied Mathematics”, Vol. I and II, Vidyarthi  Prakashan, 2019. 
+5.  S.M. Ross, “Introduction of Probability Models”, Academic Press, N.Y. 
+  
+ 
+ 
+CO - PO – PSO matrices of course 
+                                                         1: Slight (Low)  
+             2: Moderate (Medium)  
+                    3: Substantial (High)  If there is no correlation, put “-“ 
+ 
+ 
+ PO/PSO 
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23114.
+1 3 2 1 - - - - - - - - 1 1 - - 
+MA23114.
+2 3 2 - - - - - - - - - 1 1 - - 
+MA23114.
+3 3 2 - 1 - - - - - - 1 1 1 - - 
+MA23114.
+4 3 2 - 1 - - - - - - 1 1 1 1 - 
+MA23114.
+5 3 3 1 - - - - - - - - 1 1 1 - 
+Average 3 2.2 1 1 - - - - - - 1 1 1 1 - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 17 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 17  
+ 
+ 
+Course Code                      Course Title Category L T P C 
+GE23117            தமிழர் மரபு/HERITAGE OF TAMILS HS 1 0 0 1 
+         Common to all branches of B.E/B. Tech programmes 
+ 
+ 
+அலகு I மமொழி மற் றும ் இலக்கியம ் : 3 
+இந்திய தமொழிக் குடும ் பங ் கள ் - திரொவிட தமொழிகள ் - தமிழ ் ஒரு தெம ் தமொழி - தமிழ ் 
+தெவ ் விலக்கியங ் கள ் - ெங ் க இலக்கியத்தின ் ெமய ெொர்பற்ற தன ் மம - ெங ் க இலக்கியத்தில ் பகிர் தல ் 
+அறம ் - திருக்குறளில ் மமலொண ் மமக் கருத்துக்கள ் - தமிழிக் கொப்பியங ் கள ், தமிழகத்தில ் ெமண 
+தபௌத்த ெமயங ் களின ் தொக்கம ் - பக்தி இலக்கியம ், ஆழ ் வொர் கள ் மற்றும ் நொயன ் மொர் கள ் - 
+சிற்றிலக்கியங ் கள ் - தமிழில ் நவீன இலக்கியத்தின ் வளர் ெ்சி - தமிழ ் இலக்கிய வளர் ெ்சியில ் 
+பொரதியொர் மற்றும ்  பொரதிதொென ் ஆகிமயொரின ் பங ் களிப்பு. 
+அலகு II மரபு - பொறற ஓவியங ் கள ் முதல ் நவீன ஓவியங ் கள ் வறர - சிற் பக் 
+கறல : 
+3 
+நடுகல ் முதல ் நவீன சிற்பங ் கள ் வமர - ஐம ் தபொன ் சிமலகள ் - பழங ் குடியினர் மற்றும ் அவர் கள ் 
+தயொரிக்கும ் மகவிமனப் தபொருட்கள ், தபொம ் மமகள ் - மதர் தெய ் யும ் கமல - சுடுமண ் சிற்பங ் கள ் - 
+நொட்டுப்புறத் ததய ் வங ் கள ் - குமரிமுமனயில ் திருவள ்ளுவர் சிமல - இமெக் கருவிகள ் - மிருதங ் கம ், 
+பமற, வீமண, யொழ ், நொதஸ ் வரம ் - தமிழர் களின ் ெமூக தபொருளொதொர வொழ ் வில ் மகொவில ் களின ் 
+பங ் கு. 
+ 
+அலகு III நொட்டுப்புறக் கறலகள ்  மற் றும ் வீர விறளயொட்டுகள ்: 3 
+ததருக்கூத்து, கரகொட்டம ், வில ் லுப்பொட்டு, கணியொன ் கூத்து, ஒயிலொட்டம ், மதொல ் பொமவக் கூத்து, 
+சிலம ் பொட்டம ், வளரி, புலியொட்டம ், தமிழர் களின ் விமளயொட்டுகள ். 
+ 
+அலகு IV தமிழர்களின ் திறைக் ககொட்பொடுகள ்: 3 
+தமிழகத்தின ் தொவரங ் களும ், விலங ் குகளும ் - ததொல ் கொப்பியம ் மற்றும ் ெங ் க இலக்கியத்தில ் அகம ் 
+மற்றும ் புறக் மகொட்பொடுகள ் - தமிழர் கள ் மபொற்றிய அறக்மகொட்பொடு - ெங ் ககொலத்தில ் தமிழத்தில ் 
+எழுத்தறிவும ், கல ் வியும ் - ெங ் ககொல நகரங ் களும ் துமற முகங ் களும ் - ெங ் ககொலத்தில ் ஏற்றுமதி 
+மற்றும ் இறக்குமதி - கடல ் கடந்த நொடுகளில ் மெொழர் களின ் தவற்றி. 
+ 
+அலகு V இந்திய கதசிய இயக்கம ்  மற் றும ் இந்திய பை ் பொட்டிற் குத் 
+தமிழர்களின ் பங ் களிப்பு:    
+3 
+இந்திய விடுதமலப்மபொரில ் தமிழர் களின ் பங ் கு - இந்தியொவின ் பிறப்பகுதிகளில ் தமிழ ் ப் 
+பண ் பொட்டின ் தொக்கம ் - சுயமரியொமத இயக்கம ் - இந்திய மருத்துவத்தில ், சித்த மருத்துவத்தின ் 
+பங ் கு - கல ் தவட்டுகள ், மகதயழுத்துப்படிகள ் - தமிழ ் ப் புத்தகங ் களின ் அெ்சு வரலொறு.   
+ 
+Total Contact Hours: 15 
+--- PAGE 18 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 18  
+ 
+ 
+Text Book(s): 
+1. தமிழக வரலொறு - மக்களும ் பண ் பொடும ் - மக.மக. பிள ்மள (தவளியீடு: தமிழ ் நொடு 
+பொடநூல ் மற்றும ் கல ் வியியல ் பணிகள ் கழகம ்). 
+ 
+2. கணினித் தமிழ ் - முமனவர் இல. சுந்தரம ். (விகடன ் பிரசுரம ்). 
+3. கீழடி - மவமக நதிக்கமரயில ் ெங ் ககொல நகர நொகரிகம ் (ததொல ் லியல ் துமற தவளியீடு) 
+4. தபொருமந - ஆற்றங ் கமர நொகரிகம ். (ததொல ் லியல ் துமற தவளியீடு) 
+ 
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB and ESC and RMRL – (in print) 
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of Tamil 
+Studies. 
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: International 
+Institute of Tamil Studies). 
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute of Tamil 
+Studies). 
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of archaeology 
+and Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu)  
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The Author)  
+11. Porunai Civilization (Jointly Published by: Department of Archaeology and Tamil Nadu Text Book and Educational 
+Services Corporation, Tamil Nadu) 
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 19 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 19  
+ 
+ 
+Course Code Course Title Category L T P C 
+ 
+CB23131 
+ 
+FUNDAMENTALS OF COMPUTER SCIENCE 
+ 
+PC 
+ 
+2 
+ 
+0 
+ 
+4 
+ 
+4 
+ 
+ 
+ 
+UNIT-I  GENERAL PROBLEM-SOLVING CONCEPTS AND C LANGUAGE  6  
+Algorithm and Flowchart for problem solving with Sequential Logic Structure, Decisions and Loops - 
+Introduction- C Structure- syntax and constructs of ANSI C - Variable Names, Data Type and Sizes (Little 
+Endian Big Endian), Constants, Declarations, proper variable naming and Hungarian Notation - Standard I/O, 
+Formatted Output – printf- Formatted Input – scanf- Statements and Blocks.  
+UNIT-II  TYPES OF OPERATORS, EXPRESSIONS AND CONTROL FLOW  6 
+Arithmetic Operators, Relational Operators, Logical Operators, Type Conversion, Increment and Decrement 
+Operators, Bitwise Operators, Assignment Operators and Expressions, Precedence and Order of Evaluation, If-
+Else-If, Switch, Loops – while, do, for, break and continue, goto Labels - structured and unstructured 
+programming. 
+UNIT-III  ARRAYS, STRINGS AND FUNCTIONS  6  
+Arrays – string – string operations – functions - types, Basics of functions, parameter passing and returning 
+type, External, Auto, Local, Static, Register Variables, Scope Rules, Block structure, Initialization, Recursion, 
+Variable- length argument lists, C Pre-processors, Standard Library Functions and return types.  
+UNIT-IV  POINTERS AND ARRAYS  6 
+Pointers and addresses, Pointers and Function Arguments, Pointers and Arrays, Address Arithmetic, character 
+Pointers and Functions, Pointer Arrays, Pointer to Pointer, Multi -dimensional arrays and row/column major 
+formats, Initialization of Pointer Arrays,  Command line arguments, Pointers to functions, complicated 
+declarations and evaluations.  
+ 
+UNIT-V  STRUCTURES AND FILES IN C  6  
+Basic Structures, Structures and Functions, Array of structures, Pointer of Structures, Self -referential 
+Structures, Table look up, Typedef, Unions, File in C:  Buffer and Streams – File operations – File Accessing 
+Modes – File I/O functions - Binary and Text file accessing – Random File accessing.   
+ 
+ Total Contact Hours :  30  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Objectives:  
+ 
+  To develop simple algorithms for arithmetic and logical problems.  
+ 
+  To develop C Programs using basic programming constructs.  
+ 
+  To develop C programs using arrays and strings.  
+ 
+  To develop applications in C using functions, pointers and structures.  
+ 
+  To do input/output and file handling in C.  
+--- PAGE 20 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 20  
+ 
+ 
+List of Experiments  
+1  Algorithm and flowcharts of small problems like GCD  
+                 Structured code writing with:  
+2  Small but tricky codes  
+3  Proper parameter passing  
+4  Command line Arguments  
+5  Variable parameter  
+6  Pointer to functions  
+7  User defined header  
+8  Make file utility  
+9  Multi file program and user defined libraries  
+10  Interesting substring matching / searching programs  
+11 Mini Project  
+  Contact Hours :  60  
+  Total Contact Hours :  90  
+ 
+Course Outcomes:  
+On completion of the course, the students will be able to  
+ 
+  Formulate simple algorithms for arithmetic and logical problems.  
+ 
+  Implement conditional branching, iteration and recursion.  
+ 
+  Decompose a problem into functions and synthesize a complete program using divide and conquer approach.  
+ 
+  Use arrays, pointers, structures and files to formulate algorithms and programs.  
+ 
+  Apply programming to solve matrix addition and multiplication problems and searching and sorting problems  
+ 
+Text Book (s):  
+1  Brian W. Kernighan and Dennis M. Ritchie, “The C Programming Language”, Second Edition, PHI. 2022 
+2  Byron Gottfried, “Programming with C”, Fourth Edition, McGraw Hill Education,2018. 
+Reference Books(s) / Web links:  
+1  Herbert Schildt, “C: The Complete Reference”, Fourth Edition, McGraw Hill.  
+2  YashavantKanetkar, “Let Us C”, BPB Publications.  
+ 
+CO - PO – PSO matrices of course 
+                                                          1: Slight (Low)  
+              2: Moderate (Medium)  
+                 3: Substantial (High)  If there is no correlation, put “-“ 
+ 
+ 
+PO/PSO 
+        CO 
+ 
+PO 
+1 
+ 
+PO 
+2 
+ 
+PO 
+3 
+ 
+PO 
+4 
+ 
+PO 
+5 
+ 
+PO 
+6 
+ 
+PO 
+7 
+ 
+PO 
+8 
+ 
+PO 
+9 
+ 
+PO 
+10 
+ 
+PO 
+11 
+ 
+PO 
+12 
+ 
+PSO 
+1 
+ 
+PSO 
+2 
+ 
+PSO 3 
+CB2313
+1.1 
+1 2 2 2 1 - - - 1 2 1 1 2 3 1 
+CB2313
+1.2 
+1 1 1 1 1 - - - - - 1 1 2 2 - 
+CB2313
+1.3 
+1 1 2 1 1 - - - - - 1 1 2 2 1 
+CB2313
+1.4 
+2 2 3 2 1 - - - 1 - 2 1 2 3 1 
+CB2313
+1.5 
+2 2 3 2 1 - - - - - 2 1 2 2 2 
+Average 1.4 1.6 2.2 1.6 1.0 - - - 1.0 2.0 1.4 1.0 2.0 2.4 1.3 
+ 
+--- PAGE 21 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 21  
+ 
+ 
+Course Code Course Title Category L T P         C 
+EE23131 PRINCIPLES OF ELECTRICAL ENGINEERING  ES 2 0 2            3 
+Objectives: 
+ To introduce electric circuits and provide knowledge on the analysis of circuits using network theorems.  
+ To impart knowledge on series and parallel RC, RL and RLC circuits. 
+ To provide knowledge on the principles of electrostatics and electromechanical energy conversion devices.  
+ To learn the electrical measurement concepts and different types of wiring system.  
+ To provide exposure on analysis of the electrical circuits and transducers through experimentation. 
+UNIT-I INTRODUCTION  6 
+Fundamental linear passive and active elements to their functional current -voltage relation, voltage source and current 
+sources, ideal and practical sources, Kirchhoff-s laws and applications to network solutions using mesh and nodal analysis, 
+Concept of work, power, energy, and conversion of energy.  
+UNIT-II DC CIRCUITS   6 
+Current-voltage relations of the electric network by mathematical equations to analyze the network, (Superposition 
+theorem, Thevenin’s theorem, Norton's Theorem, Maximum Power Transfer theorem) Simplifications of networks using 
+series-parallel, Star/Delta transformation. 
+UNIT-III AC CIRCUITS   6 
+AC waveform definitions, form factor, peak factor, study of R -L, R-C, RLC series circuit, R -L-C parallel circuit, phasor 
+representation in polar and rectangular form, concept of impedance, admittance, active, reactive and complex power, 
+power factor, Concept of 3 phase Balanced AC Circuits. 
+UNIT-IV PRINCIPLE OF ELECTROSTATICS AND ELECTROMECHANICS  6 
+Electrostatic field, electric field strength, concept of permittivity in dielectrics, energy stored in capacitors, charging and 
+discharging of capacitors, Electromagnetism, magnetic field and Faraday's law, Magnetic material and B-H Curve self and 
+mutual inductance, Ampere's law, Electromechanical energy conversion. 
+UNIT-V MEASUREMENTS AND SENSORS 6 
+Introduction to measuring devices/sensors and transducers (Piezoelectric and thermo -couple) related to electrical signals, 
+Elementary methods for the measurement of electrical quantities in DC and AC systems, (Current and Single-phase power) 
+Concept of ind icating and integrating instruments, Electrical Wiring types and accessories, Illumination system, Basic 
+layout of the distribution system, Necessity of earthing, Types of earthing, Safety devices and system, Principle of batteries 
+and types.  
+ Total Contact Hours : 30 
+List of Experiments 
+1 Familiarization of electrical Elements, sources, measuring devices and transducers related to electrical 
+circuits. 
+2 Determination of resistance temperature coefficient. 
+3 Verification of Network Theorem (Superposition, Thevenin, Norton, Maximum Power Transfer theorem). 
+4 Simulation of R-L-C series circuits for XL>XC , XL< XC and XL= XC. 
+5 Simulation of Time response of RC circuit. 
+6 Demonstration of measurement of electrical quantities in DC and AC systems. 
+ Contact Hours : 30 
+    
+ Total Contact Hours : 60 
+Course Outcomes: 
+On completion of the course, the students will be able to  
+ Analyse DC and AC circuits and apply circuit theorems. 
+ Realize series and parallel  RC, RL and RLC circuits. 
+ Understand the principles of electrostatics and electromechanical energy conversion devices.  
+ Realise the electrical measurement concepts and different types of wiring system.  
+ Experimentally analyze the electric circuits and transducers. 
+Text Book (s): 
+1 A. E. Fitzgerald, Kingsely Jr Charles, D. Umans Stephen, “Electric Machinery”, Sixth Edition , Tata 
+McGraw Hill. 2022 
+2 B.L.Theraja, “A Textbook of Electrical Technology”, Vol. I,”Basic Electrical Engineering”  S. Chand and 
+Company Ltd.,New Delhi.2021 
+--- PAGE 22 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 22  
+ 
+3 V. K. Mehta, “Basic Electrical Engineering”, S. Chand and Company Ltd., New Delhi. 2019 
+4 J. Nagrath and Kothari, “Theory and problems of Basic Electrical Engineering”, Second Edition Prentice 
+Hall of India Pvt. Ltd. 
+Reference Books(s) / Web links: 
+1 T. K. Nagsarkar and M. S. Sukhija, “Basic of Electrical Engineering”, Oxford University Press.  
+2 D. J. Griffiths “Introduction to Electrodynamics”, Cambridge University Press.  
+3 William H. Hayt and Jack E. Kemmerly “Engineering Circuit Analysis, McGraw -Hill Book Company 
+Inc.8th Edition 
+4 Smarjith Ghosh,” Fundamentals of Electrical and Electronics Engineering”, Prentice Hall (India) Pvt. Ltd. 
+ 
+CO - PO – PSO matrices of course 
+                                                          1: Slight (Low)  
+              2: Moderate (Medium)  
+                 3: Substantial (High)  If there is no correlation, put “-“ 
+ 
+ 
+COs/POsandPSOs PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+EE 23131.1 3 3 3 3 - - - - 3 - - 1 - 2 - 
+EE 23131.2 3 3 3 2 3 - - - 2 - - 1 - 2 - 
+EE 23131.3 3 3 3 3 - - - - 3 - - 1 - 2 - 
+EE 23131.4 3 3 3 3 - - - - 3 - - 1 - 2 - 
+EE 23131.5 3 3 3 2 3 - - - 3 - - 1 - 2 - 
+Average 3 3 3 2.6 3 - - - 2.8 - - 1 - 2 - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 23 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 23  
+ 
+ 
+ 
+Course Code Course Title Category L T P C 
+PH23133   
+PHYSICS FOR COMPUTING SCIENCE 
+For I sem. B. E. - CSBS  BS 3 0 2 4 
+ 
+Objectives: 
+ To enhance the fundamental knowledge of oscillations and its applications. 
+ To understand the fundamentals of waves and optics as applicable to computing.  
+ To become proficient in properties of semiconductors and fiber optics. 
+ To understand the principles of laser and role plays in engineering and technology. 
+ To familiarize the basic principles of heat transfer and electromagnetism for computer 
+applications.  
+ 
+UNIT-I OSCILLATION 9 
+Periodic motion-simple harmonic motion-characteristics of simple harmonic motion-vibration of 
+simple springs mass system –resonance: definition, damped harmonic oscillator – heavy, critical 
+and light damping- energy decay in a damped harmonic oscillator- quality factor- forced 
+mechanical and electrical oscillators. 
+UNIT-II FUNDAMENTALS OF WAVE OPTICS 9 
+Theory of interference fringes-types of interference-Fresnel’s prism-Newton’s rings, Diffraction-
+Two kinds of diffraction-Difference between interference and diffraction-Fresnel’s half period zone 
+and zone plate-Fraunhofer diffraction at single slit-plane diffraction grating - Temporal and Spatial 
+Coherence. 
+Polarization - Brewster’s law - double refraction- Concept of production of polarized beam of light 
+from two SHM acting at right angle; plane, elliptical and circularly polarized light, Brewster’s law, 
+double refraction. 
+UNIT-III SEMICONDUCTOR PHYSICS AND FIBER OPTICS 9 
+Conductor, Semiconductor and Insulator: Basic concept of Band theory - Hall effect - determination 
+of Hall co-efficient –Applications. Fiber optics- Types of optical fibers and Applications. 
+UNIT-IV LASER  9 
+Einstein’s theory of matter radiation interaction and A and B coefficients; amplification of light by 
+population inversion, different types of lasers: Ruby Laser, CO2 and Neodymium lasers; Properties 
+of laser beams: mono -chromaticity, coherence, directionality and brightness - laser speckles - 
+applications of lasers in engineering.  
+UNIT-V THERMODYNAMICS AND ELECTROMAGNETISM 9 
+Zeroth law of thermodynamics, first law of thermodynamics, brief discussion on application of 1st 
+law, second law of therm odynamics and concept of Carnot’s Engine, entropy, change in entropy in 
+reversible and irreversible processes, third law of thermodynamics.  
+Electromagnetism: Ampere’s circuit law and Biot -Savart’s law -Continuity equation for current 
+densities – Maxwell’s equations in vacuum and non-conducting medium. 
+ Contact 
+Hours 
+: 45 
+ 
+ 
+ 
+ 
+--- PAGE 24 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 24  
+ 
+List of Experiments 
+1 Determination of wave length of light by Newton’s Ring method  
+2 Determination of wave length of light by Laser diffraction method 
+3 Determination of Planck’s constant  
+4 Determination of Hall coefficient of semiconductor 
+5 Determination of laser and optical fiber parameters 
+6 Magnetic field along the axis of current carrying coil – Stewart and Gee 
+7 Determination of Stefan’s Constant. 
+ Contact Hours :       30 
+ Total Contact Hours :       75 
+ 
+Course Outcomes 
+On completion of the course, students will be able to 
+ Apply the mathematical model of oscillations to various physical systems 
+ Understand the various phenomena involving waves and their applications 
+ Understand the fundamental concepts of semiconducting materials properties and fiber optics in 
+computational sciences. 
+ Use the concepts of Laser in engineering and technology. 
+ Apply the concepts of thermodynamics and electromagnetism for various systems. 
+ 
+Text Books: 
+1 Beiser A, “Concepts of Modern Physics”, Fifth Edition, McGraw Hill International.1995 
+2 David Halliday, Robert Resnick, Jearl Walker, “Fundamentals of Physics”, Twelfth Edition, Wileyplus,2021. 
+ 
+Reference Books / Web links: 
+1 Ajoy Ghatak, “Optics” Fifth Edition, Tata McGraw Hill, 2014. 
+2 Sears andZemansky, “University Physics”, Fifth Edition,Addison-Wesley, 2015. 
+3 Jenkins and White, “Fundamentals of Optics”, Third Edition, McGraw-Hill, 2017. 
+ 
+ 
+CO – PO – PSO matrices of course 
+                                                1: Slight (Low)  
+2: Moderate (Medium)  
+                                                      3: Substantial (High) If there is no correlation, put “- “ 
+ 
+ PO/PSO 
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO
+1 
+PSO
+2 
+PSO
+3 
+PH2313
+3.1 3 1 - - - - - - - - - - - - - 
+PH2313
+3.2 2 2 1 - - - - - - - - - 1 1 - 
+PH2313
+3.3 2 2 1 - - - - - - - - - 1 1 - 
+PH2313
+3.4 3 2 2 - - - - - - - - - 1 - - 
+PH2313
+3. 5 2 1 - - - - - - - - - - 1 - - 
+Average 2.4 1.6 1.3 - - - - - - - - - 1 1 - 
+ 
+--- PAGE 25 ---
+ 
+B. Tech Computer Science and Business Systems| R2023 Curriculum & Syllabus Page 25  
+ 
+ 
+Course Cod   Course code Course Title (Theory course) Category L     T P C 
+MC23111 INDIAN CONSTITUTION AND FREEDOM 
+MOVEMENT 
+MC 3      0 0      0 
+ Common to all branches of B.E/B. Tech Programmes – First / Second/third Semester 
+ 
+Objectives:  
+ To apprehend the sacrifices made by the freedom fighters. 
+ To inculcate the values enshrined in the Indian constitution. 
+ To instil a sense of responsibility as the citizens of India. 
+ To familiarise about the functions of the various levels of Government. 
+ To be informed about Constitutional and Non- Constitutional bodies. 
+ 
+UNIT-I INDIAN FREEDOM MOVEMENT 9 
+British Colonialism in India-Colonial administration till 1857- Revolt of 1857- Early Resistance to British 
+Rule-Rise of Nationalism in India-Indian Freedom Struggle under Mahatma Gandhi-Non- Cooperation 
+Movement-Civil Disobedience Movement- Quit India Movement-British Official response to National 
+movement- Independence of India Act 1947-Freedom and Partition.                                             
+UNIT-II CONSTITUTION OF INDIA 9 
+Historical Background – Indian Constitution: Constitution’ meaning of the term, Sources and 
+constitutional history, Constituent Assembly of India – Philosophical foundations of the Indian 
+Constitution – Preamble – Fundamental Rights – Directive Principles of State Policy – Fundamental 
+Duties – Citizenship – Constitutional Remedies for citizens.  
+UNIT-III STRUCTURE AND FUNCTIONS OF CENTRAL GOVERNMENT 9 
+Union Government – Structure of the Union Government and Functions – President – Vice President – 
+Prime Minister – Cabinet – Parliament – Supreme Court of India – Judicial Review. 
+UNIT-IV STRUCTURE AND FUNCTION OF STATE GOVERNMENT AND LOCAL 
+BODY 
+9 
+State Government – Structure and Functions – Governor – Chief Minister – Cabinet – State Legislature – 
+Judicial System in States – High Courts and other Subordinate Courts- Role and Importance, 
+Municipalities: Introduction, Mayor and role of Elected Representative, CEO of Municipal Corporation, 
+Pachayati Raj: Introduction, Elected officials and their roles, Village level: Role of Elected and Appointed 
+officials.     
+ 
+UNIT-V 
+ 
+CONSTITUTIONAL FUNCTIONS AND BODIES 
+9 
+Indian Federal System – Centre – State Relations – President’s Rule –  Constitutional Functionaries – 
+Assessment of working of the Parliamentary System in India- CAG, Election Commission, UPSC, GST 
+Council and other Constitutional bodies-. NITI Aayog, Lokpal, National Development Council and other 
+Non –Constitutional bodies.         
+                                                                                                                                Total Contact Hours: 45 
+ 
+ 
+Course Outcomes: Upon completion of the course, students will be able to: 
+ Appreciate the sacrifices made by freedom fighters during freedom movement. 
+ Be responsible citizens and abide by the rules of the Indian constitution. 
+ Be aware of the functions of the Indian government. 

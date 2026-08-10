@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/models/user_model.dart';
 import '../../domain/repositories/auth_repository.dart';
-import '../../data/repositories/firebase_auth_repository.dart';
+import '../../data/repositories/supabase_auth_repository.dart';
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {
-  return FirebaseAuthRepository();
+  return SupabaseAuthRepository();
 });
 
 final authStateChangesProvider = StreamProvider<UserModel?>((ref) {
@@ -29,18 +29,18 @@ class AuthController extends AsyncNotifier<UserModel?> {
 
   Future<void> signUp({
     required String name,
-    required String department,
     required String email,
     required String password,
+    required String rollNumber,
   }) async {
     state = const AsyncValue.loading();
     state = await AsyncValue.guard(() async {
       final repository = ref.read(authRepositoryProvider);
       return await repository.signUpWithEmailAndPassword(
         name: name,
-        department: department,
         email: email,
         password: password,
+        rollNumber: rollNumber,
       );
     });
   }
@@ -68,6 +68,38 @@ class AuthController extends AsyncNotifier<UserModel?> {
       final repository = ref.read(authRepositoryProvider);
       await repository.resendVerificationEmail();
       return state.value;
+    });
+  }
+
+  Future<void> updateProfile({
+    String? name,
+    String? phone,
+    String? section,
+    String? gender,
+    DateTime? dob,
+    String? emergencyContact,
+    String? rollNumber,
+    List<String>? skills,
+    List<String>? interests,
+    Map<String, dynamic>? privacySettings,
+    bool? isProfileCompleted,
+  }) async {
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() async {
+      final repository = ref.read(authRepositoryProvider);
+      return await repository.updateProfile(
+        name: name,
+        phone: phone,
+        section: section,
+        gender: gender,
+        dob: dob,
+        emergencyContact: emergencyContact,
+        rollNumber: rollNumber,
+        skills: skills,
+        interests: interests,
+        privacySettings: privacySettings,
+        isProfileCompleted: isProfileCompleted,
+      );
     });
   }
 

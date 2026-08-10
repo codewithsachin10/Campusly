@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     // START: FlutterFire Configuration
-    id("com.google.gms.google-services")
+
     // END: FlutterFire Configuration
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
@@ -46,6 +46,14 @@ android {
 
 flutter {
     source = "../.."
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("androidx.browser:browser:1.8.0")
+        force("androidx.core:core-ktx:1.13.1")
+        force("androidx.core:core:1.13.1")
+    }
 }
 
 dependencies {

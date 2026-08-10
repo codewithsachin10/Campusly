@@ -2,12 +2,13 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/timetable_item.dart';
+import '../../domain/models/custom_timetable_membership.dart';
 import '../../domain/repositories/timetable_repository.dart';
-import '../../data/repositories/firebase_timetable_repository.dart';
+import '../../data/repositories/supabase_timetable_repository.dart';
 import '../../../../core/services/home_widget_service.dart';
 
 final timetableRepositoryProvider = Provider<TimetableRepository>((ref) {
-  return FirebaseTimetableRepository();
+  return SupabaseTimetableRepository();
 });
 
 // Currently selected day in Planner ('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun')
@@ -45,15 +46,13 @@ final selectedDayProvider = NotifierProvider<SelectedDayNotifier, String>(() {
 // Weekly full schedule for the currently joined class
 final weeklyScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
-  if (currentClass == null) return [];
   final repository = ref.watch(timetableRepositoryProvider);
-  return repository.getWeeklySchedule(currentClass.code);
+  return repository.getWeeklySchedule(currentClass?.code ?? "");
 });
 
 // Daily schedule for strictly TODAY (`DateTime.now().weekday`)
 final todayScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
-  if (currentClass == null) return [];
   final repository = ref.watch(timetableRepositoryProvider);
   final now = DateTime.now();
   String todayStr;
@@ -83,27 +82,22 @@ final todayScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
       todayStr = 'mon';
       break;
   }
-  return repository.getDailySchedule(currentClass.code, todayStr);
+  return repository.getDailySchedule(currentClass?.code ?? "", todayStr);
 });
 
 // Daily schedule for the active day tab (`selectedDayProvider`)
 final dailyScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
-  if (currentClass == null) return [];
   final selectedDay = ref.watch(selectedDayProvider);
   final repository = ref.watch(timetableRepositoryProvider);
-  return repository.getDailySchedule(
-    currentClass.code,
-    selectedDay,
-  );
+  return repository.getDailySchedule(currentClass?.code ?? "", selectedDay);
 });
 
 // Ongoing Class
 final ongoingClassProvider = FutureProvider<TimetableItem?>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
-  if (currentClass == null) return null;
   final repository = ref.watch(timetableRepositoryProvider);
-  final item = await repository.getOngoingItem(currentClass.code);
+  final item = await repository.getOngoingItem(currentClass?.code ?? "");
   HomeWidgetService().updateWidgetData(ongoingClass: item);
   return item;
 });
@@ -111,9 +105,8 @@ final ongoingClassProvider = FutureProvider<TimetableItem?>((ref) async {
 // Next Class
 final nextClassProvider = FutureProvider<TimetableItem?>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
-  if (currentClass == null) return null;
   final repository = ref.watch(timetableRepositoryProvider);
-  final item = await repository.getNextItem(currentClass.code);
+  final item = await repository.getNextItem(currentClass?.code ?? "");
   HomeWidgetService().updateWidgetData(nextClass: item);
   return item;
 });
@@ -121,4 +114,10 @@ final nextClassProvider = FutureProvider<TimetableItem?>((ref) async {
 // Live ticker stream provider updating every second for countdown timers
 final liveTickerProvider = StreamProvider<int>((ref) {
   return Stream.periodic(const Duration(seconds: 1), (count) => count);
+});
+
+// Joined custom timetables for the user
+final joinedCustomTimetablesProvider = FutureProvider<List<CustomTimetableMembership>>((ref) async {
+  final repository = ref.watch(timetableRepositoryProvider);
+  return repository.getJoinedCustomTimetables();
 });

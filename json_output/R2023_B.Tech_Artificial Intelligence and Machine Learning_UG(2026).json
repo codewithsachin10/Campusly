@@ -1,0 +1,977 @@
+{
+  "regulation": {
+    "name": "R2023_B.Tech_Artificial Intelligence and Machine Learning_UG(2026)",
+    "regulation_year": 2023,
+    "batch": "2026-2030",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23116",
+          "name": "Mathematical Foundations for AI",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர் மரபு / Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "PH23132",
+          "name": "Physics for Information Science",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23131",
+          "name": "Programming using C",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23123",
+          "name": "Engineering Practices -Electrical, Electronics and Computer systems",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "EE23233",
+          "name": "Basic Electrical and Electronics Engineering 5 3 0 2 4 NON COURSES",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MA23214",
+          "name": "Probability and Inferential Statistics",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழரும் ததொழில்நுட்பமும் /Tamil andTechnology",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "IT23231",
+          "name": "Digital Principles and Computer Architecture",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23231",
+          "name": "Data Structures 7 3 0 4 5 LABORATORY COURSE",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "CS23221",
+          "name": "Python Programming Lab",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23231",
+          "name": "Principles of Artificial Intelligence",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective(Max3cred",
+          "name": "its) in VII or VIII semester) --- PAGE 12 ---  References-(atleast 7) Quality -Sources include both general background sources and specialized sources. All web sites utilized are authoritative. Obtained 9-10 points 7-8 points 4-6 points 0-3 points Introduction/Topic Topic Focus Content Depth of Discussion Evaluation and Results Conclusion Review Presentations Writing Length References",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "4-6-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "of\n100",
+          "name": "marks, as a Continuous Assessment  A guide will be assigned to each team to monitor the progress and conduct the review meetings.  Finally, each student in the team has to submit the project report  The viva-voce examination will be conducted with external faculty members from other/same department  Based on the quality of the project, committee can approve to publish in YouTube. Continuous Assessment 100 Marks Review I Guide Review II Guide Viva-Voce External ( from other department) 30 30 40 :",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective(Max.3cre",
+          "name": "dits) in VII or VIII Semesters Activities:  Team Size : Maximum 2 students  Team has to identify the problem statement to solve  Committee (consist of a Project coordinator, a Faculty member and a guide) has to approve the team proposal to proceed further  Team has to develop a project  Team has to submit the Project report Assessment:  The",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "projectwork,studentsar",
+          "name": "e eligible to drop one Professional or Open Electives (3 ) in VII or VIII Semesters :",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23313",
+          "name": "Discrete Mathematics for AI",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CS23331",
+          "name": "Design and Analysis of Algorithms",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23332",
+          "name": "Database Management Systems",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23333",
+          "name": "Object Oriented Programming using Java 7 1 0 6 4 NON COURSE",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23331",
+          "name": "Fundamentals of Machine Learning",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "OpenElective-IOE330",
+          "name": "Open Elective-I OE 3 3 0",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "MA23434",
+          "name": "Optimization Techniques for AI",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "AI23431",
+          "name": "Web Technology and Mobile Application",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23431",
+          "name": "Operating Systems",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23432",
+          "name": "Software Construction",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IEEC200",
+          "name": "Soft Skills - I EEC 2 0 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "InternshipEEC1",
+          "name": "Internship EEC     1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23427",
+          "name": "Games/Short Film/ Animation Videos/ Animated Educational Content : 0 0 6 3 3 on or before VI Semester CSD AIML & AIDS Not applicable for CSD, but for others in VII or VIII Sem (3 - Course only",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-3-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23428",
+          "name": "Interdisciplinary Societal Project / Real World Web & Mobile Applications/ Innovative Product : 0 0 6 3 3 on or before VI Semester AIML , AIDS &CSD VII or VIII Sem (3 - Course only",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-3-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23429",
+          "name": "Participation in National /International competitions : 0 0 6 3 3 on or before VI Semester AIML , AIDS &CSD VII or VIII Sem (3 - Course only --- PAGE 11 --- Research Paper -Guideline Activities:  Individual work  Each student has to identify the domain area  Select any 5 conferences/Journal papers to understand their work ( published within 5 years)  Write a research paper on comparative study on the following topics o Aim of the paper o Problem statement identified o Methodology to solve the problem o Tools used to solve the problem o Result of the problem o Identify the error or defect in the result o Identify the future work / enhancement of this result Assessment:  The Research Paper writing shall be evaluated for a maximum",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-11-5",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-IP",
+          "name": "Professional Elective-I P",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-IIOE330",
+          "name": "Open Elective-II OE 3 3 0",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "AI23512",
+          "name": "Data Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23531",
+          "name": "Deep Learning",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23532",
+          "name": "Computer Networks 7 3 0 4 5 LABORATORY COURSE",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23521",
+          "name": "Build and Deploy Machine Learning Applications",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC20",
+          "name": "Soft Skills - II EEC 2 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23527",
+          "name": "Research Paper writing ( Eligible to drop 1 course Professional /",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "AD23632",
+          "name": "Framework for Data and Visual Analytics",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "Professional Elective - I",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23611",
+          "name": "Secure Systems Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23631",
+          "name": "Predictive and Prescriptive Analytics",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23632",
+          "name": "Natural Language Processing",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23634",
+          "name": "Fundamentals of Generative AI and Prompt Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "II",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23711",
+          "name": "Social and Ethical Issues in AI",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AD23731",
+          "name": "Foundations of Agentic AI",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IT23731",
+          "name": "Cloud and Big data Architecture 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProjectPhase-I*EEC80",
+          "name": "Project Phase-I* EEC 8 0",
+          "credits": 4,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-8",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CD23721",
+          "name": "Visual Effects",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CD23731",
+          "name": "Film Making and Radio podcasting",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-VP",
+          "name": "Professional Elective-V P",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-VI",
+          "name": "3 3 0 0 3 LABORATORY COURSE",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectPhase-II*EEC12",
+          "name": "Project Phase-II* EEC 12",
+          "credits": 6,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-12",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "AI23A31",
+          "name": "Social Network Analysis",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A32",
+          "name": "Large Language Models",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A33",
+          "name": "AI for Game Programming",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A34",
+          "name": "Text Mining",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A35",
+          "name": "Recommendation Systems",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A36",
+          "name": "Big Data Analytics",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23A37",
+          "name": "Computer Vision and Applications 4 2 0 2 3 Advance AI -II SI. NO",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B31",
+          "name": "Knowledge Representation and Reasoning",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B32",
+          "name": "Soft Computing",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B33",
+          "name": "Introduction to AI Robotics",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B34",
+          "name": "Human Computer Interaction",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B11",
+          "name": "Information Visualization",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23B12",
+          "name": "Cognitive Science 3 3 0 0 3 Full Stack Development SI. NO",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23B31",
+          "name": "C# and .Net Programming",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23B33",
+          "name": "DevOps",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23C12",
+          "name": "Software Project Management",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23C17",
+          "name": "Ubiquitous Computing",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23C31",
+          "name": "Software Testing",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A35",
+          "name": "Web Application Security 4 2 0 2 3 --- PAGE 8 --- Emerging Technologies SI. NO",
+          "credits": 8,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23A11",
+          "name": "Internet of Things",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23B32",
+          "name": "Advanced Application Development with Oracle AX PE",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A32",
+          "name": "Robotic Process Automation",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CB23G11",
+          "name": "Quantum Computation and Quantum Information",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A33",
+          "name": "Cryptocurrency and Blockchain Technologies",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A36",
+          "name": "3D Printing and Design",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A33",
+          "name": "Cyber Security and Forensics 4 2 0 2 3 Cyber Security SI. NO",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A11",
+          "name": "Security Assessment and Risk Analysis",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A11",
+          "name": "Malware Detection And Analysis",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A31",
+          "name": "Ethical Hacking and Security",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A32",
+          "name": "Digital and Mobile Forensics",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A34",
+          "name": "Security and Privacy in Cloud",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A35",
+          "name": "Social Network Security",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CR23A36",
+          "name": "Information Security And Management 4 2 0 2 3 --- PAGE 9 --- Virtual and Augmented Reality SI. NO",
+          "credits": 9,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A37",
+          "name": "Augmented Reality and Virtual Reality",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CD23C22",
+          "name": "Data Visualization",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23A39",
+          "name": "Game Development",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CS23B31",
+          "name": "Introduction to Metaverse",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "IT23E31",
+          "name": "Graphics and Multimedia",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "AI23O11",
+          "name": "Artificial Intelligence and Neural Network",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "AI23O31",
+          "name": "Introduction to Machine Learning",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "OE"
+        },
+        {
+          "subject_code": "AI23O21",
+          "name": "Introduction to Robotic Process Automation",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        }
+      ]
+    }
+  ]
+}

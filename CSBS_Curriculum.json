@@ -1,0 +1,554 @@
+{
+  "regulation": {
+    "name": "B.Tech. Computer Science and Business Systems R2023",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2024-2025"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23112",
+          "name": "Business Communication and Value Science – I",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23115",
+          "name": "Discrete Mathematics",
+          "credits": 4,
+          "course_type": "Theory",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "MA23114",
+          "name": "Probability and Calculus",
+          "credits": 4,
+          "course_type": "Theory",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Theory",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "CB23131",
+          "name": "Fundamentals of Computer Science",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EE23131",
+          "name": "Principles of Electrical Engineering",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "ES"
+        },
+        {
+          "subject_code": "PH23133",
+          "name": "Physics for Computing Science",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "BS"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "MA23211",
+          "name": "Linear Algebra",
+          "credits": 4,
+          "course_type": "Theory",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "BA23217",
+          "name": "Fundamentals of Economics",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "MS"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "Tamils and Technology",
+          "credits": 1,
+          "course_type": "Theory",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23231",
+          "name": "Statistical Modeling",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CB23231",
+          "name": "Data Structures and Algorithms",
+          "credits": 5,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-1-4",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23242",
+          "name": "Principles of Electronics",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CS23221",
+          "name": "Python Programming Lab",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "HS23223",
+          "name": "Business Communication and Value Science – II",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "CB23311",
+          "name": "Formal Language and Automata Theory",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23312",
+          "name": "Computer Organization and Architecture",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23331",
+          "name": "Computational Statistics",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23332",
+          "name": "Software Engineering",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23333",
+          "name": "Database Technology",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23333",
+          "name": "Object Oriented Programming Using Java",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MC23313",
+          "name": "Environmental Sciences",
+          "credits": 0,
+          "course_type": "Mandatory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "CB23411",
+          "name": "Introduction to Innovation, IP Management and Entrepreneurship",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "BA23412",
+          "name": "Fundamentals of Management",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "MS"
+        },
+        {
+          "subject_code": "CB23431",
+          "name": "Operating System Concepts",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23432",
+          "name": "Software Design with UML",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23433",
+          "name": "Analysis of Algorithms and Design",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-1-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23437",
+          "name": "Optimization Techniques",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "BS"
+        },
+        {
+          "subject_code": "HS23421",
+          "name": "Business Communication and Value Science – III",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "HS"
+        },
+        {
+          "subject_code": "GE23421",
+          "name": "Soft Skills-I",
+          "credits": 1,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "BA23511",
+          "name": "Principles of Financial Management",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "MS"
+        },
+        {
+          "subject_code": "OE-I",
+          "name": "Open Elective I",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "CB23531",
+          "name": "Computer Network Technology",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23532",
+          "name": "Artificial Intelligence",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "PE-I",
+          "name": "Professional Elective I",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-1-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PE"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23521",
+          "name": "Soft Skills- II",
+          "credits": 1,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "BA23611",
+          "name": "Financial and Cost Accounting",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "MS"
+        },
+        {
+          "subject_code": "BA23612",
+          "name": "Business Strategy",
+          "credits": 2,
+          "course_type": "Theory",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "MS"
+        },
+        {
+          "subject_code": "CB23631",
+          "name": "Machine Learning",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-1-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23632",
+          "name": "Cloud, Micro services and Application",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-1-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23633",
+          "name": "Usability Design of Software Applications",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "PE-II",
+          "name": "Professional Elective II",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "HS23621",
+          "name": "Business Communication and Value Science – IV",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "HS"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 1,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CB23622",
+          "name": "Internship",
+          "credits": 3,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "OE-II",
+          "name": "Open Elective – II",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "CB23731",
+          "name": "Data Visualization Techniques",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CB23732",
+          "name": "IT Project Management",
+          "credits": 3,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PC"
+        },
+        {
+          "subject_code": "PE-III",
+          "name": "Professional Elective III",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PE"
+        },
+        {
+          "subject_code": "PE-IV",
+          "name": "Professional Elective IV",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CB23721",
+          "name": "Project Evaluation I",
+          "credits": 2,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "PE-V",
+          "name": "Professional Elective V",
+          "credits": 4,
+          "course_type": "Lab Oriented Theory",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Theory & Lab",
+          "category": "PE"
+        },
+        {
+          "subject_code": "PE-VI",
+          "name": "Professional Elective VI",
+          "credits": 3,
+          "course_type": "Theory",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CB23822",
+          "name": "Project Evaluation II",
+          "credits": 6,
+          "course_type": "Laboratory",
+          "l_t_p": "0-0-12",
+          "theory_lab": "Lab",
+          "category": "EEC"
+        }
+      ]
+    }
+  ]
+}

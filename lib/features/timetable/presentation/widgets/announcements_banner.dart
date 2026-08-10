@@ -18,7 +18,9 @@ class AnnouncementsBanner extends ConsumerWidget {
       builder: (context) => StatefulBuilder(
         builder: (context, setState) => AlertDialog(
           backgroundColor: AppColors.surface,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
           title: Row(
             children: [
               Icon(LucideIcons.megaphone, color: AppColors.primary, size: 24),
@@ -26,7 +28,9 @@ class AnnouncementsBanner extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'Post Live Announcement',
-                  style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold),
+                  style: AppTypography.titleMedium.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
@@ -68,8 +72,13 @@ class AnnouncementsBanner extends ConsumerWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                if (titleCtrl.text.trim().isEmpty || msgCtrl.text.trim().isEmpty) return;
-                ref.read(announcementsRepositoryProvider).postAnnouncement(
+                if (titleCtrl.text.trim().isEmpty ||
+                    msgCtrl.text.trim().isEmpty) {
+                  return;
+                }
+                ref
+                    .read(announcementsRepositoryProvider)
+                    .postAnnouncement(
                       title: titleCtrl.text.trim(),
                       message: msgCtrl.text.trim(),
                       priority: isHigh ? 'high' : 'normal',
@@ -94,7 +103,7 @@ class AnnouncementsBanner extends ConsumerWidget {
 
     return asyncAnn.when(
       loading: () => const SizedBox.shrink(),
-      error: (_, __) => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
       data: (items) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,19 +120,36 @@ class AnnouncementsBanner extends ConsumerWidget {
                         color: AppColors.warning.withValues(alpha: 0.15),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(LucideIcons.bellRing, color: AppColors.warning, size: 18),
+                      child: const Icon(
+                        LucideIcons.bellRing,
+                        color: AppColors.warning,
+                        size: 18,
+                      ),
                     ),
                     const SizedBox(width: 10),
                     Text(
                       'Live Campus & Class Notices',
-                      style: AppTypography.titleSmall.copyWith(fontWeight: FontWeight.bold),
+                      style: AppTypography.titleSmall.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
                 TextButton.icon(
                   onPressed: () => _showPostDialog(context, ref),
-                  icon: const Icon(LucideIcons.plusCircle, size: 16, color: AppColors.primary),
-                  label: const Text('Post Notice', style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold, fontSize: 13)),
+                  icon: const Icon(
+                    LucideIcons.plusCircle,
+                    size: 16,
+                    color: AppColors.primary,
+                  ),
+                  label: const Text(
+                    'Post Notice',
+                    style: TextStyle(
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -132,15 +158,22 @@ class AnnouncementsBanner extends ConsumerWidget {
             if (items.isEmpty)
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
                 decoration: BoxDecoration(
                   color: AppColors.surfaceContainerLowest,
                   borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.2)),
+                  border: Border.all(
+                    color: AppColors.outlineVariant.withValues(alpha: 0.2),
+                  ),
                 ),
                 child: Text(
                   'No urgent announcements right now. All classes running as per schedule.',
-                  style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
+                  style: AppTypography.bodySmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
                 ),
               )
             else
@@ -160,7 +193,9 @@ class AnnouncementsBanner extends ConsumerWidget {
                           : AppColors.surfaceContainerLowest,
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: isHigh ? AppColors.warning : AppColors.outlineVariant.withValues(alpha: 0.3),
+                        color: isHigh
+                            ? AppColors.warning
+                            : AppColors.outlineVariant.withValues(alpha: 0.3),
                         width: isHigh ? 1.5 : 1,
                       ),
                     ),
@@ -173,21 +208,33 @@ class AnnouncementsBanner extends ConsumerWidget {
                             Row(
                               children: [
                                 if (isHigh) ...[
-                                  const Icon(LucideIcons.alertTriangle, color: AppColors.warning, size: 18),
+                                  const Icon(
+                                    LucideIcons.alertTriangle,
+                                    color: AppColors.warning,
+                                    size: 18,
+                                  ),
                                   const SizedBox(width: 6),
                                 ],
                                 Text(
                                   ann.title,
                                   style: AppTypography.titleSmall.copyWith(
                                     fontWeight: FontWeight.bold,
-                                    color: isHigh ? AppColors.warning : AppColors.textPrimary,
+                                    color: isHigh
+                                        ? AppColors.warning
+                                        : AppColors.textPrimary,
                                   ),
                                 ),
                               ],
                             ),
                             IconButton(
-                              onPressed: () => ref.read(announcementsRepositoryProvider).deleteAnnouncement(ann.id),
-                              icon: const Icon(LucideIcons.x, size: 16, color: AppColors.textSecondary),
+                              onPressed: () => ref
+                                  .read(announcementsRepositoryProvider)
+                                  .deleteAnnouncement(ann.id),
+                              icon: const Icon(
+                                LucideIcons.x,
+                                size: 16,
+                                color: AppColors.textSecondary,
+                              ),
                               constraints: const BoxConstraints(),
                               padding: const EdgeInsets.all(4),
                               tooltip: 'Clear Notice',
@@ -205,7 +252,11 @@ class AnnouncementsBanner extends ConsumerWidget {
                         const SizedBox(height: 8),
                         Text(
                           'Posted by ${ann.author} • ${_formatTimeAgo(ann.createdAt)}',
-                          style: AppTypography.labelSmall.copyWith(color: AppColors.textSecondary.withValues(alpha: 0.8)),
+                          style: AppTypography.labelSmall.copyWith(
+                            color: AppColors.textSecondary.withValues(
+                              alpha: 0.8,
+                            ),
+                          ),
                         ),
                       ],
                     ),

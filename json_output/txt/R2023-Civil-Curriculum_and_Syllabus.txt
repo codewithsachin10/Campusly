@@ -1,0 +1,1659 @@
+
+--- PAGE 1 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 1 -  
+RAJALAKSHMI ENGINEERING COLLEGE 
+(An Autonomous Institution Affiliated to Anna University Chennai) 
+DEPARTMENT OF CIVIL ENGINEERING 
+CURRICULUM REGULATION – 2023 
+B.E. CIVIL ENGINEERING 
+CHOICE BASED CREDIT SYSTEM 
+ 
+VISION: 
+To be a department imparting knowledge in Civil Engineering education, research, entrepreneurship and  
+industry outreach services for creating sustainable infrastructure and  enhancing quality of life with 
+professional and ethical values. 
+MISSION: 
+ To provide an effective teaching – learning environment enabling students to be a competent civil 
+engineer. 
+ To motivate research and entrepreneurial initiatives in the field of Civil Engineering. 
+ To inculcate ethical values to serve the society with high order professionalism. 
+ 
+PROGRAMME EDUCATIONAL OBJECTIVES: (PEO’s) 
+ 
+1. Graduates will possess fundamental knowledge in all fields of Civil Engineering and be able to apply in 
+the profession in Public and Private Sectors. 
+2. Graduates will have knowledge and preparation to tackle real-life Complex Problems and provide 
+sustainable solutions to Civil Engineering Industry. 
+3. Graduates will have the ability to update themselves with developments and new technologies, pursue 
+higher studies to face the Challenges. 
+4. Graduates will become Entrepreneurs, to meet the infrastructural needs of the society, following 
+professional and ethical values. 
+5. Graduates will be enthusiastic in pursuing lifelong learning and involve themselves in Research and 
+Development. 
+--- PAGE 2 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 2 -  
+PROGRAMME OUTCOMES: (PO’S) Engineering Graduates will be able to: 
+1. Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals and 
+an engineering specialization to the solution of complex engineering problems. 
+2. Problem analysis : Identify, formulate, review research literature, and analyze complex engineering  
+problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and 
+engineering sciences. 
+3. Design/development of solutions: Design solutions for complex engineering problems and design system 
+components or processes that meet the specified needs with appropriate consideration for the public health 
+and safety, and the cultural, societal, and environmental considerations. 
+4. Conduct investigations of complex problems : Use research -based knowledge and research methods  
+including design of experiments, analysis and interpretation of data, and synthesis of the information to  
+provide valid conclusions. 
+5. Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering 
+and IT tools including prediction and modeling to complex engineering activities with an understanding 
+of the limitations. 
+6. The engineer and society : Apply reasoning informed by the contextual knowledge to assess societal,  
+health, safety, legal and cultural issues and the consequent responsibilities relevant to th e professional 
+engineering practice. 
+7. Environment and sustainability : Understand the impact of the professional engineering Solutions in  
+societal and  environmental contexts,  and demonstrate the  knowledge of, and need for sustainable 
+development. 
+8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the  
+engineering practice. 
+9. Individual and team work: Function effectively as an individual, and as a member or leader in diverse  
+teams, and in multidisciplinary settings. 
+10. Communication: Communicate effectively on complex engineering activities with the Engineering  
+community and with society at large, such as, being able to comprehend and write effective reports and  
+design documentation, make effective presentations, and give and receive clear instructions. 
+11. Project management and finance : Demonstrate knowledge and understanding of  the engineering and 
+management principles and apply these to one’s own work, as a member and leader in a team, to manage 
+projects and in multidisciplinary environments. 
+12. Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent 
+and life-long learning in the broadest context of technological change. 
+--- PAGE 3 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 3 -  
+PROGRAM SPECIFIC OUTCOMES: ( PSOs) 
+ 
+PSO 1: The students will be proficient in the fundamental concepts and apply them to various Civil  
+Engineering projects in Structural Engineering, Geotechnical Engineering, Environmental Engineering,  
+Construction Materials and Management, Transportation Engineering, Water Resources and Management 
+for Sustainable Environment. 
+ 
+PSO 2: The students will be competent to solve complex problems using both conventional & modern  
+technologies to prepare cost estimation for Civil Engineering Projects. 
+ 
+PSO 3: The students will be skilled professionals to support the society focusing on sustainable 
+development and uphold professional ethics. 
+--- PAGE 4 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 4 -  
+CURRICULUM 
+SEMESTER I 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. GE23117 தமிழர் மரபு / Heritage of 
+Tamils 
+HS 1 0 0 1 1 
+2. HS23111 Technical Communication I HS 2 0 0 2 2 
+3. MA23112 Algebra and Calculus BS 3 1 0 4 4 
+4. CE23111 Building Materials PC 3 0 0 3 3 
+5. CE23112 Engineering Drawing for Civil 
+Engineers PC 2 0 4 6 4 
+LAB ORIENTED THEORY COURSES 
+6. PH23131 Physics of Materials BS 3 0 2 5 4 
+LABORATORY COURSES 
+7. GE23121 Engineering Practices - Civil and 
+Mechanical ES 0 0 2 2 1 
+MANDATORY COURSE 
+8. MC23112 Environmental Science and 
+Engineering MC 3 0 0 3 0 
+3TOTAL 17 1 8 26 19 
+SEMESTER II 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. GE23217 தமிழரும்்  ததொ் ழில்்  
+ந் ட்்பம் ம்்  / 
+Tamils and Technology 
+HS 1 0 0 1 1 
+2. MA23212 Differential Equations and 
+Complex Variables BS 3 1 0 4 4 
+3. GE23211 Engineering Mechanics ES 2 1 0 3 3 
+LAB ORIENTED THEORY COURSES 
+4. CY23233 Engineering Chemistry BS 3 0 2 5 4 
+5. EE23133 Basic Electrical and Electronics 
+Engineering ES 3 0 2 5 4 
+6. GE23231 Programming Using Python ES 1 0 4 5 3 
+LABORATORY COURSES 
+7. CE23221 Computer Aided Building 
+Drawing for Civil Engineers PC 0 0 4 4 2 
+ 
+8. HS23221/ 
+HS23222 
+Technical Communication II / 
+English for Professional 
+Competence 
+ 
+HS 
+ 
+0 
+ 
+0 
+ 
+2 
+ 
+2 
+ 
+1 
+9. GE23122 Engineering Practices – Electrical 
+and Electronics ES 0 0 2 2 1 
+MANDATORY COURSE 
+10. MC23111 Indian Constitution and Freedom 
+Movement MC 3 0 0 3 0 
+TOTAL 16 2 16 34 23 
+--- PAGE 5 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 5 -  
+SEMESTER III 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. CE23311 Strength of Materials I PC 3 0 0 3 3 
+2. CE23312 Fluid Mechanics PC 3 0 0 3 3 
+ 
+3. 
+ 
+CE23313 
+Construction Techniques, 
+Equipment and Practice 
+ 
+PC 
+ 
+3 
+ 
+0 
+ 
+0 
+ 
+3 
+ 
+3 
+LAB ORIENTED THEORY COURSES 
+4. CE23331 Surveying PC 3 0 2 5 4 
+5. MA23331 Transforms and Statistics BS 
+ 
+3 
+ 
+0 
+ 
+2 
+ 
+5 
+ 
+4 
+LABORATORY COURSES 
+6. CE23321 
+Construction Materials 
+Laboratory PC 0 0 4 4 2 
+7. CS23422 
+Python Programming for 
+Machine Learning ES 0 0 4 4 2 
+TOTAL 15 0 12 27 21 
+ 
+SEMESTER IV 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. CE23411 Strength of Materials II PC 3 0 0 3 3 
+2. CE23412 Hydraulics and Irrigation 
+Structures PC 3 0 0 3 3 
+3. CE23413 Water Supply Engineering PC 3 0 0 3 3 
+4. CE23414 Highway and Railway 
+Engineering PC 3 0 0 3 3 
+LAB ORIENTED THEORY COURSES 
+5. CE23431 Soil Mechanics PC 3 0 2 5 4 
+OPEN ELECTIVES 
+6.  Open Elective I OE 3 0 0 3 3 
+LABORATORY COURSES 
+ 
+7. 
+ 
+CE23421 
+Strength of Materials and 
+Hydraulic Engineering 
+Laboratory 
+ 
+PC 
+ 
+0 
+ 
+0 
+ 
+4 
+ 
+4 
+ 
+2 
+8. GE23421 Soft Skills – I EEC 0 0 2 2 1 
+TOTAL 18 0 8 26 22 
+--- PAGE 6 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 6 -  
+ 
+SEMESTER V 
+S. 
+NO. 
+ 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+ 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+ 
+1. 
+ 
+CE23511 Design of Reinforced 
+Concrete Elements 
+ 
+PC  
+3 
+ 
+1 
+ 
+0 
+ 
+4 
+ 
+4 
+2. CE23512 Foundation Engineering PC 3 0 0 3 3 
+3. CE23513 Waste Water Engineering PC 3 0 0 3 3 
+LAB ORIENTED THEORY COURSES 
+4. CE23531 Structural Analysis PC 3 0 2 5 4 
+PROFESSIONAL ELECTIVE COURSES 
+5.  Professional Elective I PE 3 0 0 3 3 
+OPEN ELECTIVES 
+6.  Open Elective – II OE 3 0 0 3 3 
+LABORATORY COURSES 
+7. CE23521 Water   and Waste Water 
+Analysis Laboratory PC 0 0 4 4 2 
+8. CE23522 Survey Camp PC 0 0 2 2 1 
+9. GE23521 Soft Skills – II EEC 0 0 2 2 1 
+TOTAL 18 1 10 29 24 
+ 
+SEMESTER VI 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. CE23611 Design of Steel Structures PC 3 1 0 4 4 
+2. CE23612 
+Construction, Planning, 
+Scheduling and Management PC 3 0 0 3 3 
+3. CE23613 
+Structural Dynamics and 
+Earthquake Engineering PC 3 0 0 3 3 
+PROFESSIONAL ELECTIVE COURSES 
+4.  Professional Elective II PE 3 0 0 3 3 
+LAB ORIENTED THEORY COURSES 
+5. CE23631 Structural Design and Drawing PC 3 0 2 5 4 
+LABORATORY COURSES 
+6. GE23621 Problem Solving Techniques EEC 0 0 2 2 1 
+ 
+7. 
+ 
+GE23627 
+Design Thinking and 
+Innovation 
+ 
+EEC 
+ 
+0 
+ 
+0 
+ 
+4 
+ 
+4 
+ 
+2 
+TOTAL 15 1 8 24 20 
+ 
+--- PAGE 7 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 7 -  
+SEMESTER VII 
+ 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+THEORY COURSES 
+1. CE23711 Estimation, Costing and 
+Valuation Engineering PC 3 0 0 3 3 
+2. CE23712 Hydrology PC 3 0 0 3 3 
+PROFESSIONAL ELECTIVE COURSES 
+3.  Professional Elective III PE 3 0 0 3 3 
+4.  Professional Elective IV PE 3 0 0 3 3 
+LABORATORY COURSES 
+5. CE23721 Building Information 
+Modelling PC 0 0 4 4 2 
+6. CE23722 Design Project EEC 0 0 4 4 2 
+7. CE23723 
+Artificial Intelligence and 
+Machine Learning for Civil 
+Engineers BS 0 0 4 4 2 
+8. CE23724 Internship EEC 0 0 2 2 1 
+TOTAL 12 0 14 26 19 
+ 
+SEMESTER VIII 
+S. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+CATE- 
+GORY 
+PERIODS 
+PER WEEK 
+TOTAL 
+CONTACT 
+PERIODS 
+ 
+CREDITS L T P 
+PROFESSIONAL ELECTIVE COURSES 
+1.  Professional Elective V PE 3 0 0 3 3 
+2.  Professional Elective VI PE 3 0 0 3 3 
+LABORATORY COURSES 
+3. CE23821 Project Work EEC 0 0 12 12 6 
+TOTAL 6 0 12 18 12 
+ 
+Summary 
+SEMESTER HS BS ES PC EEC PE OE TOTAL 
+I 3 8 1 7    19 
+II 2 8 11 2    23 
+III  4 2 15    21 
+IV    18 1  3 22 
+V    17 1 3 3 24 
+VI    14 3 3  20 
+VII  2  8 3 6  19 
+VIII     6 6  12 
+Total 5 22 14 81 14 18 6 160 
+--- PAGE 8 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 8 -  
+VERTICALS 
+ 
+Vertical 1 Vertical 2 Vertical 3 Vertical 4 Vertical 5 Vertical 6 
+ 
+Structural 
+Engineering 
+ 
+Environmental 
+Engineering 
+Construction 
+Materials and 
+Management 
+ 
+Geotechnical 
+Engineering 
+ 
+Geo- 
+Informatics 
+ 
+Transportation 
+Engineering 
+CE23A11 
+Advanced 
+Structural   
+Analysis 
+CE23B11 
+Municipal Solid 
+Waste 
+Management 
+CE23C11 
+Advanced 
+Construction 
+Techniques 
+CE23D11 
+Analysis of  Deep 
+Foundation 
+CE23E11 
+Advanced 
+Surveying 
+Techniques 
+CE23F11 
+Intelligent      
+Transport System 
+CE23A12 
+Maintenance, 
+Repair and 
+Rehabilitation of 
+Structures 
+CE23B12 
+Industrial Waste 
+Water Treatment 
+CE23C12 
+Sustainable and Lean 
+Construction 
+CE23D12 
+Ground 
+Improvement 
+Techniques 
+ 
+CE23E12 
+Hydrographic 
+Surveying  
+ 
+ 
+CE23F12 
+Pavement 
+Engineering 
+ 
+CE23A13 
+Design of Bridges 
+CE23B13 
+Air 
+and Noise 
+Pollution Control 
+Engineering 
+ 
+CE23C13 
+Characterization of 
+Materials 
+CE23D13 
+Geo-
+Environmental 
+Engineering 
+CE23E13 
+Total Station and 
+GPS Surveying  
+ 
+ 
+CE23F13 
+Smart cities 
+CE23A14 
+Prestressed 
+Concrete 
+Structures 
+CE23B14 
+Solid and 
+Hazardous Waste 
+Management 
+ 
+CE23C14 
+Smart Materials and 
+Structures 
+ 
+CE23D14 
+Geosynthetic 
+Engineering  
+ 
+CE23E14 
+Remote Sensing  
+CE23F14 
+Urban Planning  and 
+Development 
+CE23A15 
+Structural Health 
+Monitoring 
+CE23B15 
+Environmental and 
+Social Impact 
+Assessment 
+ 
+CE23C15 
+Energy Efficient 
+Buildings 
+CE23D15 
+Soil exploration 
+and field 
+testing 
+ 
+CE23E15 
+Cartography  and 
+GIS 
+CE23F15 
+Transport 
+Management  
+System 
+CE23A16 
+Pre-Engineered 
+Structures 
+CE23B16 
+Marine Pollution 
+and Control 
+ 
+CE23C16 
+Safety  in Construction 
+ 
+CE23D16 
+Rock 
+Mechanics 
+ 
+CE23E16 
+Photogrammetry 
+CE23F16 
+Airport and   
+Harbour 
+Engineering 
+ 
+ 
+CE23A17 
+Tall Structures 
+ 
+CE23B17 
+Global Climate 
+Change 
+ 
+ 
+CE23C17 
+Project Management 
+for Civil Engineers 
+ 
+CE23D17 
+Machine 
+Foundation 
+CE23E17 
+RS and GIS 
+applications for 
+Civil engineers 
+ 
+CE23F17 
+Traffic Engineering 
+and Management 
+--- PAGE 9 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 9 -  
+SEMESTER I 
+ 
+Course Code Course Title (Theory course) Category L T P C 
+GE23117 தமிழர் மரபு / HERITAGE OF TAMILS HS 1 0 0 1 
+Common to all branches of B.E/B. Tech programmes 
+ 
+அலகு I மமொ  ழி மற ்ற  ம ் இலக ்க  யம ் 3 
+இந்் த் ய  தமொ் ழிக்்   க் ட் ம்்  பங்்  கள்்    -  த் ரொ் வ் ட  தமொ் ழிகள்்    -  தமிழ்்   
+ஒர்   தொ் ம்்  தமொ் ழி  -  தமிழ்்  தொ் வ்்  வ் லக்்க் யங்்  கள்்      -     ொ்ங்்  க     
+இலக்்க் யத்்த் ன்்      ொ் மய     ொ் ொ் ரப்்    ற்் ற     தன்்  மம     -     ொ்ங்்  க 
+இலக்் க் யத்்த் ல்்    பக் ரத்்    ல்்    அறம்்    -  த் ருக்் க் றள் ல்்    மமலொ் ண்்  
+மமக்்   கருத்் Fக்் கள்்    -   தமிழ் க்்  கொ் ப்் ப் யங்்  கள்்  ,  தமிழகத்்த் ல்்   
+ொ் மண  தபொ் த்்த   ொ் மயங்்  கள் ன்்   தொ் க்் கம்்   -  பக்் தி  இலக்்க ் யம்்  , 
+ஆழ்் வொ் ரக்்    ள்்   மற்் றும்்  நொ் யன்்  மொ் ரக்்    ள்்  - சிற்் றிலக்் க் யங்்  கள்்  - 
+தம் ழில்்  நவ் ன இலக்்க் யத்்த் ன்்  வளரொ்்்    சி்்      -  தம் ழ்்   இலக்்க் ய வளரொ்்்   சி்்     
+யில்்   பொ் ரத் யொ் ர்்  மற்் ற் ம்்    பொ் ரத் தொ் ொ்ன்்   ஆக் மயொ் ர் ன்்  
+பங் கள ப்பு. 
+அலகு II மரபு - பொ  றற ஓவ  யங ் கள ் ம  தல ் நவ  ன ஓவ  யங ் கள ்  
+வறர - சிற ்பக ் 
+கறல  
+3 
+நட் கல்்   ம் தல்்   நவ் ன  சிற்் பங்்  கள்்   வமர  -  ஐம்் தபொ் ன்்    சிமலகள்்   -  
+பழங்்  க் ட் ய் னர்்   மற்் றும்்  அவரக்்    ள்்   தயொ் ர் க்் க் ம்்   மகவ் மனப்்   
+தபொ் ர் டக்்    ள்்  ,  தபொ் ம்்  மமகள்்   -  மதர்்   தொ் ய்்  யும்்   கமல  - சுட் மண்்    
+ச் ற்் பங்்  கள்்   - நொ் டடு்்     ப்் ப் றத்்  ததய்்  வங்்  கள்்   - க் மர் ம் மனயில்்   
+த் ருவள்் ள் வர்்  சிமல 
+- இமொ்க்்  கருவ் கள்்   - மிருதங்்  கம்்  , பமற, வீமண, யொ் ழ்் , நொ் தஸ்்  வரம்்   - 
+தமிழரக்்    ள் ன்்   ொ்மூக தபொ் ருளொ் தொ் ர வொ் ழ்் வ் ல்்  மகொ் வ் ல்்  கள் ன்்   பங்்  
+க் . 
+அலகு III நொ  டட  ப ்ப  றக ் கறலகள ் மற ்ற  ம ் வீர 
+வ  றளயொ  ட ்டுகள ் 
+3 
+ததருக்் கூதF்்  , கரகொ் டட்்    ம்்  , வ் ல்்  ல் ப்் பொ் டடு்்  , 
+கண யொ் ன்்   கூத்் F, ஒயிலொ் ட்்டம்்  , மதொ் ல்்  பொ் மவக்்  கூத்் F, சிலம்் பொ் டட்்    
+ம்்  , வளர் , ப் ல் யொ் டட்்    ம்்  , தம் ழரக்்    ள் ன்்   வ் மளயொ் டடு்்  கள்்  . 
+அலகு IV தமிழர ்கள  ன ்  த  றை க ் ககொ  ட ்பொ  டுகள ் 3 
+தமிழகத்்த் ன்்       தொ் வரங்்  கள் ம்்  ,     வ் லங்்  க் கள் ம்்       -     ததொ் ல்்  
+கொ் ப்் ப் யம்்       மற்் ற் ம்்       ொ்ங்்  க இலக்் க் யத்்த ் ல்்       அகம்்       மற்் றும்்       
+ப் றக்்       மகொ் டப்்    ொ் ட் கள்்       -      தம் ழரக்்    ள்்       மபொ் ற்் றிய அறக்் மகொ் டப்்    
+ொ் டு   -   ொ்ங்்  ககொ் லத்்த ் ல்்     தமிழததி்்     ல்்     எழுத்்தறிவ் ம்்  ,   கல்்  வ் யும்்     -   
+ொ் ங்்  ககொ் ல 
+நகரங்்  கள் ம்்     Fமற   ம் கங்்  கள் ம்்     -   ொ்ங்்  ககொ் லத்்த் ல்்     
+ஏற்் றுமதி   மற்் றும்்     இறக்் க் மதி   - கடல்்  கடந்் த நொ் ட் கள் ல்்  மொ் ொ் ழரக்்    
+ள் ன்்   தவற்் ற் . 
+அலகு V இந ்த  ய கதச  ய இயக ்கம ் மற ்ற  ம ் இந ்த  ய பை  ்  
+பொ  ட ்டிற ்க  த ் 
+தமிழர்கள ன் பங் கள ப்பு 
+3 
+இந்் த் ய வ் ட் தமலப்் மபொ் ர் ல்்   தமிழரக்்    ள் ன்்   பங்்  கு - இந்் த் யொ் வ் ன்்   
+ப் றப்் பக் த் கள் ல்்   தமிழ்்  ப்்  பண்்  பொ் டடி்்    ன்்     தொ் க்் கம்்     -    
+ச் யமர் யொ் மத    இயக்் கம்்     -    இந்் த் ய    மருத்் Fவத்்த ் ல்்  ,    சித்்த  
+மருத்் Fவத்்த் ன்்    பங்்  கு  -  கல்்  தவடடு்்     கள்்  ,  மகதயழ் த்் Fப்் படிகள்்   
+-  தம் ழ்் ப்்   ப் த்்தகங்்  கள் ன்்  
+அொ்சு்்     வரலொ் ற் . 
+Total Contact Hours: 15 
+ 
+TEXT-CUM-REFERENCE BOOKS: 
+தமிழக வரலொ் று - மக்் கள் ம்்  பண்்   பொ் ட் ம்்  - மக.மக. ப் ள்் மள 
+(தவள் யீட் : தமிழ்் நொ் டு பொ் டந் ல்்  
+மற்றும் கல் வியியல் பண கள் கழகம் ). 
+கண ன த் தமிழ் - முமனவர் இல. சுந்தரம் . (விகடன் பிரசுரம் ). 
+--- PAGE 10 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 10 -  
+கீழட்  - மவமக நத் க்் கமரயில்்  ொ்ங்்  ககொ் ல நகர நொ் கர் கம்்  (ததொ் ல்்  ல் யல்்   
+Fமற தவள் யீட் ) 
+தபொ் ருமந - ஆற்் றங்்  கமர நொ் கர் கம்்  . (ததொ் ல்்  ல் யல்்  Fமற தவள் யீட் ) 
+Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of 
+Tamil Studies. 
+Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: 
+International Institute of Tamil Studies). 
+The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute of 
+Tamil Studies). 
+Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of 
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu) 
+Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The 
+Author) 
+Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu  Text Book and 
+Educational Services Corporation, Tamil Nadu) 
+Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 
+ 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+  
+--- PAGE 11 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 11 -  
+Course Code Course Title (Theory course) Category L T P C 
+HS23111 TECHNICAL COMMUNICATION I HS 2 0 0 2 
+Common to all branches of B.E/B. Tech programmes 
+ 
+Objectives: 
+To facilitate students develop their comprehension skills 
+To enable students to improve their receptive skills 
+To equip learners with better vocabulary and enhance their writing skills 
+To aid students speak effectively in all kinds of communicative contexts. 
+To improve the learners’ basic proficiency in workplace communication 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Short Narratives and Skimming Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing (Jumbled Sentences), Process Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages 
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers 
+Vocabulary : Verbal Analogy / Cloze Exercise 
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives 
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT-V LANGUAGE FOR WORKPLACE 6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+ apply their comprehension skills and interpret different contents effortlessly 
+ read and comprehend various texts and audio visual contents 
+ infer data from graphs and charts and communicate it efficiently in varied contexts 
+ participate effectively in diverse speaking situations 
+ to present, discuss and coordinate with their peers in workplace using their language skills 
+ 
+SUGGESTED ACTIVITIES 
+ 
+Ice breaker 
+Just A Minute 
+Ship wreck 
+Hot seat 
+Vocabulary building 
+Chinese whispers 
+--- PAGE 12 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 12 -  
+Case study 
+ 
+SUGGESTED EVALUATION METHODS 
+Assignment topics 
+Quizzes 
+Class Presentation/Discussion 
+Continuous Assessment Tests 
+ 
+TEXT BOOK(S): 
+Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback 2017 
+Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth Edition (June 
+28, 2004) 
+Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press 
+ 
+REFERENCE BOOKS(S) / WEB LINKS: 
+Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With Answers 2nd Edition by 
+Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor) 
+Reading Development and Difficulties By Kate Cain 
+The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann Handley (Author) 
+ 
+ 
+HS23111 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 - - - 1 - - - - - 3 - - - - - 
+CO 2 - - - 1 - - - - - 3 - - - - - 
+CO 3 - 1 - 1 - - - - - 3 - - - - - 
+CO 4 - - - 2 - - - - 1 3 - - - - - 
+CO 5 - - - 1 - - - - 1 3 - - - - - 
+Average - 1 - 1.2 - - - - 1 3 - - - - - 
+ 
+Prepared by Name And Signature Approved by Name And Signature 
+ 
+ALL FACULTY DEPARTMENT OF ENGLISH 
+ 
+ 
+--- PAGE 13 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 13 -  
+Course Code Course Title (Theory course) Category L T P C 
+MA23112 ALGEBRA AND CALCULUS BS 3 1 0 4 
+Common to I sem. B.E. – Aeronautical Engineering, Automobile Engineering, Mechanical Engineering,  
+Mechatronics, Robotics & Automation, Civil Engineering and B.Tech. - Biotechnology, Food Technology & 
+Chemical Engineering 
+ 
+Objectives: 
+To introduce the matrix techniques and to illustrate the nature of the matrix. 
+To address data and synthesis of the information to provide valid conclusions. 
+To explain techniques of calculus which are applied in the solutions of engineering problems. 
+To analyse special types of integrals by analytical methods and numerical techniques. 
+To practice the techniques of Integration in finding area and volumes. 
+ 
+UNIT-I MATRICES 12 
+Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation - Cayley- 
+Hamilton Theorem(without proof) -Quadratic forms- Reduction to canonical form using orthogonal transformation- 
+Numerical computation of Eigen value using Power method 
+UNIT-II FUNCTIONS OF SEVERAL VARIABLES 12 
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit functions– 
+Taylor’s series for functions of two variables–Maxima and minima of functions of two variables–Lagrange’s method 
+of undetermined multipliers. 
+UNIT-III INTEGRAL CALCULUS 12 
+Integral Calculus: Definite Integrals as a limit of sums - Applications of integration to area, volume - Improper 
+integrals: Beta and Gamma integrals - Numerical computation of integrals: Trapezoidal rule - Gaussian Two point 
+quadrature 
+UNIT-IV MULTIPLE INTEGRALS 12 
+Double integrals – Change of order of integration – Area enclosed by plane curves–Triple integrals–Volume of 
+solids– Numerical computation of double integrals: Trapezoidal rule. 
+UNIT-V REGRESSION 12 
+Scatter diagram - Karl Pearson coefficient of correlation for raw data –Spearman rank correlation coefficient - Lines 
+of regression - Regression equation X on Y and Y on X- Curve fitting by Principle of least squares - Fitting a straight 
+line y = ax+b and a parabola y = ax2 + bx + c. 
+Total Contact Hours:60 
+ 
+Course Outcomes: 
+On completion of the course students will be able to: 
+ Demonstrate the matrix techniques in solving the related problems in engineering and technology. 
+ Analyse and interpret data, and synthesize information to provide valid conclusions. 
+ Interpret the problems in Engineering and Technology using the principles of mathematical calculus. 
+ Apply the analytical methods and numerical techniques to solve the related engineering problems. 
+ Evaluate multiple integrals to conduct investigations of complex problems. 
+ 
+SUGGESTED ACTIVITIES 
+Problem solving sessions 
+Activity Based Learning 
+Implementation of small module 
+ 
+ 
+SUGGESTED EVALUATION METHODS 
+Problem solving in Tutorial sessions 
+Assignment problems 
+Quizzes and class test 
+Discussion in classroom 
+ 
+Text Book(s): 
+Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 2014. 
+Gupta S.C. and Kapoor V.K.”Fundamentals of Mathematical Statistics”, Sultan and Sons 10th Edition,2000. 
+T Veerarajan, Engineering Mathematics –I , Mc Graw Hill Education, 2018. 
+I.R. Miller, J.E. Freund and R. Johnson , ”Probability and Statistics for Engineers “,4th Edition, Pearson, 2018. 
+A. Goon, M. Gupta and B.Dasgupta , ”Fundamentals of Statistics “,Vol. I & Vol. II, World Press, 2019. 
+--- PAGE 14 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 14 -  
+Reference Books(s) / Web links: 
+Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 2018. 
+T Veerarajan ,Fundamentals of Mathematical Statistics , yesdee publications, 2017. 
+Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, New Delhi, 2016. 
+Bali, N.P. and Manish  Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. Ltd., New Delhi, 
+2006. 
+N. Draper & H. Smith,”Applied Regression Analysis” III edition, Wiley, 1998. 
+ 
+ 
+MA23112 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 3 3 2 2 2 1 1 0 0 1 1 2 3 2 1 
+CO 2 3 3 2 3 2 1 1 0 0 1 1 2 3 2 2 
+CO 3 3 3 2 3 2 1 1 0 0 1 1 2 3 2 1 
+CO 4 3 3 2 3 3 1 1 0 0 1 1 2 3 3 2 
+CO 5 3 3 3 3 3 1 2 0 0 1 1 2 3 3 2 
+Average 3 3 2.2 2.8 2.4 1 1.2 0 0 1 1 2 3 2.4 1.6 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+ 
+DEPARTMENT OF MATHEMATICS 
+ 
+ 
+--- PAGE 15 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 15 -  
+Course Code Course Title (Theory course) Category L T P C 
+CE23111 BUILDING MATERIALS PC 3 0 0 3 
+ 
+Objectives: 
+ To acquire knowledge on the classification, testing methods and properties of bricks and stones. 
+ To identify the different types of cement and lime based on the testing methods as per IS code for 
+specific applications. 
+ To choose appropriate proportion of mortar and concrete based on the strength requirements. 
+ To characterize the timber products, steel and Aluminium that could be used as building material 
+ To appraise the properties and uses of advanced materials apart from conventional ones used in construction. 
+ 
+UNIT-I STONES & BRICKS 9 
+Building Stones: Classification of stones- Characteristics of good building stones, important types of building stones, 
+their properties and uses – aggregates. 
+Brick and other Clay Products: Composition of brick-earth, manufacturing process of bricks, characteristics of good 
+building bricks, classification and testing of bricks, special types of bricks and their uses. Types of tiles and their use in 
+buildings. Terracotta, stoneware 
+UNIT-II LIME AND CEMENT 9 
+Lime and Cement: IS classification of lime and uses, chemical composition of cement, IS specifications and tests on 
+Portland cement, Manufacture Process-different types of cements and their uses. 
+UNIT-III MORTAR AND CONCRETE 9 
+Mortar and Concrete: Preparation of cement mortar and concrete for different types of works, factors affecting 
+strength of concrete, types of concrete- Admixtures and their specific use. 
+UNIT-IV TIMBER & STEEL 9 
+Timber and Wood Based Products: Classification of timber trees, cross section of exogenous tree, hard wood and 
+soft wood, seasoning of timber, ply wood and its uses. 
+Steel and Aluminium: Types of steel-mild steel, high carbon steel, high strength steel properties and uses, light 
+Gauge steel, commercial forms of steel and aluminium and their uses. 
+UNIT-V OTHER MATERIALS 9 
+Introduction to Advanced Materials: Ferro cement, FRP, FAL-G brick, plastics, Lightweight Blocks, paints, and 
+geotextiles. 
+Total Contact Hours: 45 
+ 
+Course Outcomes:  
+On completion of the course, the student will be able to 
+ Classify and characterize building stones, bricks and will know the manufacturing process of bricks 
+ Comprehend the manufacturing process lime , cement and will know the types of cement 
+ Select appropriate admixtures to proportion the concrete and mortar for customized applications. 
+ Recognize the preservation methods of timber and metals 
+ Identify the advanced Civil Engineering materials and the appropriate usage in construction practice 
+ 
+SUGGESTED ACTIVITIES (if any) (UNIT/ Module Wise) – Could suggest topic 
+Seminar on new material that is not included in this module. 
+Case study of various building materials used in an ongoing project with a suggestion of alternate materials that can 
+be used with justification. 
+ 
+SUGGESTED EVALUATION METHODS (if Any) (UNIT/ Module Wise) – could suggest topic 
+A project report on the above mentioned case study. 
+ 
+Text Book(s): 
+Building Materials, Duggal, S.K, New Age International (P) Limited Publishers., Jan 2019, 5th Edition 
+Building and Construction Materials, Gambhir, McGraw Hill Education (India), 2014 
+Civil Engineering Materials, Peter A. Claisse, Butterworth- Heinemann, 2016, 1st Edition. 
+ 
+Reference Books(s) / Web links: 
+1.Essentials of Civil Engineering Materials. Kathryn E. Schulte Grahame, Steven W. Cranford, Craig M. Shillaber, 
+and Matthew J. Eckelman. Cognella Academic Publishing, San Diego, 2020, 1st Edition. 
+2.Building Materials in Civil Engineering, Haimei Zhang. Woodhead Publishing Limited and 
+Science Press, 2011, 1st Edition. 
+Online Resources: 
+--- PAGE 16 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 16 -  
+https://onlinecourses.nptel.ac.in/noc21_ce10/preview 
+https://onlinecourses.nptel.ac.in/noc20_ar04/preview 
+ 
+ 
+CE23111 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 3 2 2 2 1 1 2 1 1 2 1 1 3 2 1 
+CO 2 3 2 2 2 1 2 2 1 1 2 1 1 3 2 1 
+CO 3 3 3 3 2 3 2 2 1 1 3 2 2 3 3 1 
+CO 4 2 2 2 3 1 2 2 2 1 2 1 1 3 2 2 
+CO 5 3 2 2 2 3 2 3 2 1 3 2 2 3 3 3 
+Average 2.8 2.2 2.2 2.2 1.8 1.8 2.2 1.4 1 2.4 1.4 1.4 3 2.4 1.6 
+ 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+ 
+DR.S.GEETHA, PROFESSOR & HEAD, 
+DEPARTMENT OF CIVIL ENGINEERING 
+ 
+ 
+--- PAGE 17 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 17 -  
+Course Code Course Title (Theory Course) Category L T P C 
+CE23112 ENGINEERING DRAWING FOR CIVIL ENGINEERS PC 2 0 4 4 
+ 
+Objectives: 
+ To develop knowledge on basic drawing and Standards 
+ To expose them to know about different Building Components. 
+ To improve their visualization skills so that they can apply these skills in developing new products. 
+ To improve their technical communication skill in the form of building bye-laws & submission of drawings 
+ To Understand the regulation and requirement of building as per National Building Code 
+ 
+UNIT-I INTRODUCTION & BASIC DRAWINGS 12 
+Use of Drafting Instruments - BIS Conventions and Specifications - Size, Layout and Folding of Drawing Sheets - 
+Lettering and Dimensioning – Symbols – Types of Views - Layout of Views – Title Block – Scales - Principal Planes, 
+Projection of Points using Four Angles of Pro jection, Projection of Straight Lines  – Lines parallel or inclined to one 
+plane  – Projection of Plane - Inclined to any one Principal Plane  – Panelled & Flush door – window 
+UNIT-II BUILDING COMPONENTS 12 
+Types of Structures - Foundation and its types – Bricks, Blocks & Bonds – Beam-Column Joint – Lintel-cum-Sunshade 
+– Steel roof truss – Rain water harvesting – Material Symbols (Hatch). 
+UNIT-III ISOMETRIC & PERSPECTIVE VIEWS PROJECTION AND FREE HAND SKETCH 12 
+Isometric & Perspective Views and Projections - Visualization concepts and Free Hand sketching:–Representation of 
+Three Dimensional objects - Freehand sketching of multiple views from pictorial views of objects. 
+UNIT-IV BUILDING BYE-LAWS & SUBMISSION OF DRAWINGS 12 
+Objects of bye-laws- Importance of bye-laws- Function of local authority- Setbacks - Plot Coverage- Number of floors- 
+Height of building- Built up Area- Floor space index (FSI) - Views and details necessary for the preparation of  a civil 
+engineering drawing- Site Plan – Necessity for Approval of plans from local body- Layout plan and key plan- 
+Requirements for submission of drawing for approval. 
+UNIT-V BUILDING DRAWINGS 12 
+Requirements of a building planning as per NBC (residential and public) - Plan, Section and Elevation of different 
+buildings. 
+Total Contact Hours:60 
+ 
+Course Outcomes: 
+On completion of the course, the student will be able to 
+ comprehend to draw the basic building components. 
+ draw the building structural member and symbols used. 
+ visualize and prepare Isometric & Perspective view and free hand sketch. 
+ draw the building as per Necessity for Approval. 
+ draw the Plan, Section and Elevation of building. 
+ 
+SUGGESTED ACTIVITIES (if any) (UNIT/ Module Wise) – Could suggest topic 
+Problem solving sessions – All Five units 
+Activity Based Learning – Model Making 
+ 
+SUGGESTED EVALUATION METHODS (if Any) (UNIT/ Module Wise) – could suggest topic 
+Tutorial problems 
+Assignment problems 
+ 
+Text Book(s): 
+Bhatt N.D. and Panchal V.M., “Engineering Drawing”, Charotar Publishing House, 50th Edition, 2010. 
+V.B Sikka “Civil Engineering Drawing”, S.K Kataria & Sons, New Delhi. 
+ 
+Reference Books(s) / Web links: 
+Basant Agrawal, Agrawal C.M., “Engineering Drawing”, 3rd Edition, McGraw Hill Education, 2019. 
+National Building Code of India 2016. 
+--- PAGE 18 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 18 -  
+ 
+CE23112 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 2 2 1 0 2 1 0 0 2 1 1 0 3 2 2 
+CO 2 2 2 3 0 3 1 0 0 2 2 1 0 3 2 2 
+CO 3 3 3 3 1 3 1 0 0 3 2 2 0 3 2 1 
+CO 4 1 3 3 1 2 3 0 3 1 2 1 0 3 3 3 
+CO 5 3 3 3 1 3 1 0 0 3 2 2 0 3 2 2 
+Average 2.2 2.6 2.6 1 2.6 1.4 0 3 2.2 1.8 1.4 0 3 2.2 2 
+ 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+ 
+MR.MAHAMOOD UL HASAN.N, ASSISTANT 
+PROFESSOR (SG)/ CIVIL 
+ 
+ 
+--- PAGE 19 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 19 -  
+Course Code Course Title (Lab oriented Theory Course) Category L T P C 
+PH23131 
+ 
+PHYSICS OF MATERIALS BS 3 0 2 4 
+Common to I sem. B.E. – Aeronautical Engineering, Automobile Engineering, Civil Engineering, Mechanical 
+Engineering 
+and 
+Common to II sem. B.E. Mechatronics and Robotics & Automation 
+Objectives: 
+ To enhance the fundamental knowledge of elasticity and its applications relevant to engineering streams. 
+ To become proficient in crystal growth and crystal systems. 
+ To introduce the essential of phase transformation in materials. 
+ To impart knowledge on the structure, properties, treatment, testing and applications of metals and alloys. 
+ To familiarize students with thermal properties and applications. 
+UNIT-I PROPERTIES OF MATTER 9 
+Elasticity–Hooke’s law-stress–strain-modulus of elasticity-stress-strain diagram-Poisson’s ratio-rigidity modulus- 
+twisting couple on a cylinder -moment of inertia - torsional pendulum method. Bending of beams -bending moment- 
+cantilever depression-theory and experiment - Young’s modulus determination –uniform and non -uniform bending-I- 
+shape girders. Viscosity-flow of motion-Reynolds number. 
+UNIT-II THERMAL PHYSICS 9 
+Transfer of heat energy – thermal expansion of solids and liquids – expansion joints - bimetallic strips - thermal 
+conduction, convection and radiation –rectilinear heat flow – thermal conductivity - Forbe’s and Lee’s disc method:  
+theory and experiment - conduction through compound media (series and parallel) – thermal insulation – applications: 
+heat exchangers, refrigerators, ovens and solar water heaters. 
+UNIT-III PHASE DIAGRAMS 9 
+Solid solutions - Hume-Rothery’s rules –Gibb’s phase rule – unary phase diagram- binary phase diagrams - 
+isomorphous systems - tie-line and lever rule - eutectic, eutectoid, peritectic, peritectoid, monotectic and syntectic  
+systems - formation of microstructures-homogeneous and non-homogenous cooling – nucleation (Qualitative)– iron- 
+carbon phase diagram - eutectoid steel – hypo-eutectoid and hyper -eutectoid steel – diffusion - Fick’s laws – T-T-T 
+diagrams. 
+UNIT-IV CRYSTAL PHYSICS 9 
+Basis – lattices – unit cell-crystal systems – Bravais lattices –number of atoms, atomic radius, co-ordination number 
+and packing fraction - SC, BCC,  FCC, HCP lattices and diamond structure - polymorphism and allotropy -graphite 
+structure - Miller indices – determination of d-space-crystal growth techniques-solution growth –melt growth- 
+Bridgmann and Czochralski - crystal defects. 
+UNIT-V ADVANCED MATERIALS & TESTING 9 
+Metallic glasses – preparation, properties and applications - Composites – types and properties - Shape memory 
+alloys – properties and applications - Nano-materials – top down and bottom up approaches –sol-gel method-pulsed 
+laser deposition-ball milling- properties-applications - Tensile strength – Hardness – Fatigue - Impact strength – Creep 
+- Fracture – types of fracture. 
+ Contact Hours : 45 
+List of Experiments 
+1 Determination of Young’s modulus of given material by non-uniform bending method. 
+2 Determination of moment of inertia of a disc and rigidity modulus of a given wire using Torsional pendulum. 
+3 Determination of Young’s modulus of given beam by cantilever method. 
+4 Determination of viscosity of the given liquid using Poiseuille’s method. 
+5 Determination of Thermal conductivity of a bad conductor – Lee’s Disc method. 
+6 Determination of Velocity of ultrasound and compressibility of given liquid – Ultrasonic interferometer. 
+7 Determination of the wavelength of Laser and particle size of given powder. 
+8 Determination of the Hysteresis loss of ferromagnetic material by B-H curve experiment. 
+9 Find the thickness of a given thin wire – Air wedge method. 
+10 Study the characteristics of solar cell parameters. 
+ Contact Hours : 30 
+ Total Contact Hours : 75 
+Course Outcomes: 
+On completion of the course, the students will be able to 
+ Apply the elastic nature of materials and determine the elastic moduli of different materials. 
+ Apply the basic knowledge of crystal structure in solids. 
+ Analyze and measure the properties of alloys. 
+ Analyze various material testing methods and use them in suitable applications. 
+ Understand the concepts of heat transfer in various applications. 
+Suggested Activities 
+ Problem solving sessions 
+Suggested Evaluation Methods 
+--- PAGE 20 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 20 -  
+ Quizzes 
+ Class Presentation / Discussion 
+Text Book(s): 
+1 Bhattacharya, D.K. &Poonam, T. “Engineering Physics”.Oxford University Press, 2018. 
+2 Gaur, R.K. & Gupta, S.L. “Engineering Physics”.DhanpatRai Publishers, 2018. 
+3 Raghavan, V. “Physical Metallurgy: Principles and Practice”. PHI Learning, 2019. 
+Reference Books(s) / Web links: 
+1 Balasubramaniam, R. “Callister's Materials Science and Engineering”.Wiley India Pvt. Ltd., 2017 
+2 Resnick, R., Halliday, D., & Walker, J. “Principles of Physics”, Wiley India Pvt., 2018. 
+3 Raghavan, V. “Materials Science and Engineering : A First course”. PHI Learning, 2019. 
+4 https://nptel.ac.in/courses/113104068 
+5 https://archive.nptel.ac.in/courses/115/105/115105099/ 
+ 
+List of Equipment Available 
+(Common to B.E. Aero, Auto, Civil, Mechanical, Mechatronics Engineering and R&A) 
+ 
+ 
+S. No 
+ 
+Name of the equipment Quantity 
+Required 
+Quantity 
+Available 
+ 
+Deficiency 
+1 Young’s modulus by Non - Uniform bending method 
+Travelling Microscopes, Meter scale etc., 6 13 - 
+2 Rigidity Modulus - Torsional Pendulum Setup 6 19 - 
+3 Velocity of sound and compressibility of liquid – 
+Ultrasonic Interferometer 6 14 - 
+4 Wavelength of Laser and Characteristics -Laser source 
+And grating plate 6 15 - 
+5 B-H curve Setup and CRO 6 7 - 
+6 Thermal conductivity of bad conductor- Lee’s Disc setup 6 16 - 
+7 LCR circuit kit 6 7 - 
+8 Thickness of a thin wire-Air wedge method – 
+Travelling microscope 6 13 - 
+9 Solar cell parameters setup 6 8 - 
+10 Poiseuille’s method set up 6 10 - 
+ 
+ 
+PH23131 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 3 3 2 2 2 1 2 1 1 1 2 2 3 2 2 
+CO 2 3 3 2 2 3 1 2 1 1 1 2 2 3 2 2 
+CO 3 3 3 3 3 3 1 3 1 1 1 2 2 3 3 2 
+CO 4 3 3 3 3 3 2 3 2 2 1 3 2 3 3 3 
+CO 5 3 3 2 2 2 2 3 2 2 1 2 2 3 2 3 
+Average 3 3 2.4 2.4 2.6 1.4 2.6 1.4 1.4 1 2.2 2 3 2.4 2.4 
+ 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+DR. B. LATHA 
+MS. R. BHAVANI 
+MS. R. KAVITHA 
+ 
+--- PAGE 21 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 21 -  
+Course Code Course Title (Laboratory Course) Category L T P C 
+GE23121 ENGINEERING PRACTICES – CIVIL AND MECHANICAL ES 0 0 2 1 
+Objectives: 
+ To provide exposure to the students with hands on experience on various basic engineering practices in Civil 
+and Mechanical Engineering. 
+List of Experiments 
+CIVIL ENGINEERING PRACTICE 
+1. Study of pipeline joints, its location and functions: valves, taps, couplings, unions, reducers, and 
+elbows in household fittings. 
+2. Preparation of basic plumbing line sketches for wash basins, water heaters, etc. 
+3. Hands-on-exercise: Basic pipe connections – Pipe connections with different joining components. 
+Carpentry Works: 
+4. Study of joints in roofs, doors, windows and furniture. 
+5. Hands-on-exercise: Woodwork, joints by sawing, planning and chiselling. 
+MECHANICAL ENGINEERING PRACTICE 
+6. Preparation of butt joints, lap joints and T- joints by Shielded metal arc welding. 
+7 Gas welding practice. 
+Basic Machining: 
+8 Simple Turning and Taper turning 
+9 Drilling Practice 
+Sheet Metal Work: 
+10 Forming & Bending: 
+11 Model making – Trays and funnels 
+12 Different type of joints. 
+Machine Assembly Practice: 
+13 Study of centrifugal pump 
+14 Study of air conditioner 
+ Total Contact Hours : 30 
+ 
+Course Outcomes: 
+On completion of the course, the student will be able to 
+ 
+ 
+perform plumbing activities for residential and industrial buildings considering safety aspects while  gaining clear 
+understanding on pipeline location and functions of joints like valves, taps, 
+couplings, unions, reducers, elbows, etc. 
+ 
+ perform wood working carpentry activities like sawing, planning, cutting, etc. while having clear understanding 
+of the joints in roofs, doors, windows and furniture. 
+ 
+ produce joints like L joint, T joint, Lap joint, Butt joint, etc. through arc welding process while acquiring in depth 
+knowledge in the principle of operation of welding and other accessories 
+ 
+ perform operations like Turning, Step turning, Taper turning, etc. in lathe and Drilling operation in drilling machine 
+ 
+ perform sheet metal operations like Forming, Bending, etc. and fabricating models like Trays, funnels, etc. 
+ 
+List of equipment and components 
+(For a Batch of 30 Students) 
+CIVIL 
+1. Assorted components for plumbing consisting of metallic pipes, plastic pipes, flexible pipes, couplings, 
+unions, elbows, plugs and other fittings - 15 Sets. 
+2. Plumbing vice (fitted to work bench) – 15 Nos. 
+3. Carpentry vice (fitted to work bench) - 15 Nos. 
+4. Standard woodworking tools - 15 Sets. 
+5. Models of industrial trusses, door joints, furniture joints - 5 each 
+6. Power Tools: 
+(a) Rotary Hammer - 1 No. 
+(b) Circular Saw - 1 No. 
+(c) Electric Planer - 1 No. 
+(d) Hand Drilling Machine - 1 No. 
+(e) Jigsaw - 1 No. 
+(f) Cutoff Machine – 1 No. 
+
+--- PAGE 22 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 22 -  
+MECHANICAL 
+1. Arc welding transformer with cables and holders - 5 Nos. 
+2. Welding booth with exhaust facility - 5 Nos. 
+3. Welding accessories like welding shield, chipping hammer, wire brush, etc. - 5 Sets. 
+4. Oxygen and acetylene gas cylinders, blow pipe and other welding outfit - 1 No. 
+5. Centre lathe - 5 Nos. 
+6. Standard Sheet metal working tools – 2 sets 
+7. Study-purpose items: centrifugal pump, air-conditioner – 1 each. 
+ 
+ 
+GE23121 
+ 
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 3 3 2 2 1 2 2 3 1 2 2 2 3 2 3 
+CO 2 2 3 3 2 1 2 2 3 1 2 2 1 3 2 3 
+CO 3 3 3 3 3 3 1 1 2 1 2 2 3 3 3 3 
+CO 4 2 3 3 3 2 2 2 2 1 3 3 2 3 3 3 
+CO 5 3 2 2 3 3 2 2 3 2 3 3 3 3 2 3 
+Average 2.6 2.8 2.6 2.6 2 1.8 1.8 2.6 1.2 2.4 2.4 2.2 3 2.4 3 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+ 
+DEPARTMENT OF MECHANICAL 
+ENGINEERING 
+ 
+ 
+--- PAGE 23 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 - 23 -  
+Course Code Course Title (Theory Course) Category L T P C 
+MC23112 ENVIRONMENTAL SCIENCE AND ENGINEERING MC 3 0 0 0 
+Common to I sem. B.E. Aeronautical Engineering, Automobile Engineering, Biomedical Engineering, Civil 
+Engineering, Mechanical Engineering, Mechatronics, and Robotics and Automation 
+and 
+B.Tech. – Biotechnology, Information Technology, Food Technology & Chemical Engineering  
+and 
+Common to II sem. B.E. – Electronics and Communication Engineering, Electrical and Electronics Engineering,  
+Computer Science and Engineering, Computer Science and Design & Computer Science and Engineering (Cyber 
+Security) 
+and 
+B.Tech. – Artificial Intelligence & Machine Learning and Artificial Intelligence & Data Science. 
+ 
+Objectives: 
+To develop the understanding of environmental and associated issues 
+To develop an attitude of concern for the environment 
+To promote enthusiasm in participating environmental protection initiatives 
+To nurture skills to solve environmental degradation issues 
+To develop the knowledge about the environmental laws 
+ 
+UNIT-I AIR AND NOISE POLLUTION 9 
+Definition –sources of air pollution –chemical and photochemical reactions in the atmosphere - formation of smog,  
+PAN, acid rain, ozone depletion, particulate pollutants-Air quality standards-Air quality indices - control of particulate 
+air pollutants -gravitational settling chambers, cyclone separators, wet collectors, fabric filters (Bag -house filter), 
+electrostatic precipitators (ESP)-catalytic converters. 
+Noise pollution –sources - health effects - standards- measurement and control methods. 
+UNIT-II WATER POLLUTION AND ITS MANAGEMENT 9 
+Definition-causes-effects of water pollution-point and nonpoint sources of wastewater-marine pollution - thermal 
+pollution - Control of water pollution by physical, chemical and biological methods – wastewater treatment-primary, 
+secondary and tertiary treatment-sources and characteristics of industrial effluents- zero liquid discharge. 
+UNIT-III SOLID WASTE AND HAZARDOUS WASTE MANAGEMENT 9 
+Solid waste – types- municipal solid waste management: sources, characteristics, collection, and transportation- sanitary 
+landfill, recycling, composting, incineration, energy recovery options from waste - Hazardous   waste   – types, 
+characteristics, and health impact - hazardous waste management: neutralization, oxidation reduction,  precipitation, 
+solidification, stabilization,incineration and final disposal. 
+E-waste-definition-sources-effects on human health and environment - E-waste management- steps involved - Role of 
+E-waste management within the initiatives of the Govt. of India- Swachh Bharat Mission. 
+UNIT-IV SUSTAINABLE DEVELOPMENT 9 
+Sustainable development- concept-dimensions-sustainable development goals - value education- gender equality – food 
+security - poverty – hunger - famine - Twelve principles of green chemistry - Green technology - definition, importance 
+- Cleaner development mechanism - carbon credits, carbon trading, carbon sequestration, eco labeling- 
+International conventions and protocols-Disaster management. 
+UNIT-V ENVIRONMENTAL MANAGEMENT AND LEGISLATION 9 
+Environmental Management systems - ISO 14000 series- Environmental audit-Environmental Impact Assessment- life 
+cycle assessment- h uman health risk assessment - Environmental Lawsand Policy- Objectives - Polluter pays principle, 
+Precautionary principle - The Environment (Protection) Act 1986 - Role of Information technology in 
+environment and human health. 
+Total Contact Hours:45 
+--- PAGE 24 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 24  
+ 
+Course Outcomes: 
+On completion of the course, the student will be able to 
+ Associate air and noise quality standards with environment and human health. 
+ Illustrate the significance of water and devise control measures for water pollution. 
+ Analyze solid wastes and hazardous wastes. 
+ Outline the goals of sustainable development in an integrated perspective. 
+ Comprehend the significance of environmental laws. 
+ 
+ 
+Text Book(s): 
+Benny Joseph, ‘Environmental Science and Engineering’, Tata McGraw-Hill, New Delhi, 2016 
+Anubha Kaushik and C. P. Kaushik’s “Perspectives in Environmental Studies”, 6th Edition, New Age International 
+Publisher, 2018. 
+Johri R., E-waste: implications, regulations, and management in India and current global best practices, TERI Press, 
+New Delhi 
+ 
+ 
+Reference Books(s) / Web links: 
+R.K. Trivedi, ‘Handbook of Environmental Laws, Rules, Guidelines, Compliances and Standards’, Vol. I and II, 
+Enviro Media. 38. Edition 2010. 
+Cunningham, W.P. Cooper, T.H. Gorhani, ‘Environmental Encyclopedia’, Jaico Publ., House, Mumbai, 2001. 
+Fowler B, Electronic Waste – 1 st Edition (Toxicology and Public Health Issues), 2017 Elsevier 
+NPTEL course url 
+https://onlinecourses.nptel.ac.in/noc19_ge22/ 
+NPTEL 
+https://news.mit.edu/2013/ewaste-mit 
+For downloading text/reference books the weblink is given below can be used 
+http://libgen.rs/ 
+ 
+ 
+MC23112  
+PO1 
+ 
+PO2 
+ 
+PO3 
+ 
+PO4 
+ 
+PO5 
+ 
+PO6 
+ 
+PO7 
+ 
+PO8 
+ 
+PO9 
+ 
+PO10 
+ 
+PO11 
+ 
+PO12 
+ 
+PSO1 
+ 
+PSO2 
+ 
+PSO3 
+CO 1 2 3 2 2 1 3 3 1 0 1 0 2 3 2 2 
+CO 2 2 3 2 2 2 3 2 1 0 1 0 2 3 2 2 
+CO 3 2 3 3 3 2 2 3 1 1 1 1 2 3 3 2 
+CO 4 2 2 3 2 1 3 3 1 1 1 0 3 2 2 3 
+CO 5 2 3 2 2 1 2 3 3 2 1 1 2 3 2 3 
+Average 2 2.8 2.4 2.2 1.4 2.6 2.8 1.4 1.3 1 1 2.2 2.8 2.2 2.4 
+ 
+ 
+Prepared by Name and signature Approved by Name and Signature 
+DEPARTMENT OF CHEMISTRY  
+SUGGESTED EVALUATION METHODS 
+● Continuous assessment tests 
+● Assignments 
+● Case studies, class room presentations (or) site visit 
+--- PAGE 25 ---
+Curriculum and Syllabus | B.E. Civil Engineering |R2023 25  
+SEMESTER II 
+ 
+Course Code Course Title (Theory course) Category L T P C 
+GE23217 தமிழரும் மொத ழில் நுட்பமும் / TAMILS AND 
+TECHNOLOGY 
+HS 1 0 0 1 
+Common to all branches of B.E/B. Tech programmes –Second Semester 
+ 
+அலகு I மநசவு மற ் ற  ம ் பொ  றனத ் ம தொ  ழ  ல ் ந  ட ்பம ் 3 
+ொ் ங்்  க    கொ் லத்்த் ல்்  தநொ்வ ் த்்  ததொ் ழில்்  -    பொ் மனத்்
+ ததொ் ழில்்  ந் டப்்    ம்்  -    கர் ப்் பு    சிவப்் பு 
+பொ் ண்்  டங்்  கள்்  - பண்்  டங்்  கள் ல்்  க் றல்்  க் றியீட் கள்்  . 
+அலகு II வடிவறமப்பு மற்றும் கட்டிடத் மொத ழில் நுட்பம் 3 
+ொ் ங்்  க     கொ் லத்்த் ல்்       வட் வமமப்் பு      மற்் றும்்       கடடு்்     மொ் னங்்  கள்்       &      
+ொ்ங்்  க      கொ் லத்்த ் ல்்  வ் டடு்்     ப்் தபொ் ர் ட்்கள் ல்்     வட் வமமப்் பு    -    ொ் ங்்  
+க    கொ் லத்்த் ல்்         கடடு்்     மொ் ன    தபொ் ர் ட்்கள் ம்்  நட் கல்்  ல் ம்்    -  
+சிலப்் பத் கொ் ரத்்த் ல்்    மமமட  அமமப்் பு  பற்் ற் ய  வ் வரங்்  கள்்    -   மொ் மல்்  
+லப் ரொ் ்்  சிற்் பங்்  கள் ம்் ,    மகொ் வ் ல்்  கள் ம்்     -    மொ்ொ் ழர்்    கொ் லத்் Fப்்     
+தபர் ங்்  மகொ் யில்்  கள்்     மற்் றும்்     பிற வழிபொ் டடு்்     த்்   தலங்்  கள்்    -  
+நொ் யக்் கர்்   கொ் லக்்   மகொ் யில்்  கள்்    -  மொ் த் ர்   கடட்்    மமப்் ப் கள்்    பற்் றி 
+அறிதல்்  ,   மFமர   ம் னொ் ட்்சி   அம்்  மன்்    ஆலயம்்    மற்் றும்்    த் ருமமல   
+நொ் யக்் கர்்    மஹொ் ல்்    - தொ்ட்்ட் நொ் டு   வ் ட் கள்்    -   ப் ர் டடி்்    ஷ்்     
+கொ் லத்்த் ல்்    தொ்ன்்  மனயில்்    இந்்மதொ்    -   ொ் ொ் மரொ் தொ்ன் க்்  
+கட்்ட் டக்்  கமல. 
+அலகு 
+III 
+உற ் பத ்த  த ் மதொ  ழ  ல ்  ந  ட ்பம ் 3 
+கப்் பல்்   கடடு்்     ம்்   கமல - உமலொ் கவ் யல்்   - இரும்் ப் த்்  ததொ் ழிற்் ொ்ொ் மல - 
+இரும்்  மப உருக்் க் தல்்  , எஃகு  -  வரலொ் ற்் றுொ் ்்   ொ்ொ் ன்்  றுகளொ் க  தொ் ம்் பு  
+மற்் றும்்    தங்்  க  நொ் ணயங்்  கள்்    -  நொ் ணயங்்  கள்்  அொ்ொ்்்    டித்்தல்்   - மண  
+உர் வொ் க்் க் ம்்   ததொ் ழிற்் ொ்ொ் மலகள்்   - கல்்  மண கள்்  , கண்்  ணொ் டி 
+மண கள்்  
+-  சுட் மண்்    மண கள்்   -  ொ்ங்்  கு  மண கள்்   -  எல் ம்்  ப் த்் Fண்்  
+ட் கள்்   -  ததொ் ல்்  ல் யல்்   ொ்ொ் ன்்  றுகள்்   - சிலப்் பத் கொ் ரத்்த் ல்்   
+மண கள் ன்்   வமககள்்  . 
+அலகு 
+IV 
+கவளொ  ை  ் றம மற ்ற  ம ் ந   ர ்ப ்பொ  சனத ் ம தொ  ழ  ல ்  
+ந  ட ்பம ் 
+3 
+அமண,   ஏர் ,   க் ளங்்  கள்்  ,   மதகு   -   மொ் ொ் ழரக்்    ொ் லக்்    க் ம் ழித்்    
+஥ம்் ப் ன்்     ம் க்்க் யதF்்     வம்்    - கொ் ல்்  நமட     பரொ் மர் ப்் பு     -     கல்்  
+நமடகள் க்்கொ் க     வட் வமமக்் கப்் பட்்ட      க் ணறுகள்்       - மவளொ் ண்்  மம   
+மற்் றும்்    மவளொ் ண்்  மமொ் ்்    ொ்ொ் ரந்்    ்் த   தொ்ய ல்்  பொ் ட் கள்்     -   கடல்்  ொ் ொ் ர்்    
+அறிவு   - ம் ன்்  வளம்்   -  ம் த்் F  மற்் றும்்   ம் த்் Fக்் க் ள் த்்தல்்   -  
+தபருங்்  கடல்்   க் றித்்த   பண்்  மடய  அறிவு  - 
+அறிவ் ொ் ொ் ர்்  ொ்மூகம்்  . 
+அலகு V அற  வ  யல ் தமிழ ் மற ் ற  ம ்  கை   த ்தம  ழ ் 3 
+அறிவ் யல்்    தமிழ் ன்்    வளரொ்்்   சி்்  -   கண த்்தமிழ்்    வளரொ்்்    சி்்  -   
+தமிழ்்    ந் ல்்  கமள   ம் ன்்  பத் ப்்பு தொ் ய்்  தல்்   - தமிழ்்  தமன்்  
+தபொ் ர் ட்்கள்்   உருவொ் க்் கம்்   - தமிழ்்  இமணயக்்  கல்்  வ் க்் கழகம்்   - 
+தமிழ்்  
+மின்்   ந் லகம்்  - இமணயத்்த் ல்்   தம் ழ்்  அகரொ் த் கள்்   - 
+தொ் ொ் ற்் க் மவத்்  த் ட்்டம்்  . 
+Total Contact Hours: 15 
+Text Book(s): 
+தமிழக வரலொ் று - மக்் கள் ம்்  பண்்   பொ் ட் ம்்  - மக.மக. ப் ள்் மள 
+(தவள் யீட் : தமிழ்் நொ் டு பொ் டந் ல்்  மற்றும் கல் வியியல் பண கள் 
+கழகம் ). 
+கண ன த் தமிழ் - முமனவர் இல. சுந்தரம் . (விகடன் பிரசுரம் ). 
+ 

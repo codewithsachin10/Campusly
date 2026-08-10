@@ -1,0 +1,509 @@
+{
+  "regulation": {
+    "name": "B.E. COMPUTER SCIENCE AND DESIGN",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23113",
+          "name": "Mathematics for Design",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CD23111",
+          "name": "Design Drawing and Sketching",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-1-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழ்மரபு /Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "GE23131",
+          "name": "Programming using C",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "PH23132",
+          "name": "Physics for Information Science 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23123",
+          "name": "Engineering Practices -Electrical, Electronics and Computer systems 2 0 0 4 2 MANDATORY COURSE",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "MA23214",
+          "name": "Probability and Inferential Statistics",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CD23211",
+          "name": "Foundation in Digital Storytelling",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழர்களும் ததொழில்நுட்பமும் / Tamils and Technology",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "CD23231",
+          "name": "Visual Communication Foundations",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IT23231",
+          "name": "Digital Principles and Computer Architecture",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23231",
+          "name": "Data Structures 7 3 0 4 5 --- PAGE 5 --- LABORATORY COURSE",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-5",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "HS\n23222",
+          "name": "Technical Communication II / English for Professional Competence 2 0 0 2 1 MANDATORY COURSE",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "AI23231",
+          "name": "Principles of Artificial Intelligence",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23313",
+          "name": "Discrete Mathematics for AI",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CD23331",
+          "name": "Design Processes and Perspectives",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23331",
+          "name": "Design and Analysis of Algorithms",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CD23332",
+          "name": "UI and UX design",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23332",
+          "name": "Database Management Systems 7 3 0 4 5 LABORATORY COURSE",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CD23321",
+          "name": "Python Programming for Design",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23333",
+          "name": "Object Oriented Programming using Java",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AI23331",
+          "name": "Fundamentals of Machine Learning",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "OpenElective-IOE33",
+          "name": "Open Elective-I  OE  3  3",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "MA23433",
+          "name": "Mathematical Modelling and Simulation",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CS23432",
+          "name": "Software Construction",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IEEC2",
+          "name": "0 0 2 1 --- PAGE",
+          "credits": 6,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "IndustryInternship(2/4",
+          "name": "weeks)",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-0",
+          "theory_lab": "Theory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CS23431",
+          "name": "Operating Systems",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "CS23532",
+          "name": "Computer Networks",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "Professional Elective-I",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CD23531",
+          "name": "3D Modelling and Texturing",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23531",
+          "name": "Web Programming",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC2",
+          "name": "Soft Skills - II  EEC  2",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking for Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "1-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "OpenElective-IIOE3",
+          "name": "Open Elective - II  OE  3",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ProfessionalElective-II",
+          "name": "Professional Elective-II",
+          "credits": 4,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CD23631",
+          "name": "Game Design and Development",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CD23632",
+          "name": "3D Rigging and Animation",
+          "credits": 4,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CD23621",
+          "name": "Mobile Application Design and Development Laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23622",
+          "name": "Problem Solving Techniques",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-III",
+          "name": "Professional Elective-III",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-IV",
+          "name": "Professional Elective-IV",
+          "credits": 4,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        },
+        {
+          "subject_code": "CD23731",
+          "name": "Film Making and Radio Podcasting",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CD23721",
+          "name": "Visual Effects",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProjectPhase1*EEC8",
+          "name": "Project Phase 1*  EEC  8",
+          "credits": 4,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-8",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-V",
+          "name": "Professional Elective-V",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElective-VI",
+          "name": "Professional Elective-VI",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectPhase2*EEC12",
+          "name": "Project Phase 2*  EEC  12",
+          "credits": 6,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-12",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    }
+  ]
+}

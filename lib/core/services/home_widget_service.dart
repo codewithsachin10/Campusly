@@ -25,18 +25,30 @@ class HomeWidgetService {
     try {
       if (ongoingClass != null && !ongoingClass.isBreak) {
         await HomeWidget.saveWidgetData('ongoing_title', ongoingClass.title);
-        await HomeWidget.saveWidgetData('ongoing_room', '${ongoingClass.room} (${ongoingClass.timeRange})');
+        await HomeWidget.saveWidgetData(
+          'ongoing_room',
+          '${ongoingClass.room} (${ongoingClass.timeRange})',
+        );
       } else {
         await HomeWidget.saveWidgetData('ongoing_title', 'No Ongoing Class');
-        await HomeWidget.saveWidgetData('ongoing_room', 'Relax or review your notes ✨');
+        await HomeWidget.saveWidgetData(
+          'ongoing_room',
+          'Relax or review your notes ✨',
+        );
       }
 
       if (nextClass != null && !nextClass.isBreak) {
         await HomeWidget.saveWidgetData('next_title', nextClass.title);
-        await HomeWidget.saveWidgetData('next_room', '${nextClass.room} • Starts at ${nextClass.startTime}');
+        await HomeWidget.saveWidgetData(
+          'next_room',
+          '${nextClass.room} • Starts at ${nextClass.startTime}',
+        );
       } else {
         await HomeWidget.saveWidgetData('next_title', 'No More Classes Today');
-        await HomeWidget.saveWidgetData('next_room', 'Have a restful evening! 🌟');
+        await HomeWidget.saveWidgetData(
+          'next_room',
+          'Have a restful evening! 🌟',
+        );
       }
 
       await HomeWidget.updateWidget(

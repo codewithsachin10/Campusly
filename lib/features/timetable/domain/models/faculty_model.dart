@@ -17,13 +17,18 @@ class FacultyModel {
     required this.email,
   });
 
-  factory FacultyModel.fromJson(Map<String, dynamic> json) {
+  factory FacultyModel.fromJson(Map<String, dynamic> json, [String? docId]) {
+    final nameVal = json['name'] as String? ?? '';
+    final deptVal = json['department'] as String? ?? '';
+    final codeVal =
+        json['subjectCode'] as String? ?? (deptVal.isNotEmpty ? deptVal : '');
     return FacultyModel(
-      id: json['id'] as String? ?? '',
-      name: json['name'] as String? ?? '',
-      subjectCode: json['subjectCode'] as String? ?? '',
-      subjectName: json['subjectName'] as String? ?? '',
-      officeRoom: json['officeRoom'] as String? ?? '',
+      id: docId ?? json['id'] as String? ?? '',
+      name: nameVal,
+      subjectCode: codeVal,
+      subjectName: json['subjectName'] as String? ?? deptVal,
+      officeRoom:
+          json['officeRoom'] as String? ?? json['cabin'] as String? ?? '',
       contactNumber: json['contactNumber'] as String? ?? '',
       email: json['email'] as String? ?? '',
     );
@@ -35,7 +40,9 @@ class FacultyModel {
     'subjectCode': subjectCode,
     'subjectName': subjectName,
     'officeRoom': officeRoom,
+    'cabin': officeRoom,
     'contactNumber': contactNumber,
     'email': email,
+    'department': subjectCode,
   };
 }

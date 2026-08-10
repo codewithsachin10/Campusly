@@ -4,10 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../domain/models/class_model.dart';
 import '../../domain/repositories/class_repository.dart';
-import '../../data/repositories/firebase_class_repository.dart';
+import '../../data/repositories/supabase_class_repository.dart';
 
 final classRepositoryProvider = Provider<ClassRepository>((ref) {
-  return FirebaseClassRepository();
+  return SupabaseClassRepository();
 });
 
 // Holds the currently active joined class for the user with SharedPreferences persistence
@@ -25,7 +25,7 @@ class CurrentClassNotifier extends Notifier<ClassModel?> {
   Future<void> _loadSavedClass() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      
+
       // 1. Instant local load (< 5ms) so offline users never see spinners
       final savedJson = prefs.getString(_jsonStorageKey);
       if (savedJson != null && savedJson.isNotEmpty) {
@@ -42,7 +42,10 @@ class CurrentClassNotifier extends Notifier<ClassModel?> {
         final classModel = await repository.getClassByCode(savedCode);
         if (classModel != null) {
           state = classModel;
-          await prefs.setString(_jsonStorageKey, jsonEncode(classModel.toJson()));
+          await prefs.setString(
+            _jsonStorageKey,
+            jsonEncode(classModel.toJson()),
+          );
         }
       }
     } catch (e) {

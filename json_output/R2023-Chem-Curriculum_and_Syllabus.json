@@ -1,0 +1,499 @@
+{
+  "regulation": {
+    "name": "B.Tech. Chemical Engineering",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "Algebra and Calculus",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "PH23111",
+          "name": "Physics for Chemical Engineering",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CY23132",
+          "name": "Chemistry for Technologists",
+          "credits": 5,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 6,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-6-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23121",
+          "name": "Engineering Practices- Civil and Mechanical",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 8,
+          "course_type": "Mandatory Course",
+          "l_t_p": "0-3-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர் மரபு/ Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "EE23133",
+          "name": "Basic Electrical and Electronics Engineering",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23122",
+          "name": "Engineering Practices - Electrical and Electronics",
+          "credits": 1,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "PB2020",
+          "name": ") : Asim K DAS, Mahua Das, CBS publishers and distributors Pvt. Ltd. ● Laboratory Manual Engg. Chemistry, Anupma Rajput, Dhanpat Rai & Co Lab equipment required: S. No Name of the Equipment Quantity Required 1. pH meter 10 2. Ion selective electrodes for various ions in solution 10 3 Spectrophotometer 4 4 Magnetic stirrer with hot plate 10 5 Shaker 5 PO/PSO CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "4-10-5",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II/ English for Professional Competence",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex Variables",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CH23211",
+          "name": "Introduction to Chemical Engineering",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23233",
+          "name": "Problem Solving and Python Programming",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "PH23233",
+          "name": "Material Science",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழரும ் ததொழில ் நுட்பமும ்/Tamils and Technology",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23311",
+          "name": "Transforms and Applied Partial differential equations",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CY23334",
+          "name": "Physical and Organic Chemistry",
+          "credits": 3,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-4-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CH23311",
+          "name": "Solid Mechanics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CH23312",
+          "name": "Chemical Process Calculations",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23313",
+          "name": "Chemical Process Industries",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23331",
+          "name": "Fluid Mechanics for Chemical Engineers",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CY23312",
+          "name": "CY23312",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "1-1-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "MA23431",
+          "name": "Probability, Statistics and Reliability",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-4-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CH23411",
+          "name": "Thermodynamics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23412",
+          "name": "Heat Transfer",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23431",
+          "name": "Particle science and Technology",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "2-4-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-13003",
+          "name": "3 PRACTICALS",
+          "credits": 6,
+          "course_type": "Open Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine Learning",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "SOFTSKILLS-I00211",
+          "name": "SOFT SKILLS - I 0 0 2 1 1",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "2-1-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CH23421",
+          "name": "Technical Analysis Lab",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "CH23522",
+          "name": "Industrial Training (2 Weeks)*",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CH23511",
+          "name": "Process Plant Utilities",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23512",
+          "name": "Chemical Engineering Thermodynamics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23513",
+          "name": "Mass Transfer I",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23514",
+          "name": "Chemical Reaction Engineering - I",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23521",
+          "name": "Heat Transfer Lab",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "EC23527",
+          "name": "Microfluidics Laboratory",
+          "credits": 10,
+          "course_type": "Professional Elective",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PE"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "CH23611",
+          "name": "Mass Transfer II",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23612",
+          "name": "Chemical Reaction Engineering - II",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23613",
+          "name": "Process Control and Instrumentation",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CH23614",
+          "name": "Process Equipment Design",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveII",
+          "name": "3 0 0 3 3 PRACTICALS",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "2-1-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "CH23621",
+          "name": "Mass Transfer Lab",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveI3",
+          "name": "Professional Elective I 3",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-II300",
+          "name": "3 3 PRACTICALS",
+          "credits": 7,
+          "course_type": "Open Elective",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "SOFTSKILLS-II0021",
+          "name": "SOFT SKILLS - II 0 0 2 1",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "2-1-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        }
+      ]
+    }
+  ]
+}

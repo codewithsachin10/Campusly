@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/repositories/notes_repository.dart';
 import '../../domain/models/note_model.dart';
 
-final notesRepositoryProvider = Provider<NotesRepository>((ref) {
-  return NotesRepository();
+final notesRepositoryProvider = Provider<SupabaseNotesRepository>((ref) {
+  return SupabaseNotesRepository();
 });
 
 class NotesQueryKey {
@@ -32,7 +32,10 @@ class NotesNotifier extends AsyncNotifier<List<NoteModel>> {
   @override
   FutureOr<List<NoteModel>> build() async {
     final repo = ref.read(notesRepositoryProvider);
-    return await repo.getNotes(userId: arg.userId, subjectCode: arg.subjectCode);
+    return await repo.getNotes(
+      userId: arg.userId,
+      subjectCode: arg.subjectCode,
+    );
   }
 
   Future<void> saveNote({
@@ -66,6 +69,7 @@ class NotesNotifier extends AsyncNotifier<List<NoteModel>> {
   }
 }
 
-final notesProvider = AsyncNotifierProvider.family<NotesNotifier, List<NoteModel>, NotesQueryKey>(
-  (arg) => NotesNotifier(arg),
-);
+final notesProvider =
+    AsyncNotifierProvider.family<NotesNotifier, List<NoteModel>, NotesQueryKey>(
+      (arg) => NotesNotifier(arg),
+    );

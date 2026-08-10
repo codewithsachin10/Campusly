@@ -1,0 +1,60 @@
+{
+  "regulation": {
+    "name": "R2023_B.E_AUTO_Curricullum_Syllabus",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I 2 0 0 2 Course Objective: 1. To facilitate students, develop their comprehension skills. 2. To enable students to improve their receptive skills 3. To equip learners with better vocabulary and enhance their writing skills 4. To aid students speak effectively in all kinds of communicative contexts. 5. To improve the learners’ basic proficiency in workplace communication UNIT - I DEVELOPING COMPREHENSION SKILLS 6 Listening: Introduction to Informational listening - Listening to Podcasts, News Reading: Intentional Reading - Short Narratives and Passages. Speaking: Introducing Oneself, Narrating a Story / Incident. Writing: Sequential Writing - connecting ideas using transitional words (Jumbled Sentences), Process Description Grammar: Verbs - Main & Auxiliary: Simple Tenses - Form, Function and Meaning. Vocabulary: Word formation - Prefix, Suffix, Compound Words. UNIT II LISTENING AND EXTENDED READING 6 Listening: Deep Listening - Listening to Talk Shows and Debates Reading: In-depth Reading - Scanning Passages Speaking: Describing Current Issues, Happenings, etc.., Writing: Note Making, Note Taking - Paragraph Writing Grammar: Continuous Tenses, Prepositions, Articles Vocabulary: One Word Substitutes, Phrasal Verbs. UNIT III FORMAL WRITING AND VERBAL ABILITY 6 Listening: Listening to Lectures and Taking Notes Reading: Interpretation of Tables, Charts and Graphs Speaking: SWOT Analysis on Oneself Writing: Formal Letter Writing and Email Writing Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers Vocabulary : Verbal Analogy / Cloze Exercise. UNIT IV ENHANCING SPEAKING ABILITY 6 Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..) Reading: Timed Reading, Filling KWL Chart. Speaking: Just a Minute, Impromptu Writing: Check-list, Instructions. Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives Vocabulary: Synonyms, Antonyms, Different forms of the same words. UNIT V LANGUAGE FOR WORKPLACE 6 Listening: Extensive Listening (Audio books, rendering of poems, etc.) Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) Speaking: Short Presentations on Technical Topics Writing: Recommendations, Essay Writing Grammar: Impersonal Passive, Reported Speech, Concord Vocabulary : Informal Vocabulary and Formal Substitutes",
+          "credits": 6,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "6-6-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "MA23112",
+          "credits": 1,
+          "course_type": "Professional Core",
+          "l_t_p": "2-1-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "AT23111",
+          "name": "Production Technology - I 3 0 0 3 Course Objective: 1. To learn about various metal casting process principle and procedure involved 2. To rephrase the process principle and application of powder metallurgy and polymer processing 3. To learn about the process principle of various types of welding and its applications. 4. To understand the process principles of metal forming techniques. 5. To understand various sheet metal operations and processing techniques. UNIT - I METAL CASTING PROCESSES 9 Sand Casting : Sand Mould - Type of patterns - Pattern Materials - Pattern allowances -Moulding sand Properties and testing - Cores -Types and applications - Moulding machines- Types and applications; Melting furnaces : Blast and Cupola Furnaces; Principle of special casting processes : Shell - investment - Ceramic mould - Pressure die casting - Centrifugal Casting - Defects in Sand casting. Design of patterns, moulds and cores; riser and gating design. UNIT II POWDER METALLURGY AND POLYMER PROCESSING 9 Historical and modern developments in Powder Metallurgy. Advantages, limitations and applications of Powder Metallurgy. Basic Steps for Powder Metallurgy. Powder Compaction Methods, Powder Forming Methods and Sintering. Types of plastics- Working principles and typical applications of - Injection Moulding- Compression moulding- Extrusion- Thermoforming- Transfer moulding -Rotational Moulding and Film blow moulding. UNIT III JOINING PROCESSES 9 Operating principle, basic equipment, merits and applications of: Fusion welding processes: Gas welding - Types - Flame characteristics; Manual metal arc welding - Gas Tungsten arc welding - Gas metal arc welding - Submerged arc welding - Operating principle and applications of: Resistance welding - Plasma arc welding - Thermit welding - Electron beam welding -Laser Beam welding, Friction welding and Friction Stir Welding; Weld defects: types, causes and cure. Principles of brazing, soldering. UNIT IV METAL FORMING PROCESSES 9 Hot working and cold working of metals - Forging processes - Open, impression and closed die forging - forging operations. Rolling of metals- Types of Rolling - Flat strip rolling - shape rolling operations - Defects in rolled parts. Principle of rod and wire drawing - Tube drawing - Principles of Extrusion - Types - Hot and Cold extrusion. Load estimation for bulk (forging, rolling, extrusion and drawing). UNIT V SHEET METAL PROCESSES 9 Sheet metal characteristics - shearing, bending and drawing operations - Stretch forming operations - Formability of sheet metal - Test methods -special forming processes-Working principle and applications - Hydro forming - Rubber pad forming - Metal spinning- Introduction of Explosive forming, magnetic pulse forming, peen forming, Super plastic forming - Micro forming",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "9-9-9",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர் மரபு 1 0 0 1 அலகு I மமமொழி மற் றும ் இலக்கியம ்: 3 இந்திய மഥத ொழிக் குடுഥ ்பங்கள் - திதரொவிட மഥத ொழிகள் - தமிழ் ஒரு தமഥ ்மഥத ொழி - தமிழ் தமவ்விலக்கியங்கள் - த ங்க இலக்கியத்தின் தഥய த த ொர்பற்ற தன்மഥ - த ங்க இலக்கியத்தில் பகிர்தல் அறഥ ் - திருக்குறளில் மഥதலொண ் மഥக் கருத்Fக்கள் - தமிழிக் தகொப்பியங்கள், தமிழகத்தில் தഥண மதபௌத்த தഥயங்களின் ததொக்கഥ ் - பக்தி இலக்கியഥ ், ஆழ்தவொர்கள் ഥற்றுഥ ் தநொயன்ഥத ொர்கள் - சிற்றிலக்கியங்கள் - தமிழில் நவீன இலக்கியத்தின் வளர்த ்சி - தமிழ் இலக்கிய வளர்த ்சியில் தபொரதிதயொர் ഥற்றுഥ ் தபொரதிததொத ன் ஆகிமதயொரின் பங்களிப்பு. அலகு II மரபு - ம ொறற ஓவியங ் கள ் முதல ் நவீன ஓவியங ் கள ் வறர - சிற் க் கறல: 3 நடுகல் முதல் நவீன சிற்பங்கள் வமர - ஐഥ ்மதபொன் சிமலகள் - பழங்குடியினர் ഥற்றுഥ ் அவர்கள் ததயொரிக்குഥ ் மகவிமனப் மதபொருட்கள், மதபொഥ ்மഥகள் - மதர் தமய்யுഥ ் கமல - சுடுഥண் சிற்பங்கள் - தநொட்டுப்புறத் மதய்வங்கள் - குഥரிமுமனயில் திருவள்ளுவர் சிமல - இதமக் கருவிகள் - மிருதங்கഥ ், பமற, வீமண, தயொழ், தநொதஸ ் வரഥ ் - தமிழர்களின் த மூக மதபொருதளொததொர தவொழ்வில் மதகொவில்களின் பங்கு. அலகு III மநொட்டு ்புறக் கறலகள ் மற ்றும ் வீர விறளமயொட்டுகள ்: 3 மதருக்கூத்F, கரதகொட்டഥ ், வில்லுப்தபொட்டு, கணிதயொன் கூத்F, ஒயிதலொட்டഥ ், மததொல்தபொமவக் கூத்F, சிலഥ ்தபொட்டഥ ், வளரி, புலிதயொட்டഥ ், தமிழர்களின் விமளதயொட்டுகள். அலகு IV தமிழர்களின ் திறறக் கமகொட்ம ொடுகள ்: 3 தமிழகத்தின் ததொவரங்களுഥ ், விலங்குகளுഥ ் - மததொல்தகொப்பியഥ ் ഥற்றுഥ ் த ங்க இலக்கியத்தில் அகഥ ் ഥற்றுഥ ் புறக் மதகொட்தபொடுகள் - தமிழர்கள் மதபொற்றிய அறக்மதகொட்தபொடு - த ங்கதகொலத்தில் தமிழத்தில் எழுத்தறிவுഥ ், கல்வியுഥ ் - த ங்கதகொல நகரங்களுഥ ் Fமற முகங்களுഥ ் - த ங்கதகொலத்தில் ஏற்றுഥதி ഥற்றுഥ ் இறக்குഥதி - கடல்கடந்த தநொடுகளில் ததமொழர்களின் மவற்றி. அலகு V இந்திய கதசிய இயக்கம ் மற ் றும ் இந்திய ற ்ம ொட்டிற ் குத் தமிழர்களின ் ங ் களி ்பு: 3 இந்திய விடுதமலப்மதபொரில் தமிழர்களின் பங்கு - இந்திதயொவின் பிறப்பகுதிகளில் தமிழ்ப் பண ் தபொட்டின் ததொக்கഥ ் - சுயഥரிதயொமத இயக்கഥ ் - இந்திய ഥருத்Fவத்தில், சித்த ഥருத்Fவத்தின் பங்கு - கல்மவட்டுகள், மகமயழுத்Fப்படிகள் - தமிழ்ப் புத்தகங்களின் தஅ்சு வரதலொறு",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-3-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "PH23131",
+          "name": "PHYSICS OF MATERIALS Common to I sem. B.E. - Aero, Auto, Civil, Mech, MCT and R&A 3 0 2 4 Course Objective: 1. To enhance the fundamental knowledge of elasticity and its applications relevant to engineering streams. 2. To become proficient in crystal growth and crystal systems 3. To introduce the essential of phase transformation in materials. 4. To impart knowledge on the structure, properties, treatment, testing and applications of metals and alloys 5. To familiarize students with thermal properties and applications. UNIT - I PROPERTIES OF MATTER 9 Elasticity-Hooke’s law -stress-strain-modulus of elasticity -stress-strain diagram -Poisson’s ratio - rigidity modulus -twisting couple on a cylinder -moment of inertia - torsional pendulum method. Bending of beams -bending moment-cantilever depression-theory and experiment - Young’s modulus determination-uniform and non-uniform bending-I-shape girders. Viscosity-flow of motion-Reynolds number. UNIT II THERMAL PHYSICS 9 Transfer of heat energy - thermal expansion of solids and liquids - expansion joints - bimetallic strips - thermal conduction, convection and radiation -rectilinear heat flow - thermal conductivity - Forbe’s and Lee’s disc method: theory and experiment - conduction through compound media (series and parallel) - thermal insulation - applications: heat exchangers, refrigerators, ovens and solar water heaters. UNIT III PHASE DIAGRAMS 9 Solid solutions - Hume-Rothery’s rules -Gibb’s phase rule - unary phase diagram- binary phase diagrams -isomorphous systems - tie-line and lever rule - eutectic, eutectoid, peritectic, peritectoid, monotectic and syntectic systems - formation of microstructures-homogeneous and non-homogenous cooling - nucleation (Qualitative)- iron-carbon phase diagram - eutectoid steel - hypo-eutectoid and hyper-eutectoid steel - diffusion - Fick’s laws - T-T-T diagrams. UNIT IV CRYSTAL PHYSICS 9 Basis - lattices - unit cell-crystal systems - Bravais lattices -number of atoms, atomic radius, co- ordination number and packing fraction - SC, BCC, FCC, HCP lattices and diamond structure - polymorphism and allotropy-graphite structure - Miller indices - determination of d-space-crystal growth techniques-solution growth -melt growth- Bridgmann and Czochralski - crystal defects. UNIT V ADVANCED MATERIALS & TESTING 9 Metallic glasses - preparation, properties and applications - Composites - types and properties - Shape memory alloys - properties and applications - Nano-materials - top down and bottom up approaches - sol-gel method -pulsed laser deposition -ball milling - properties-applications - Tensile strength - Hardness - Fatigue - Impact strength - Creep - Fracture - types of fracture",
+          "credits": 9,
+          "course_type": "Basic Sciences",
+          "l_t_p": "9-9-9",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        }
+      ]
+    }
+  ]
+}

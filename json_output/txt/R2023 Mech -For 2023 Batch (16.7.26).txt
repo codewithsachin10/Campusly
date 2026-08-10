@@ -1,0 +1,1559 @@
+
+--- PAGE 1 ---
+ 
+ 
+ 
+Rajalakshmi Engineering College, Thandalam 
+(An Autonomous Institution and Affiliated to Anna University, Chennai) 
+ 
+ 
+ 
+DEPARTMENT OF MECHANICAL ENGINEERING 
+ 
+B.E. – Mechanical Engineering 
+ 
+ 
+ 
+CHOICE BASED CREDIT SYSTEM (CBCS) 
+ 
+ 
+Regulation 2023  
+(For 2023 Batch) 
+ 
+ 
+Curriculum & Syllabus  
+ 
+--- PAGE 2 ---
+ 
+ 
+RAJALAKSHMI ENGINEERING COLLEGE 
+(An Autonomous Institution Affiliated to Anna University Chennai)  
+DEPARTMENT OF MEHANICAL ENGINEERING 
+REGULATIONS 2023 
+CHOICE BASED CREDIT SYSTEM 
+CURRICULUM AND SYLLABUS 
+ 
+DEPARTMENT VISION 
+To provide a world class Mechanical Engineering education through innovation and 
+excellence in Teaching and Research. 
+DEPARTMENT MISSION 
+● To impart high quality technical education and prepare Mechanical Engineers with all 
+round knowledge of multi-disciplinary branches of Engineering and Technology. 
+ 
+● To foster skill sets required to be a global professional for industry, research and 
+technology management. 
+ 
+● To provide consultancy to the neighborhood industries. 
+ 
+● To cultivate the spirit of entrepreneurship. 
+ 
+PEO I 
+To provide students with sound foundation in the mathematical, scientific and 
+engineering 
+fundamentals necessary to formulate, analyze and solve engineering problems and to prepare 
+them for graduate studies and for successful careers in industry. 
+PEO II 
+To impart students with skills for design, improvement and installation of Mechanical 
+and allied integrated systems of men and material. 
+PEO III 
+To educate the students on designing the modern mechanical systems and expose them 
+to industrial practices for better employability and adaptability. 
+PEO IV 
+To instill the values, skills, leadership and team spirit for comprehensive and wholesome 
+personality, to promote entrepreneurial interest among students and to create a fervor for use of 
+Engineering in addressing societal concerns. 
+ 
+Programme Outcomes (POs) 
+Engineering Graduates will be able to: 
+1. Engineering knowledge: Apply the knowledge of mathematics, science, engineering 
+fundamentals, and an engineering specialization to the solution of complex engineering 
+problems. 
+2. Problem analysis: Identify, formulate, review research literature, and analyze complex 
+engineering problems reaching substantiated conclusions using first principles of 
+mathematics, natural sciences, and engineering sciences. 
+--- PAGE 3 ---
+ 
+ 
+3. Design/development of solutions: Design solutions for complex engineering problems 
+and design system components or processes that meet the specified needs with 
+appropriate consideration for the public health and safety, and the cultural, societal, and 
+environmental considerations. 
+4. Conduct investigations of complex problems : Use research -based knowledge and 
+research methods including design of experiments, analysis and interpretation of data, 
+and synthesis of the information to provide valid conclusions. 
+5. Modern tool usage: Create, select, and apply appropriate techniques, resources, and 
+modern engineering and IT tools including prediction and modeling to complex 
+engineering activities with an understanding of the limitations. 
+6. The engineer and society : Apply reasoning informed by the contextual knowledge to 
+assess societal, health, safety, legal and cultural issues and the consequent 
+responsibilities relevant to the professional engineering practice. 
+7. Environment and sustainability: Understand the impact of the professional 
+engineering solutions in societal and environmental contexts, and demonstrate the 
+knowledge of, and need for sustainable development. 
+8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities 
+and norms of the engineering practice. 
+9. Individual and team work: Function effectively as an individual, and as a member or 
+leader in diverse teams, and in multidisciplinary settings. 
+10. Communication: Communicate effectively on complex engineering activities with the 
+engineering community and with society at large, such as, being able to comprehend and 
+write effective reports and design documentation, make effective presentations, and give 
+and receive clear instructions. 
+11. Project management and finance: Demonstrate knowledge and understanding of the 
+engineering and management principles and apply these to one’s own work, as a 
+member and leader in a team, to manage projects and in mME1ultidisciplinary 
+environments. 
+12. Life-long learning: Recognize the need for, and have the preparation and ability to 
+engage in independent and life -long learning in the broadest context of technological 
+change. 
+PROGRAM SPECIFIC OUTCOMES (PSOs) 
+1. To innovate a Mechanical System which meets the desired specifications and 
+requirements using CAE tools. 
+2. To explore alternate materials for automobile, manufacturing and process industries 
+3. To lead professional career in industries or an entrepreneur by applying Engineering and 
+Management principles and practices.
+--- PAGE 4 ---
+ 
+ 
+B.E. MECHANICAL ENGINEERING  
+REGULATION 2023 - For 2023 Batch 
+CURRICULUM AND SYLLABUS 
+CHOICE BASED CREDIT SYSTEM (CBCS) 
+ 
+SEMESTER I 
+ 
+S.N
+o. 
+Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 HS23111 Technical Communication I HS 2 2 0 0 2 
+2 MA23112 Algebra and Calculus BS 4 3 1 0 4 
+3 GE23111 Engineering Graphics  ES 6 2 0 4 4 
+4 EC23111 Basic Electronics Engineering ES 3 3 0 0 3 
+5 GE23117 தமிழர் மரபு / Heritage of 
+Tamils HS 1 1 0 0 1 
+LAB ORIENTED THEORY 
+6 PH23131 Physics of Materials BS 5 3 0 2 4 
+PRACTICAL 
+7 GE23121 Engineering Practices - Civil and 
+Mechanical ES 2 0 0 2 1 
+NON-CREDIT - MANDATORY COURSE 
+8 MC23112 Environmental Science and 
+Engineering  MC 3 3 0 0 0 
+TOTAL 26 17 1 8 19 
+ 
+SEMESTER II 
+ 
+S.N
+o. 
+Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 HS23221/ 
+HS23222 
+Technical Communication II / 
+English for Professional 
+Competence 
+HS 2 0 0 2 1 
+2 MA23212 Differential Equations and 
+Complex variables BS 4 3 1 0 4 
+3 GE23211 Engineering Mechanics ES 3 2 1 0 3 
+4 GE23217 தமிழரும் ததொழில ் நுட்பமும் 
+/ Tamils and Technology HS 1 1 0 0 1 
+LAB ORIENTED THEORY 
+5 CY23233 Engineering Chemistry BS 5 3 0 2 4 
+6 EE23132 Basic Electrical Engineering ES 5 3 0 2 4 
+7 GE23233 Problem solving and Python 
+Programming ES 6 2 0 4 4 
+PRACTICAL 
+8 GE23122 Engineering Practices- Electrical 
+and Electronics ES 2 0 0 2 1 
+NON-CREDIT - MANDATORY COURSE 
+9 MC23111 Indian Constitution and Freedom 
+Movement MC 3 3 0 0 0 
+TOTAL 30 18 2 10 22 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 5 ---
+ 
+ 
+ 
+ 
+SEMESTER-III 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 ME23311 Engineering Thermodynamics PC 4 3 1 0 4 
+2 ME23312 Manufacturing Technology I PC 3 3 0 0 3 
+3 ME23313 Kinematics of Machinery PC 3 3 0 0 3 
+LAB ORIENTED THEORY 
+4 MA23331 Transforms and Statistics BS 5 3 0 2 4 
+5 ME23331 Strength of Materials PC 5 3 0 2 4 
+PRACTICAL 
+6 ME23321 Manufacturing Technology 
+Laboratory I PC 2 0 0 2 1 
+7 CS23422 Python Programming for 
+Machine learning  ES 4 0 0 4 2 
+TOTAL 26 15 1 10 21 
+ 
+ 
+ 
+SEMESTER-IV 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 ME23411 Engineering Materials and 
+Metallurgy PC 3 3 0 0 3 
+2 ME23412 Manufacturing Technology II PC 3 3 0 0 3 
+LAB ORIENTED THEORY 
+3 ME23431 Dynamics of Machines  PC 5 3 0 2 4 
+4 ME23432 Fluid Mechanics and 
+Machinery PC 5 3 0 2 4 
+5 ME23433 Thermal Engineering PC 5 3 0 2 4 
+PRACTICAL 
+6 GE23421 Soft Skills - I EEC 2 0 0 2 1 
+7 ME23421 Machine Drawing Laboratory PC 4 0 0 4 2 
+8 ME23422 Manufacturing Technology 
+Laboratory II PC 4 0 0 4 2 
+TOTAL 31 15 0 16 23 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 6 ---
+ 
+ 
+SEMESTER-V 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 GE23511 Economics for Engineers HS 3 3 0 0 3 
+2 ME23511 Machine Design PC 3 3 0 0 3 
+3  Professional Elective-I / 
+Verticals PE 3 3 0 0 3 
+4  Open Elective - I OE 3 3 0 0 3 
+LAB  ORIENTED  THEORY 
+5 ME23531 Heat and Mass Transfer PC 5 3 0 2 4 
+6 ME23532 Metrology and Measurements PC 5 3 0 2 4 
+PRACTICAL 
+7 GE23521 Soft Skills - II EEC 2 0 0 2 1 
+8 ME23521 Component Modeling 
+Laboratory  PC 4 0 0 4 2 
+9 ME23522 Internship EEC 2 0 0 2 1 
+TOTAL 30 18 0 12 24 
+ 
+ 
+SEMESTER-VI 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 ME23611 Additive Manufacturing  
+Technologies PC 3 3 0 0 3 
+2 ME23612 Design of Transmission 
+systems PC 3 3 0 0 3 
+3 ME23613 Finite Element Analysis  PC 3 3 0 0 3 
+5  Professional Elective II / 
+Verticals PE 3 3 0 0 3 
+6  Open Elective – II OE 3 3 0 0 3 
+LAB  ORIENTED  THEORY 
+7 ME23631 Robotics and CNC 
+Programming PC 4 2 0 2 3 
+PRACTICAL 
+8 GE23621 Problem Solving Techniques EEC 2 0 0 2 1 
+9 ME23622 Simulation and Analysis 
+Laboratory PC 3 0 0 4 2 
+10 GE23627 Design Thinking and 
+Innovation EEC 4 0 0 4 2 
+TOTAL 28 17 0 12 23 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 7 ---
+ 
+ 
+SEMESTER-VII 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1 ME23711 Process Planning and Cost 
+Estimation PC 3 3 0 0 3 
+2 ME23712 Total Quality Management PC 3 3 0 0 3 
+3  Professional Elective III / Verticals PE 3 3 0 0 3 
+4  Professional Elective IV / Verticals PE 3 3 0 0 3 
+LAB ORIENTED THEORY 
+5 ME23731 Artificial Intelligence for 
+Mechanical Engineers PC 5 1 0 4 3 
+6 ME23732 Mechatronics PC 5 3 0 2 4 
+PRACTICAL 
+7 ME23721 Project Work Phase I EEC 4 0 0 4 2 
+8 ME23722 Comprehension EEC 2 0 0 2 1 
+TOTAL 28 13 0 12 22 
+ 
+SEMESTER-VIII 
+ 
+S.No. Course 
+Code Course Title Category Contact 
+Periods L T P C 
+THEORY 
+1  Professional Elective V / 
+Verticals PE 3 3 0 0 3 
+PRACTICAL 
+2 ME23821 Project Work Phase II EEC 16 0 0 16 8 
+TOTAL 19 3 0 16 11 
+ 
+Total Credits : 165 
+Summary of Credits: 
+CATEGORY I II III IV V VI VII VIII Credits (%) 
+BS 8 8 4           20 12% 
+HS 3 2     3       8 5% 
+ES 8 12 2           22 13% 
+PC   15 22 13 14 13   77 47% 
+PE         3 3 6 3 15 9% 
+EEC       1 2 6 3 8 17 10% 
+OE         3 3     6 4% 
+Non-
+Credit*/ 
+(Mandatory) 
+0 0            0 0% 
+TOTAL 19 22 21 23 24 26 22 11 165 100% 
+ 
+Open Electives offered by Mechanical Engineering Department to other Departments 
+OME2311 Supply Chain Management 
+OME2312 Reverse Engineering and Additive Manufacturing 
+OME2313 Industrial Safety Engineering
+--- PAGE 8 ---
+ 
+ 
+Vertical 1 Vertical 2 Vertical 3 Vertical 4 Vertical 5 Vertical 6 Vertical 7
+Offered 
+in
+Computational 
+Engineering
+Logistics And Supply 
+Chain Management
+Robotics And 
+Automation Product Design Digital Manufacturing Energy Systems Diversified Courses
+ME23A11 ME23B11 ME23C11 ME23D11 ME23E11 ME23F11 ME23G11
+Machine Learning 
+for Intelligent 
+Systems
+Reliability and 
+Maintenance 
+Engineering
+Drone Technologies Product Design and 
+Development
+Digital Manufacturing and 
+IoT
+Measurement and control 
+for energy system
+Automobile 
+Engineering
+ME23A12 ME23B12 ME23C12 ME23D12 ME23E12 ME23F12 ME23G12
+CAD and CAE Warehousing 
+Automation
+Electrical Drives and 
+Actuators Computer Aided Design Lean Manufacturing Energy conservation and 
+waste heat recovery Industrial Safety
+ME23A13 ME23B13 ME23C13 ME23D13 ME23E13 ME 23F13 ME23G13
+Numerical heat 
+transfer
+Operations 
+Management
+Automation in 
+Manufacturing
+Geometric 
+Dimensioning and 
+Tolerancing
+Advanced Machining 
+Processes
+Renewable sources of 
+Energy
+Composite Materials 
+and Mechanics
+ME23A14 ME23B14 ME23C14 ME23D14 ME23E14 ME 23F14 ME23G14
+Theory on 
+Computation and 
+Visualization
+Material Handling 
+Equipment, Repair and 
+Maintenance
+Embedded Systems 
+and Programming Design of Experiments Green Manufacturing 
+Design and Practices
+Hybrid and Electrical 
+Vehicles
+Material 
+Characterisation 
+Techniques
+ME23A15 ME23B15 ME23C15 ME23D15 ME23E15 ME23F15 ME23G15
+Computational Bio- 
+Mechanics Container Logistics Sensors and 
+Instrumentation
+Design with Advanced 
+materials Intelligent Machining Introduction to Power 
+Plant Engineering
+Principles of 
+Management
+ME23A16 ME23B16 ME23C16 ME 23D16 ME23E16 ME23F16 ME23G16
+Advanced Statistics 
+and Data Analytics
+Production Planning 
+and Control
+Hydraulics and 
+Pneumatics Design For X Welding Technology Refrigeration and Air 
+conditioning
+Entrepreneurship 
+Development
+ME23A17 ME23B17 ME23C17 ME23D17 ME23E17 ME23F17 ME23G17
+Noise Acoustics and 
+Vibration Operations Research Smart Mobility and 
+Intelligent Vehicles
+Product Life Cycle 
+Management
+Electronics Manufacturing 
+technology
+Advanced energy storage 
+technologies
+Marketing 
+Management
+ME23A18 ME23B18 ME23C18 ME23D18 ME23E18 ME23F18 ME23G18
+Computational Solid 
+Mechanics
+Supply chain and 
+Logistics Management
+Haptics and Immersive 
+Technologies
+New Product 
+Development
+Digital Twin and Industry 
+4.0
+Energy systems modelling 
+and analysis
+Research Methodology 
+and Intellectual 
+Property Rights
+ME23A19 ME23B19 ME23C19 ME23D19 ME23E19 ME23F19 ME23G19
+Computational Fluid 
+Dynamics Data Science Robot dynamics 
+Applications
+Design of Jigs, Fixture 
+and Press tools
+Non-Destructive Testing 
+and Evaluation
+Energy Engineering and 
+Management
+Corrosion and Surface 
+Engineering
+Common Verticals / Professional Electives Dept. Verticals / Professional Electives- MECH Diversified / 
+Professional Electives
+V Sem
+VI Sem
+VIII Sem
+VII Sem
+VII Sem
+VIII Sem
+Category
+V Sem
+VI Sem
+VII Sem
+--- PAGE 9 ---
+ 
+ 
+SEMESTER I 
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+HS 23111 Technical Communication I  HS 2 0 0 2 
+ Common to all branches of B.E/B. Tech programmes – First Semester 
+ 
+Objectives: 
+To facilitate students develop their comprehension skills 
+To enable students to improve their receptive skills  
+To equip learners with better vocabulary and enhance their writing skills  
+To aid students speak effectively in all kinds of communicative contexts. 
+To improve the learners’ basic proficiency in workplace communication 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process Description  
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages  
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers  
+Vocabulary : Verbal Analogy / Cloze Exercise  
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..)  
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives  
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT-V LANGUAGE FOR WORKPLACE  6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+apply their comprehension skills and interpret different contents effortlessly  
+read and comprehend various texts and audio visual contents 
+infer data from graphs and charts and communicate it efficiently in varied contexts  
+participate effectively in diverse speaking situations 
+to present, discuss and coordinate with their peers in workplace using their language skills  
+ 
+Text Book(s): 
+1. Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback  2017  
+2. Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth Edition 
+(June 28, 2004) 
+3. Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+--- PAGE 10 ---
+ 
+ 
+4. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press 
+ 
+Reference Books(s) / Web links: 
+1. Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With Answers 2nd 
+Edition by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor)  
+2. Reading Development and Difficulties By Kate Cain 
+3. The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK  
+4. Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann Handley 
+(Author)                                                                                                                                                                                                                                    
+ 
+ 
+PO/PSO 
+ 
+CO 
+PO
+1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO
+12 
+PSO
+1 PSO2 PS
+O3 
+HS23111. 1 - - - 1 - - - - - 3 - - - - - 
+HS23111. 2 - - - 1 - - - - - 3 - - - - - 
+HS23111. 3 - 1 - 1 - - - - - 3 - - - - - 
+HS23111. 4 - - - 2 - - - - 1 3 - - - - - 
+HS23111. 5 - - - 1 - - - - 1 3 - - - - - 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+ 
+ 
+Course Code Course Title  (Theory Course) Category L T P C 
+MA23112 ALGEBRA AND CALCULUS BS 3 1 0 4 
+Common to I sem. B.E. - AERO, AUTO, MECH, MCT, R&A, CIVIL  and B.Tech. - BT, FT & CHEM 
+ 
+Objectives: 
+● To introduce the matrix techniques and to illustrate the nature of the matrix. 
+● To address data and synthesis of the information to provide valid conclusions.  
+● To explain techniques of calculus which are applied in the solutions of engineering problems.  
+● To analyse special types of integrals by analytical methods and numerical techniques.   
+● To practice the techniques of Integration in finding area and volumes. 
+ 
+UNIT-I MATRICES 12 
+Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation - Cayley-
+Hamilton Theorem(without proof) -Quadratic forms - Reduction to canonical form using orthogonal transformation - 
+Numerical computation of Eigen value using Power method 
+UNIT-II FUNCTIONS OF SEVERAL VARIABLES 12 
+Partial differentiation –Total derivative –Change of variables –Jacobians–Partial differentiation of implicit functions – 
+Taylor’s series for functions of two variables –Maxima and minima of functions of two variables –Lagrange’s method 
+of undetermined multipliers. 
+UNIT-III INTEGRAL CALCULUS 12 
+Integral Calculus: Definite Integrals as a limit of sums - Applications of integration to area, volume - Improper 
+integrals: Beta and Gamma integrals - Numerical computation of integrals: Trapezoidal rule - Gaussian Two point 
+quadrature 
+UNIT-IV MULTIPLE INTEGRALS 12 
+Double integrals – Change of order of integration – Area enclosed by plane curves–Triple integrals–Volume of solids– 
+Numerical computation of double integrals: Trapezoidal rule. 
+UNIT-V REGRESSION 12 
+Scatter diagram - Karl Pearson coefficient of correlation for raw data –Spearman rank correlation coefficient - Lines of 
+regression - Regression equation X on Y and Y on X- Curve fitting by Principle of least squares - Fitting a straight line 
+y = ax+b and a parabola 
+  
+Total Contact Hours:60 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Demonstrate the matrix techniques in solving the related problems in engineering and technology.  
+● Analyse and interpret data, and synthesize information to provide valid conclusions.  
+--- PAGE 11 ---
+ 
+ 
+● Interpret the problems in Engineering and Technology using the principles of mathematical calculus.    
+● Apply the analytical methods and numerical techniques to solve the related engineering problems.  
+● Evaluate multiple integrals to conduct investigations of complex problems. 
+ 
+Text Book(s): 
+1.  Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 2014.  
+2.  Gupta S.C. and Kapoor V.K.”Fundamentals of Mathematical Statistics”, Sultan and Sons 10 th Edition,2000. 
+3.  T Veerarajan, Engineering Mathematics –I , Mc Graw Hill Education, 2018. 
+4.  I.R. Miller, J.E. Freund and R. Johnson , ”Probability and Statistics for Engineers “,4th Edition, Pearson, 
+2018. 
+5.  A. Goon, M. Gupta and B.Dasgupta , ”Fundamentals of Statistics “,Vol. I & Vol. II, World Press, 2019.  
+ 
+Reference Books(s) / Web links: 
+1.  
+ Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 2018.  
+2.  
+ T Veerarajan ,Fundamentals of Mathematical Statistics , yesdee publications, 2017.  
+3.  
+ 
+ 
+Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition,   New Delhi, 
+2016. 
+4.  Bali, N.P. and Manish  Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. Ltd., New 
+Delhi, 2006. 
+5.  N. Draper & H. Smith,”Applied Regression Analysis” III edition, Wiley, 1998.  
+ 
+ 
+PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23112.1 3 2 1 - - - - - - - 1 - - - - 
+MA23112.2 3 2 - 1 - - - - - - 1 1 1 - - 
+MA23112.3 2 2 - - - - - - - - 1 1 - - - 
+MA23112.4 3 3 1 - - - - - - - 1 1 - - - 
+MA23112.5 2 2 - - - - - - - - - - 1 - - 
+Average 2.6 2.2 1 1 - - - - - - 1 1 1 - - 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+ 
+ 
+Course Code Course Name (Theory course) Category L T P C 
+GE23111 ENGINEERING GRAPHICS ES 2 0 4 4   
+Course Objectives: 
+• To understand the importance of the drawing in engineering applications 
+• To develop graphic skills for communication of concepts, ideas and design of engineering products  
+• To expose them to existing national standards related to technical drawings. 
+• To improve their visualization skills so that they can apply this skill in developing new products.  
+• To improve their technical communication skill in the form of communicative drawings  
+ 
+ CONCEPTS AND CONVENTIONS (Not for Examination) 1 
+Importance of graphics in engineering applications–Use of drafting instruments– BIS conventions and specifications– 
+Size, layout and folding of drawing sheets– Lettering and dimensioning. Basic Geometrical constructions. 
+UNIT-I PLANE CURVES AND PROJECTION OF POINTS 5+12 
+Curves used in engineering practices: Conics–Construction of ellipse, parabola and hyperbola by eccentricity method 
+– Cycloidal Curves–Construction of cycloid, epicycloid and hypocycloid – Construction of involutes of square and 
+circle–Drawing of tangents and normal to the above curves. Principles of Projection and Projection of points  
+UNIT-II PROJECTION OF LINES AND PLANE SURFACES 6+12 
+Projection of straight lines (First angle projection) inclined to both the principal planes – Determination of true lengths 
+and true inclinations by rotating line method Projection of planes (polygonal and circular surfaces) inclined to both the 
+principal planes by rotating object method 
+--- PAGE 12 ---
+ 
+ 
+UNIT-III PROJECTION OF SOLIDS AND PROJECTION OF SECTIONED SOLIDS  6+12 
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to one of the principal 
+planes by rotating object method. Sectioning of solids in simple vertical position when the cutting plane is inclined to 
+HP and perpendicular to VP – obtaining true shape of the section. Practicing three-dimensional modeling of simple 
+objects by CAD software (Not for examination) 
+UNIT-IV DEVELOPMENT OF SURFACE AND ISOMETRIC PROJECTIONS  6+12 
+Development of lateral surfaces of simple and sectioned solids – Prisms, pyramids cylinders and cones. Principles of 
+isometric projection–isometric scale–Isometric projections of simple solids and truncated solids - Prisms, pyramids, 
+cylinders and cones Model making of isometric projection of combination of solids as assignment (Not for End 
+semester 
+UNIT-V FREE HAND SKETCHING AND PERSPECTIVE PROJECTIONS 6+12 
+Free Hand sketching: Freehand sketching of multiple views from pictorial views of objects - Freehand sketching of 
+pictorial views of object from multiple views Perspective projection of simple solids -Prisms, pyramids, cylinder and 
+cone by visual ray method 
+ Total Contact Hours : 90 (L=30; 
+P=60) 
+ 
+Course Outcomes: 
+• 
+Interpret the role of engineering graphics in technical communication, demonstrate the use of drafting instruments 
+and BIS standards, and construct basic geometrical figures and engineering curves —including conics, cycloidal 
+curves, involutes, tangents—and apply principles of projection for accurate representation of points. 
+• Develop graphic skills to construct projections of lines and planes inclined to principal planes using appropriate 
+methods, and apply these techniques to determine true lengths and inclinations for effective engineering 
+communication and design. 
+• Implement national standards in technical drawings by creating projections of simple solids with axes inclined to 
+principal planes, generate sectional views to obtain true shapes, and practice basic 3D modelling using CAD tools 
+for accurate engineering representation. 
+• Enhance visualization skills through development of lateral surfaces, creation of isometric projections, and model 
+making to aid innovative product design. 
+• Develop technical communication skills by sketching multiple and pictorial views freehand and creating 
+perspective projections of simple solids using the visual ray method for clear and accurate engineering 
+representation. 
+ 
+Text Book (s): 
+1 Bhatt N.D. and Panchal V.M., ―Engineering Drawing‖, Charotar Publishing House, 50th Edition, 2010  
+2 Natarajan K.V., ―A text book of Engineering Graphics‖, Dhanalakshmi Publishers, Chennai, 2017  
+ 
+Reference Books(s) / Web links: 
+1 Varghese P I., ―Engineering Graphics‖, McGraw Hill Education (I) Pvt.Ltd., 2013.  
+2 V.B Sikka ―Civil Engineering Drawing‖, S.K Kataria & Sons, New Delhi.  
+3 Venugopal K. and PrabhuRaja V., ―Engineering Graphics‖, New Age International (P)Limited, 2008  
+4 Gopalakrishna K.R., ―Engineering Drawing‖ (Vol. I&II combined), Subhas Stores, Bangalore, 2017  
+5 Basant Agarwal and Agarwal C.M., ―Engineering Drawing‖, McGraw Hill Publishing Company Limited,  
+New Delhi, 2018  
+ 
+   PO-PSO 
+ 
+   CO 
+POs PSOs 
+1 2 3 4 5 6 7 8 9 10 11 12 1 2 3 
+GE23111.1 3 2 2 1 1 1 1 2 2 2 1 2 - 1 1 
+GE23111.2 3 2 2 1 1 1 1 2 2 2 1 2 - 1 1 
+GE23111.3 3 2 2 1 3 1 1 2 2 2 2 2 - 1 1 
+GE23111.4 3 2 2 1 2 1 2 2 2 2 1 2 - 1 1 
+GE23111.5 3 2 2 1 1 1 2 2 2 2 1 2 - 1 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+ 
+ 
+--- PAGE 13 ---
+ 
+ 
+SDG No. & Theme Addressing 
+CO Topic / Activity addressing SDG Theme 
+SDG 4: Quality Education 
+SDG 9: Industry, Innovation, and 
+Infrastructure 
+SDG 12: Responsible 
+Consumption and Production 
+CO1 
+Mini Project: Students prepare a technical drawing for a simple 
+mechanical component using BIS standards  
+Case Study: Students analyze an industrial product and create 
+projections and curves 
+SDG 4: Quality Education 
+SDG 9: Industry, Innovation, and 
+Infrastructure 
+CO2 
+Students prepare a comparative chart of first-angle and third-angle 
+projection methods 
+Mini Project: Students select a real-world component and create 
+projections of lines and planes inclined to principal planes. 
+SDG 4: Quality Education 
+SDG 9: Industry, Innovation, and 
+Infrastructure 
+SDG 12: Responsible 
+Consumption and Production 
+CO3 
+Students design a component using CAD and simulate how accurate 
+sectional views prevent errors and reduce material wastage. 
+Students prepare a report comparing manual drafting vs CAD 
+modeling for accuracy and efficiency 
+SDG 4: Quality Education 
+SDG 9: Industry, Innovation, and 
+Infrastructure 
+SDG 12: Responsible 
+Consumption and Production 
+CO4 
+Mini Project: Students design a product (e.g., packaging box or 
+mechanical part) by developing lateral surfaces and creating an 
+isometric view. 
+Students create isometric projections of simple objects and explain 
+how these improve understanding in technical communication. 
+SDG 4: Quality Education 
+SDG 9: Industry, Innovation, and 
+Infrastructure 
+CO5 
+Students sketch multiple views of a simple object without instruments 
+and explain how they can communicate  
+Mini Project: Students create perspective projections of a simple solid 
+using the visual ray method and present how this technique is applied 
+in industrial design and architecture. 
+ 
+Course Code Course Name (Theory course) Category L T P C 
+EC23111 BASIC ELECTRONICS ENGINEEERING ES 3 0 0 3 
+ 
+Course Objectives: The students should be made 
+• To study the operation of semiconductor devices and their characteristics 
+• To understand the concepts of operational amplifiers with its applications 
+• To acquire knowledge about the operation of timing circuits and oscillators  
+• To gain knowledge about digital logic circuits 
+• To introduce the basics of electronic communication systems 
+ 
+UNIT-I SEMICONDUCTOR DEVICES AND APPLICATIONS 9 
+Introduction to P -N junction Diode and V -I characteristics, Half wave and Full -wave rectifiers. Zener diode and its 
+characteristics, Zener diode as voltage regulator. Introduction to BJT and its input and output characteristics, BJT as a 
+single stage CE amplifier. 
+UNIT-II OPERATIONAL AMPLIFIER AND APPLICATIONS 9 
+Introduction to operational amplifiers, Op -amp input modes and parameters, Op -amp in open loop configuration, Op -
+amp with negative feedback, study of practical Op -amp IC 741Inverting and non -inverting amplifier applications: 
+summing and difference amplifier, unity gain buffer, comparator, integrator and differentiator.  
+UNIT-III TIMING CIRCUITS AND OSCILLATORS 9 
+RC-timing circuits, IC 555 and its applications as astable and mono -stable multi -vibratorsPositive feedback, 
+Barkhausen criteria for oscillation, R-C phase shift and Wein bridge oscillator 
+UNIT-IV DIGITAL ELECTRONICS FUNDAMENTALS 9 
+Boolean algebra, Basic and Universal Gates, Symbols, Truth tables, logic expressions, Logic simplification using K - 
+map, half and full adder/subtractor, multiplexers, de -multiplexersFlipflops, shift registers, counters, Block diagram of 
+8086 microprocessor and 8051 microcontroller and their applications. 
+--- PAGE 14 ---
+ 
+ 
+UNIT-V MODERN WIRELESS COMMUNICATION SYSTEMS 9 
+The elements of communication system, Transmission media: wired and wireless, need of modulation, AM 
+modulation scheme FM modulation scheme, Mobile communication systems: cellular concept and block diagram of 
+GSM system. 
+ Total Contact Hours : 45 
+ 
+Course Outcomes: On completion of course, students will be able to  
+• Demonstrate the characteristics of the diode and transistors 
+• Design suitable amplifiers for simple applications 
+• Analyze the timing circuits and design oscillators 
+• Construct simple logic circuits 
+• Develop a high degree of familiarity with the electronic communication systems  
+ 
+Text Book (s): 
+1 Floyd, “Electronic Devices” Pearson Education, 9 th edition, 2012 
+2 R.P.Jain, “Modern Digital Electronics”, Tata Mc Graw Hill, 3 rd Edition, 2007 
+3 Frenzel, “Communication Electronics: Principles and Applications”, Tata McGraw Hill, 3 rd Edition,2001 
+ 
+Reference Books(s) / Web links: 
+1 Donald.A.Neamen, Electronic Circuit Analysis and Design, Tata Mc Graw Hill, 2 nd Edition,2009 
+2 David.A,Bell, “Electronic Devices and Circuits”, Oxford Higher education Press, 5 th Edition, 2010 
+3 M.Morris Mano, “Digital Design”, Prentice Hall of India Pvt. Ltd., 4 th Edition, 2008 
+4 Simon Haykin, “Communication Systems”, John Wiley & Sons, NY,4 th Edition, 2001 
+5 Salivahanan.S, Suresh Kumar.N, Vallavaraj.A, “Electronic Devices and Circuits”, Tata Mc Graw Hill, 3 rd 
+Edition, 2008 
+ 
+   PO-PSO 
+ 
+   CO 
+POs PSOs 
+1 2 3 4 5 6 7 8 9 10 11 12 1 2 3 
+EC23111.1 3 3 2 1 - - - - 2 1 2 - 3 3 2 
+EC23111.2 3 2 3 - - - - - 2 1 - - 3 2 3 
+EC23111.3 3 - 3 - - - 3 - 2 1 2 - 3 - 3 
+EC23111.4 3 - 3 - - - 3 - - - - - 3 - 3 
+EC23111.5 3 - 3 2 - - 3 - - - - - 3 - 3 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+SDG No. & Theme Addressing CO Topic / Activity addressing SDG Theme 
+SDG 4 – Quality Education CO1 Hands-on learning of semiconductor devices and digital 
+logic circuits 
+SDG 7 – Affordable and Clean 
+Energy CO2 Studying the Zener voltage regulator and energy -
+efficient amplifier circuits 
+SDG 9 – Industry, Innovation and 
+Infrastructure CO3 Op-amp system design, oscillators, GSM 
+communication 
+SDG 12 – Responsible 
+Consumption and Production CO4 Efficient IC usage, digital system optimization 
+SDG 13 – Climate Action CO5 Low-power communication an d efficient signal 
+processing circuits 
+ 
+--- PAGE 15 ---
+ 
+ 
+ 
+Course Code Course Title (Theory course)  L T P C 
+GE23117 தமிழர் மரபு / HERITAGE OF TAMILS  1 0 0 1 
+ 
+அலகு I   மமொழி மற்றும ் இலக்கியம ் 3 
+இந்திய தமொழிக் குடும்பங ் கள ் - திரொவிட தமொழிகள ் - தமிழ் ஒரு தெம்தமொழி - தமிழ் 
+தெவ ் விலக்கியங ் கள ் - ெங ் க இலக்கியத்தின ் ெமய ெொர்பற்ற தன ் மம - ெங ் க இலக்கியத்தில ் பகிர் தல ் 
+அறம் - திருக்குறளில ் மமலொண ் மமக் கருத்துக்கள ் - தமிழிக் கொப்பியங ் கள ், தமிழகத்தில ் ெமண 
+தபௌத்த ெமயங ் களின ் தொக்கம் - பக்தி இலக்கியம், ஆழ்வொர் கள ் மற்றும் நொயன ் மொர் கள ் - 
+சிற்றிலக்கியங ் கள ் - தமிழில ் நவீன இலக்கியத்தின ் வளர் ெ்சி - தமிழ் இலக்கிய வளர் ெ்சியில ் 
+பொரதியொர் மற்றும்  பொரதிதொென ் ஆகிமயொரின ் பங ் களிப்பு. 
+அலகு II   மரபு - பொறற ஓவியங ் கள ் முதல ் நவீன ஓவியங ் கள ் வறர - சிற்பக் கறல  3 
+நடுகல ் முதல ் நவீன சிற்பங ் கள ் வமர - ஐம்தபொன ் சிமலகள ் - பழங ் குடியினர் மற்றும் அவர் கள ் 
+தயொரிக்கும் மகவிமனப் தபொருட்கள ், தபொம்மமகள ் - மதர் தெய ் யும் கமல - சுடுமண ் சிற்பங ் கள ் - 
+நொட்டுப்புறத் ததய ் வங ் கள ் - குமரிமுமனயில ் திருவள ்ளுவர் சிமல - இமெக் கருவிகள ் - மிருதங ் கம், 
+பமற, வீமண, யொழ், நொதஸ ் வரம் - தமிழர் களின ் ெமூக தபொருளொதொர வொழ்வில ் மகொவில ் களின ் 
+பங ் கு. 
+அலகு III நொட்டுப்புறக் கறலகள ் மற்றும ் வீர விறளயொட்டுகள ் 3 
+ததருக்கூத்து, கரகொட்டம், வில ் லுப்பொட்டு, கணியொன ் கூத்து, ஒயிலொட்டம், மதொல ் பொமவக் கூத்து, 
+சிலம்பொட்டம், வளரி, புலியொட்டம், தமிழர் களின ் விமளயொட்டுகள ். 
+அலகு IV   தமிழர்களின ் திறைக் ககொட்பொடுகள ் 3 
+தமிழகத்தின ் தொவரங ் களும், விலங ் குகளும் - ததொல ் கொப்பியம் மற்றும் ெங ் க இலக்கியத்தில ் அகம் 
+மற்றும் புறக் மகொட்பொடுகள ் - தமிழர் கள ் மபொற்றிய அறக்மகொட்பொடு - ெங ் ககொலத்தில ் தமிழத்தில ் 
+எழுத்தறிவும், கல ் வியும் - ெங ் ககொல நகரங ் களும் துமற முகங ் களும் - ெங ் ககொலத்தில ் ஏற்றுமதி 
+மற்றும் இறக்குமதி - கடல ் கடந்த நொடுகளில ் மெொழர் களின ் தவற்றி. 
+அலகு V இந்திய கதசிய இயக்கம ்  மற்றும ் இந்திய பை ் பொட்டிற்குத் தமிழர்களின ் 
+பங ் களிப்பு 
+9 
+இந்திய விடுதமலப்மபொரில ் தமிழர் களின ் பங ் கு - இந்தியொவின ் பிறப்பகுதிகளில ் தமிழ்ப் 
+பண ் பொட்டின ் தொக்கம் - சுயமரியொமத இயக்கம் - இந்திய மருத்துவத்தில ், சித்த மருத்துவத்தின ் 
+பங ் கு - கல ் தவட்டுகள ், மகதயழுத்துப்படிகள ் - தமிழ்ப் புத்தகங ் களின ் அெ்சு வரலொறு.   
+Total Contact Hours: 15 
+TEXT-CUM-REFERENCE BOOKS 
+1. தமிழக வரலொறு - மக்களும் பண ் பொடும் - மக.மக. பிள ்மள (தவளியீடு: தமிழ்நொடு பொடநூல ் மற்றும் 
+கல ் வியியல ் பணிகள ் கழகம்). 
+2. கணினித் தமிழ் - முமனவர் இல. சுந்தரம ். (விகடன ் பிரசுரம்). 
+3. கீழடி - மவமக நதிக்கமரயில ் ெங ் ககொல நகர நொகரிகம் (ததொல ் லியல ் துமற தவளியீடு) 
+4. தபொருமந - ஆற்றங ் கமர நொகரிகம். (ததொல ் லியல ் துமற தவளியீடு) 
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of Tamil 
+Studies. 
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: International 
+Institute of Tamil Studies). 
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute of Tamil 
+Studies). 
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of archaeology 
+& Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu) 
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The Author)  
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and Educational 
+Services Corporation, Tamil Nadu) 
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 
+ 
+ 
+ 
+Course Outcomes: 
+• Categorize language families and literature types, and contextualize Tamil literature within its historical and 
+cultural significance. 
+• Explain the diverse arts and crafts of both ancient and contemporary Tamil society.  
+• Explain the folk arts and traditional sports of the Tamil culture. 
+• Explain Tamil history through the lens of Agam and Puram Thinai classifications, and their relevance in social 
+and political contexts. 
+• Explain the significant contributions of Tamils to the Indian independence movement and comprehend the 
+evolution and impact of Tamil printing. 
+--- PAGE 16 ---
+ 
+ 
+ 
+   PO-PSO 
+ 
+   CO 
+POs PSOs 
+1 2 3 4 5 6 7 8 9 10 11 12 1 2 3 
+GE23117.1 - - - - - 2 2 1 - 2 - 2 - - 1 
+GE23117.2 - - - - - 2 2 1 - 2 - 2 - - 1 
+GE23117.3 - - - - - 2 1 1 2 2 - 2 - - 1 
+GE23117.4 - - - - - 3 2 2 - 2 - 2 - - 1 
+GE23117.5 - - - - - 3 2 2 - 2 - 2 - - 2 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+ 
+ 
+SDG No. & Theme Addressing CO Topic / Activity addressing SDG Theme 
+SDG 11 – Sustainable Cities and 
+Communities CO1 Sangam works, cultural evolution of Tamil society 
+SDG 8 – Decent Work and 
+Economic CO2 Temple arts, handicrafts, architecture, weaving, 
+sculpture, traditional occupations 
+SDG 3 – Good Health and Well-
+being CO3 Silambam, Jallikattu, Kabaddi 
+SDG 16 – Peace, Justice and 
+Strong Institutions CO4 Social structure, governance, ethical values 
+SDG 16 – Peace, Justice and 
+Strong Institutions CO5 Freedom fighters, social reform movements, Tamil 
+journalism, printing press history 
+ 
+--- PAGE 17 ---
+ 
+ 
+ 
+Course Code Course Title ( Lab Oriented Theory Course) Category L T P C 
+PH23131 PHYSICS OF MATERIALS  
+Common to I sem. B.E. - Aero, Auto, Civil,  Mech, MCT and R&A  BS 3 0 2 4 
+Objectives: 
+● To enhance the fundamental knowledge of elasticity and its applications relevant to engineering streams.  
+● To become proficient in crystal growth and crystal systems. 
+● To introduce the essential of phase transformation in materials. 
+● To impart knowledge on the structure, properties, treatment, testing and applications of metals and alloys.  
+● To familiarize students with thermal properties and applications. 
+UNIT-I PROPERTIES OF MATTER 9 
+Elasticity–Hooke’s law -stress–strain-modulus of elasticity -stress-strain diagram -Poisson’s ratio -rigidity modulus -
+twisting couple on a cylinder -moment of inertia - torsional pendulum method. Bending of beams -bending moment-
+cantilever depression -theory and experiment - Young’s modulus determination –uniform and non -uniform bending-I-
+shape girders. Viscosity-flow of motion-Reynolds number. 
+UNIT-II THERMAL PHYSICS 9 
+Transfer of heat energy – thermal expansion of solids and liquids – expansion joints - bimetallic strips - thermal 
+conduction, convection and radiation –rectilinear heat flow – thermal conductivity - Forbe’s and Lee’s disc method: 
+theory and experiment - conduction through compound media (series and parallel) – thermal insulation – applications: 
+heat exchangers, refrigerators, ovens and solar water heaters. 
+UNIT-III PHASE DIAGRAMS 9 
+Solid solutions - Hume-Rothery’s rules –Gibb’s phase rule – unary phase diagram - binary phase diagrams -
+isomorphous systems - tie-line and lever rule - eutectic, eutectoid, peritectic, peritectoid, monotectic and syntectic 
+systems - formation of microstructures -homogeneous and non -homogenous cooling – nucleation (Qualitative)– iron-
+carbon phase diagram - eutectoid steel – hypo-eutectoid and hyper -eutectoid steel – diffusion - Fick’s laws – T-T-T 
+diagrams. 
+UNIT-IV CRYSTAL PHYSICS 9 
+Basis – lattices – unit cell-crystal systems – Bravais lattices –number of atoms, atomic radius, co -ordination number 
+and packing fraction - SC, BCC, FCC, HCP lattices and diamond structure - polymorphism and allotropy -graphite 
+structure - Miller indices – determination of d -space-crystal growth techniques -solution growth –melt growth - 
+Bridgmann and Czochralski - crystal defects. 
+UNIT-V ADVANCED MATERIALS & TESTING 9 
+Metallic glasses – preparation, properties and applications - Composites – types and properties - Shape memory alloys 
+– properties and applications - Nano-materials – top down and bottom up approaches –sol-gel method -pulsed laser 
+deposition-ball milling - properties-applications - Tensile strength – Hardness – Fatigue - Impact strength – Creep - 
+Fracture – types of fracture. 
+ Contact Hours : 45 
+List of  Experiments 
+1 Determination of Young’s modulus of given material by non-uniform bending method. 
+2 Determination of moment of inertia of a disc and rigidity modulus of a given wire using Torsional pendulum.  
+3 Determination of Young’s modulus of given beam by cantilever method. 
+4 Determination of viscosity of the given liquid using Poiseuille’s method. 
+5 Determination of Thermal conductivity of a bad conductor – Lee’s Disc method. 
+6 Determination of Velocity of ultrasound and compressibility of given liquid – Ultrasonic interferometer. 
+7 Determination of the wavelength of Laser and particle size of given powder.  
+8 Determination of the Hysteresis loss of ferromagnetic material by B-H curve experiment. 
+9 Find the thickness of a given thin wire – Air wedge method. 
+10 Study the characteristics of solar cell parameters. 
+ Contact Hours : 30 
+ Total Contact Hours : 75 
+Course Outcomes: 
+ 
+On completion of the course, the students will be able to  
+● apply the elastic nature of materials and determine the elastic moduli of different materials. 
+● apply the basic knowledge of crystal structure in solids. 
+● analyse and measure the properties of alloys. 
+● analyse various material testing methods and use them in suitable applications. 
+● understand the concepts of heat transfer  in various applications. 
+Text Book(s): 
+1 Bhattacharya, D.K. &Poonam, T.  “Engineering Physics”.Oxford University Press, 2018. 
+--- PAGE 18 ---
+ 
+ 
+2 Gaur, R.K. & Gupta, S.L.  “Engineering Physics”.DhanpatRai Publishers, 2018. 
+3 Raghavan, V.  “Physical Metallurgy: Principles and Practice”. PHI Learning, 2019. 
+Reference Books(s) / Web links: 
+1 Balasubramaniam, R.  “Callister's Materials Science and Engineering”.Wiley India Pvt. Ltd., 2017 
+2 Resnick, R., Halliday, D., & Walker, J. “Principles of Physics”, Wiley India Pvt., 2018. 
+3 Raghavan, V.  “Materials Science and Engineering: A First course”. PHI Learning, 2019. 
+4 https://nptel.ac.in/courses/113104068 
+5 https://archive.nptel.ac.in/courses/115/105/115105099/ 
+ 
+ 
+List of Equipment Available 
+ (Common to B.E. Aero, Auto, Civil, Mechanical, Mechatronics Engineering and R&A)  
+ 
+S. No Name of the equipment Quantity 
+Required 
+Quantity 
+Available Deficiency 
+1 Young’s modulus by Non - Uniform bending method 
+Travelling Microscopes, Meter scale etc., 6 13 - 
+2 Rigidity Modulus - Torsional Pendulum Setup 6 19 - 
+3 Velocity of sound and compressibility of liquid – 
+Ultrasonic Interferometer 6 14 - 
+4 Wavelength of Laser and Characteristics -Laser source And 
+grating plate 6 15 - 
+5 B-H curve Setup and CRO 6 7 - 
+6 Thermal conductivity of bad conductor- Lee’s Disc setup 6 16 - 
+7 LCR circuit kit 6 7 - 
+8 Thickness of a thin wire-Air wedge method – 
+Travelling microscope 6 13 - 
+9 Solar cell parameters setup 6 8 - 
+10 Poiseuille’s method set up 6 10 - 
+ 
+CO - PO – PSO matrices of course 
+   PO/PSO 
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+CO 1 3 3 2 - - - - - - - - - 1 1 1 
+CO 2 3 2 1 - - - - - - - - - - 1 - 
+CO 3 3 3 2 - - - - - - - - 1 1 1 - 
+CO 4 3 2 2 - - - - - - - - 1 1 1 1 
+CO 5 3 3 2 - - - - - - - - 1 1 - - 
+1: Slight (Low) 2: Moderate (Medium)  3: Substantial (High) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 19 ---
+ 
+ 
+Course Code Course Title (Laboratory Course) Category L T P C 
+GE23121 ENGINEERING PRACTICES – Civil and Mechanical ES 0 0 2 1 
+ 
+Objectives: 
+To provide exposure to the students with hands on experience on various basic engineering practices in Civil and 
+Mechanical Engineering. 
+ 
+List of Experiments 
+CIVIL ENGINEERING PRACTICE 
+1 
+Study of pipeline joints, its location and functions: valves, taps, couplings, unions, reducers, and elbows in 
+household fittings. 
+2 Preparation of basic plumbing line sketches for wash basins, water heaters, etc. 
+3 Hands-on-exercise: Basic pipe connections – Pipe connections with different joining components. 
+Carpentry Works: 
+4 Study of joints in roofs, doors, windows and furniture. 
+5 Hands-on-exercise: Woodwork, joints by sawing, planning and chiselling. 
+MECHANICAL ENGINEERING PRACTICE 
+6 Preparation of butt joints, lap joints and T- joints by Shielded metal arc welding. 
+7 Gas welding practice. 
+Basic Machining: 
+8 Simple Turning and Taper turning 
+9 Drilling Practice 
+Sheet Metal Work: 
+10 Forming & Bending: 
+11 Model making – Trays and funnels 
+12 Different type of joints. 
+Machine Assembly Practice: 
+13 Study of centrifugal pump 
+14 Study of air conditioner 
+ Total Contact Hours : 30 
+ 
+Course Outcomes: 
+● 
+Apply plumbing tools and create basic residential/industrial pipe connections by interpreting pipeline layouts and 
+safety standards. 
+● Perform carpentry operations such as sawing, planning, chiselling and construct standard wood joints used in 
+doors, windows and trusses. 
+● Prepare butt, lap, L-joint and T-joint weldments using SMAW and gas welding by applying correct process 
+parameters and safety procedures. 
+● Execute basic machining operations such as turning, taper turning, step turning and drilling with proper tool 
+settings and measurement accuracy. 
+● Perform sheet metal cutting, bending, and forming operations to fabricate simple products and demonstrate 
+understanding of mechanical assembly principles through study experiments..  
+ 
+List of equipment and components 
+(For a Batch of 30 Students) 
+CIVIL 
+1.Assorted components for plumbing consisting of metallic pipes, plastic pipes, flexible pipes, couplings, unions, 
+elbows, plugs and other fittings - 15 Sets. 
+2.Plumbing vice (fitted to work bench) – 15 Nos. 
+3. Carpentry vice (fitted to work bench) - 15 Nos. 
+4. Standard woodworking tools - 15 Sets. 
+5. Models of industrial trusses, door joints, furniture joints - 5 each 
+6. Power Tools: (a) Rotary Hammer - 1 No. (b) Circular Saw - 1 No. (c) Electric Planer - 1 No. 
+(d) Hand Drilling Machine - 1 No. (e) Jigsaw - 1 No. (f) Cutoff Machine – 1 No. 
+ 
+ 
+ 
+--- PAGE 20 ---
+ 
+ 
+MECHANICAL 
+1. Arc welding transformer with cables and holders - 5 Nos. 
+2. Welding booth with exhaust facility - 5 Nos. 
+3. Welding accessories like welding shield, chipping hammer, wire brush, etc. - 5 Sets. 
+4. Oxygen and acetylene gas cylinders, blow pipe and other welding outfit - 1 No. 
+5. Centre lathe - 5 Nos. 
+6. Standard Sheet metal working tools – 2 sets 
+7. Study-purpose items: centrifugal pump, air-conditioner – 1 each. 
+ 
+   PO-PSO 
+ 
+   CO 
+POs PSOs 
+1 2 3 4 5 6 7 8 9 10 11 12 1 2 3 
+GE23121.1 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.2 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.3 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.4 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+GE23121.5 1 1 1 - - 2 1 - 2 - - 2 - 2 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+SDG No. & Theme Addressing CO Topic / Activity addressing SDG Theme 
+SDG 6 – Clean Water & Sanitation 
+ 
+CO1 Plumbing skills improve safe water distribution & reduce 
+leakages. 
+SDG 9 – Industry, Innovation & Infrastructure CO2 Carpentry supports sustainable construction processes. 
+DG 8 – Decent Work & Economic Growth CO3 Welding skills promote safe industrial employment & 
+productivity. 
+SDG 4 – Quality Education CO4 Machining training enhances technical competence and 
+hands-on learning. 
+SDG 12 – Responsible Consumption & 
+Production CO5 Sheet metal & assembly encourage sustainable fabrication 
+and repair practices. 
+ 
+Course Code Course Title  (Theory course) Category L T P C 
+MC23112 ENVIRONMENTAL  SCIENCE  AND  ENGINEERING MC 3 0 0 0 
+Common to B.E. /B.Tech all branches except CSBS 
+ 
+Objectives: 
+● To develop the understanding of environmental and associated issues 
+● To develop an attitude of concern for the environment 
+● To promote enthusiasm in participating environmental protection initiatives 
+● To nurture skills to solve environmental degradation issues 
+● To develop the knowledge about the environmental laws 
+ 
+UNIT-I AIR AND NOISE POLLUTION 9 
+Definition –sources of air pollution –chemical and photochemical reactions in the atmosphere - formation of smog, 
+PAN, acid rain, ozone depletion, particulate pollutants -Air quality standards -Air quality indices - control of 
+particulate air pollutants -gravitational settling chambers, cyclone separators, wet collectors, fabric filters (Bag -house 
+filter), electrostatic precipitators (ESP)-catalytic converters. 
+Noise pollution –sources - health effects - standards- measurement and control methods. 
+UNIT-II WATER POLLUTION AND ITS MANAGEMENT 9 
+Definition-causes-effects of water pollution -point and nonpoint sources of wastewater -marine pollution - thermal 
+pollution - Control of water pollution by physical, chemical and biological methods – wastewater treatment-primary, 
+secondary and tertiary treatment-sources and 
+characteristics of industrial effluents- zero liquid discharge. 
+--- PAGE 21 ---
+ 
+ 
+UNIT-III SOLID WASTE AND HAZARDOUS WASTE MANAGEMENT 9 
+Solid waste – types- municipal solid waste management: sources, characteristics, collection, and transportation - 
+sanitary landfill, recycling, composting, incineration, energy recovery options from waste - Hazardous waste – types, 
+characteristics, and health impact - hazardous waste management: neutralization, oxidation reduction, precipitation, 
+solidification, stabilization, incineration and final disposal. 
+E-waste-definition-sources-effects on human health and environment - E-waste management- steps involved - Role of 
+E-waste management within the initiatives of the Govt. of India- Swachh Bharat Mission. 
+UNIT-IV SUSTAINABLE DEVELOPMENT 9 
+Sustainable development - concept-dimensions-sustainable development goals - value education - gender equality – 
+food security - poverty – hunger - famine - Twelve principles of  green chemistry - Green technology - definition, 
+importance - Cleaner development mechanism -  carbon credits, carbon trading, carbon sequestration, eco labeling -
+International conventions and protocols-Disaster management. 
+UNIT-V ENVIRONMENTAL MANAGEMENT AND LEGISLATION 9 
+Environmental Management systems - ISO 14000 series - Environmental audit -Environmental Impact Assessment - 
+life cycle assessment -  human health risk assessment - Environmental Laws and Policy - Objectives - Polluter pays 
+principle, Precautionary principle - The Environment (Protection) Act 1986 - Role of Information technology in 
+environment and human health. 
+Total Contact Hours:45 
+ 
+Course Outcomes: On completion of the course, the students will be able to 
+● Associate air and noise quality standards with environment and human health. 
+● Illustrate the significance of water and devise control measures for water pollution.  
+● Analyze solid wastes and hazardous wastes. 
+● Outline the goals of sustainable development in an integrated perspective.  
+● Comprehend the significance of environmental laws. 
+ 
+ 
+Text Book(s): 
+1. Benny Joseph, ‘Environmental Science and Engineering’, Tata McGraw-Hill, New Delhi, 2016 
+2. Anubha Kaushik and C. P. Kaushik’s “Perspectives in Environmental Studies”, 6th Edition, New Age 
+International Publisher, 2018. 
+3. Johri R., E-waste: implications, regulations, and management in India and current global best practices, 
+TERI Press, New Delhi 
+ 
+Reference Books(s) / Web links: 
+● R.K. Trivedi, ‘Handbook of Environmental Laws, Rules, Guidelines, Compliances and Standards’, Vol. 
+I and II, Enviro Media. 38. Edition 2010. 
+● Cunningham, W.P. Cooper, T.H. Gorhani, ‘Environmental Encyclopedia’, Jaico Publ., House, Mumbai, 
+2001. 
+● Fowler B, Electronic Waste – 1 st Edition (Toxicology and Public Health Issues), 2017 Elsevier 
+● NPTEL course url https://onlinecourses.nptel.ac.in/noc19_ge22/NPTEL 
+https://news.mit.edu/2013/ewaste-mit 
+1. For downloading text/reference books the weblink is given below can be used http://libgen.rs/ 
+  
+     PO/PSO 
+ 
+CO 
+P
+O
+1 
+PO
+2 
+PO
+3 
+PO
+4 
+PO
+5 
+PO
+6 
+PO
+7 
+PO
+8 
+PO
+9 
+PO1
+0 
+PO1
+1 
+PO1
+2 
+PS0
+1 
+PSO
+2 
+PSO
+3 
+MC23112.1 1 2 3 1 - 2 2 2 1 1 1 2 - 1 - 
+MC23112.2 1 2 3 1 - 2 2 2 1 1 1 2 - - - 
+MC23112.3 - - 3 1 - 2 3 2 1 - 1 2 - - - 
+MC23112.4 - 1 2 1 1 3 3 2 1 1 1 2 - - - 
+MC23112.5 - 1 2 - - 2 2 2 1 2 2 2 - - 1 
+ 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+--- PAGE 22 ---
+ 
+ 
+SEMESTER II 
+Course Code Course Title (Laboratory Course) Category L T P C 
+HS23221 TECHNICAL COMMUNICATION II  HS 0 0 2 1 
+ Common to all branches of B.E/B. Tech programmes –Second Semester 
+ 
+Objectives: 
+● To facilitate students to improve their vocabulary for a better communication 
+● To enable learners to understand and reproduce language  
+● To aid students to write technical reports in a convincing manner 
+● To expose students to different sentence structures 
+● To equip learners to present their ideas in an efficient manner 
+ 
+UNIT-I VOCABULARY FOR BETTER COMMUNICATION  6 
+Listening: Telephonic Conversations and TV News 
+Reading: Newspapers and Magazines 
+Speaking: Conversational Practice: Speaking in a given situation, Asking permission and requesting etc..,  
+Writing: Job Application Letter and  Resume 
+Grammar: Reference words: pronouns and determiners 
+Vocabulary: Guessing meanings of words in different contexts. 
+UNIT-II FUNCTIONAL LANGUAGE ASPECTS 6 
+Listening: Motivational listening – listening to real life challenges 
+Reading:  Articles and Technical reports 
+Speaking: Using Polite Expressions, Indirect Questions 
+Writing: Paraphrasing a Text, Poem 
+Grammar:  Purpose Statements, Cause and Effect Expressions 
+Vocabulary: Neologisms.  
+UNIT-III TECHNICAL REPORTWRITING 6 
+Listening: Empathetic Listening – Giving Solutions to Problems  
+Reading:  Inferential Reading  
+Speaking:  Dialogues – Interviewing Celebrities / Leaders / Sportspersons, etc.., 
+Writing: Report Writing 
+Grammar:  Functional Usage of Expressions – used to, gone / been, etc.., 
+Vocabulary:  Words Often Confused 
+UNIT-IV STRUCTURAL GRAMMAR 6 
+Listening: Comprehension (IELTS practice tests) 
+Reading:  Intensive Reading for specific information 
+Speaking:  Pick and Talk 
+Writing: Proposals 
+Grammar: Sentence Structures – Simple, Compound, Complex Sentences 
+Vocabulary: Replacing dull words with vivid ones 
+UNIT-V PRESENTATION SKILLS 6 
+Listening: Discriminative listening – sarcasm, irony, pun, etc.., 
+Reading: Practice of chunking – breaking up reading materials 
+Speaking:  Mini presentation on some topic 
+Writing: Minutes of the meeting 
+Grammar: Correction of Errors 
+Vocabulary: Advanced vocabulary – fixing appropriate words in the given context. 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● communicate effectively using appropriate vocabulary 
+● use the acquired language skills to comprehend various types of language contents  
+● evaluate different texts and write effective technical content 
+● use appropriate sentence structures to convey their thoughts  in varied contexts 
+● present their concepts and ideas in an effective manner 
+ 
+Text Book(s): 
+1. Raymond Murphy, “Intermediate English Grammar,” Second Edition , Cambridge University Press, 2018  
+2.  Meenakshi Raman & Sangeeta Sharma, “Technical Communication” Third Edition, Oxford University 
+Press, 2015 
+3. Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press 
+--- PAGE 23 ---
+ 
+ 
+Reference Books(s) / Web links: 
+1. Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor), “Basic Vocabulary in 
+Use: 60 Units of Vocabulary Practice in North American English With Answers” 2nd Edition  
+        2. Dale Carnegie, “The Art of Public Speaking,” Insight Press 
+        3. Jack C. Richards & Theodore S. Rodgers, “ Approaches and Methods in Language Teaching, Second Edition,       
+Cambridge University Press 
+ 
+PO/PSO 
+ 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO
+1 
+PSO
+2 
+PSO
+3 
+HS23221. 1 - - - 1 - - - - - 2 - - - - - 
+HS23221. 2 - - - 1 - - - - - 3 - - - - - 
+HS23221. 3 - 2 - 1 - - - - - 3 - - - - - 
+HS23221. 4 - - - 1 - - - - 2 3 - - - - - 
+HS23221. 5 - - - 1 - - - - 2 2 - - - - - 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+ 
+Course Code Course Title (Laboratory Course) Category L T P C 
+HS23222 
+ENGLISH FOR PROFESSIONAL COMPETENCE 
+Common to all branches of B.E/B. Tech programmes –Second 
+Semester 
+HS 0 0 2 1 
+Objectives: 
+● To facilitate the learners in acquiring listening and reading competence 
+● To enable the learners to communicate effectively through written and oral medium 
+● To assist the learners in preparing for competitive examinations 
+● To train the students in acquiring corporate skills 
+● To inculcate professional standards among the students and make them realize their responsibi lity in addressing the 
+challenges 
+ 
+UNIT-I RECEPTIVE SKILLS 6  
+Listening – Comprehensive Listening – Watching the news – Listening to a peer giving presentation, etc. – Critical 
+Listening – Watching a televised debate, Listening to poems – Reading – Extensive Reading – Short stories and One -
+act Plays – Intensive Reading – Articles or Editorials in Magazines, Blog posts on topics like science and technology, 
+arts, etc.  
+UNIT-II PRODUCTIVE SKILLS   6 
+Speaking – Demonstrative Speaking – Process description through visual aids – Persuasive Speaking – Convincing the 
+listener with the speaker’s view – Writing – Descriptive Writing -  Describing a place, person, process – Subjective 
+Writing – Autobiography, Writing based on personal opinions and interpretations  
+UNIT-III ENGLISH FOR COMPETITIVE EXAMS  6 
+ An introduction to International English Language Testing System (IELTS) – Test of English as a Foreign Language 
+(TOEFL) – Graduate Record Examination (GRE) – Civil Service, Indian Economic Service Examination, Indian 
+Statistical Service Examination, Combined Defence Services Examination, Staff Selection - (Language Related) – 
+Aptitude tests. 
+UNIT-IV CORPORATE SKILLS  6 
+ Critical Thinking and Problem Solving – Case Study, Brainstorming, Q & A Discussion – Team work and 
+Collaboration – Activities like Office Debates, Perfect Square, Blind Retriever, etc. – Professionalism and Strong 
+Work Ethics – Integrity, Resilience, Accountability, Adaptability, Growth Mind set 
+UNIT-V PROJECT  WORK  6 
+ Case Study based on the challenges faced by the employers and the employees – Devise Plan, Provide Solution 
+ Total Contact Hours  30 
+Course Outcomes: On completion of the course, students will be able to  
+● interpret and respond appropriately in the listening and reading contexts. 
+● express themselves effectively in spoken and written communication 
+● apply their acquired language skills in writing the competitive examinations 
+● exhibit their professional skills in their work place 
+● identify the challenges in the work place and suggest strategies solutions   
+ 
+--- PAGE 24 ---
+ 
+ 
+Reference Books 
+1 How to Read Better & Faster, Norman Lewis, Goyal Publishers 
+2 Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine Chuen Meng Goh, Cambridge 
+University Press 
+3 The Official Cambridge Guide To IELTS by Pauline Cullen, Cambridge University Press  
+4  The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK  
+ 
+Reference Books(s) / Web links: 
+1.  Board of Editors. Sure Outcomes. A Communication Skills Course for Undergraduate Engineers and 
+Technologists. Orient Black Swan Limited, Hyderabad, 2013.  
+2. Hartley, Mary. “The Power of Listening,” JaicoPublishing House; First Edition (2015). 
+3. Chambers, Harry.  “Effective Communication Skills for Scientific and Technical Professionals,” Persues 
+Publishing, Cambridge, Massachusetts, 2000. 
+ 
+PO/PSO 
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS23222. 1 - 1 - - - - - - - 3 - - - - - 
+HS23222. 2 - 1 - - - - - - - 3 - - - - - 
+HS23222. 3 - - - - - - - - - 3 - - - - - 
+HS23222. 4 - - - - - - 2 2 - 3 - - - - - 
+HS23222. 5 - - 1 - - - 2 - - 3 - - - - - 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Course Code Course Title (Theory course) Category L T P C 
+MA23212 DIFFERENTIAL EQUATIONS AND COMPLEX VARIABLES BS 3 1 0 4 
+Common to II Sem. B.E. –AERO, AUTO, BME, CIVIL, EEE, ECE, MECH, MCT, R&A 
+and B. Tech. - BT, FT & CHEM 
+Objectives: 
+● To provide students with an introduction to the theory of ordinary differential equations through applications, 
+methods of solution, and numerical approximations. 
+● To introduce students to how to solve linear Partial Differential with different methods.  
+● To enable the students to study the Laplace Transforms, properties of Laplace Transform, inverse Laplace 
+Transform and some applications  to solve the differential equations and integral equations.  
+● To explain the concept of a vector integration in a plane and in space. 
+● To describe basic properties of complex variables and to have the ability to compute complex integrals.  
+UNIT-I ORDINARY DIFFERENTIAL EQUATIONS 12 
+Second and higher order Linear differential equations with constant coefficients - Method of variation of parameters – 
+Legendre’s linear equations – Numerical solution of ODE - Single Step methods: Taylor’s series method, Euler’s 
+method. 
+UNIT-II PARTIAL DIFFERENTIAL EQUATIONS 12 
+Formation of partial differential equations - Classification of PDE  –  Solutions of standard types of first order partial 
+differential equations - Lagrange’s linear equation –Linear homogeneous partial differential equations of second and 
+higher order with constant coefficients.  
+UNIT-III LAPLACE TRANSFORM 12 
+Laplace transform –Basic properties – Transforms of derivatives and integrals of functions - Transforms of unit step 
+function and impulse functions, periodic functions. Inverse Laplace transform – Problems using Convolution theorem 
+– Solution of linear ODE of second order with constant coefficients using Laplace transformation techniques  
+UNIT-IV VECTOR CALCULUS 12 
+Gradient, divergence and curl – Directional derivative – Irrotational and Solenoidal vector fields – Vector integration – 
+Green’s theorem in a plane, Gauss divergence theorem and Stokes’ theorem (excluding proofs) – Simple applications 
+involving cubes and rectangular parallelopipeds. 
+--- PAGE 25 ---
+ 
+ 
+UNIT-V COMPLEX VARIABLES 12 
+Analytic functions –– Construction of analytic function - Bilinear transformation –Singularities – Cauchy’s integral 
+theorem (without proof) - Residues – Residue theorem (without proof) -  Simple problems - Contour integral over 
+|z|=1. 
+Total Contact Hours: 60 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Apply the methods as a potent tool in the solution of a variety of problems in the natural sciences and 
+technology.  
+● Develop specific methodologies, techniques and resources in Partial differential equations to conduct 
+research and produce innovative results in the area of specialisation.  
+● Use Laplace transform and inverse transform techniques to solve the complex problems in engineering and 
+technology.   
+● Apply the concepts in multivariable analysis, including space curves; directional derivative; gradient; 
+multiple integrals; line and surface integrals; vector fields; divergence, curl ; the theorems of Green and 
+Stokes, and the divergence theorem in different fields of engineering.  
+● Demonstrate the concept of Analytic functions, conformal mapping and complex integration in solving 
+Engineering problems. 
+ 
+Text Book(s): 
+1.  Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 2014.  
+2.  Veerarajan. T, Engineering Mathematics –II, Mc Graw Hill Education, 2018. 
+3.  Erwin Kreyszig," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, New Delhi,  
+2016. 
+4.  
+ 
+Glyn James, “Advanced Modern Engineering Mathematics”, Pearson Education, 4th Edition, New Delhi,  
+2011. 
+5.  
+ 
+Jain R.K. and Iyengar S.R.K., “Advanced Engineering Mathematics”, Narosa Publications, 5 th Edition, New 
+Delhi, 2017. 
+ 
+Reference Books(s) / Web links: 
+1.  Ramana. B.V., "Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 2016.  
+2.  T Veerarajan, Transforms and Partial Differential Equations, Third Edition, 2018 . 
+3.  
+ 
+Bali, N.P. and Manish Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. Ltd.,  
+New Delhi, 4th Edition 2006. 
+4.  
+ 
+Peter V.O’Neil, “Advanced Engineering Mathematics”, Cengage Learning India Pvt., Ltd, 7th Edition,  
+New Delhi, 2012. 
+ 
+ 
+ 
+ PO/PSO 
+CO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23212.1 3 2 1 - - - - - - - - 1 1 - - 
+MA23212.2 3 2 1 - - - - - - - - 1 1 - - 
+MA23212.3 3 2 1 - - - - - - - - - - - - 
+MA23212.4 2 2 1 - - - - - - - - - - - - 
+MA23212.5 3 2 1 - - - - - - - - 1 - - - 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

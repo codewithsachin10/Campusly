@@ -1,0 +1,1313 @@
+
+--- PAGE 1 ---
+ -------------------------------------------------------------------------------------------------------------------------------------------------                                   
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023  
+ 
+RAJALAKSHMI ENGINEERING COLLEGE                 
+     (An Autonomous Institution Affiliated to Anna University Chennai)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+B.E. ROBOTICS AND AUTOMATION 
+R-2023 CURRICULUM & SYLLABUS                                              
+     (CHOICE BASED CREDIT SYSTEM)  
+ 
+--- PAGE 2 ---
+ -------------------------------------------------------------------------------------------------------------------------------------------------                                   
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023  
+ 
+ 
+DEPARTMENT OF ROBOTICS AND 
+AUTOMATION 
+DEPARTMENT VISION: 
+ 
+To be a department of excellence in academics, research and technological advancement in Robotics and 
+Automation with a concern for society. 
+ 
+DEPARTMENT MISSION: 
+ 
+● To impart high technical knowledge, strong fundamentals, practical skills and creative knowledge 
+for making successful professionals in Robotics and Automation 
+● To foster students by infusing leadership qualities to become successful Engineer 
+● To inculcate the entrepreneurial qualities for creating, developing and managing global 
+engineering ventures 
+ 
+PROGRAMME EDUCATIONAL OBJECTIVES (PEOS): 
+ 
+PEO I 
+ 
+To impart students with strong and comprehensive knowledge in the analytical, scientific and 
+engineering fundamentals for solving engineering problems 
+ 
+PEO II 
+ 
+To disseminate students with necessary skills, knowledge and leadership qualities for successful 
+careers in industry 
+PEO III 
+ 
+To instill students with technical expertise, ethical practices and team spirit and a concern towards greener 
+society 
+ 
+ 
+PROGRAM OUTCOMES (POs): 
+ 
+Engineering Graduates will be able to: 
+ 
+1. Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, 
+and an engineering specialization to the solution of complex engineering problems. 
+2. Problem analysis: Identify, formulate, review research literature, and analyze complex engineering 
+problems reaching substantiated conclusions using first principles of mathematics, natural sciences,  
+and engineering sciences. 
+3. Design/development of solutions: Design solutions for complex engineering problems and design  
+system components or processes that meet the specified needs with appropriate consideration for the 
+public health and safety, and the cultural, societal, and environmental considerations. 
+--- PAGE 3 ---
+ -------------------------------------------------------------------------------------------------------------------------------------------------                                   
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Conduct investigations of complex problems: Use research-based knowledge and research methods 
+including design of experiments, analysis and interpretation of data, and synthesis of the information 
+to provide valid conclusions. 
+5. Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern 
+engineering and IT tools including prediction and modelling to complex engineering activities with  
+an understanding of the limitations. 
+6. The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, 
+health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional 
+engineering practice. 
+7. Environment and sustainability: Understand the impact of the professional engineering solutions  
+in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable  
+development. 
+8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of 
+the engineering practice. 
+9. Individual and team work: Function effectively as an individual, and as a member or leader in  
+diverse teams, and in multidisciplinary settings. 
+10. Communication: Communicate effectively on complex engineering activities with the engineering  
+community and with society at large, such as, being able to comprehend and write effective reports  
+and design documentation, make effective presentations, and give and receive clear instructions. 
+11. Project management and finance: Demonstrate knowledge and understanding of the engineering  
+and management principles and apply these to one’s own work, as a member and leader  in a team, 
+to manage projects and in multidisciplinary environments. 
+12. Life-long learning: Recognize the need for, and have the preparation and ability to engage in  
+independent and life-long learning in the broadest context of technological change. 
+ 
+PROGRAM SPECIFIC OUTCOMES (PSOs) 
+ 
+ 
+PSO 1: Design and develop efficient Automation system to enhance the quality of life by applying 
+fundamentals of Basic Science, Mechanical and Mechatronics Engineering 
+PSO 2: Analyze and improve the performance of Manufacturing and Production system by    implementing 
+the Soft and hard Computing methods 
+PSO 3: Manage and lead a professional or an entrepreneur career in industries by applying  modern 
+Engineering, management principles and best practices 
+ 
+ 
+ 
+--- PAGE 4 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 1 | P a g e  
+ 
+SEMESTER I 
+ 
+SL. 
+NO. 
+COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSE 
+1. HS23111 Technical Communication I HSMC 2 2 0 0 2 
+2. MA23112 Algebra and Calculus BS 4 3 1 0 4 
+3. GE23111 Engineering Graphics ES 6 2 0 4 4 
+4 RO23111 Introduction To Mechanical Systems ES 3 2 1 0 3 
+LAB ORIENTED THEORY COURSE 
+5. EE23132 Basic Electrical Engineering ES 5 3 0 2 4 
+LABORATORY COURSE 
+6. GE23121 Engineering Practices – Civil and 
+Mechanical 
+ES 2 0 0 2 1 
+7. GE23122 Engineering Practices- 
+Electrical and Electronics 
+ES 2 0 0 2 1 
+MANDATORY COURSE 
+8. MC23112 Environmental Science and 
+Engineering 
+MC 3 3 0 0 0 
+9. GE23117 தமிழர்மரபு /Heritage of 
+Tamils 
+HSMC 1 1 0 0 1 
+TOTAL 28 16 2 12 20 
+SEMESTER II 
+SL. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+ 
+CATEGORY 
+CONTACT 
+PERIODS 
+ 
+L 
+ 
+T 
+ 
+P 
+ 
+C 
+THEORY COURSE 
+1. MA23212 Differential Equations and Complex 
+Variables BS 4 3 1 0 4 
+LAB ORIENTED THEORY COURSE 
+2. CY23131 Chemistry for Electronics Engineering BS 5 3 0 2 4 
+3. PH23131 Physics of Materials BS 5 3 0 2 4 
+4. GE23233 Problem solving and Python 
+programming 
+ES 6 2 0 4 4 
+LABORATORY COURSE 
+5. HS23221 / 
+HS23222 
+Technical Communication II / English 
+for Professional Competence HSMC 2 0 0 2 1 
+6. RO23221 Computer Aided Modeling Laboratory ES 4 0 0 4 2 
+MANDATORY COURSE 
+7. GE23217 தமிழரும ் ததொழில ்நுட்பமும ் / Tamils 
+and Technology HSMC 1 1 0 0 1 
+8. MC23111 Indian Constitution and 
+Freedom Movement MC 3 3 0 0 0 
+TOTAL 30 15 1 14 20 
+RAJALAKSHMI ENGINEERING COLLEGE 
+(An Autonomous Institution Affiliated to Anna University Chennai) 
+CURRICULUM AND SYLLABUS REGULATIONS – 2023 
+CHOICE BASED CREDIT SYSTEM 
+B.E. ROBOTICS AND AUTOMATION 
+ 
+--- PAGE 5 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 2 | P a g e  
+ 
+SEMESTER III   
+SL. 
+NO. 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+ 
+CATEGORY 
+CONTACT 
+PERIODS 
+ 
+L 
+ 
+T 
+ 
+P 
+ 
+C 
+THEORY COURSE 
+1. MA23311 Transforms And Applied Partial 
+Differential Equations 
+BS 4 3 1 0 4 
+2. RO23311 Analog and Digital Electronics PC 3 3 0 0 3 
+3. RO23312 Theory of Mechanisms and 
+Machines-I 
+PC 4 3 1 0 4 
+4. RO23313 Sensors in Automation PC 3 3 0 0 3 
+LAB ORIENTED THEORY COURSE 
+5. RO23331 Elements of Manufacturing Processes PC 5 3 0 2 4 
+6. RO23332 Mechanics of Materials ES 5 3 0 2 4 
+LABORATORY COURSE 
+7. CS23422 Python Programming for Machine 
+Learning 
+ES 4 0 0 4 2 
+TOTAL 28 18 2 8 24 
+ 
+ 
+ SEMESTER IV  
+SL. 
+NO 
+COURSE 
+CODE 
+ 
+COURSE TITLE 
+ 
+CATEGORY 
+CONTACT 
+PERIODS 
+L T P C 
+THEORY COURSE 
+1. RO23411 Fluid Power Systems PC 3 3 0 0 3 
+2. RO23412 Industrial Automation and Control PC 3 3 0 0 3 
+3. RO23413 Microcontrollers and Real Time 
+Embedded Systems 
+PC 3 3 0 0 3 
+4. RO23414 Robot Kinematics PC 4 3 1 0 4 
+LAB ORIENTED THEORY COURSE 
+5. MA23432 Statistics and Numerical Methods BS 5 3 0 2 4 
+LABORATORY COURSE 
+6. RO23421 Mechanisms and Robotics 
+laboratory 
+PC 4 0 0 4 2 
+7. RO23422 Industrial Automation 
+Laboratory-I 
+PC 4 0 0 4 2 
+8. GE23421 Soft skills – I EEC 2 0 0 2 1 
+TOTAL 28 15 1 12 22 
+--- PAGE 6 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 3 | P a g e  
+ 
+SEMESTER V 
+ 
+SL. 
+NO. 
+COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSE 
+1. RO23511 AI for Robotics PC 3 3 0 0 3 
+2. RO23512 Theory of Mechanisms and 
+Machines-II 
+PC 4 3 1 0 4 
+3. ME23511 Machine Design PC 3 3 0 0 3 
+4.  Open Elective – I OE 3 3 0 0 3 
+5.  Professional Elective –I PE 3 3 0 0 3 
+LABORATORY COURSE 
+6. RO23521 Mobile Robotics laboratory PC 4 0 0 4 2 
+7. RO23522 Industrial Automation 
+Laboratory-II 
+PC 4 0 0 4 2 
+8. RO23523 Internship EEC 2 0 0 2 1 
+9. GE23521 Soft Skills – II EEC 2 0 0 2 1 
+TOTAL 28 15 1 12 22 
+ 
+ 
+ 
+ 
+SEMESTER VI 
+ 
+SL. 
+NO. 
+COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSE 
+1. ME23612 Design of Transmission systems PC 3 3 0 0 3 
+2.  Professional Elective – II PE 3 3 0 0 3 
+3.  Professional Elective – III PE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSE 
+4. RO23631 Robot operating System PC 4 2 0 2 3 
+5. RO23632 Robot Vision and Intelligence PC 5 3 0 2 4 
+6. RO23633 Robot Dynamics and Motion 
+Planning 
+PC 5 3 0 2 4 
+LABORATORY COURSE 
+7. GE23627 Design Thinking and Innovation EEC 4 0 0 4 2 
+8. GE23621 Problem solving Techniques EEC 2 0 0 2 1 
+TOTAL 29 17 0 12 23 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 7 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 4 | P a g e  
+ 
+ 
+ 
+ 
+SEMESTER VII 
+ 
+SL. 
+NO. 
+COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSE 
+1. RO23711 Aerial Robotics PC 3 3 0 0 3 
+2. RO23712 Humanoid Robotics PC 3 3 0 0 3 
+3. RO23713 Resource Management 
+Techniques 
+HSMC 4 3 1 0 4 
+4.  Professional Elective – IV PE 3 3 0 0 3 
+5.  Open Elective – II OE 3 3 0 0 3 
+LABORATORY COURSE 
+ 
+6. 
+RO23721 Robotics and Automation Problem 
+Solving using AI, ML and DL 
+PC 4 0 0 4 2 
+7. RO23722 Project Work- Phase I EEC 6 0 0 6 3 
+TOTAL 26 15 1 10 21 
+SEMESTER VIII 
+ 
+SL. 
+NO. 
+COURSE 
+CODE COURSE TITLE CATEGORY CONTACT 
+PERIODS L T P C 
+THEORY COURSE 
+1.  Professional Elective - V PE 3 3 0 0 3 
+2.  Professional Elective - VI PE 3 3 0 0 3 
+PRACTICAL COURSE 
+3. RO23821 Project Work- Phase II EEC 14 0 0 14 7 
+TOTAL 20 6 0 14 13 
+TOTAL NO. OF CREDITS: 165
+--- PAGE 8 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 5 | P a g e  
+ 
+SUMMARY 
+ 
+ 
+ 
+DEPARTMENT OF ROBOTICS AND AUTOMATION 
+ Subject Area Credits Per Semester Credits 
+Total 
+Percentage 
+% Semester I II III IV V VI VII VIII 
+1. Humanities, Social Studies and 
+management science (HSMC) 3 2         4  9 5.4 
+2. Basic Sciences (BS) 4 12 4 4     24 14.6 
+3. Engineering Sciences (ES) 13 6 6      25 15.2 
+4. Professional Core (PC)   14 17 14 14 8  67 40.6 
+5. Professional Electives (PE)     3 6    3 6 18 10.9 
+6. Open Electives (OE)     3  3  6 3.6 
+7. Project Work/ Employability 
+Enhancement Course (PR/EEC) 
+   1 2 3 3 7 16 9.7 
+ TOTAL 20 20 24 22 22 23 21 13 165  
+8. Non-Credit*/ (Mandatory) √ √ − - - - - -   
+ 
+ 
+ 
+ 
+--- PAGE 9 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 6 | P a g e  
+ 
+Professional Elective Verticals 
+ 
+ 
+    Category 
+COMMON VERTICALS DEPT. VERTICALS- R&A           DIVERSIFIED 
+VERTICAL 1 VERTICAL 2 VERTICAL 3 VERTICAL 4 VERTICAL 5            VERTICAL 6 
+ 
+Offered in 
+ 
+COMPUTATIONAL 
+ENGINEERING 
+LOGISTICS AND SUPPLY 
+CHAIN MANAGEMENT 
+ 
+APPLIED ROBOTICS 
+ 
+  DESIGN AND 
+MANUFACTURING 
+ 
+INTELLIGENT SYSTEMS 
+ 
+          DIVERSIFIED 
+ 
+V/VI SEM 
+ME23A11-Machine Learning 
+for Intelligent Systems 
+ 
+ME23B11-Reliability and 
+Maintenance Engineering 
+ 
+RO23C11- Marine 
+Robotics 
+ 
+ME23611- Additive 
+Manufacturing Technologies 
+ 
+RO23E11-Fuzzy Logic and 
+Neural Networks 
+ 
+RO23F11- Basics of 
+Thermal Engineering 
+ 
+V/VI SEM ME23A12-CAD and CAE ME23B12-Warehousing Automation RO23C12-Machine 
+Learning and Cognitive 
+Robotics 
+ 
+ME23D16-Design for X 
+ 
+EC23A18- Introduction to Deep 
+Learning 
+RO23F12-Object Oriented 
+Programming in C++ 
+V/VI SEM ME23A13-Numerical heat transfer ME23B13-Operations Management RO23C13-Farm 
+Automation 
+RO23D11-CNC Machine 
+Tools and Programming 
+RO23E12-Industrial Network Protocols ME23G15 – Principles of 
+Management 
+ 
+VII SEM 
+ME23A14-Theory on 
+Computation and 
+Visualization 
+ME23B14-Material Handling 
+Equipment, Repair and 
+Maintenance 
+ 
+RO23C14-Collaborative 
+Robotics 
+ 
+RO23D12- 
+Computer Integrated 
+Manufacturing 
+RO23E13-Condition Monitoring 
+and Fault Diagnostics  
+RO23F13- Production and 
+Operation Management 
+ 
+VII SEM ME23A15-Computational Bio- 
+Mechanics 
+ME23B15-Container Logistics RO23C15-Field and Service 
+Robots 
+RO23D13-Advanced 
+Manufacturing Systems 
+RO23E14-Applied Signal 
+Processing 
+ 
+RO23F14- IoT Devices 
+ 
+VII SEM 
+ME23A16-Advanced Statistics 
+and Data Analytics 
+ 
+ME23B16-Production Planning and 
+Control 
+ 
+ RO23C16-Space Robotics 
+ 
+ME23E17-Electronics 
+Manufacturing 
+Technology 
+ 
+RO23E15-Applied Image 
+Processing 
+ 
+MT23D12-Virtual 
+Instrumentation 
+ 
+VIII SEM ME23A17-Noise acoustics & 
+vibration 
+ME23B17-Operations Research RO23C17- Micro Robotics RO23D14-Computer Aided 
+Inspection and Testing 
+ME23C18- Haptics and 
+Immersive Technologies 
+ME23G12-Industrial 
+Safety 
+ 
+VIII SEM 
+ 
+ME23A18-Computational Solid 
+Mechanics 
+ 
+ME23B18-Supply chain and 
+Logistics Management 
+ 
+ BM23D12 -Medical Robotics 
+ 
+RO23D15-Integrated 
+Product Development 
+ 
+RO23E16-Total Integrated 
+Automation 
+ 
+RO23F15-Project 
+Management 
+ 
+VIII SEM 
+ 
+ME23A19-Computational Fluid 
+Dynamics 
+ 
+ME23B19-Data Science 
+ 
+ RO23C18-Parallel    
+Manipulators 
+ 
+ME23E18-Digital Twin and 
+Industry 4.0 
+ 
+RO23E17-Advanced 
+Optimization Techniques 
+ 
+ME23G17-Marketing 
+Management 
+ 
+ 
+--- PAGE 10 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 7 | P a g e  
+ 
+SEMESTER I 
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+HS23111 Technical Communication I HS 2 0 0 2 
+Common to all branches of I sem. B.E./ B.Tech. programmes 
+ 
+Objectives: 
+● To facilitate students, develop their comprehension skills 
+● To enable students to improve their receptive skills 
+● To equip learners with better vocabulary and enhance their writing skills 
+● To aid students speak effectively in all kinds of communicative contexts. 
+● To improve the learners’ basic proficiency in workplace communication 
+ 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Intentional Reading - Short Narratives and Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing – connecting ideas using transitional words (Jumbled Sentences), Process Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages 
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers 
+Vocabulary : Verbal Analogy / Cloze Exercise 
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives 
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT-V LANGUAGE FOR WORKPLACE 6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary: Informal Vocabulary and Formal Substitutes 
+Total Contact Hours: 30 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● apply their comprehension skills and interpret different contents effortlessly 
+● read and comprehend various texts and audio-visual contents 
+● infer data from graphs and charts and communicate it efficiently in varied contexts 
+● participate effectively in diverse speaking situations 
+● to present, discuss and coordinate with their peers in workplace using their language skills 
+--- PAGE 11 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 8 | P a g e  
+ 
+ 
+ 
+ 
+Text Book (s): 
+1 Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback 2017 
+2 Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth Edition 
+(June 28, 2004) 
+3 Meenakshi Upadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+4 Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press 
+ 
+Reference Books(s) / Web links: 
+1 Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With Answers 2nd Edition 
+by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor) 
+2 Reading Development and Difficulties By Kate Cain 
+3 The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+4 Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann Handley (Author) 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 
+ 
+PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS23111.1 - - - 1 - - - - - 3 - - - - 1 
+HS23111.2 - - - 1 - - - - - 3 - - - - 1 
+HS23111.3 - 1 - 1 - - - - - 3 - - - - 1 
+HS23111.4 - - - 2 - - - - 1 3 - - - - 1 
+HS23111.5 - - - 1 - - - - 1 3 - - - - 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.     
+SUGGESTED ACTIVITIES 
+● Ice breaker 
+● Just A Minute 
+● Ship wreck 
+● Hot seat 
+● Vocabulary building 
+● Chinese whispers 
+● Case study 
+SUGGESTED EVALUATION METHODS 
+● Assignment topics 
+● Quizzes 
+● Class Presentation/Discussion 
+● Continuous Assessment Tests 
+--- PAGE 12 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 9 | P a g e  
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+MA23112 Algebra and Calculus BS 3 1 0 4 
+Common to I sem. B.E. – Aeronautical Engineering, Automobile Engineering, Mechanical Engineering,  
+Mechatronics, Robotics & Automation, Civil Engineering and B.Tech. - Biotechnology, Food Technology & 
+Chemical Engineering 
+ 
+Objectives: 
+● To introduce the matrix techniques and to illustrate the nature of the matrix. 
+● To address data and synthesis of the information to provide valid conclusions. 
+● To explain techniques of calculus which are applied in the solutions of engineering problems. 
+● To analyze special types of integrals by analytical methods and numerical techniques. 
+● To practice the techniques of Integration in finding area and volumes. 
+ 
+UNIT-I MATRICES 12 
+Matrices - Eigenvalues and eigenvectors - Diagonalization of matrices using orthogonal transformation - Cayley- 
+Hamilton Theorem(without proof) -Quadratic forms- Reduction to canonical form using orthogonal transformation- 
+Numerical computation of Eigen value using Power method 
+UNIT-II FUNCTIONS OF SEVERAL VARIABLES 12 
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit functions – 
+Taylor’s series for functions of two variables –Maxima and minima of functions of two variables–Lagrange’s method 
+of undetermined multipliers. 
+UNIT-III INTEGRAL CALCULUS 12 
+Integral Calculus: Definite Integrals as a limit of sums - Applications of integration to area, volume - Improper 
+integrals: Beta and Gamma integrals - Numerical computation of integrals: Trapezoidal rule - Gaussian Two point 
+quadrature 
+UNIT-IV MULTIPLE INTEGRALS 12 
+Double integrals – Change of order of integration – Area enclosed by plane curves–Triple integrals–Volume of solids– 
+Numerical computation of double integrals: Trapezoidal rule. 
+UNIT-V REGRESSION 12 
+Scatter diagram - Karl Pearson coefficient of correlation for raw data –Spearman rank correlation coefficient - Lines of 
+regression - Regression equation X on Y and Y on X- Curve fitting by Principle of least squares - Fitting a straight- 
+line y = ax+b and a parabola y = ax2 + bx + c. 
+Total Contact Hours:60 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Demonstrate the matrix techniques in solving the related problems in engineering and technology. 
+● Analyze and interpret data, and synthesize information to provide valid conclusions. 
+● Interpret the problems in Engineering and Technology using the principles of mathematical calculus. 
+● Apply the analytical methods and numerical techniques to solve the related engineering problems. 
+● Evaluate multiple integrals to conduct investigations of complex problems. 
+ 
+ 
+ 
+ 
+SUGGESTED ACTIVITIES 
+● Problem solving sessions 
+● Activity Based Learning 
+● Implementation of small module 
+ 
+SUGGESTED EVALUATION METHODS 
+● Problem solving in Tutorial sessions 
+● Assignment problems 
+● Quizzes and class test 
+● Discussion in classroom 
+--- PAGE 13 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 10 | P a g e  
+ 
+ 
+ 
+ 
+ 
+Text Book (s): 
+1 Grewal B.S., “Higher Engineering Mathematics”, Khanna Publishers, New Delhi, 43rd Edition, 2014. 
+2 Gupta S.C. and Kapoor V.K.” F u n d a m e n t a l s of Mathematical Statistics”, Sultan and Sons 10th Edition, 2000. 
+3 T Veerarajan, “Engineering Mathematics –I”, McGraw Hill Education, 2018. 
+4 I.R. Miller, J.E. Freund and R. Johnson, “Probability and Statistics for Engineers “, 4th Edition, Pearson, 2018. 
+5 A. Goon, M. Gupta and B. Dasgupta, “Fundamentals of Statistics “, Vol. I & Vol. II, World Press, 2019. 
+ 
+Reference Books(s) / Web links: 
+1 Ramana. B.V., "Higher Engineering Mathematics ", McGraw Hill Education Pvt. Ltd, New Delhi, 2018. 
+2 T Veerarajan , “Fundamentals of Mathematical Statistics”, yesdee publications, 2017. 
+3 Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition, New 
+Delhi, 2016. 
+4 Bali, N.P. and Manish Goyal, A Text Book of Engineering Mathematics, Lakshmi Publications Pvt. Ltd., 
+New Delhi, 2006. 
+5 N. Draper & H. Smith, “Applied Regression Analysis” 3rd Edition, Wiley, 1998. 
+ 
+ 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23112.1 3 2 1 - - - - - - - 1 - 1 - - 
+MA23112.2 3 2 - 1 - - - - - - 1 1 1 - - 
+MA23112.3 2 2 - - - - - - - - 1 1 1 - - 
+MA23112.4 3 3 1 - - - - - - - 1 1 1 - - 
+MA23112.5 2 2 - - - - - - - - - - 1 - - 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 14 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 11 | P a g e  
+ 
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+GE23111 Engineering Graphics ES 2 2 0 4 
+ 
+Objectives: 
+● To understand the importance of the drawing in engineering applications 
+● To develop graphic skills for communication of concepts, ideas and design of engineering products 
+● To expose them to existing national standards related to technical drawings. 
+● To improve their visualization skills so that they can apply these skill in developing new products. 
+● To improve their technical communication skill in the form of communicative drawings 
+ 
+CONCEPTS AND CONVENTIONS (Not for Examination)                                                                               1 Hour 
+Importance of graphics in engineering applications–Use of drafting instruments– BIS conventions and specifications– 
+Size, layout and folding of drawing sheets– Lettering and dimensioning. Basic Geometrical constructions. 
+ 
+ 
+UNIT-I PLANE CURVES AND PROJECTION OF POINTS 5+12 
+Curves used in engineering practices: Conics–Construction of ellipse, parabola and hyperbola by eccentricity method 
+– Cycloidal Curves–Construction of cycloid, epicycloid and hypocycloid – Construction of involutes of square and 
+circle–Drawing of tangents and normal to the above curves. 
+Principles of Projection and Projection of points. 
+UNIT-II PROJECTION OF LINES AND PLANE SURFACES 6+12 
+Projection of straight lines (First angle projection) inclined to both the principal planes – Determination of true lengths 
+and true inclinations by rotating line method 
+Projection of planes (polygonal and circular surfaces) inclined to both the principal planes by rotating object method. 
+UNIT-III PROJECTION OF SOLIDS AND PROJECTION OF SECTIONED SOLIDS 6+12 
+Projection of simple solids like prisms, pyramids, cylinder and cone when the axis is inclined to one of the principal  
+planes by rotating object method. 
+Sectioning of solids in simple vertical position when the cutting plane is inclined to HP and perpendicular to VP – 
+obtaining true shape of the section. 
+Practicing three-dimensional modeling of simple objects by CAD software (Not for examination) 
+UNIT-IV DEVELOPMENT OF SURFACE AND ISOMETRIC PROJECTIONS 6+12 
+Development of lateral surfaces of simple and sectioned solids – Prisms, pyramids cylinders and cones. 
+Principles of isometric projection–isometric scale–Isometric projections of simple solids and truncated solids - Prisms, 
+pyramids, cylinders and cones 
+Model making of isometric projection of combination of solids as assignment (Not for End semester) 
+UNIT-V FREE HAND SKETCHING AND PERSPECTIVE PROJECTIONS 6+12 
+Free Hand sketching: Freehand sketching of multiple views from pictorial views of objects - Freehand sketching of 
+pictorial views of object from multiple views 
+Perspective projection of simple solids-Prisms, pyramids, cylinder and cone by visual ray method. 
+Total Contact Hours: (L=30; P=60) 90 Periods 
+  
+--- PAGE 15 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 12 | P a g e  
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● To construct different plane curves and to comprehend the theory of projection 
+● To draw the basic views related to projection of lines and planes 
+● To draw the projection of simple solids and to draw the projection of development of surfaces of 
+Sectioned solids in simple vertical position 
+● To draw the orthographic projection from pictorial objects and Isometric projections of simple 
+solids 
+● To visualize Perspective view of simple solids 
+ 
+ 
+ 
+Text Book (s): 
+1 Bhatt N.D. and Panchal V.M., “Engineering Drawing”, Charotar Publishing House, 50th Edition, 2010. 
+2 Natrajan K.V., “A text book of Engineering Graphics”, DhanalakshmiPublishers, Chennai, 2017. 
+ 
+Reference Books(s) / Web links: 
+1 Varghese P I., “Engineering Graphics”, McGraw Hill Education (I) Pvt.Ltd., 2013. 
+2 V.B Sikka “Civil Engineering Drawing”, S.K Kataria & Sons, New Delhi,2022. 
+3 Venugopal K. and PrabhuRaja V., “Engineering Graphics”, New Age International (P)Limited, 2008. 
+4 Gopalakrishna K.R., “Engineering Drawing” (Vol. I&II combined), Subhas Stores, Bangalore, 2017. 
+5 Basant Agarwal and Agarwal C.M., “Engineering Drawing”, McGraw Hill Publishing Company Limited, New 
+Delhi, 2018. 
+ 
+ 
+ 
+ 
+ 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+GE23111.1 3 2 2 1 - 1 - 2 2 2 - 2 2 2 1 
+GE23111.2 3 2 2 1 - 1 - 2 2 2 - 2 2 2 1 
+GE23111.3 3 2 2 1 - 1 - 2 2 2 - 2 2 2 1 
+GE23111.4 3 2 2 1 - 1 - 2 2 2 - 2 2 2 1 
+GE23111.5 3 2 2 1 - 1 - 2 2 2 - 2 2 2 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+--- PAGE 16 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 13 | P a g e  
+ 
+ 
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+RO23111 Introduction to Mechanical Systems ES 2 1 0 3 
+ 
+Objectives: 
+● To understand the basics of mechanics and to solve problems of equilibrium of a Particle in Space. 
+● To understand the concept of equilibrium and to solve problems of rigid bodies. 
+● To learn about the center of gravity and moment of inertia of surfaces and solids. 
+● To learn the concepts in kinematics and kinetics of rigid bodies in plane motion. 
+● To know the types of robotics. 
+ 
+UNIT-I STATICS OF PARTICLES 9 
+Introduction to Mechanics, Units and Dimensions, Force on a Particle, Resultant of Two Forces, Equilibrium of a 
+Particle, Free body diagram, Newton’s First Law of Motion, Equilibrium of a Particle in Space. 
+UNIT-II EQUILIBRIUM OF RIGID BODIES 9 
+Introduction, External and Internal Forces, Principle of Transmissibility, Moment of a Force about a Point, Varignon’s 
+Theorem, Reactions at Supports and Connections for a Two-dimensional Structure, Equilibrium of a Rigid Body in 
+Two Dimensions, Statically Indeterminate Reactions, Equilibrium of Rigid bodies in two dimensions. 
+UNIT-III CENTER OF GRAVITY AND MOMENT OF INERTIA 9 
+First and second moment of area and mass, radius of gyration, parallel axis theorem, perpendicular axis theorem, 
+product of inertia. Problems- T section, I section, rectangular section, circular section. 
+UNIT-IV DYNAMICS 9 
+Introduction to Dynamics, Rectilinear and Projectile Motion of particles, Kinetics of particle - Newton’s Second Law 
+of Motion and work - Energy Equations, Introduction to Kinematics of Rigid Bodies-Translation, Rotation about a 
+Fixed Axis, Equations Defining the Rotation of a Rigid Body about a Fixed Axis, General Plane Motion-Absolute and 
+Relative Velocity in Plane Motion. 
+UNIT-V INTRODUCTION TO ROBOTICS 9 
+History and growth of Robotics, Laws of Robotics, types of joints used in robots, degrees of freedom of planar and 
+spatial manipulator, Introduction and application of autonomous mobile robots (AMRs), automated guided vehicles 
+(AGVs), articulated robots, humanoids, cobots. 
+ Total Contact Hours : 45 
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Comprehend and analysis the forces in the system. 
+● Solve problems in engineering systems using the concept of static equilibrium. 
+● Determine the centroid of objects such as areas and volumes, center of mass of body and moment of inertia of 
+composite areas. 
+● Solve problems involving kinematics and kinetics of rigid bodies in plane motion. 
+● Select a robot for the application 
+ 
+Text Book (s): 
+1 Beer, F.P and Johnston Jr. E.R, Cornwell and Sanghi., “Vector Mechanics for Engineers (In SI Units): Statics 
+and Dynamics”, 11th Edition, McGraw-Hill Publishing company, New Delhi (2017). 
+2 Mikell P Groover, Mitchell Weiss, Roger N Nagel, Nicholas Odrey, Ashish Dutta "Industrial Robotics 
+(SIE):Technology, Programming and Applications", McGraw Hill Education India., 2012 
+--- PAGE 17 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 14 | P a g e  
+ 
+Reference Books(s) / Web links: 
+1 Meriam J.L. and Kraige L.G., “Engineering Mechanics- Statics - Volume 1, Dynamics- Volume 2”, Third Edition, 
+Wiley India,2017. 
+2 Hibbeller, R.C and Ashok Gupta, “Engineering Mechanics: Statics and Dynamics”, 11th Edition, Pearson 
+Education 2010. 
+3 Irving H. Shames and Krishna Mohana Rao. G., “Engineering Mechanics – Statics and Dynamics” 4th Edition, 
+Pearson Education 2006. 
+4 S SBhavikatti, Engineering Mechanics, New Age International Publishers, 2019 
+5 Vela Murali, “Engineering Mechanics”, Oxford University Press, 2010 
+ 
+ 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+RO23111.1 3 3 3 1 1 - 1 1 1 1 1 1 3 2 1 
+RO23111.2 3 3 3 1 1 - 1 1 1 1 1 1 3 2 1 
+RO23111.3 3 3 3 1 1 - 1 1 1 1 1 1 3 2 1 
+RO23111.4 3 3 3 1 1 - 1 1 1 1 1 1 3 2 1 
+RO23111.5 3 3 3 1 1 1 1 1 1 1 1 1 3 2 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+--- PAGE 18 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 15 | P a g e  
+ 
+Subject Code Subject Name (Lab oriented Theory Courses) Category L T P C 
+EE23132 Basic Electrical Engineering ES 3 0 2 4 
+ 
+Objectives: 
+● To provide knowledge on the analysis of DC circuits. 
+● To teach methods of analysis of AC circuits. 
+● To impart knowledge on principles of operation of electrical machines. 
+● To teach the basics of electrical safety measures. 
+● To provide hands on experience on electric circuits and machines 
+ 
+UNIT-I DC CIRCUITS 9 
+Electrical circuit elements (R, L and C), voltage and current sources, Kirchhoff’s laws, Mesh and Nodal Analysis, 
+Superposition, Thevenin’s, Norton’s Theorems and Maximum Power Transfer Theorem 
+UNIT-II AC CIRCUITS 9 
+Representation of sinusoidal waveforms, Power and Power factor. Analysis of single-phase ac circuits consisting of R, 
+L, C, RL, RC, RLC combinations. Three phase balanced circuits. 
+UNIT-III DC MOTORS AND TRANSFORMERS 9 
+Construction, working and characteristics of DC motors. Construction, principle of operation of single-phase 
+Transformer, EMF Equation. 
+UNIT-IV AC ROTATING MACHINES 9 
+Construction and basic working of three phase Alternators and Induction motors, Construction and Types of single- 
+phase induction motors- Construction and basic working of Stepper motor, Permanent magnet Brushless Motor 
+(PMBLDC) (Qualitative Treatment Only). 
+UNIT-V ELECTRICAL SAFETY MEASURES 9 
+Primary and secondary hazards- arc, blast, shocks-causes and effects-safety equipment- flash and thermal protection - 
+Safety in the use of portable tools - Preventive maintenance- Types of earthing and its importance-Safety precautions for 
+electrical appliances- National electrical Safety code - Indian electricity acts and rules 
+ Total Contact Hours : 45 
+List of Experiments 
+1 Kirchhoff’s laws. 
+2 Network theorems (Thevenin’s , Norton’s and Maximum Power Transfer Theorems) 
+3 Determination of Impedance and Current in RL, RC and RLC series circuits 
+4 Measurement of voltage and current in three phase balanced star & delta connected loads. 
+5 Load test on DC shunt motor (Virtual Lab) 
+6 Load test on single-phase transformer (Virtual Lab) 
+7 Load test on three phase induction motor (Virtual Lab) 
+8 Load test on Single phase induction motor. 
+ Contact Hours : 30 
+ Total Contact Hours : 75 
+ 
+Course Outcomes: 
+On completion of the course, the students will be able to 
+● analyze DC circuits and apply circuit theorems. 
+● calculate the power and power factor in AC circuits 
+● comprehend the principles of electrical machines. 
+● realise the electrical safety precautions. 
+● experimentally analyze the electric circuits and machines. 
+Suggested Activities 
+● Problem solving sessions 
+Suggested Evaluation methods 
+--- PAGE 19 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 16 | P a g e  
+ 
+● Quizzes 
+● Class Presentation / Discussion 
+Text Book(s): 
+1 E. Hughes, “Electrical and Electronics Technology”, Pearson, 2010. 
+2 J.B.Gupta, “Fundamentals of Electrical Engineering and Electronics” S.K. Kataria & Sons Publications, 2010. 
+3 K.Venkataratnam, ―Special Electrical Machines , Universities Press (India) Private Limited, 2008. 
+4 John Cadick, P.E. Mary Capelli-Schellpfeffer, M.D., M.P.A. Dennis K. Neitzel, C.P.E. “Al Winfield Electrical 
+Safety Hand Book, fifth edition, The McGraw-Hill 2012 
+ 
+Reference Books(s) / Web links: 
+1 Joseph A. Edminister, Mahmood, Nahri, “Electric Circuits” – Shaum Series and Systems”, Schaum‟s Outlines, 
+Tata McGraw Hill, Indian. 5th Edition , 2017 
+2 D. C. Kulshreshtha, “Basic Electrical Engineering”, McGraw Hill, 2009. 
+3 D. Toro, “Electrical Engineering Fundamentals”, Prentice Hall India, 1989. 
+4 L. S. Bobrow, “Fundamentals of Electrical Engineering”, Oxford University Press, 2011. 
+5 https://nptel.ac.in/courses/108108076 
+6 E G Janardanan, ―Special Electrical Machines , Prentice Hall India Limited, 2013. 
+7 Maxwell Adams. J, “Electrical safety- a guide to the causes and prevention of electric hazards”, The Institution of 
+Electric Engineers, 1994. 
+ 
+ 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+EE23132.1 3 3 3 3 - 3 1 1 2 1 1 1 1 1 1 
+EE23132.2 3 3 3 3 - 3 1 1 2 1 1 1 1 1 1 
+EE23132.3 3 3 3 3 - 3 1 1 2 1 1 1 2 2 1 
+EE23132.4 3 3 3 3 - 3 1 1 2 1 1 1 1 2 1 
+EE23132.5 3 3 3 3 - 3 3 1 2 1 1 1 2 2 1 
+ 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+--- PAGE 20 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 17 | P a g e  
+ 
+ 
+Course Code Course Title (Laboratory Course) Category L T P C 
+GE23121 Engineering Practices Laboratory – Civil and 
+Mechanical ES 0 0 2 1 
+ 
+Objectives: 
+● To provide exposure to the students with hands on experience on various basic engineering practices in 
+Civil and Mechanical Engineering. 
+ 
+List of Experiments 
+CIVIL ENGINEERING PRACTICE 
+1. Study of pipeline joints, its location and functions: valves, taps, couplings, unions, reducers, and elbows in 
+household fittings. 
+2. Preparation of basic plumbing line sketches for wash basins, water heaters, etc. 
+3. Hands-on-exercise: Basic pipe connections – Pipe connections with different joining components. 
+Carpentry Works: 
+4. Study of joints in roofs, doors, windows and furniture. 
+5. Hands-on-exercise: Woodwork, joints by sawing, planning and chiselling. 
+MECHANICAL ENGINEERING PRACTICE 
+6. Preparation of butt joints, lap joints and T- joints by Shielded metal arc welding. 
+7 Gas welding practice. 
+Basic Machining: 
+8 Simple Turning and Taper turning 
+9 Drilling Practice 
+Sheet Metal Work: 
+10 Forming & Bending: 
+11 Model making – Trays and funnels 
+12 Different type of joints. 
+Machine Assembly Practice: 
+13 Study of centrifugal pump 
+14 Study of air conditioner 
+ Total Contact Hours : 30 
+    
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+ 
+● 
+Perform plumbing activities for residential and industrial buildings considering safety aspects while gaining 
+clear understanding on pipeline location and functions of joints like valves, taps, couplings, unions, reducers, 
+elbows, etc. 
+● Perform wood working carpentry activities like sawing, planning, cutting, etc. while having clear understanding 
+of the joints in roofs, doors, windows and furniture. 
+● Produce joints like L joint, T joint, Lap joint, Butt joint, etc. through arc welding process while acquiring in 
+depth knowledge in the principle of operation of welding and other accessories 
+● Perform operations like Turning, Step turning, Taper turning, etc. in lathe and Drilling operation in drilling 
+machine 
+● Perform sheet metal operations like Forming, Bending, etc. and fabricating models like Trays, funnels, etc. 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+GE23121.1 1 1 1 - - 2 1 - 2 - - 2 1 1 1 
+GE23121.2 1 1 1 - - - - - - - - - 1 1 1 
+GE23121.3 2 1 - 2 - - 2 - - - - - 1 1 1 
+GE23121.4 1 1 1 - - 2 1 - 2 - - 2 1 1 1 
+GE23121.5 1 1 1 - - 2 1 - 2 - - 2 1 1 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+--- PAGE 21 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 18 | P a g e  
+ 
+Subject Code Subject Name Category L T P C 
+GE23122 Engineering Practices - Electrical and Electronics ES 0 0 2 1 
+Objectives: 
+● To provide hands-on experience on various basic engineering practices in Electrical Engineering. 
+● To provide hands-on experience on various basic engineering practices in Electronics Engineering. 
+List of Experiments 
+A. ELECTRICAL ENGINEERING PRACTICE 
+1 Residential house wiring using switches, fuses, indicators, lamp and energy meter. 
+2 Fluorescent lamp wiring. 
+3 Stair case wiring. 
+4 Measurement of electrical quantities – voltage, current, power & power factor in RL circuit. 
+5 Measurement of earth resistance using Megger. 
+6 Study of Ceiling Fan and Iron Box 
+B. ELECTRONICS ENGINEERING PRACTICE 
+1 Study of electronic components and equipment – Resistor, colour coding, measurement of AC signal parameters 
+(peak-peak, rms period, frequency) using CRO/DSO. 
+2 (a) Measurement of electrical quantities using Multimeter 
+(b) Testing of electronic components. 
+3 Study of logic gates: AND, OR, EXOR and NOT. 
+4 Generation of Clock Signals. 
+5 Soldering practice – Components Devices and Circuits – Using general purpose PCB. 
+6 Measurement of ripple factor of Half-wave and Full-wave Rectifiers. 
+ Total Contact Hours : 30 
+Course Outcomes: 
+On completion of the course, the students will be able to 
+● fabricate the basic electrical circuits 
+● implement the house wiring circuits 
+● fabricate the electronic circuits 
+● verify the truth table of logic gates 
+● design the Half-wave and Full-wave Rectifiers using diodes and passive components 
+SUGGESTED EVALUATION METHODS 
+● Experiment based Viva 
+REFERENCE 
+1 Bawa H.S., “Workshop Practice”, Tata McGraw – Hill Publishing Company Limited, 2007. 
+2 Jeyachandran K., Natarajan S. & Balasubramanian S., “A Primer on Engineering Practices Laboratory”, 
+Anuradha Publications, 2007. 
+3 Jeyapoovan T., Saravanapandian M. &Pranitha S., “Engineering Practices Lab Manual”, Vikas Publishing 
+House Pvt. Ltd, 2006. 
+4 Rajendra Prasad A. &Sarma P.M.M.S., “Workshop Practice”, SreeSai Publication, 2002. 
+ 
+ 
+COs/POs PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+GE23122.1 3 3 3 2 - - 2 - 3 2 - 3 1 1 1 
+GE23122.2 3 3 2 2 - - 2 - 3 2 - 3 1 1 1 
+GE23122.3 3 3 3 2 - - 2 - 3 2 - 3 1 1 1 
+GE23122.4 3 3 3 2 - -  - 3 2 - 3 1 1 1 
+GE23122.5 3 3 3 2 - -  - 3 2 - 3 1 1 1 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+--- PAGE 22 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 19 | P a g e  
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+MC23112 Environmental Science and Engineering MC 3 0 0 0 
+Common to I sem. B.E. Aeronautical Engineering, Automobile Engineering, Biomedical Engineering, Civil 
+Engineering, Mechanical Engineering, Mechatronics, and Robotics and Automation 
+and 
+B.Tech. – Biotechnology, Information Technology, Food Technology & Chemical Engineering 
+and 
+Common to II sem. B.E. – Electronics and Communication Engineering, Electrical and Electronics Engineering, 
+Computer Science and Engineering, Computer Science and Design & Computer Science and Engineering  
+(Cyber Security) 
+and 
+B.Tech. – Artificial Intelligence & Machine Learning and Artificial Intelligence & Data Science. 
+ 
+ 
+Objectives: 
+● To develop the understanding of environmental and associated issues 
+● To develop an attitude of concern for the environment 
+● To promote enthusiasm in participating environmental protection initiatives 
+● To nurture skills to solve environmental degradation issues 
+● To develop the knowledge about the environmental laws 
+ 
+ 
+UNIT-I AIR AND NOISE POLLUTION 9 
+Definition –sources of air pollution –chemical and photochemical reactions in the atmosphere - formation of smog,  
+PAN, acid rain, ozone depletion, particulate pollutants-Air quality standards-Air quality indices - control of particulate 
+air pollutants -gravitational settling chambers, cyclone separators, wet collectors, fabric filters (Bag -house filter), 
+electrostatic precipitators (ESP)-catalytic converters. 
+Noise pollution –sources - health effects - standards- measurement and control methods. 
+UNIT-II WATER POLLUTION AND ITS MANAGEMENT 9 
+Definition-causes-effects of water pollution -point and nonpoint sources of wastewater -marine pollution - thermal 
+pollution - Control of water pollution by physical, chemical and biological methods – wastewater treatment-primary, 
+secondary and tertiary treatment-sources and 
+characteristics of industrial effluents- zero liquid discharge. 
+UNIT-III SOLID WASTE AND HAZARDOUS WASTE MANAGEMENT 9 
+Solid waste – types- municipal solid waste management: sources, characteristics, collection, and transportation- 
+sanitary landfill, recycling, composting, incineration, energy recovery options from waste - Hazardous waste – 
+types, characteristics, and health  impact - hazardous waste management: neutralization , oxidation reduction,  
+precipitation, solidification, stabilization, incineration and final disposal. 
+E-waste-definition-sources-effects on human health and environment- E-waste management- steps involved - Role 
+of E-waste management within the initiatives of the Govt. of India- Swachh Bharat Mission. 
+UNIT-IV SUSTAINABLE DEVELOPMENT 9 
+Sustainable development- concept-dimensions-sustainable development goals - value education- gender equality – food 
+security - poverty – hunger - famine - Twelve principles of green chemistry - Green technology - definition, importance 
+- Cleaner development mechanism - carbon credits, carbon trading, carbon sequestration, eco labeling- 
+International conventions and protocols-Disaster management. 
+UNIT-V ENVIRONMENTAL MANAGEMENT AND LEGISLATION 9 
+Environmental Management systems - ISO 14000 series- Environmental Audit-Environmental Impact Assessment- life 
+cycle assessment-    human health risk assessment - Environmental Laws and Policy- Objectives - Polluter pays 
+principle, Precautionary principle - The Environment (Protection) Act 1986 - Role of Information technology in 
+environment and human health. 
+Total Contact Hours:45 
+--- PAGE 23 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 20 | P a g e  
+ 
+Course Outcomes: 
+On completion of the course students will be able to 
+● Associate air and noise quality standards with environment and human health. 
+● Illustrate the significance of water and devise control measures for water pollution. 
+● Analyze solid wastes and hazardous wastes. 
+● Outline the goals of sustainable development in an integrated perspective 
+● Comprehend the significance of environmental laws. 
+ 
+ 
+ 
+Text Book (s): 
+1 Benny Joseph, ‘Environmental Science and Engineering’, Tata McGraw-Hill, New Delhi, 2016 
+2 Anubha Kaushik and C. P. Kaushik’s “Perspectives in Environmental Studies”, 6th Edition, New 
+Age International Publisher, 2018. 
+3 Johri R., E-waste: implications, regulations, and management in India and current global best 
+practices, TERI Press, New Delhi 
+ 
+ 
+Reference Books(s) / Web links: 
+1 R.K. Trivedi, ‘Handbook of Environmental Laws, Rules, Guidelines, Compliances and 
+Standards’, Vol. I and II, Enviro Media. 38. Edition 2010. 
+2 Cunningham, W.P. Cooper, T.H. Gorhani, ‘Environmental Encyclopedia’, Jaico Publ., House, 
+Mumbai, 2001. 
+3 Fowler B, Electronic Waste – 1st Edition (Toxicology and Public Health Issues), 2017 Elsevier 
+ 
+4 
+NPTEL course URL 
+https://onlinecourses.nptel.ac.in/noc19_ge22/NPTEL 
+https://news.mit.edu/2013/ewaste-mit 
+5 For downloading text/reference books the weblink is given below can be used 
+http://libgen.rs/ 
+ 
+ 
+CO/PO-PSO PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO1 
+0 
+PO1 
+1 
+PO1 
+2 
+PSO 
+1 
+PSO 
+2 
+PSO 
+3 
+MC23112.1 1 2 3 1 - 2 2 2 1 1 1 2 1 - - 
+MC23112.2 1 2 3 1 - 2 2 2 1 1 1 2 1 - - 
+MC23112.3 - - 3 1 - 2 3 2 1 - 1 2 1 - - 
+MC23112.4 - 1 2 1 1 3 3 2 1 1 1 2 - - - 
+MC23112.5 - 1 2 - - 2 2 2 1 2 2 2 - - - 
+1: Slight (Low) 2: Moderate (Medium) 3: Substantial (High) 
+SUGGESTED EVALUATION METHODS 
+● Assignment topics 
+● Continuous Assessment Tests 
+● Continuous Assessment Tests 
+--- PAGE 24 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 21 | P a g e  
+ 
+ 
+Course Code Course Title (Theory Course) Category L T P C 
+      GE23117 தமிழர் மரபு   ES 1 0 0 1 
+ 
+அலகு I   மமொழி மற்றும ் இலக்கியம ்: 3 
+இந்திய தமொழிக் குடும்பங்கள் - திரொவிட தமொழிகள் - தமிழ் ஒரு தெம்தமொழி - தமிழ் 
+தெவ்விலக்கியங் கள் - ெங் க இலக்கியத்தின ் ெமய ெொர்பற்ற தன ் மம - ெங்க இலக்கியத்தில் 
+பகிர்தல் அறம் - திருக்குறளில் மமலொண ் மமக் கருத்துக்கள் - தமிழிக் கொப்பியங் கள், 
+தமிழகத்தில் ெமண தபௌத்த ெமயங் களின ் தொக்கம் - பக்தி இலக்கியம், ஆழ்வொர்கள் மற்றும் 
+நொயன ் மொர்கள் - சிற்றிலக்கியங் கள் - தமிழில் நவீன இலக்கியத்தின ் வளர்ெ்சி - தமிழ் 
+இலக்கிய வளர்ெ்சியில் பொரதியொர் மற்றும்  பொரதிதொென ் ஆகிமயொரின ் பங் களிப்பு. 
+ 
+அலகு II மரபு - பொறற ஓவியங ் கள ் முதல ் நவீன ஓவியங ் கள ் வறர - சிற்பக் 
+கறல : 
+3 
+நடுகல் முதல் நவீன சிற்பங்கள் வமர - ஐம்தபொன ் சிமலகள் - பழங்குடியினர் மற்றும் 
+அவர்கள் தயொரிக்கும் மகவிமனப் தபொருட்கள், தபொம்மமகள் - மதர் தெய்யும் கமல - 
+சுடுமண ் சிற்பங் கள் - நொட்டுப்புறத் ததய்வங் கள் - குமரிமுமனயில் திருவள்ளுவர் சிமல - 
+இமெக் கருவிகள் - மிருதங் கம், பமற, வீமண, யொழ், நொதஸ ் வரம் - தமிழர்களின ் ெமூக 
+தபொருளொதொர வொழ்வில் மகொவில்களின ் பங் கு. 
+ 
+அலகு III நொட்டுப்புறக் கறலகள ் மற்றும் வீர விறளயொட்டுகள ்: 3 
+ததருக்கூத்து, கரகொட்டம், வில்லுப்பொட்டு, கணியொன ் கூத்து, ஒயிலொட்டம், மதொல்பொமவக் 
+கூத்து, சிலம்பொட்டம், வளரி, புலியொட்டம், தமிழர்களின ் விமளயொட்டுகள். 
+அலகு IV   தமிழர்களின ் திறைக் ககொட்பொடுகள ்:    3 
+தமிழகத்தின ் தொவரங் களும், விலங் குகளும் - ததொல்கொப்பியம் மற்றும் ெங்க இலக்கியத்தில் 
+அகம் மற்றும் புறக் மகொட்பொடுகள் - தமிழர்கள் மபொற்றிய அறக்மகொட்பொடு - ெங்ககொலத்தில் 
+தமிழத்தில் எழுத்தறிவும், கல்வியும் - ெங்ககொல நகரங் களும் துமற முகங் களும் - 
+ெங் ககொலத்தில் ஏற்றுமதி மற்றும் இறக்குமதி - கடல்கடந்த நொடுகளில் மெொழர்களின ் 
+தவற்றி. 
+ 
+அலகு V இந்திய கதசிய இயக்கம ் மற்றும் இந்திய பை ் பொட்டிற்குத் 
+தமிழர்களின ் பங ் களிப்பு:                                                                                                    
+3 
+இந்திய விடுதமலப்மபொரில் தமிழர்களின ் பங்கு - இந்தியொவின ் பிறப்பகுதிகளில் தமிழ்ப் 
+பண ் பொட்டின ் தொக்கம் - சுயமரியொமத இயக்கம் - இந்திய மருத்துவத்தில், சித்த 
+மருத்துவத்தின ் பங்கு - கல்தவட்டுகள், மகதயழுத்துப்படிகள் - தமிழ்ப் புத்தகங் களின ் அெ்சு 
+வரலொறு.   
+ Total Contact Hours : 15 
+--- PAGE 25 ---
+Curriculum and Syllabus B.E Robotics and Automation|REC|R2023                 22 | P a g e  
+ 
+ 
+ 
+TEXT-CUM-REFERENCE BOOKS 
+ 
+ 
+Reference Books(s) / Web links: 
+1 
+தமிழக வரலொறு - மக்களும் பண ் பொடும் - மக.மக. பிள்மள (தவளியீடு: தமிழ்நொடு 
+பொடநூல் மற்றும் கல்வியியல் பணிகள் கழகம்). 
+2 கணினித் தமிழ் - முமனவர் இல. சுந்தரம். (விகடன ் பிரசுரம்). 
+3 கீழடி - மவமக நதிக்கமரயில் ெங்ககொல நகர நொகரிகம் (ததொல்லியல் துமற தவளியீடு) 
+4 தபொருமந - ஆற்றங் கமர நொகரிகம். (ததொல்லியல் துமற தவளியீடு) 
+5 Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+6 
+Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of 
+Tamil Studies. 
+7 
+Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: 
+International Institute of Tamil Studies). 
+8 
+The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute 
+of Tamil Studies). 
+9 Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of 
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu)  
+10 Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The 
+Author) 
+11 Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and 
+Educational Services Corporation, Tamil Nadu) 
+12 Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 

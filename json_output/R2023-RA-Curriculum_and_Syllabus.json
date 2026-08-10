@@ -1,0 +1,563 @@
+{
+  "regulation": {
+    "name": "B.E. ROBOTICS AND AUTOMATION R-",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "2-0-0",
+          "theory_lab": "Theory",
+          "category": "HSMC"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "Algebra and Calculus",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "RO23111",
+          "name": "Introduction To Mechanical Systems 3 2 1 0 3 LAB ORIENTED THEORY COURSE",
+          "credits": 3,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-1-0",
+          "theory_lab": "Theory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "EE23132",
+          "name": "Basic Electrical Engineering 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23121",
+          "name": "Engineering Practices - Civil and Mechanical",
+          "credits": 1,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23122",
+          "name": "Engineering Practices- Electrical and Electronics 2 0 0 2 1 MANDATORY COURSE",
+          "credits": 1,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர்மரபு /Heritage of Tamils",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HSMC"
+        },
+        {
+          "subject_code": "CY23131",
+          "name": "Chemistry for Electronics Engineering",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "PH23131",
+          "name": "Physics of Materials",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex Variables 4 3 1 0 4 LAB ORIENTED THEORY COURSE",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23233",
+          "name": "Problem solving and Python programming 6 2 0 4 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HSMC"
+        },
+        {
+          "subject_code": "RO23221",
+          "name": "Computer Aided Modeling Laboratory 4 0 0 4 2 MANDATORY COURSE",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழரும ் ததொழில ்நுட்பமும ் / Tamils and Technology",
+          "credits": 1,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "1-0-0",
+          "theory_lab": "Theory",
+          "category": "HSMC"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23311",
+          "name": "Transforms And Applied Partial Differential Equations",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "RO23311",
+          "name": "Analog and Digital Electronics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23312",
+          "name": "Theory of Mechanisms and Machines-I",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23313",
+          "name": "Sensors in Automation 3 3 0 0 3 LAB ORIENTED THEORY COURSE",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23331",
+          "name": "Elements of Manufacturing Processes",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23332",
+          "name": "Mechanics of Materials 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine Learning",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "RO23411",
+          "name": "Fluid Power Systems",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23412",
+          "name": "Industrial Automation and Control",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23413",
+          "name": "Microcontrollers and Real Time Embedded Systems",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23414",
+          "name": "Robot Kinematics 4 3 1 0 4 LAB ORIENTED THEORY COURSE",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23432",
+          "name": "Statistics and Numerical Methods 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "RO23421",
+          "name": "Mechanisms and Robotics laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23422",
+          "name": "Industrial Automation Laboratory-I",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "Softskills-IEEC200",
+          "name": "Soft skills - I EEC 2 0 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "RO23511",
+          "name": "AI for Robotics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23512",
+          "name": "Theory of Mechanisms and Machines-II",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23511",
+          "name": "Machine Design",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "OpenElective-IOE33",
+          "name": "Open Elective - I OE 3 3",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "3 3 0 0 3 LABORATORY COURSE",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "RO23521",
+          "name": "Mobile Robotics laboratory",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23522",
+          "name": "Industrial Automation Laboratory-II",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "InternshipEEC20021",
+          "name": "Internship EEC 2 0 0 2 1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC20",
+          "name": "Soft Skills - II EEC 2 0",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "ME23612",
+          "name": "Design of Transmission systems",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "Professional Elective - I",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "RO23631",
+          "name": "Robot operating System",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "2-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23632",
+          "name": "Robot Vision and Intelligence",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23633",
+          "name": "Robot Dynamics and Motion Planning 5 3 0 2 4 LABORATORY COURSE",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem solving Techniques",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "RO23711",
+          "name": "Aerial Robotics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23712",
+          "name": "Humanoid Robotics",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "RO23713",
+          "name": "Resource Management Techniques",
+          "credits": 4,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "3-1-0",
+          "theory_lab": "Theory",
+          "category": "HSMC"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "Professional Elective - I",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-IIOE33",
+          "name": "0 0 3 LABORATORY COURSE",
+          "credits": 3,
+          "course_type": "Open Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "RO23721",
+          "name": "Robotics and Automation Problem Solving using AI, ML and DL",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProjectWork-PhaseIEEC",
+          "name": "Project Work- Phase I EEC",
+          "credits": 3,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-6",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElective-V",
+          "name": "Professional Elective - V",
+          "credits": 3,
+          "course_type": "Professional Elective",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectWork-PhaseIIEE",
+          "name": "Project Work- Phase II EE",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-14",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    }
+  ]
+}

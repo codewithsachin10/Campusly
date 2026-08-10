@@ -16,24 +16,32 @@ class AnnouncementModel {
   });
 
   factory AnnouncementModel.fromJson(Map<String, dynamic> json) {
+    DateTime created = DateTime.now();
+    if (json['createdAt'] != null) {
+      created =
+          DateTime.tryParse(json['createdAt'] as String) ?? DateTime.now();
+    } else if (json['created_at'] != null) {
+      created =
+          DateTime.tryParse(json['created_at'] as String) ?? DateTime.now();
+    }
+
     return AnnouncementModel(
       id: json['id'] as String? ?? '',
-      title: json['title'] as String? ?? '',
-      message: json['message'] as String? ?? '',
-      author: json['author'] as String? ?? 'Admin / CR',
-      createdAt: json['createdAt'] != null
-          ? DateTime.tryParse(json['createdAt'] as String) ?? DateTime.now()
-          : DateTime.now(),
+      title: json['title'] as String? ?? 'Announcement',
+      message: json['message'] as String? ?? json['body'] as String? ?? '',
+      author:
+          json['author'] as String? ??
+          json['sentBy'] as String? ??
+          'Controller / Admin',
+      createdAt: created,
       priority: json['priority'] as String? ?? 'normal',
     );
   }
 
   Map<String, dynamic> toJson() => {
-    'id': id,
     'title': title,
-    'message': message,
-    'author': author,
-    'createdAt': createdAt.toIso8601String(),
+    'body': message,
+    'target': author,
     'priority': priority,
   };
 }

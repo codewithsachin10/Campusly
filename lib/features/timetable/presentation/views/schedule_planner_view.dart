@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/timetable_item.dart';
 import '../providers/timetable_provider.dart';
 
@@ -12,20 +15,64 @@ class SchedulePlannerView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedDay = ref.watch(selectedDayProvider);
     final dailyScheduleAsync = ref.watch(dailyScheduleProvider);
+    final currentClass = ref.watch(currentClassProvider);
+    final joinedCustomTimetablesAsync = ref.watch(joinedCustomTimetablesProvider);
 
     final now = DateTime.now();
-    final months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    final weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    final headerDateText = '${weekdays[now.weekday - 1]}, ${months[now.month - 1]} ${now.day}';
+    final months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    final weekdays = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ];
+    final headerDateText =
+        '${weekdays[now.weekday - 1]}, ${months[now.month - 1]} ${now.day}';
 
     final mondayOfThisWeek = now.subtract(Duration(days: now.weekday - 1));
     final days = [
       {'code': 'mon', 'label': 'Mon', 'date': '${mondayOfThisWeek.day}'},
-      {'code': 'tue', 'label': 'Tue', 'date': '${mondayOfThisWeek.add(const Duration(days: 1)).day}'},
-      {'code': 'wed', 'label': 'Wed', 'date': '${mondayOfThisWeek.add(const Duration(days: 2)).day}'},
-      {'code': 'thu', 'label': 'Thu', 'date': '${mondayOfThisWeek.add(const Duration(days: 3)).day}'},
-      {'code': 'fri', 'label': 'Fri', 'date': '${mondayOfThisWeek.add(const Duration(days: 4)).day}'},
-      {'code': 'sat', 'label': 'Sat', 'date': '${mondayOfThisWeek.add(const Duration(days: 5)).day}'},
+      {
+        'code': 'tue',
+        'label': 'Tue',
+        'date': '${mondayOfThisWeek.add(const Duration(days: 1)).day}',
+      },
+      {
+        'code': 'wed',
+        'label': 'Wed',
+        'date': '${mondayOfThisWeek.add(const Duration(days: 2)).day}',
+      },
+      {
+        'code': 'thu',
+        'label': 'Thu',
+        'date': '${mondayOfThisWeek.add(const Duration(days: 3)).day}',
+      },
+      {
+        'code': 'fri',
+        'label': 'Fri',
+        'date': '${mondayOfThisWeek.add(const Duration(days: 4)).day}',
+      },
+      {
+        'code': 'sat',
+        'label': 'Sat',
+        'date': '${mondayOfThisWeek.add(const Duration(days: 5)).day}',
+      },
     ];
 
     return SingleChildScrollView(
@@ -133,6 +180,9 @@ class SchedulePlannerView extends ConsumerWidget {
             error: (err, _) =>
                 Center(child: Text('Error loading schedule: $err')),
             data: (items) {
+              if (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty)) {
+                return _buildNoClassJoinedState(context);
+              }
               if (items.isEmpty) {
                 return _buildEmptyState();
               }
@@ -154,6 +204,67 @@ class SchedulePlannerView extends ConsumerWidget {
             },
           ),
           const SizedBox(height: 40),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildNoClassJoinedState(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: AppColors.surfaceContainerLowest,
+        borderRadius: BorderRadius.circular(32),
+        border: Border.all(
+          color: AppColors.outlineVariant.withValues(alpha: 0.2),
+        ),
+      ),
+      child: Column(
+        children: [
+          Container(
+            width: 80,
+            height: 80,
+            decoration: BoxDecoration(
+              color: AppColors.surfaceContainerLow,
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              LucideIcons.graduationCap,
+              size: 40,
+              color: AppColors.primary,
+            ),
+          ),
+          const SizedBox(height: 20),
+          Text(
+            'No Class Joined',
+            style: AppTypography.textTheme.titleMedium?.copyWith(
+              color: AppColors.onSurface,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'Join or search for an academic section to see your schedule.',
+            textAlign: TextAlign.center,
+            style: AppTypography.textTheme.bodyMedium?.copyWith(
+              color: AppColors.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: 24),
+          FilledButton.icon(
+            onPressed: () => context.push('/join-class-choice'),
+            icon: const Icon(LucideIcons.search, size: 18),
+            label: const Text('Find a Class'),
+            style: FilledButton.styleFrom(
+              backgroundColor: AppColors.primary,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -207,7 +318,10 @@ class SchedulePlannerView extends ConsumerWidget {
   }
 
   Widget _buildBreakCard(TimetableItem item) {
-    final accentColor = AppColors.getSubjectAccentColor(item.subjectCode, isBreak: true);
+    final accentColor = AppColors.getSubjectAccentColor(
+      item.subjectCode,
+      isBreak: true,
+    );
     return Container(
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLow.withValues(alpha: 0.5),
@@ -223,9 +337,7 @@ class SchedulePlannerView extends ConsumerWidget {
         child: Container(
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            border: Border(
-              left: BorderSide(color: accentColor, width: 6),
-            ),
+            border: Border(left: BorderSide(color: accentColor, width: 6)),
           ),
           child: Row(
             children: [
@@ -294,7 +406,10 @@ class SchedulePlannerView extends ConsumerWidget {
         badgeText = AppColors.onSurface;
     }
 
-    final accentColor = AppColors.getSubjectAccentColor(item.subjectCode, isBreak: item.isBreak);
+    final accentColor = AppColors.getSubjectAccentColor(
+      item.subjectCode,
+      isBreak: item.isBreak,
+    );
 
     return Container(
       decoration: BoxDecoration(
@@ -316,9 +431,7 @@ class SchedulePlannerView extends ConsumerWidget {
         child: Container(
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            border: Border(
-              left: BorderSide(color: accentColor, width: 6),
-            ),
+            border: Border(left: BorderSide(color: accentColor, width: 6)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

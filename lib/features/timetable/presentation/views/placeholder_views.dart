@@ -1,9 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
+import '../../domain/models/timetable_item.dart';
+import '../providers/timetable_provider.dart';
+import '../screens/subject_detail_page.dart';
+
+class _CourseData {
+  final TimetableItem item;
+  final String details;
+  final Color color;
+
+  const _CourseData({
+    required this.item,
+    required this.details,
+    required this.color,
+  });
+
+  String get title => item.title;
+  String get instructor => item.instructor;
+}
 
 class CoursesShellView extends ConsumerWidget {
   const CoursesShellView({super.key});
@@ -11,6 +31,32 @@ class CoursesShellView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final currentClass = ref.watch(currentClassProvider);
+    final joinedCustomTimetablesAsync = ref.watch(joinedCustomTimetablesProvider);
+    final weeklyScheduleAsync = ref.watch(weeklyScheduleProvider);
+
+    final items = weeklyScheduleAsync.value ?? [];
+    final Map<String, _CourseData> coursesMap = {};
+    final colors = [AppColors.primary, AppColors.secondary, AppColors.tertiary];
+    int colorIndex = 0;
+
+    for (final item in items) {
+      if (item.isBreak) continue;
+      if (!coursesMap.containsKey(item.title)) {
+        final count = items.where((i) => i.title == item.title).length;
+        final category = item.category.isNotEmpty && item.category != 'Break'
+            ? item.category
+            : 'Core Major';
+        coursesMap[item.title] = _CourseData(
+          item: item,
+          details: '$count Units • $category',
+          color: colors[colorIndex % colors.length],
+        );
+        colorIndex++;
+      }
+    }
+
+    List<_CourseData> coursesList = coursesMap.values.toList();
+
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: Column(
@@ -26,99 +72,157 @@ class CoursesShellView extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Enrolled in ${currentClass?.name ?? 'B.Tech CSE - Section A'}',
+            'Enrolled in ${currentClass?.name ?? 'B.Tech CSBS - Section B'}',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
           const SizedBox(height: 32),
           Expanded(
-            child: ListView(
-              children: [
-                _buildCourseItem(
-                  'Object Oriented Programming using Java',
-                  'Dr. Sarah Chen',
-                  '4 Units • Lab Included',
-                  AppColors.primary,
-                ),
-                const SizedBox(height: 16),
-                _buildCourseItem(
-                  'Database Technology',
-                  'Rajammal K',
-                  '3 Units • Core Major',
-                  AppColors.secondary,
-                ),
-                const SizedBox(height: 16),
-                _buildCourseItem(
-                  'Data Structures & Algorithms',
-                  'Prof. Miller',
-                  '4 Units • Core Major',
-                  AppColors.tertiary,
-                ),
-                const SizedBox(height: 16),
-                _buildCourseItem(
-                  'Cloud Computing & Virtualization',
-                  'Dr. James Wilson',
-                  '3 Units • Elective',
-                  AppColors.primary,
-                ),
-              ],
-            ),
+            child: (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty))
+                ? Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            LucideIcons.graduationCap,
+                            size: 64,
+                            color: AppColors.primary,
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            'No Class Joined',
+                            style: AppTypography.titleLarge.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Join or search for an academic section to see your courses.',
+                            textAlign: TextAlign.center,
+                            style: AppTypography.bodyMedium.copyWith(
+                              color: AppColors.textSecondary,
+                            ),
+                          ),
+                          const SizedBox(height: 24),
+                          FilledButton.icon(
+                            onPressed: () => context.push('/join-class-choice'),
+                            icon: const Icon(LucideIcons.search, size: 18),
+                            label: const Text('Find a Class'),
+                            style: FilledButton.styleFrom(
+                              backgroundColor: AppColors.primary,
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                : coursesList.isEmpty
+                ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.menu_book_rounded,
+                          size: 48,
+                          color: AppColors.onSurfaceVariant.withValues(
+                            alpha: 0.5,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          'No courses found for this class.',
+                          style: AppTypography.textTheme.titleMedium?.copyWith(
+                            color: AppColors.onSurfaceVariant,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          'Subjects will appear once classes are scheduled in your timetable.',
+                          textAlign: TextAlign.center,
+                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            color: AppColors.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : ListView.separated(
+                    itemCount: coursesList.length,
+                    separatorBuilder: (_, _) => const SizedBox(height: 16),
+                    itemBuilder: (context, index) {
+                      final course = coursesList[index];
+                      return _buildCourseItem(context, course);
+                    },
+                  ),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildCourseItem(
-    String title,
-    String instructor,
-    String details,
-    Color color,
-  ) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: AppColors.outlineVariant.withValues(alpha: 0.3),
+  Widget _buildCourseItem(BuildContext context, _CourseData course) {
+    return InkWell(
+      onTap: () {
+        SubjectDetailPage.navigate(context, course.item);
+      },
+      borderRadius: BorderRadius.circular(24),
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: AppColors.surfaceContainerLowest,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(
+            color: AppColors.outlineVariant.withValues(alpha: 0.3),
+          ),
         ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 54,
-            height: 54,
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(16),
+        child: Row(
+          children: [
+            Container(
+              width: 54,
+              height: 54,
+              decoration: BoxDecoration(
+                color: course.color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Icon(
+                Icons.menu_book_rounded,
+                color: course.color,
+                size: 28,
+              ),
             ),
-            child: Icon(Icons.menu_book_rounded, color: color, size: 28),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: AppTypography.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.onSurface,
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    course.title,
+                    style: AppTypography.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.onSurface,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  '$instructor · $details',
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
-                    color: AppColors.onSurfaceVariant,
+                  const SizedBox(height: 4),
+                  Text(
+                    '${course.instructor} · ${course.details}',
+                    style: AppTypography.textTheme.labelMedium?.copyWith(
+                      color: AppColors.onSurfaceVariant,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -151,78 +255,33 @@ class TasksShellView extends StatelessWidget {
           ),
           const SizedBox(height: 32),
           Expanded(
-            child: ListView(
-              children: [
-                _buildTaskCard(
-                  'OOP Java Lab Report #4',
-                  'Due Today, 11:59 PM',
-                  true,
-                ),
-                const SizedBox(height: 14),
-                _buildTaskCard(
-                  'Database Normalization Assignment',
-                  'Due Wed, Jul 22',
-                  false,
-                ),
-                const SizedBox(height: 14),
-                _buildTaskCard(
-                  'Cloud Virtualization Mini-Project Proposal',
-                  'Due Fri, Jul 24',
-                  false,
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildTaskCard(String title, String deadline, bool isUrgent) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: isUrgent
-              ? AppColors.error.withValues(alpha: 0.3)
-              : AppColors.outlineVariant.withValues(alpha: 0.3),
-        ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 24,
-            height: 24,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: AppColors.outlineVariant, width: 2),
-            ),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: AppTypography.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.onSurface,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.task_alt_rounded,
+                    size: 48,
+                    color: AppColors.onSurfaceVariant.withValues(alpha: 0.5),
                   ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  deadline,
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
-                    color: isUrgent
-                        ? AppColors.error
-                        : AppColors.onSurfaceVariant,
-                    fontWeight: isUrgent ? FontWeight.bold : FontWeight.normal,
+                  const SizedBox(height: 16),
+                  Text(
+                    'No tasks or deadlines assigned right now.',
+                    style: AppTypography.textTheme.titleMedium?.copyWith(
+                      color: AppColors.onSurfaceVariant,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 6),
+                  Text(
+                    'When instructors publish assignments or lab submissions, they will appear here.',
+                    textAlign: TextAlign.center,
+                    style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      color: AppColors.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

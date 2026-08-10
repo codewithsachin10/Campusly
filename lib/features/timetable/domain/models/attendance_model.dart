@@ -13,10 +13,7 @@ class AttendanceLog {
     );
   }
 
-  Map<String, dynamic> toJson() => {
-    'dateString': dateString,
-    'status': status,
-  };
+  Map<String, dynamic> toJson() => {'dateString': dateString, 'status': status};
 }
 
 class AttendanceModel {

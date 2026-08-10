@@ -9,7 +9,8 @@ class TimetableItem {
   final int startMinute;
   final int endHour; // 24h format
   final int endMinute;
-  final String category; // 'Lab', 'Major', 'Elective', 'Lecture', 'Studio', 'Break'
+  final String
+  category; // 'Lab', 'Major', 'Elective', 'Lecture', 'Studio', 'Break'
   final String room; // e.g. 'ANEW101-A'
   final String instructor; // e.g. 'Rajammal K'
   final double progressPercentage; // e.g. 68.0
@@ -107,13 +108,17 @@ class TimetableItem {
   }
 
   factory TimetableItem.fromJson(Map<String, dynamic> json) {
-    final titleVal = json['title'] as String? ?? json['subjectName'] as String? ?? 'Class';
-    final shortTitleVal = json['shortTitle'] as String? ?? json['subjectCode'] as String? ?? 'CLS';
+    final titleVal =
+        json['title'] as String? ?? json['subjectName'] as String? ?? 'Class';
+    final shortTitleVal =
+        json['shortTitle'] as String? ??
+        json['subjectCode'] as String? ??
+        'CLS';
     final dayVal = _normalizeDayOfWeek(json['dayOfWeek'] as String? ?? 'mon');
-    
+
     final rawStartTime = json['startTime'] as String? ?? '08:00 AM';
     final rawEndTime = json['endTime'] as String? ?? '09:00 AM';
-    
+
     final formattedStart = _formatTimeStr(rawStartTime);
     final formattedEnd = _formatTimeStr(rawEndTime);
 
@@ -133,11 +138,19 @@ class TimetableItem {
       startMinute: startM,
       endHour: endH,
       endMinute: endM,
-      category: _normalizeCategory(json['category'] as String? ?? json['type'] as String?),
+      category: _normalizeCategory(
+        json['category'] as String? ?? json['type'] as String?,
+      ),
       room: json['room'] as String? ?? json['classroom'] as String? ?? 'TBA',
-      instructor: json['instructor'] as String? ?? json['faculty'] as String? ?? 'Faculty',
-      progressPercentage: (json['progressPercentage'] as num?)?.toDouble() ?? 0.0,
-      isBreak: json['isBreak'] as bool? ?? (json['category'] == 'Break' || json['type'] == 'Break'),
+      instructor:
+          json['instructor'] as String? ??
+          json['faculty'] as String? ??
+          'Faculty',
+      progressPercentage:
+          (json['progressPercentage'] as num?)?.toDouble() ?? 0.0,
+      isBreak:
+          json['isBreak'] as bool? ??
+          (json['category'] == 'Break' || json['type'] == 'Break'),
       sharedSlot: json['sharedSlot'] as bool? ?? false,
       sharedSlotGroup: json['sharedSlotGroup'] as String?,
       subjectCode: json['subjectCode'] as String?,
@@ -196,7 +209,8 @@ class TimetableItem {
   }
 
   static String _formatTimeStr(String timeStr) {
-    if (timeStr.toUpperCase().contains('AM') || timeStr.toUpperCase().contains('PM')) {
+    if (timeStr.toUpperCase().contains('AM') ||
+        timeStr.toUpperCase().contains('PM')) {
       return timeStr;
     }
     try {

@@ -1,55 +1,19 @@
 import 'dart:io';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_colors.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AppErrorHandler {
   AppErrorHandler._();
 
-  static String getMessage(Object error) {
-    if (error is FirebaseAuthException) {
-      switch (error.code) {
-        case 'user-not-found':
-          return 'No account found with this email address.';
-        case 'wrong-password':
-        case 'invalid-credential':
-          return 'Invalid email address or password. Please try again.';
-        case 'email-already-in-use':
-          return 'An account already exists with this email address.';
-        case 'invalid-email':
-          return 'Please enter a valid email address.';
-        case 'weak-password':
-          return 'Please choose a stronger password (at least 6 characters).';
-        case 'user-disabled':
-          return 'This user account has been disabled.';
-        case 'too-many-requests':
-          return 'Too many unsuccessful attempts. Please try again later or reset your password.';
-        case 'network-request-failed':
-          return 'Network connection error. Please check your internet connection and try again.';
-        case 'operation-not-allowed':
-          return 'This sign-in method is currently disabled.';
-        case 'requires-recent-login':
-          return 'For security reasons, please log in again before performing this action.';
-        default:
-          return error.message ??
-              'An authentication error occurred. Please try again.';
-      }
+  static String getErrorMessage(Object? error) {
+    if (error == null) return 'An unknown error occurred.';
+    if (error is AuthException) {
+      return error.message;
     }
-
-    if (error is FirebaseException) {
-      switch (error.code) {
-        case 'permission-denied':
-          return 'You do not have permission to access or modify this information.';
-        case 'unavailable':
-          return 'The service is temporarily unavailable. Please check your network or try again later.';
-        case 'not-found':
-          return 'The requested resource could not be found.';
-        case 'already-exists':
-          return 'This item already exists.';
-        default:
-          return error.message ?? 'A database error occurred (${error.code}).';
-      }
+    if (error is PostgrestException) {
+      return error.message;
     }
 
     if (error is SocketException) {
@@ -74,7 +38,7 @@ class AppErrorHandler {
   }
 
   static void showErrorSnackBar(BuildContext context, Object error) {
-    final message = getMessage(error);
+    final message = getErrorMessage(error);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Row(

@@ -52,3 +52,11 @@ campusly_web_admin/.local/
 campusly_web_admin/.env.local
 campusly_web_admin/*.local
 .npm-local/
+
+# Security
+.env
+*.env
+*.env.*
+firebase-key.json
+firebase-adminsdk-*.json
+

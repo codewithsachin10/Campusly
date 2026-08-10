@@ -1,0 +1,441 @@
+{
+  "regulation": {
+    "name": "R2023-BME-Curriculum_and_Syllabus",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23111",
+          "name": "Linear Algebra and Calculus",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-6-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "த௘ழர் மர௖ /Heritage of Tamils",
+          "credits": 5,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-1-1",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering 3 0 0 3 0 Lab Integrated Theory Course",
+          "credits": 6,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-3-0",
+          "theory_lab": "Theory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "CY23131",
+          "name": "Chemistry For Electronics Engineering 3 0 2 5 4 Laboratory Course",
+          "credits": 7,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement 3 0 0 0 0 --- PAGE 6 --- Department of BME, REC Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page 6 4 OE OE 1 3 0 0 3 3 Lab Integrated",
+          "credits": 5,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex Variables",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "ME23211",
+          "name": "Engineering Mechanics for Biomedical Engineers",
+          "credits": 3,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "த௘ழ௠ம ் ெதா௯ல ்௎ட்ப௚ம ் / Tamils Technology/ 1 0 0 1 1 Lab Integrated",
+          "credits": 4,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-1-1",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "CS23232",
+          "name": "Fundamentals of Data Structures using C",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-7-5",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "PH23231",
+          "name": "Physics for Bioscience",
+          "credits": 6,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "BM23231",
+          "name": "Electric Circuits and Machines 3 0 2 5 4 --- PAGE 5 --- Department of BME, REC Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "5-2023-5",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II/ English for professional competence",
+          "credits": 8,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "MA23312",
+          "name": "Fourier series and Number theory",
+          "credits": 2,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "BM23311",
+          "name": "Human Anatomy and Physiology",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23312",
+          "name": "Biomedical Instrumentation",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23313",
+          "name": "Biochemical Science 3 0 0 3 3 Lab Integrated",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23331",
+          "name": "Electronic Devices and Circuits",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23332",
+          "name": "Sensors and Measurements",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "2-4-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23321",
+          "name": "Biochemistry and Physiology Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "CS23336",
+          "name": "Introduction to Python Programming",
+          "credits": 8,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-5-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "BM23411",
+          "name": "Analog and Digital Integrated Circuits",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23412",
+          "name": "Communication Systems and Standards",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23436",
+          "name": "Probability and Random Processes",
+          "credits": 6,
+          "course_type": "Basic Sciences",
+          "l_t_p": "2-4-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "BM23431",
+          "name": "Pathology and Microbiology",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "2-4-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23421",
+          "name": "Analog and Digital Integrated Circuits Laboratory",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23422",
+          "name": "PCB Design Laboratory",
+          "credits": 10,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine learning",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "BM23511",
+          "name": "Biocontrol systems",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23512",
+          "name": "Diagnostic and Therapeutic Equipment 3 0 0 3 3 3 OE OE 2 3 0 0 3 3 4 PE PE 1 3 0 0 3 3 Lab Integrated",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23531",
+          "name": "Signals and Systems Analysis",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "2-4-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23532",
+          "name": "Microcontroller and Embedded System Design",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23521",
+          "name": "Diagnostic and Therapeutic Equipment Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "BM23611",
+          "name": "Radiological Equipment",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23612",
+          "name": "Biomechanics 3 1 0 4 4 3 PE PE 2 3 0 0 3 3 4 PE PE 3 3 0 0 3 3 Lab Integrated",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23631",
+          "name": "Biosignal Processing",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "2-4-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23632",
+          "name": "Physiological Modeling Laboratory",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "2-3-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "BM23621",
+          "name": "Medical Industrial Training",
+          "credits": 9,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "2-2-1",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "BM23711",
+          "name": "Comprehension In Biomedical Engineering 1 0 0 1 1 2 PE PE 4 3 0 0 3 3 3 PE PE 5 3 0 0 3 3 4 PE PE 6 3 0 0 3 3 Lab Integrated",
+          "credits": 5,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-3-3",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "BM23731",
+          "name": "Medical Image Processing",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "2-5-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "BM23721",
+          "name": "Artificial Intelligence and Machine learning for Biomedical Engineering",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "4-4-2",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ProjectPhase-I00663",
+          "name": "PAGE 8 --- Department of BME, REC Curriculum & Syllabus-B.E (Biomedical Engineering)-R-2023 Page",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "8-2023-8",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    }
+  ]
+}

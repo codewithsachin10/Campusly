@@ -1,0 +1,1196 @@
+
+--- PAGE 1 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   1 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+REGULATION 2023 
+ 
+CURRICULUM AND SYLLABUS 
+CHOICE BASED CREDIT SYSTEM 
+ 
+B. Tech Artificial Intelligence and  
+Data Science 
+  
+
+--- PAGE 2 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   2 
+ 
+ RAJALAKSHMI ENGINEERING COLLEGE 
+(An Autonomous Institution Affiliated to Anna University, Chennai) 
+Choice Based Credit System (CBCS) 
+CURRICULUM AND SYLLABUS 
+B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE  
+REGULATIONS – 2023 
+ 
+Vision 
+ 
+To become a global leader in Artificial Intelligence and Data Science by achieving through 
+excellence in teaching, training, and research, to serve the society. 
+ 
+Mission 
+ To develop students' skills in innovation, problem-solving, and professionalism through 
+the guidance of well-trained faculty. 
+ To encourage research activities among students and faculty members to address the 
+evolving challenges of industry and society. 
+ To impart qualities such as moral and ethical values, along with a commitment to lifelong 
+learning 
+PROGRAMME EDUCATIONAL OBJECTIVES (PEOs) 
+ 
+PEO 1:Build a successful professional career across industry, government, and academia by 
+leveraging technology to develop innovative solutions for real-world problems. 
+PEO 2:Maintain a learning mindset to continuously enhance knowledge through experience, 
+formal education, and informal learning opportunities. 
+PEO 3:Demonstrate an ethical attitude while excelling in communication, management, 
+teamwork, and leadership skills 
+PEO 4:Utilize engineering, problem-solving, and critical thinking skills to drive social, economic, 
+and sustainable impact. 
+ 
+
+--- PAGE 3 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   3 
+ 
+ 
+PROGRAM OUTCOMES (POS) 
+Engineering Graduates will be able to: 
+PO1: Engineering Knowledge: Apply the knowledge of mathematics, science, engineering 
+fundamentals and an engineering specialization to the solution of complex engineering problems.  
+PO2: Problem Analysis: Identify, formulate, review research literature, and analyze complex 
+engineering problems reaching substantiated conclusions using first principles of mathematics, 
+natural sciences, and engineering sciences.  
+PO3: Design / Development of solutions: Design solutions for complex engineering problems 
+and design system components or processes that meet the specified needs with appropriate 
+consideration for the public health and safety, and the cultural, societal, and environmental 
+considerations.  
+PO4: Conduct investigations of complex problems: Use research-based knowledge and 
+research methods including design of experiments, analysis and interpretation of data, and 
+synthesis of the information to provide valid conclusions.  
+PO5: Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern 
+engineering and IT tools including prediction and modeling to complex engineering activities with 
+an understanding of the limitations.  
+PO6: The engineer and society: Apply reasoning informed by the contextual knowledge to assess 
+societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the 
+professional engineering practice.  
+PO7: Environment and sustainability: Understand the impact of the professional engineering 
+solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for 
+sustainable development.  
+PO8: Ethics: Apply ethical principles and commit to professional ethics and responsibilities and 
+norms of the engineering practice.  
+PO9: Individual and team work: Function effectively as an individual and as a member or leader 
+in diverse teams, and in multidisciplinary settings.  
+PO10: Communication: Communicate effectively on complex engineering activities with the 
+engineering community and with society at large, such as, being able to comprehend and write 
+effective reports and design documentation, make effective presentations, and give and receive 
+clear instructions.  
+PO11: Project management and finance: Demonstrate knowledge and understanding of the 
+engineering management principles and apply these to one's own work, as a member and leader in 
+a team, to manage projects and in multidisciplinary environments.  
+PO12: Life-long learning: Recognize the need for and have the preparation and ability to engage 
+in independent and lifelong learning in the broadest context of technological change  
+--- PAGE 4 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   4 
+ 
+ 
+PROGRAM SPECIFIC OUTCOMES (PSOs) 
+A graduate of the Artificial Intelligence and Data Science Learning Program will demonstrate  
+ 
+PSO 1: Foundation Skills: Apply the principles of artificial intelligence and data science by 
+leveraging problem-solving skills, inference, perception, knowledge representation, and learning 
+techniques 
+PSO 2: Problem-Solving Skills: Apply engineering principles and AI models to solve real-world 
+problems across domains, delivering cutting-edge solutions through innovative ideas and 
+methodologies 
+PSO 3: Successful Progression: Utilize interdisciplinary knowledge to identify problems and 
+develop solutions, a passion for advanced studies, innovative career pathways to evolve as an 
+ethically responsible artificial intelligence and data science professional, with a commitment to 
+society. 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+--- PAGE 5 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   5 
+ 
+CURRICULUM 
+B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE 
+Regulation 2023 | Total Credits: 160 
+For students admitted from 2026 onwards 
+ 
+SEMESTER I 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.  HS23111 Technical Communication I HS 2 2 0 0 2 
+2.  MA23116 Mathematical Foundations for AI BS 4 3 1 0 4 
+3.  GE23117 தமிழƫ மர© /Heritage of Tamils HS 1 1 0 0 1 
+LAB ORIENTED THEORY COURSES 
+4.  PH23132 Physics for Information Science BS 5 3 0 2 4 
+5.  GE23131 Programming using C PC 7 1 0 6 4 
+6.  EE23133 Basic Electrical and Electronics Engineering ES 5 3 0 2 4 
+NON CREDIT COURSES 
+7.  MC23111 Indian Constitution and Freedom Movement MC 3 3 0 0 0 
+TOTAL 27 16 1 10 19 
+ 
+. 
+SEMESTER II 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.  MA23214 Probability and Inferential Statistics BS 4 3 1 0 4 
+2.  GE23217 தமிழ¯ ெதாழி¤yப«/Tamils and 
+Technology HS 1 1 0 0 1 
+LAB ORIENTED THEORY COURSES 
+3.  GE23111 Engineering Graphics  ES 6 2 0 4 4 
+4.  IT23231 Digital Principles and Computer Architecture  PC 5 3 0 2 4 
+5.  CS23231 Data Structures  PC 7 3 0 4 5 
+LABORATORY COURSES 
+6.  HS23221/ 
+HS23222 
+Technical Communication II /  English for Professional 
+Competence  HS 2 0 0 2 1 
+7.  GE23123 Engineering Practices: Electrical, Electronics and 
+Computer Systems ES 4 0 0 4 2 
+8.  CS23221 Python Programming Lab PC 4 0 0 4 2 
+TOTAL 33 12 1 20 23 
+ 
+ 
+ 
+--- PAGE 6 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   6 
+ 
+SEMESTER III 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.  MA23313 Discrete Mathematics for AI BS 4 3 1 0 4 
+LAB ORIENTED THEORY COURSES 
+2.  AI23231 Principles of Artificial Intelligence ES 5 3 0 2 4 
+3.  CS23331 Design and Analysis of Algorithms PC 5 3 0 2 4 
+4.  CS23332 Database Management Systems PC 7 3 0 4 5 
+5.  CS23333 Object Oriented Programming Using JAVA  PC 7 1 0 6 4 
+NON CREDIT COURSES 
+6.  MC23112 Environmental Science and Engineering  MC 3 3 0 0 0 
+TOTAL 31 16 1 14 21 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SEMESTER IV 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+LAB ORIENTED THEORY COURSES 
+1.  MA23434 Optimization Techniques for AI BS 5 3 0 2 4 
+2.  AI23331 Fundamentals of Machine Learning   PC 5 3 0 2 4 
+3.  AI23431 Web Technology and Mobile Application PC 5 1 0 4 3 
+4.  AD23431 Statistical Analysis and Computing  PC 4 2 0 2 3 
+5.  CS23431 Operating Systems  PC 7 3 0 4 5 
+6.  CS23432 Software Construction PC 5 3 0 2 4 
+EMPLOYABILITY ENHANCEMENT COURSES 
+7.  GE23421 Soft Skills I EEC 2 0 0 2 1 
+8.  AD23421 Internship EEC 0 0 0 2 1 
+TOTAL 33   15 0 20 25 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 7 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   7 
+ 
+SEMESTER V 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.   Professional Elective-I PE 3 3 0 0 3 
+2.   Professional Elective – II PE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES 
+3.  AD23531  Big Data Architecture PC  5  3  0  2  4  
+4.  AD23532 Principles of Data Science PC 6 2 0 4 4 
+5.  AI23531 Deep Learning PC 5 3 0 2 4 
+6.  CS23532 Computer Networks  PC 7 3 0 4 5 
+EMPLOYABILITY ENHANCEMENT COURSES 
+7.  GE23521 Soft Skills II EEC 2 0 0 2 1 
+TOTAL 31 17 0 14 24 
+ 
+ 
+ 
+SEMESTER VI 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.   Professional Elective-III PE 3 3 0 0 3 
+2.   Open Elective-I OE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES 
+3.  AD23631 Data Privacy and Security  PC  5 3 0 2 4 
+4.  AD23632 Framework for Data and Visual Analytics  PC 5 3 0 2 4 
+5.  AD23633 Generative AI  PC 4 2 0 2 3 
+LABORATORY COURSES 
+6.  GE23627 Design Thinking and Innovation  EEC 4 0 0 4 2 
+EMPLOYABILITY ENHANCEMENT COURSES 
+7.  GE23621 Problem Solving Techniques EEC 2 0 0 2 1 
+TOTAL 26 14 0 12 20 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 8 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   8 
+ 
+SEMESTER VII 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.   Professional Elective – IV PE 3 3 0 0 3 
+2.   Professional Elective-V  PE 3 3 0 0 3 
+3.      AD23731 Foundations of Agentic AI PC 5 1 0 4 3 
+4.   Open Elective-II OE 3 3 0 0 3 
+LAB ORIENTED THEORY COURSES 
+5.  CS23633 Cloud Computing PC 4 2 0 2 3 
+LABORATORY COURSES 
+6.  AD23722 Project Phase I EEC 8 0 0 8 4 
+TOTAL 24 14 0 10 19 
+ 
+ 
+ 
+ 
+ 
+ 
+SEMESTER VIII 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+THEORY COURSES 
+1.   Professional Elective- VI PE 3 3 0 0 3 
+LABORATORY COURSES 
+2.  AD23821 Project Phase II EEC 12 0 0 12 6 
+TOTAL 15 3 0 12 9 
+ 
+ 
+ 
+ Should have focus on Artificial Intelligence and Data Science  
+ 
+ 
+ 
+ 
+TOTAL NO. OF CREDITS: 160 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 9 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   9 
+ 
+ 
+PROFESSIONAL ELECTIVES (PE) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DATA SCIENCE AND ANALYTICS 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+1. AD23A31 Customer Analytics and Opinion Mining PE 4 2 0 2 3 
+2. AD23A32 Explorative and Forecasting Analytics  PE 4 2 0 2 3 
+3. AD23A33 Bio Informatics Systems PE 4 2 0 2 3 
+4. AD23A34 Predictive Analytics  PE 4 2 0 2 3 
+5. AD23A35 Healthcare Analytics   PE 4 2 0 2 3 
+6. AD23A36 Social Media Analytics   PE 4 2 0 2 3 
+7. AD23A37 Image and Video Analytics PE 4 2 0 2 3 
+8. AD23A38 Manufacturing Analytics PE 5 1 0 4 3 
+DATA SCIENCE TECHNIQUES AND APPLICATIONS 
+S.NO COURSE 
+CODE COURSE TITLE Category Contact 
+Periods L T P C 
+1. AD23B31 Image Processing and Computer Vision  PE 4 2 0 2 3 
+2. AD23B32 Natural Language Processing Analytics PE 4 2 0 2 3 
+3. AD23B33 Text and Speech Analysis PE 4 2 0 2 3 
+4. AI23B11 Information Visualization  PE 3 3 0 0 3 
+5. AI23A33 AI for Game Programming PE 4 2 0 2 3 
+6. AI23B34 Human Computer Interaction  PE 4 2 0 2 3 
+7. AI23B12 Cognitive Science  PE 3 3 0 0 3 
+--- PAGE 10 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   10 
+ 
+ 
+ 
+ 
+ 
+EMERGING TECHNOLOGIES 
+S.NO COURSE 
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+1. IT23A11 Internet of Things PE 3 3 0 0 3 
+2. CS23B32 Advanced Application Development with Oracle 
+APEX PE 6 0 0 6 3 
+3. CS23A32 Robotic Process Automation PE 5 1 0 4 3 
+4. CB23G11 Quantum Computation and Quantum Information PE 3 3 0 0 3 
+5. CR23A33 Cryptocurrency and Blockchain Technologies PE 4 2 0 2 3 
+6. CS23A36 3D Printing and Design PE 4 2 0 2 3 
+7. CS23A33 Cyber Security and Forensics PE 4 2 0 2 3 
+ 
+ 
+ 
+ 
+FULL STACK DEVELOPMENT 
+S.NO COURSE 
+CODE COURSE TITLE Category Contact 
+Periods L T P C 
+1. IT23B31 C# and .Net Programming PE  4 2 0 2 3 
+2. IT23C17 Ubiquitous Computing PE 3 3 0 0 3 
+3. IT23C31 Software Testing  PE  4 2 0 2 3 
+4. CS23A35 Web Application Security PE  4 2 0 2 3 
+5. IT23B33 DevOps PE  4 2 0 2 3 
+6. IT23C12 Software Project Management PE  3 3 0 0 3 
+CYBER SECURITY 
+S.NO COURSE  
+CODE COURSE TITLE Category Contact 
+Periods L T P C 
+1. CR23A11  Security Assessment and Risk Analysis PE 3 3 0 0 3 
+2. CS23A11  Malware Detection and Analysis PE 3 3 0 0 3 
+3. CR23A31 Ethical Hacking and Security PE 4 2 0  2 3 
+4. CR23A32 Digital and Mobile Forensics PE 4 2 0  2 3 
+5. CR23A33 Cryptocurrency and Blockchain Technologies PE 4 2 0  2 3 
+6. CR23A34 Security and Privacy in Cloud PE 4 2 0  2 3 
+7. CR23A35 Social Network Security PE 4 2 0  2 3 
+9. CR23A36 Information Security and Management PE 4 2 0  2 3 
+--- PAGE 11 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   11 
+ 
+ 
+VIRTUAL AND AUGMENTED REALITY 
+S.NO COURSE  
+CODE COURSETITLE Category  Contact 
+Periods L T P C 
+1. CS23A37 Augmented Reality and Virtual Reality PE 4 2 0 2 3 
+2. CS23A39 Game Development PE 4 2 0 2 3 
+3. CS23B31 Introduction to Metaverse PE 4 2 0 2 3 
+4. IT23E31 Graphics and Multimedia PE 4 2 0 2 3 
+5. CS23A38   Digital Marketing  PE 4 2 0 2 3 
+6. CD23731 Film Making and Radio podcasting PE 4 2 0 2 3 
+ 
+OPEN ELECTIVE COURSES OFFERED BY AIDS 
+ 
+S.NO COURSE  
+CODE COURSE TITLE Category  Contact 
+Periods L T P C 
+1. AD23O11 Introduction to Data Science   OE 3 3 0 0 3 
+2. AD23O31 Data Visualization using Power BI  OE 4 2 0 2 3 
+ 
+SUMMARY OF ALL COURSES 
+B.Tech.  ARTIFICIAL INTELLIGENCE AND DATA SCIENCE 
+S.NO Course  
+Category 
+Credits per Semester Total Credits I II III IV V VI VII VIII 
+1 HS 3 2       5 
+2 BS 8 4 4 4     20 
+3 ES 9 9       18 
+4 PC  11 17 15 17 11 6  77 
+5 PE     6 3 6 3 18 
+6 OE    3  3   6 
+7 EEC    2 1 3 4 6 16 
+8 MC √  √       
+ Total 20 26 21 24 24 20 16 9 160 
+ 
+AIDS Honors  – Choose   
+1. Course from Programme Specific Elective 1 & 2 – 3 Subjects - 10 Credits  
+2. Courses from General Elective – 3 Subject – 9 Credits  
+Total Credits: 19   
+--- PAGE 12 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   12 
+ 
+Guidelines for Special Projects / Activities for AIML, AIDS and CSD 
+S.no Description Credits To be 
+Completed Compulsory      Optional 
+Professional or 
+Open Elective  can 
+be dropped in  
+1 GE23527 Research Paper 
+L T P C: 0 0 2 1 1 
+on or 
+before VI 
+Semester  
+AIML, AIDS 
+& CSD 
+Additional credits or 
+combine with other 
+online courses 
+eligible drop in VII 
+or VIII Semester. 
+2 
+GE23427 Games/Short 
+Film/ Animation Videos/ 
+Animated Educational 
+Content 
+L T P C : 0 0 6 3 
+3 
+on or 
+before VI 
+Semester 
+ 
+ 
+CSD AIML & AIDS 
+Not applicable for 
+CSD, but for others  
+in VII or VIII Sem  
+(3 - credits  Course  
+only 
+3 
+GE23428 Interdisciplinary 
+Societal Project / Real 
+World Web & Mobile 
+Applications/ Innovative 
+Product  
+L T P C : 0 0 6 3 
+3 
+on or 
+before VI 
+Semester 
+  
+AIML , AIDS 
+& CSD 
+VII or VIII Sem      
+(3 - credits  Course  
+only 
+4 
+GE23429 Participation in 
+National /International 
+competitions   
+L T P C : 0 0 6 3 
+3 
+on or 
+before VI 
+Semester 
+  AIML , AIDS 
+& CSD 
+VII or VIII Sem       
+(3 - credits  Course  
+only 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 13 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   13 
+ 
+ 
+GE23527 Research Paper writing  
+( Eligible to drop 1 credit course Professional / Open elective course (if any) or combined 
+with other online courses, eligible to drop one Professional/Open Elective (Max 3 credits) 
+in VII or VIII semester) 
+L T P C : 0 0 2 1 
+ 
+Research Paper –Guideline 
+Activities: 
+ Individual work 
+ Each student has to identify the domain area 
+ Select any 5 conferences/Journal papers to understand their work ( published within 5 years) 
+ Write a research paper on comparative study  on the following topics 
+o Aim of the paper 
+o Problem statement identified  
+o Methodology to solve the problem 
+o Tools used to solve the problem 
+o  Result of the problem 
+o Identify the error or defect in the result 
+o Identify the future work / enhancement of this result 
+ 
+Assessment: 
+ The Research Paper writing shall be evaluated for a maximum of 100 marks, as a Continuous 
+Assessment  
+ A guide will be assigned to each student to monitor the progress and conduct the review meetings.  
+ Finally, student has to submit the research paper on comparative study  
+ The viva-voce examination will be conducted with external faculty member from other/same 
+department(s)  
+ 
+ 
+ 
+ 
+ 
+ 
+Evaluation - To be given as a Rubric – some components  
+ Introduction/Topic - introduction grabs interest of reader and states topic. Thesis/topic clear, well-developed, 
+and a definitive statement. 
+ Topic Focus –The topic is focused narrowly enough for the scope of this assignment. A thesis statement 
+provides direction for the paper, either by statement of a position or hypothesis.  
+ Content - Balanced presentation of relevant and legitimate information that clearly supports a central purpose 
+or argument and shows a thoughtful, in-depth analysis of  a significant topic. Concepts are integrated into 
+the writer’s own insights.   
+ Depth of Discussion - In-depth discussion & elaboration in all sections of the paper.  Sources support the 
+thesis argument in a logical manner. References are correctly cited. 
+Continuous Assessment 100 Marks 
+Review I Guide 
+Review II 
+Guide 
+Viva-Voce  
+External (from other department) 
+30 30 40 
+--- PAGE 14 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   14 
+ 
+ Evaluation and Results – Appropriate evaluation Measure & Results Comparison with existing work 
+ Conclusion -Summary of thesis argument with concluding ideas that impact reader. Introduces no new 
+information 
+ Review Presentations 
+ Writing - Writing is clear and relevant, with no grammatical and/or spelling errors – polished and 
+professional. Reference, citations and images are properly formatted. 
+ Length - Paper is the not more than 10 pages specified in the assignment. 
+ References–(atleast 7) Quality -Sources include both general background sources and specialized sources. 
+All web sites utilized are authoritative.  
+CATEGORY Obtained 9-10 
+points 
+7-8 
+points 
+4-6 
+points 
+0-3 
+points 
+Introduction/Topic       
+Topic Focus       
+Content        
+Depth of Discussion        
+Evaluation and Results       
+Conclusion       
+Review Presentations      
+Writing      
+Length      
+References      
+Total:          
+ 
+Passing Requirements: 
+ The student should secure 50% marks in Continuous Assessment to pass in the subject 
+ If a student fails in this course he/she has to redo this course in subsequent semesters. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 15 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   15 
+ 
+GE23427 Games/Short Film/ Animation Videos / Animated Educational Content 
+( Eligible to drop one Professional/Open  Elective( Max  3-credits)  in VII or VIII 
+semester) 
+ 
+L T P C : 0 0 6 3 
+ 
+ 
+Activities: 
+ Team Size : Maximum 2 students   
+ Team has to identify the problem statement of game/  Educational video content / short film/ Animated 
+video 
+ Committee (consist of Project coordinator, Faculty member and guide) has to approve the team proposal to 
+proceed further  
+ Team has to develop GAME/Video  
+ Team has to submit the report 
+ 
+Assessment: 
+ The Game/Short Film/ Animation Videos /Animated Educational Content shall be evaluated for a 
+maximum of 100 marks, as a Continuous Assessment 
+ A guide will be assigned to each team to monitor the progress and conduct the review meetings.  
+ Finally, each student in the team has to submit the project report  
+ The viva-voce examination will be conducted with external faculty members from other/same department  
+ Based on the quality of the project, committee can approve to publish in YouTube. 
+ 
+ 
+ 
+ 
+ 
+Passing Requirements: 
+ The student should secure 50% marks in Continuous Assessment to pass in the subject 
+ For CSD students, this course is compulsory, in such a case , If a student fails in this course he/she has to 
+redo this course in subsequent semesters   
+ For branch students, on successful completion of this project work, students are eligible to drop one 
+Professional o/Open Elective (Max. 3 credits) in VII or VIII Semesters 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Continuous Assessment 100 Marks 
+Review I Guide 
+Review II 
+Guide 
+Viva-Voce  
+External ( from other department) 
+30 30 40 
+--- PAGE 16 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   16 
+ 
+GE23428  Interdisciplinary Societal Project / Real World Web or Mobile 
+Applications / Innovative Product 
+( Eligible to drop one Professional/Open  Elective( Max 3-Credits)  in VII or VIII 
+semester) 
+ 
+L T P C : 0 0 6 3 
+ 
+ 
+Activities: 
+ Team Size : Maximum 2 students   
+ Team has to identify the problem statement  to solve  
+ Committee (consist of a Project coordinator, a Faculty member and  a guide) has to approve the team 
+proposal to proceed further  
+ Team has to develop a project  
+ Team has to submit the Project report 
+Assessment: 
+ The Project work shall be evaluated for a maximum of 100 marks, as a Continuous Assessment 
+ A guide will be assigned to each team to monitor the progress and conduct the review meetings.  
+ Finally, each student in the team has to submit the project report  
+ The viva-voce examination will be conducted with external faculty members from other/same department  
+ Based on the quality of the project, committee can approve to publish in YouTube. 
+ 
+Passing  
+ 
+ 
+ 
+ 
+Requirements: 
+ The student should secure 50% marks in Continuous Assessment to pass in the subject 
+ on successful completion of the project work, students are eligible to drop one Professional or Open 
+Electives (3 credits) in VII or VIII Semesters 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Continuous Assessment 100 Marks 
+Review I Guide 
+Review II 
+Guide 
+Viva-Voce  
+External ( from other department) 
+30 30 40 
+--- PAGE 17 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   17 
+ 
+GE23429 Participation in National /International competitions  
+( Eligible to drop one Professional/Open Elective (Max  3-credits) in VII or VIII 
+semester) 
+L T P C 0 0 6 3 
+ 
+Activities: 
+ Team Size : Maximum 3 students   
+ Team has to identify National / International level competition 
+ Based on the problem statement GUIDE will be assigned 
+ Committee (consist of Project coordinator, Faculty member and guide) has to approve the proposal of the 
+team  to proceed further  
+ Team has to prepare and participate in the competition  
+ Team has to submit the final report  
+ 
+Assessment: 
+ Committee (consist of Project coordinator, Faculty member and guide) has to evaluate the report and should 
+conduct viva-voce examination  
+ 
+ 
+ 
+ 
+Passing Requirements: 
+ The student should secure 50% marks in the Viva-voce examination 
+ Eligible students can drop one Professional or Open Elective (Max. 3 credits) in VII or VIII Semesters 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Viva-Voce  
+50 Marks 
+--- PAGE 18 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   18 
+ 
+ 
+SEMESTER I 
+Subject Code Subject Name (Theory Courses) Category L  T P C 
+HS 23111 TECHNICAL COMMUNICATION I  
+Common to all branches of B.E/B. Tech programmes – First Semester HS 2  0 0 2 
+ 
+Objectives: 
+ To facilitate students develop their comprehension skills 
+ To enable students to improve their receptive skills  
+ To equip learners with better vocabulary and enhance their writing skills 
+ To aid students speak effectively in all kinds of communicative contexts. 
+ To improve the learners’ basic proficiency in workplace communication 
+ 
+UNIT-I DEVELOPING COMPREHENSION SKILLS 6 
+Listening: Introduction to Informational listening – Listening to Podcasts, News 
+Reading: Short Narratives and Skimming Passages. 
+Speaking: Introducing Oneself, Narrating a Story / Incident. 
+Writing: Sequential Writing (Jumbled Sentences), Process Description 
+Grammar: Verbs – Main & Auxiliary: Simple Tenses – Form, Function and Meaning. 
+Vocabulary: Word formation – Prefix, Suffix, Compound Words. 
+UNIT-II LISTENING AND EXTENDED READING 6 
+Listening: Deep Listening – Listening to Talk Shows and Debates 
+Reading: In-depth Reading - Scanning Passages  
+Speaking: Describing Current Issues, Happenings, etc.., 
+Writing: Note Making, Note Taking – Paragraph Writing 
+Grammar: Continuous Tenses, Prepositions, Articles 
+Vocabulary: One Word Substitutes, Phrasal Verbs. 
+UNIT-III FORMAL WRITING AND VERBAL ABILITY 6 
+Listening: Listening to Lectures and Taking Notes 
+Reading: Interpretation of Tables, Charts and Graphs 
+Speaking: SWOT Analysis on Oneself 
+Writing: Formal Letter Writing and Email Writing 
+Grammar: Perfect Tenses, Phrases and Clauses, Discourse Markers  
+Vocabulary : Verbal Analogy / Cloze Exercise  
+UNIT-IV ENHANCING SPEAKING ABILITY 6 
+Listening: Listening to eminent voices of one’s interest (Martin Luther King, APJ Abdul Kalam, etc..) 
+Reading: Timed Reading, Filling KWL Chart. 
+Speaking: Just a Minute, Impromptu 
+Writing: Check-list, Instructions. 
+Grammar: ‘Wh’ Questions / ‘Yes’ or ‘No’ Questions, Imperatives  
+Vocabulary: Synonyms, Antonyms, Different forms of the same words. 
+UNIT-V LANGUAGE FOR WORKPLACE  6 
+Listening: Extensive Listening (Audio books, rendering of poems, etc.) 
+Reading: Extensive reading (Jigsaw Reading, Short Stories, Novels) 
+Speaking: Short Presentations on Technical Topics 
+Writing: Recommendations, Essay Writing 
+Grammar: Impersonal Passive, Reported Speech, Concord 
+Vocabulary : Informal Vocabulary and Formal Substitutes 
+ Total Contact Hours : 30 
+ 
+ 
+--- PAGE 19 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   19 
+ 
+ 
+Course Outcomes:  
+At the end of the course the student will be able to 
+ Apply their comprehension skills and interpret different contents effortlessly  
+ Read and comprehend various texts and audio visual contents 
+ Infer data from graphs and charts and communicate it efficiently in varied contexts 
+ Participate effectively in diverse speaking situations 
+ Present, discuss and coordinate with their peers in workplace using their language skills 
+ 
+Text Book (s): 
+1 Effective Technical Communication by M. Ashraf Rizvi (Author) 2nd Edition Paperback  2017 
+2 Sylvan Barnet and Hugo Bedau, ‘Critical Thinking Reading and Writing’, Bedford/st. Martin’s: Fifth Edition 
+(June 28, 2004) 
+3 MeenakshiUpadhyay, Arun Sharma – Verbal Ability and Reading Comprehension. 
+4 Teaching Speaking: A Holistic Approach, Book by Anne Burns and Christine ChuenMeng Goh, Cambridge 
+University Press 
+ 
+Reference Books(s) / Web links: 
+1 Basic Vocabulary in Use: 60 Units of Vocabulary Practice in North American English With Answers 2nd Edition 
+by Michael McCarthy (Author), Felicity O'Dell (Author), John D. Bunting (Contributor) 
+2 Reading Development and Difficulties By Kate Cain 
+3 The 7 Habits of Highly Effective People by Stephen Covey, Simon and Schuster, UK 
+4 Everybody Writes: Your Go-To Guide to Creating Ridiculously Good Content Hardcover by Ann Handley 
+(Author)                                                                                                                                                                                                                                   
+ 
+CO - PO – PSO matrices of course 
+ 
+ 
+PO/PSO 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+HS 23111.1 - - - 1 - - - - - 3 - - - - - 
+HS 23111.2 - - - 1 - - - - - 3 - - - - - 
+HS 23111.3 - 1 - 1 - - - - - 3 - - - - - 
+HS 23111.4 - - - 2 - - - - 1 3 - - - - - 
+HS 23111.5 - - - 1 - - - - 1 3 - - - - - 
+Average - 1 - 1.2 - - - - 1 3 - - - - - 
+ 
+Correlation levels 1, 2 or 3 are as defined below: 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+No correlation: “-” 
+ 
+ 
+ 
+--- PAGE 20 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   20 
+ 
+ 
+Subject Code Subject Name (Theory Courses) Category L  T P C 
+MA23116 MATHEMATICAL FOUNDATIONS FOR AI 
+ I Sem- B.Tech  AI&DS and AIML BS 3 1 0 4 
+ 
+Objectives: 
+ To gain knowledge in using matrix techniques and the concepts of rank and nature of the matrix. 
+ To gain knowledge in using matrix algebra techniques and the concepts of basis and dimension in vector spaces. 
+ To understand normalization finding ortho-normal vectors. 
+ To understand the concepts of source coding techniques 
+ To understand the techniques of calculus which are applied in the Engineering problems.. 
+ 
+UNIT-I MATRICES AND QUADRATIC FORMS 12 
+ Matrices : Types - Symmetric and Skew – symmetric matrices, Hermitian matrix, Unitary matrix and Orthogonal 
+matrices – Rank, Inverse and Trace  of a matrix - Eigen values and eigenvectors- Diagonalization of matrices using 
+orthogonal transformation  - Quadratic forms - Reduction to canonical form using orthogonal transformation. 
+UNIT-II VECTOR SPACES 12 
+Vector spaces – Subspaces – Linear combinations and system of Linear equations – Linear independence and Linear 
+dependence – Bases and Dimensions – Linear Transformation – Matrix representation  of  Linear Transformation - Null 
+space, Range and dimension theorem. 
+UNIT-III INNER PRODUCT SPACES 12 
+Inner product and norms - Gram Schmidt orthonormalization process - Modified Gram Schmidt ortho-normalization 
+process - QR Factorization-Singular value decomposition -Principal component analysis. 
+UNIT-IV INFORMATION THEORY 12 
+Measure of Information, Entropy, Source coding theorem - Shannon-Fano codes & Huffman codes, Discrete Memory 
+less channel, Mutual information, Channel Capacity, Shannon-Hartley theorem. 
+UNIT-V FUNCTIONS  OF SEVERAL VARIABLES 12 
+Partial differentiation–Total derivative–Change of variables–Jacobians–Partial differentiation of implicit functions– 
+Taylor’s series for functions of two variables–Maxima and minima of functions of two variables–Lagrange’s method of 
+undetermined multipliers. 
+ Total Contact Hours : 60 
+ 
+Course Outcomes:  
+At the end of the course the student will be able to 
+ Apply the concept of Eigenvalues and eigenvectors, diagonalization of a matrix for solving problems. 
+ Use concepts of basis and dimension in vector spaces in solving problems 
+ Use concepts of normalization in inner products solving problems and to construct orthonormal basis using inner 
+products. 
+ Apply the various source coding techniques on communication systems 
+ Analyze, sketch and study the properties of different curves and to handle functions of several variables and 
+problems of maxima and minima. 
+ 
+Text Book (s): 
+1 Grewal B.S., “ Higher Engineering Mathematics ”, Khanna Publishers, New Delhi, 43rd Edition, 2014. 
+2 T Veerarajan , Linear Algebra and Partial Differential Equations, Mc Graw Hill Education,2019. 
+http://library.lol/main/3FE18B4BC738F2D3130E2FD17B3CBB3A 
+3 T Veerarajan, Engineering Mathematics –I , Mc Graw Hill Education, 2018. 
+--- PAGE 21 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   21 
+ 
+http://library.lol/main/D84CE246DE69AD78EFC9998B4045EB65 
+4 Simon Haykin, “Communication Systems”, 3rd Edition John Wiley & sons, 2001. 
+5 J.G.Proakis, M.Salehi, “Fundamentals of Communication Systems”, 2nd Edition, Pearson Education, 2006. 
+ 
+Reference Books(s) / Web links: 
+1 Ramana. B.V., " Higher Engineering Mathematics ", McGraw Hill Education Pvt.Ltd, New Delhi, 2016. 
+http://library.lol/main/507B45BE17BFBD29CDC32752A1AFCFB3 
+2 Friedberg, A.H., Insel, A.J. and Spence, L., ―Linear Algebra‖, Prentice - Hall of India, New Delhi, 2004. 
+3 Erwin Kreyszig ," Advanced Engineering Mathematics ", John Wiley and Sons, 10th Edition,   New Delhi, 2016. 
+ 
+ 
+CO - PO – PSO matrices of course 
+ 
+ 
+PO/PSO 
+CO 
+PO1 PO2 PO3 PO4 PO5 PO6 PO7 PO8 PO9 PO10 PO11 PO12 PSO1 PSO2 PSO3 
+MA23116.1 3 2 1 - - - - - - - 1 - 1 1 - 
+MA23116.2 3 3 - - - - - - - - - - 1 1 - 
+MA23116.3 2 2 - - - - - - - - - - - - - 
+MA23116.4 2 2 1 - - - - - - - - - 1 - - 
+MA23116.5 2 2 - - - - - - - - 1 1 - 1 - 
+Average 2.4 2.2 1 - - - - - - - 1 1 1 1 - 
+ 
+Correlation levels 1, 2 or 3 are as defined below: 
+1: Slight (Low)     2: Moderate (Medium)    3: Substantial (High) 
+No correlation: “-” 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 22 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   22 
+ 
+GE23117                                                     தமிழƫமர©                                             L  T  P  C 1  0  0  1 
+ 
+அல I                                             ெமாழி ம² இலtகிய:                                                                3 
+இ|திய ெமாழிt பuக – திராவட ெமாழிக – தமி ஒ¯ ெசெமாழி – தமி 
+ெசவலtகியuக – சuக இலtகிய{தி} சமயசாƫபற த}ைம – சuக இலtகிய{தி 
+பகிƫத அற – தி¯tறள ேமலாz ைமt க¯{¢tக - தமிழிtகா~பயuக, 
+தமிழக{தி சமண ெபௗ{த சமயuகள} தாtக – பtதி இலtகிய, ஆவாƫக ம² 
+நாய}மாƫக - சிறிலtகியuக – தமிழி நவன இலtகிய{தி} வளƫvசி – தமி 
+இலtகிய வளƫvசிய பாரதியாƫ ம² பாரதிதாச} ஆகிேயாƬ} பuகள~©. 
+அல II                    மர© – பாைற ஓவயuக «த நவன ஓவயuகவைர - சிபtகைல:             3                                                                               
+   
+நக « த நவன சிபuக வைர – ஐெபா} சிைலக – பழuயனƫ ம² 
+அவƫக தயாƬt ைகவைன~ ெபா¯yக, ெபாைமக – ேதƫ ெச­ கைல – 
+மz  சிபuக – நாy~©ற{ ெதவuக – மƬ«ைனய தி¯வ¶வƫ சிைல - 
+இைசtக¯வக - மி¯தuக, பைற, வைண, யா, நாத வர – தமிழƫகள} 
+ச¬ கெபா¯ளாதார வாவ ேகாவகள} பu. 
+அல III                           நாy~©றtகைலகம²வரவைளயாyக:                                   3 
+ெத¯t{¢, கரகாyட, வ´~பாy, கணயா}{¢, ஒயலாyட, 
+ேதாபாைவt{¢, சிலபாyட, வளƬ, ©லியாyட, தமிழƫகள}வைளயாyக. 
+அல IV                                          தமிழƫகள}திைணtேகாyபாக:                                                  3 
+தமிழக{தி} தாவரuக¶, வலuக¶ – ெதாகா~பய ம² சuக 
+இலtகிய{தி அகம² ©றtேகாyபாக – தமிழƫக ேபாறிய அறtேகாyபா – 
+சuககால{தி தமிழ{தி எ¸{தறிº, கவ­ – சuககாலநகரuக¶ 
+¢ைற« கuக¶ – சuககால{தி ஏ²மதி ம² இறtமதி – கடகட|தநாகள 
+ேசாழƫகள} ெவறி. 
+அல V                இ|தியேதசியஇயtகம²இ|தியபz பாy{தமிழƫகள}பuகள~©:     3                                                                                                                     
+இ|திய வதைல~ ேபாƬ தமிழƫகள} பu – இ|தியாவ} பற~ பதிகள தமி~ 
+பz பாy}தாtக – யமƬயாைத இயtக – இ|திய ம¯{¢வ{தி, 
+சி{தம¯{¢வ{தி} பu - கெவyக, ைகெய¸{¢~பக – தமி~ ©{தகuகள} 
+அvவரலா².   
+TOTAL: 15 PERIODS 
+ 
+ 
+ 
+ 
+ 
+TEXT-CUM-REFERENCE BOOKS 
+--- PAGE 23 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   23 
+ 
+1. தமிழக வரலா² – மtக¶ பz பா - ேக.ேக. பைள (ெவளய: தமிநா 
+பாட¥ ம² கவயய பணககழக). 
+2. கணன{தமி - « ைனவƫஇல. |தர. (வகட}பரர). 
+3. கீழ – ைவைகநதிt கைரய சuககாலநகர நாகƬக ( ெதாலிய ¢ைற 
+ெவளய ) 
+4. ெபா¯ைந – ஆறuகைர நாகƬக. (ெதாலிய ¢ைறெவளய) 
+5. Social Life of Tamils (Dr. K. K. Pillay) A joint publication of TNTB & ESC and RMRL – (in print) 
+6. Social Life of the Tamils – The Classical Period (Dr. S. Singaravelu)(Published by: International Institute of 
+Tamil Studies. 
+7. Historical Heritage of the Tamils (Dr. S. V. Subatamanian, Dr.K.D. Thirunavukkarasu) (Published by: 
+International Institute of Tamil Studies). 
+8. The Contributions of the Tamils to Indian Culture (Dr.M.Valarmathi) (Published by: International Institute 
+of Tamil Studies). 
+9. Keeladi – ‘Sangam City Civilization on the banks of river Vaigai’ (Jointly Published by: Department of 
+archaeology & Tamil Nadu Text Book and Educational Services Corporation, Tamil Nadu) 
+10. Studies in the History of India with Special Reference to Tamil Nadu (Dr.K.K.Pillay) (Published by: The 
+Author) 
+11. Porunai Civilization (Jointly Published by: Department of Archaeology & Tamil Nadu Text Book and 
+Educational Services Corporation, Tamil Nadu) 
+12. Journey of Civilization Indus to Vaigai (R.Balakrishnan) (Published by: RMRL) – Reference Book. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGE 24 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   24 
+ 
+Subject Code Subject Name (Lab oriented Theory Courses) Category L  T P C 
+PH23132 
+PHYSICS FOR INFORMATION SCIENCE 
+For Sem 1: Common to -B.E. CSD., B.Tech,- AIML, AI&DS 
+For Sem 2: Common to – B. E. CSE, B.Tech.- IT 
+BS 3 0 2 4 
+ 
+Objectives: 
+ To understand the principles of laser and fibre optics in engineering and technology.   
+ To analyze the properties of magnetic and superconducting materials. 
+ To understand the advanced concept of quantum theory and applications. 
+ To become proficient in semiconductor applications 
+ To become proficient in optoelectronic devices 
+ 
+UNIT-I LASERS AND FIBRE OPTICS 9 
+Lasers: Population of energy levels, Einstein’s A and B coefficients derivation – resonant cavity, optical amplification 
+(qualitative) –Nd-YAG Laser, Semiconductor lasers: Homojunction and Heterojunction- Applications of Lasers and 
+Holography. Fiber optics: principle, numerical aperture and acceptance angle - types of optical fibers (material, refractive 
+index, mode) – losses associated with optical fibers -Fibre optic communication system - fiber optic sensors: pressure 
+and displacement.  
+UNIT-II MAGNETIC AND SUPERCONDUCTING MATERIALS   9 
+Magnetic dipole moment – atomic magnetic moments- magnetic permeability and susceptibility -Magnetic material 
+classification: diamagnetism – paramagnetism – ferromagnetism – antiferromagnetism – ferrimagnetism – Domain 
+Theory-  M versus H behaviour – Hard  and soft magnetic materials – examples  and uses-– Magnetic principle in 
+computer data storage –Introduction of Superconductivity, Properties of Superconductors, BCS theory (Qualitative), 
+Type-I and Type II Superconductors -Magnetic Levitation-SQUIDS-Cryotrons. 
+UNIT-III QUANTUM PHYSICS 9 
+Introduction- Quantum free electron theory-De Broglie’s concept-Schrodinger wave equation-Time independent and 
+time dependent equations-Physical significance of wave function - Particle in a one dimensional box – electrons in 
+metals -degenerate states – Fermi- Dirac statistics – Density of energy states -Size dependence of Fermi energy – 
+Quantum confinement – Quantum structures –Quantum wells, Quantum wires, Quantum dots and Quantum clusters - 
+Band gap of nanomaterials. 
+UNIT-IV SEMICONDUCTOR  PHYSICS  9 
+Intrinsic Semiconductors – Energy band diagram – direct and indirect band gap   semiconductors –- Carrier 
+concentration in intrinsic semiconductors – Band gap determination- extrinsic   semiconductors (Qualitative)-Formation 
+of P-N junction-Forward bias- Reverse bias-Hall effect -Ohmic contact-Schottky diode- Tunnel diode. 
+UNIT-V OPTOELECTRONICS 9 
+Classification of optical materials – carrier generation and recombination processes - Absorption emission and scattering 
+of light in metals, insulators and semiconductors (concepts only) – Photo electric effect-Photo current in a P-N diode – 
+Photo transistor-solar cell - LED – Organic LED- Non Linear Optical materials-properties and applications. 
+ Total Contact Hours : 45 
+ 
+List of Experiments 
+1 Determine the size of the microparticle using diode laser and wavelength of the laser using grating. 
+2 Determine the angle of divergence of laser beam and numerical aperture and acceptance  
+3 Study the permeability of the free space using Helmoltz coil. 
+4 Determine the hysteresis loss in the transformer core using B-H curve unit.  
+5 Determine the band gap of given semiconductor. 
+--- PAGE 25 ---
+ 
+Curriculum and Syllabus | B.Tech. ARTIFICIAL INTELLIGENCE AND DATA SCIENCE| R2023   25 
+ 
+6 Determine the Hall coefficient of semiconducting material. 
+7 Determine specific resistance of the material of given wires using metre bridge. 
+8 Study the resonance frequency in series connected LCR circuits. 
+9 Determine the V-I characteristics of the solar cell. 
+10 Determine the thickness of the given specimen by using air wedge method. 
+ Contact Hours : 30 
+ Total Contact Hours : 75 
+ 
+Course Outcomes:  
+At the end of the course the student will be able to 
+ Use the concepts of Laser and Fiber optics in communication. 
+ Use the properties of magnetic and superconducting materials in data storage devices. 
+ Apply the concepts of electron transport in nanodevices. 
+ Analyse the physics of semiconductor devices 
+ Analyze the properties of optical materials for optoelectronic applications. 
+ 
+Text Book (s): 
+1 Bhattacharya, D.K. & Poonam, T.  “Engineering Physics”. Oxford University Press, 2015. 
+2 Jasprit Singh, “Semiconductor Devices: Basic Principles”, Wiley 2012. 
+3 Kasap, S.O. “Principles of Electronic Materials and Devices”, McGraw-Hill Education, 2007. 
+ 
+Reference Books(s) / Web links: 
+1 S. O. Pillai, Solid state physics, New Age International, 2015. 
+2 Serway, R.A. & Jewett, J.W.  “Physics for Scientists and Engineers”.   Cengage Learning, 2010. 
+3  Hanson, G.W.  “Fundamentals of Nanoelectronics”. Pearson Education, 2009. 
+ 
+List of Equipment Available 
+ (Common to B.E. CSD and CSE &  B.Tech. AI&DS, AI & ML, IT) 
+ 
+S.No Name of the equipment Quantity
+Required 
+Quantity 
+Available Deficiency 
+1 Wavelength of Laser and Characteristics -Laser source 
+and grating plate 7 15 - 
+2 Laser - angle of divergence and NA acceptance angle 6 8 - 
+3 Determination of permeability of free space -  Helmholtz coil 
+setup 5 5 - 
+4 B-H curve Setup and CRO 6 7 - 
+5 Band gap of a semiconductor Setup 6 19 - 
+6 Hall coefficient of Semiconductor Setup 4 4 - 
+7 Determine specific resistance of the material of given wires-
+metre bridge 6 6 - 
+8 LCR circuit kit 6 7 - 
+9 Solar cell parameters setup 6 8 - 

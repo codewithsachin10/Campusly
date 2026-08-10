@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/services/notification_service.dart';
-
+import 'package:package_info_plus/package_info_plus.dart';
+import '../../../updater/data/services/version_check_service.dart';
+import '../../../updater/presentation/views/update_dialog.dart';
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
@@ -369,7 +371,7 @@ class SettingsScreen extends ConsumerWidget {
                                   ),
                             ),
                             Text(
-                              'Firebase Firestore · Region: asia-south1',
+                              'Supabase PostgreSQL · Region: ap-south-1',
                               style: AppTypography.textTheme.labelMedium
                                   ?.copyWith(
                                     color: AppColors.tertiary,
@@ -436,22 +438,78 @@ class SettingsScreen extends ConsumerWidget {
               ),
               child: Column(
                 children: [
-                  ListTile(
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 4,
-                    ),
-                    title: Text(
-                      'App Version',
-                      style: AppTypography.textTheme.bodyMedium,
-                    ),
-                    trailing: Text(
-                      '1.0.0+1 (Stitch Editorial)',
-                      style: AppTypography.textTheme.labelLarge?.copyWith(
-                        color: AppColors.primary,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  FutureBuilder<PackageInfo>(
+                    future: PackageInfo.fromPlatform(),
+                    builder: (context, snapshot) {
+                      final versionStr = snapshot.hasData 
+                          ? '${snapshot.data!.version}+${snapshot.data!.buildNumber}'
+                          : 'Loading...';
+                          
+                      return ListTile(
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 4,
+                        ),
+                        title: Text(
+                          'Check for Updates',
+                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Current version: $versionStr',
+                          style: AppTypography.textTheme.bodySmall,
+                        ),
+                        trailing: const Icon(
+                          Icons.system_update_alt_rounded,
+                          color: AppColors.primary,
+                        ),
+                        onTap: () async {
+                          // Show loading indicator
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Row(
+                                children: [
+                                  const SizedBox(
+                                    height: 16, 
+                                    width: 16, 
+                                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)
+                                  ),
+                                  const SizedBox(width: 16),
+                                  const Text('Checking for updates...'),
+                                ],
+                              ),
+                              behavior: SnackBarBehavior.floating,
+                              duration: const Duration(seconds: 2),
+                            ),
+                          );
+                          
+                          final updater = ref.read(versionCheckServiceProvider);
+                          final result = await updater.checkForUpdates();
+                          
+                          if (context.mounted) {
+                            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                            if (result.updateAvailable && result.releaseInfo != null) {
+                              showDialog(
+                                context: context,
+                                barrierDismissible: result.releaseInfo!.updateType != UpdateType.MANDATORY,
+                                builder: (context) => UpdateDialog(releaseInfo: result.releaseInfo!),
+                              );
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: const Text('You are already on the latest version!'),
+                                  behavior: SnackBarBehavior.floating,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                ),
+                              );
+                            }
+                          }
+                        },
+                      );
+                    }
                   ),
                   const Divider(height: 1, indent: 20, endIndent: 20),
                   ListTile(

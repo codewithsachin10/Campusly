@@ -1,0 +1,617 @@
+{
+  "regulation": {
+    "name": "B.E. - Mechanical Engineering CHOICE BASED CREDIT SYSTEM (CBCS)",
+    "regulation_year": 2023,
+    "batch": "2024-2028",
+    "effective_academic_year": "2023-2024"
+  },
+  "semesters": [
+    {
+      "semester_number": 1,
+      "subjects": [
+        {
+          "subject_code": "HS23111",
+          "name": "Technical Communication I",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23112",
+          "name": "Algebra and Calculus",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23111",
+          "name": "Engineering Graphics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "EC23111",
+          "name": "Basic Electronics Engineering",
+          "credits": 5,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23117",
+          "name": "தமிழர் மரபு / Heritage of Tamils 1 1 0 0 1 LAB ORIENTED THEORY",
+          "credits": 6,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "PH23131",
+          "name": "Physics of Materials 5 3 0 2 4 PRACTICAL",
+          "credits": 7,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23121",
+          "name": "Engineering Practices - Civil and Mechanical 2 0 0 2 1 NON- - MANDATORY COURSE",
+          "credits": 8,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23112",
+          "name": "Environmental Science and Engineering",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "EE23132",
+          "name": "Basic Electrical Engineering",
+          "credits": 7,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23122",
+          "name": "Engineering Practices- Electrical and Electronics 2 0 0 2 1 NON- - MANDATORY COURSE",
+          "credits": 9,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "MC23111",
+          "name": "Indian Constitution and Freedom Movement",
+          "credits": 0,
+          "course_type": "Mandatory Course",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "MC"
+        },
+        {
+          "subject_code": "IC741Inverting",
+          "name": "and non -inverting amplifier applications: summing and difference amplifier, unity gain buffer, comparator, integrator and differentiator. UNIT-III TIMING CIRCUITS AND OSCILLATORS 9 RC-timing circuits,",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "IC555",
+          "name": "and its applications as astable and mono -stable multi -vibratorsPositive feedback, Barkhausen criteria for oscillation, R-C phase shift and Wein bridge oscillator UNIT-IV DIGITAL ELECTRONICS FUNDAMENTALS 9 Boolean algebra, Basic and Universal Gates, Symbols, Truth tables, logic expressions, Logic simplification using K - map, half and full adder/subtractor, multiplexers, de -multiplexersFlipflops, shift registers, counters, Block diagram",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "3-0-0",
+          "theory_lab": "Theory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "of\n8086",
+          "name": "microprocessor and 8051 microcontroller and their applications. --- PAGE 14 --- UNIT-V MODERN WIRELESS COMMUNICATION SYSTEMS 9 The elements of communication system, Transmission media: wired and wireless, need of modulation, AM modulation scheme FM modulation scheme, Mobile communication systems: cellular concept and block diagram of GSM system",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "8086-8051-14",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 2,
+      "subjects": [
+        {
+          "subject_code": "HS23222",
+          "name": "Technical Communication II / English for Professional Competence",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "MA23212",
+          "name": "Differential Equations and Complex variables",
+          "credits": 3,
+          "course_type": "Basic Sciences",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23211",
+          "name": "Engineering Mechanics",
+          "credits": 4,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "1-0-3",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "ES"
+        },
+        {
+          "subject_code": "GE23217",
+          "name": "தமிழரும் ததொழில ் நுட்பமும் / Tamils and Technology 1 1 0 0 1 LAB ORIENTED THEORY",
+          "credits": 5,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-1",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "CY23233",
+          "name": "Engineering Chemistry",
+          "credits": 6,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "GE23233",
+          "name": "Problem solving and Python Programming 6 2 0 4 4 PRACTICAL",
+          "credits": 8,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-4-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "HS23221",
+          "name": "TECHNICAL COMMUNICATION II 0 0 2 1 Common to all branches of B.E/B. Tech programmes -Second Semester Objectives: ● To facilitate students to improve their vocabulary for a better communication ● To enable learners to understand and reproduce language ● To aid students to write technical reports in a convincing manner ● To expose students to different sentence structures ● To equip learners to present their ideas in an efficient manner UNIT-I VOCABULARY FOR BETTER COMMUNICATION 6 Listening: Telephonic Conversations and TV News Reading: Newspapers and Magazines Speaking: Conversational Practice: Speaking in a given situation, Asking permission and requesting etc.., Writing: Job Application Letter and Resume Grammar: Reference words: pronouns and determiners Vocabulary: Guessing meanings of words in different contexts. UNIT-II FUNCTIONAL LANGUAGE ASPECTS 6 Listening: Motivational listening - listening to real life challenges Reading: Articles and Technical reports Speaking: Using Polite Expressions, Indirect Questions Writing: Paraphrasing a Text, Poem Grammar: Purpose Statements, Cause and Effect Expressions Vocabulary: Neologisms. UNIT-III TECHNICAL REPORTWRITING 6 Listening: Empathetic Listening - Giving Solutions to Problems Reading: Inferential Reading Speaking: Dialogues - Interviewing Celebrities / Leaders / Sportspersons, etc.., Writing: Report Writing Grammar: Functional Usage of Expressions - used to, gone / been, etc.., Vocabulary: Words Often Confused UNIT-IV STRUCTURAL GRAMMAR 6 Listening: Comprehension (IELTS practice tests) Reading: Intensive Reading for specific information Speaking: Pick and Talk Writing: Proposals Grammar: Sentence Structures - Simple, Compound, Complex Sentences Vocabulary: Replacing dull words with vivid ones UNIT-V PRESENTATION SKILLS 6 Listening: Discriminative listening - sarcasm, irony, pun, etc.., Reading: Practice of chunking - breaking up reading materials Speaking: Mini presentation on some topic Writing: Minutes of the meeting Grammar: Correction of Errors Vocabulary: Advanced vocabulary - fixing appropriate words in the given context",
+          "credits": 6,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "6-6-6",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "HS"
+        }
+      ]
+    },
+    {
+      "semester_number": 3,
+      "subjects": [
+        {
+          "subject_code": "ME23311",
+          "name": "Engineering Thermodynamics",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "1-0-4",
+          "theory_lab": "Lab Integrated / Embedded",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23312",
+          "name": "Manufacturing Technology I",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23313",
+          "name": "Kinematics of Machinery 3 3 0 0 3 LAB ORIENTED THEORY",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "MA23331",
+          "name": "Transforms and Statistics",
+          "credits": 5,
+          "course_type": "Basic Sciences",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "BS"
+        },
+        {
+          "subject_code": "ME23331",
+          "name": "Strength of Materials 5 3 0 2 4 PRACTICAL",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23321",
+          "name": "Manufacturing Technology Laboratory I",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 4,
+      "subjects": [
+        {
+          "subject_code": "CS23422",
+          "name": "Python Programming for Machine learning",
+          "credits": 2,
+          "course_type": "Engineering Sciences",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "ES"
+        },
+        {
+          "subject_code": "ME23411",
+          "name": "Engineering Materials and Metallurgy",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23412",
+          "name": "Manufacturing Technology II 3 3 0 0 3 LAB ORIENTED THEORY",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23431",
+          "name": "Dynamics of Machines",
+          "credits": 4,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23432",
+          "name": "Fluid Mechanics and Machinery",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23433",
+          "name": "Thermal Engineering 5 3 0 2 4 PRACTICAL",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IEEC200",
+          "name": "Soft Skills - I EEC 2 0 0",
+          "credits": 7,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ME23421",
+          "name": "Machine Drawing Laboratory",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23422",
+          "name": "Manufacturing Technology Laboratory II",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        }
+      ]
+    },
+    {
+      "semester_number": 5,
+      "subjects": [
+        {
+          "subject_code": "GE23511",
+          "name": "Economics for Engineers",
+          "credits": 2,
+          "course_type": "Humanities and Social Sciences",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "HS"
+        },
+        {
+          "subject_code": "ME23511",
+          "name": "Machine Design",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElective-I",
+          "name": "/ Verticals",
+          "credits": 4,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-IOE33",
+          "name": "0 0 3 LAB ORIENTED THEORY",
+          "credits": 5,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ME23531",
+          "name": "Heat and Mass Transfer",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23532",
+          "name": "Metrology and Measurements 5 3 0 2 4 PRACTICAL",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "SoftSkills-IIEEC20",
+          "name": "Soft Skills - II EEC 2 0",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ME23521",
+          "name": "Component Modeling Laboratory",
+          "credits": 9,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "InternshipEEC20021",
+          "name": "Internship EEC 2 0 0 2 1",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 6,
+      "subjects": [
+        {
+          "subject_code": "ME23611",
+          "name": "Additive Manufacturing Technologies",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23612",
+          "name": "Design of Transmission systems",
+          "credits": 3,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23613",
+          "name": "Finite Element Analysis",
+          "credits": 5,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveII",
+          "name": "/ Verticals",
+          "credits": 6,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "OpenElective-IIOE33",
+          "name": "0 0 3 LAB ORIENTED THEORY",
+          "credits": 7,
+          "course_type": "Open Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "OE"
+        },
+        {
+          "subject_code": "ME23631",
+          "name": "Robotics and CNC Programming 4 2 0 2 3 PRACTICAL",
+          "credits": 8,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23621",
+          "name": "Problem Solving Techniques",
+          "credits": 9,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-2-1",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ME23622",
+          "name": "Simulation and Analysis Laboratory",
+          "credits": 10,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "GE23627",
+          "name": "Design Thinking and Innovation",
+          "credits": 2,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-4",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 7,
+      "subjects": [
+        {
+          "subject_code": "ME23711",
+          "name": "Process Planning and Cost Estimation",
+          "credits": 2,
+          "course_type": "Professional Core",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIII",
+          "name": "/ Verticals",
+          "credits": 4,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProfessionalElectiveIV",
+          "name": "/ Verticals 3 3 0 0 3 LAB ORIENTED THEORY",
+          "credits": 5,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ME23731",
+          "name": "Artificial Intelligence for Mechanical Engineers",
+          "credits": 6,
+          "course_type": "Professional Core",
+          "l_t_p": "0-4-3",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ME23732",
+          "name": "Mechatronics 5 3 0 2 4 PRACTICAL",
+          "credits": 7,
+          "course_type": "Professional Core",
+          "l_t_p": "0-2-4",
+          "theory_lab": "Laboratory",
+          "category": "PC"
+        },
+        {
+          "subject_code": "ProjectWorkPhaseIEEC",
+          "name": "Project Work Phase I EEC",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-4-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        },
+        {
+          "subject_code": "ME23722",
+          "name": "Comprehension",
+          "credits": 1,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-2",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    },
+    {
+      "semester_number": 8,
+      "subjects": [
+        {
+          "subject_code": "ProfessionalElectiveV",
+          "name": "/ Verticals 3 3 0 0 3 PRACTICAL",
+          "credits": 2,
+          "course_type": "Professional Elective",
+          "l_t_p": "0-0-3",
+          "theory_lab": "Laboratory",
+          "category": "PE"
+        },
+        {
+          "subject_code": "ProjectWorkPhaseIIEEC",
+          "name": "Project Work Phase II EEC",
+          "credits": 8,
+          "course_type": "Employability Enhancement Course",
+          "l_t_p": "0-0-16",
+          "theory_lab": "Laboratory",
+          "category": "EEC"
+        }
+      ]
+    }
+  ]
+}

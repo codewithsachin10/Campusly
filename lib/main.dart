@@ -1,22 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'firebase_options.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/theme_provider.dart';
+import 'core/services/push_notification_service.dart';
+
+import 'dart:ui';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  
+
+  // Global Error Handling
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details);
+    debugPrint('Global FlutterError: ${details.exception}');
+  };
+
+  PlatformDispatcher.instance.onError = (error, stack) {
+    debugPrint('Global Async Error: $error\n$stack');
+    return true; // Prevent default crash behavior
+  };
+
   try {
-    FirebaseFirestore.instance.settings = const Settings(
-      persistenceEnabled: true,
-      cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
+    await Supabase.initialize(
+      url: 'https://jvrxoyswzjuhsofqnqym.supabase.co',
+      publishableKey:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2cnhveXN3emp1aHNvZnFucXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5MjU3NDMsImV4cCI6MjEwMTUwMTc0M30.ulsZel_C1qz2BvTxgSoZNiuDBPNC-a8UP42_aAYXvqc',
     );
   } catch (e) {
-    debugPrint('Firestore offline settings note: $e');
+    debugPrint('Supabase initialization failed: $e');
+  }
+
+  try {
+    await PushNotificationService().initialize();
+  } catch (e) {
+    debugPrint('Push Notification initialization failed: $e');
   }
 
   runApp(const ProviderScope(child: CampuslyApp()));
@@ -28,12 +47,43 @@ class CampuslyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
+    final themeMode = ref.watch(themeModeProvider);
 
     return MaterialApp.router(
       title: 'Campusly',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: themeMode,
       routerConfig: router,
+      builder: (context, child) {
+        ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+          return Scaffold(
+            body: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.error_outline, color: Colors.red, size: 48),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Something went wrong.',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'We apologize for the inconvenience. Please try again.',
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        };
+        return child!;
+      },
     );
   }
 }

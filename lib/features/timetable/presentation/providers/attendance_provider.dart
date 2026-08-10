@@ -3,8 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/repositories/attendance_repository.dart';
 import '../../domain/models/attendance_model.dart';
 
-final attendanceRepositoryProvider = Provider<AttendanceRepository>((ref) {
-  return AttendanceRepository();
+final attendanceRepositoryProvider = Provider<SupabaseAttendanceRepository>((
+  ref,
+) {
+  return SupabaseAttendanceRepository();
 });
 
 class AttendanceQueryKey {
@@ -28,7 +30,8 @@ class AttendanceQueryKey {
           subjectName == other.subjectName;
 
   @override
-  int get hashCode => userId.hashCode ^ subjectCode.hashCode ^ subjectName.hashCode;
+  int get hashCode =>
+      userId.hashCode ^ subjectCode.hashCode ^ subjectName.hashCode;
 }
 
 class AttendanceNotifier extends AsyncNotifier<AttendanceModel> {
@@ -49,9 +52,12 @@ class AttendanceNotifier extends AsyncNotifier<AttendanceModel> {
     final current = state.value;
     if (current == null) return;
 
-    final dateStr = dateString ?? DateTime.now().toIso8601String().split('T')[0];
-    final existingIndex = current.history.indexWhere((h) => h.dateString == dateStr);
-    
+    final dateStr =
+        dateString ?? DateTime.now().toIso8601String().split('T')[0];
+    final existingIndex = current.history.indexWhere(
+      (h) => h.dateString == dateStr,
+    );
+
     int newPresent = current.presentCount;
     int newTotal = current.totalCount;
     List<AttendanceLog> newHistory = List.from(current.history);
@@ -100,6 +106,9 @@ class AttendanceNotifier extends AsyncNotifier<AttendanceModel> {
   }
 }
 
-final attendanceProvider = AsyncNotifierProvider.family<AttendanceNotifier, AttendanceModel, AttendanceQueryKey>(
-  (arg) => AttendanceNotifier(arg),
-);
+final attendanceProvider =
+    AsyncNotifierProvider.family<
+      AttendanceNotifier,
+      AttendanceModel,
+      AttendanceQueryKey
+    >((arg) => AttendanceNotifier(arg));

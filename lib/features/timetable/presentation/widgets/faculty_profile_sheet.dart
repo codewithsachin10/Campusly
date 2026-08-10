@@ -16,7 +16,11 @@ class FacultyProfileSheet extends StatefulWidget {
     this.fallbackName = 'Professor',
   });
 
-  static void show(BuildContext context, {required String nameOrCode, String? fallbackName}) {
+  static void show(
+    BuildContext context, {
+    required String nameOrCode,
+    String? fallbackName,
+  }) {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -33,7 +37,7 @@ class FacultyProfileSheet extends StatefulWidget {
 }
 
 class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
-  final _repository = FacultyRepository();
+  final _repository = SupabaseFacultyRepository();
   FacultyModel? _profile;
   bool _isLoading = true;
 
@@ -67,15 +71,18 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
 
   @override
   Widget build(BuildContext context) {
-    final p = _profile ?? FacultyModel(
-      id: 'fallback',
-      name: widget.fallbackName,
-      subjectCode: '',
-      subjectName: 'REC Faculty Member',
-      officeRoom: 'CSBS Department Staff Block — Academic Block C',
-      contactNumber: '+91 44 2680 1999',
-      email: '${widget.fallbackName.toLowerCase().replaceAll(' ', '.')}@rajalakshmi.edu.in',
-    );
+    final p =
+        _profile ??
+        FacultyModel(
+          id: 'fallback',
+          name: widget.fallbackName,
+          subjectCode: '',
+          subjectName: 'REC Faculty Member',
+          officeRoom: 'CSBS Department Staff Block — Academic Block C',
+          contactNumber: '+91 44 2680 1999',
+          email:
+              '${widget.fallbackName.toLowerCase().replaceAll(' ', '.')}@rajalakshmi.edu.in',
+        );
 
     return Container(
       decoration: const BoxDecoration(
@@ -126,17 +133,24 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
                   children: [
                     Text(
                       p.name,
-                      style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                      style: AppTypography.titleLarge.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
-                        p.subjectName.isNotEmpty ? p.subjectName : 'Faculty Directory',
+                        p.subjectName.isNotEmpty
+                            ? p.subjectName
+                            : 'Faculty Directory',
                         style: AppTypography.labelMedium.copyWith(
                           color: AppColors.primary,
                           fontWeight: FontWeight.w600,
@@ -151,10 +165,12 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
           const SizedBox(height: 24),
 
           if (_isLoading)
-            const Center(child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: CircularProgressIndicator(),
-            ))
+            const Center(
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: CircularProgressIndicator(),
+              ),
+            )
           else ...[
             _buildInfoCard(
               icon: LucideIcons.building2,
@@ -187,9 +203,14 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
                 backgroundColor: AppColors.primary,
                 foregroundColor: AppColors.onPrimary,
                 padding: const EdgeInsets.symmetric(vertical: 16),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
-              child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+              child: const Text(
+                'Done',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
             ),
           ),
         ],
@@ -225,15 +246,30 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: AppTypography.labelSmall.copyWith(color: AppColors.textSecondary)),
+                Text(
+                  title,
+                  style: AppTypography.labelSmall.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+                ),
                 const SizedBox(height: 4),
-                Text(value, style: AppTypography.bodyMedium.copyWith(fontWeight: FontWeight.w600, color: AppColors.textPrimary)),
+                Text(
+                  value,
+                  style: AppTypography.bodyMedium.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.textPrimary,
+                  ),
+                ),
               ],
             ),
           ),
           IconButton(
             onPressed: onTapCopy,
-            icon: const Icon(LucideIcons.copy, size: 18, color: AppColors.textSecondary),
+            icon: const Icon(
+              LucideIcons.copy,
+              size: 18,
+              color: AppColors.textSecondary,
+            ),
             tooltip: 'Copy $title',
           ),
         ],

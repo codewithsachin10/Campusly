@@ -8,6 +8,7 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../../settings/presentation/screens/settings_screen.dart';
+import '../screens/edit_profile_screen.dart';
 
 class ProfileView extends ConsumerWidget {
   const ProfileView({super.key});
@@ -111,7 +112,9 @@ class ProfileView extends ConsumerWidget {
                             children: [
                               Flexible(
                                 child: Text(
-                                  user?.name ?? 'Sachin Gopalakrishnan',
+                                  user?.name.isNotEmpty == true
+                                      ? user!.name
+                                      : 'Student Profile',
                                   style: AppTypography.textTheme.headlineSmall
                                       ?.copyWith(
                                         color: AppColors.onPrimary,
@@ -142,8 +145,7 @@ class ProfileView extends ConsumerWidget {
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
-                              user?.department ??
-                                  'Computer Science & Business Systems',
+                              user?.department ?? 'Institutional Department',
                               style: AppTypography.textTheme.labelMedium
                                   ?.copyWith(
                                     color: AppColors.onPrimary,
@@ -153,7 +155,9 @@ class ProfileView extends ConsumerWidget {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            user?.email ?? 'sachin@campusly.edu',
+                            user?.email.isNotEmpty == true
+                                ? user!.email
+                                : 'No email address',
                             style: AppTypography.textTheme.bodySmall?.copyWith(
                               color: AppColors.onPrimary.withValues(alpha: 0.8),
                             ),
@@ -253,30 +257,28 @@ class ProfileView extends ConsumerWidget {
                         IconButton(
                           onPressed: () {
                             Clipboard.setData(
-                              ClipboardData(
-                                text: currentClass.code,
+                              ClipboardData(text: currentClass.code),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: const Text(
+                                  'Class invite code copied to clipboard!',
+                                ),
+                                behavior: SnackBarBehavior.floating,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                               ),
                             );
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: const Text(
-                                'Class invite code copied to clipboard!',
-                              ),
-                              behavior: SnackBarBehavior.floating,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                            ),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.copy_rounded,
-                          size: 18,
-                          color: AppColors.primary,
+                          },
+                          icon: const Icon(
+                            Icons.copy_rounded,
+                            size: 18,
+                            color: AppColors.primary,
+                          ),
+                          visualDensity: VisualDensity.compact,
+                          tooltip: 'Copy Code',
                         ),
-                        visualDensity: VisualDensity.compact,
-                        tooltip: 'Copy Code',
-                      ),
                     ],
                   ),
                 ),
@@ -289,7 +291,9 @@ class ProfileView extends ConsumerWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
-                          color: AppColors.outlineVariant.withValues(alpha: 0.3),
+                          color: AppColors.outlineVariant.withValues(
+                            alpha: 0.3,
+                          ),
                         ),
                       ),
                       child: QrImageView(
@@ -427,6 +431,20 @@ class ProfileView extends ConsumerWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                    );
+                  },
+                ),
+                const Divider(height: 1, indent: 60, endIndent: 20),
+                _buildMenuTile(
+                  icon: Icons.person_search_rounded,
+                  iconColor: AppColors.primary,
+                  title: 'Edit Social Profile',
+                  subtitle: 'Update your skills, interests, and visibility',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const EditProfileScreen(),
+                      ),
                     );
                   },
                 ),

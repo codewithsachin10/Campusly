@@ -75,9 +75,23 @@ class AppColors {
   static const Color divider = Color(0xFFC7C4D8);
 
   // Subject & Card Accent Colors (matching reference UI)
-  static Color getSubjectAccentColor(String? subjectCode, {bool isBreak = false}) {
+  static Color getSubjectAccentColor(
+    String? subjectCode, {
+    bool isBreak = false,
+  }) {
     if (isBreak) return const Color(0xFF8D6E63);
     if (subjectCode == null) return primary;
+    
+    // If the subject code is actually a hex color code (from custom timetables)
+    if (subjectCode.startsWith('#')) {
+      try {
+        final hex = subjectCode.replaceFirst('#', '0xFF');
+        return Color(int.parse(hex));
+      } catch (_) {
+        return primary;
+      }
+    }
+    
     switch (subjectCode.toUpperCase()) {
       case 'CS23333':
         return const Color(0xFF00E5FF); // Bright Cyan / Sky Blue
