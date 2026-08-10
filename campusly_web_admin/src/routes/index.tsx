@@ -64,7 +64,7 @@ function CampuslyMark({ className }: { className?: string }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-[#76cefa]"
+        className="text-blue-600"
       />
       <path
         d="M2 17L12 22L22 17"
@@ -72,7 +72,7 @@ function CampuslyMark({ className }: { className?: string }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-white"
+        className="text-zinc-900"
       />
       <path
         d="M2 12L12 17L22 12"
@@ -80,7 +80,7 @@ function CampuslyMark({ className }: { className?: string }) {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-white/60"
+        className="text-zinc-400"
       />
     </svg>
   );
@@ -96,12 +96,6 @@ function LoginPage() {
   const [resetting, setResetting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [successState, setSuccessState] = useState(false);
-
-  useEffect(() => {
-    // Force dark mode on this specific page for the cinematic effect
-    document.documentElement.classList.add("dark");
-    return () => document.documentElement.classList.remove("dark");
-  }, []);
 
   useEffect(() => {
     if (!loading && admin) navigate({ to: "/dashboard", replace: true });
@@ -151,12 +145,12 @@ function LoginPage() {
   };
 
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black px-4 py-12 sm:px-6 lg:px-8">
+    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white px-4 py-12 sm:px-6 lg:px-8">
       
       <WarpStarField />
 
-      {/* Subtle central radial gradient to ensure form readability over the brightest stars */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.6)_100%)]" />
+      {/* Subtle central radial gradient to ensure form readability over the stars */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.6)_100%)]" />
 
       <div className="relative z-10 w-full max-w-md flex flex-col items-center">
         
@@ -167,12 +161,12 @@ function LoginPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 flex flex-col items-center text-center"
         >
-          <div className="mb-4 flex size-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl">
+          <div className="mb-4 flex size-14 items-center justify-center rounded-2xl bg-white/50 border border-zinc-200 backdrop-blur-md shadow-sm">
             <CampuslyMark className="size-8" />
           </div>
-          <h1 className="text-2xl font-bold tracking-widest text-white uppercase mb-2">Campusly</h1>
-          <h2 className="text-xl font-medium tracking-tight text-white mb-1">Your campus, connected.</h2>
-          <p className="text-sm text-zinc-400 max-w-[280px]">
+          <h1 className="text-2xl font-bold tracking-widest text-zinc-900 uppercase mb-2">Campusly</h1>
+          <h2 className="text-xl font-medium tracking-tight text-zinc-800 mb-1">Your campus, connected.</h2>
+          <p className="text-sm text-zinc-500 max-w-[280px]">
             Manage your campus from one powerful admin console.
           </p>
         </motion.div>
@@ -186,18 +180,18 @@ function LoginPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="w-full rounded-[24px] border border-white/10 p-8 shadow-2xl backdrop-blur-xl"
-              style={{ backgroundColor: "rgba(10, 10, 15, 0.78)" }}
+              className="w-full rounded-[24px] border border-zinc-200/50 p-8 shadow-2xl backdrop-blur-xl"
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
             >
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-semibold tracking-tight text-white">Welcome back</h3>
-                <p className="mt-1.5 text-sm text-zinc-400">Sign in to your Campusly Admin Console</p>
+                <h3 className="text-2xl font-semibold tracking-tight text-zinc-900">Welcome back</h3>
+                <p className="mt-1.5 text-sm text-zinc-500">Sign in to your Campusly Admin Console</p>
               </div>
 
               <Button
                 type="button"
                 variant="outline"
-                className="h-12 w-full rounded-xl border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors"
+                className="h-12 w-full rounded-xl border-zinc-200 bg-white/50 text-zinc-900 hover:bg-zinc-100/80 transition-colors"
                 disabled={googleLoading || form.formState.isSubmitting}
                 onClick={handleGoogleSignIn}
               >
@@ -206,11 +200,11 @@ function LoginPage() {
               </Button>
 
               <div className="my-6 flex items-center gap-4">
-                <span className="h-px flex-1 bg-white/10" />
-                <span className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                <span className="h-px flex-1 bg-zinc-200" />
+                <span className="text-xs font-medium uppercase tracking-wider text-zinc-400">
                   Or continue with email
                 </span>
-                <span className="h-px flex-1 bg-white/10" />
+                <span className="h-px flex-1 bg-zinc-200" />
               </div>
 
               <Form {...form}>
@@ -220,18 +214,18 @@ function LoginPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-zinc-300">Work email</FormLabel>
+                        <FormLabel className="text-zinc-700">Work email</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
                             autoComplete="email"
                             placeholder="you@college.edu.in"
-                            className="h-12 rounded-xl border-white/10 bg-white/5 text-white placeholder:text-zinc-600 focus-visible:ring-[#76cefa]/50"
+                            className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50"
                             disabled={form.formState.isSubmitting}
                             {...field}
                           />
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-500" />
                       </FormItem>
                     )}
                   />
@@ -240,28 +234,28 @@ function LoginPage() {
                     name="password"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-zinc-300">Password</FormLabel>
+                        <FormLabel className="text-zinc-700">Password</FormLabel>
                         <FormControl>
                           <div className="relative">
                             <Input
                               type={showPassword ? "text" : "password"}
                               autoComplete="current-password"
                               placeholder="•••••••••••••••••"
-                              className="h-12 rounded-xl border-white/10 bg-white/5 text-white placeholder:text-zinc-600 focus-visible:ring-[#76cefa]/50 pr-10"
+                              className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50 pr-10"
                               disabled={form.formState.isSubmitting}
                               {...field}
                             />
                             <button
                               type="button"
                               onClick={() => setShowPassword(!showPassword)}
-                              className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white transition-colors"
+                              className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
                               tabIndex={-1}
                             >
                               {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
                             </button>
                           </div>
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-500" />
                       </FormItem>
                     )}
                   />
@@ -277,10 +271,10 @@ function LoginPage() {
                               checked={field.value} 
                               onCheckedChange={field.onChange} 
                               disabled={form.formState.isSubmitting} 
-                              className="border-white/20 data-[state=checked]:bg-[#76cefa] data-[state=checked]:text-black"
+                              className="border-zinc-300 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white"
                             />
                           </FormControl>
-                          <FormLabel className="text-sm font-normal text-zinc-400 cursor-pointer hover:text-zinc-300">
+                          <FormLabel className="text-sm font-normal text-zinc-500 cursor-pointer hover:text-zinc-700">
                             Keep me signed in
                           </FormLabel>
                         </FormItem>
@@ -288,7 +282,7 @@ function LoginPage() {
                     />
                     <button
                       type="button"
-                      className="text-sm font-medium text-[#76cefa] hover:text-white transition-colors hover:underline"
+                      className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors hover:underline"
                       onClick={() => setForgotOpen(true)}
                     >
                       Forgot password?
@@ -299,19 +293,19 @@ function LoginPage() {
                     <motion.div
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-500/10 p-4 text-sm text-red-200"
+                      className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-50 p-4 text-sm text-red-600"
                     >
-                      <TriangleAlert className="mt-0.5 size-4 shrink-0 text-red-400" />
+                      <TriangleAlert className="mt-0.5 size-4 shrink-0 text-red-500" />
                       <div className="flex flex-col gap-1">
-                        <span className="font-semibold text-red-100">Access Denied</span>
-                        <span className="text-red-200/90">{error}</span>
+                        <span className="font-semibold text-red-700">Access Denied</span>
+                        <span className="text-red-600/90">{error}</span>
                       </div>
                     </motion.div>
                   )}
 
                   <Button
                     type="submit"
-                    className="h-12 w-full rounded-xl bg-white text-black hover:bg-zinc-200 text-base font-medium transition-all"
+                    className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800 text-base font-medium transition-all"
                     disabled={form.formState.isSubmitting || googleLoading}
                   >
                     {form.formState.isSubmitting ? (
@@ -327,7 +321,7 @@ function LoginPage() {
               </Form>
 
               <div className="mt-6 flex flex-col items-center justify-center gap-1.5 text-center text-xs text-zinc-500">
-                <div className="flex items-center gap-1.5 font-medium text-zinc-400">
+                <div className="flex items-center gap-1.5 font-medium text-zinc-600">
                   <Lock className="size-3.5" />
                   Protected admin environment
                 </div>
@@ -339,15 +333,15 @@ function LoginPage() {
               key="success-state"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center justify-center text-center w-full rounded-[24px] border border-white/10 p-12 shadow-2xl backdrop-blur-xl"
-              style={{ backgroundColor: "rgba(10, 10, 15, 0.78)" }}
+              className="flex flex-col items-center justify-center text-center w-full rounded-[24px] border border-zinc-200/50 p-12 shadow-2xl backdrop-blur-xl"
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
             >
-              <div className="flex size-16 items-center justify-center rounded-full bg-green-500/20 text-green-400 mb-6 border border-green-500/20">
+              <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100">
                 <CheckCircle2 className="size-8" />
               </div>
-              <h2 className="text-2xl font-semibold tracking-tight text-white">Authentication successful</h2>
-              <p className="mt-3 text-sm text-zinc-400 flex items-center gap-2 justify-center">
-                <Loader2 className="size-3.5 animate-spin text-[#76cefa]" /> Loading your campus...
+              <h2 className="text-2xl font-semibold tracking-tight text-zinc-900">Authentication successful</h2>
+              <p className="mt-3 text-sm text-zinc-500 flex items-center gap-2 justify-center">
+                <Loader2 className="size-3.5 animate-spin text-blue-600" /> Loading your campus...
               </p>
             </motion.div>
           )}
@@ -355,10 +349,10 @@ function LoginPage() {
       </div>
 
       <Dialog open={forgotOpen} onOpenChange={setForgotOpen}>
-        <DialogContent className="rounded-2xl sm:max-w-md bg-zinc-950 border-white/10 text-white">
+        <DialogContent className="rounded-2xl sm:max-w-md bg-white border-zinc-200 text-zinc-900">
           <DialogHeader>
             <DialogTitle>Reset your password</DialogTitle>
-            <DialogDescription className="text-zinc-400">
+            <DialogDescription className="text-zinc-500">
               We'll email you a secure link to set a new password.
             </DialogDescription>
           </DialogHeader>
@@ -368,10 +362,10 @@ function LoginPage() {
               value={resetEmail}
               onChange={(e) => setResetEmail(e.target.value)}
               placeholder="you@college.edu.in"
-              className="h-12 rounded-xl border-white/10 bg-white/5 text-white"
+              className="h-12 rounded-xl border-zinc-200 bg-white text-zinc-900"
             />
             <Button
-              className="h-12 w-full rounded-xl bg-white text-black hover:bg-zinc-200"
+              className="h-12 w-full rounded-xl bg-zinc-900 text-white hover:bg-zinc-800"
               disabled={resetting || !resetEmail}
               onClick={async () => {
                 setResetting(true);

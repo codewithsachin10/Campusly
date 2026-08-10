@@ -40,7 +40,7 @@ export function WarpStarField() {
 
     // Colors: mostly white/gray, 10% Campusly Blue (#76cefa or #3b82f6)
     const getStarColor = () => {
-      return Math.random() > 0.9 ? "118, 206, 250" : "255, 255, 255";
+      return Math.random() > 0.9 ? "59, 130, 246" : "0, 0, 0"; // Campusly Blue or Black
     };
 
     for (let i = 0; i < STARS_COUNT; i++) {
@@ -60,7 +60,7 @@ export function WarpStarField() {
     });
 
     const render = () => {
-      ctx.fillStyle = "#000000";
+      ctx.fillStyle = "#ffffff";
       ctx.fillRect(0, 0, width, height);
 
       const cx = width / 2;
