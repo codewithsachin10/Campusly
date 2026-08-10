@@ -180,7 +180,7 @@ function LoginPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-              className="w-full rounded-[24px] border border-zinc-200/50 p-8 shadow-2xl backdrop-blur-xl"
+              className="w-full rounded-[24px] border-2 border-zinc-900 shadow-[0_0_24px_rgba(0,0,0,0.15)] p-8 backdrop-blur-xl"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
             >
               <div className="mb-6 text-center">
@@ -333,7 +333,7 @@ function LoginPage() {
               key="success-state"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center justify-center text-center w-full rounded-[24px] border border-zinc-200/50 p-12 shadow-2xl backdrop-blur-xl"
+              className="flex flex-col items-center justify-center text-center w-full rounded-[24px] border-2 border-zinc-900 shadow-[0_0_24px_rgba(0,0,0,0.15)] p-12 backdrop-blur-xl"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.78)" }}
             >
               <div className="flex size-16 items-center justify-center rounded-full bg-green-50 text-green-600 mb-6 border border-green-100">
