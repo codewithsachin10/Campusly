@@ -128,8 +128,6 @@ function LoginPage() {
   const [warpSpeed, setWarpSpeed] = useState(1);
   const [loginBorderCount, setLoginBorderCount] = useState(2);
   const [loginBorderColor, setLoginBorderColor] = useState("#18181b");
-  const [inputBorderCount, setInputBorderCount] = useState(2);
-  const [inputBorderColor, setInputBorderColor] = useState("#18181b");
 
   useEffect(() => {
     if (!loading && admin) navigate({ to: "/dashboard", replace: true });
@@ -262,27 +260,14 @@ function LoginPage() {
                         <FormItem>
                           <FormLabel className="text-zinc-700">Work email</FormLabel>
                           <FormControl>
-                            <div className="relative w-full overflow-hidden rounded-xl p-[2px] shadow-sm">
-                              <div className="absolute inset-0 bg-zinc-200/50" />
-                              <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                                className="absolute inset-[-100%] z-0"
-                                style={{
-                                  background: buildConicGradient(inputBorderCount, inputBorderColor),
-                                }}
-                              />
-                              <div className="relative z-10 h-full w-full rounded-[10px] bg-white">
-                                <Input
-                                  type="email"
-                                  autoComplete="email"
-                                  placeholder="you@college.edu.in"
-                                  className="h-12 border-none bg-transparent text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-0 shadow-none px-4"
-                                  disabled={form.formState.isSubmitting}
-                                  {...field}
-                                />
-                              </div>
-                            </div>
+                            <Input
+                              type="email"
+                              autoComplete="email"
+                              placeholder="you@college.edu.in"
+                              className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50"
+                              disabled={form.formState.isSubmitting}
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage className="text-red-500" />
                         </FormItem>
@@ -295,34 +280,23 @@ function LoginPage() {
                         <FormItem>
                           <FormLabel className="text-zinc-700">Password</FormLabel>
                           <FormControl>
-                            <div className="relative w-full overflow-hidden rounded-xl p-[2px] shadow-sm">
-                              <div className="absolute inset-0 bg-zinc-200/50" />
-                              <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
-                                className="absolute inset-[-100%] z-0"
-                                style={{
-                                  background: buildConicGradient(inputBorderCount, inputBorderColor),
-                                }}
+                            <div className="relative">
+                              <Input
+                                type={showPassword ? "text" : "password"}
+                                autoComplete="current-password"
+                                placeholder="•••••••••••••••••"
+                                className="h-12 rounded-xl border-zinc-200 bg-white/50 text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-blue-500/50 pr-10"
+                                disabled={form.formState.isSubmitting}
+                                {...field}
                               />
-                              <div className="relative z-10 h-full w-full rounded-[10px] bg-white flex items-center pr-3">
-                                <Input
-                                  type={showPassword ? "text" : "password"}
-                                  autoComplete="current-password"
-                                  placeholder="•••••••••••••••••"
-                                  className="h-12 border-none bg-transparent text-zinc-900 placeholder:text-zinc-400 focus-visible:ring-0 shadow-none px-4 flex-1"
-                                  disabled={form.formState.isSubmitting}
-                                  {...field}
-                                />
-                                <button
-                                  type="button"
-                                  onClick={() => setShowPassword(!showPassword)}
-                                  className="text-zinc-400 hover:text-zinc-600 transition-colors z-20 shrink-0 ml-1"
-                                  tabIndex={-1}
-                                >
-                                  {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
-                                </button>
-                              </div>
+                              <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 transition-colors"
+                                tabIndex={-1}
+                              >
+                                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                              </button>
                             </div>
                           </FormControl>
                           <FormMessage className="text-red-500" />
@@ -535,37 +509,6 @@ function LoginPage() {
                         key={c.name}
                         onClick={() => setLoginBorderColor(c.value)}
                         className={`size-6 rounded-full border-2 transition-all ${loginBorderColor === c.value ? "border-zinc-900 scale-110" : "border-transparent hover:scale-105"}`}
-                        style={{ backgroundColor: c.value }}
-                        title={c.name}
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="h-px bg-zinc-100" />
-
-                <div className="space-y-3">
-                  <h5 className="text-sm font-semibold text-zinc-800">Input Fields Border</h5>
-                  <div className="flex justify-between items-center">
-                    <label className="text-xs text-zinc-600">Beams Count</label>
-                    <span className="text-xs font-semibold text-zinc-500">{inputBorderCount}</span>
-                  </div>
-                  <Slider 
-                    value={[inputBorderCount]} 
-                    onValueChange={([val]) => setInputBorderCount(val)} 
-                    max={10} 
-                    min={0} 
-                    step={1} 
-                  />
-                  <div className="flex justify-between items-center pt-1">
-                    <label className="text-xs text-zinc-600">Shine Color</label>
-                  </div>
-                  <div className="flex gap-2 flex-wrap">
-                    {SHINE_COLORS.map(c => (
-                      <button
-                        key={c.name}
-                        onClick={() => setInputBorderColor(c.value)}
-                        className={`size-6 rounded-full border-2 transition-all ${inputBorderColor === c.value ? "border-zinc-900 scale-110" : "border-transparent hover:scale-105"}`}
                         style={{ backgroundColor: c.value }}
                         title={c.name}
                       />
