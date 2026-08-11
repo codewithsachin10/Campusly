@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/_app'
+import { Route as VerifyOtpRouteImport } from './routes/verify-otp'
 import { Route as AppModuleRouteImport } from './routes/_app.$module'
+import { Route as AppAdminsRouteImport } from './routes/_app.admins'
 import { Route as AppAssignmentsRouteImport } from './routes/_app.assignments'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
 import { Route as AppDepartmentsRouteImport } from './routes/_app.departments'
@@ -22,6 +24,13 @@ import { Route as AppSessionsRouteImport } from './routes/_app.sessions'
 import { Route as AppSettingsRouteImport } from './routes/_app.settings'
 import { Route as AppStudentsRouteImport } from './routes/_app.students'
 import { Route as AppTimetableRouteImport } from './routes/_app.timetable'
+import { Route as InviteResponseRouteImport } from './routes/invite.response'
+import { Route as AppAdminsIndexRouteImport } from './routes/_app.admins.index'
+import { Route as AppAdminsAdminIdRouteImport } from './routes/_app.admins.$adminId'
+import { Route as AppAdminsAuditRouteImport } from './routes/_app.admins.audit'
+import { Route as AppAdminsListRouteImport } from './routes/_app.admins.list'
+import { Route as AppAdminsRolesRouteImport } from './routes/_app.admins.roles'
+import { Route as AppAdminsSecurityRouteImport } from './routes/_app.admins.security'
 import { Route as AppCurriculumIndexRouteImport } from './routes/_app.curriculum.index'
 import { Route as AppCurriculumRegulationIdRouteImport } from './routes/_app.curriculum.$regulationId'
 import { Route as AppCurriculumBatchImportRouteImport } from './routes/_app.curriculum.batch-import'
@@ -42,9 +51,19 @@ const AppRoute = AppRouteImport.update({
   id: '/_app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerifyOtpRoute = VerifyOtpRouteImport.update({
+  id: '/verify-otp',
+  path: '/verify-otp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AppModuleRoute = AppModuleRouteImport.update({
   id: '/$module',
   path: '/$module',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAdminsRoute = AppAdminsRouteImport.update({
+  id: '/admins',
+  path: '/admins',
   getParentRoute: () => AppRoute,
 } as any)
 const AppAssignmentsRoute = AppAssignmentsRouteImport.update({
@@ -96,6 +115,41 @@ const AppTimetableRoute = AppTimetableRouteImport.update({
   id: '/timetable',
   path: '/timetable',
   getParentRoute: () => AppRoute,
+} as any)
+const InviteResponseRoute = InviteResponseRouteImport.update({
+  id: '/invite/response',
+  path: '/invite/response',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAdminsIndexRoute = AppAdminsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppAdminsRoute,
+} as any)
+const AppAdminsAdminIdRoute = AppAdminsAdminIdRouteImport.update({
+  id: '/$adminId',
+  path: '/$adminId',
+  getParentRoute: () => AppAdminsRoute,
+} as any)
+const AppAdminsAuditRoute = AppAdminsAuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => AppAdminsRoute,
+} as any)
+const AppAdminsListRoute = AppAdminsListRouteImport.update({
+  id: '/list',
+  path: '/list',
+  getParentRoute: () => AppAdminsRoute,
+} as any)
+const AppAdminsRolesRoute = AppAdminsRolesRouteImport.update({
+  id: '/roles',
+  path: '/roles',
+  getParentRoute: () => AppAdminsRoute,
+} as any)
+const AppAdminsSecurityRoute = AppAdminsSecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => AppAdminsRoute,
 } as any)
 const AppCurriculumIndexRoute = AppCurriculumIndexRouteImport.update({
   id: '/curriculum/',
@@ -152,7 +206,9 @@ const AppUpdatesReleasesRoute = AppUpdatesReleasesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/verify-otp': typeof VerifyOtpRoute
   '/$module': typeof AppModuleRoute
+  '/admins': typeof AppAdminsRouteWithChildren
   '/assignments': typeof AppAssignmentsRoute
   '/dashboard': typeof AppDashboardRoute
   '/departments': typeof AppDepartmentsRoute
@@ -163,6 +219,12 @@ export interface FileRoutesByFullPath {
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
   '/timetable': typeof AppTimetableRoute
+  '/invite/response': typeof InviteResponseRoute
+  '/admins/$adminId': typeof AppAdminsAdminIdRoute
+  '/admins/audit': typeof AppAdminsAuditRoute
+  '/admins/list': typeof AppAdminsListRoute
+  '/admins/roles': typeof AppAdminsRolesRoute
+  '/admins/security': typeof AppAdminsSecurityRoute
   '/curriculum/$regulationId': typeof AppCurriculumRegulationIdRoute
   '/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/curriculum/import': typeof AppCurriculumImportRoute
@@ -170,12 +232,14 @@ export interface FileRoutesByFullPath {
   '/support/$ticketId': typeof AppSupportTicketIdRoute
   '/updates/create': typeof AppUpdatesCreateRoute
   '/updates/releases': typeof AppUpdatesReleasesRoute
+  '/admins/': typeof AppAdminsIndexRoute
   '/curriculum/': typeof AppCurriculumIndexRoute
   '/support/': typeof AppSupportIndexRoute
   '/updates/': typeof AppUpdatesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/verify-otp': typeof VerifyOtpRoute
   '/$module': typeof AppModuleRoute
   '/assignments': typeof AppAssignmentsRoute
   '/dashboard': typeof AppDashboardRoute
@@ -187,6 +251,12 @@ export interface FileRoutesByTo {
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
   '/timetable': typeof AppTimetableRoute
+  '/invite/response': typeof InviteResponseRoute
+  '/admins/$adminId': typeof AppAdminsAdminIdRoute
+  '/admins/audit': typeof AppAdminsAuditRoute
+  '/admins/list': typeof AppAdminsListRoute
+  '/admins/roles': typeof AppAdminsRolesRoute
+  '/admins/security': typeof AppAdminsSecurityRoute
   '/curriculum/$regulationId': typeof AppCurriculumRegulationIdRoute
   '/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/curriculum/import': typeof AppCurriculumImportRoute
@@ -194,6 +264,7 @@ export interface FileRoutesByTo {
   '/support/$ticketId': typeof AppSupportTicketIdRoute
   '/updates/create': typeof AppUpdatesCreateRoute
   '/updates/releases': typeof AppUpdatesReleasesRoute
+  '/admins': typeof AppAdminsIndexRoute
   '/curriculum': typeof AppCurriculumIndexRoute
   '/support': typeof AppSupportIndexRoute
   '/updates': typeof AppUpdatesIndexRoute
@@ -202,7 +273,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_app': typeof AppRouteWithChildren
+  '/verify-otp': typeof VerifyOtpRoute
   '/_app/$module': typeof AppModuleRoute
+  '/_app/admins': typeof AppAdminsRouteWithChildren
   '/_app/assignments': typeof AppAssignmentsRoute
   '/_app/dashboard': typeof AppDashboardRoute
   '/_app/departments': typeof AppDepartmentsRoute
@@ -213,6 +286,12 @@ export interface FileRoutesById {
   '/_app/settings': typeof AppSettingsRoute
   '/_app/students': typeof AppStudentsRoute
   '/_app/timetable': typeof AppTimetableRoute
+  '/invite/response': typeof InviteResponseRoute
+  '/_app/admins/$adminId': typeof AppAdminsAdminIdRoute
+  '/_app/admins/audit': typeof AppAdminsAuditRoute
+  '/_app/admins/list': typeof AppAdminsListRoute
+  '/_app/admins/roles': typeof AppAdminsRolesRoute
+  '/_app/admins/security': typeof AppAdminsSecurityRoute
   '/_app/curriculum/$regulationId': typeof AppCurriculumRegulationIdRoute
   '/_app/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/_app/curriculum/import': typeof AppCurriculumImportRoute
@@ -220,6 +299,7 @@ export interface FileRoutesById {
   '/_app/support/$ticketId': typeof AppSupportTicketIdRoute
   '/_app/updates/create': typeof AppUpdatesCreateRoute
   '/_app/updates/releases': typeof AppUpdatesReleasesRoute
+  '/_app/admins/': typeof AppAdminsIndexRoute
   '/_app/curriculum/': typeof AppCurriculumIndexRoute
   '/_app/support/': typeof AppSupportIndexRoute
   '/_app/updates/': typeof AppUpdatesIndexRoute
@@ -228,7 +308,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/verify-otp'
     | '/$module'
+    | '/admins'
     | '/assignments'
     | '/dashboard'
     | '/departments'
@@ -239,6 +321,12 @@ export interface FileRouteTypes {
     | '/settings'
     | '/students'
     | '/timetable'
+    | '/invite/response'
+    | '/admins/$adminId'
+    | '/admins/audit'
+    | '/admins/list'
+    | '/admins/roles'
+    | '/admins/security'
     | '/curriculum/$regulationId'
     | '/curriculum/batch-import'
     | '/curriculum/import'
@@ -246,12 +334,14 @@ export interface FileRouteTypes {
     | '/support/$ticketId'
     | '/updates/create'
     | '/updates/releases'
+    | '/admins/'
     | '/curriculum/'
     | '/support/'
     | '/updates/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/verify-otp'
     | '/$module'
     | '/assignments'
     | '/dashboard'
@@ -263,6 +353,12 @@ export interface FileRouteTypes {
     | '/settings'
     | '/students'
     | '/timetable'
+    | '/invite/response'
+    | '/admins/$adminId'
+    | '/admins/audit'
+    | '/admins/list'
+    | '/admins/roles'
+    | '/admins/security'
     | '/curriculum/$regulationId'
     | '/curriculum/batch-import'
     | '/curriculum/import'
@@ -270,6 +366,7 @@ export interface FileRouteTypes {
     | '/support/$ticketId'
     | '/updates/create'
     | '/updates/releases'
+    | '/admins'
     | '/curriculum'
     | '/support'
     | '/updates'
@@ -277,7 +374,9 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_app'
+    | '/verify-otp'
     | '/_app/$module'
+    | '/_app/admins'
     | '/_app/assignments'
     | '/_app/dashboard'
     | '/_app/departments'
@@ -288,6 +387,12 @@ export interface FileRouteTypes {
     | '/_app/settings'
     | '/_app/students'
     | '/_app/timetable'
+    | '/invite/response'
+    | '/_app/admins/$adminId'
+    | '/_app/admins/audit'
+    | '/_app/admins/list'
+    | '/_app/admins/roles'
+    | '/_app/admins/security'
     | '/_app/curriculum/$regulationId'
     | '/_app/curriculum/batch-import'
     | '/_app/curriculum/import'
@@ -295,6 +400,7 @@ export interface FileRouteTypes {
     | '/_app/support/$ticketId'
     | '/_app/updates/create'
     | '/_app/updates/releases'
+    | '/_app/admins/'
     | '/_app/curriculum/'
     | '/_app/support/'
     | '/_app/updates/'
@@ -303,6 +409,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
+  VerifyOtpRoute: typeof VerifyOtpRoute
+  InviteResponseRoute: typeof InviteResponseRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -321,11 +429,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verify-otp': {
+      id: '/verify-otp'
+      path: '/verify-otp'
+      fullPath: '/verify-otp'
+      preLoaderRoute: typeof VerifyOtpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_app/$module': {
       id: '/_app/$module'
       path: '/$module'
       fullPath: '/$module'
       preLoaderRoute: typeof AppModuleRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/admins': {
+      id: '/_app/admins'
+      path: '/admins'
+      fullPath: '/admins'
+      preLoaderRoute: typeof AppAdminsRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/assignments': {
@@ -397,6 +519,55 @@ declare module '@tanstack/react-router' {
       fullPath: '/timetable'
       preLoaderRoute: typeof AppTimetableRouteImport
       parentRoute: typeof AppRoute
+    }
+    '/invite/response': {
+      id: '/invite/response'
+      path: '/invite/response'
+      fullPath: '/invite/response'
+      preLoaderRoute: typeof InviteResponseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/admins/': {
+      id: '/_app/admins/'
+      path: '/'
+      fullPath: '/admins/'
+      preLoaderRoute: typeof AppAdminsIndexRouteImport
+      parentRoute: typeof AppAdminsRoute
+    }
+    '/_app/admins/$adminId': {
+      id: '/_app/admins/$adminId'
+      path: '/$adminId'
+      fullPath: '/admins/$adminId'
+      preLoaderRoute: typeof AppAdminsAdminIdRouteImport
+      parentRoute: typeof AppAdminsRoute
+    }
+    '/_app/admins/audit': {
+      id: '/_app/admins/audit'
+      path: '/audit'
+      fullPath: '/admins/audit'
+      preLoaderRoute: typeof AppAdminsAuditRouteImport
+      parentRoute: typeof AppAdminsRoute
+    }
+    '/_app/admins/list': {
+      id: '/_app/admins/list'
+      path: '/list'
+      fullPath: '/admins/list'
+      preLoaderRoute: typeof AppAdminsListRouteImport
+      parentRoute: typeof AppAdminsRoute
+    }
+    '/_app/admins/roles': {
+      id: '/_app/admins/roles'
+      path: '/roles'
+      fullPath: '/admins/roles'
+      preLoaderRoute: typeof AppAdminsRolesRouteImport
+      parentRoute: typeof AppAdminsRoute
+    }
+    '/_app/admins/security': {
+      id: '/_app/admins/security'
+      path: '/security'
+      fullPath: '/admins/security'
+      preLoaderRoute: typeof AppAdminsSecurityRouteImport
+      parentRoute: typeof AppAdminsRoute
     }
     '/_app/curriculum/': {
       id: '/_app/curriculum/'
@@ -471,8 +642,31 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AppAdminsRouteChildren {
+  AppAdminsAdminIdRoute: typeof AppAdminsAdminIdRoute
+  AppAdminsAuditRoute: typeof AppAdminsAuditRoute
+  AppAdminsListRoute: typeof AppAdminsListRoute
+  AppAdminsRolesRoute: typeof AppAdminsRolesRoute
+  AppAdminsSecurityRoute: typeof AppAdminsSecurityRoute
+  AppAdminsIndexRoute: typeof AppAdminsIndexRoute
+}
+
+const AppAdminsRouteChildren: AppAdminsRouteChildren = {
+  AppAdminsAdminIdRoute: AppAdminsAdminIdRoute,
+  AppAdminsAuditRoute: AppAdminsAuditRoute,
+  AppAdminsListRoute: AppAdminsListRoute,
+  AppAdminsRolesRoute: AppAdminsRolesRoute,
+  AppAdminsSecurityRoute: AppAdminsSecurityRoute,
+  AppAdminsIndexRoute: AppAdminsIndexRoute,
+}
+
+const AppAdminsRouteWithChildren = AppAdminsRoute._addFileChildren(
+  AppAdminsRouteChildren,
+)
+
 interface AppRouteChildren {
   AppModuleRoute: typeof AppModuleRoute
+  AppAdminsRoute: typeof AppAdminsRouteWithChildren
   AppAssignmentsRoute: typeof AppAssignmentsRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppDepartmentsRoute: typeof AppDepartmentsRoute
@@ -497,6 +691,7 @@ interface AppRouteChildren {
 
 const AppRouteChildren: AppRouteChildren = {
   AppModuleRoute: AppModuleRoute,
+  AppAdminsRoute: AppAdminsRouteWithChildren,
   AppAssignmentsRoute: AppAssignmentsRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppDepartmentsRoute: AppDepartmentsRoute,
@@ -524,6 +719,8 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
+  VerifyOtpRoute: VerifyOtpRoute,
+  InviteResponseRoute: InviteResponseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

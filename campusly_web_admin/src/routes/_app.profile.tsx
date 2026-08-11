@@ -88,9 +88,9 @@ function ProfilePage() {
     onError: () => toast.error("Could not save the college details."),
   });
 
-  const initials = (admin?.name ?? "A")
+  const initials = ((admin as any)?.full_name ?? "A")
     .split(" ")
-    .map((p) => p[0])
+    .map((p: string) => p[0])
     .slice(0, 2)
     .join("");
 
@@ -111,7 +111,7 @@ function ProfilePage() {
               </AvatarFallback>
             </Avatar>
             <div className="min-w-0">
-              <p className="truncate font-medium">{admin?.name}</p>
+              <p className="truncate font-medium">{(admin as any)?.full_name}</p>
               <p className="truncate text-sm text-muted-foreground">{admin?.email}</p>
             </div>
           </div>
@@ -120,17 +120,17 @@ function ProfilePage() {
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted-foreground">Role</span>
               <Badge variant="secondary" className="rounded-md">
-                {roleLabels[admin?.role ?? ""] ?? admin?.role}
+                {(admin as any)?.roles?.name || "Admin"}
               </Badge>
             </div>
             <div className="flex items-center justify-between gap-3">
-              <span className="text-muted-foreground">College ID</span>
-              <span className="font-medium">{admin?.collegeId}</span>
+              <span className="text-muted-foreground">Department</span>
+              <span className="font-medium">{(admin as any)?.department || "N/A"}</span>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted-foreground">Member since</span>
               <span className="font-medium">
-                {admin ? new Date(admin.createdAt).toLocaleDateString() : "—"}
+                {admin ? new Date((admin as any).created_at).toLocaleDateString() : "—"}
               </span>
             </div>
           </div>
@@ -140,7 +140,7 @@ function ProfilePage() {
               <ShieldCheck className="size-4 text-primary" /> Permissions
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {admin?.permissions.map((p) => (
+              {((admin as any)?.permissions || ["Full Access"]).map((p: string) => (
                 <Badge key={p} variant="outline" className="rounded-md capitalize">
                   {p}
                 </Badge>

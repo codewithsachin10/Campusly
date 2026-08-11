@@ -52,8 +52,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (user && user.email) {
         try {
           const { data: adminData, error } = await supabase
-            .from("admins")
-            .select("*")
+            .from("admin_profiles")
+            .select("*, roles(name)")
             .eq("email", user.email.toLowerCase())
             .single();
 
@@ -86,8 +86,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const establish = useCallback(async (user: User) => {
     const email = user.email?.toLowerCase() || "";
     const { data: adminData, error } = await supabase
-      .from("admins")
-      .select("*")
+      .from("admin_profiles")
+      .select("*, roles(name)")
       .eq("email", email)
       .single();
 

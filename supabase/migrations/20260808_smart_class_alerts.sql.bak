@@ -66,24 +66,19 @@ ALTER TABLE public.notification_events ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.notification_preferences ENABLE ROW LEVEL SECURITY;
 
 -- RLS Policies for user_devices
-DROP POLICY IF EXISTS "Users can manage their own devices" ON public.user_devices;
 CREATE POLICY "Users can manage their own devices" ON public.user_devices
     FOR ALL USING (auth.uid() = user_id);
 
 -- RLS Policies for notification_events
-DROP POLICY IF EXISTS "Users can view and update their own notifications" ON public.notification_events;
 CREATE POLICY "Users can view and update their own notifications" ON public.notification_events
     FOR SELECT USING (auth.uid() = user_id);
-DROP POLICY IF EXISTS "Users can update their own notifications" ON public.notification_events;
 CREATE POLICY "Users can update their own notifications" ON public.notification_events
     FOR UPDATE USING (auth.uid() = user_id);
 
 -- RLS Policies for notification_preferences
-DROP POLICY IF EXISTS "Users can manage their own preferences" ON public.notification_preferences;
 CREATE POLICY "Users can manage their own preferences" ON public.notification_preferences
     FOR ALL USING (auth.uid() = user_id);
 
 -- RLS Policies for timetable_change_events
-DROP POLICY IF EXISTS "Anyone can view change events" ON public.timetable_change_events;
 CREATE POLICY "Anyone can view change events" ON public.timetable_change_events
     FOR SELECT USING (true);

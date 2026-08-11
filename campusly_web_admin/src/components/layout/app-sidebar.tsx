@@ -46,6 +46,7 @@ const groups = [
     items: [
       { title: "Students", url: "/students", icon: Users },
       { title: "Faculty", url: "/faculty", icon: GraduationCap },
+      { title: "Admins", url: "/admins", icon: ShieldCheck },
     ],
   },
   {
