@@ -269,5 +269,81 @@ export const submitFormResponseFn = createServerFn({ method: "POST" })
       }
     }
 
+
     return { success: true, responseId: response.id };
+  });
+
+export const getFormResponsesAnalyticsFn = createServerFn({ method: "GET" })
+  .validator((formId: string) => formId)
+  .handler(async ({ data: formId }) => {
+    const supabaseAdmin = getSupabaseAdmin();
+    
+    // Fetch form details and questions
+    const { data: form, error: formError } = await supabaseAdmin
+      .from("forms")
+      .select("*, form_versions(*, form_sections(*, form_questions(*, form_options(*))))")
+      .eq("id", formId)
+      .single();
+
+    if (formError || !form) throw new Error("Form not found");
+
+    // Fetch responses
+    const { data: responses, error: respError } = await supabaseAdmin
+      .from("form_responses")
+      .select("*")
+      .eq("form_id", formId)
+      .order("submitted_at", { ascending: false });
+      
+    if (respError) throw respError;
+
+    // Fetch all answers for these responses
+    const responseIds = responses.map((r: any) => r.id);
+    let answers = [];
+    if (responseIds.length > 0) {
+      const { data: ansData, error: ansError } = await supabaseAdmin
+        .from("form_response_answers")
+        .select("*")
+        .in("response_id", responseIds);
+      if (!ansError && ansData) {
+        answers = ansData;
+      }
+    }
+
+    const sections = form.form_versions[0]?.form_sections || [];
+    const questions = sections.flatMap((s: any) => s.form_questions);
+
+    // Aggregate Analytics
+    const analytics: Record<string, any> = {};
+    
+    questions.forEach((q: any) => {
+      if (['multiple_choice', 'dropdown', 'checkboxes', 'linear_scale', 'yes_no'].includes(q.type)) {
+        analytics[q.id] = { question: q, stats: {} };
+        const qAnswers = answers.filter((a: any) => a.question_id === q.id);
+        
+        qAnswers.forEach((ans: any) => {
+          let value = null;
+          if (ans.answer_text) value = ans.answer_text;
+          else if (ans.answer_number !== null) value = ans.answer_number.toString();
+          else if (ans.answer_boolean !== null) value = ans.answer_boolean ? 'Yes' : 'No';
+          else if (ans.answer_json) value = ans.answer_json; // Array for checkboxes
+          
+          if (Array.isArray(value)) {
+            value.forEach(v => {
+              const valStr = String(v);
+              analytics[q.id].stats[valStr] = (analytics[q.id].stats[valStr] || 0) + 1;
+            });
+          } else if (value !== null) {
+            const valStr = String(value);
+            analytics[q.id].stats[valStr] = (analytics[q.id].stats[valStr] || 0) + 1;
+          }
+        });
+      }
+    });
+
+    return {
+      form,
+      responses,
+      totalResponses: responses.length,
+      analytics
+    };
   });
