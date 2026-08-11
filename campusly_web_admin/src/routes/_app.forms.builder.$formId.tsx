@@ -99,6 +99,7 @@ function FormBuilderComponent() {
   const [isPreview, setIsPreview] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
   const [activeTab, setActiveTab] = useState('questions'); // 'questions', 'logic', 'design', 'settings'
+  const [publishedToken, setPublishedToken] = useState<string | null>(null);
 
   const sections = form.form_versions[0].form_sections;
   const allQuestions = sections.flatMap((s: any) => s.form_questions);
@@ -295,8 +296,9 @@ function FormBuilderComponent() {
         return;
       }
       await handleSave();
-      await publishFormFn({ data: { form_id: form.id, form_version_id: form.form_versions[0].id } });
+      const res = await publishFormFn({ data: { form_id: form.id, form_version_id: form.form_versions[0].id } });
       toast.success("Form Published successfully!");
+      setPublishedToken(res.token);
       router.invalidate();
     } catch(e: any) {
       toast.error(e.message || "Failed to publish form");
@@ -888,6 +890,38 @@ function FormBuilderComponent() {
           </aside>
         )}
       </div>
+
+      {publishedToken && (
+        <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <Card className="max-w-md w-full p-6 shadow-xl border-t-8 border-t-green-500 relative">
+            <button onClick={() => setPublishedToken(null)} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+              <Minus size={20} />
+            </button>
+            <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+              <Link2 size={24} />
+            </div>
+            <h2 className="text-xl font-bold text-slate-800 mb-2">Form Published!</h2>
+            <p className="text-sm text-slate-500 mb-6">Your form is now live and ready to receive responses. Share this link with your students.</p>
+            
+            <div className="flex items-center gap-2 mb-6">
+              <input 
+                type="text" 
+                readOnly 
+                value={`${window.location.origin}/form/${publishedToken}`} 
+                className="flex-1 p-2 text-sm border border-slate-200 rounded bg-slate-50 text-slate-600 focus:outline-none"
+              />
+              <Button onClick={() => {
+                navigator.clipboard.writeText(`${window.location.origin}/form/${publishedToken}`);
+                toast.success("Link copied to clipboard!");
+              }}>Copy</Button>
+            </div>
+            
+            <Button variant="outline" className="w-full" asChild>
+              <a href={`/form/${publishedToken}`} target="_blank" rel="noreferrer">Open in New Tab</a>
+            </Button>
+          </Card>
+        </div>
+      )}
     </div>
   )
 }

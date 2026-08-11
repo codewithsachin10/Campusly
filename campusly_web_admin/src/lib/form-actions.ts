@@ -180,3 +180,94 @@ export const publishFormFn = createServerFn({ method: "POST" })
 
   return { token: existingLink.public_token };
 });
+
+export const getFormByTokenFn = createServerFn({ method: "GET" })
+  .validator((token: string) => token)
+  .handler(async ({ data: token }) => {
+    const supabaseAdmin = getSupabaseAdmin();
+    const { data: link, error: linkError } = await supabaseAdmin
+      .from("form_public_links")
+      .select("*")
+      .eq("public_token", token)
+      .eq("active", true)
+      .single();
+
+    if (linkError || !link) {
+      throw new Error("Form link is invalid or inactive");
+    }
+
+    const { data: form, error: formError } = await supabaseAdmin
+      .from("forms")
+      .select("*, form_versions(*, form_sections(*, form_questions(*, form_options(*))))")
+      .eq("id", link.form_id)
+      .single();
+
+    if (formError || !form) throw new Error("Form not found");
+
+    const publishedVersion = form.form_versions.find((v: any) => v.id === link.form_version_id && v.status === "published");
+    if (!publishedVersion) throw new Error("Form version is no longer published");
+
+    form.form_versions = [publishedVersion];
+
+    if (form.settings?.start_date && new Date(form.settings.start_date) > new Date()) {
+      throw new Error("This form is not yet accepting responses");
+    }
+    if (form.settings?.end_date && new Date(form.settings.end_date) < new Date()) {
+      throw new Error("This form is no longer accepting responses");
+    }
+
+    return form;
+  });
+
+export const submitFormResponseFn = createServerFn({ method: "POST" })
+  .validator((payload: { token: string; answers: any[], userId?: string }) => payload)
+  .handler(async ({ data: payload }) => {
+    const supabaseAdmin = getSupabaseAdmin();
+
+    const { data: link, error: linkError } = await supabaseAdmin
+      .from("form_public_links")
+      .select("*")
+      .eq("public_token", payload.token)
+      .eq("active", true)
+      .single();
+
+    if (linkError || !link) {
+      throw new Error("Form link is invalid or inactive");
+    }
+
+    const { data: response, error: respError } = await supabaseAdmin
+      .from("form_responses")
+      .insert([{
+        form_id: link.form_id,
+        form_version_id: link.form_version_id,
+        user_id: payload.userId || null,
+        status: "submitted",
+        submitted_at: new Date().toISOString()
+      }])
+      .select()
+      .single();
+
+    if (respError) throw respError;
+
+    const answersToInsert = payload.answers.map(ans => ({
+      response_id: response.id,
+      question_id: ans.question_id,
+      answer_text: typeof ans.value === 'string' ? ans.value : null,
+      answer_number: typeof ans.value === 'number' ? ans.value : null,
+      answer_boolean: typeof ans.value === 'boolean' ? ans.value : null,
+      answer_json: typeof ans.value === 'object' ? ans.value : null,
+    }));
+
+    if (answersToInsert.length > 0) {
+      const { error: ansError } = await supabaseAdmin
+        .from("form_response_answers")
+        .insert(answersToInsert);
+
+      if (ansError) {
+        await supabaseAdmin.from("form_responses").delete().eq("id", response.id);
+        throw ansError;
+      }
+    }
+
+    return { success: true, responseId: response.id };
+  });
