@@ -35,6 +35,7 @@ import '../../features/support/presentation/screens/about_screen.dart';
 import '../../features/profile/presentation/screens/complete_profile_screen.dart';
 
 import '../../features/splash/presentation/screens/splash_screen.dart';
+import '../../features/forms/presentation/screens/form_renderer_screen.dart';
 
 export 'package:go_router/go_router.dart';
 
@@ -161,7 +162,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const HelpdeskScreen(),
       ),
       GoRoute(path: '/about', builder: (context, state) => const AboutScreen()),
-
+      GoRoute(
+        path: '/form/:token',
+        builder: (context, state) {
+          final token = state.pathParameters['token']!;
+          return FormRendererScreen(formToken: token);
+        },
+      ),
     ],
     redirect: (BuildContext context, GoRouterState state) {
       final isLoading = authState.isLoading;

@@ -66,6 +66,7 @@ const groups = [
   {
     label: "Operations",
     items: [
+      { title: "Forms", url: "/forms", icon: FileStack },
       { title: "Timetable", url: "/timetable", icon: Clock },
       { title: "Attendance", url: "/attendance", icon: ClipboardList },
       { title: "Assignments", url: "/assignments", icon: FileStack },

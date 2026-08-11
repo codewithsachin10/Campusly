@@ -24,6 +24,7 @@ import { Route as AppSessionsRouteImport } from './routes/_app.sessions'
 import { Route as AppSettingsRouteImport } from './routes/_app.settings'
 import { Route as AppStudentsRouteImport } from './routes/_app.students'
 import { Route as AppTimetableRouteImport } from './routes/_app.timetable'
+import { Route as FormTokenRouteImport } from './routes/form.$token'
 import { Route as InviteResponseRouteImport } from './routes/invite.response'
 import { Route as AppAdminsIndexRouteImport } from './routes/_app.admins.index'
 import { Route as AppAdminsAdminIdRouteImport } from './routes/_app.admins.$adminId'
@@ -36,11 +37,14 @@ import { Route as AppCurriculumRegulationIdRouteImport } from './routes/_app.cur
 import { Route as AppCurriculumBatchImportRouteImport } from './routes/_app.curriculum.batch-import'
 import { Route as AppCurriculumImportRouteImport } from './routes/_app.curriculum.import'
 import { Route as AppCustomTimetableIdRouteImport } from './routes/_app.custom-timetable.$id'
+import { Route as AppFormsIndexRouteImport } from './routes/_app.forms.index'
 import { Route as AppSupportIndexRouteImport } from './routes/_app.support.index'
 import { Route as AppSupportTicketIdRouteImport } from './routes/_app.support.$ticketId'
 import { Route as AppUpdatesIndexRouteImport } from './routes/_app.updates.index'
 import { Route as AppUpdatesCreateRouteImport } from './routes/_app.updates.create'
 import { Route as AppUpdatesReleasesRouteImport } from './routes/_app.updates.releases'
+import { Route as AppFormsBuilderFormIdRouteImport } from './routes/_app.forms.builder.$formId'
+import { Route as AppFormsResponsesFormIdRouteImport } from './routes/_app.forms.responses.$formId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -116,6 +120,11 @@ const AppTimetableRoute = AppTimetableRouteImport.update({
   path: '/timetable',
   getParentRoute: () => AppRoute,
 } as any)
+const FormTokenRoute = FormTokenRouteImport.update({
+  id: '/form/$token',
+  path: '/form/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InviteResponseRoute = InviteResponseRouteImport.update({
   id: '/invite/response',
   path: '/invite/response',
@@ -178,6 +187,11 @@ const AppCustomTimetableIdRoute = AppCustomTimetableIdRouteImport.update({
   path: '/custom-timetable/$id',
   getParentRoute: () => AppRoute,
 } as any)
+const AppFormsIndexRoute = AppFormsIndexRouteImport.update({
+  id: '/forms/',
+  path: '/forms/',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppSupportIndexRoute = AppSupportIndexRouteImport.update({
   id: '/support/',
   path: '/support/',
@@ -203,6 +217,16 @@ const AppUpdatesReleasesRoute = AppUpdatesReleasesRouteImport.update({
   path: '/updates/releases',
   getParentRoute: () => AppRoute,
 } as any)
+const AppFormsBuilderFormIdRoute = AppFormsBuilderFormIdRouteImport.update({
+  id: '/forms/builder/$formId',
+  path: '/forms/builder/$formId',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppFormsResponsesFormIdRoute = AppFormsResponsesFormIdRouteImport.update({
+  id: '/forms/responses/$formId',
+  path: '/forms/responses/$formId',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -219,6 +243,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
   '/timetable': typeof AppTimetableRoute
+  '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
   '/admins/$adminId': typeof AppAdminsAdminIdRoute
   '/admins/audit': typeof AppAdminsAuditRoute
@@ -234,8 +259,11 @@ export interface FileRoutesByFullPath {
   '/updates/releases': typeof AppUpdatesReleasesRoute
   '/admins/': typeof AppAdminsIndexRoute
   '/curriculum/': typeof AppCurriculumIndexRoute
+  '/forms/': typeof AppFormsIndexRoute
   '/support/': typeof AppSupportIndexRoute
   '/updates/': typeof AppUpdatesIndexRoute
+  '/forms/builder/$formId': typeof AppFormsBuilderFormIdRoute
+  '/forms/responses/$formId': typeof AppFormsResponsesFormIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -251,6 +279,7 @@ export interface FileRoutesByTo {
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
   '/timetable': typeof AppTimetableRoute
+  '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
   '/admins/$adminId': typeof AppAdminsAdminIdRoute
   '/admins/audit': typeof AppAdminsAuditRoute
@@ -266,8 +295,11 @@ export interface FileRoutesByTo {
   '/updates/releases': typeof AppUpdatesReleasesRoute
   '/admins': typeof AppAdminsIndexRoute
   '/curriculum': typeof AppCurriculumIndexRoute
+  '/forms': typeof AppFormsIndexRoute
   '/support': typeof AppSupportIndexRoute
   '/updates': typeof AppUpdatesIndexRoute
+  '/forms/builder/$formId': typeof AppFormsBuilderFormIdRoute
+  '/forms/responses/$formId': typeof AppFormsResponsesFormIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -286,6 +318,7 @@ export interface FileRoutesById {
   '/_app/settings': typeof AppSettingsRoute
   '/_app/students': typeof AppStudentsRoute
   '/_app/timetable': typeof AppTimetableRoute
+  '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
   '/_app/admins/$adminId': typeof AppAdminsAdminIdRoute
   '/_app/admins/audit': typeof AppAdminsAuditRoute
@@ -301,8 +334,11 @@ export interface FileRoutesById {
   '/_app/updates/releases': typeof AppUpdatesReleasesRoute
   '/_app/admins/': typeof AppAdminsIndexRoute
   '/_app/curriculum/': typeof AppCurriculumIndexRoute
+  '/_app/forms/': typeof AppFormsIndexRoute
   '/_app/support/': typeof AppSupportIndexRoute
   '/_app/updates/': typeof AppUpdatesIndexRoute
+  '/_app/forms/builder/$formId': typeof AppFormsBuilderFormIdRoute
+  '/_app/forms/responses/$formId': typeof AppFormsResponsesFormIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -321,6 +357,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/students'
     | '/timetable'
+    | '/form/$token'
     | '/invite/response'
     | '/admins/$adminId'
     | '/admins/audit'
@@ -336,8 +373,11 @@ export interface FileRouteTypes {
     | '/updates/releases'
     | '/admins/'
     | '/curriculum/'
+    | '/forms/'
     | '/support/'
     | '/updates/'
+    | '/forms/builder/$formId'
+    | '/forms/responses/$formId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -353,6 +393,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/students'
     | '/timetable'
+    | '/form/$token'
     | '/invite/response'
     | '/admins/$adminId'
     | '/admins/audit'
@@ -368,8 +409,11 @@ export interface FileRouteTypes {
     | '/updates/releases'
     | '/admins'
     | '/curriculum'
+    | '/forms'
     | '/support'
     | '/updates'
+    | '/forms/builder/$formId'
+    | '/forms/responses/$formId'
   id:
     | '__root__'
     | '/'
@@ -387,6 +431,7 @@ export interface FileRouteTypes {
     | '/_app/settings'
     | '/_app/students'
     | '/_app/timetable'
+    | '/form/$token'
     | '/invite/response'
     | '/_app/admins/$adminId'
     | '/_app/admins/audit'
@@ -402,14 +447,18 @@ export interface FileRouteTypes {
     | '/_app/updates/releases'
     | '/_app/admins/'
     | '/_app/curriculum/'
+    | '/_app/forms/'
     | '/_app/support/'
     | '/_app/updates/'
+    | '/_app/forms/builder/$formId'
+    | '/_app/forms/responses/$formId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
   VerifyOtpRoute: typeof VerifyOtpRoute
+  FormTokenRoute: typeof FormTokenRoute
   InviteResponseRoute: typeof InviteResponseRoute
 }
 
@@ -520,6 +569,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppTimetableRouteImport
       parentRoute: typeof AppRoute
     }
+    '/form/$token': {
+      id: '/form/$token'
+      path: '/form/$token'
+      fullPath: '/form/$token'
+      preLoaderRoute: typeof FormTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/invite/response': {
       id: '/invite/response'
       path: '/invite/response'
@@ -604,6 +660,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCustomTimetableIdRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/forms/': {
+      id: '/_app/forms/'
+      path: '/forms'
+      fullPath: '/forms/'
+      preLoaderRoute: typeof AppFormsIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/support/': {
       id: '/_app/support/'
       path: '/support'
@@ -637,6 +700,20 @@ declare module '@tanstack/react-router' {
       path: '/updates/releases'
       fullPath: '/updates/releases'
       preLoaderRoute: typeof AppUpdatesReleasesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/forms/builder/$formId': {
+      id: '/_app/forms/builder/$formId'
+      path: '/forms/builder/$formId'
+      fullPath: '/forms/builder/$formId'
+      preLoaderRoute: typeof AppFormsBuilderFormIdRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/forms/responses/$formId': {
+      id: '/_app/forms/responses/$formId'
+      path: '/forms/responses/$formId'
+      fullPath: '/forms/responses/$formId'
+      preLoaderRoute: typeof AppFormsResponsesFormIdRouteImport
       parentRoute: typeof AppRoute
     }
   }
@@ -685,8 +762,11 @@ interface AppRouteChildren {
   AppUpdatesCreateRoute: typeof AppUpdatesCreateRoute
   AppUpdatesReleasesRoute: typeof AppUpdatesReleasesRoute
   AppCurriculumIndexRoute: typeof AppCurriculumIndexRoute
+  AppFormsIndexRoute: typeof AppFormsIndexRoute
   AppSupportIndexRoute: typeof AppSupportIndexRoute
   AppUpdatesIndexRoute: typeof AppUpdatesIndexRoute
+  AppFormsBuilderFormIdRoute: typeof AppFormsBuilderFormIdRoute
+  AppFormsResponsesFormIdRoute: typeof AppFormsResponsesFormIdRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
@@ -710,8 +790,11 @@ const AppRouteChildren: AppRouteChildren = {
   AppUpdatesCreateRoute: AppUpdatesCreateRoute,
   AppUpdatesReleasesRoute: AppUpdatesReleasesRoute,
   AppCurriculumIndexRoute: AppCurriculumIndexRoute,
+  AppFormsIndexRoute: AppFormsIndexRoute,
   AppSupportIndexRoute: AppSupportIndexRoute,
   AppUpdatesIndexRoute: AppUpdatesIndexRoute,
+  AppFormsBuilderFormIdRoute: AppFormsBuilderFormIdRoute,
+  AppFormsResponsesFormIdRoute: AppFormsResponsesFormIdRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
@@ -720,6 +803,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
   VerifyOtpRoute: VerifyOtpRoute,
+  FormTokenRoute: FormTokenRoute,
   InviteResponseRoute: InviteResponseRoute,
 }
 export const routeTree = rootRouteImport
