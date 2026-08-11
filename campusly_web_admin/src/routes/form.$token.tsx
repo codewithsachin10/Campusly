@@ -193,7 +193,7 @@ function PublicFormRenderer() {
                 )}
 
                 {/* Multiple Choice & Yes/No */}
-                {['multiple_choice', 'yes_no'].includes(q.type) && (
+                {['single_choice', 'yes_no'].includes(q.type) && (
                   <div className="space-y-3">
                     {q.form_options?.map((opt: any) => (
                       <label key={opt.id} className="flex items-start gap-3 cursor-pointer group">
@@ -214,7 +214,7 @@ function PublicFormRenderer() {
                 )}
 
                 {/* Checkboxes */}
-                {q.type === 'checkboxes' && (
+                {q.type === 'multiple_choice' && (
                   <div className="space-y-3">
                     {q.form_options?.map((opt: any) => {
                       const currentVals = Array.isArray(answers[q.id]) ? answers[q.id] : [];
@@ -257,7 +257,7 @@ function PublicFormRenderer() {
                 )}
 
                 {/* Linear Scale */}
-                {q.type === 'linear_scale' && (
+                {q.type === 'number_rating' && (
                   <div className="flex items-center justify-between md:justify-start gap-4">
                     <span className="text-sm font-medium text-slate-500">{q.validation_rules?.min || 1}</span>
                     <div className="flex gap-4 md:gap-8">

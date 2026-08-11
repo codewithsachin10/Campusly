@@ -20,11 +20,13 @@ CREATE TABLE IF NOT EXISTS app_releases (
 ALTER TABLE app_releases ENABLE ROW LEVEL SECURITY;
 
 -- Everyone can view PUBLISHED releases
+DROP POLICY IF EXISTS "Anyone can view published releases" ON app_releases;
 CREATE POLICY "Anyone can view published releases" 
 ON app_releases FOR SELECT 
 USING (status = 'PUBLISHED');
 
 -- Admins can manage all releases
+DROP POLICY IF EXISTS "Admins can manage releases" ON app_releases;
 CREATE POLICY "Admins can manage releases" 
 ON app_releases FOR ALL 
 USING (true); -- Currently trusting all authenticated web admins. For production, check a user 'role' here.
@@ -44,11 +46,13 @@ CREATE TABLE IF NOT EXISTS app_update_analytics (
 ALTER TABLE app_update_analytics ENABLE ROW LEVEL SECURITY;
 
 -- Users can insert their own analytics
+DROP POLICY IF EXISTS "Users can insert their analytics" ON app_update_analytics;
 CREATE POLICY "Users can insert their analytics" 
 ON app_update_analytics FOR INSERT 
 WITH CHECK (auth.uid() = user_id);
 
 -- Admins can view all analytics
+DROP POLICY IF EXISTS "Admins can view all analytics" ON app_update_analytics;
 CREATE POLICY "Admins can view all analytics" 
 ON app_update_analytics FOR SELECT 
 USING (true);
@@ -59,19 +63,23 @@ VALUES ('releases', 'releases', true)
 ON CONFLICT (id) DO NOTHING;
 
 -- Storage RLS: Anyone can read releases
+DROP POLICY IF EXISTS "Anyone can read releases" ON storage.objects;
 CREATE POLICY "Anyone can read releases" 
 ON storage.objects FOR SELECT 
 USING (bucket_id = 'releases');
 
 -- Storage RLS: Admins can upload/delete
+DROP POLICY IF EXISTS "Admins can upload releases" ON storage.objects;
 CREATE POLICY "Admins can upload releases" 
 ON storage.objects FOR INSERT 
 WITH CHECK (bucket_id = 'releases' AND auth.role() = 'authenticated');
 
+DROP POLICY IF EXISTS "Admins can delete releases" ON storage.objects;
 CREATE POLICY "Admins can delete releases" 
 ON storage.objects FOR DELETE 
 USING (bucket_id = 'releases' AND auth.role() = 'authenticated');
 
+DROP POLICY IF EXISTS "Admins can update releases" ON storage.objects;
 CREATE POLICY "Admins can update releases" 
 ON storage.objects FOR UPDATE 
 USING (bucket_id = 'releases' AND auth.role() = 'authenticated');

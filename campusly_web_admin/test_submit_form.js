@@ -6,8 +6,9 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 async function testSubmit() {
-  // Get the form ID from the token we used earlier
-  const { data: link } = await supabase.from('form_public_links').select('*').eq('public_token', 'vlkqt0i7sxhw4tzgk22sr').single();
+  // Replace this with the token you get when running node seed_feedback_form.cjs
+  const linkToken = "4s8kugskk5eq7gdpta783";
+  const { data: link } = await supabase.from('form_public_links').select('*').eq('public_token', linkToken).single();
   
   if (!link) {
     console.error("Link not found");

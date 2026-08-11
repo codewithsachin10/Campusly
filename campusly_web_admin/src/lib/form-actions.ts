@@ -12,7 +12,7 @@ export const getFormsFn = createServerFn({ method: "GET" }).handler(async () => 
   const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from("forms")
-    .select("*, _count:form_responses(count)")
+    .select("*, _count:form_responses(count), form_public_links(public_token)")
     .order("created_at", { ascending: false });
 
   if (error) {
@@ -346,4 +346,26 @@ export const getFormResponsesAnalyticsFn = createServerFn({ method: "GET" })
       totalResponses: responses.length,
       analytics
     };
+  });
+
+export const deleteFormFn = createServerFn({ method: "POST" })
+  .validator((formId: string) => formId)
+  .handler(async ({ data: formId }) => {
+    const supabaseAdmin = getSupabaseAdmin();
+    const { error } = await supabaseAdmin.from("forms").delete().eq("id", formId);
+    if (error) throw error;
+    return { success: true };
+  });
+
+export const toggleFormStatusFn = createServerFn({ method: "POST" })
+  .validator((payload: { form_id: string; status: 'draft' | 'published' | 'disabled' }) => payload)
+  .handler(async ({ data: payload }) => {
+    const supabaseAdmin = getSupabaseAdmin();
+    const { error } = await supabaseAdmin.from("forms").update({ status: payload.status }).eq("id", payload.form_id);
+    if (error) throw error;
+    
+    // Also update all versions
+    await supabaseAdmin.from("form_versions").update({ status: payload.status }).eq("form_id", payload.form_id);
+    
+    return { success: true };
   });

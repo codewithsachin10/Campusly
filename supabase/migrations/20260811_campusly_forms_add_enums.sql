@@ -1,0 +1,12 @@
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'checkboxes';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'linear_scale';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'student_name';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'roll_number';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'college_email';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'department';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'year';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'semester';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'subject';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'faculty';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'attendance_input';
+ALTER TYPE form_question_type ADD VALUE IF NOT EXISTS 'video';

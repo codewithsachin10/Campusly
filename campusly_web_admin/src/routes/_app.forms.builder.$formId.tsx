@@ -20,8 +20,8 @@ const QUESTION_CATEGORIES = [
     items: [
       { id: 'short_text', label: 'Short Answer', icon: Type },
       { id: 'long_text', label: 'Paragraph', icon: AlignLeft },
-      { id: 'multiple_choice', label: 'Multiple Choice', icon: Check },
-      { id: 'checkboxes', label: 'Checkboxes', icon: CheckSquare },
+      { id: 'single_choice', label: 'Single Choice', icon: Check },
+      { id: 'multiple_choice', label: 'Multiple Choice (Checkboxes)', icon: CheckSquare },
       { id: 'dropdown', label: 'Dropdown', icon: ChevronDown },
       { id: 'yes_no', label: 'Yes/No', icon: HelpCircle },
     ]
@@ -29,7 +29,7 @@ const QUESTION_CATEGORIES = [
   {
     title: 'Advanced',
     items: [
-      { id: 'linear_scale', label: 'Linear Scale', icon: ListOrdered },
+      { id: 'number_rating', label: 'Number Rating (Linear Scale)', icon: ListOrdered },
       { id: 'number_rating', label: 'Rating', icon: PlusCircle },
       { id: 'date', label: 'Date', icon: Calendar },
       { id: 'time', label: 'Time', icon: Clock },
@@ -151,7 +151,7 @@ function FormBuilderComponent() {
   }
 
   const addQuestion = (typeId: string, label: string) => {
-    const isChoice = ['multiple_choice', 'checkboxes', 'dropdown'].includes(typeId);
+    const isChoice = ['single_choice', 'multiple_choice', 'dropdown'].includes(typeId);
     
     const newQ = {
       id: crypto.randomUUID(),
@@ -164,7 +164,7 @@ function FormBuilderComponent() {
         ? [{ id: crypto.randomUUID(), label: 'Option 1', value: 'Option 1', display_order: 1 }] 
         : [],
       settings: {},
-      validation_rules: typeId === 'linear_scale' ? { min: 1, max: 5 } : {},
+      validation_rules: typeId === 'number_rating' ? { min: 1, max: 5 } : {},
       logic_rules: {}
     };
 
@@ -444,7 +444,7 @@ function FormBuilderComponent() {
                                 
                                 {(q.type === 'short_text' || q.type === 'student_name' || q.type === 'roll_number' || q.type === 'college_email' || q.type === 'phone' || q.type === 'email' || q.type === 'number' || q.type === 'url') && <input type="text" className="w-full p-2 border rounded" placeholder="Your answer" disabled />}
                                 {q.type === 'long_text' && <textarea className="w-full p-2 border rounded" rows={3} placeholder="Your answer" disabled />}
-                                {(q.type === 'multiple_choice' || q.type === 'yes_no') && (
+                                {(q.type === 'single_choice' || q.type === 'yes_no') && (
                                   <div className="space-y-2">
                                     {q.form_options?.map((o: any) => (
                                       <label key={o.id} className="flex items-center gap-2">
@@ -453,7 +453,7 @@ function FormBuilderComponent() {
                                     ))}
                                   </div>
                                 )}
-                                {q.type === 'checkboxes' && (
+                                {q.type === 'multiple_choice' && (
                                   <div className="space-y-2">
                                     {q.form_options?.map((o: any) => (
                                       <label key={o.id} className="flex items-center gap-2">
@@ -471,7 +471,7 @@ function FormBuilderComponent() {
                                 {q.type === 'file_upload' && <input type="file" className="w-full p-2 border border-dashed rounded" disabled />}
                                 {q.type === 'date' && <input type="date" className="w-full p-2 border rounded max-w-[200px]" disabled />}
                                 {q.type === 'time' && <input type="time" className="w-full p-2 border rounded max-w-[200px]" disabled />}
-                                {q.type === 'linear_scale' && (
+                                {q.type === 'number_rating' && (
                                   <div className="flex items-center justify-between max-w-sm">
                                     <span className="text-sm text-slate-500">1</span>
                                     {[1, 2, 3, 4, 5].map(v => (
@@ -574,11 +574,11 @@ function FormBuilderComponent() {
                                               {(q.type === 'short_text' || q.type === 'student_name' || q.type === 'roll_number' || q.type === 'college_email' || q.type === 'phone' || q.type === 'email' || q.type === 'number' || q.type === 'url') && <div className="p-2 border-b border-slate-200 dark:border-slate-700 text-sm text-slate-400 w-1/2">Short answer text</div>}
                                               {q.type === 'long_text' && <div className="p-2 border border-slate-200 dark:border-slate-700 rounded text-sm text-slate-400 h-20 w-3/4">Long answer text</div>}
                                               
-                                              {(q.type === 'multiple_choice' || q.type === 'dropdown' || q.type === 'checkboxes' || q.type === 'yes_no') && (
+                                              {(q.type === 'single_choice' || q.type === 'dropdown' || q.type === 'multiple_choice' || q.type === 'yes_no') && (
                                                 <div className="space-y-2">
                                                   {q.form_options.map((opt: any) => (
                                                     <div key={opt.id} className="flex items-center gap-2 group/opt">
-                                                      <div className={`w-4 h-4 border border-slate-300 ${(q.type === 'multiple_choice' || q.type === 'yes_no') ? 'rounded-full' : 'rounded'}`} />
+                                                      <div className={`w-4 h-4 border border-slate-300 ${(q.type === 'single_choice' || q.type === 'yes_no') ? 'rounded-full' : 'rounded'}`} />
                                                       <input 
                                                         type="text" 
                                                         value={opt.label} 
@@ -601,7 +601,7 @@ function FormBuilderComponent() {
                                               {q.type === 'file_upload' && <div className="p-6 border-2 border-dashed border-slate-300 rounded-lg text-center text-sm text-slate-500 max-w-md mx-auto">Click to upload file</div>}
                                               {q.type === 'date' && <div className="p-2 border border-slate-200 rounded text-sm text-slate-400 w-40 flex justify-between items-center">MM/DD/YYYY <Calendar size={14}/></div>}
                                               {q.type === 'time' && <div className="p-2 border border-slate-200 rounded text-sm text-slate-400 w-32 flex justify-between items-center">HH:MM <Clock size={14}/></div>}
-                                              {q.type === 'linear_scale' && (
+                                              {q.type === 'number_rating' && (
                                                 <div className="flex items-center justify-between max-w-sm p-4 bg-slate-50 rounded border border-slate-100">
                                                   <span className="text-sm font-medium">1</span>
                                                   <div className="h-2 w-full bg-slate-200 mx-4 rounded"></div>
@@ -841,7 +841,7 @@ function FormBuilderComponent() {
                       </div>
                     )}
 
-                    {selectedQuestion.type === 'linear_scale' && (
+                    {selectedQuestion.type === 'number_rating' && (
                       <div className="grid grid-cols-2 gap-2">
                         <label className="flex flex-col gap-1 text-sm text-slate-700">
                           Scale Start
@@ -875,7 +875,7 @@ function FormBuilderComponent() {
                       </div>
                     )}
                     
-                    {Object.keys(selectedQuestion.validation_rules || {}).length === 0 && !['short_text', 'long_text', 'number', 'roll_number', 'file_upload', 'linear_scale'].includes(selectedQuestion.type) && (
+                    {Object.keys(selectedQuestion.validation_rules || {}).length === 0 && !['short_text', 'long_text', 'number', 'roll_number', 'file_upload', 'number_rating'].includes(selectedQuestion.type) && (
                       <p className="text-xs text-slate-400 italic">No advanced validation available for this type.</p>
                     )}
                   </div>

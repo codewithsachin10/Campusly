@@ -82,16 +82,16 @@ async function seed() {
   };
 
   // Section 1 Questions
-  addQ(section1Id, 'linear_scale', 'How would you rate Campusly overall?', true, { min: 1, max: 5 });
-  addQ(section1Id, 'multiple_choice', 'How easy is Campusly to use?', true, {}, ['Very easy', 'Easy', 'Okay', 'Difficult']);
-  addQ(section1Id, 'multiple_choice', 'Which Campusly feature do you use the most?', true, {}, ['Timetable', 'Curriculum', 'Attendance', 'Notifications', 'Forms', 'Other']);
+  addQ(section1Id, 'number_rating', 'How would you rate Campusly overall?', true, { min: 1, max: 5 });
+  addQ(section1Id, 'single_choice', 'How easy is Campusly to use?', true, {}, ['Very easy', 'Easy', 'Okay', 'Difficult']);
+  addQ(section1Id, 'single_choice', 'Which Campusly feature do you use the most?', true, {}, ['Timetable', 'Curriculum', 'Attendance', 'Notifications', 'Forms', 'Other']);
   addQ(section1Id, 'short_text', 'What do you like most about Campusly?', false);
-  addQ(section1Id, 'checkboxes', 'What should we improve?', true, {}, ['Design/UI', 'Performance', 'Timetable', 'Notifications', 'Curriculum', 'Attendance', 'Other']);
+  addQ(section1Id, 'multiple_choice', 'What should we improve?', true, {}, ['Design/UI', 'Performance', 'Timetable', 'Notifications', 'Curriculum', 'Attendance', 'Other']);
   addQ(section1Id, 'multiple_choice', 'What new feature would you like to see?', true, {}, ['AI features', 'Assignment tracker', 'Smart reminders', 'Campus navigation', 'Events & clubs', 'Attendance improvements', 'Other']);
-  addQ(section1Id, 'multiple_choice', 'How should important college alerts be shown?', true, {}, ['Normal notification', 'Full-screen alert', 'Vibration + notification', 'Full-screen + vibration']);
-  addQ(section1Id, 'checkboxes', 'What would you like to customize in Campusly?', true, {}, ['Home screen', 'Theme', 'Timetable', 'Notifications', 'Dashboard', 'Nothing / Keep it simple']);
+  addQ(section1Id, 'single_choice', 'How should important college alerts be shown?', true, {}, ['Normal notification', 'Full-screen alert', 'Vibration + notification', 'Full-screen + vibration']);
+  addQ(section1Id, 'multiple_choice', 'What would you like to customize in Campusly?', true, {}, ['Home screen', 'Theme', 'Timetable', 'Notifications', 'Dashboard', 'Nothing / Keep it simple']);
   addQ(section1Id, 'short_text', 'If you could change one thing in Campusly, what would it be?', false);
-  addQ(section1Id, 'linear_scale', 'Would you recommend Campusly to your friends?', true, { min: 0, max: 10 });
+  addQ(section1Id, 'number_rating', 'Would you recommend Campusly to your friends?', true, { min: 0, max: 10 });
   
   // Section 2 Questions
   addQ(section2Id, 'email', 'enter your mail id', true);
