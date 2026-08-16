@@ -75,7 +75,7 @@ class SubjectDetailsScreen extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 16,
               crossAxisSpacing: 16,
-              childAspectRatio: 1.6,
+              childAspectRatio: 1.35,
               children: [
                 _buildInfoCard(Icons.school_outlined, 'COURSE TYPE', subject.type),
                 _buildInfoCard(Icons.star_outline_rounded, 'CREDITS', subject.credits.toString().replaceAll('.0', '')),
@@ -140,7 +140,7 @@ class SubjectDetailsScreen extends StatelessWidget {
 
   Widget _buildInfoCard(IconData icon, String label, String value) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
         borderRadius: BorderRadius.circular(16),
@@ -207,10 +207,13 @@ class SubjectDetailsScreen extends StatelessWidget {
             children: [
               Icon(icon, color: iconColor),
               const SizedBox(width: 8),
-              Text(
-                title,
-                style: AppTypography.textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
+              Expanded(
+                child: Text(
+                  title,
+                  style: AppTypography.textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],

@@ -87,22 +87,25 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const CampuslyLogo(size: 80, borderRadius: 20),
-                        const SizedBox(width: 16),
-                        Text(
-                          'Campusly',
-                          style: GoogleFonts.plusJakartaSans(
-                            fontSize: 42,
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: -1.5,
-                            color: AppColors.primary,
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const CampuslyLogo(size: 80, borderRadius: 20),
+                          const SizedBox(width: 16),
+                          Text(
+                            'Campusly',
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 42,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: -1.5,
+                              color: AppColors.primary,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     const SizedBox(height: 24),
                     // Header Title & Subtitle
@@ -164,14 +167,18 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              'PASSWORD',
-                              style: AppTypography.textTheme.labelLarge
-                                  ?.copyWith(
-                                    color: AppColors.onSurfaceVariant,
-                                    letterSpacing: 1.2,
-                                  ),
+                            Flexible(
+                              child: Text(
+                                'PASSWORD',
+                                style: AppTypography.textTheme.labelLarge
+                                    ?.copyWith(
+                                      color: AppColors.onSurfaceVariant,
+                                      letterSpacing: 1.2,
+                                    ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
+                            const SizedBox(width: 8),
                             InkWell(
                               onTap: () => context.push('/forgot-password'),
                               child: Text(
@@ -257,10 +264,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           children: [
                             const GoogleLogo(size: 22),
                             const SizedBox(width: 10),
-                            Text(
-                              'Continue with Google',
-                              style: AppTypography.textTheme.labelLarge
-                                  ?.copyWith(fontSize: 15),
+                            Flexible(
+                              child: Text(
+                                'Continue with Google',
+                                style: AppTypography.textTheme.labelLarge
+                                    ?.copyWith(fontSize: 15),
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                           ],
                         ),

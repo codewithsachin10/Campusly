@@ -95,9 +95,10 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
         top: 16,
         bottom: MediaQuery.of(context).padding.bottom + 24,
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Drag handle
           Center(
@@ -214,6 +215,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
             ),
           ),
         ],
+      ),
       ),
     );
   }

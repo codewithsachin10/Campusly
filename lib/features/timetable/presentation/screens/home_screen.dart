@@ -22,8 +22,6 @@ import '../../domain/models/timetable_item.dart';
 import '../../../chat/presentation/widgets/sync_status_indicator.dart';
 import '../../../../core/services/sync_engine_service.dart';
 import '../../../../core/services/presence_service.dart';
-import '../../../updater/data/services/version_check_service.dart';
-import '../../../updater/presentation/views/update_dialog.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -50,29 +48,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           context.push('/announcements');
         }
       });
-      _checkForUpdates();
     });
-  }
-
-  Future<void> _checkForUpdates() async {
-    try {
-      final versionService = ref.read(versionCheckServiceProvider);
-      final result = await versionService.checkForUpdates();
-      
-      if (result.updateAvailable && result.releaseInfo != null) {
-        if (!mounted) return;
-        final isMandatory = result.releaseInfo!.updateType == UpdateType.MANDATORY;
-        showDialog(
-          context: context,
-          barrierDismissible: !isMandatory,
-          builder: (ctx) => UpdateDialog(
-            releaseInfo: result.releaseInfo!,
-          ),
-        );
-      }
-    } catch (e) {
-      debugPrint('Smart in-app update check failed: $e');
-    }
   }
 
   @override

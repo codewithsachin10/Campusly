@@ -36,6 +36,7 @@ import '../../features/profile/presentation/screens/complete_profile_screen.dart
 
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../features/forms/presentation/screens/form_renderer_screen.dart';
+import '../../features/updater/presentation/screens/updates_screen.dart';
 
 export 'package:go_router/go_router.dart';
 
@@ -168,6 +169,10 @@ final routerProvider = Provider<GoRouter>((ref) {
           final token = state.pathParameters['token']!;
           return FormRendererScreen(formToken: token);
         },
+      ),
+      GoRoute(
+        path: '/updates',
+        builder: (context, state) => const UpdatesScreen(),
       ),
     ],
     redirect: (BuildContext context, GoRouterState state) {

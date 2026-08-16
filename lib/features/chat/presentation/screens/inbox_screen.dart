@@ -51,31 +51,34 @@ class InboxScreen extends ConsumerWidget {
         data: (chats) {
           if (chats.isEmpty) {
             return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.chat_bubble_outline_rounded,
-                    size: 64,
-                    color: AppColors.primary.withValues(alpha: 0.3),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'No Messages Yet',
-                    style: AppTypography.textTheme.titleMedium?.copyWith(
-                      color: AppColors.onSurface,
-                      fontWeight: FontWeight.bold,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.chat_bubble_outline_rounded,
+                      size: 64,
+                      color: AppColors.primary.withValues(alpha: 0.3),
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Connect with people or check your class communities.',
-                    textAlign: TextAlign.center,
-                    style: AppTypography.textTheme.bodyMedium?.copyWith(
-                      color: AppColors.onSurfaceVariant,
+                    const SizedBox(height: 16),
+                    Text(
+                      'No Messages Yet',
+                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                        color: AppColors.onSurface,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 8),
+                    Text(
+                      'Connect with people or check your class communities.',
+                      textAlign: TextAlign.center,
+                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        color: AppColors.onSurfaceVariant,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             );
           }

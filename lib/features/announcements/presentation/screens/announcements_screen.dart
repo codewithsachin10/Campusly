@@ -227,39 +227,46 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(8),
-                                      decoration: BoxDecoration(
-                                        color: isHigh
-                                            ? AppColors.errorContainer
-                                            : AppColors.primaryContainer
-                                                  .withValues(alpha: 0.15),
-                                        borderRadius: BorderRadius.circular(10),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                          color: isHigh
+                                              ? AppColors.errorContainer
+                                              : AppColors.primaryContainer
+                                                    .withValues(alpha: 0.15),
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Icon(
+                                          isHigh
+                                              ? LucideIcons.alertTriangle
+                                              : LucideIcons.megaphone,
+                                          color: isHigh
+                                              ? AppColors.error
+                                              : AppColors.primary,
+                                          size: 18,
+                                        ),
                                       ),
-                                      child: Icon(
-                                        isHigh
-                                            ? LucideIcons.alertTriangle
-                                            : LucideIcons.megaphone,
-                                        color: isHigh
-                                            ? AppColors.error
-                                            : AppColors.primary,
-                                        size: 18,
+                                      const SizedBox(width: 10),
+                                      Expanded(
+                                        child: Text(
+                                          item.author,
+                                          style: AppTypography.labelLarge.copyWith(
+                                            color: isHigh
+                                                ? AppColors.error
+                                                : AppColors.primary,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 10),
-                                    Text(
-                                      item.author,
-                                      style: AppTypography.labelLarge.copyWith(
-                                        color: isHigh
-                                            ? AppColors.error
-                                            : AppColors.primary,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
+                                const SizedBox(width: 10),
                                 Text(
                                   _formatDate(item.createdAt),
                                   style: AppTypography.bodySmall.copyWith(

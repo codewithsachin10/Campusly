@@ -510,11 +510,14 @@ class SchedulePlannerView extends ConsumerWidget {
                       color: AppColors.onSurfaceVariant,
                     ),
                     const SizedBox(width: 6),
-                    Text(
-                      item.room,
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.onSurfaceVariant,
-                        fontWeight: FontWeight.w500,
+                    Flexible(
+                      child: Text(
+                        item.room,
+                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          color: AppColors.onSurfaceVariant,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],

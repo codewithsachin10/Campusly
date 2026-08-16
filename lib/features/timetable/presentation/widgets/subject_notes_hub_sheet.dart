@@ -56,26 +56,28 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(
-              controller: titleCtrl,
-              decoration: const InputDecoration(
-                labelText: 'Note Title / Topic',
-                border: OutlineInputBorder(),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: titleCtrl,
+                decoration: const InputDecoration(
+                  labelText: 'Note Title / Topic',
+                  border: OutlineInputBorder(),
+                ),
               ),
-            ),
-            const SizedBox(height: 16),
-            TextField(
-              controller: contentCtrl,
-              maxLines: 5,
-              decoration: const InputDecoration(
-                labelText: 'Important Points, Deadlines, or Questions...',
-                border: OutlineInputBorder(),
+              const SizedBox(height: 16),
+              TextField(
+                controller: contentCtrl,
+                maxLines: 5,
+                decoration: const InputDecoration(
+                  labelText: 'Important Points, Deadlines, or Questions...',
+                  border: OutlineInputBorder(),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         actions: [
           TextButton(

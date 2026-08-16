@@ -297,6 +297,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
           title: const Text('Joined Members'),
           content: SizedBox(
             width: double.maxFinite,
+            height: 350,
             child: FutureBuilder<List<Map<String, dynamic>>>(
               future: _fetchMembersData(),
               builder: (context, snapshot) {
@@ -416,6 +417,8 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
               fontWeight: FontWeight.bold,
               color: AppColors.onSurface,
             ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),

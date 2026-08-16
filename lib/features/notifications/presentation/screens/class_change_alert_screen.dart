@@ -65,74 +65,76 @@ class ClassChangeAlertScreen extends ConsumerWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 40),
-              Container(
-                padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(icon, size: 64, color: color),
-              ),
-              const SizedBox(height: 24),
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                subject,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.grey,
-                ),
-              ),
-              const SizedBox(height: 40),
-              
-              if (changeType == 'VENUE_CHANGED') _buildChangeRow(LucideIcons.doorOpen, "Old Venue", oldData?['room'] ?? '-', "New Venue", newData?['room'] ?? '-'),
-              if (changeType == 'TIME_CHANGED') _buildChangeRow(LucideIcons.clock, "Old Time", "${oldData?['start_time']} - ${oldData?['end_time']}", "New Time", "${newData?['start_time']} - ${newData?['end_time']}"),
-              if (changeType == 'FACULTY_CHANGED') _buildChangeRow(LucideIcons.user, "Old Faculty", oldData?['faculty'] ?? '-', "New Faculty", newData?['faculty'] ?? '-'),
-              if (changeType == 'CANCELLED') 
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 40),
                 Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.red.withOpacity(0.3)),
+                    color: color.withOpacity(0.1),
+                    shape: BoxShape.circle,
                   ),
-                  child: const Row(
-                    children: [
-                      Icon(LucideIcons.alertTriangle, color: Colors.red),
-                      SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          "This class has been cancelled. Enjoy your free time!",
-                          style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                  child: Icon(icon, size: 64, color: color),
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  subject,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey,
+                  ),
+                ),
+                const SizedBox(height: 40),
+                
+                if (changeType == 'VENUE_CHANGED') _buildChangeRow(LucideIcons.doorOpen, "Old Venue", oldData?['room'] ?? '-', "New Venue", newData?['room'] ?? '-'),
+                if (changeType == 'TIME_CHANGED') _buildChangeRow(LucideIcons.clock, "Old Time", "${oldData?['start_time']} - ${oldData?['end_time']}", "New Time", "${newData?['start_time']} - ${newData?['end_time']}"),
+                if (changeType == 'FACULTY_CHANGED') _buildChangeRow(LucideIcons.user, "Old Faculty", oldData?['faculty'] ?? '-', "New Faculty", newData?['faculty'] ?? '-'),
+                if (changeType == 'CANCELLED') 
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.red.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.red.withOpacity(0.3)),
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(LucideIcons.alertTriangle, color: Colors.red),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            "This class has been cancelled. Enjoy your free time!",
+                            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                  ),
+
+                const SizedBox(height: 32),
+                SizedBox(
+                  width: double.infinity,
+                  height: 56,
+                  child: FilledButton(
+                    onPressed: () {
+                      context.pop();
+                      // Optionally, trigger a refresh of the timetable here
+                    },
+                    child: const Text('Acknowledge', style: TextStyle(fontSize: 16)),
                   ),
                 ),
-
-              const Spacer(),
-              SizedBox(
-                width: double.infinity,
-                height: 56,
-                child: FilledButton(
-                  onPressed: () {
-                    context.pop();
-                    // Optionally, trigger a refresh of the timetable here
-                  },
-                  child: const Text('Acknowledge', style: TextStyle(fontSize: 16)),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -153,12 +155,14 @@ class ClassChangeAlertScreen extends ConsumerWidget {
             children: [
               Icon(icon, color: Colors.grey),
               const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(oldLabel, style: const TextStyle(fontSize: 12, color: Colors.grey)),
-                  Text(oldValue, style: const TextStyle(fontSize: 16, decoration: TextDecoration.lineThrough, color: Colors.grey)),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(oldLabel, style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                    Text(oldValue, style: const TextStyle(fontSize: 16, decoration: TextDecoration.lineThrough, color: Colors.grey)),
+                  ],
+                ),
               ),
             ],
           ),
@@ -175,12 +179,14 @@ class ClassChangeAlertScreen extends ConsumerWidget {
             children: [
               Icon(icon, color: Colors.blue),
               const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(newLabel, style: const TextStyle(fontSize: 12, color: Colors.blue)),
-                  Text(newValue, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.blue)),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(newLabel, style: const TextStyle(fontSize: 12, color: Colors.blue)),
+                    Text(newValue, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.blue)),
+                  ],
+                ),
               ),
             ],
           ),

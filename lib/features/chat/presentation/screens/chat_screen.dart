@@ -62,6 +62,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             fontWeight: FontWeight.bold,
             color: AppColors.onSurface,
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         actions: [
           IconButton(
@@ -150,7 +152,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   borderSide: BorderSide.none,
                 ),
               ),
-              maxLines: null,
+              minLines: 1,
+              maxLines: 5,
               textInputAction: TextInputAction.send,
               onSubmitted: (_) => _sendMessage(),
             ),

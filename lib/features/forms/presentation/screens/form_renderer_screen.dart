@@ -24,27 +24,32 @@ class FormRendererScreen extends StatelessWidget {
         title: const Text('Campusly Forms'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.description, size: 80, color: Colors.blue),
-            const SizedBox(height: 16),
-            const Text(
-              'Student Form',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Form Token: $formToken',
-              style: const TextStyle(fontSize: 16, color: Colors.grey),
-            ),
-            const SizedBox(height: 32),
-            ElevatedButton.icon(
-              onPressed: _openWebForm,
-              icon: const Icon(Icons.open_in_browser),
-              label: const Text('Open Form in Browser'),
-            ),
-          ],
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.description, size: 80, color: Colors.blue),
+              const SizedBox(height: 16),
+              const Text(
+                'Student Form',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Form Token: $formToken',
+                style: const TextStyle(fontSize: 16, color: Colors.grey),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton.icon(
+                onPressed: _openWebForm,
+                icon: const Icon(Icons.open_in_browser),
+                label: const Text('Open Form in Browser'),
+              ),
+            ],
+          ),
         ),
       ),
     );

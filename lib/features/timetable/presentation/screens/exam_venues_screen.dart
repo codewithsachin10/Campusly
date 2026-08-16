@@ -159,47 +159,53 @@ class ExamVenuesScreen extends ConsumerWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: color.withValues(alpha: 0.12),
-                                      borderRadius: BorderRadius.circular(10),
+                              Expanded(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(8),
+                                      decoration: BoxDecoration(
+                                        color: color.withValues(alpha: 0.12),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Icon(
+                                        LucideIcons.building,
+                                        color: color,
+                                        size: 20,
+                                      ),
                                     ),
-                                    child: Icon(
-                                      LucideIcons.building,
-                                      color: color,
-                                      size: 20,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 12),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        data['hall'] as String? ??
-                                            data['room'] as String? ??
-                                            'Examination Hall',
-                                        style: AppTypography.titleMedium
-                                            .copyWith(
-                                              fontWeight: FontWeight.w800,
-                                              color: AppColors.onSurface,
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            data['hall'] as String? ??
+                                                data['room'] as String? ??
+                                                'Examination Hall',
+                                            style: AppTypography.titleMedium
+                                                .copyWith(
+                                                  fontWeight: FontWeight.w800,
+                                                  color: AppColors.onSurface,
+                                                ),
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          Text(
+                                            data['block'] as String? ??
+                                                (data['departmentId'] != null
+                                                    ? '${data['departmentId']} Block'
+                                                    : 'Academic Block'),
+                                            style: AppTypography.bodySmall.copyWith(
+                                              color: AppColors.textSecondary,
                                             ),
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ],
                                       ),
-                                      Text(
-                                        data['block'] as String? ??
-                                            (data['departmentId'] != null
-                                                ? '${data['departmentId']} Block'
-                                                : 'Academic Block'),
-                                        style: AppTypography.bodySmall.copyWith(
-                                          color: AppColors.textSecondary,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),

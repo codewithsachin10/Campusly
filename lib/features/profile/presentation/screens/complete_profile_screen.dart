@@ -184,6 +184,7 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
                   // Gender Dropdown
                   DropdownButtonFormField<String>(
                     value: _gender,
+                    isExpanded: true,
                     decoration: const InputDecoration(
                       labelText: 'Gender',
                       prefixIcon: Icon(Icons.person_outline),

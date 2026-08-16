@@ -160,11 +160,15 @@ class _EmailVerificationScreenState
                           color: AppColors.primary,
                         ),
                         const SizedBox(width: 8),
-                        Text(
-                          displayEmail,
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
-                            color: AppColors.onSurface,
-                            fontSize: 14,
+                        Flexible(
+                          child: Text(
+                            displayEmail,
+                            style: AppTypography.textTheme.labelLarge?.copyWith(
+                              color: AppColors.onSurface,
+                              fontSize: 14,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],
@@ -190,8 +194,9 @@ class _EmailVerificationScreenState
                   ),
                   const SizedBox(height: 24),
                   // Resend Option
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       Text(
                         "Didn't receive the email? ",

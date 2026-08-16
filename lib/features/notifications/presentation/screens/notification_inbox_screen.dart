@@ -172,41 +172,47 @@ class NotificationInboxScreen extends ConsumerWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: () => context.pop(),
-                icon: const Icon(
-                  LucideIcons.arrowLeft,
-                  color: AppColors.onSurface,
-                ),
-                style: IconButton.styleFrom(
-                  backgroundColor: AppColors.surfaceContainerLowest,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+          Expanded(
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () => context.pop(),
+                  icon: const Icon(
+                    LucideIcons.arrowLeft,
+                    color: AppColors.onSurface,
                   ),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Notification Inbox',
-                    style: AppTypography.titleLarge.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.onSurface,
+                  style: IconButton.styleFrom(
+                    backgroundColor: AppColors.surfaceContainerLowest,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  Text(
-                    'Targeted alerts & updates',
-                    style: AppTypography.labelMedium.copyWith(
-                      color: AppColors.textSecondary,
-                    ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Notification Inbox',
+                        style: AppTypography.titleLarge.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.onSurface,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        'Targeted alerts & updates',
+                        style: AppTypography.labelMedium.copyWith(
+                          color: AppColors.textSecondary,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
           if (unreadIds.isNotEmpty && userId.isNotEmpty)
             TextButton.icon(
@@ -359,68 +365,74 @@ class NotificationInboxScreen extends ConsumerWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: badgeColor.withValues(alpha: 0.15),
-                        shape: BoxShape.circle,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: badgeColor.withValues(alpha: 0.15),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(icon, size: 20, color: badgeColor),
                       ),
-                      child: Icon(icon, size: 20, color: badgeColor),
-                    ),
-                    const SizedBox(width: 12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              item.category.toUpperCase(),
-                              style: AppTypography.labelSmall.copyWith(
-                                color: badgeColor,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 0.5,
-                              ),
-                            ),
-                            if (isHigh) ...[
-                              const SizedBox(width: 6),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 6,
-                                  vertical: 2,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: AppColors.error.withValues(
-                                    alpha: 0.15,
-                                  ),
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: Text(
-                                  item.priority.toUpperCase(),
+                            Row(
+                              children: [
+                                Text(
+                                  item.category.toUpperCase(),
                                   style: AppTypography.labelSmall.copyWith(
-                                    color: AppColors.error,
-                                    fontSize: 9,
+                                    color: badgeColor,
                                     fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.5,
                                   ),
                                 ),
+                                if (isHigh) ...[
+                                  const SizedBox(width: 6),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 6,
+                                      vertical: 2,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: AppColors.error.withValues(
+                                        alpha: 0.15,
+                                      ),
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Text(
+                                      item.priority.toUpperCase(),
+                                      style: AppTypography.labelSmall.copyWith(
+                                        color: AppColors.error,
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              item.title,
+                              style: AppTypography.titleMedium.copyWith(
+                                fontWeight: isRead
+                                    ? FontWeight.w600
+                                    : FontWeight.w800,
+                                color: AppColors.onSurface,
                               ),
-                            ],
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ],
                         ),
-                        const SizedBox(height: 2),
-                        Text(
-                          item.title,
-                          style: AppTypography.titleMedium.copyWith(
-                            fontWeight: isRead
-                                ? FontWeight.w600
-                                : FontWeight.w800,
-                            color: AppColors.onSurface,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
                 if (!isRead)
                   Container(
@@ -445,21 +457,27 @@ class NotificationInboxScreen extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    const Icon(
-                      LucideIcons.user,
-                      size: 14,
-                      color: AppColors.textSecondary,
-                    ),
-                    const SizedBox(width: 4),
-                    Text(
-                      item.sentBy,
-                      style: AppTypography.labelSmall.copyWith(
+                Expanded(
+                  child: Row(
+                    children: [
+                      const Icon(
+                        LucideIcons.user,
+                        size: 14,
                         color: AppColors.textSecondary,
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          item.sentBy,
+                          style: AppTypography.labelSmall.copyWith(
+                            color: AppColors.textSecondary,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Text(
                   _formatTimeAgo(item.sentAt),

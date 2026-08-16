@@ -234,24 +234,30 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Row(
-                                    children: [
-                                      const Icon(
-                                        LucideIcons.calendar,
-                                        size: 16,
-                                        color: AppColors.textSecondary,
-                                      ),
-                                      const SizedBox(width: 6),
-                                      Text(
-                                        data['day'] != null
-                                            ? '${data['date'] ?? ''} (${data['day']})'
-                                            : '${data['date'] ?? 'Upcoming'}',
-                                        style: AppTypography.bodySmall.copyWith(
-                                          fontWeight: FontWeight.bold,
+                                  Expanded(
+                                    child: Row(
+                                      children: [
+                                        const Icon(
+                                          LucideIcons.calendar,
+                                          size: 16,
+                                          color: AppColors.textSecondary,
                                         ),
-                                      ),
-                                    ],
+                                        const SizedBox(width: 6),
+                                        Expanded(
+                                          child: Text(
+                                            data['day'] != null
+                                                ? '${data['date'] ?? ''} (${data['day']})'
+                                                : '${data['date'] ?? 'Upcoming'}',
+                                            style: AppTypography.bodySmall.copyWith(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
+                                  const SizedBox(width: 8),
                                   Row(
                                     children: [
                                       const Icon(

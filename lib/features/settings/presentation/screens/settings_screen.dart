@@ -4,8 +4,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/services/notification_service.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import '../../../updater/data/services/version_check_service.dart';
-import '../../../updater/presentation/views/update_dialog.dart';
+import 'package:go_router/go_router.dart';
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
@@ -464,49 +463,8 @@ class SettingsScreen extends ConsumerWidget {
                           Icons.system_update_alt_rounded,
                           color: AppColors.primary,
                         ),
-                        onTap: () async {
-                          // Show loading indicator
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Row(
-                                children: [
-                                  const SizedBox(
-                                    height: 16, 
-                                    width: 16, 
-                                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)
-                                  ),
-                                  const SizedBox(width: 16),
-                                  const Text('Checking for updates...'),
-                                ],
-                              ),
-                              behavior: SnackBarBehavior.floating,
-                              duration: const Duration(seconds: 2),
-                            ),
-                          );
-                          
-                          final updater = ref.read(versionCheckServiceProvider);
-                          final result = await updater.checkForUpdates();
-                          
-                          if (context.mounted) {
-                            ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                            if (result.updateAvailable && result.releaseInfo != null) {
-                              showDialog(
-                                context: context,
-                                barrierDismissible: result.releaseInfo!.updateType != UpdateType.MANDATORY,
-                                builder: (context) => UpdateDialog(releaseInfo: result.releaseInfo!),
-                              );
-                            } else {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: const Text('You are already on the latest version!'),
-                                  behavior: SnackBarBehavior.floating,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                              );
-                            }
-                          }
+                        onTap: () {
+                          context.push('/updates');
                         },
                       );
                     }
@@ -542,12 +500,15 @@ class SettingsScreen extends ConsumerWidget {
       children: [
         Icon(icon, color: color, size: 20),
         const SizedBox(width: 10),
-        Text(
-          title.toUpperCase(),
-          style: AppTypography.textTheme.labelMedium?.copyWith(
-            fontWeight: FontWeight.w800,
-            letterSpacing: 1.2,
-            color: color,
+        Expanded(
+          child: Text(
+            title.toUpperCase(),
+            style: AppTypography.textTheme.labelMedium?.copyWith(
+              fontWeight: FontWeight.w800,
+              letterSpacing: 1.2,
+              color: color,
+            ),
+            overflow: TextOverflow.ellipsis,
           ),
         ),
       ],

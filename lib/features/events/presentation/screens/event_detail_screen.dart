@@ -339,48 +339,59 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 6,
-                            ),
-                            decoration: BoxDecoration(
-                              color: categoryColor,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  categoryIcon,
-                                  size: 14,
-                                  color: AppColors.onPrimary,
-                                ),
-                                const SizedBox(width: 6),
-                                Text(
-                                  widget.event.type.toUpperCase(),
-                                  style: AppTypography.labelSmall.copyWith(
+                          Flexible(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: categoryColor,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    categoryIcon,
+                                    size: 14,
                                     color: AppColors.onPrimary,
-                                    fontWeight: FontWeight.bold,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(width: 6),
+                                  Flexible(
+                                    child: Text(
+                                      widget.event.type.toUpperCase(),
+                                      style: AppTypography.labelSmall.copyWith(
+                                        color: AppColors.onPrimary,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 6,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColors.surfaceContainerLowest,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              '${widget.event.participantCount}/${widget.event.registrationSettings.maxParticipants} Registered',
-                              style: AppTypography.labelSmall.copyWith(
-                                color: AppColors.textPrimary,
-                                fontWeight: FontWeight.bold,
+                          const SizedBox(width: 8),
+                          Flexible(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 6,
+                              ),
+                              decoration: BoxDecoration(
+                                color: AppColors.surfaceContainerLowest,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                '${widget.event.participantCount}/${widget.event.registrationSettings.maxParticipants} Registered',
+                                style: AppTypography.labelSmall.copyWith(
+                                  color: AppColors.textPrimary,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ),
@@ -424,23 +435,27 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Organized By',
-                            style: AppTypography.labelSmall.copyWith(
-                              color: AppColors.textSecondary,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Organized By',
+                              style: AppTypography.labelSmall.copyWith(
+                                color: AppColors.textSecondary,
+                              ),
                             ),
-                          ),
-                          Text(
-                            widget.event.organizer,
-                            style: AppTypography.bodyMedium.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.onSurface,
+                            Text(
+                              widget.event.organizer,
+                              style: AppTypography.bodyMedium.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: AppColors.onSurface,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

@@ -389,7 +389,14 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               children: [
                 const Icon(Icons.location_on, color: Colors.grey, size: 20),
                 const SizedBox(width: 8),
-                Text(event.locationName, style: const TextStyle(fontSize: 16)),
+                Expanded(
+                  child: Text(
+                    event.locationName,
+                    style: const TextStyle(fontSize: 16),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 8),
@@ -636,6 +643,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
                                 ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                               Text(
                                 'CS Block • Lab 3',
@@ -643,6 +652,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                   color: Colors.white70,
                                   fontSize: 13,
                                 ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ],
                           ),

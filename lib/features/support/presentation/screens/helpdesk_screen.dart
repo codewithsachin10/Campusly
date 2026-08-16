@@ -170,7 +170,13 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                         children: [
                           const Icon(LucideIcons.mail, size: 14, color: Colors.black54),
                           const SizedBox(width: 6),
-                          Text('support@rec.edu.in | Ext: 4400 / 4401', style: AppTypography.bodySmall.copyWith(color: Colors.black87)),
+                          Flexible(
+                            child: Text(
+                              'support@rec.edu.in | Ext: 4400 / 4401', 
+                              style: AppTypography.bodySmall.copyWith(color: Colors.black87),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 6),
@@ -179,7 +185,13 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                         children: [
                           const Icon(LucideIcons.mapPin, size: 14, color: Colors.black54),
                           const SizedBox(width: 6),
-                          Text('Admin Block - Room 102', style: AppTypography.bodySmall.copyWith(color: Colors.black87)),
+                          Flexible(
+                            child: Text(
+                              'Admin Block - Room 102', 
+                              style: AppTypography.bodySmall.copyWith(color: Colors.black87),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 6),
@@ -215,6 +227,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                         Text('Issue Category', style: AppTypography.labelMedium.copyWith(color: Colors.black87)),
                         const SizedBox(height: 8),
                         DropdownButtonFormField<String>(
+                          isExpanded: true,
                           initialValue: _selectedCategory,
                           decoration: InputDecoration(
                             filled: true,

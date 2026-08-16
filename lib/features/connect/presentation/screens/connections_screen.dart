@@ -78,7 +78,7 @@ class ConnectionsScreen extends ConsumerWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(32.0),
                     child: Text(
-                      'No connections yet.\\nGo to the directory to find friends!',
+                      'No connections yet.\nGo to the directory to find friends!',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey.shade600),
                     ),

@@ -487,6 +487,8 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 4),
           Text(
@@ -501,22 +503,28 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  const Icon(
-                    Icons.schedule_rounded,
-                    size: 18,
-                    color: AppColors.onSurfaceVariant,
-                  ),
-                  const SizedBox(width: 6),
-                  Text(
-                    c.scheduleSummary,
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
+              Expanded(
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.schedule_rounded,
+                      size: 18,
                       color: AppColors.onSurfaceVariant,
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: Text(
+                        c.scheduleSummary,
+                        style: AppTypography.textTheme.bodySmall?.copyWith(
+                          color: AppColors.onSurfaceVariant,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(width: 8),
               ElevatedButton(
                 onPressed: () => _handleJoin(c),
                 style: ElevatedButton.styleFrom(

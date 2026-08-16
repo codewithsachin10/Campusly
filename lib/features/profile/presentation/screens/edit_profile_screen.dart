@@ -140,6 +140,7 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
           const SizedBox(height: 8),
           DropdownButtonFormField<String>(
             initialValue: _privacySetting,
+            isExpanded: true,
             decoration: const InputDecoration(border: OutlineInputBorder()),
             items: const [
               DropdownMenuItem(
@@ -164,6 +165,7 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
           const SizedBox(height: 8),
           DropdownButtonFormField<String>(
             initialValue: _locationVisibility,
+            isExpanded: true,
             decoration: const InputDecoration(border: OutlineInputBorder()),
             items: const [
               DropdownMenuItem(

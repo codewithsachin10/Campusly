@@ -86,26 +86,32 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               opacity: _fadeAnimation,
               child: ScaleTransition(
                 scale: _scaleAnimation,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const CampuslyLogo(
-                      size: 64,
-                      borderRadius: 16,
-                      addShadow: true,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const CampuslyLogo(
+                          size: 64,
+                          borderRadius: 16,
+                          addShadow: true,
+                        ),
+                        const SizedBox(width: 16),
+                        Text(
+                          'Campusly',
+                          style: GoogleFonts.plusJakartaSans(
+                            fontSize: 42,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: -1.5,
+                            color: AppColors.primary,
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 16),
-                    Text(
-                      'Campusly',
-                      style: GoogleFonts.plusJakartaSans(
-                        fontSize: 42,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: -1.5,
-                        color: AppColors.primary,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             );

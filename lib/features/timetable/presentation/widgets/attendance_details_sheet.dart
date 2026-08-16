@@ -6,6 +6,15 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/attendance_model.dart';
 import '../providers/attendance_provider.dart';
+import '../../domain/models/timetable_item.dart';
+import '../providers/timetable_provider.dart';
+
+class _TimelineEntry {
+  final String dateString;
+  final DateTime date;
+  final String status;
+  _TimelineEntry(this.dateString, this.date, this.status);
+}
 
 class AttendanceDetailsSheet extends ConsumerStatefulWidget {
   final String subjectCode;
@@ -59,9 +68,10 @@ class _AttendanceDetailsSheetState
             fontWeight: FontWeight.bold,
           ),
         ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
             TextField(
               controller: presentCtrl,
               keyboardType: TextInputType.number,
@@ -79,7 +89,8 @@ class _AttendanceDetailsSheetState
                 border: OutlineInputBorder(),
               ),
             ),
-          ],
+            ],
+          ),
         ),
         actions: [
           TextButton(
@@ -115,6 +126,124 @@ class _AttendanceDetailsSheetState
     );
   }
 
+  int _dayOfWeekToInt(String day) {
+    switch (day.trim().toLowerCase()) {
+      case 'mon': return DateTime.monday;
+      case 'tue': return DateTime.tuesday;
+      case 'wed': return DateTime.wednesday;
+      case 'thu': return DateTime.thursday;
+      case 'fri': return DateTime.friday;
+      case 'sat': return DateTime.saturday;
+      case 'sun': return DateTime.sunday;
+      default: return DateTime.monday;
+    }
+  }
+
+  List<_TimelineEntry> _generateTimeline(AttendanceModel model, List<TimetableItem> schedule) {
+    final subjectSchedule = schedule.where((item) => 
+      !item.isBreak && 
+      (item.subjectCode == widget.subjectCode || item.title == widget.subjectName)
+    ).toList();
+    
+    if (subjectSchedule.isEmpty) {
+      return model.history.map((log) {
+        final date = DateTime.tryParse(log.dateString) ?? DateTime.now();
+        return _TimelineEntry(log.dateString, date, log.status);
+      }).toList()..sort((a, b) => b.date.compareTo(a.date));
+    }
+
+    final targetWeekdays = subjectSchedule.map((item) => _dayOfWeekToInt(item.dayOfWeek)).toSet();
+
+    final List<_TimelineEntry> timeline = [];
+    final today = DateTime.now();
+    // Use Midnight today for cleaner math
+    final todayMidnight = DateTime(today.year, today.month, today.day);
+    final startDate = todayMidnight.subtract(const Duration(days: 30));
+    final endDate = todayMidnight.add(const Duration(days: 14));
+
+    for (int i = 0; i <= endDate.difference(startDate).inDays; i++) {
+      final currentDate = startDate.add(Duration(days: i));
+      if (targetWeekdays.contains(currentDate.weekday)) {
+        final dateString = currentDate.toIso8601String().split('T')[0];
+        final existingLogs = model.history.where((log) => log.dateString == dateString).toList();
+        final status = existingLogs.isNotEmpty ? existingLogs.first.status : 'not marked';
+        timeline.add(_TimelineEntry(dateString, currentDate, status));
+      }
+    }
+
+    // Add any explicitly logged dates that might fall outside this range or on non-scheduled days
+    for (final log in model.history) {
+      if (!timeline.any((entry) => entry.dateString == log.dateString)) {
+         final date = DateTime.tryParse(log.dateString) ?? DateTime.now();
+         timeline.add(_TimelineEntry(log.dateString, date, log.status));
+      }
+    }
+
+    timeline.sort((a, b) => b.date.compareTo(a.date));
+    return timeline;
+  }
+
+  void _showMarkAttendanceDialog(AttendanceModel current, String dateString) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppColors.surface,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        title: Text(
+          'Mark Attendance for $dateString',
+          style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(LucideIcons.checkCircle, color: AppColors.success),
+              title: const Text('Present'),
+              onTap: () {
+                _markStatus(dateString, 'present');
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(LucideIcons.xCircle, color: AppColors.error),
+              title: const Text('Absent'),
+              onTap: () {
+                _markStatus(dateString, 'absent');
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(LucideIcons.slash, color: AppColors.warning),
+              title: const Text('Cancelled'),
+              onTap: () {
+                _markStatus(dateString, 'cancelled');
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _markStatus(String dateString, String status) {
+    final user = ref.read(authControllerProvider).value;
+    if (user != null) {
+      final key = AttendanceQueryKey(
+        userId: user.id,
+        subjectCode: widget.subjectCode,
+        subjectName: widget.subjectName,
+      );
+      ref.read(attendanceProvider(key).notifier).markStatus(status, dateString: dateString);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(authControllerProvider).value;
@@ -126,6 +255,7 @@ class _AttendanceDetailsSheetState
       subjectName: widget.subjectName,
     );
     final asyncAttendance = ref.watch(attendanceProvider(key));
+    final asyncSchedule = ref.watch(weeklyScheduleProvider);
 
     return Container(
       decoration: const BoxDecoration(
@@ -212,6 +342,9 @@ class _AttendanceDetailsSheetState
                 final pct = model.percentage;
                 final isRisk = model.willDropBelowIfMissedNext || pct < 75.0;
                 final safeBunks = model.safeBunkClasses;
+
+                final scheduleList = asyncSchedule.value ?? [];
+                final timeline = _generateTimeline(model, scheduleList);
 
                 return SingleChildScrollView(
                   child: Column(
@@ -352,13 +485,13 @@ class _AttendanceDetailsSheetState
 
                       // History Log
                       Text(
-                        'Recent Class Log Details',
+                        'Class Attendance History',
                         style: AppTypography.titleSmall.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 12),
-                      if (model.history.isEmpty)
+                      if (timeline.isEmpty)
                         Container(
                           padding: const EdgeInsets.all(24),
                           alignment: Alignment.center,
@@ -367,7 +500,7 @@ class _AttendanceDetailsSheetState
                             borderRadius: BorderRadius.circular(16),
                           ),
                           child: Text(
-                            'No dates marked yet. Tap Present or Absent above when your class finishes!',
+                            'No dates marked or scheduled.',
                             textAlign: TextAlign.center,
                             style: AppTypography.bodyMedium.copyWith(
                               color: AppColors.textSecondary,
@@ -378,64 +511,91 @@ class _AttendanceDetailsSheetState
                         ListView.builder(
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
-                          itemCount: model.history.length,
+                          itemCount: timeline.length,
                           itemBuilder: (context, idx) {
-                            final log = model.history[idx];
-                            final isP = log.status == 'present';
-                            final isA = log.status == 'absent';
-                            return Container(
-                              margin: const EdgeInsets.only(bottom: 8),
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 12,
-                              ),
-                              decoration: BoxDecoration(
-                                color: AppColors.background,
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(color: AppColors.border),
-                              ),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    log.dateString,
-                                    style: AppTypography.bodyMedium.copyWith(
-                                      fontWeight: FontWeight.w600,
+                            final entry = timeline[idx];
+                            final isP = entry.status == 'present';
+                            final isA = entry.status == 'absent';
+                            final isC = entry.status == 'cancelled';
+                            
+                            final nowStr = DateTime.now().toIso8601String().split('T')[0];
+                            final isStrictlyFuture = entry.dateString.compareTo(nowStr) > 0;
+
+                            return InkWell(
+                              onTap: () {
+                                if (isStrictlyFuture) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text('You can only change attendance for today or past classes.'),
+                                      behavior: SnackBarBehavior.floating,
                                     ),
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 4,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color:
-                                          (isP
-                                                  ? AppColors.success
-                                                  : isA
-                                                  ? AppColors.error
-                                                  : AppColors.warning)
-                                              .withValues(alpha: 0.15),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    child: Text(
-                                      isP
-                                          ? 'Present ✅'
-                                          : isA
-                                          ? 'Absent ❌'
-                                          : 'Cancelled 🚫',
-                                      style: AppTypography.labelSmall.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: isP
-                                            ? AppColors.success
-                                            : isA
-                                            ? AppColors.error
-                                            : AppColors.warning,
+                                  );
+                                } else {
+                                  _showMarkAttendanceDialog(model, entry.dateString);
+                                }
+                              },
+                              borderRadius: BorderRadius.circular(12),
+                              child: Container(
+                                margin: const EdgeInsets.only(bottom: 8),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 12,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: isStrictlyFuture ? AppColors.background.withValues(alpha: 0.5) : AppColors.background,
+                                  borderRadius: BorderRadius.circular(12),
+                                  border: Border.all(color: AppColors.border),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      entry.dateString,
+                                      style: AppTypography.bodyMedium.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                        color: isStrictlyFuture ? AppColors.textSecondary : AppColors.textPrimary,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 10,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            (isP
+                                                    ? AppColors.success
+                                                    : isA
+                                                    ? AppColors.error
+                                                    : isC 
+                                                    ? AppColors.warning
+                                                    : Colors.grey)
+                                                .withValues(alpha: 0.15),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Text(
+                                        isP
+                                            ? 'Present ✅'
+                                            : isA
+                                            ? 'Absent ❌'
+                                            : isC
+                                            ? 'Cancelled 🚫'
+                                            : 'Not Marked ⏳',
+                                        style: AppTypography.labelSmall.copyWith(
+                                          fontWeight: FontWeight.bold,
+                                          color: isP
+                                              ? AppColors.success
+                                              : isA
+                                              ? AppColors.error
+                                              : isC
+                                              ? AppColors.warning
+                                              : Colors.grey.shade700,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           },
@@ -465,11 +625,14 @@ class _AttendanceDetailsSheetState
       ),
       child: Column(
         children: [
-          Text(
-            value,
-            style: AppTypography.headlineMedium.copyWith(
-              color: color,
-              fontWeight: FontWeight.bold,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              value,
+              style: AppTypography.headlineMedium.copyWith(
+                color: color,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: 4),

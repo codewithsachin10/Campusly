@@ -141,9 +141,8 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                     const SizedBox(height: 32),
                     
                     // Primary Google Sign In Button
-                    SizedBox(
-                      width: double.infinity,
-                      height: 54,
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(minWidth: double.infinity, minHeight: 54),
                       child: OutlinedButton.icon(
                         onPressed: isLoading ? null : _handleGoogleSignIn,
                         icon: const GoogleLogo(size: 24),
@@ -155,6 +154,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                           ),
                         ),
                         style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                           backgroundColor: Colors.white,
                           side: BorderSide(color: AppColors.outlineVariant),
                           shape: RoundedRectangleBorder(

@@ -70,9 +70,12 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
           children: [
             Icon(LucideIcons.checkCircle2, color: Colors.white),
             SizedBox(width: 12),
-            Text(
-              'Profile details updated successfully!',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Expanded(
+              child: Text(
+                'Profile details updated successfully!',
+                style: TextStyle(fontWeight: FontWeight.bold),
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),
@@ -180,11 +183,14 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                           size: 20,
                         ),
                         const SizedBox(width: 10),
-                        Text(
-                          'Verified Institutional Account',
-                          style: AppTypography.labelLarge.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.primary,
+                        Expanded(
+                          child: Text(
+                            'Verified Institutional Account',
+                            style: AppTypography.labelLarge.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.primary,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],
@@ -291,11 +297,17 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
             color: AppColors.textSecondary,
           ),
         ),
-        Text(
-          value,
-          style: AppTypography.bodySmall.copyWith(
-            fontWeight: FontWeight.bold,
-            color: AppColors.onSurface,
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            value,
+            textAlign: TextAlign.end,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: AppTypography.bodySmall.copyWith(
+              fontWeight: FontWeight.bold,
+              color: AppColors.onSurface,
+            ),
           ),
         ),
       ],

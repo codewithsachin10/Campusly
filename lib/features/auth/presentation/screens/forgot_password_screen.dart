@@ -70,7 +70,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
             child: Container(
               width: double.infinity,
               constraints: const BoxConstraints(maxWidth: 480),
-              padding: const EdgeInsets.all(32.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 28.0),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
                 borderRadius: BorderRadius.circular(24),

@@ -139,6 +139,8 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
                     return CheckboxListTile(
                       title: Text(
                         'User $friendId',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ), // Real app should join with user profiles
                       value: isSelected,
                       onChanged: (bool? value) {

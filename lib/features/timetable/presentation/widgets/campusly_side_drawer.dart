@@ -379,6 +379,19 @@ class CampuslySideDrawer extends ConsumerWidget {
                     context.push('/about');
                   },
                 ),
+                const SizedBox(height: 4),
+
+                // 11. Updates Center
+                _buildMenuItem(
+                  context,
+                  icon: LucideIcons.downloadCloud,
+                  iconColor: AppColors.primary,
+                  title: 'Updates Center',
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    context.push('/updates');
+                  },
+                ),
               ],
             ),
           ),

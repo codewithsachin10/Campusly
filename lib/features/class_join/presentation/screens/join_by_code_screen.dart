@@ -810,10 +810,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                         size: 20,
                       ),
                       const SizedBox(width: 8),
-                      Text(
-                        'Need help? Contact your department administrator.',
-                        style: AppTypography.textTheme.bodySmall?.copyWith(
-                          color: AppColors.onSurfaceVariant,
+                      Flexible(
+                        child: Text(
+                          'Need help? Contact your department administrator.',
+                          style: AppTypography.textTheme.bodySmall?.copyWith(
+                            color: AppColors.onSurfaceVariant,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],

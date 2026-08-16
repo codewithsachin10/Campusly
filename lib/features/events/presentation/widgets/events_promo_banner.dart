@@ -133,7 +133,7 @@ class _EventsPromoBannerState extends ConsumerState<EventsPromoBanner> {
                   final String title = slide['title'] as String;
 
                   return Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 32),
+                    padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -162,6 +162,7 @@ class _EventsPromoBannerState extends ConsumerState<EventsPromoBanner> {
                         // Title & Subtitle
                         Expanded(
                           child: Column(
+                            mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -173,6 +174,8 @@ class _EventsPromoBannerState extends ConsumerState<EventsPromoBanner> {
                                   letterSpacing: 1.6,
                                   fontSize: 11,
                                 ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                               const SizedBox(height: 4),
                               Text(

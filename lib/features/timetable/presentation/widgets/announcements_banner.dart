@@ -36,9 +36,10 @@ class AnnouncementsBanner extends ConsumerWidget {
               ),
             ],
           ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
               TextField(
                 controller: titleCtrl,
                 decoration: const InputDecoration(
@@ -64,6 +65,7 @@ class AnnouncementsBanner extends ConsumerWidget {
                 activeColor: AppColors.primary,
               ),
             ],
+            ),
           ),
           actions: [
             TextButton(
@@ -112,29 +114,35 @@ class AnnouncementsBanner extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: AppColors.warning.withValues(alpha: 0.15),
-                        shape: BoxShape.circle,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: AppColors.warning.withValues(alpha: 0.15),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          LucideIcons.bellRing,
+                          color: AppColors.warning,
+                          size: 18,
+                        ),
                       ),
-                      child: const Icon(
-                        LucideIcons.bellRing,
-                        color: AppColors.warning,
-                        size: 18,
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          'Live Campus & Class Notices',
+                          style: AppTypography.titleSmall.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      'Live Campus & Class Notices',
-                      style: AppTypography.titleSmall.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
+                const SizedBox(width: 8),
                 TextButton.icon(
                   onPressed: () => _showPostDialog(context, ref),
                   icon: const Icon(
@@ -205,26 +213,31 @@ class AnnouncementsBanner extends ConsumerWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(
-                              children: [
-                                if (isHigh) ...[
-                                  const Icon(
-                                    LucideIcons.alertTriangle,
-                                    color: AppColors.warning,
-                                    size: 18,
+                            Expanded(
+                              child: Row(
+                                children: [
+                                  if (isHigh) ...[
+                                    const Icon(
+                                      LucideIcons.alertTriangle,
+                                      color: AppColors.warning,
+                                      size: 18,
+                                    ),
+                                    const SizedBox(width: 6),
+                                  ],
+                                  Expanded(
+                                    child: Text(
+                                      ann.title,
+                                      style: AppTypography.titleSmall.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: isHigh
+                                            ? AppColors.warning
+                                            : AppColors.textPrimary,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   ),
-                                  const SizedBox(width: 6),
                                 ],
-                                Text(
-                                  ann.title,
-                                  style: AppTypography.titleSmall.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: isHigh
-                                        ? AppColors.warning
-                                        : AppColors.textPrimary,
-                                  ),
-                                ),
-                              ],
+                              ),
                             ),
                             IconButton(
                               onPressed: () => ref

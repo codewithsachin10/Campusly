@@ -82,7 +82,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: GradientText(
-          'Ticket #${widget.ticket.ticketNumber.substring(0, 7)}',
+          'Ticket #${widget.ticket.ticketNumber.length > 7 ? widget.ticket.ticketNumber.substring(0, 7) : widget.ticket.ticketNumber}',
           gradient: const LinearGradient(
             colors: [Color(0xFF4285F4), Color(0xFFE91E63)],
           ),
@@ -180,7 +180,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(studentName, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold)),
+                              Text(studentName, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                               Text('Student', style: TextStyle(color: const Color(0xFF7E57C2), fontSize: 12)),
                             ],
                           ),
@@ -196,7 +196,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Roll', style: TextStyle(color: AppColors.textSecondary, fontSize: 12)),
-                              Text(rollNo, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold)),
+                              Text(rollNo, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                             ],
                           ),
                         ),
@@ -325,13 +325,17 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                                                 Row(
                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
-                                                    Text(
-                                                      isAdmin ? 'Admin (IT Support)' : 'Ticket created by System',
-                                                      style: TextStyle(
-                                                        color: isAdmin ? const Color(0xFF7E57C2) : AppColors.textPrimary,
-                                                        fontWeight: FontWeight.bold,
+                                                    Expanded(
+                                                      child: Text(
+                                                        isAdmin ? 'Admin (IT Support)' : 'Ticket created by System',
+                                                        style: TextStyle(
+                                                          color: isAdmin ? const Color(0xFF7E57C2) : AppColors.textPrimary,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                        overflow: TextOverflow.ellipsis,
                                                       ),
                                                     ),
+                                                    const SizedBox(width: 8),
                                                     Text(
                                                       _timeAgo(DateTime.parse(msg['created_at'])),
                                                       style: TextStyle(color: AppColors.textSecondary, fontSize: 10),

@@ -297,6 +297,8 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
                 Text(
                   '${student.department ?? "Dept"} - ${student.year ?? "Year"} - ${student.section ?? "Sec"}',
                   style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),

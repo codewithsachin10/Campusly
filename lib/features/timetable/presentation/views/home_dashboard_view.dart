@@ -584,35 +584,38 @@ class HomeDashboardView extends ConsumerWidget {
                                 ),
                               ),
                               const SizedBox(width: 14),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    isToday && diffSecs > 0
-                                        ? 'NEXT CLASS IN'
-                                        : 'UPCOMING CLASS ON',
-                                    style: AppTypography.textTheme.labelSmall
-                                        ?.copyWith(
-                                          color: AppColors.primary.withValues(
-                                            alpha: 0.7,
+                              Flexible(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      isToday && diffSecs > 0
+                                          ? 'NEXT CLASS IN'
+                                          : 'UPCOMING CLASS ON',
+                                      style: AppTypography.textTheme.labelSmall
+                                          ?.copyWith(
+                                            color: AppColors.primary.withValues(
+                                              alpha: 0.7,
+                                            ),
+                                            fontWeight: FontWeight.bold,
+                                            letterSpacing: 1.0,
                                           ),
-                                          fontWeight: FontWeight.bold,
-                                          letterSpacing: 1.0,
-                                        ),
-                                  ),
-                                  const SizedBox(height: 2),
-                                  Text(
-                                    timerOrDateDisplay,
-                                    style: AppTypography.textTheme.headlineSmall
-                                        ?.copyWith(
-                                          color: AppColors.primary,
-                                          fontWeight: FontWeight.w800,
-                                          fontSize: (isToday && diffSecs > 0)
-                                              ? 22
-                                              : 16,
-                                        ),
-                                  ),
-                                ],
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      timerOrDateDisplay,
+                                      style: AppTypography.textTheme.headlineSmall
+                                          ?.copyWith(
+                                            color: AppColors.primary,
+                                            fontWeight: FontWeight.w800,
+                                            fontSize: (isToday && diffSecs > 0)
+                                                ? 22
+                                                : 16,
+                                          ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -687,27 +690,30 @@ class HomeDashboardView extends ConsumerWidget {
                             ),
                           ),
                           const SizedBox(width: 16),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '$classCount',
-                                style: AppTypography.textTheme.headlineLarge
-                                    ?.copyWith(
-                                      fontSize: 28,
-                                      color: AppColors.onSurface,
-                                      fontWeight: FontWeight.w800,
-                                    ),
-                              ),
-                              const SizedBox(height: 2),
-                              Text(
-                                'Classes',
-                                style: AppTypography.textTheme.labelMedium
-                                    ?.copyWith(
-                                      color: AppColors.onSurfaceVariant,
-                                    ),
-                              ),
-                            ],
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '$classCount',
+                                  style: AppTypography.textTheme.headlineLarge
+                                      ?.copyWith(
+                                        fontSize: 28,
+                                        color: AppColors.onSurface,
+                                        fontWeight: FontWeight.w800,
+                                      ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  'Classes',
+                                  style: AppTypography.textTheme.labelMedium
+                                      ?.copyWith(
+                                        color: AppColors.onSurfaceVariant,
+                                      ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -749,27 +755,30 @@ class HomeDashboardView extends ConsumerWidget {
                             ),
                           ),
                           const SizedBox(width: 16),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '$breakCount',
-                                style: AppTypography.textTheme.headlineLarge
-                                    ?.copyWith(
-                                      fontSize: 28,
-                                      color: AppColors.onSurface,
-                                      fontWeight: FontWeight.w800,
-                                    ),
-                              ),
-                              const SizedBox(height: 2),
-                              Text(
-                                'Free Periods',
-                                style: AppTypography.textTheme.labelMedium
-                                    ?.copyWith(
-                                      color: AppColors.onSurfaceVariant,
-                                    ),
-                              ),
-                            ],
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '$breakCount',
+                                  style: AppTypography.textTheme.headlineLarge
+                                      ?.copyWith(
+                                        fontSize: 28,
+                                        color: AppColors.onSurface,
+                                        fontWeight: FontWeight.w800,
+                                      ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  'Free Periods',
+                                  style: AppTypography.textTheme.labelMedium
+                                      ?.copyWith(
+                                        color: AppColors.onSurfaceVariant,
+                                      ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -931,13 +940,17 @@ class HomeDashboardView extends ConsumerWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        item.title,
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.onSurfaceVariant,
+                      Expanded(
+                        child: Text(
+                          item.title,
+                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.onSurfaceVariant,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
+                      const SizedBox(width: 8),
                       Text(
                         item.timeRange,
                         style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -1272,10 +1285,11 @@ class HomeDashboardView extends ConsumerWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(24.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                 // Top row
                 Row(
                   children: [
@@ -1369,18 +1383,20 @@ class HomeDashboardView extends ConsumerWidget {
                           child: Icon(LucideIcons.mapPin, size: 16, color: Colors.grey.shade700),
                         ),
                         const SizedBox(width: 12),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'PREVIOUS',
-                              style: TextStyle(fontSize: 11, color: Colors.grey.shade500, fontWeight: FontWeight.w600, letterSpacing: 0.5),
-                            ),
-                            Text(
-                              oldVenue!,
-                              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xFF1C1C1E)),
-                            ),
-                          ],
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'PREVIOUS',
+                                style: TextStyle(fontSize: 11, color: Colors.grey.shade500, fontWeight: FontWeight.w600, letterSpacing: 0.5),
+                              ),
+                              Text(
+                                oldVenue!,
+                                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xFF1C1C1E)),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -1433,19 +1449,21 @@ class HomeDashboardView extends ConsumerWidget {
                                     child: const Icon(LucideIcons.mapPin, size: 16, color: Color(0xFFFF9500)),
                                   ),
                                   const SizedBox(width: 12),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Text(
-                                        'NEW VENUE',
-                                        style: TextStyle(fontSize: 11, color: Color(0xFFE57E00), fontWeight: FontWeight.bold, letterSpacing: 0.5),
-                                      ),
-                                      Text(
-                                        newVenue!,
-                                        style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1C1C1E)),
-                                      ),
-                                    ],
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Text(
+                                          'NEW VENUE',
+                                          style: TextStyle(fontSize: 11, color: Color(0xFFE57E00), fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                                        ),
+                                        Text(
+                                          newVenue!,
+                                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1C1C1E)),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1532,8 +1550,9 @@ class HomeDashboardView extends ConsumerWidget {
               ],
             ),
           ),
-        );
-      },
-    );
-  }
+        ),
+      );
+    },
+  );
+}
 }

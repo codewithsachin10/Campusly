@@ -113,7 +113,7 @@ class CurriculumScreen extends ConsumerWidget {
                         crossAxisCount: 2,
                         mainAxisSpacing: 12,
                         crossAxisSpacing: 12,
-                        childAspectRatio: 1.8,
+                        childAspectRatio: 1.4,
                         children: [
                           _buildStatCard(totalCredits.toString().replaceAll('.0', ''), 'Credits', Colors.blue.shade700),
                           _buildStatCard(subjects.length.toString(), 'Courses', Colors.blue.shade700),
@@ -318,12 +318,15 @@ class CurriculumScreen extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Semester $semester',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              Expanded(
+                child: Text(
+                  'Semester $semester',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               RichText(

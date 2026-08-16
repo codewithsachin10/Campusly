@@ -149,6 +149,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                   children: [
                     Expanded(
                       child: DropdownButtonFormField<String>(
+                        isExpanded: true,
                         initialValue: _selectedVisibility,
                         decoration: const InputDecoration(
                           labelText: 'Who can see',
@@ -158,7 +159,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                             .map(
                               (vis) => DropdownMenuItem(
                                 value: vis,
-                                child: Text(vis),
+                                child: Text(vis, overflow: TextOverflow.ellipsis),
                               ),
                             )
                             .toList(),
@@ -169,6 +170,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                     const SizedBox(width: 12),
                     Expanded(
                       child: DropdownButtonFormField<String>(
+                        isExpanded: true,
                         initialValue: _selectedDuration,
                         decoration: const InputDecoration(
                           labelText: 'Duration',
@@ -178,7 +180,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                             .map(
                               (dur) => DropdownMenuItem(
                                 value: dur,
-                                child: Text(dur),
+                                child: Text(dur, overflow: TextOverflow.ellipsis),
                               ),
                             )
                             .toList(),
@@ -297,7 +299,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                                 Text(
                                   p['userId'] == user?.id
                                       ? 'You'
-                                      : 'User ${p['userId'].substring(0, 4)}',
+                                      : 'User ${p['userId'].toString().length >= 4 ? p['userId'].toString().substring(0, 4) : p['userId']}',
                                 ),
                               ],
                             ),

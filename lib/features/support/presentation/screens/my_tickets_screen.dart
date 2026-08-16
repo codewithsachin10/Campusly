@@ -153,7 +153,7 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Text(
-                                    ticket.ticketNumber.substring(0, 7),
+                                    ticket.ticketNumber.length > 7 ? ticket.ticketNumber.substring(0, 7) : ticket.ticketNumber,
                                     style: TextStyle(
                                       color: AppColors.primary,
                                       fontWeight: FontWeight.w600,
@@ -168,6 +168,8 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                             Text(
                               ticket.subject,
                               style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
                             ),
                             const SizedBox(height: 8),
                             Text(

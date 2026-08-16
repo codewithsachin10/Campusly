@@ -240,7 +240,7 @@ class EventsHomeScreen extends ConsumerWidget {
 
   Widget _buildCategorySelector(WidgetRef ref, String activeCategory) {
     return SizedBox(
-      height: 40,
+      height: 46,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -456,6 +456,7 @@ class EventsHomeScreen extends ConsumerWidget {
                   Positioned(
                     bottom: 10,
                     left: 14,
+                    right: 14,
                     child: Row(
                       children: [
                         const Icon(
@@ -464,11 +465,15 @@ class EventsHomeScreen extends ConsumerWidget {
                           color: AppColors.textSecondary,
                         ),
                         const SizedBox(width: 6),
-                        Text(
-                          event.organizer,
-                          style: AppTypography.labelMedium.copyWith(
-                            color: AppColors.textSecondary,
-                            fontWeight: FontWeight.w600,
+                        Expanded(
+                          child: Text(
+                            event.organizer,
+                            style: AppTypography.labelMedium.copyWith(
+                              color: AppColors.textSecondary,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],
@@ -501,11 +506,15 @@ class EventsHomeScreen extends ConsumerWidget {
                         color: AppColors.primary,
                       ),
                       const SizedBox(width: 6),
-                      Text(
-                        '${event.date} • ${event.startTime} - ${event.endTime}',
-                        style: AppTypography.bodySmall.copyWith(
-                          color: AppColors.textPrimary,
-                          fontWeight: FontWeight.w600,
+                      Expanded(
+                        child: Text(
+                          '${event.date} • ${event.startTime} - ${event.endTime}',
+                          style: AppTypography.bodySmall.copyWith(
+                            color: AppColors.textPrimary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],
@@ -540,24 +549,32 @@ class EventsHomeScreen extends ConsumerWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: [
-                          const Icon(
-                            LucideIcons.users,
-                            size: 15,
-                            color: AppColors.textSecondary,
-                          ),
-                          const SizedBox(width: 6),
-                          Text(
-                            '${event.participantCount}/${event.registrationSettings.maxParticipants} Registered',
-                            style: AppTypography.labelSmall.copyWith(
+                      Expanded(
+                        child: Row(
+                          children: [
+                            const Icon(
+                              LucideIcons.users,
+                              size: 15,
                               color: AppColors.textSecondary,
-                              fontWeight: FontWeight.bold,
                             ),
-                          ),
-                        ],
+                            const SizedBox(width: 6),
+                            Flexible(
+                              child: Text(
+                                '${event.participantCount}/${event.registrationSettings.maxParticipants} Registered',
+                                style: AppTypography.labelSmall.copyWith(
+                                  color: AppColors.textSecondary,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
+                      const SizedBox(width: 8),
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
                             isRegistered ? 'View Pass' : 'View Details',

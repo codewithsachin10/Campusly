@@ -92,26 +92,30 @@ class SubjectDetailPage extends ConsumerWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 6,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Text(
-                          (item.subjectCode != null &&
-                                  item.subjectCode!.isNotEmpty)
-                              ? item.subjectCode!
-                              : 'SUBJECT',
-                          style: AppTypography.labelMedium.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                      Flexible(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            (item.subjectCode != null &&
+                                    item.subjectCode!.isNotEmpty)
+                                ? item.subjectCode!
+                                : 'SUBJECT',
+                            style: AppTypography.labelMedium.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ),
+                      const SizedBox(width: 8),
                       Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 12,

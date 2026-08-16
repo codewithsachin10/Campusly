@@ -27,12 +27,15 @@ class ProfileView extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Student Profile',
-                style: AppTypography.textTheme.headlineLarge?.copyWith(
-                  fontSize: 32,
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.onSurface,
+              Expanded(
+                child: Text(
+                  'Student Profile',
+                  style: AppTypography.textTheme.headlineLarge?.copyWith(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.onSurface,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               IconButton(
@@ -189,47 +192,49 @@ class ProfileView extends ConsumerWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryContainer,
-                            borderRadius: BorderRadius.circular(12),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: AppColors.primaryContainer,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Icon(
+                        Icons.class_rounded,
+                        color: AppColors.primary,
+                        size: 22,
+                      ),
+                    ),
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'ENROLLED ACADEMIC SECTION',
+                            style: AppTypography.textTheme.labelSmall
+                                ?.copyWith(
+                                  color: AppColors.onSurfaceVariant,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.0,
+                                ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          child: const Icon(
-                            Icons.class_rounded,
-                            color: AppColors.primary,
-                            size: 22,
+                          const SizedBox(height: 2),
+                          Text(
+                            currentClass != null
+                                ? '${currentClass.name} · ${currentClass.section}'
+                                : 'No active class enrolled',
+                            style: AppTypography.textTheme.titleMedium
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.onSurface,
+                                ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                        ),
-                        const SizedBox(width: 14),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'ENROLLED ACADEMIC SECTION',
-                              style: AppTypography.textTheme.labelSmall
-                                  ?.copyWith(
-                                    color: AppColors.onSurfaceVariant,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.0,
-                                  ),
-                            ),
-                            const SizedBox(height: 2),
-                            Text(
-                              currentClass != null
-                                  ? '${currentClass.name} · ${currentClass.section}'
-                                  : 'No active class enrolled',
-                              style: AppTypography.textTheme.titleMedium
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: AppColors.onSurface,
-                                  ),
-                            ),
-                          ],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -246,11 +251,14 @@ class ProfileView extends ConsumerWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Invite Code: ${currentClass?.code ?? "Not enrolled"}',
-                        style: AppTypography.textTheme.labelLarge?.copyWith(
-                          fontWeight: FontWeight.w800,
-                          color: AppColors.primary,
+                      Expanded(
+                        child: Text(
+                          'Invite Code: ${currentClass?.code ?? "Not enrolled"}',
+                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                            fontWeight: FontWeight.w800,
+                            color: AppColors.primary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       if (currentClass != null)
@@ -368,7 +376,7 @@ class ProfileView extends ConsumerWidget {
             physics: const NeverScrollableScrollPhysics(),
             crossAxisSpacing: 14,
             mainAxisSpacing: 14,
-            childAspectRatio: 1.4,
+            childAspectRatio: 1.15,
             children: [
               _buildStatCard(
                 icon: Icons.fact_check_rounded,
@@ -556,7 +564,7 @@ class ProfileView extends ConsumerWidget {
     required String subtitle,
   }) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
         borderRadius: BorderRadius.circular(20),
@@ -579,11 +587,15 @@ class ProfileView extends ConsumerWidget {
                 ),
                 child: Icon(icon, color: color, size: 20),
               ),
-              Text(
-                value,
-                style: AppTypography.textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.onSurface,
+              const SizedBox(width: 8),
+              Flexible(
+                child: Text(
+                  value,
+                  style: AppTypography.textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.onSurface,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
