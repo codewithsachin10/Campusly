@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Smartphone, ShieldCheck, CheckCircle2, HelpCircle, Mail, Calendar, Users, Bell, Star } from "lucide-react";
+import { Download, Smartphone, ShieldCheck, CheckCircle2, HelpCircle, Mail, Calendar, Users, Bell, Star, AlertCircle, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { marketingQueries, testimonialsQueries, api } from "@/lib/services";
+import { toast } from "sonner";
 import {
   Accordion,
   AccordionContent,
@@ -19,17 +20,29 @@ function DownloadLandingPage() {
   const CURRENT_VERSION = "v1.0.2 (Beta)";
   const RELEASE_DATE = "August 20, 2026";
   const FILE_SIZE = "24.5 MB";
+  const [isDownloading, setIsDownloading] = useState(false);
 
-  const { data: downloadCount = 0 } = useQuery(marketingQueries.downloads());
-  const { data: testimonials = [] } = useQuery(testimonialsQueries.publicList());
+  const { data: downloadCount = 0, isLoading: countLoading, isError: countError } = useQuery(marketingQueries.downloads());
+  const { data: testimonials = [], isError: testimonialsError } = useQuery(testimonialsQueries.publicList());
 
   const trackDownload = useMutation({
     mutationFn: () => api.marketing.trackDownload(navigator.userAgent),
+    onError: () => {
+      // We don't necessarily want to block the download if tracking fails, but we can log it.
+      console.error("Failed to track download analytics.");
+    }
   });
 
   const handleDownload = () => {
-    trackDownload.mutate();
-    // Proceed with the default anchor download behavior
+    setIsDownloading(true);
+    trackDownload.mutate(undefined, {
+      onSettled: () => {
+        setIsDownloading(false);
+        toast.success("Download started!", {
+          description: "Follow the installation guide below once it finishes."
+        });
+      }
+    });
   };
 
   return (
@@ -50,7 +63,7 @@ function DownloadLandingPage() {
             onClick={handleDownload}
             className="hidden sm:flex items-center gap-2 bg-zinc-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors shadow-sm"
           >
-            <Download className="w-4 h-4" />
+            {isDownloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
             Download APK
           </a>
         </div>
@@ -104,7 +117,7 @@ function DownloadLandingPage() {
                 onClick={handleDownload}
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20"
               >
-                <Download className="w-5 h-5" />
+                {isDownloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Download className="w-5 h-5" />}
                 Download App (APK)
               </a>
               <div className="flex flex-col items-center sm:items-start text-sm text-zinc-500 px-4">
@@ -122,9 +135,30 @@ function DownloadLandingPage() {
             >
               <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Secure Download</div>
               <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-blue-500" /> Official College App</div>
-              <div className="flex items-center gap-2 font-semibold text-zinc-800 bg-zinc-100 px-3 py-1.5 rounded-lg">
-                <Download className="w-4 h-4" /> {downloadCount.toLocaleString()}+ Downloads
-              </div>
+            </motion.div>
+
+            {/* Real-time Analytics Block */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mt-12 inline-flex flex-col items-center p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 min-w-[280px]"
+            >
+              <p className="text-zinc-500 font-medium mb-1 uppercase tracking-wider text-xs">Total Official Downloads</p>
+              {countError ? (
+                <div className="flex items-center gap-2 text-red-500 text-sm mt-2">
+                  <AlertCircle className="w-4 h-4" /> Failed to load live analytics
+                </div>
+              ) : countLoading ? (
+                <div className="flex items-center justify-center h-12">
+                  <Loader2 className="w-6 h-6 animate-spin text-zinc-300" />
+                </div>
+              ) : (
+                <div className="text-5xl font-black text-zinc-900 tabular-nums tracking-tight flex items-center gap-3">
+                  {downloadCount.toLocaleString()}
+                  <Download className="w-8 h-8 text-blue-200" />
+                </div>
+              )}
             </motion.div>
           </div>
         </section>
@@ -164,7 +198,14 @@ function DownloadLandingPage() {
         </section>
 
         {/* Testimonials */}
-        {testimonials.length > 0 && (
+        {testimonialsError ? (
+          <section className="py-24 bg-white border-t border-zinc-100">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 text-center text-red-500 flex flex-col items-center">
+              <AlertCircle className="w-8 h-8 mb-4 opacity-50" />
+              <p>Failed to load student testimonials. Please try again later.</p>
+            </div>
+          </section>
+        ) : testimonials.length > 0 && (
           <section className="py-24 bg-white border-t border-zinc-100">
             <div className="max-w-6xl mx-auto px-4 sm:px-8">
               <div className="text-center mb-16">
