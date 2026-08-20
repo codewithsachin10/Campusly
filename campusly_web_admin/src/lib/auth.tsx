@@ -53,13 +53,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         try {
           const { data: adminData, error } = await supabase
             .from("admin_profiles")
-            .select("*, roles(name)")
+            .select(`
+              *,
+              roles (
+                name,
+                role_permissions (
+                  permissions (
+                    action
+                  )
+                )
+              )
+            `)
             .eq("email", user.email.toLowerCase())
             .single();
 
           if (adminData && !error) {
-            setAdmin(adminData as Admin);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(adminData));
+            // Extract permissions array
+            const perms = (adminData.roles as any)?.role_permissions
+              ?.map((rp: any) => rp.permissions?.action)
+              ?.filter(Boolean) || [];
+            
+            const processedAdmin = { ...adminData, permissions: perms } as Admin;
+            
+            setAdmin(processedAdmin);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(processedAdmin));
           } else {
             // User authenticated but not found in admins table
             await supabase.auth.signOut();
@@ -87,7 +104,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const email = user.email?.toLowerCase() || "";
     const { data: adminData, error } = await supabase
       .from("admin_profiles")
-      .select("*, roles(name)")
+      .select(`
+        *,
+        roles (
+          name,
+          role_permissions (
+            permissions (
+              action
+            )
+          )
+        )
+      `)
       .eq("email", email)
       .single();
 
@@ -95,8 +122,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       await supabase.auth.signOut();
       throw new Error("This account is not registered as a college admin.");
     }
-    setAdmin(adminData as Admin);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(adminData));
+
+    const perms = (adminData.roles as any)?.role_permissions
+      ?.map((rp: any) => rp.permissions?.action)
+      ?.filter(Boolean) || [];
+    
+    const processedAdmin = { ...adminData, permissions: perms } as Admin;
+
+    setAdmin(processedAdmin);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(processedAdmin));
   }, []);
 
   const signInWithEmail = useCallback(
