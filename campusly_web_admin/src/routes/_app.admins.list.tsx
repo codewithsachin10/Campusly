@@ -228,7 +228,7 @@ function AdminsList() {
                             Edit Details
                           </DropdownMenuItem>
                           <DropdownMenuSeparator />
-                          <DropdownMenuItem onClick={() => toast.info('Please use View Profile to modify roles.')}>
+                          <DropdownMenuItem onClick={() => toast.info('Please go to View Profile -> Assign Role to modify roles.')}>
                             Assign Role
                           </DropdownMenuItem>
                           {(admin.status === 'Pending_Verification' || admin.status === 'Invited') && (

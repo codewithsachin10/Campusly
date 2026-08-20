@@ -11,6 +11,8 @@ import { resendAdminInvitationFn, approveAdminFn, resendWelcomeEmailFn } from '@
 import { AlertDialog, AlertDialogAction, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog"
 import { CheckCircle2 } from "lucide-react"
 
+import { AssignRoleModal } from '@/components/admin/assign-role-modal'
+
 export const Route = createFileRoute('/_app/admins/$adminId')({
   component: AdminDetails,
 })
@@ -20,6 +22,7 @@ function AdminDetails() {
   const [admin, setAdmin] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const [isAssignRoleModalOpen, setIsAssignRoleModalOpen] = useState(false)
   const [resending, setResending] = useState(false)
   const [resendingWelcome, setResendingWelcome] = useState(false)
   const [approving, setApproving] = useState(false)
@@ -34,6 +37,7 @@ function AdminDetails() {
         .select(`
           *,
           roles (
+            id,
             name,
             description
           )
@@ -197,8 +201,11 @@ function AdminDetails() {
         </Card>
 
         <Card>
-          <CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-lg">Access & Role</CardTitle>
+            <Button variant="outline" size="sm" onClick={() => setIsAssignRoleModalOpen(true)}>
+              Assign Role
+            </Button>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="rounded-md border p-4 bg-muted/20">
@@ -313,6 +320,13 @@ function AdminDetails() {
       <EditAdminModal
         open={isEditModalOpen}
         onOpenChange={setIsEditModalOpen}
+        admin={admin}
+        onSuccess={fetchAdminDetails}
+      />
+
+      <AssignRoleModal
+        open={isAssignRoleModalOpen}
+        onOpenChange={setIsAssignRoleModalOpen}
         admin={admin}
         onSuccess={fetchAdminDetails}
       />

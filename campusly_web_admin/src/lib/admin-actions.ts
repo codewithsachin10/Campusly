@@ -89,6 +89,7 @@ export const createAdminFn = createServerFn({ method: 'POST' })
       department: data.department,
       designation: data.designation,
       status: 'Invited', // New status for step 1
+      role_id: data.roleId,
     })
 
     if (profileError) {
@@ -452,4 +453,33 @@ export const approveAdminFn = createServerFn({ method: 'POST' })
     }
 
     return { success: true, testPassword: password, testOtp: otp }
+  })
+
+type UpdateRoleData = {
+  adminId: string
+  roleId: string
+}
+
+export const updateAdminRoleFn = createServerFn({ method: 'POST' })
+  .validator((data: UpdateRoleData) => data)
+  .handler(async ({ data }) => {
+    const supabaseUrl = process.env.VITE_SUPABASE_URL
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+    if (!supabaseUrl || !supabaseServiceKey) {
+      throw new Error("Missing server environment variables.")
+    }
+
+    const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey)
+
+    const { error } = await supabaseAdmin
+      .from('admin_profiles')
+      .update({ role_id: data.roleId })
+      .eq('id', data.adminId)
+
+    if (error) {
+      throw new Error("Failed to update role: " + error.message)
+    }
+
+    return { success: true }
   })
