@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Download, Smartphone, ShieldCheck, ArrowRight, CheckCircle2, HelpCircle, Mail, ChevronDown, Calendar, Users, Bell } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { Download, Smartphone, ShieldCheck, CheckCircle2, HelpCircle, Mail, Calendar, Users, Bell, Star } from "lucide-react";
+import { motion } from "framer-motion";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { marketingQueries, testimonialsQueries, api } from "@/lib/services";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState } from "react";
 
 export const Route = createFileRoute("/download")({
   component: DownloadLandingPage,
@@ -17,6 +19,18 @@ function DownloadLandingPage() {
   const CURRENT_VERSION = "v1.0.2 (Beta)";
   const RELEASE_DATE = "August 20, 2026";
   const FILE_SIZE = "24.5 MB";
+
+  const { data: downloadCount = 0 } = useQuery(marketingQueries.downloads());
+  const { data: testimonials = [] } = useQuery(testimonialsQueries.publicList());
+
+  const trackDownload = useMutation({
+    mutationFn: () => api.marketing.trackDownload(navigator.userAgent),
+  });
+
+  const handleDownload = () => {
+    trackDownload.mutate();
+    // Proceed with the default anchor download behavior
+  };
 
   return (
     <div className="min-h-screen bg-zinc-50 font-sans text-zinc-900 selection:bg-blue-200">
@@ -33,6 +47,7 @@ function DownloadLandingPage() {
           <a
             href="/campusly-app.apk"
             download
+            onClick={handleDownload}
             className="hidden sm:flex items-center gap-2 bg-zinc-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-colors shadow-sm"
           >
             <Download className="w-4 h-4" />
@@ -86,6 +101,7 @@ function DownloadLandingPage() {
               <a
                 href="/campusly-app.apk"
                 download
+                onClick={handleDownload}
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-medium hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-600/20"
               >
                 <Download className="w-5 h-5" />
@@ -106,7 +122,9 @@ function DownloadLandingPage() {
             >
               <div className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> Secure Download</div>
               <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-blue-500" /> Official College App</div>
-              <div className="flex items-center gap-2"><Smartphone className="w-4 h-4 text-zinc-500" /> Android 8.0+ Required</div>
+              <div className="flex items-center gap-2 font-semibold text-zinc-800 bg-zinc-100 px-3 py-1.5 rounded-lg">
+                <Download className="w-4 h-4" /> {downloadCount.toLocaleString()}+ Downloads
+              </div>
             </motion.div>
           </div>
         </section>
@@ -145,29 +163,61 @@ function DownloadLandingPage() {
           </div>
         </section>
 
+        {/* Testimonials */}
+        {testimonials.length > 0 && (
+          <section className="py-24 bg-white border-t border-zinc-100">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold tracking-tight mb-4">Loved by Students</h2>
+                <p className="text-zinc-500 max-w-2xl mx-auto">Don't just take our word for it. Here is what your peers think about Campusly.</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {testimonials.map((t: any) => (
+                  <div key={t.id} className="bg-zinc-50 p-8 rounded-3xl border border-zinc-100 flex flex-col h-full">
+                    <div className="flex gap-1 mb-4">
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <p className="text-zinc-700 italic flex-grow mb-6">"{t.content}"</p>
+                    <div className="mt-auto flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold">
+                        {t.author_name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-zinc-900 text-sm">{t.author_name}</p>
+                        <p className="text-xs text-zinc-500">{t.author_role}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Installation Guide & FAQ */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-zinc-50 border-t border-zinc-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-8">
             <div className="grid md:grid-cols-2 gap-16">
               
               {/* Left Column: Installation Guide */}
               <div>
                 <h2 className="text-2xl font-bold mb-6">How to Install</h2>
-                <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-200 before:to-transparent hidden"></div>
                 
                 <ol className="relative border-l border-zinc-200 ml-3 space-y-8">
                   <li className="pl-8 relative">
-                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-white text-blue-600 font-bold text-sm">1</span>
+                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-zinc-50 text-blue-600 font-bold text-sm">1</span>
                     <h3 className="font-semibold text-zinc-900 mb-1">Download the APK</h3>
                     <p className="text-sm text-zinc-500">Click the download button above to save the .apk file to your device.</p>
                   </li>
                   <li className="pl-8 relative">
-                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-white text-blue-600 font-bold text-sm">2</span>
+                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-zinc-50 text-blue-600 font-bold text-sm">2</span>
                     <h3 className="font-semibold text-zinc-900 mb-1">Open the file</h3>
                     <p className="text-sm text-zinc-500">Tap on the downloaded file in your browser's downloads list or file manager.</p>
                   </li>
                   <li className="pl-8 relative">
-                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-white text-blue-600 font-bold text-sm">3</span>
+                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-zinc-50 text-blue-600 font-bold text-sm">3</span>
                     <h3 className="font-semibold text-zinc-900 mb-1">Allow Unknown Sources</h3>
                     <p className="text-sm text-zinc-500">If prompted, click "Settings" and toggle on "Allow from this source". This is required since the app isn't on the Play Store yet.</p>
                     <div className="mt-3 p-3 bg-amber-50 rounded-lg border border-amber-100 flex gap-3 items-start">
@@ -176,7 +226,7 @@ function DownloadLandingPage() {
                     </div>
                   </li>
                   <li className="pl-8 relative">
-                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-white text-blue-600 font-bold text-sm">4</span>
+                    <span className="absolute -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 ring-4 ring-zinc-50 text-blue-600 font-bold text-sm">4</span>
                     <h3 className="font-semibold text-zinc-900 mb-1">Install and Login</h3>
                     <p className="text-sm text-zinc-500">Click "Install". Once finished, open the app and log in with your student portal credentials.</p>
                   </li>

@@ -24,6 +24,7 @@ import { Route as AppProfileRouteImport } from './routes/_app.profile'
 import { Route as AppSessionsRouteImport } from './routes/_app.sessions'
 import { Route as AppSettingsRouteImport } from './routes/_app.settings'
 import { Route as AppStudentsRouteImport } from './routes/_app.students'
+import { Route as AppTestimonialsRouteImport } from './routes/_app.testimonials'
 import { Route as AppTimetableRouteImport } from './routes/_app.timetable'
 import { Route as FormTokenRouteImport } from './routes/form.$token'
 import { Route as InviteResponseRouteImport } from './routes/invite.response'
@@ -119,6 +120,11 @@ const AppSettingsRoute = AppSettingsRouteImport.update({
 const AppStudentsRoute = AppStudentsRouteImport.update({
   id: '/students',
   path: '/students',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTestimonialsRoute = AppTestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
   getParentRoute: () => AppRoute,
 } as any)
 const AppTimetableRoute = AppTimetableRouteImport.update({
@@ -249,6 +255,7 @@ export interface FileRoutesByFullPath {
   '/sessions': typeof AppSessionsRoute
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
+  '/testimonials': typeof AppTestimonialsRoute
   '/timetable': typeof AppTimetableRoute
   '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
@@ -286,6 +293,7 @@ export interface FileRoutesByTo {
   '/sessions': typeof AppSessionsRoute
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
+  '/testimonials': typeof AppTestimonialsRoute
   '/timetable': typeof AppTimetableRoute
   '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
@@ -326,6 +334,7 @@ export interface FileRoutesById {
   '/_app/sessions': typeof AppSessionsRoute
   '/_app/settings': typeof AppSettingsRoute
   '/_app/students': typeof AppStudentsRoute
+  '/_app/testimonials': typeof AppTestimonialsRoute
   '/_app/timetable': typeof AppTimetableRoute
   '/form/$token': typeof FormTokenRoute
   '/invite/response': typeof InviteResponseRoute
@@ -366,6 +375,7 @@ export interface FileRouteTypes {
     | '/sessions'
     | '/settings'
     | '/students'
+    | '/testimonials'
     | '/timetable'
     | '/form/$token'
     | '/invite/response'
@@ -403,6 +413,7 @@ export interface FileRouteTypes {
     | '/sessions'
     | '/settings'
     | '/students'
+    | '/testimonials'
     | '/timetable'
     | '/form/$token'
     | '/invite/response'
@@ -442,6 +453,7 @@ export interface FileRouteTypes {
     | '/_app/sessions'
     | '/_app/settings'
     | '/_app/students'
+    | '/_app/testimonials'
     | '/_app/timetable'
     | '/form/$token'
     | '/invite/response'
@@ -580,6 +592,13 @@ declare module '@tanstack/react-router' {
       path: '/students'
       fullPath: '/students'
       preLoaderRoute: typeof AppStudentsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/testimonials': {
+      id: '/_app/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof AppTestimonialsRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/timetable': {
@@ -773,6 +792,7 @@ interface AppRouteChildren {
   AppSessionsRoute: typeof AppSessionsRoute
   AppSettingsRoute: typeof AppSettingsRoute
   AppStudentsRoute: typeof AppStudentsRoute
+  AppTestimonialsRoute: typeof AppTestimonialsRoute
   AppTimetableRoute: typeof AppTimetableRoute
   AppCurriculumRegulationIdRoute: typeof AppCurriculumRegulationIdRoute
   AppCurriculumBatchImportRoute: typeof AppCurriculumBatchImportRoute
@@ -801,6 +821,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppSessionsRoute: AppSessionsRoute,
   AppSettingsRoute: AppSettingsRoute,
   AppStudentsRoute: AppStudentsRoute,
+  AppTestimonialsRoute: AppTestimonialsRoute,
   AppTimetableRoute: AppTimetableRoute,
   AppCurriculumRegulationIdRoute: AppCurriculumRegulationIdRoute,
   AppCurriculumBatchImportRoute: AppCurriculumBatchImportRoute,

@@ -82,6 +82,7 @@ const groups = [
       { title: "Overview", url: "/updates", icon: LayoutDashboard, permission: "manage_settings" },
       { title: "Releases", url: "/updates/releases", icon: Smartphone, permission: "manage_settings" },
       { title: "Create Release", url: "/updates/create", icon: FileStack, permission: "manage_settings" },
+      { title: "Testimonials", url: "/testimonials", icon: HeartHandshake, permission: "manage_settings" },
     ],
   },
   {

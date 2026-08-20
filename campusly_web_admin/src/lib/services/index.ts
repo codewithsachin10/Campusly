@@ -572,6 +572,58 @@ export const api = {
       return id;
     },
   },
+
+  marketing: {
+    trackDownload: async (userAgent: string) => {
+      const { error } = await supabase.from("app_downloads").insert([{ user_agent: userAgent }]);
+      if (error) console.error("Failed to track download:", error);
+    },
+    getDownloadCount: async () => {
+      const { data, error } = await supabase.rpc("get_total_app_downloads");
+      if (error) {
+        console.error("Failed to get total downloads:", error);
+        return 0;
+      }
+      return data as number;
+    },
+  },
+
+  testimonials: {
+    listAdmin: async () => {
+      const { data, error } = await supabase.from("testimonials").select("*").order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+    listPublic: async () => {
+      const { data, error } = await supabase.from("testimonials").select("*").eq("is_published", true).order("created_at", { ascending: false });
+      if (error) throw error;
+      return data;
+    },
+    create: async (payload: { author_name: string; author_role: string; content: string; rating: number; is_published: boolean }) => {
+      const { data, error } = await supabase.from("testimonials").insert([payload]).select().single();
+      if (error) throw error;
+      return data;
+    },
+    update: async (id: string, payload: Partial<{ author_name: string; author_role: string; content: string; rating: number; is_published: boolean }>) => {
+      const { data, error } = await supabase.from("testimonials").update(payload).eq("id", id).select().single();
+      if (error) throw error;
+      return data;
+    },
+    delete: async (id: string) => {
+      const { error } = await supabase.from("testimonials").delete().eq("id", id);
+      if (error) throw error;
+      return id;
+    }
+  },
+};
+
+export const marketingQueries = {
+  downloads: () => queryOptions({ queryKey: ["marketing", "downloads"], queryFn: api.marketing.getDownloadCount }),
+};
+
+export const testimonialsQueries = {
+  adminList: () => queryOptions({ queryKey: ["testimonials", "admin"], queryFn: api.testimonials.listAdmin }),
+  publicList: () => queryOptions({ queryKey: ["testimonials", "public"], queryFn: api.testimonials.listPublic }),
 };
 
 export const sessionQueries = {
