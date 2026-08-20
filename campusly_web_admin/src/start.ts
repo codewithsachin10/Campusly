@@ -1,4 +1,4 @@
-import { createStart, createCsrfMiddleware, createMiddleware } from "@tanstack/react-start";
+import { createStart, createMiddleware } from "@tanstack/react-start";
 import { renderErrorPage } from "./lib/error-page";
 
 const errorMiddleware = createMiddleware().server(async ({ next }) => {
@@ -16,8 +16,19 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
   }
 });
 
-const csrfMiddleware = createCsrfMiddleware({
-  filter: (ctx) => ctx.handlerType === "serverFn",
+// WORKAROUND for "createCsrfMiddleware is not a function" in TanStack edge bundles
+const csrfMiddleware = createMiddleware().server(async ({ next, request }) => {
+  // Basic CSRF check for mutations
+  if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method)) {
+    const origin = request.headers.get('origin');
+    const host = request.headers.get('host');
+    
+    // In edge, URL might not have full origin, but we compare what we can
+    if (origin && host && !origin.includes(host)) {
+      return new Response("Forbidden: CSRF check failed", { status: 403 });
+    }
+  }
+  return next();
 });
 
 export const startInstance = createStart(() => ({
