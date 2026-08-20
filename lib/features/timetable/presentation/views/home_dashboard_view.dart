@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -8,7 +9,6 @@ import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../events/presentation/providers/events_provider.dart';
 import '../../../notifications/presentation/providers/notifications_provider.dart';
 import '../../domain/models/timetable_item.dart';
-import '../../domain/models/custom_timetable_membership.dart';
 import '../providers/announcements_provider.dart';
 import '../providers/timetable_provider.dart';
 import '../screens/subject_detail_page.dart';
@@ -92,11 +92,11 @@ class HomeDashboardView extends ConsumerWidget {
         ref.invalidate(announcementsStreamProvider);
         ref.invalidate(notificationsStreamProvider);
         ref.invalidate(eventsStreamProvider);
-        await Future.delayed(const Duration(milliseconds: 600));
+        await Future.delayed(Duration(milliseconds: 600));
       },
       child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+        physics: AlwaysScrollableScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -112,11 +112,11 @@ class HomeDashboardView extends ConsumerWidget {
                       Text(
                         'Good morning, ${user?.name.isNotEmpty == true ? user!.name.split(' ').first : 'Student'} 👋',
                         style: AppTypography.textTheme.headlineLarge?.copyWith(
-                          fontSize: 28,
+                          fontSize: 28.sp,
                           color: AppColors.onSurface,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4.h),
                       Text(
                         headerDateText,
                         style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -126,15 +126,15 @@ class HomeDashboardView extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12.w),
                 InkWell(
                   onTap: () => context.push('/notifications'),
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.r),
                   child: Container(
-                    padding: const EdgeInsets.all(12),
+                    padding: EdgeInsets.all(12.w),
                     decoration: BoxDecoration(
                       color: AppColors.surfaceContainerLowest,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                       border: Border.all(
                         color: AppColors.outlineVariant.withValues(alpha: 0.25),
                       ),
@@ -142,7 +142,7 @@ class HomeDashboardView extends ConsumerWidget {
                     child: Stack(
                       clipBehavior: Clip.none,
                       children: [
-                        const Icon(
+                        Icon(
                           LucideIcons.bell,
                           size: 24,
                           color: AppColors.onSurface,
@@ -152,19 +152,19 @@ class HomeDashboardView extends ConsumerWidget {
                             right: -6,
                             top: -6,
                             child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 5,
-                                vertical: 2,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 5.w,
+                                vertical: 2.h,
                               ),
                               decoration: BoxDecoration(
                                 color: AppColors.error,
-                                borderRadius: BorderRadius.circular(10),
+                                borderRadius: BorderRadius.circular(10.r),
                               ),
                               child: Text(
                                 unreadCount > 9 ? '9+' : '$unreadCount',
-                                style: const TextStyle(
+                                style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -176,13 +176,13 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             EventsPromoBanner(onTap: () => context.push('/events')),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             _buildCampusPresenceBanner(context),
-            const SizedBox(height: 16),
-            const AnnouncementsBanner(),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
+            AnnouncementsBanner(),
+            SizedBox(height: 16.h),
 
             if (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty))
               _buildNoTimetableState(context)
@@ -191,7 +191,7 @@ class HomeDashboardView extends ConsumerWidget {
               if (isWeekendOrEmpty) ...[
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(24),
+                padding: EdgeInsets.all(24.w),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -201,7 +201,7 @@ class HomeDashboardView extends ConsumerWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(24.r),
                   border: Border.all(
                     color: AppColors.primary.withValues(alpha: 0.2),
                   ),
@@ -209,8 +209,8 @@ class HomeDashboardView extends ConsumerWidget {
                 child: Column(
                   children: [
                     Container(
-                      width: 64,
-                      height: 64,
+                      width: 64.w,
+                      height: 64.h,
                       decoration: BoxDecoration(
                         color: AppColors.surfaceContainerLowest,
                         shape: BoxShape.circle,
@@ -218,17 +218,17 @@ class HomeDashboardView extends ConsumerWidget {
                           BoxShadow(
                             color: AppColors.primary.withValues(alpha: 0.1),
                             blurRadius: 15,
-                            offset: const Offset(0, 4),
+                            offset: Offset(0, 4),
                           ),
                         ],
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.weekend_rounded,
                         color: AppColors.primary,
                         size: 32,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Text(
                       'No Classes Today! 🎉',
                       style: AppTypography.textTheme.headlineSmall?.copyWith(
@@ -236,30 +236,30 @@ class HomeDashboardView extends ConsumerWidget {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    SizedBox(height: 6.h),
                     Text(
                       "It's a free day or the weekend! Relax, recharge, or catch up on self-paced projects.",
                       textAlign: TextAlign.center,
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
-                        height: 1.4,
+                        height: 1.4.h,
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
             ],
 
             // Ongoing Class Card (Most Prominent)
             if (!isWeekendOrEmpty) ...[
               ongoingAsync.when(
-                loading: () => const Center(
+                loading: () => Center(
                   child: CircularProgressIndicator(color: AppColors.primary),
                 ),
-                error: (error, stackTrace) => const SizedBox.shrink(),
+                error: (error, stackTrace) => SizedBox.shrink(),
                 data: (ongoing) {
-                  if (ongoing == null) return const SizedBox.shrink();
+                  if (ongoing == null) return SizedBox.shrink();
 
                   final currentMin = now.hour * 60 + now.minute;
                   final endMin = ongoing.endHour * 60 + ongoing.endMinute;
@@ -273,7 +273,7 @@ class HomeDashboardView extends ConsumerWidget {
                       : 0.0;
 
                   final badgeColor = ongoing.isBreak
-                      ? const Color(0xFF26A69A)
+                      ? Color(0xFF26A69A)
                       : AppColors.primary;
                   final accentBorderColor = AppColors.getSubjectAccentColor(
                     ongoing.subjectCode,
@@ -284,11 +284,11 @@ class HomeDashboardView extends ConsumerWidget {
                     onTap: () => !ongoing.isBreak
                         ? SubjectDetailPage.navigate(context, ongoing)
                         : null,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                     child: Container(
                       decoration: BoxDecoration(
                         color: AppColors.surfaceContainerLowest,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.3,
@@ -298,19 +298,19 @@ class HomeDashboardView extends ConsumerWidget {
                           BoxShadow(
                             color: badgeColor.withValues(alpha: 0.06),
                             blurRadius: 20,
-                            offset: const Offset(0, 6),
+                            offset: Offset(0, 6),
                           ),
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         child: Container(
-                          padding: const EdgeInsets.all(24),
+                          padding: EdgeInsets.all(24.w),
                           decoration: BoxDecoration(
                             border: Border(
                               left: BorderSide(
                                 color: accentBorderColor,
-                                width: 6,
+                                width: 6.w,
                               ),
                             ),
                           ),
@@ -322,26 +322,26 @@ class HomeDashboardView extends ConsumerWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 6,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 12.w,
+                                      vertical: 6.h,
                                     ),
                                     decoration: BoxDecoration(
                                       color: badgeColor.withValues(alpha: 0.1),
-                                      borderRadius: BorderRadius.circular(999),
+                                      borderRadius: BorderRadius.circular(999.r),
                                     ),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
                                         Container(
-                                          width: 8,
-                                          height: 8,
+                                          width: 8.w,
+                                          height: 8.h,
                                           decoration: BoxDecoration(
                                             color: badgeColor,
                                             shape: BoxShape.circle,
                                           ),
                                         ),
-                                        const SizedBox(width: 8),
+                                        SizedBox(width: 8.w),
                                         Text(
                                           ongoing.isBreak
                                               ? 'ONGOING BREAK'
@@ -368,17 +368,17 @@ class HomeDashboardView extends ConsumerWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 16),
+                              SizedBox(height: 16.h),
                               Text(
                                 ongoing.title,
                                 style: AppTypography.textTheme.headlineSmall
                                     ?.copyWith(
                                       color: AppColors.onSurface,
                                       fontWeight: FontWeight.bold,
-                                      height: 1.3,
+                                      height: 1.3.h,
                                     ),
                               ),
-                              const SizedBox(height: 14),
+                              SizedBox(height: 14.h),
                               Row(
                                 children: [
                                   Icon(
@@ -386,7 +386,7 @@ class HomeDashboardView extends ConsumerWidget {
                                     size: 18,
                                     color: badgeColor,
                                   ),
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Text(
                                     ongoing.timeRange,
                                     style: AppTypography.textTheme.bodyMedium
@@ -394,13 +394,13 @@ class HomeDashboardView extends ConsumerWidget {
                                           color: AppColors.onSurfaceVariant,
                                         ),
                                   ),
-                                  const SizedBox(width: 16),
+                                  SizedBox(width: 16.w),
                                   Icon(
                                     Icons.location_on_rounded,
                                     size: 18,
                                     color: badgeColor,
                                   ),
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Expanded(
                                     child: Text(
                                       ongoing.room,
@@ -413,7 +413,7 @@ class HomeDashboardView extends ConsumerWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 20),
+                              SizedBox(height: 20.h),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -437,9 +437,9 @@ class HomeDashboardView extends ConsumerWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8.h),
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(999),
+                                borderRadius: BorderRadius.circular(999.r),
                                 child: LinearProgressIndicator(
                                   value: progress / 100.0,
                                   backgroundColor: AppColors.surfaceContainer,
@@ -455,12 +455,12 @@ class HomeDashboardView extends ConsumerWidget {
                   );
                 },
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
 
               // Next Class Timer Box
               nextAsync.when(
-                loading: () => const SizedBox.shrink(),
-                error: (error, stackTrace) => const SizedBox.shrink(),
+                loading: () => SizedBox.shrink(),
+                error: (error, stackTrace) => SizedBox.shrink(),
                 data: (next) {
                   final ongoing = ongoingAsync.value;
                   if (next == null) {
@@ -468,10 +468,10 @@ class HomeDashboardView extends ConsumerWidget {
                       // All classes completed for today
                       return Container(
                         width: double.infinity,
-                        padding: const EdgeInsets.all(20),
+                        padding: EdgeInsets.all(20.w),
                         decoration: BoxDecoration(
                           color: AppColors.primary.withValues(alpha: 0.06),
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                           border: Border.all(
                             color: AppColors.primary.withValues(alpha: 0.15),
                           ),
@@ -479,21 +479,21 @@ class HomeDashboardView extends ConsumerWidget {
                         child: Row(
                           children: [
                             Container(
-                              width: 44,
-                              height: 44,
+                              width: 44.w,
+                              height: 44.h,
                               decoration: BoxDecoration(
                                 color: AppColors.primary.withValues(
                                   alpha: 0.12,
                                 ),
                                 shape: BoxShape.circle,
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.task_alt_rounded,
                                 color: AppColors.primary,
                                 size: 24,
                               ),
                             ),
-                            const SizedBox(width: 14),
+                            SizedBox(width: 14.w),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -507,7 +507,7 @@ class HomeDashboardView extends ConsumerWidget {
                                           letterSpacing: 0.8,
                                         ),
                                   ),
-                                  const SizedBox(height: 2),
+                                  SizedBox(height: 2.h),
                                   Text(
                                     'Great job! Have a restful evening.',
                                     style: AppTypography.textTheme.bodyMedium
@@ -523,7 +523,7 @@ class HomeDashboardView extends ConsumerWidget {
                         ),
                       );
                     }
-                    return const SizedBox.shrink();
+                    return SizedBox.shrink();
                   }
 
                   // Compute countdown or display day
@@ -553,12 +553,12 @@ class HomeDashboardView extends ConsumerWidget {
                     onTap: () => !next.isBreak
                         ? SubjectDetailPage.navigate(context, next)
                         : null,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16.r),
                     child: Container(
-                      padding: const EdgeInsets.all(16),
+                      padding: EdgeInsets.all(16.w),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.05),
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         border: Border.all(
                           color: AppColors.primary.withValues(alpha: 0.1),
                         ),
@@ -569,21 +569,21 @@ class HomeDashboardView extends ConsumerWidget {
                           Row(
                             children: [
                               Container(
-                                width: 44,
-                                height: 44,
+                                width: 44.w,
+                                height: 44.h,
                                 decoration: BoxDecoration(
                                   color: AppColors.primary.withValues(
                                     alpha: 0.1,
                                   ),
                                   shape: BoxShape.circle,
                                 ),
-                                child: const Icon(
+                                child: Icon(
                                   Icons.timer_outlined,
                                   color: AppColors.primary,
                                   size: 24,
                                 ),
                               ),
-                              const SizedBox(width: 14),
+                              SizedBox(width: 14.w),
                               Flexible(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -601,7 +601,7 @@ class HomeDashboardView extends ConsumerWidget {
                                             letterSpacing: 1.0,
                                           ),
                                     ),
-                                    const SizedBox(height: 2),
+                                    SizedBox(height: 2.h),
                                     Text(
                                       timerOrDateDisplay,
                                       style: AppTypography.textTheme.headlineSmall
@@ -630,7 +630,7 @@ class HomeDashboardView extends ConsumerWidget {
                                         color: AppColors.onSurfaceVariant,
                                       ),
                                 ),
-                                const SizedBox(height: 2),
+                                SizedBox(height: 2.h),
                                 Text(
                                   next.shortTitle,
                                   style: AppTypography.textTheme.bodyMedium
@@ -650,17 +650,17 @@ class HomeDashboardView extends ConsumerWidget {
                   );
                 },
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
 
               // Overview Section (2 Horizontal Cards)
               Row(
                 children: [
                   Expanded(
                     child: Container(
-                      padding: const EdgeInsets.all(20),
+                      padding: EdgeInsets.all(20.w),
                       decoration: BoxDecoration(
                         color: AppColors.surfaceContainerLowest,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.2,
@@ -670,26 +670,26 @@ class HomeDashboardView extends ConsumerWidget {
                           BoxShadow(
                             color: Colors.black.withValues(alpha: 0.02),
                             blurRadius: 10,
-                            offset: const Offset(0, 4),
+                            offset: Offset(0, 4),
                           ),
                         ],
                       ),
                       child: Row(
                         children: [
                           Container(
-                            width: 48,
-                            height: 48,
+                            width: 48.w,
+                            height: 48.h,
                             decoration: BoxDecoration(
                               color: AppColors.primary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14.r),
                             ),
-                            child: const Icon(
+                            child: Icon(
                               Icons.school_rounded,
                               color: AppColors.primary,
                               size: 26,
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16.w),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -698,12 +698,12 @@ class HomeDashboardView extends ConsumerWidget {
                                   '$classCount',
                                   style: AppTypography.textTheme.headlineLarge
                                       ?.copyWith(
-                                        fontSize: 28,
+                                        fontSize: 28.sp,
                                         color: AppColors.onSurface,
                                         fontWeight: FontWeight.w800,
                                       ),
                                 ),
-                                const SizedBox(height: 2),
+                                SizedBox(height: 2.h),
                                 Text(
                                   'Classes',
                                   style: AppTypography.textTheme.labelMedium
@@ -719,13 +719,13 @@ class HomeDashboardView extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: 16.w),
                   Expanded(
                     child: Container(
-                      padding: const EdgeInsets.all(20),
+                      padding: EdgeInsets.all(20.w),
                       decoration: BoxDecoration(
                         color: AppColors.surfaceContainerLowest,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.2,
@@ -735,26 +735,26 @@ class HomeDashboardView extends ConsumerWidget {
                           BoxShadow(
                             color: Colors.black.withValues(alpha: 0.02),
                             blurRadius: 10,
-                            offset: const Offset(0, 4),
+                            offset: Offset(0, 4),
                           ),
                         ],
                       ),
                       child: Row(
                         children: [
                           Container(
-                            width: 48,
-                            height: 48,
+                            width: 48.w,
+                            height: 48.h,
                             decoration: BoxDecoration(
                               color: AppColors.secondary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14.r),
                             ),
-                            child: const Icon(
+                            child: Icon(
                               Icons.coffee_rounded,
                               color: AppColors.secondary,
                               size: 26,
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16.w),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -763,12 +763,12 @@ class HomeDashboardView extends ConsumerWidget {
                                   '$breakCount',
                                   style: AppTypography.textTheme.headlineLarge
                                       ?.copyWith(
-                                        fontSize: 28,
+                                        fontSize: 28.sp,
                                         color: AppColors.onSurface,
                                         fontWeight: FontWeight.w800,
                                       ),
                                 ),
-                                const SizedBox(height: 2),
+                                SizedBox(height: 2.h),
                                 Text(
                                   'Free Periods',
                                   style: AppTypography.textTheme.labelMedium
@@ -786,7 +786,7 @@ class HomeDashboardView extends ConsumerWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
             ],
 
             // Today's Schedule Section
@@ -802,11 +802,11 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
                 InkWell(
                   onTap: onNavigateToSchedule,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8.0,
-                      vertical: 4.0,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8.0.w,
+                      vertical: 4.0.h,
                     ),
                     child: Row(
                       children: [
@@ -817,7 +817,7 @@ class HomeDashboardView extends ConsumerWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.chevron_right_rounded,
                           color: AppColors.primary,
                           size: 20,
@@ -828,19 +828,19 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
 
             if (isWeekendOrEmpty) ...[
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(
-                  vertical: 48,
-                  horizontal: 24,
+                padding: EdgeInsets.symmetric(
+                  vertical: 48.h,
+                  horizontal: 24.w,
                 ),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: AppColors.surfaceContainerLowest,
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(24.r),
                   border: Border.all(
                     color: AppColors.outlineVariant.withValues(alpha: 0.2),
                   ),
@@ -852,7 +852,7 @@ class HomeDashboardView extends ConsumerWidget {
                       size: 48,
                       color: AppColors.onSurfaceVariant.withValues(alpha: 0.6),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Text(
                       'No classes scheduled for today.',
                       style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -860,7 +860,7 @@ class HomeDashboardView extends ConsumerWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4.h),
                     Text(
                       'Tap Full Calendar to explore your weekly timetable.',
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -879,7 +879,7 @@ class HomeDashboardView extends ConsumerWidget {
                 final isCurrent = currentMin >= startMin && currentMin < endMin;
 
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 12.0),
+                  padding: EdgeInsets.only(bottom: 12.0.h),
                   child: _buildDynamicScheduleCard(
                     context: context,
                     item: item,
@@ -890,7 +890,7 @@ class HomeDashboardView extends ConsumerWidget {
               }),
             ],
             ],
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
           ],
         ),
       ),
@@ -912,20 +912,20 @@ class HomeDashboardView extends ConsumerWidget {
       return Container(
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLow.withValues(alpha: 0.5),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
             color: AppColors.outlineVariant,
             style: BorderStyle.solid,
-            width: 1,
+            width: 1.w,
           ),
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           child: Container(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
               border: Border(
-                left: BorderSide(color: accentBorderColor, width: 6),
+                left: BorderSide(color: accentBorderColor, width: 6.w),
               ),
             ),
             child: Row(
@@ -935,7 +935,7 @@ class HomeDashboardView extends ConsumerWidget {
                   color: AppColors.onSurfaceVariant,
                   size: 24,
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16.w),
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -950,7 +950,7 @@ class HomeDashboardView extends ConsumerWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8.w),
                       Text(
                         item.timeRange,
                         style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -970,13 +970,13 @@ class HomeDashboardView extends ConsumerWidget {
     return InkWell(
       onTap: () =>
           !item.isBreak ? SubjectDetailPage.navigate(context, item) : null,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.r),
       child: Container(
         decoration: BoxDecoration(
           color: isCurrent
               ? AppColors.primary.withValues(alpha: 0.05)
               : AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
             color: isCurrent
                 ? AppColors.primary
@@ -988,18 +988,18 @@ class HomeDashboardView extends ConsumerWidget {
                   BoxShadow(
                     color: AppColors.primary.withValues(alpha: 0.06),
                     blurRadius: 10,
-                    offset: const Offset(0, 4),
+                    offset: Offset(0, 4),
                   ),
                 ]
               : null,
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           child: Container(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
               border: Border(
-                left: BorderSide(color: accentBorderColor, width: 6),
+                left: BorderSide(color: accentBorderColor, width: 6.w),
               ),
             ),
             child: Opacity(
@@ -1008,7 +1008,7 @@ class HomeDashboardView extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 2.0),
+                    padding: EdgeInsets.only(top: 2.0.h),
                     child: Icon(
                       isCompleted
                           ? Icons.check_circle_rounded
@@ -1023,7 +1023,7 @@ class HomeDashboardView extends ConsumerWidget {
                       size: 24,
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: 16.w),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1044,7 +1044,7 @@ class HomeDashboardView extends ConsumerWidget {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8.w),
                             Text(
                               item.timeRange,
                               style: AppTypography.textTheme.labelMedium
@@ -1059,7 +1059,7 @@ class HomeDashboardView extends ConsumerWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 4),
+                        SizedBox(height: 4.h),
                         Text(
                           '${item.room} • ${item.instructor}',
                           style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -1068,15 +1068,15 @@ class HomeDashboardView extends ConsumerWidget {
                         ),
                         if (item.category.isNotEmpty &&
                             item.category != 'Lecture') ...[
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                              vertical: 2,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 8.w,
+                              vertical: 2.h,
                             ),
                             decoration: BoxDecoration(
                               color: AppColors.primary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(6.r),
                             ),
                             child: Text(
                               item.category.toUpperCase(),
@@ -1084,7 +1084,7 @@ class HomeDashboardView extends ConsumerWidget {
                                   ?.copyWith(
                                     color: AppColors.primary,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 10,
+                                    fontSize: 10.sp,
                                     letterSpacing: 0.8,
                                   ),
                             ),
@@ -1104,22 +1104,22 @@ class HomeDashboardView extends ConsumerWidget {
   Widget _buildNoTimetableState(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(24.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(24.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.2),
         ),
       ),
       child: Column(
         children: [
-          const Icon(
+          Icon(
             Icons.calendar_today_rounded,
             color: AppColors.primary,
             size: 48,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             'No timetable chosen',
             style: AppTypography.textTheme.headlineSmall?.copyWith(
@@ -1127,7 +1127,7 @@ class HomeDashboardView extends ConsumerWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             'You haven\'t selected or joined any class timetable yet.',
             textAlign: TextAlign.center,
@@ -1135,21 +1135,21 @@ class HomeDashboardView extends ConsumerWidget {
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           ElevatedButton(
             onPressed: () => context.push('/join-class-choice'),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primary,
               foregroundColor: AppColors.onPrimary,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 24,
-                vertical: 12,
+              padding: EdgeInsets.symmetric(
+                horizontal: 24.w,
+                vertical: 12.h,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
-            child: const Text('Choose Timetable'),
+            child: Text('Choose Timetable'),
           ),
         ],
       ),
@@ -1159,29 +1159,29 @@ class HomeDashboardView extends ConsumerWidget {
   Widget _buildCampusPresenceBanner(BuildContext context) {
     return InkWell(
       onTap: () => context.push('/campus-presence'),
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.r),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16.w),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.blue.shade100, Colors.blue.shade50],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(color: Colors.blue.shade200),
         ),
         child: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.w),
               decoration: BoxDecoration(
                 color: Colors.blue.shade200.withValues(alpha: 0.5),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(LucideIcons.mapPin, color: Colors.blue),
+              child: Icon(LucideIcons.mapPin, color: Colors.blue),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: 16.w),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1193,7 +1193,7 @@ class HomeDashboardView extends ConsumerWidget {
                       color: Colors.blue.shade900,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4.h),
                   Text(
                     'See where your friends are and check-in!',
                     style: AppTypography.textTheme.bodySmall?.copyWith(
@@ -1281,10 +1281,10 @@ class HomeDashboardView extends ConsumerWidget {
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(24.r),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0.w),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -1294,106 +1294,106 @@ class HomeDashboardView extends ConsumerWidget {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: const BoxDecoration(
+                      padding: EdgeInsets.all(8.w),
+                      decoration: BoxDecoration(
                         color: Color(0xFFFFF4E5),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(LucideIcons.bellRing, color: Color(0xFFFF9500), size: 20),
+                      child: Icon(LucideIcons.bellRing, color: Color(0xFFFF9500), size: 20),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12.w),
                     Text(
                       'CLASS UPDATE',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 1.2,
                         color: Colors.grey.shade700,
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Container(
-                      width: 6,
-                      height: 6,
-                      decoration: const BoxDecoration(
+                      width: 6.w,
+                      height: 6.h,
+                      decoration: BoxDecoration(
                         color: Color(0xFFFF9500),
                         shape: BoxShape.circle,
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: 20.h),
 
                 // Title
                 Text(
                   isVenueChange ? 'Class Venue Changed' : ann.title.replaceAll('🚨 ', ''),
-                  style: const TextStyle(
-                    fontSize: 22,
+                  style: TextStyle(
+                    fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF1C1C1E),
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8.h),
 
                 // Subtitle (Subject)
                 Text(
                   subjectName!,
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 15.sp,
                     color: Colors.grey.shade600,
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
 
                 // Time
                 Row(
                   children: [
                     Icon(LucideIcons.calendar, size: 16, color: Colors.grey.shade500),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8.w),
                     Text(
                       'Today | 10:00 AM - 11:00 AM', // Displays current schedule time
                       style: TextStyle(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         color: Colors.grey.shade500,
                       ),
                     ),
                   ],
                 ),
 
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
 
                 if (isVenueChange) ...[
                   // Previous Venue
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF2F4F8),
-                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0xFFF2F4F8),
+                      borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: Colors.grey.shade200),
                     ),
                     child: Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(8),
+                          padding: EdgeInsets.all(8.w),
                           decoration: BoxDecoration(
                             color: Colors.grey.shade200,
                             shape: BoxShape.circle,
                           ),
                           child: Icon(LucideIcons.mapPin, size: 16, color: Colors.grey.shade700),
                         ),
-                        const SizedBox(width: 12),
+                        SizedBox(width: 12.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'PREVIOUS',
-                                style: TextStyle(fontSize: 11, color: Colors.grey.shade500, fontWeight: FontWeight.w600, letterSpacing: 0.5),
+                                style: TextStyle(fontSize: 11.sp, color: Colors.grey.shade500, fontWeight: FontWeight.w600, letterSpacing: 0.5),
                               ),
                               Text(
                                 oldVenue!,
-                                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: Color(0xFF1C1C1E)),
+                                style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600, color: Color(0xFF1C1C1E)),
                               ),
                             ],
                           ),
@@ -1405,9 +1405,9 @@ class HomeDashboardView extends ConsumerWidget {
                   // Arrow Down
                   Center(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: EdgeInsets.symmetric(vertical: 8.0.h),
                       child: Container(
-                        padding: const EdgeInsets.all(4),
+                        padding: EdgeInsets.all(4.w),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
@@ -1423,44 +1423,44 @@ class HomeDashboardView extends ConsumerWidget {
                     width: double.infinity,
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFF9E6),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFFFFD899)),
+                      color: Color(0xFFFFF9E6),
+                      borderRadius: BorderRadius.circular(12.r),
+                      border: Border.all(color: Color(0xFFFFD899)),
                     ),
                     child: IntrinsicHeight(
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Container(
-                            width: 4,
-                            color: const Color(0xFFFF9500),
+                            width: 4.w,
+                            color: Color(0xFFFF9500),
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
                               child: Row(
                                 children: [
                                   Container(
-                                    padding: const EdgeInsets.all(8),
-                                    decoration: const BoxDecoration(
+                                    padding: EdgeInsets.all(8.w),
+                                    decoration: BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle,
                                     ),
-                                    child: const Icon(LucideIcons.mapPin, size: 16, color: Color(0xFFFF9500)),
+                                    child: Icon(LucideIcons.mapPin, size: 16, color: Color(0xFFFF9500)),
                                   ),
-                                  const SizedBox(width: 12),
+                                  SizedBox(width: 12.w),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
-                                        const Text(
+                                        Text(
                                           'NEW VENUE',
-                                          style: TextStyle(fontSize: 11, color: Color(0xFFE57E00), fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                                          style: TextStyle(fontSize: 11.sp, color: Color(0xFFE57E00), fontWeight: FontWeight.bold, letterSpacing: 0.5),
                                         ),
                                         Text(
                                           newVenue!,
-                                          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF1C1C1E)),
+                                          style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, color: Color(0xFF1C1C1E)),
                                         ),
                                       ],
                                     ),
@@ -1474,16 +1474,16 @@ class HomeDashboardView extends ConsumerWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                 ],
 
                 // Description Box
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(16),
+                  padding: EdgeInsets.all(16.w),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF9FAFB),
-                    borderRadius: BorderRadius.circular(12),
+                    color: Color(0xFFF9FAFB),
+                    borderRadius: BorderRadius.circular(12.r),
                     border: Border.all(color: Colors.grey.shade200),
                   ),
                   child: Text(
@@ -1491,14 +1491,14 @@ class HomeDashboardView extends ConsumerWidget {
                         ? 'The classroom has been changed. Please proceed to the new venue.'
                         : ann.message,
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       color: Colors.grey.shade700,
-                      height: 1.4,
+                      height: 1.4.h,
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
 
                 // Buttons
                 SizedBox(
@@ -1506,24 +1506,24 @@ class HomeDashboardView extends ConsumerWidget {
                   child: ElevatedButton(
                     onPressed: () => Navigator.pop(context),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF3B28CC),
+                      backgroundColor: Color(0xFF3B28CC),
                       foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      padding: EdgeInsets.symmetric(vertical: 16.h),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
                       elevation: 0,
                     ),
-                    child: const Text(
+                    child: Text(
                       'Got it',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8.h),
                 SizedBox(
                   width: double.infinity,
                   child: TextButton(
@@ -1532,17 +1532,17 @@ class HomeDashboardView extends ConsumerWidget {
                       onNavigateToSchedule();
                     },
                     style: TextButton.styleFrom(
-                      foregroundColor: const Color(0xFF3B28CC),
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      foregroundColor: Color(0xFF3B28CC),
+                      padding: EdgeInsets.symmetric(vertical: 16.h),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       'View Timetable',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 15,
+                        fontSize: 15.sp,
                       ),
                     ),
                   ),

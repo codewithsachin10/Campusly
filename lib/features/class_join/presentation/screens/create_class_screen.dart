@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -97,7 +98,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -111,13 +112,13 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0.w),
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 540),
-              padding: const EdgeInsets.all(32.0),
+              constraints: BoxConstraints(maxWidth: 540),
+              padding: EdgeInsets.all(32.0.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                 ),
@@ -125,7 +126,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                   BoxShadow(
                     color: AppColors.primaryContainer.withValues(alpha: 0.08),
                     blurRadius: 24,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
               ),
@@ -140,15 +141,15 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         color: AppColors.onSurface,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     Text(
                       'Set up the shared academic space for your section. Every student enrolled will share the same timetable structure.',
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
-                        height: 1.5,
+                        height: 1.5.h,
                       ),
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
 
                     // Course / Class Name
                     Text(
@@ -158,12 +159,12 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         letterSpacing: 1.2,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     TextFormField(
                       controller: _nameController,
                       textInputAction: TextInputAction.next,
                       style: AppTypography.textTheme.bodyMedium,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'e.g. Database Management Systems',
                         prefixIcon: Icon(Icons.class_outlined, size: 20),
                       ),
@@ -172,7 +173,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                           ? 'Please enter class name'
                           : null,
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
 
                     // Section & Department Row
                     Row(
@@ -189,12 +190,12 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                                       letterSpacing: 1.2,
                                     ),
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8.h),
                               TextFormField(
                                 controller: _sectionController,
                                 textInputAction: TextInputAction.next,
                                 style: AppTypography.textTheme.bodyMedium,
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   hintText: 'e.g. B or Sec A',
                                   prefixIcon: Icon(
                                     Icons.label_outline_rounded,
@@ -209,7 +210,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -222,12 +223,12 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                                       letterSpacing: 1.2,
                                     ),
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8.h),
                               DropdownButtonFormField<String>(
                                 initialValue: _selectedDepartment,
                                 isExpanded: true,
                                 style: AppTypography.textTheme.bodyMedium,
-                                decoration: const InputDecoration(
+                                decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.school_outlined,
                                     size: 20,
@@ -247,7 +248,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
 
                     // Institution
                     Text(
@@ -257,12 +258,12 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         letterSpacing: 1.2,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     TextFormField(
                       controller: _institutionController,
                       textInputAction: TextInputAction.next,
                       style: AppTypography.textTheme.bodyMedium,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         prefixIcon: Icon(Icons.apartment_rounded, size: 20),
                       ),
                       validator: (value) =>
@@ -270,7 +271,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                           ? 'Please enter institution'
                           : null,
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
 
                     // Schedule Summary
                     Text(
@@ -280,12 +281,12 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         letterSpacing: 1.2,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     TextFormField(
                       controller: _scheduleController,
                       textInputAction: TextInputAction.done,
                       style: AppTypography.textTheme.bodyMedium,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'e.g. Mon, Wed, Fri',
                         prefixIcon: Icon(
                           Icons.calendar_today_rounded,
@@ -293,23 +294,23 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
 
                     SizedBox(
                       width: double.infinity,
-                      height: 54,
+                      height: 54.h,
                       child: ElevatedButton(
                         onPressed: _isCreating ? null : _handleCreate,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(16.r),
                           ),
                         ),
                         child: _isCreating
-                            ? const SizedBox(
-                                width: 24,
-                                height: 24,
+                            ? SizedBox(
+                                width: 24.w,
+                                height: 24.h,
                                 child: CircularProgressIndicator(
                                   color: AppColors.onPrimary,
                                   strokeWidth: 2.5,

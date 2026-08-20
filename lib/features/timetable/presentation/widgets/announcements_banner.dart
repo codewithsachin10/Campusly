@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -19,12 +20,12 @@ class AnnouncementsBanner extends ConsumerWidget {
         builder: (context, setState) => AlertDialog(
           backgroundColor: AppColors.surface,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
           ),
           title: Row(
             children: [
               Icon(LucideIcons.megaphone, color: AppColors.primary, size: 24),
-              const SizedBox(width: 10),
+              SizedBox(width: 10.w),
               Expanded(
                 child: Text(
                   'Post Live Announcement',
@@ -42,24 +43,24 @@ class AnnouncementsBanner extends ConsumerWidget {
               children: [
               TextField(
                 controller: titleCtrl,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Notice Title (e.g., Class Swap / Exam Update)',
                   border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: 14),
+              SizedBox(height: 14.h),
               TextField(
                 controller: msgCtrl,
                 maxLines: 3,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Message Body...',
                   border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: 14),
+              SizedBox(height: 14.h),
               CheckboxListTile(
                 contentPadding: EdgeInsets.zero,
-                title: const Text('High Priority Alert Indicator'),
+                title: Text('High Priority Alert Indicator'),
                 value: isHigh,
                 onChanged: (val) => setState(() => isHigh = val ?? true),
                 activeColor: AppColors.primary,
@@ -70,7 +71,7 @@ class AnnouncementsBanner extends ConsumerWidget {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Cancel'),
+              child: Text('Cancel'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -91,7 +92,7 @@ class AnnouncementsBanner extends ConsumerWidget {
                 backgroundColor: AppColors.primary,
                 foregroundColor: AppColors.onPrimary,
               ),
-              child: const Text('Broadcast Live'),
+              child: Text('Broadcast Live'),
             ),
           ],
         ),
@@ -104,8 +105,8 @@ class AnnouncementsBanner extends ConsumerWidget {
     final asyncAnn = ref.watch(announcementsStreamProvider);
 
     return asyncAnn.when(
-      loading: () => const SizedBox.shrink(),
-      error: (_, _) => const SizedBox.shrink(),
+      loading: () => SizedBox.shrink(),
+      error: (_, _) => SizedBox.shrink(),
       data: (items) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,18 +119,18 @@ class AnnouncementsBanner extends ConsumerWidget {
                   child: Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(8),
+                        padding: EdgeInsets.all(8.w),
                         decoration: BoxDecoration(
                           color: AppColors.warning.withValues(alpha: 0.15),
                           shape: BoxShape.circle,
                         ),
-                        child: const Icon(
+                        child: Icon(
                           LucideIcons.bellRing,
                           color: AppColors.warning,
                           size: 18,
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10.w),
                       Expanded(
                         child: Text(
                           'Live Campus & Class Notices',
@@ -142,37 +143,37 @@ class AnnouncementsBanner extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8.w),
                 TextButton.icon(
                   onPressed: () => _showPostDialog(context, ref),
-                  icon: const Icon(
+                  icon: Icon(
                     LucideIcons.plusCircle,
                     size: 16,
                     color: AppColors.primary,
                   ),
-                  label: const Text(
+                  label: Text(
                     'Post Notice',
                     style: TextStyle(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,
-                      fontSize: 13,
+                      fontSize: 13.sp,
                     ),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
 
             if (items.isEmpty)
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16.w,
+                  vertical: 12.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.surfaceContainerLowest,
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                   border: Border.all(
                     color: AppColors.outlineVariant.withValues(alpha: 0.2),
                   ),
@@ -187,19 +188,19 @@ class AnnouncementsBanner extends ConsumerWidget {
             else
               ListView.builder(
                 shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 itemCount: items.length,
                 itemBuilder: (context, idx) {
                   final ann = items[idx];
                   final isHigh = ann.priority == 'high';
                   return Container(
-                    margin: const EdgeInsets.only(bottom: 10),
-                    padding: const EdgeInsets.all(16),
+                    margin: EdgeInsets.only(bottom: 10.h),
+                    padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
                       color: isHigh
                           ? AppColors.warning.withValues(alpha: 0.08)
                           : AppColors.surfaceContainerLowest,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                       border: Border.all(
                         color: isHigh
                             ? AppColors.warning
@@ -217,12 +218,12 @@ class AnnouncementsBanner extends ConsumerWidget {
                               child: Row(
                                 children: [
                                   if (isHigh) ...[
-                                    const Icon(
+                                    Icon(
                                       LucideIcons.alertTriangle,
                                       color: AppColors.warning,
                                       size: 18,
                                     ),
-                                    const SizedBox(width: 6),
+                                    SizedBox(width: 6.w),
                                   ],
                                   Expanded(
                                     child: Text(
@@ -243,26 +244,26 @@ class AnnouncementsBanner extends ConsumerWidget {
                               onPressed: () => ref
                                   .read(announcementsRepositoryProvider)
                                   .deleteAnnouncement(ann.id),
-                              icon: const Icon(
+                              icon: Icon(
                                 LucideIcons.x,
                                 size: 16,
                                 color: AppColors.textSecondary,
                               ),
-                              constraints: const BoxConstraints(),
-                              padding: const EdgeInsets.all(4),
+                              constraints: BoxConstraints(),
+                              padding: EdgeInsets.all(4.w),
                               tooltip: 'Clear Notice',
                             ),
                           ],
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: 6.h),
                         Text(
                           ann.message,
                           style: AppTypography.bodyMedium.copyWith(
                             color: AppColors.textPrimary,
-                            height: 1.3,
+                            height: 1.3.h,
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         Text(
                           'Posted by ${ann.author} • ${_formatTimeAgo(ann.createdAt)}',
                           style: AppTypography.labelSmall.copyWith(
@@ -276,7 +277,7 @@ class AnnouncementsBanner extends ConsumerWidget {
                   );
                 },
               ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
           ],
         );
       },

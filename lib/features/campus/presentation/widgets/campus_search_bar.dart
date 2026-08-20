@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CampusSearchBar extends StatelessWidget {
   final ValueChanged<String>? onSearch;
@@ -11,12 +12,12 @@ class CampusSearchBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(30.r),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -26,17 +27,17 @@ class CampusSearchBar extends StatelessWidget {
         decoration: InputDecoration(
           hintText: 'Search campus (e.g. Library, CS Block)...',
           hintStyle: TextStyle(color: Colors.grey[400]),
-          prefixIcon: const Icon(Icons.search, color: Colors.blue),
-          suffixIcon: const Icon(Icons.tune, color: Colors.grey),
+          prefixIcon: Icon(Icons.search, color: Colors.blue),
+          suffixIcon: Icon(Icons.tune, color: Colors.grey),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(30.r),
             borderSide: BorderSide.none,
           ),
           filled: true,
           fillColor: Colors.transparent,
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 16,
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 20.w,
+            vertical: 16.h,
           ),
         ),
       ),

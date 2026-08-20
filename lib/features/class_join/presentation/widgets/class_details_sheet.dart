@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -81,7 +82,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
     final title = widget.academicClass?.name ?? widget.customTimetable?.title ?? 'Timetable';
     final subtitle = widget.academicClass != null 
         ? '${widget.academicClass!.department} • ${widget.academicClass!.institution}'
-        : '${widget.customTimetable?.hostName ?? 'Custom'}';
+        : widget.customTimetable?.hostName ?? 'Custom';
     final code = widget.academicClass?.code ?? widget.customTimetable?.joinCode ?? widget.customTimetable?.timetableId ?? '';
     final fetchCode = widget.academicClass?.code ?? widget.customTimetable?.timetableId ?? '';
 
@@ -94,28 +95,28 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
       maxChildSize: 0.95,
       builder: (_, scrollController) {
         return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColors.background,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(28.r)),
           ),
           child: Column(
             children: [
               // Handle
               Center(
                 child: Container(
-                  margin: const EdgeInsets.only(top: 12, bottom: 16),
-                  width: 48,
-                  height: 6,
+                  margin: EdgeInsets.only(top: 12.h, bottom: 16.h),
+                  width: 48.w,
+                  height: 6.h,
                   decoration: BoxDecoration(
                     color: AppColors.outlineVariant.withValues(alpha: 0.5),
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                 ),
               ),
               Expanded(
                 child: ListView(
                   controller: scrollController,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.h),
                   children: [
                     // Header Section
                     Text(
@@ -126,7 +127,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     Text(
                       subtitle,
                       style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -134,21 +135,21 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     
                     // QR Code Section
                     if (code.isNotEmpty)
                       Center(
                         child: Container(
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16.w),
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(20.r),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black.withValues(alpha: 0.05),
                                 blurRadius: 20,
-                                offset: const Offset(0, 8),
+                                offset: Offset(0, 8),
                               ),
                             ],
                           ),
@@ -162,7 +163,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                         ),
                       ),
                       
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                     
                     // Code & Members Info Row
                     Row(
@@ -175,7 +176,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                           ),
                         ),
                         if (widget.customTimetable != null) ...[
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16.w),
                           Expanded(
                             child: _buildInfoCard(
                               icon: Icons.people_rounded,
@@ -188,7 +189,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                       ],
                     ),
                     
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40.h),
                     Text(
                       'Full Timetable',
                       style: AppTypography.textTheme.titleLarge?.copyWith(
@@ -196,7 +197,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                         color: AppColors.onSurface,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     
                     // Timetable Schedule List
                     scheduleAsync.when(
@@ -204,7 +205,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                         if (items.isEmpty) {
                           return Center(
                             child: Padding(
-                              padding: const EdgeInsets.all(32.0),
+                              padding: EdgeInsets.all(32.0.w),
                               child: Text(
                                 'No classes scheduled.',
                                 style: TextStyle(color: AppColors.onSurfaceVariant),
@@ -225,7 +226,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                  padding: EdgeInsets.symmetric(vertical: 8.0.h),
                                   child: Text(
                                     entry.key.toUpperCase(),
                                     style: AppTypography.textTheme.labelLarge?.copyWith(
@@ -236,11 +237,11 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                                 ),
                                 ...entry.value.map((item) {
                                   return Card(
-                                    margin: const EdgeInsets.only(bottom: 8),
+                                    margin: EdgeInsets.only(bottom: 8.h),
                                     elevation: 0,
                                     color: AppColors.surfaceContainerLowest,
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(12.r),
                                       side: BorderSide(
                                         color: AppColors.outlineVariant.withValues(alpha: 0.3),
                                       ),
@@ -248,26 +249,26 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                                     child: ListTile(
                                       title: Text(
                                         item.title,
-                                        style: const TextStyle(fontWeight: FontWeight.bold),
+                                        style: TextStyle(fontWeight: FontWeight.bold),
                                       ),
                                       subtitle: Text(
                                         '${item.startHour.toString().padLeft(2, '0')}:${item.startMinute.toString().padLeft(2, '0')} - ${item.endHour.toString().padLeft(2, '0')}:${item.endMinute.toString().padLeft(2, '0')} • ${item.room}',
                                       ),
                                       trailing: item.isBreak 
-                                          ? const Icon(Icons.free_breakfast_rounded)
+                                          ? Icon(Icons.free_breakfast_rounded)
                                           : null,
                                     ),
                                   );
                                 }),
-                                const SizedBox(height: 16),
+                                SizedBox(height: 16.h),
                               ],
                             );
                           }).toList(),
                         );
                       },
-                      loading: () => const Center(
+                      loading: () => Center(
                         child: Padding(
-                          padding: EdgeInsets.all(32.0),
+                          padding: EdgeInsets.all(32.0.w),
                           child: CircularProgressIndicator(),
                         ),
                       ),
@@ -276,7 +277,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                         style: TextStyle(color: AppColors.error),
                       ),
                     ),
-                    const SizedBox(height: 48),
+                    SizedBox(height: 48.h),
                   ],
                 ),
               ),
@@ -294,23 +295,23 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Joined Members'),
+          title: Text('Joined Members'),
           content: SizedBox(
             width: double.maxFinite,
-            height: 350,
+            height: 350.h,
             child: FutureBuilder<List<Map<String, dynamic>>>(
               future: _fetchMembersData(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const SizedBox(
-                    height: 100,
+                  return SizedBox(
+                    height: 100.h,
                     child: Center(child: CircularProgressIndicator()),
                   );
                 }
                 
                 if (snapshot.hasError) {
                   return Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(16.0.w),
                     child: Text('Failed to load members: ${snapshot.error}'),
                   );
                 }
@@ -318,8 +319,8 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                 final members = snapshot.data ?? [];
                 
                 if (members.isEmpty) {
-                  return const Padding(
-                    padding: EdgeInsets.all(16.0),
+                  return Padding(
+                    padding: EdgeInsets.all(16.0.w),
                     child: Text('No members found.'),
                   );
                 }
@@ -336,7 +337,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                         backgroundColor: AppColors.primary,
                         child: Text(
                           name.isNotEmpty ? name[0].toUpperCase() : '?',
-                          style: const TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
                       title: Text(name),
@@ -350,7 +351,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Close'),
+              child: Text('Close'),
             ),
           ],
         );
@@ -387,10 +388,10 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
     VoidCallback? onTap,
   }) {
     Widget cardContent = Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.3),
         ),
@@ -401,7 +402,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
           Row(
             children: [
               Icon(icon, size: 16, color: AppColors.primary),
-              const SizedBox(width: 8),
+              SizedBox(width: 8.w),
               Text(
                 title,
                 style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -410,7 +411,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             value,
             style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -429,7 +430,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
         color: Colors.transparent,
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           child: cardContent,
         ),
       );

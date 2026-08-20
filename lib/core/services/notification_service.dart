@@ -15,7 +15,7 @@ class NotificationPreferences {
   final bool morningBriefing;
   final bool soundAndVibrate;
 
-  const NotificationPreferences({
+  NotificationPreferences({
     this.masterEnabled = true,
     this.remind15Min = true,
     this.remind10Min = true,
@@ -44,7 +44,7 @@ class NotificationPreferencesNotifier
     extends Notifier<NotificationPreferences> {
   @override
   NotificationPreferences build() {
-    return const NotificationPreferences();
+    return NotificationPreferences();
   }
 
   void setMasterEnabled(bool enabled) {
@@ -100,17 +100,17 @@ class NotificationService {
       // Fallback
     }
 
-    const AndroidInitializationSettings initializationSettingsAndroid =
+    AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('@mipmap/ic_launcher');
 
-    const DarwinInitializationSettings initializationSettingsDarwin =
+    DarwinInitializationSettings initializationSettingsDarwin =
         DarwinInitializationSettings(
           requestAlertPermission: true,
           requestBadgePermission: true,
           requestSoundPermission: true,
         );
 
-    const InitializationSettings initializationSettings =
+    InitializationSettings initializationSettings =
         InitializationSettings(
           android: initializationSettingsAndroid,
           iOS: initializationSettingsDarwin,
@@ -135,7 +135,7 @@ class NotificationService {
       await androidPlugin?.requestExactAlarmsPermission();
     }
 
-    const AndroidNotificationChannel channel = AndroidNotificationChannel(
+    AndroidNotificationChannel channel = AndroidNotificationChannel(
       'campusly_class_reminders',
       'Class Reminders (10 & 15 mins)',
       description: 'System notifications sent before every lecture starts',
@@ -144,7 +144,7 @@ class NotificationService {
       enableVibration: true,
     );
 
-    const AndroidNotificationChannel systemChannel = AndroidNotificationChannel(
+    AndroidNotificationChannel systemChannel = AndroidNotificationChannel(
       'campusly_system_notifications',
       'Campus Notifications & Alerts',
       description: 'Real-time campus notices, circulars, and reminders',
@@ -153,7 +153,7 @@ class NotificationService {
       enableVibration: true,
     );
 
-    const AndroidNotificationChannel chatChannel = AndroidNotificationChannel(
+    AndroidNotificationChannel chatChannel = AndroidNotificationChannel(
       'campusly_chat_messages',
       'Chat Messages',
       description: 'Direct messages and group chats',
@@ -231,8 +231,8 @@ class NotificationService {
           priority: isEmergency ? Priority.max : Priority.high,
           icon: '@mipmap/ic_launcher',
           color: isEmergency
-              ? const Color(0xFFEF4444)
-              : const Color(0xFF4F46E5),
+              ? Color(0xFFEF4444)
+              : Color(0xFF4F46E5),
           styleInformation: BigTextStyleInformation(body, contentTitle: title),
         ),
         iOS: DarwinNotificationDetails(
@@ -275,7 +275,7 @@ class NotificationService {
           playSound: !isSilent,
           enableVibration: !isSilent,
           icon: '@mipmap/ic_launcher',
-          color: const Color(0xFF4F46E5),
+          color: Color(0xFF4F46E5),
         ),
         iOS: DarwinNotificationDetails(
           presentAlert: true,
@@ -304,7 +304,7 @@ class NotificationService {
           playSound: false,
           enableVibration: false,
           icon: '@mipmap/ic_launcher',
-          color: const Color(0xFF4F46E5),
+          color: Color(0xFF4F46E5),
         ),
         iOS: DarwinNotificationDetails(threadIdentifier: groupKey),
       ),
@@ -341,12 +341,12 @@ class NotificationService {
       );
 
       if (daysUntil == 0 && classDateTime.isBefore(now)) {
-        classDateTime = classDateTime.add(const Duration(days: 7));
+        classDateTime = classDateTime.add(Duration(days: 7));
       }
 
       if (prefs.remind15Min) {
         final remind15Time = classDateTime.subtract(
-          const Duration(minutes: 15),
+          Duration(minutes: 15),
         );
         if (remind15Time.isAfter(now)) {
           final int notificationId = (item.id.hashCode.abs() % 100000) * 10 + 1;
@@ -364,7 +364,7 @@ class NotificationService {
 
       if (prefs.remind10Min) {
         final remind10Time = classDateTime.subtract(
-          const Duration(minutes: 10),
+          Duration(minutes: 10),
         );
         if (remind10Time.isAfter(now)) {
           final int notificationId = (item.id.hashCode.abs() % 100000) * 10 + 2;
@@ -417,7 +417,7 @@ class NotificationService {
         title: title,
         body: body,
         scheduledDate: tzScheduledTime,
-        notificationDetails: const NotificationDetails(
+        notificationDetails: NotificationDetails(
           android: AndroidNotificationDetails(
             'campusly_class_reminders',
             'Class Reminders (10 & 15 mins)',
@@ -457,7 +457,7 @@ class NotificationService {
       id: testId + minutesBefore,
       title: title,
       body: body,
-      notificationDetails: const NotificationDetails(
+      notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
           'campusly_class_reminders',
           'Class Reminders (10 & 15 mins)',

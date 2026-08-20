@@ -1,5 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -13,7 +14,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Exam TimeTables',
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
@@ -26,41 +27,41 @@ class ExamTimeTablesScreen extends ConsumerWidget {
             .stream(primaryKey: ['id']),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(child: CircularProgressIndicator());
           }
 
           final docs = snapshot.data ?? [];
 
           return SingleChildScrollView(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(20.w),
                   decoration: BoxDecoration(
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                       colors: [Color(0xFF3525CD), Color(0xFF6F3DD9)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                   ),
                   child: Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(14),
+                        padding: EdgeInsets.all(14.w),
                         decoration: BoxDecoration(
                           color: Colors.white.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           LucideIcons.calendarClock,
                           color: Colors.white,
                           size: 32,
                         ),
                       ),
-                      const SizedBox(width: 16),
+                      SizedBox(width: 16.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +73,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                 fontWeight: FontWeight.w800,
                               ),
                             ),
-                            const SizedBox(height: 4),
+                            SizedBox(height: 4.h),
                             Text(
                               'Official schedules published for your enrolled course by Controller of Examinations.',
                               style: AppTypography.bodySmall.copyWith(
@@ -85,12 +86,12 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
 
                 if (docs.isEmpty)
                   Center(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding: EdgeInsets.only(top: 40.h),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -101,7 +102,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                               alpha: 0.4,
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                           Text(
                             'No Exam Timetable Published Yet',
                             style: AppTypography.titleMedium.copyWith(
@@ -109,7 +110,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                               color: AppColors.onSurfaceVariant,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Text(
                             'Examination papers, dates, and times will appear here as soon as they are published.',
                             textAlign: TextAlign.center,
@@ -128,17 +129,17 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   ...docs.map((data) {
                     final colorHex =
                         data['colorHex'] as String? ?? '0xFF3525CD';
                     final color = Color(int.tryParse(colorHex) ?? 0xFF3525CD);
 
                     return Container(
-                      margin: const EdgeInsets.only(bottom: 16),
+                      margin: EdgeInsets.only(bottom: 16.h),
                       decoration: BoxDecoration(
                         color: AppColors.surfaceContainerLowest,
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         border: Border.all(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.5,
@@ -148,19 +149,19 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                           BoxShadow(
                             color: Colors.black.withValues(alpha: 0.03),
                             blurRadius: 10,
-                            offset: const Offset(0, 4),
+                            offset: Offset(0, 4),
                           ),
                         ],
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border(
-                              left: BorderSide(color: color, width: 6),
+                              left: BorderSide(color: color, width: 6.w),
                             ),
                           ),
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16.w),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -169,13 +170,13 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 4,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10.w,
+                                      vertical: 4.h,
                                     ),
                                     decoration: BoxDecoration(
                                       color: color.withValues(alpha: 0.12),
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(20.r),
                                     ),
                                     child: Text(
                                       data['code'] as String? ??
@@ -184,32 +185,32 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                       style: TextStyle(
                                         color: color,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 12,
+                                        fontSize: 12.sp,
                                       ),
                                     ),
                                   ),
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                      vertical: 4,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10.w,
+                                      vertical: 4.h,
                                     ),
                                     decoration: BoxDecoration(
                                       color: AppColors.primaryContainer
                                           .withValues(alpha: 0.15),
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(20.r),
                                     ),
                                     child: Text(
                                       data['status'] as String? ?? 'Scheduled',
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                         color: AppColors.primary,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 11,
+                                        fontSize: 11.sp,
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 12),
+                              SizedBox(height: 12.h),
                               Text(
                                 data['subject'] as String? ??
                                     data['name'] as String? ??
@@ -219,16 +220,16 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                   color: AppColors.onSurface,
                                 ),
                               ),
-                              const SizedBox(height: 6),
+                              SizedBox(height: 6.h),
                               Text(
                                 data['type'] as String? ?? 'Theory Examination',
                                 style: AppTypography.bodySmall.copyWith(
                                   color: AppColors.textSecondary,
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(vertical: 12),
-                                child: Divider(height: 1),
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 12.h),
+                                child: Divider(height: 1.h),
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -237,12 +238,12 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                   Expanded(
                                     child: Row(
                                       children: [
-                                        const Icon(
+                                        Icon(
                                           LucideIcons.calendar,
                                           size: 16,
                                           color: AppColors.textSecondary,
                                         ),
-                                        const SizedBox(width: 6),
+                                        SizedBox(width: 6.w),
                                         Expanded(
                                           child: Text(
                                             data['day'] != null
@@ -257,15 +258,15 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                       ],
                                     ),
                                   ),
-                                  const SizedBox(width: 8),
+                                  SizedBox(width: 8.w),
                                   Row(
                                     children: [
-                                      const Icon(
+                                      Icon(
                                         LucideIcons.clock,
                                         size: 16,
                                         color: AppColors.textSecondary,
                                       ),
-                                      const SizedBox(width: 6),
+                                      SizedBox(width: 6.w),
                                       Text(
                                         data['time'] as String? ??
                                             (data['startTime'] != null &&

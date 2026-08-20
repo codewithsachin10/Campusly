@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -61,7 +62,7 @@ class _AttendanceDetailsSheetState
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppColors.surface,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         title: Text(
           'Edit Attendance Counts',
           style: AppTypography.titleMedium.copyWith(
@@ -75,16 +76,16 @@ class _AttendanceDetailsSheetState
             TextField(
               controller: presentCtrl,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'No. of Classes Present',
                 border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             TextField(
               controller: totalCtrl,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Total Classes Held',
                 border: OutlineInputBorder(),
               ),
@@ -95,7 +96,7 @@ class _AttendanceDetailsSheetState
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text('Cancel'),
           ),
           ElevatedButton(
             onPressed: () {
@@ -119,7 +120,7 @@ class _AttendanceDetailsSheetState
               backgroundColor: AppColors.primary,
               foregroundColor: AppColors.onPrimary,
             ),
-            child: const Text('Save'),
+            child: Text('Save'),
           ),
         ],
       ),
@@ -158,8 +159,8 @@ class _AttendanceDetailsSheetState
     final today = DateTime.now();
     // Use Midnight today for cleaner math
     final todayMidnight = DateTime(today.year, today.month, today.day);
-    final startDate = todayMidnight.subtract(const Duration(days: 30));
-    final endDate = todayMidnight.add(const Duration(days: 14));
+    final startDate = todayMidnight.subtract(Duration(days: 30));
+    final endDate = todayMidnight.add(Duration(days: 14));
 
     for (int i = 0; i <= endDate.difference(startDate).inDays; i++) {
       final currentDate = startDate.add(Duration(days: i));
@@ -188,7 +189,7 @@ class _AttendanceDetailsSheetState
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppColors.surface,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         title: Text(
           'Mark Attendance for $dateString',
           style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold),
@@ -197,24 +198,24 @@ class _AttendanceDetailsSheetState
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              leading: const Icon(LucideIcons.checkCircle, color: AppColors.success),
-              title: const Text('Present'),
+              leading: Icon(LucideIcons.checkCircle, color: AppColors.success),
+              title: Text('Present'),
               onTap: () {
                 _markStatus(dateString, 'present');
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(LucideIcons.xCircle, color: AppColors.error),
-              title: const Text('Absent'),
+              leading: Icon(LucideIcons.xCircle, color: AppColors.error),
+              title: Text('Absent'),
               onTap: () {
                 _markStatus(dateString, 'absent');
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(LucideIcons.slash, color: AppColors.warning),
-              title: const Text('Cancelled'),
+              leading: Icon(LucideIcons.slash, color: AppColors.warning),
+              title: Text('Cancelled'),
               onTap: () {
                 _markStatus(dateString, 'cancelled');
                 Navigator.pop(context);
@@ -225,7 +226,7 @@ class _AttendanceDetailsSheetState
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: Text('Close'),
           ),
         ],
       ),
@@ -247,7 +248,7 @@ class _AttendanceDetailsSheetState
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(authControllerProvider).value;
-    if (user == null) return const SizedBox.shrink();
+    if (user == null) return SizedBox.shrink();
 
     final key = AttendanceQueryKey(
       userId: user.id,
@@ -258,14 +259,14 @@ class _AttendanceDetailsSheetState
     final asyncSchedule = ref.watch(weeklyScheduleProvider);
 
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28.r)),
       ),
       padding: EdgeInsets.only(
-        left: 24,
-        right: 24,
-        top: 16,
+        left: 24.w,
+        right: 24.w,
+        top: 16.h,
         bottom: MediaQuery.of(context).padding.bottom + 24,
       ),
       constraints: BoxConstraints(
@@ -277,31 +278,31 @@ class _AttendanceDetailsSheetState
         children: [
           Center(
             child: Container(
-              width: 48,
-              height: 5,
+              width: 48.w,
+              height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.border,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
 
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: EdgeInsets.all(12.w),
                 decoration: BoxDecoration(
                   color: AppColors.primary.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                 ),
-                child: const Icon(
+                child: Icon(
                   LucideIcons.calendarCheck,
                   color: AppColors.primary,
                   size: 26,
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -324,19 +325,19 @@ class _AttendanceDetailsSheetState
               asyncAttendance.when(
                 data: (model) => IconButton(
                   onPressed: () => _showEditCountsDialog(model),
-                  icon: const Icon(LucideIcons.edit3, color: AppColors.primary),
+                  icon: Icon(LucideIcons.edit3, color: AppColors.primary),
                   tooltip: 'Edit Counts',
                 ),
-                loading: () => const SizedBox.shrink(),
-                error: (_, _) => const SizedBox.shrink(),
+                loading: () => SizedBox.shrink(),
+                error: (_, _) => SizedBox.shrink(),
               ),
             ],
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           Expanded(
             child: asyncAttendance.when(
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (err, _) => Center(child: Text('Error: $err')),
               data: (model) {
                 final pct = model.percentage;
@@ -360,7 +361,7 @@ class _AttendanceDetailsSheetState
                               color: AppColors.success,
                             ),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12.w),
                           Expanded(
                             child: _buildStatBox(
                               label: 'Total Classes',
@@ -368,7 +369,7 @@ class _AttendanceDetailsSheetState
                               color: AppColors.primary,
                             ),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12.w),
                           Expanded(
                             child: _buildStatBox(
                               label: 'Attendance %',
@@ -380,19 +381,19 @@ class _AttendanceDetailsSheetState
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20.h),
 
                       // Smart Bunk Predictor Banner
                       Container(
-                        padding: const EdgeInsets.all(16),
+                        padding: EdgeInsets.all(16.w),
                         decoration: BoxDecoration(
                           color: isRisk
                               ? AppColors.error.withValues(alpha: 0.12)
                               : AppColors.success.withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                           border: Border.all(
                             color: isRisk ? AppColors.error : AppColors.success,
-                            width: 1.5,
+                            width: 1.5.w,
                           ),
                         ),
                         child: Row(
@@ -406,7 +407,7 @@ class _AttendanceDetailsSheetState
                                   : AppColors.success,
                               size: 28,
                             ),
-                            const SizedBox(width: 14),
+                            SizedBox(width: 14.w),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -422,7 +423,7 @@ class _AttendanceDetailsSheetState
                                           : AppColors.success,
                                     ),
                                   ),
-                                  const SizedBox(height: 4),
+                                  SizedBox(height: 4.h),
                                   Text(
                                     isRisk
                                         ? "Warning: If you miss today's class, your attendance will drop below 75% REC criterion!"
@@ -438,7 +439,7 @@ class _AttendanceDetailsSheetState
                           ],
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
 
                       // Quick Log Section
                       Text(
@@ -447,7 +448,7 @@ class _AttendanceDetailsSheetState
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       Row(
                         children: [
                           Expanded(
@@ -459,7 +460,7 @@ class _AttendanceDetailsSheetState
                                   .markStatus('present'),
                             ),
                           ),
-                          const SizedBox(width: 10),
+                          SizedBox(width: 10.w),
                           Expanded(
                             child: _buildActionButton(
                               title: 'Absent ❌',
@@ -469,7 +470,7 @@ class _AttendanceDetailsSheetState
                                   .markStatus('absent'),
                             ),
                           ),
-                          const SizedBox(width: 10),
+                          SizedBox(width: 10.w),
                           Expanded(
                             child: _buildActionButton(
                               title: 'Cancelled 🚫',
@@ -481,7 +482,7 @@ class _AttendanceDetailsSheetState
                           ),
                         ],
                       ),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
 
                       // History Log
                       Text(
@@ -490,14 +491,14 @@ class _AttendanceDetailsSheetState
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       if (timeline.isEmpty)
                         Container(
-                          padding: const EdgeInsets.all(24),
+                          padding: EdgeInsets.all(24.w),
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: AppColors.background,
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(16.r),
                           ),
                           child: Text(
                             'No dates marked or scheduled.',
@@ -510,7 +511,7 @@ class _AttendanceDetailsSheetState
                       else
                         ListView.builder(
                           shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
+                          physics: NeverScrollableScrollPhysics(),
                           itemCount: timeline.length,
                           itemBuilder: (context, idx) {
                             final entry = timeline[idx];
@@ -525,7 +526,7 @@ class _AttendanceDetailsSheetState
                               onTap: () {
                                 if (isStrictlyFuture) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
+                                    SnackBar(
                                       content: Text('You can only change attendance for today or past classes.'),
                                       behavior: SnackBarBehavior.floating,
                                     ),
@@ -534,16 +535,16 @@ class _AttendanceDetailsSheetState
                                   _showMarkAttendanceDialog(model, entry.dateString);
                                 }
                               },
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.r),
                               child: Container(
-                                margin: const EdgeInsets.only(bottom: 8),
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 12,
+                                margin: EdgeInsets.only(bottom: 8.h),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 16.w,
+                                  vertical: 12.h,
                                 ),
                                 decoration: BoxDecoration(
                                   color: isStrictlyFuture ? AppColors.background.withValues(alpha: 0.5) : AppColors.background,
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.r),
                                   border: Border.all(color: AppColors.border),
                                 ),
                                 child: Row(
@@ -558,9 +559,9 @@ class _AttendanceDetailsSheetState
                                       ),
                                     ),
                                     Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10,
-                                        vertical: 4,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 10.w,
+                                        vertical: 4.h,
                                       ),
                                       decoration: BoxDecoration(
                                         color:
@@ -572,7 +573,7 @@ class _AttendanceDetailsSheetState
                                                     ? AppColors.warning
                                                     : Colors.grey)
                                                 .withValues(alpha: 0.15),
-                                        borderRadius: BorderRadius.circular(8),
+                                        borderRadius: BorderRadius.circular(8.r),
                                       ),
                                       child: Text(
                                         isP
@@ -617,10 +618,10 @@ class _AttendanceDetailsSheetState
     required Color color,
   }) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 12.w),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
@@ -635,7 +636,7 @@ class _AttendanceDetailsSheetState
               ),
             ),
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Text(
             label,
             style: AppTypography.labelSmall.copyWith(
@@ -655,13 +656,13 @@ class _AttendanceDetailsSheetState
   }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(14.r),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        padding: EdgeInsets.symmetric(vertical: 14.h),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: color.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(14.r),
           border: Border.all(color: color),
         ),
         child: Text(

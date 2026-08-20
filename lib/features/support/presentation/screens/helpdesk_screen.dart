@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../providers/support_provider.dart';
@@ -65,7 +65,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
         AppErrorHandler.showSuccessSnackBar(context, 'Ticket created successfully!');
         _subjectController.clear();
         _descriptionController.clear();
-        Navigator.push(context, MaterialPageRoute(builder: (_) => const MyTicketsScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => MyTicketsScreen()));
       } else {
         final error = ref.read(createTicketProvider).error;
         AppErrorHandler.showErrorSnackBar(context, error ?? 'Failed to create ticket');
@@ -82,29 +82,29 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
       appBar: AppBar(
         title: GradientText(
           'Student Helpdesk',
-          gradient: const LinearGradient(colors: [Color(0xFF4285F4), Color(0xFFE91E63)]),
+          gradient: LinearGradient(colors: [Color(0xFF4285F4), Color(0xFFE91E63)]),
           style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.w700),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(LucideIcons.arrowLeft, color: Color(0xFF673AB7)),
+          icon: Icon(LucideIcons.arrowLeft, color: Color(0xFF673AB7)),
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
           Container(
-            margin: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
+            margin: EdgeInsets.only(right: 16.w, top: 8.h, bottom: 8.h),
             decoration: BoxDecoration(
-              color: const Color(0xFFF3E5F5),
-              borderRadius: BorderRadius.circular(12),
+              color: Color(0xFFF3E5F5),
+              borderRadius: BorderRadius.circular(12.r),
             ),
             child: IconButton(
-              icon: const Icon(LucideIcons.ticket, color: Color(0xFF7E57C2), size: 20),
+              icon: Icon(LucideIcons.ticket, color: Color(0xFF7E57C2), size: 20),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const MyTicketsScreen()),
+                  MaterialPageRoute(builder: (_) => MyTicketsScreen()),
                 );
               },
             ),
@@ -117,59 +117,59 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
         color: Colors.white,
         child: SafeArea(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Top Contact Card
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(24.w),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.7),
-                    borderRadius: BorderRadius.circular(24),
-                    border: Border.all(color: Colors.white, width: 2),
+                    borderRadius: BorderRadius.circular(24.r),
+                    border: Border.all(color: Colors.white, width: 2.w),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFFE91E63).withValues(alpha: 0.1),
+                        color: Color(0xFFE91E63).withValues(alpha: 0.1),
                         blurRadius: 20,
-                        offset: const Offset(0, 10),
+                        offset: Offset(0, 10),
                       ),
                     ],
                   ),
                   child: Column(
                     children: [
-                      const Text(
+                      Text(
                         '🎧',
-                        style: TextStyle(fontSize: 64),
+                        style: TextStyle(fontSize: 64.sp),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       Text(
                         'IT & Academic Helpdesk',
-                        style: AppTypography.titleMedium.copyWith(color: const Color(0xFF5E35B1)),
+                        style: AppTypography.titleMedium.copyWith(color: Color(0xFF5E35B1)),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: 8.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            width: 10,
-                            height: 10,
-                            decoration: const BoxDecoration(color: Color(0xFF4CAF50), shape: BoxShape.circle),
+                            width: 10.w,
+                            height: 10.h,
+                            decoration: BoxDecoration(color: Color(0xFF4CAF50), shape: BoxShape.circle),
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8.w),
                           Text(
                             'Support Available',
-                            style: AppTypography.labelMedium.copyWith(color: const Color(0xFF4CAF50), fontWeight: FontWeight.bold),
+                            style: AppTypography.labelMedium.copyWith(color: Color(0xFF4CAF50), fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(LucideIcons.mail, size: 14, color: Colors.black54),
-                          const SizedBox(width: 6),
+                          Icon(LucideIcons.mail, size: 14, color: Colors.black54),
+                          SizedBox(width: 6.w),
                           Flexible(
                             child: Text(
                               'support@rec.edu.in | Ext: 4400 / 4401', 
@@ -179,12 +179,12 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 6),
+                      SizedBox(height: 6.h),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(LucideIcons.mapPin, size: 14, color: Colors.black54),
-                          const SizedBox(width: 6),
+                          Icon(LucideIcons.mapPin, size: 14, color: Colors.black54),
+                          SizedBox(width: 6.w),
                           Flexible(
                             child: Text(
                               'Admin Block - Room 102', 
@@ -194,28 +194,28 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 6),
+                      SizedBox(height: 6.h),
                       Text('(08:30 AM - 05:00 PM)', style: AppTypography.bodySmall.copyWith(color: Colors.black54)),
                     ],
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32.h),
 
                 // Raise Ticket Section
                 Text('Raise Support Ticket', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
 
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(20.w),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.7),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.white, width: 2),
+                    borderRadius: BorderRadius.circular(20.r),
+                    border: Border.all(color: Colors.white, width: 2.w),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFF4285F4).withValues(alpha: 0.05),
+                        color: Color(0xFF4285F4).withValues(alpha: 0.05),
                         blurRadius: 20,
-                        offset: const Offset(0, 10),
+                        offset: Offset(0, 10),
                       ),
                     ],
                   ),
@@ -225,23 +225,23 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Issue Category', style: AppTypography.labelMedium.copyWith(color: Colors.black87)),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         DropdownButtonFormField<String>(
                           isExpanded: true,
                           initialValue: _selectedCategory,
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
-                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
                           ),
                           items: _categories.map((cat) => DropdownMenuItem(value: cat, child: Text(cat, style: AppTypography.bodyMedium))).toList(),
                           onChanged: (val) {
                             if (val != null) setState(() => _selectedCategory = val);
                           },
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
 
                         TextFormField(
                           controller: _subjectController,
@@ -250,13 +250,13 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             hintStyle: TextStyle(color: Colors.black38),
                             filled: true,
                             fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
-                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
                           ),
                           validator: (val) => val == null || val.trim().isEmpty ? 'Please enter subject' : null,
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
 
                         TextFormField(
                           controller: _descriptionController,
@@ -266,65 +266,65 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             hintStyle: TextStyle(color: Colors.black38),
                             filled: true,
                             fillColor: Colors.white,
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
-                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Color(0xFFF3E5F5))),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
                           ),
                           validator: (val) => val == null || val.trim().isEmpty ? 'Please enter issue details' : null,
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
 
                         // Attachment Area
                         Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(vertical: 24),
+                          padding: EdgeInsets.symmetric(vertical: 24.h),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFDFBFF),
-                            borderRadius: BorderRadius.circular(12),
+                            color: Color(0xFFFDFBFF),
+                            borderRadius: BorderRadius.circular(12.r),
                             // Create a pseudo dashed border effect using a repeating gradient on the border or just a light solid border if dashed isn't strictly available.
-                            border: Border.all(color: const Color(0xFFD1C4E9), width: 1.5),
+                            border: Border.all(color: Color(0xFFD1C4E9), width: 1.5.w),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(LucideIcons.paperclip, color: Color(0xFFAB47BC)),
-                              const SizedBox(height: 8),
+                              Icon(LucideIcons.paperclip, color: Color(0xFFAB47BC)),
+                              SizedBox(height: 8.h),
                               Text('Add screenshot (PNG, JPG • Max 5 MB)', style: AppTypography.bodySmall.copyWith(color: Colors.black87)),
                             ],
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        SizedBox(height: 24.h),
 
                         Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            gradient: const LinearGradient(
+                            gradient: LinearGradient(
                               colors: [Color(0xFF4285F4), Color(0xFF9C27B0)],
                             ),
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(30.r),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFF9C27B0).withValues(alpha: 0.3),
+                                color: Color(0xFF9C27B0).withValues(alpha: 0.3),
                                 blurRadius: 10,
-                                offset: const Offset(0, 4),
+                                offset: Offset(0, 4),
                               ),
                             ],
                           ),
                           child: ElevatedButton.icon(
                             onPressed: _isSubmitting ? null : _submitTicket,
                             icon: _isSubmitting
-                                ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                                : const Icon(LucideIcons.send, size: 18, color: Colors.white),
-                            label: const Text('Submit Support Ticket', style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
+                                ? SizedBox(width: 16.w, height: 16.h, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                                : Icon(LucideIcons.send, size: 18, color: Colors.white),
+                            label: Text('Submit Support Ticket', style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.transparent,
                               shadowColor: Colors.transparent,
-                              padding: const EdgeInsets.symmetric(vertical: 16),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                              padding: EdgeInsets.symmetric(vertical: 16.h),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
                             ),
                           ),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           'Campusly automatically includes your student profile and device details with this ticket.',
                           style: AppTypography.labelMedium.copyWith(color: Colors.black54),
@@ -334,109 +334,109 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32.h),
 
                 // FAQs Section
                 Text('Frequently Asked Questions', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
 
                 faqsAsync.when(
                   data: (faqs) {
-                    if (faqs.isEmpty) return const Text('No FAQs available.');
+                    if (faqs.isEmpty) return Text('No FAQs available.');
                     return Column(
                       children: faqs.map((faq) {
                         return Container(
-                          margin: const EdgeInsets.only(bottom: 12),
+                          margin: EdgeInsets.only(bottom: 12.h),
                           decoration: BoxDecoration(
                             color: Colors.white.withValues(alpha: 0.9),
-                            borderRadius: BorderRadius.circular(14),
-                            border: Border.all(color: Colors.white, width: 2),
+                            borderRadius: BorderRadius.circular(14.r),
+                            border: Border.all(color: Colors.white, width: 2.w),
                             boxShadow: [
-                              BoxShadow(color: const Color(0xFFE91E63).withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 4)),
+                              BoxShadow(color: Color(0xFFE91E63).withValues(alpha: 0.05), blurRadius: 10, offset: Offset(0, 4)),
                             ],
                           ),
                           child: ExpansionTile(
-                            shape: const Border(),
-                            collapsedShape: const Border(),
-                            iconColor: const Color(0xFF7E57C2),
-                            collapsedIconColor: const Color(0xFF7E57C2),
+                            shape: Border(),
+                            collapsedShape: Border(),
+                            iconColor: Color(0xFF7E57C2),
+                            collapsedIconColor: Color(0xFF7E57C2),
                             title: Text(faq['question'], style: AppTypography.bodyMedium.copyWith(fontWeight: FontWeight.w600, color: Colors.black87)),
-                            childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                            childrenPadding: EdgeInsets.fromLTRB(16, 0, 16, 16),
                             children: [
-                              Text(faq['answer'], style: AppTypography.bodySmall.copyWith(height: 1.5, color: Colors.black54)),
+                              Text(faq['answer'], style: AppTypography.bodySmall.copyWith(height: 1.5.h, color: Colors.black54)),
                             ],
                           ),
                         );
                       }).toList(),
                     );
                   },
-                  loading: () => const Center(child: CircularProgressIndicator()),
+                  loading: () => Center(child: CircularProgressIndicator()),
                   error: (err, st) => Text('Failed to load FAQs: $err'),
                 ),
 
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 Center(
                   child: Text(
                     'View All FAQs', 
-                    style: AppTypography.labelLarge.copyWith(color: const Color(0xFF9C27B0), fontWeight: FontWeight.bold)
+                    style: AppTypography.labelLarge.copyWith(color: Color(0xFF9C27B0), fontWeight: FontWeight.bold)
                   )
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32.h),
 
                 // Still Need Help
                 Container(
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(24.w),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.7),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.white, width: 2),
+                    borderRadius: BorderRadius.circular(20.r),
+                    border: Border.all(color: Colors.white, width: 2.w),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFF4285F4).withValues(alpha: 0.05),
+                        color: Color(0xFF4285F4).withValues(alpha: 0.05),
                         blurRadius: 20,
-                        offset: const Offset(0, 10),
+                        offset: Offset(0, 10),
                       ),
                     ],
                   ),
                   child: Column(
                     children: [
                       Text('Still Need Help?', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
-                      const SizedBox(height: 8),
+                      SizedBox(height: 8.h),
                       Text('Still need help? Can\'t find what you\'re looking for?', style: AppTypography.bodySmall.copyWith(color: Colors.black54), textAlign: TextAlign.center),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: const Color(0xFFF3E5F5)),
+                          borderRadius: BorderRadius.circular(30.r),
+                          border: Border.all(color: Color(0xFFF3E5F5)),
                         ),
                         child: OutlinedButton.icon(
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_) => const MyTicketsScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => MyTicketsScreen()));
                           },
-                          icon: const Text('🎫'),
+                          icon: Text('🎫'),
                           label: Text('My Support Tickets', style: AppTypography.labelLarge.copyWith(color: Colors.black87)),
                           style: OutlinedButton.styleFrom(
-                            minimumSize: const Size(double.infinity, 50),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                            minimumSize: Size(double.infinity, 50),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
                             side: BorderSide.none,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: const Color(0xFFF3E5F5)),
+                          borderRadius: BorderRadius.circular(30.r),
+                          border: Border.all(color: Color(0xFFF3E5F5)),
                         ),
                         child: OutlinedButton.icon(
                           onPressed: () {},
-                          icon: const Text('📧'),
+                          icon: Text('📧'),
                           label: Text('Contact Support', style: AppTypography.labelLarge.copyWith(color: Colors.black87)),
                           style: OutlinedButton.styleFrom(
-                            minimumSize: const Size(double.infinity, 50),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                            minimumSize: Size(double.infinity, 50),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
                             side: BorderSide.none,
                           ),
                         ),
@@ -444,7 +444,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: 32.h),
               ],
             ),
           ),

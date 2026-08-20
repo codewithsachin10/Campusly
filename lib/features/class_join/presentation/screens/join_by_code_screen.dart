@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -153,43 +154,43 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
       context: context,
       isScrollControlled: true,
       backgroundColor: AppColors.surfaceContainerLowest,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28.r)),
       ),
       builder: (bottomSheetContext) {
         return Padding(
           padding: EdgeInsets.only(
-            left: 24,
-            right: 24,
-            top: 24,
+            left: 24.w,
+            right: 24.w,
+            top: 24.h,
             bottom: MediaQuery.of(bottomSheetContext).viewInsets.bottom + 24,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 48,
-                height: 5,
+                width: 48.w,
+                height: 5.h,
                 decoration: BoxDecoration(
                   color: AppColors.outlineVariant,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(10),
+                    padding: EdgeInsets.all(10.w),
                     decoration: BoxDecoration(
                       color: AppColors.primaryContainer.withValues(alpha: 0.3),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.qr_code_scanner_rounded,
                       color: AppColors.primary,
                     ),
                   ),
-                  const SizedBox(width: 14),
+                  SizedBox(width: 14.w),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,14 +212,14 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 28),
+              SizedBox(height: 28.h),
               // Camera Viewfinder using MobileScanner
               Container(
-                width: 240,
-                height: 240,
+                width: 240.w,
+                height: 240.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  border: Border.all(color: AppColors.primary, width: 3),
+                  borderRadius: BorderRadius.circular(24.r),
+                  border: Border.all(color: AppColors.primary, width: 3.w),
                   boxShadow: [
                     BoxShadow(
                       color: AppColors.primary.withValues(alpha: 0.1),
@@ -228,7 +229,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   ],
                 ),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(21),
+                  borderRadius: BorderRadius.circular(21.r),
                   child: Stack(
                     children: [
                       MobileScanner(
@@ -246,11 +247,11 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       ),
                       // Laser scan animation bar
                       Positioned(
-                        top: 120,
-                        left: 16,
-                        right: 16,
+                        top: 120.h,
+                        left: 16.w,
+                        right: 16.w,
                         child: Container(
-                          height: 3,
+                          height: 3.h,
                           decoration: BoxDecoration(
                             color: AppColors.secondary,
                             boxShadow: [
@@ -269,7 +270,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
               Text(
                 'Simulate QR Scan (Test Codes):',
                 style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -277,7 +278,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
@@ -305,7 +306,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
             ],
           ),
         );
@@ -319,7 +320,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
     BuildContext bottomSheetContext,
   ) {
     return ActionChip(
-      avatar: const Icon(
+      avatar: Icon(
         Icons.qr_code_rounded,
         size: 16,
         color: AppColors.primary,
@@ -331,7 +332,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
       ),
       backgroundColor: AppColors.primaryContainer.withValues(alpha: 0.2),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
         side: BorderSide(color: AppColors.primary.withValues(alpha: 0.3)),
       ),
       onPressed: () {
@@ -352,23 +353,23 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
     showDialog(
       context: context,
       builder: (dialogContext) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.r)),
         backgroundColor: AppColors.surfaceContainerLowest,
         title: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.w),
               decoration: BoxDecoration(
                 color: AppColors.primaryContainer.withValues(alpha: 0.3),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.class_rounded,
                 color: AppColors.primary,
                 size: 28,
               ),
             ),
-            const SizedBox(width: 14),
+            SizedBox(width: 14.w),
             Expanded(
               child: Text(
                 'Confirm Class Join',
@@ -390,12 +391,12 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 color: AppColors.onSurface,
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLow,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                 ),
@@ -406,13 +407,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8.w,
+                          vertical: 4.h,
                         ),
                         decoration: BoxDecoration(
                           color: AppColors.primaryContainer,
-                          borderRadius: BorderRadius.circular(6),
+                          borderRadius: BorderRadius.circular(6.r),
                         ),
                         child: Text(
                           classModel.code,
@@ -422,7 +423,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                           ),
                         ),
                       ),
-                      const Spacer(),
+                      Spacer(),
                       Text(
                         classModel.section,
                         style: AppTypography.textTheme.labelLarge?.copyWith(
@@ -432,7 +433,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Text(
                     classModel.name,
                     style: AppTypography.textTheme.titleLarge?.copyWith(
@@ -440,7 +441,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  SizedBox(height: 6.h),
                   Text(
                     'Department: ${classModel.department}',
                     style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -456,21 +457,21 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.sync_rounded,
                   size: 20,
                   color: AppColors.primary,
                 ),
-                const SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 Expanded(
                   child: Text(
                     'Once confirmed, your personal timetable and reminders will switch to this class until you change it.',
                     style: AppTypography.textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
-                      height: 1.4,
+                      height: 1.4.h,
                     ),
                   ),
                 ),
@@ -478,9 +479,9 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             ),
           ],
         ),
-        actionsPadding: const EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 18,
+        actionsPadding: EdgeInsets.symmetric(
+          horizontal: 24.w,
+          vertical: 18.h,
         ),
         actions: [
           TextButton(
@@ -498,9 +499,9 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(14.r),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
             ),
             child: Text(
               'Yes, Join Class',
@@ -534,7 +535,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -546,15 +547,15 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20.0),
+            padding: EdgeInsets.only(right: 20.0.w),
             child: Container(
-              width: 40,
-              height: 40,
+              width: 40.w,
+              height: 40.h,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: AppColors.primary.withValues(alpha: 0.1),
-                  width: 2,
+                  width: 2.w,
                 ),
                 color: AppColors.primaryContainer.withValues(alpha: 0.2),
               ),
@@ -577,20 +578,20 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 20.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0.w,
+              vertical: 20.0.h,
             ),
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 640),
+              constraints: BoxConstraints(maxWidth: 640),
               child: Column(
                 children: [
                   // Mode Switcher Header (Scan QR Code vs Join via Code)
                   Container(
-                    padding: const EdgeInsets.all(6),
+                    padding: EdgeInsets.all(6.w),
                     decoration: BoxDecoration(
                       color: AppColors.surfaceContainerLow,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                       border: Border.all(
                         color: AppColors.outlineVariant.withValues(alpha: 0.4),
                       ),
@@ -603,14 +604,14 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                               setState(() => _selectedModeIndex = 0);
                               _showQrScannerModal(context);
                             },
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.r),
                             child: Container(
-                              padding: const EdgeInsets.symmetric(vertical: 12),
+                              padding: EdgeInsets.symmetric(vertical: 12.h),
                               decoration: BoxDecoration(
                                 color: _selectedModeIndex == 0
                                     ? AppColors.primary
                                     : Colors.transparent,
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -622,7 +623,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                                         ? AppColors.onPrimary
                                         : AppColors.onSurfaceVariant,
                                   ),
-                                  const SizedBox(width: 8),
+                                  SizedBox(width: 8.w),
                                   Text(
                                     'Scan QR Code',
                                     style: AppTypography.textTheme.titleSmall
@@ -643,14 +644,14 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                             onTap: () {
                               setState(() => _selectedModeIndex = 1);
                             },
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.r),
                             child: Container(
-                              padding: const EdgeInsets.symmetric(vertical: 12),
+                              padding: EdgeInsets.symmetric(vertical: 12.h),
                               decoration: BoxDecoration(
                                 color: _selectedModeIndex == 1
                                     ? AppColors.primary
                                     : Colors.transparent,
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -662,7 +663,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                                         ? AppColors.onPrimary
                                         : AppColors.onSurfaceVariant,
                                   ),
-                                  const SizedBox(width: 8),
+                                  SizedBox(width: 8.w),
                                   Text(
                                     'Join via Code',
                                     style: AppTypography.textTheme.titleSmall
@@ -681,7 +682,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
 
                   // Header Section
                   Text(
@@ -691,25 +692,25 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8.h),
                   Text(
                     'Join your academic group by entering the unique 10-character code or scanning the class QR code.',
                     textAlign: TextAlign.center,
                     style: AppTypography.textTheme.bodyLarge?.copyWith(
                       color: AppColors.onSurfaceVariant,
-                      height: 1.5,
+                      height: 1.5.h,
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
 
                   // Input Box
                   Container(
                     decoration: BoxDecoration(
                       color: AppColors.surfaceContainerLowest,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                       border: Border.all(
                         color: AppColors.outlineVariant.withValues(alpha: 0.6),
-                        width: 2,
+                        width: 2.w,
                       ),
                     ),
                     child: Row(
@@ -725,19 +726,19 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                                   color: AppColors.primary,
                                   fontWeight: FontWeight.bold,
                                 ),
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: 'CAMPUS-XXXX',
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
-                                vertical: 20,
-                                horizontal: 16,
+                                vertical: 20.h,
+                                horizontal: 16.w,
                               ),
                             ),
                             onSubmitted: (_) => _lookupCode(),
                           ),
                         ),
                         IconButton(
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.qr_code_scanner_rounded,
                             color: AppColors.primary,
                             size: 28,
@@ -748,26 +749,26 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                             _showQrScannerModal(context);
                           },
                         ),
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8.w),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   SizedBox(
                     width: double.infinity,
-                    height: 54,
+                    height: 54.h,
                     child: ElevatedButton(
                       onPressed: _isLoadingPreview ? null : _lookupCode,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primary,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                         ),
                       ),
                       child: _isLoadingPreview
-                          ? const SizedBox(
-                              width: 24,
-                              height: 24,
+                          ? SizedBox(
+                              width: 24.w,
+                              height: 24.h,
                               child: CircularProgressIndicator(
                                 color: AppColors.onPrimary,
                                 strokeWidth: 2.5,
@@ -785,7 +786,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   ),
 
                   if (_errorMessage != null) ...[
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Text(
                       _errorMessage!,
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -796,20 +797,20 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
 
                   // Refined Class Preview State
                   if (_previewClass != null) ...[
-                    const SizedBox(height: 36),
+                    SizedBox(height: 36.h),
                     _buildPreviewCard(_previewClass!),
                   ],
 
-                  const SizedBox(height: 36),
+                  SizedBox(height: 36.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.info_outline_rounded,
                         color: AppColors.onSurfaceVariant,
                         size: 20,
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8.w),
                       Flexible(
                         child: Text(
                           'Need help? Contact your department administrator.',
@@ -833,19 +834,19 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
   Widget _buildPreviewCard(ClassModel classModel) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(24.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.35),
-          width: 1.5,
+          width: 1.5.w,
         ),
         boxShadow: [
           BoxShadow(
             color: AppColors.primary.withValues(alpha: 0.06),
             blurRadius: 30,
-            offset: const Offset(0, 10),
+            offset: Offset(0, 10),
           ),
         ],
       ),
@@ -857,13 +858,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 4,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.w,
+                  vertical: 4.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.secondaryFixed,
-                  borderRadius: BorderRadius.circular(999),
+                  borderRadius: BorderRadius.circular(999.r),
                 ),
                 child: Text(
                   'PREVIEWING',
@@ -875,13 +876,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 6,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12.w,
+                  vertical: 6.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.tertiaryContainer,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: Text(
                   classModel.section,
@@ -893,7 +894,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             'CLASS CODE',
             style: AppTypography.textTheme.labelSmall?.copyWith(
@@ -902,7 +903,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          const SizedBox(height: 2),
+          SizedBox(height: 2.h),
           Text(
             classModel.code,
             style: AppTypography.textTheme.headlineLarge?.copyWith(
@@ -911,9 +912,9 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               letterSpacing: 1.5,
             ),
           ),
-          const SizedBox(height: 16),
-          const Divider(height: 1),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
+          Divider(height: 1.h),
+          SizedBox(height: 16.h),
           Text(
             classModel.name,
             style: AppTypography.textTheme.headlineMedium?.copyWith(
@@ -921,7 +922,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
 
           // Details List
           _buildDetailRow(
@@ -929,13 +930,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             label: 'Department',
             value: classModel.department,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           _buildDetailRow(
             icon: Icons.apartment_rounded,
             label: 'Institution',
             value: classModel.institution,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           _buildDetailRow(
             icon: Icons.groups_rounded,
             label: 'Enrolled',
@@ -943,18 +944,18 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             trailing: InkWell(
               onTap: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Viewing student roster...')),
+                  SnackBar(content: Text('Viewing student roster...')),
                 );
               },
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.r),
               child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 6,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 12.w,
+                  vertical: 6.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.surfaceContainerHigh,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                   border: Border.all(
                     color: AppColors.outlineVariant.withValues(alpha: 0.3),
                   ),
@@ -969,24 +970,24 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           _buildDetailRow(
             icon: Icons.calendar_today_rounded,
             label: 'Schedule',
             value: classModel.scheduleSummary,
           ),
-          const SizedBox(height: 28),
+          SizedBox(height: 28.h),
 
           // Join This Class button with confirmation check
           SizedBox(
             width: double.infinity,
-            height: 54,
+            height: 54.h,
             child: ElevatedButton(
               onPressed: () => _showJoinConfirmationDialog(context, classModel),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.r),
                 ),
               ),
               child: Text(
@@ -1012,15 +1013,15 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
     return Row(
       children: [
         Container(
-          width: 44,
-          height: 44,
+          width: 44.w,
+          height: 44.h,
           decoration: BoxDecoration(
             color: AppColors.surfaceContainerLow,
             shape: BoxShape.circle,
           ),
           child: Icon(icon, color: AppColors.primary, size: 22),
         ),
-        const SizedBox(width: 14),
+        SizedBox(width: 14.w),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1031,7 +1032,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   color: AppColors.onSurfaceVariant,
                 ),
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: 2.h),
               Text(
                 value,
                 style: AppTypography.textTheme.bodyLarge?.copyWith(
@@ -1042,7 +1043,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             ],
           ),
         ),
-        trailing ?? const SizedBox.shrink(),
+        trailing ?? SizedBox.shrink(),
       ],
     );
   }

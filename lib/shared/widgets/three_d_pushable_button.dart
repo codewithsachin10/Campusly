@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_typography.dart';
 
@@ -39,21 +40,21 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
         : (_isPressed ? 1.0 : (_isHovered ? 4.0 : 2.0));
 
     final Duration duration = _isPressed
-        ? const Duration(milliseconds: 34)
+        ? Duration(milliseconds: 34)
         : (_isHovered
-              ? const Duration(milliseconds: 250)
-              : const Duration(milliseconds: 600));
+              ? Duration(milliseconds: 250)
+              : Duration(milliseconds: 600));
 
     final Curve curve = _isPressed
         ? Curves.linear
         : (_isHovered
-              ? const Cubic(0.3, 0.7, 0.4, 1.5)
-              : const Cubic(0.3, 0.7, 0.4, 1.0));
+              ? Cubic(0.3, 0.7, 0.4, 1.5)
+              : Cubic(0.3, 0.7, 0.4, 1.0));
 
     // Front color with brightness increase on hover
     final Color frontColor = _isDisabled
         ? AppColors.primary.withValues(alpha: 0.6)
-        : (_isHovered ? const Color(0xFF4C3CE8) : AppColors.primary);
+        : (_isHovered ? Color(0xFF4C3CE8) : AppColors.primary);
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
@@ -81,27 +82,27 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
               AnimatedPositioned(
                 duration: duration,
                 curve: curve,
-                top: 6.0 + shadowOffset,
-                left: 0,
-                right: 0,
+                top: 6.0.h + shadowOffset,
+                left: 0.w,
+                right: 0.w,
                 bottom: -shadowOffset,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: const Color(0x40000000), // hsl(0deg 0% 0% / 0.25)
-                    borderRadius: BorderRadius.circular(12),
+                    color: Color(0x40000000), // hsl(0deg 0% 0% / 0.25)
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                 ),
               ),
               // .edge layer
               Positioned(
-                top: 6.0,
-                left: 0,
-                right: 0,
-                bottom: 0,
+                top: 6.0.h,
+                left: 0.w,
+                right: 0.w,
+                bottom: 0.h,
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: const LinearGradient(
+                    borderRadius: BorderRadius.circular(12.r),
+                    gradient: LinearGradient(
                       begin: Alignment.centerRight,
                       end: Alignment.centerLeft,
                       stops: [0.0, 0.08, 0.92, 1.0],
@@ -119,22 +120,22 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
               AnimatedPositioned(
                 duration: duration,
                 curve: curve,
-                top: 6.0 + frontOffset,
-                left: 0,
-                right: 0,
+                top: 6.0.h + frontOffset,
+                left: 0.w,
+                right: 0.w,
                 bottom: -frontOffset,
                 child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 250),
+                  duration: Duration(milliseconds: 250),
                   decoration: BoxDecoration(
                     color: frontColor,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                   alignment: Alignment.center,
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  padding: EdgeInsets.symmetric(horizontal: 24.w),
                   child: widget.isLoading
-                      ? const SizedBox(
-                          width: 24,
-                          height: 24,
+                      ? SizedBox(
+                          width: 24.w,
+                          height: 24.h,
                           child: CircularProgressIndicator(
                             strokeWidth: 2.5,
                             color: Colors.white,
@@ -144,7 +145,7 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
                           widget.text,
                           style: AppTypography.textTheme.labelLarge?.copyWith(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             fontWeight: FontWeight.w600,
                             letterSpacing: 0.5,
                           ),

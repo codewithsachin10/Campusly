@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,7 +13,7 @@ import '../../../connect/presentation/providers/connections_provider.dart';
 final campusPresenceStreamProvider =
     StreamProvider.autoDispose<List<Map<String, dynamic>>>((ref) {
       final user = ref.watch(authControllerProvider).value;
-      if (user == null) return const Stream.empty();
+      if (user == null) return Stream.empty();
       return ref.watch(locationRepositoryProvider).streamCampusPresence(user);
     });
 
@@ -58,14 +59,14 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
     DateTime expiresAt;
     final now = DateTime.now();
     if (_selectedDuration == '1 Hour') {
-      expiresAt = now.add(const Duration(hours: 1));
+      expiresAt = now.add(Duration(hours: 1));
     } else if (_selectedDuration == 'End of Day') {
       expiresAt = DateTime(now.year, now.month, now.day, 23, 59, 59);
     } else if (_selectedDuration == 'Until I Leave Campus') {
-      expiresAt = now.add(const Duration(hours: 4)); // Approximation
+      expiresAt = now.add(Duration(hours: 4)); // Approximation
     } else {
       expiresAt = now.add(
-        const Duration(days: 365),
+        Duration(days: 365),
       ); // Manual - arbitrarily long
     }
 
@@ -104,7 +105,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.surface,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -120,7 +121,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
           // Check In Card
           Container(
             color: AppColors.surface,
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -130,10 +131,10 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 DropdownButtonFormField<String>(
                   initialValue: _selectedLocation,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Location',
                     border: OutlineInputBorder(),
                   ),
@@ -144,14 +145,14 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                       .toList(),
                   onChanged: (val) => setState(() => _selectedLocation = val!),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 Row(
                   children: [
                     Expanded(
                       child: DropdownButtonFormField<String>(
                         isExpanded: true,
                         initialValue: _selectedVisibility,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Who can see',
                           border: OutlineInputBorder(),
                         ),
@@ -167,12 +168,12 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                             setState(() => _selectedVisibility = val!),
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12.w),
                     Expanded(
                       child: DropdownButtonFormField<String>(
                         isExpanded: true,
                         initialValue: _selectedDuration,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Duration',
                           border: OutlineInputBorder(),
                         ),
@@ -190,33 +191,33 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 Row(
                   children: [
                     Expanded(
                       child: ElevatedButton.icon(
-                        icon: const Icon(Icons.location_on_rounded),
-                        label: const Text('Check In'),
+                        icon: Icon(Icons.location_on_rounded),
+                        label: Text('Check In'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,
                           foregroundColor: AppColors.onPrimary,
-                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          padding: EdgeInsets.symmetric(vertical: 12.h),
                         ),
                         onPressed: _checkIn,
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12.w),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         foregroundColor: AppColors.error,
-                        side: const BorderSide(color: AppColors.error),
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 12,
-                          horizontal: 24,
+                        side: BorderSide(color: AppColors.error),
+                        padding: EdgeInsets.symmetric(
+                          vertical: 12.h,
+                          horizontal: 24.w,
                         ),
                       ),
                       onPressed: _checkOut,
-                      child: const Text('Clear'),
+                      child: Text('Clear'),
                     ),
                   ],
                 ),
@@ -224,7 +225,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
             ),
           ),
 
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
 
           // Tree View
           Expanded(
@@ -267,9 +268,9 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                 }
 
                 return ListView(
-                  padding: const EdgeInsets.all(16),
+                  padding: EdgeInsets.all(16.w),
                   children: grouped.entries.map((entry) {
-                    if (entry.value.isEmpty) return const SizedBox.shrink();
+                    if (entry.value.isEmpty) return SizedBox.shrink();
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -280,22 +281,22 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                             color: AppColors.primary,
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         ...entry.value.map(
                           (p) => Padding(
-                            padding: const EdgeInsets.only(left: 16, bottom: 8),
+                            padding: EdgeInsets.only(left: 16.w, bottom: 8.h),
                             child: Row(
                               children: [
-                                const Text(
+                                Text(
                                   '├── ',
                                   style: TextStyle(color: AppColors.outline),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.person_rounded,
                                   size: 16,
                                   color: AppColors.onSurfaceVariant,
                                 ),
-                                const SizedBox(width: 8),
+                                SizedBox(width: 8.w),
                                 Text(
                                   p['userId'] == user?.id
                                       ? 'You'
@@ -305,13 +306,13 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                       ],
                     );
                   }).toList(),
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (e, st) => Center(child: Text('Error: $e')),
             ),
           ),

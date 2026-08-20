@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -41,7 +42,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
     final user = ref.read(authControllerProvider).value;
     if (user == null || user.id.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please log in to register for events.')),
+        SnackBar(content: Text('Please log in to register for events.')),
       );
       return;
     }
@@ -53,16 +54,16 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
         builder: (ctx) => AlertDialog(
           backgroundColor: AppColors.surface,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
           ),
-          title: const Text('Cancel Registration?'),
+          title: Text('Cancel Registration?'),
           content: Text(
             'Are you sure you want to cancel your registration for "${widget.event.title}"?',
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx, false),
-              child: const Text('No, Keep It'),
+              child: Text('No, Keep It'),
             ),
             ElevatedButton(
               onPressed: () => Navigator.pop(ctx, true),
@@ -70,7 +71,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                 backgroundColor: AppColors.error,
                 foregroundColor: AppColors.onError,
               ),
-              child: const Text('Yes, Cancel'),
+              child: Text('Yes, Cancel'),
             ),
           ],
         ),
@@ -87,7 +88,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
               );
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
+              SnackBar(
                 content: Text('Registration cancelled successfully.'),
               ),
             );
@@ -137,8 +138,8 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
             backgroundColor: AppColors.success,
             content: Row(
               children: [
-                const Icon(LucideIcons.checkCircle, color: AppColors.onPrimary),
-                const SizedBox(width: 10),
+                Icon(LucideIcons.checkCircle, color: AppColors.onPrimary),
+                SizedBox(width: 10.w),
                 Expanded(
                   child: Text(
                     'You are now registered for "${widget.event.title}"! 🎉',
@@ -166,7 +167,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
           builder: (ctx) => AlertDialog(
             backgroundColor: AppColors.surface,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
             ),
             title: Text(
               'Additional Registration Details',
@@ -185,18 +186,18 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       color: AppColors.textSecondary,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   ...widget.event.registrationSettings.customFields.map((
                     field,
                   ) {
                     return Padding(
-                      padding: const EdgeInsets.only(bottom: 12),
+                      padding: EdgeInsets.only(bottom: 12.h),
                       child: TextField(
                         controller: _customFieldControllers[field],
                         decoration: InputDecoration(
                           labelText: field,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.r),
                           ),
                         ),
                       ),
@@ -208,7 +209,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(ctx, false),
-                child: const Text('Cancel'),
+                child: Text('Cancel'),
               ),
               ElevatedButton(
                 onPressed: () {
@@ -229,7 +230,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                   backgroundColor: AppColors.primary,
                   foregroundColor: AppColors.onPrimary,
                 ),
-                child: const Text('Continue to Register'),
+                child: Text('Continue to Register'),
               ),
             ],
           ),
@@ -262,27 +263,27 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
     IconData categoryIcon = LucideIcons.calendar;
     switch (widget.event.type.toLowerCase()) {
       case 'hackathon':
-        categoryColor = const Color(0xFF8B5CF6);
+        categoryColor = Color(0xFF8B5CF6);
         categoryIcon = LucideIcons.code2;
         break;
       case 'workshop':
-        categoryColor = const Color(0xFF06B6D4);
+        categoryColor = Color(0xFF06B6D4);
         categoryIcon = LucideIcons.wrench;
         break;
       case 'cultural event':
-        categoryColor = const Color(0xFFEC4899);
+        categoryColor = Color(0xFFEC4899);
         categoryIcon = LucideIcons.music;
         break;
       case 'symposium':
-        categoryColor = const Color(0xFF3B82F6);
+        categoryColor = Color(0xFF3B82F6);
         categoryIcon = LucideIcons.presentation;
         break;
       case 'sports event':
-        categoryColor = const Color(0xFF10B981);
+        categoryColor = Color(0xFF10B981);
         categoryIcon = LucideIcons.trophy;
         break;
       case 'club event':
-        categoryColor = const Color(0xFFF59E0B);
+        categoryColor = Color(0xFFF59E0B);
         categoryIcon = LucideIcons.users;
         break;
     }
@@ -298,7 +299,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
             backgroundColor: AppColors.surfaceContainerLowest,
             leading: IconButton(
               onPressed: () => context.pop(),
-              icon: const Icon(
+              icon: Icon(
                 LucideIcons.arrowLeft,
                 color: AppColors.onSurface,
               ),
@@ -307,7 +308,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                   alpha: 0.8,
                 ),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
               ),
             ),
@@ -333,21 +334,21 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       ),
                     ),
                     Positioned(
-                      bottom: 20,
-                      left: 20,
-                      right: 20,
+                      bottom: 20.h,
+                      left: 20.w,
+                      right: 20.w,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Flexible(
                             child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 12.w,
+                                vertical: 6.h,
                               ),
                               decoration: BoxDecoration(
                                 color: categoryColor,
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(20.r),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
@@ -357,7 +358,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                                     size: 14,
                                     color: AppColors.onPrimary,
                                   ),
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Flexible(
                                     child: Text(
                                       widget.event.type.toUpperCase(),
@@ -373,16 +374,16 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8.w),
                           Flexible(
                             child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 12.w,
+                                vertical: 6.h,
                               ),
                               decoration: BoxDecoration(
                                 color: AppColors.surfaceContainerLowest,
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(20.r),
                               ),
                               child: Text(
                                 '${widget.event.participantCount}/${widget.event.registrationSettings.maxParticipants} Registered',
@@ -407,7 +408,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
           // Content
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -418,23 +419,23 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   // Organizer Tag
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(8),
+                        padding: EdgeInsets.all(8.w),
                         decoration: BoxDecoration(
                           color: AppColors.primary.withValues(alpha: 0.1),
                           shape: BoxShape.circle,
                         ),
-                        child: const Icon(
+                        child: Icon(
                           LucideIcons.building2,
                           size: 18,
                           color: AppColors.primary,
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -459,17 +460,17 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
                   // Info Cards (Date/Time & Venue)
                   Row(
                     children: [
                       Expanded(
                         child: Container(
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16.w),
                           decoration: BoxDecoration(
                             color: AppColors.surfaceContainerLowest,
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(16.r),
                             border: Border.all(
                               color: AppColors.outlineVariant.withValues(
                                 alpha: 0.3,
@@ -481,12 +482,12 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                             children: [
                               Row(
                                 children: [
-                                  const Icon(
+                                  Icon(
                                     LucideIcons.calendar,
                                     size: 18,
                                     color: AppColors.primary,
                                   ),
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Text(
                                     'DATE & TIME',
                                     style: AppTypography.labelSmall.copyWith(
@@ -495,7 +496,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8.h),
                               Text(
                                 widget.event.date,
                                 style: AppTypography.bodyMedium.copyWith(
@@ -513,13 +514,13 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12.w),
                       Expanded(
                         child: Container(
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16.w),
                           decoration: BoxDecoration(
                             color: AppColors.surfaceContainerLowest,
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(16.r),
                             border: Border.all(
                               color: AppColors.outlineVariant.withValues(
                                 alpha: 0.3,
@@ -531,12 +532,12 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                             children: [
                               Row(
                                 children: [
-                                  const Icon(
+                                  Icon(
                                     LucideIcons.mapPin,
                                     size: 18,
                                     color: AppColors.secondary,
                                   ),
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Text(
                                     'VENUE',
                                     style: AppTypography.labelSmall.copyWith(
@@ -545,7 +546,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8.h),
                               Text(
                                 widget.event.venue,
                                 style: AppTypography.bodyMedium.copyWith(
@@ -562,7 +563,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                     ],
                   ),
 
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   // About Section
                   Text(
                     'About This Event',
@@ -571,17 +572,17 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Text(
                     widget.event.description.isNotEmpty
                         ? widget.event.description
                         : 'No detailed description provided for this campus event.',
                     style: AppTypography.bodyMedium.copyWith(
                       color: AppColors.textPrimary,
-                      height: 1.5,
+                      height: 1.5.h,
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
 
                   // Registration Deadline Box
                   if (widget
@@ -591,21 +592,21 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       .isNotEmpty) ...[
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.all(16),
+                      padding: EdgeInsets.all(16.w),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.06),
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         border: Border.all(
                           color: AppColors.primary.withValues(alpha: 0.2),
                         ),
                       ),
                       child: Row(
                         children: [
-                          const Icon(
+                          Icon(
                             LucideIcons.clock,
                             color: AppColors.primary,
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12.w),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -629,26 +630,26 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                   ],
 
                   if (isRegistered) ...[
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.all(20),
+                      padding: EdgeInsets.all(20.w),
                       decoration: BoxDecoration(
                         color: AppColors.success.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         border: Border.all(color: AppColors.success),
                       ),
                       child: Column(
                         children: [
-                          const Icon(
+                          Icon(
                             LucideIcons.checkCircle2,
                             color: AppColors.success,
                             size: 36,
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: 10.h),
                           Text(
                             'You Are Registered!',
                             style: AppTypography.titleMedium.copyWith(
@@ -656,7 +657,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                               color: AppColors.success,
                             ),
                           ),
-                          const SizedBox(height: 4),
+                          SizedBox(height: 4.h),
                           Text(
                             'Show your student ID at ${widget.event.venue} on ${widget.event.date}.',
                             style: AppTypography.bodySmall.copyWith(
@@ -669,7 +670,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                     ),
                   ],
 
-                  const SizedBox(height: 80),
+                  SizedBox(height: 80.h),
                 ],
               ),
             ),
@@ -677,14 +678,14 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
         ],
       ),
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLowest,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 10,
-              offset: const Offset(0, -4),
+              offset: Offset(0, -4),
             ),
           ],
         ),
@@ -695,17 +696,17 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       ? null
                       : () => _handleRegister(existingReg),
                   icon: _isLoading
-                      ? const SizedBox(
-                          width: 18,
-                          height: 18,
+                      ? SizedBox(
+                          width: 18.w,
+                          height: 18.h,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : const Icon(LucideIcons.xCircle),
-                  label: const Text('Cancel My Registration'),
+                      : Icon(LucideIcons.xCircle),
+                  label: Text('Cancel My Registration'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.error.withValues(alpha: 0.15),
                     foregroundColor: AppColors.error,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    padding: EdgeInsets.symmetric(vertical: 16.h),
                     elevation: 0,
                   ),
                 )
@@ -714,15 +715,15 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                       ? null
                       : () => _handleRegister(null),
                   icon: _isLoading
-                      ? const SizedBox(
-                          width: 18,
-                          height: 18,
+                      ? SizedBox(
+                          width: 18.w,
+                          height: 18.h,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
                             color: AppColors.onPrimary,
                           ),
                         )
-                      : const Icon(LucideIcons.clipboardCheck),
+                      : Icon(LucideIcons.clipboardCheck),
                   label: Text(
                     isFull
                         ? 'Registration Full (Capacity Reached)'
@@ -733,9 +734,9 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primary,
                     foregroundColor: AppColors.onPrimary,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    padding: EdgeInsets.symmetric(vertical: 16.h),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                     ),
                   ),
                 ),

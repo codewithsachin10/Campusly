@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -64,7 +65,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
         content: Text('$label copied to clipboard!'),
         backgroundColor: AppColors.primary,
         behavior: SnackBarBehavior.floating,
-        duration: const Duration(seconds: 2),
+        duration: Duration(seconds: 2),
       ),
     );
   }
@@ -85,14 +86,14 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
         );
 
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28.r)),
       ),
       padding: EdgeInsets.only(
-        left: 24,
-        right: 24,
-        top: 16,
+        left: 24.w,
+        right: 24.w,
+        top: 16.h,
         bottom: MediaQuery.of(context).padding.bottom + 24,
       ),
       child: SingleChildScrollView(
@@ -103,15 +104,15 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
           // Drag handle
           Center(
             child: Container(
-              width: 48,
-              height: 5,
+              width: 48.w,
+              height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.border,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           // Header
           Row(
@@ -127,7 +128,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
                   ),
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,15 +139,15 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4.h),
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                        vertical: 4.h,
                       ),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(8.r),
                       ),
                       child: Text(
                         p.subjectName.isNotEmpty
@@ -163,12 +164,12 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
               ),
             ],
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           if (_isLoading)
-            const Center(
+            Center(
               child: Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(16.0.w),
                 child: CircularProgressIndicator(),
               ),
             )
@@ -179,14 +180,14 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
               value: p.officeRoom,
               onTapCopy: () => _copyText('Office Location', p.officeRoom),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             _buildInfoCard(
               icon: LucideIcons.phone,
               title: 'Contact Phone Number',
               value: p.contactNumber,
               onTapCopy: () => _copyText('Phone Number', p.contactNumber),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             _buildInfoCard(
               icon: LucideIcons.mail,
               title: 'Official Email Address',
@@ -195,7 +196,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
             ),
           ],
 
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -203,14 +204,14 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primary,
                 foregroundColor: AppColors.onPrimary,
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                padding: EdgeInsets.symmetric(vertical: 16.h),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.r),
                 ),
               ),
-              child: const Text(
+              child: Text(
                 'Done',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
               ),
             ),
           ),
@@ -227,23 +228,23 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
     required VoidCallback onTapCopy,
   }) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
         color: AppColors.background,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: AppColors.border),
       ),
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.w),
             decoration: BoxDecoration(
               color: AppColors.primary.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
             ),
             child: Icon(icon, color: AppColors.primary, size: 22),
           ),
-          const SizedBox(width: 14),
+          SizedBox(width: 14.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -254,7 +255,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
                     color: AppColors.textSecondary,
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h),
                 Text(
                   value,
                   style: AppTypography.bodyMedium.copyWith(
@@ -267,7 +268,7 @@ class _FacultyProfileSheetState extends State<FacultyProfileSheet> {
           ),
           IconButton(
             onPressed: onTapCopy,
-            icon: const Icon(
+            icon: Icon(
               LucideIcons.copy,
               size: 18,
               color: AppColors.textSecondary,

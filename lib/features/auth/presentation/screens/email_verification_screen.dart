@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -30,7 +31,7 @@ class _EmailVerificationScreenState
   void _startTimer() {
     _resendCountdown = 60;
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       if (_resendCountdown > 0) {
         setState(() {
           _resendCountdown--;
@@ -77,34 +78,34 @@ class _EmailVerificationScreenState
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
       ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 16.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0.w,
+              vertical: 16.0.h,
             ),
             child: Container(
               width: double.infinity,
-              constraints: const BoxConstraints(maxWidth: 480),
-              padding: const EdgeInsets.all(32.0),
+              constraints: BoxConstraints(maxWidth: 480),
+              padding: EdgeInsets.all(32.0.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.primaryContainer.withValues(alpha: 0.08),
                     blurRadius: 24,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
-                  width: 1,
+                  width: 1.w,
                 ),
               ),
               child: Column(
@@ -112,25 +113,25 @@ class _EmailVerificationScreenState
                 children: [
                   // Verification Envelope Icon
                   Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20.w),
                     decoration: BoxDecoration(
                       color: AppColors.primaryContainer.withValues(alpha: 0.12),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.mark_email_unread_outlined,
                       size: 56,
                       color: AppColors.primary,
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   // Title
                   Text(
                     'Verify your college email',
                     style: AppTypography.textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   // Subtitle
                   Text(
                     "We've sent a verification link to your inbox. Please click the link to activate your Campusly account.",
@@ -139,33 +140,33 @@ class _EmailVerificationScreenState
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   // Highlighted Email Badge
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 10,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16.w,
+                      vertical: 10.h,
                     ),
                     decoration: BoxDecoration(
                       color: AppColors.surfaceContainerLow,
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: AppColors.outlineVariant),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.email_rounded,
                           size: 18,
                           color: AppColors.primary,
                         ),
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8.w),
                         Flexible(
                           child: Text(
                             displayEmail,
                             style: AppTypography.textTheme.labelLarge?.copyWith(
                               color: AppColors.onSurface,
-                              fontSize: 14,
+                              fontSize: 14.sp,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -174,7 +175,7 @@ class _EmailVerificationScreenState
                       ],
                     ),
                   ),
-                  const SizedBox(height: 36),
+                  SizedBox(height: 36.h),
                   // Proceed Button
                   SizedBox(
                     width: double.infinity,
@@ -187,12 +188,12 @@ class _EmailVerificationScreenState
                         "I've Verified My Email",
                         style: AppTypography.textTheme.labelLarge?.copyWith(
                           color: AppColors.onPrimary,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   // Resend Option
                   Wrap(
                     alignment: WrapAlignment.center,
@@ -214,7 +215,7 @@ class _EmailVerificationScreenState
                             color: _resendCountdown > 0
                                 ? AppColors.outline
                                 : AppColors.primary,
-                            fontSize: 15,
+                            fontSize: 15.sp,
                           ),
                         ),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -22,79 +23,79 @@ class _NotificationSettingsScreenState extends ConsumerState<NotificationSetting
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Notification Preferences'),
+        title: Text('Notification Preferences'),
       ),
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Padding(
+            padding: EdgeInsets.all(16.0.w),
             child: Text(
               "Smart Class Alerts",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold, color: Colors.blue),
             ),
           ),
           SwitchListTile(
-            title: const Text('Venue Changes'),
-            subtitle: const Text('Notify when a class room is changed'),
-            secondary: const Icon(LucideIcons.mapPin),
+            title: Text('Venue Changes'),
+            subtitle: Text('Notify when a class room is changed'),
+            secondary: Icon(LucideIcons.mapPin),
             value: venueChanges,
             onChanged: (val) => setState(() => venueChanges = val),
           ),
           SwitchListTile(
-            title: const Text('Time Changes'),
-            subtitle: const Text('Notify when class timings are modified'),
-            secondary: const Icon(LucideIcons.clock),
+            title: Text('Time Changes'),
+            subtitle: Text('Notify when class timings are modified'),
+            secondary: Icon(LucideIcons.clock),
             value: timeChanges,
             onChanged: (val) => setState(() => timeChanges = val),
           ),
           SwitchListTile(
-            title: const Text('Cancellations'),
-            subtitle: const Text('Notify when a class is cancelled'),
-            secondary: const Icon(LucideIcons.xOctagon),
+            title: Text('Cancellations'),
+            subtitle: Text('Notify when a class is cancelled'),
+            secondary: Icon(LucideIcons.xOctagon),
             value: cancellations,
             onChanged: (val) => setState(() => cancellations = val),
           ),
           SwitchListTile(
-            title: const Text('Faculty Changes'),
-            subtitle: const Text('Notify when a different faculty is taking the class'),
-            secondary: const Icon(LucideIcons.userCheck),
+            title: Text('Faculty Changes'),
+            subtitle: Text('Notify when a different faculty is taking the class'),
+            secondary: Icon(LucideIcons.userCheck),
             value: facultyChanges,
             onChanged: (val) => setState(() => facultyChanges = val),
           ),
           
-          const Divider(),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Divider(),
+          Padding(
+            padding: EdgeInsets.all(16.0.w),
             child: Text(
               "General",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold, color: Colors.blue),
             ),
           ),
           SwitchListTile(
-            title: const Text('General Updates'),
-            subtitle: const Text('Announcements from the admin'),
-            secondary: const Icon(LucideIcons.bell),
+            title: Text('General Updates'),
+            subtitle: Text('Announcements from the admin'),
+            secondary: Icon(LucideIcons.bell),
             value: generalUpdates,
             onChanged: (val) => setState(() => generalUpdates = val),
           ),
           
-          const Divider(),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Divider(),
+          Padding(
+            padding: EdgeInsets.all(16.0.w),
             child: Text(
               "Delivery",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.blue),
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold, color: Colors.blue),
             ),
           ),
           SwitchListTile(
-            title: const Text('Play Sound'),
-            secondary: const Icon(LucideIcons.volume2),
+            title: Text('Play Sound'),
+            secondary: Icon(LucideIcons.volume2),
             value: sound,
             onChanged: (val) => setState(() => sound = val),
           ),
           SwitchListTile(
-            title: const Text('Vibration'),
-            secondary: const Icon(LucideIcons.vibrate),
+            title: Text('Vibration'),
+            secondary: Icon(LucideIcons.vibrate),
             value: vibration,
             onChanged: (val) => setState(() => vibration = val),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -56,34 +57,34 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
       ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 16.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0.w,
+              vertical: 16.0.h,
             ),
             child: Container(
               width: double.infinity,
-              constraints: const BoxConstraints(maxWidth: 480),
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 28.0),
+              constraints: BoxConstraints(maxWidth: 480),
+              padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 28.0.h),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.primaryContainer.withValues(alpha: 0.08),
                     blurRadius: 24,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
-                  width: 1,
+                  width: 1.w,
                 ),
               ),
               child: _emailSent
@@ -91,26 +92,26 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(20),
+                          padding: EdgeInsets.all(20.w),
                           decoration: BoxDecoration(
                             color: AppColors.primaryContainer.withValues(
                               alpha: 0.12,
                             ),
                             shape: BoxShape.circle,
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.mark_email_read_outlined,
                             size: 56,
                             color: AppColors.primary,
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        SizedBox(height: 24.h),
                         Text(
                           'Check your email',
                           style: AppTypography.textTheme.headlineLarge,
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12.h),
                         Text(
                           "We've sent a password recovery link to ${_emailController.text.trim()}",
                           style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -118,7 +119,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 32),
+                        SizedBox(height: 32.h),
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
@@ -140,34 +141,34 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                         children: [
                           // Icon
                           Container(
-                            padding: const EdgeInsets.all(12),
+                            padding: EdgeInsets.all(12.w),
                             decoration: BoxDecoration(
                               color: AppColors.surfaceContainerLow,
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14.r),
                               border: Border.all(
                                 color: AppColors.outlineVariant,
                               ),
                             ),
-                            child: const Icon(
+                            child: Icon(
                               Icons.lock_reset_rounded,
                               size: 28,
                               color: AppColors.primary,
                             ),
                           ),
-                          const SizedBox(height: 24),
+                          SizedBox(height: 24.h),
                           // Heading
                           Text(
                             'Reset your password',
                             style: AppTypography.textTheme.headlineLarge,
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Text(
                             "Enter the email address linked to your Campusly account and we'll send you a recovery link.",
                             style: AppTypography.textTheme.bodyMedium?.copyWith(
                               color: AppColors.onSurfaceVariant,
                             ),
                           ),
-                          const SizedBox(height: 32),
+                          SizedBox(height: 32.h),
                           // Email Field
                           Text(
                             'EMAIL ADDRESS',
@@ -176,14 +177,14 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                               letterSpacing: 1.2,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           TextFormField(
                             controller: _emailController,
                             keyboardType: TextInputType.emailAddress,
                             textInputAction: TextInputAction.done,
                             onFieldSubmitted: (_) => _handleReset(),
                             style: AppTypography.textTheme.bodyMedium,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: 'Enter your account email',
                               prefixIcon: Icon(
                                 Icons.mail_outline_rounded,
@@ -200,16 +201,16 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                               return null;
                             },
                           ),
-                          const SizedBox(height: 32),
+                          SizedBox(height: 32.h),
                           // Send Button
                           SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: isLoading ? null : _handleReset,
                               child: isLoading
-                                  ? const SizedBox(
-                                      width: 24,
-                                      height: 24,
+                                  ? SizedBox(
+                                      width: 24.w,
+                                      height: 24.h,
                                       child: CircularProgressIndicator(
                                         strokeWidth: 2.5,
                                         color: AppColors.onPrimary,
@@ -220,7 +221,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                                       style: AppTypography.textTheme.labelLarge
                                           ?.copyWith(
                                             color: AppColors.onPrimary,
-                                            fontSize: 16,
+                                            fontSize: 16.sp,
                                           ),
                                     ),
                             ),

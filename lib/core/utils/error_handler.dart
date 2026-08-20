@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_colors.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -43,16 +44,16 @@ class AppErrorHandler {
       SnackBar(
         content: Row(
           children: [
-            const Icon(
+            Icon(
               Icons.error_outline_rounded,
               color: Colors.white,
               size: 22,
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: Text(
                 message,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
@@ -62,9 +63,9 @@ class AppErrorHandler {
         ),
         backgroundColor: AppColors.error,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        margin: const EdgeInsets.all(16),
-        duration: const Duration(seconds: 4),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
+        margin: EdgeInsets.all(16.w),
+        duration: Duration(seconds: 4),
       ),
     );
   }
@@ -74,16 +75,16 @@ class AppErrorHandler {
       SnackBar(
         content: Row(
           children: [
-            const Icon(
+            Icon(
               Icons.check_circle_outline_rounded,
               color: Colors.white,
               size: 22,
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: Text(
                 message,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
@@ -93,9 +94,9 @@ class AppErrorHandler {
         ),
         backgroundColor: AppColors.primary,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        margin: const EdgeInsets.all(16),
-        duration: const Duration(seconds: 3),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
+        margin: EdgeInsets.all(16.w),
+        duration: Duration(seconds: 3),
       ),
     );
   }

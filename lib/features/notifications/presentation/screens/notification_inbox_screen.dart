@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -39,33 +40,33 @@ class NotificationInboxScreen extends ConsumerWidget {
               filteredAsync.value ?? [],
               user?.id ?? '',
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             // Category Filter Pills
             _buildCategorySelector(ref, activeCategory),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             // Notifications List
             Expanded(
               child: filteredAsync.when(
-                loading: () => const Center(
+                loading: () => Center(
                   child: CircularProgressIndicator(color: AppColors.primary),
                 ),
                 error: (error, stack) => Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         LucideIcons.alertTriangle,
                         color: AppColors.error,
                         size: 48,
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       Text(
                         'Failed to load notifications',
                         style: AppTypography.titleMedium.copyWith(
                           color: AppColors.textPrimary,
                         ),
                       ),
-                      const SizedBox(height: 6),
+                      SizedBox(height: 6.h),
                       Text(
                         AppErrorHandler.getErrorMessage(error),
                         style: AppTypography.bodySmall.copyWith(
@@ -73,12 +74,12 @@ class NotificationInboxScreen extends ConsumerWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       ElevatedButton.icon(
                         onPressed: () =>
                             ref.refresh(notificationsStreamProvider),
-                        icon: const Icon(LucideIcons.refreshCw, size: 16),
-                        label: const Text('Retry'),
+                        icon: Icon(LucideIcons.refreshCw, size: 16),
+                        label: Text('Retry'),
                       ),
                     ],
                   ),
@@ -90,18 +91,18 @@ class NotificationInboxScreen extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            padding: const EdgeInsets.all(24),
+                            padding: EdgeInsets.all(24.w),
                             decoration: BoxDecoration(
                               color: AppColors.surfaceContainerLowest,
                               shape: BoxShape.circle,
                             ),
-                            child: const Icon(
+                            child: Icon(
                               LucideIcons.bellOff,
                               size: 48,
                               color: AppColors.textSecondary,
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                           Text(
                             'No notifications right now',
                             style: AppTypography.titleMedium.copyWith(
@@ -109,7 +110,7 @@ class NotificationInboxScreen extends ConsumerWidget {
                               color: AppColors.textPrimary,
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          SizedBox(height: 6.h),
                           Text(
                             activeCategory == 'All'
                                 ? 'You are completely caught up on all alerts and notices!'
@@ -130,13 +131,13 @@ class NotificationInboxScreen extends ConsumerWidget {
                     },
                     color: AppColors.primary,
                     child: ListView.separated(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 8,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20.w,
+                        vertical: 8.h,
                       ),
                       itemCount: items.length,
                       separatorBuilder: (context, index) =>
-                          const SizedBox(height: 12),
+                          SizedBox(height: 12.h),
                       itemBuilder: (context, index) {
                         return _buildNotificationCard(
                           context,
@@ -168,7 +169,7 @@ class NotificationInboxScreen extends ConsumerWidget {
         .toList();
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+      padding: EdgeInsets.fromLTRB(20, 16, 20, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -177,18 +178,18 @@ class NotificationInboxScreen extends ConsumerWidget {
               children: [
                 IconButton(
                   onPressed: () => context.pop(),
-                  icon: const Icon(
+                  icon: Icon(
                     LucideIcons.arrowLeft,
                     color: AppColors.onSurface,
                   ),
                   style: IconButton.styleFrom(
                     backgroundColor: AppColors.surfaceContainerLowest,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                     ),
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: 12.w),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -221,22 +222,22 @@ class NotificationInboxScreen extends ConsumerWidget {
                     .read(notificationsRepositoryProvider)
                     .markAllAsRead(unreadIds, userId);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
+                  SnackBar(
                     content: Text('All notifications marked as read'),
                   ),
                 );
               },
-              icon: const Icon(
+              icon: Icon(
                 LucideIcons.checkCheck,
                 size: 16,
                 color: AppColors.primary,
               ),
-              label: const Text(
+              label: Text(
                 'Mark All Read',
                 style: TextStyle(
                   color: AppColors.primary,
                   fontWeight: FontWeight.bold,
-                  fontSize: 13,
+                  fontSize: 13.sp,
                 ),
               ),
             ),
@@ -247,12 +248,12 @@ class NotificationInboxScreen extends ConsumerWidget {
 
   Widget _buildCategorySelector(WidgetRef ref, String activeCategory) {
     return SizedBox(
-      height: 40,
+      height: 40.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         itemCount: _categories.length,
-        separatorBuilder: (context, index) => const SizedBox(width: 8),
+        separatorBuilder: (context, index) => SizedBox(width: 8.w),
         itemBuilder: (context, index) {
           final cat = _categories[index];
           final isSelected = cat == activeCategory;
@@ -274,7 +275,7 @@ class NotificationInboxScreen extends ConsumerWidget {
             selectedColor: AppColors.primary,
             backgroundColor: AppColors.surfaceContainerLowest,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               side: BorderSide(
                 color: isSelected
                     ? AppColors.primary
@@ -311,11 +312,11 @@ class NotificationInboxScreen extends ConsumerWidget {
         icon = LucideIcons.graduationCap;
         break;
       case 'assignment reminder':
-        badgeColor = const Color(0xFF8B5CF6);
+        badgeColor = Color(0xFF8B5CF6);
         icon = LucideIcons.fileText;
         break;
       case 'event reminder':
-        badgeColor = const Color(0xFF06B6D4);
+        badgeColor = Color(0xFF06B6D4);
         icon = LucideIcons.calendar;
         break;
       case 'announcement':
@@ -331,16 +332,16 @@ class NotificationInboxScreen extends ConsumerWidget {
           ref.read(notificationsRepositoryProvider).markAsRead(item.id, userId);
         }
       },
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.r),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16.w),
         decoration: BoxDecoration(
           color: isEmergency
               ? AppColors.error.withValues(alpha: 0.08)
               : (isRead
                     ? AppColors.surfaceContainerLowest
                     : AppColors.primary.withValues(alpha: 0.05)),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
             color: isEmergency
                 ? AppColors.error
@@ -354,7 +355,7 @@ class NotificationInboxScreen extends ConsumerWidget {
               BoxShadow(
                 color: badgeColor.withValues(alpha: 0.08),
                 blurRadius: 10,
-                offset: const Offset(0, 4),
+                offset: Offset(0, 4),
               ),
           ],
         ),
@@ -369,14 +370,14 @@ class NotificationInboxScreen extends ConsumerWidget {
                   child: Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10.w),
                         decoration: BoxDecoration(
                           color: badgeColor.withValues(alpha: 0.15),
                           shape: BoxShape.circle,
                         ),
                         child: Icon(icon, size: 20, color: badgeColor),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,23 +393,23 @@ class NotificationInboxScreen extends ConsumerWidget {
                                   ),
                                 ),
                                 if (isHigh) ...[
-                                  const SizedBox(width: 6),
+                                  SizedBox(width: 6.w),
                                   Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 6,
-                                      vertical: 2,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 6.w,
+                                      vertical: 2.h,
                                     ),
                                     decoration: BoxDecoration(
                                       color: AppColors.error.withValues(
                                         alpha: 0.15,
                                       ),
-                                      borderRadius: BorderRadius.circular(6),
+                                      borderRadius: BorderRadius.circular(6.r),
                                     ),
                                     child: Text(
                                       item.priority.toUpperCase(),
                                       style: AppTypography.labelSmall.copyWith(
                                         color: AppColors.error,
-                                        fontSize: 9,
+                                        fontSize: 9.sp,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -416,7 +417,7 @@ class NotificationInboxScreen extends ConsumerWidget {
                                 ],
                               ],
                             ),
-                            const SizedBox(height: 2),
+                            SizedBox(height: 2.h),
                             Text(
                               item.title,
                               style: AppTypography.titleMedium.copyWith(
@@ -436,36 +437,36 @@ class NotificationInboxScreen extends ConsumerWidget {
                 ),
                 if (!isRead)
                   Container(
-                    width: 10,
-                    height: 10,
-                    decoration: const BoxDecoration(
+                    width: 10.w,
+                    height: 10.h,
+                    decoration: BoxDecoration(
                       color: AppColors.primary,
                       shape: BoxShape.circle,
                     ),
                   ),
               ],
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Text(
               item.message,
               style: AppTypography.bodyMedium.copyWith(
                 color: AppColors.textPrimary,
-                height: 1.4,
+                height: 1.4.h,
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                   child: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         LucideIcons.user,
                         size: 14,
                         color: AppColors.textSecondary,
                       ),
-                      const SizedBox(width: 4),
+                      SizedBox(width: 4.w),
                       Expanded(
                         child: Text(
                           item.sentBy,

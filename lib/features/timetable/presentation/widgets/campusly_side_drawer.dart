@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/theme/theme_provider.dart';
-import '../../../settings/presentation/screens/settings_screen.dart';
 import '../../../../features/curriculum/presentation/screens/curriculum_screen.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
@@ -39,12 +39,12 @@ class CampuslySideDrawer extends ConsumerWidget {
             child: Container(
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).padding.top + 24,
-                left: 20,
-                right: 20,
-                bottom: 24,
+                left: 20.w,
+                right: 20.w,
+                bottom: 24.h,
               ),
               decoration: BoxDecoration(
-                gradient: const LinearGradient(
+                gradient: LinearGradient(
                   colors: [AppColors.primary, AppColors.tertiary],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -53,21 +53,21 @@ class CampuslySideDrawer extends ConsumerWidget {
                   BoxShadow(
                     color: AppColors.primary.withValues(alpha: 0.25),
                     blurRadius: 16,
-                    offset: const Offset(0, 4),
+                    offset: Offset(0, 4),
                   ),
                 ],
               ),
               child: Row(
                 children: [
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 60.w,
+                    height: 60.h,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
                       border: Border.all(
                         color: Colors.white.withValues(alpha: 0.8),
-                        width: 2.5,
+                        width: 2.5.w,
                       ),
                     ),
                     child: Center(
@@ -75,15 +75,15 @@ class CampuslySideDrawer extends ConsumerWidget {
                         (user?.name.isNotEmpty == true)
                             ? user!.name[0].toUpperCase()
                             : 'S',
-                        style: const TextStyle(
-                          fontSize: 26,
+                        style: TextStyle(
+                          fontSize: 26.sp,
                           fontWeight: FontWeight.w900,
                           color: AppColors.primary,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 14),
+                  SizedBox(width: 14.w),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,14 +103,14 @@ class CampuslySideDrawer extends ConsumerWidget {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            const Icon(
+                            Icon(
                               LucideIcons.edit3,
                               color: Colors.white,
                               size: 16,
                             ),
                           ],
                         ),
-                        const SizedBox(height: 4),
+                        SizedBox(height: 4.h),
                         Text(
                           currentClass?.name ?? 'No active class enrolled',
                           style: AppTypography.bodySmall.copyWith(
@@ -120,7 +120,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
-                        const SizedBox(height: 2),
+                        SizedBox(height: 2.h),
                         Text(
                           user?.email.isNotEmpty == true
                               ? user!.email
@@ -142,7 +142,7 @@ class CampuslySideDrawer extends ConsumerWidget {
           // Menu Items List
           Expanded(
             child: ListView(
-              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+              padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w),
               children: [
                 // 2. Timetable Sub-menu (Exam TimeTables & Exam Venues)
                 Theme(
@@ -151,14 +151,14 @@ class CampuslySideDrawer extends ConsumerWidget {
                   ).copyWith(dividerColor: Colors.transparent),
                   child: ExpansionTile(
                     leading: Container(
-                      padding: const EdgeInsets.all(8),
+                      padding: EdgeInsets.all(8.w),
                       decoration: BoxDecoration(
                         color: AppColors.primaryContainer.withValues(
                           alpha: 0.15,
                         ),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.r),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         LucideIcons.calendar,
                         color: AppColors.primary,
                         size: 20,
@@ -171,7 +171,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                         color: AppColors.onSurface,
                       ),
                     ),
-                    childrenPadding: const EdgeInsets.only(left: 20, bottom: 4),
+                    childrenPadding: EdgeInsets.only(left: 20.w, bottom: 4.h),
                     children: [
                       _buildSubMenuItem(
                         context,
@@ -203,7 +203,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h),
 
                 // Curriculum
                 _buildMenuItem(
@@ -216,18 +216,18 @@ class CampuslySideDrawer extends ConsumerWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CurriculumScreen(),
+                        builder: (context) => CurriculumScreen(),
                       ),
                     );
                   },
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h),
 
                 // 4. Events & Hackathons Hub
                 _buildMenuItem(
                   context,
                   icon: LucideIcons.zap,
-                  iconColor: const Color(0xFF571AC0),
+                  iconColor: Color(0xFF571AC0),
                   title: 'Events & Hackathons Hub',
                   badge: 'LIVE',
                   onTap: () {
@@ -244,7 +244,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                 _buildMenuItem(
                   context,
                   icon: LucideIcons.megaphone,
-                  iconColor: const Color(0xFF0058BE),
+                  iconColor: Color(0xFF0058BE),
                   title: 'Notice Board & Circulars',
                   onTap: () {
                     Navigator.of(context).pop();
@@ -256,7 +256,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                 _buildMenuItem(
                   context,
                   icon: LucideIcons.bellRing,
-                  iconColor: const Color(0xFFED6C02),
+                  iconColor: Color(0xFFED6C02),
                   title: 'Notification Inbox',
                   badge: '3',
                   onTap: () {
@@ -269,7 +269,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                 _buildMenuItem(
                   context,
                   icon: LucideIcons.map,
-                  iconColor: const Color(0xFF2E7D32),
+                  iconColor: Color(0xFF2E7D32),
                   title: 'Campus Interactive Map',
                   onTap: () {
                     Navigator.of(context).pop();
@@ -277,46 +277,46 @@ class CampuslySideDrawer extends ConsumerWidget {
                   },
                 ),
 
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Divider(height: 1),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                  child: Divider(height: 1.h),
                 ),
 
                 // 8. Theme & Appearance: Toggle Dark / Light Mode
                 Container(
-                  margin: const EdgeInsets.symmetric(
-                    horizontal: 4,
-                    vertical: 4,
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 4.w,
+                    vertical: 4.h,
                   ),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 12.w,
+                    vertical: 6.h,
                   ),
                   decoration: BoxDecoration(
                     color: AppColors.surfaceContainerLow,
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: BorderRadius.circular(14.r),
                   ),
                   child: Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(8),
+                        padding: EdgeInsets.all(8.w),
                         decoration: BoxDecoration(
                           color: isDark
-                              ? const Color(0xFFADC6FF).withValues(alpha: 0.15)
+                              ? Color(0xFFADC6FF).withValues(alpha: 0.15)
                               : AppColors.primaryContainer.withValues(
                                   alpha: 0.15,
                                 ),
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                         child: Icon(
                           isDark ? LucideIcons.moon : LucideIcons.sun,
                           color: isDark
-                              ? const Color(0xFFADC6FF)
+                              ? Color(0xFFADC6FF)
                               : AppColors.primary,
                           size: 20,
                         ),
                       ),
-                      const SizedBox(width: 14),
+                      SizedBox(width: 14.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -334,7 +334,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                                   : 'Appearance: Light Theme',
                               style: AppTypography.labelSmall.copyWith(
                                 color: AppColors.textSecondary,
-                                fontSize: 11,
+                                fontSize: 11.sp,
                               ),
                             ),
                           ],
@@ -354,13 +354,13 @@ class CampuslySideDrawer extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h),
 
                 // 9. Student Helpdesk & IT Support
                 _buildMenuItem(
                   context,
                   icon: LucideIcons.headset,
-                  iconColor: const Color(0xFF26A69A),
+                  iconColor: Color(0xFF26A69A),
                   title: 'Student Helpdesk & Support',
                   onTap: () {
                     Navigator.of(context).pop();
@@ -379,7 +379,7 @@ class CampuslySideDrawer extends ConsumerWidget {
                     context.push('/about');
                   },
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4.h),
 
                 // 11. Updates Center
                 _buildMenuItem(
@@ -398,7 +398,7 @@ class CampuslySideDrawer extends ConsumerWidget {
 
           // 11. Sign Out Section
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLow,
               border: Border(
@@ -413,17 +413,17 @@ class CampuslySideDrawer extends ConsumerWidget {
                 showDialog(
                   context: context,
                   builder: (ctx) => AlertDialog(
-                    title: const Text('Sign Out of Campusly?'),
-                    content: const Text(
+                    title: Text('Sign Out of Campusly?'),
+                    content: Text(
                       'You will need to log in again to access your academic timetable and notifications.',
                     ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                     ),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.of(ctx).pop(),
-                        child: const Text('Cancel'),
+                        child: Text('Cancel'),
                       ),
                       ElevatedButton.icon(
                         onPressed: () async {
@@ -439,31 +439,31 @@ class CampuslySideDrawer extends ConsumerWidget {
                           backgroundColor: AppColors.error,
                           foregroundColor: Colors.white,
                         ),
-                        icon: const Icon(LucideIcons.logOut, size: 16),
-                        label: const Text('Sign Out'),
+                        icon: Icon(LucideIcons.logOut, size: 16),
+                        label: Text('Sign Out'),
                       ),
                     ],
                   ),
                 );
               },
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(14.r),
               child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16.w,
+                  vertical: 12.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.errorContainer.withValues(alpha: 0.3),
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                 ),
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       LucideIcons.logOut,
                       color: AppColors.error,
                       size: 20,
                     ),
-                    const SizedBox(width: 14),
+                    SizedBox(width: 14.w),
                     Text(
                       'Sign Out',
                       style: AppTypography.titleSmall.copyWith(
@@ -491,13 +491,13 @@ class CampuslySideDrawer extends ConsumerWidget {
   }) {
     return ListTile(
       onTap: onTap,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 2),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
+      contentPadding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 2.h),
       leading: Container(
-        padding: const EdgeInsets.all(8),
+        padding: EdgeInsets.all(8.w),
         decoration: BoxDecoration(
           color: iconColor.withValues(alpha: 0.12),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         child: Icon(icon, color: iconColor, size: 20),
       ),
@@ -510,23 +510,23 @@ class CampuslySideDrawer extends ConsumerWidget {
       ),
       trailing: badge != null
           ? Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
               decoration: BoxDecoration(
                 color: badge == 'LIVE'
-                    ? const Color(0xFF571AC0)
+                    ? Color(0xFF571AC0)
                     : AppColors.error,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
               child: Text(
                 badge,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
-                  fontSize: 10,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             )
-          : const Icon(
+          : Icon(
               LucideIcons.chevronRight,
               size: 16,
               color: AppColors.textSecondary,
@@ -542,8 +542,8 @@ class CampuslySideDrawer extends ConsumerWidget {
   }) {
     return ListTile(
       onTap: onTap,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
+      contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 0.h),
       leading: Icon(icon, size: 18, color: AppColors.textSecondary),
       title: Text(
         title,
@@ -552,7 +552,7 @@ class CampuslySideDrawer extends ConsumerWidget {
           color: AppColors.textSecondary,
         ),
       ),
-      trailing: const Icon(
+      trailing: Icon(
         LucideIcons.chevronRight,
         size: 14,
         color: AppColors.textSecondary,

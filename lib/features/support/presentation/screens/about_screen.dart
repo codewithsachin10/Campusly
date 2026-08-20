@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -11,7 +12,7 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'About Campusly',
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
@@ -19,16 +20,16 @@ class AboutScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
+        padding: EdgeInsets.all(24.w),
         child: Column(
           children: [
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             // Campusly Logo & Badge
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20.w),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: const LinearGradient(
+                gradient: LinearGradient(
                   colors: [AppColors.primary, AppColors.tertiary],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -37,17 +38,17 @@ class AboutScreen extends StatelessWidget {
                   BoxShadow(
                     color: AppColors.primary.withValues(alpha: 0.3),
                     blurRadius: 20,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
               ),
-              child: const Icon(
+              child: Icon(
                 LucideIcons.graduationCap,
                 size: 56,
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20.h),
 
             Text(
               'CAMPUSLY',
@@ -57,12 +58,12 @@ class AboutScreen extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            const SizedBox(height: 6),
+            SizedBox(height: 6.h),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 6.h),
               decoration: BoxDecoration(
                 color: AppColors.primaryContainer.withValues(alpha: 0.15),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(20.r),
               ),
               child: Text(
                 'Version 2.4.0 (Build 2026.07 - Stable)',
@@ -72,17 +73,17 @@ class AboutScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
 
             Text(
               'Next-Generation Smart Campus Experience & Unified Academic Operating System tailored for Rajalakshmi Engineering College (REC).',
               textAlign: TextAlign.center,
               style: AppTypography.bodyMedium.copyWith(
                 color: AppColors.textSecondary,
-                height: 1.5,
+                height: 1.5.h,
               ),
             ),
-            const SizedBox(height: 32),
+            SizedBox(height: 32.h),
 
             // Feature Highlights
             _buildInfoSection(
@@ -110,7 +111,7 @@ class AboutScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
 
             // Institution & Credits
             _buildInfoSection(
@@ -133,17 +134,17 @@ class AboutScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 36),
+            SizedBox(height: 36.h),
 
             Text(
               '© 2026 Campusly Systems. All rights reserved.\nMade with ❤️ for students & faculty.',
               textAlign: TextAlign.center,
               style: AppTypography.bodySmall.copyWith(
                 color: AppColors.textSecondary,
-                height: 1.5,
+                height: 1.5.h,
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
           ],
         ),
       ),
@@ -156,10 +157,10 @@ class AboutScreen extends StatelessWidget {
   }) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(20.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.5),
         ),
@@ -167,7 +168,7 @@ class AboutScreen extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 10,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -180,7 +181,7 @@ class AboutScreen extends StatelessWidget {
               fontWeight: FontWeight.w800,
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           ...items,
         ],
       ),
@@ -189,19 +190,19 @@ class AboutScreen extends StatelessWidget {
 
   Widget _buildInfoTile(IconData icon, String title, String subtitle) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 14),
+      padding: EdgeInsets.only(bottom: 14.h),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10.w),
             decoration: BoxDecoration(
               color: AppColors.primaryContainer.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
             ),
             child: Icon(icon, color: AppColors.primary, size: 20),
           ),
-          const SizedBox(width: 14),
+          SizedBox(width: 14.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -213,12 +214,12 @@ class AboutScreen extends StatelessWidget {
                     color: AppColors.onSurface,
                   ),
                 ),
-                const SizedBox(height: 2),
+                SizedBox(height: 2.h),
                 Text(
                   subtitle,
                   style: AppTypography.bodySmall.copyWith(
                     color: AppColors.textSecondary,
-                    height: 1.3,
+                    height: 1.3.h,
                   ),
                 ),
               ],

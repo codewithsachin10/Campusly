@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/services/connectivity_service.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -27,8 +28,8 @@ class SyncStatusIndicator extends ConsumerWidget {
           color: Colors.green,
         );
       },
-      loading: () => const SizedBox.shrink(),
-      error: (e, st) => const SizedBox.shrink(),
+      loading: () => SizedBox.shrink(),
+      error: (e, st) => SizedBox.shrink(),
     );
   }
 
@@ -38,21 +39,21 @@ class SyncStatusIndicator extends ConsumerWidget {
     required Color color,
   }) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.r),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(icon, size: 12, color: color),
-          const SizedBox(width: 4),
+          SizedBox(width: 4.w),
           Text(
             label,
             style: AppTypography.textTheme.bodySmall?.copyWith(
               color: color,
-              fontSize: 10,
+              fontSize: 10.sp,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -49,7 +50,7 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppColors.surface,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         title: Text(
           existingNote == null ? 'Create Subject Note' : 'Edit Note',
           style: AppTypography.titleMedium.copyWith(
@@ -62,16 +63,16 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
             children: [
               TextField(
                 controller: titleCtrl,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Note Title / Topic',
                   border: OutlineInputBorder(),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               TextField(
                 controller: contentCtrl,
                 maxLines: 5,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Important Points, Deadlines, or Questions...',
                   border: OutlineInputBorder(),
                 ),
@@ -82,7 +83,7 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text('Cancel'),
           ),
           ElevatedButton(
             onPressed: () {
@@ -113,7 +114,7 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
               backgroundColor: AppColors.primary,
               foregroundColor: AppColors.onPrimary,
             ),
-            child: const Text('Save Note'),
+            child: Text('Save Note'),
           ),
         ],
       ),
@@ -123,20 +124,20 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(authControllerProvider).value;
-    if (user == null) return const SizedBox.shrink();
+    if (user == null) return SizedBox.shrink();
 
     final key = NotesQueryKey(userId: user.id, subjectCode: widget.subjectCode);
     final asyncNotes = ref.watch(notesProvider(key));
 
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(28.r)),
       ),
       padding: EdgeInsets.only(
-        left: 24,
-        right: 24,
-        top: 16,
+        left: 24.w,
+        right: 24.w,
+        top: 16.h,
         bottom: MediaQuery.of(context).padding.bottom + 24,
       ),
       constraints: BoxConstraints(
@@ -148,31 +149,31 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
         children: [
           Center(
             child: Container(
-              width: 48,
-              height: 5,
+              width: 48.w,
+              height: 5.h,
               decoration: BoxDecoration(
                 color: AppColors.border,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10.r),
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
 
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: EdgeInsets.all(12.w),
                 decoration: BoxDecoration(
                   color: AppColors.primary.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                 ),
-                child: const Icon(
+                child: Icon(
                   LucideIcons.fileText,
                   color: AppColors.primary,
                   size: 26,
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,23 +195,23 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
               ),
               ElevatedButton.icon(
                 onPressed: () => _showNoteDialog(),
-                icon: const Icon(LucideIcons.plus, size: 18),
-                label: const Text('New Note'),
+                icon: Icon(LucideIcons.plus, size: 18),
+                label: Text('New Note'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
                   foregroundColor: AppColors.onPrimary,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           Expanded(
             child: asyncNotes.when(
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (err, _) => Center(child: Text('Error: $err')),
               data: (notes) {
                 if (notes.isEmpty) {
@@ -223,14 +224,14 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                           size: 64,
                           color: AppColors.border,
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           'No study notes saved for ${widget.subjectName} yet.',
                           style: AppTypography.bodyLarge.copyWith(
                             color: AppColors.textSecondary,
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         Text(
                           'Tap New Note above to jot down important formulas, lab deadlines, or syllabus checklists.',
                           textAlign: TextAlign.center,
@@ -248,11 +249,11 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                   itemBuilder: (context, idx) {
                     final note = notes[idx];
                     return Container(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      padding: const EdgeInsets.all(16),
+                      margin: EdgeInsets.only(bottom: 12.h),
+                      padding: EdgeInsets.all(16.w),
                       decoration: BoxDecoration(
                         color: AppColors.background,
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         border: Border.all(color: AppColors.border),
                       ),
                       child: Column(
@@ -274,39 +275,39 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                                   IconButton(
                                     onPressed: () =>
                                         _showNoteDialog(existingNote: note),
-                                    icon: const Icon(
+                                    icon: Icon(
                                       LucideIcons.edit2,
                                       size: 18,
                                       color: AppColors.primary,
                                     ),
-                                    constraints: const BoxConstraints(),
-                                    padding: const EdgeInsets.all(4),
+                                    constraints: BoxConstraints(),
+                                    padding: EdgeInsets.all(4.w),
                                   ),
-                                  const SizedBox(width: 8),
+                                  SizedBox(width: 8.w),
                                   IconButton(
                                     onPressed: () => ref
                                         .read(notesProvider(key).notifier)
                                         .removeNote(note.id),
-                                    icon: const Icon(
+                                    icon: Icon(
                                       LucideIcons.trash2,
                                       size: 18,
                                       color: AppColors.error,
                                     ),
-                                    constraints: const BoxConstraints(),
-                                    padding: const EdgeInsets.all(4),
+                                    constraints: BoxConstraints(),
+                                    padding: EdgeInsets.all(4.w),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Text(
                             note.content,
                             style: AppTypography.bodyMedium.copyWith(
                               color: AppColors.textSecondary,
                             ),
                           ),
-                          const SizedBox(height: 12),
+                          SizedBox(height: 12.h),
                           Text(
                             'Updated: ${_formatDate(note.updatedAt)}',
                             style: AppTypography.labelSmall.copyWith(

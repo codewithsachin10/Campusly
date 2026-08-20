@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +20,7 @@ class ProfileView extends ConsumerWidget {
     final currentClass = ref.watch(currentClassProvider);
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(24.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -31,7 +32,7 @@ class ProfileView extends ConsumerWidget {
                 child: Text(
                   'Student Profile',
                   style: AppTypography.textTheme.headlineLarge?.copyWith(
-                    fontSize: 32,
+                    fontSize: 32.sp,
                     fontWeight: FontWeight.w800,
                     color: AppColors.onSurface,
                   ),
@@ -41,14 +42,14 @@ class ProfileView extends ConsumerWidget {
               IconButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                    MaterialPageRoute(builder: (_) => SettingsScreen()),
                   );
                 },
                 style: IconButton.styleFrom(
                   backgroundColor: AppColors.surfaceContainerLow,
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(12.w),
                 ),
-                icon: const Icon(
+                icon: Icon(
                   Icons.settings_rounded,
                   color: AppColors.primary,
                 ),
@@ -56,11 +57,11 @@ class ProfileView extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           // Hero Profile Card
           Container(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(24.w),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -70,12 +71,12 @@ class ProfileView extends ConsumerWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(32),
+              borderRadius: BorderRadius.circular(32.r),
               boxShadow: [
                 BoxShadow(
                   color: AppColors.primary.withValues(alpha: 0.3),
                   blurRadius: 20,
-                  offset: const Offset(0, 10),
+                  offset: Offset(0, 10),
                 ),
               ],
             ),
@@ -84,14 +85,14 @@ class ProfileView extends ConsumerWidget {
                 Row(
                   children: [
                     Container(
-                      width: 76,
-                      height: 76,
+                      width: 76.w,
+                      height: 76.h,
                       decoration: BoxDecoration(
                         color: AppColors.onPrimary.withValues(alpha: 0.2),
                         shape: BoxShape.circle,
                         border: Border.all(
                           color: AppColors.onPrimary,
-                          width: 2.5,
+                          width: 2.5.w,
                         ),
                       ),
                       alignment: Alignment.center,
@@ -101,12 +102,12 @@ class ProfileView extends ConsumerWidget {
                             : 'S',
                         style: AppTypography.textTheme.headlineLarge?.copyWith(
                           color: AppColors.onPrimary,
-                          fontSize: 36,
+                          fontSize: 36.sp,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                    const SizedBox(width: 20),
+                    SizedBox(width: 20.w),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,25 +128,25 @@ class ProfileView extends ConsumerWidget {
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
-                              const SizedBox(width: 6),
-                              const Icon(
+                              SizedBox(width: 6.w),
+                              Icon(
                                 Icons.verified_rounded,
                                 color: AppColors.tertiaryFixed,
                                 size: 20,
                               ),
                             ],
                           ),
-                          const SizedBox(height: 4),
+                          SizedBox(height: 4.h),
                           Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10,
-                              vertical: 4,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 10.w,
+                              vertical: 4.h,
                             ),
                             decoration: BoxDecoration(
                               color: AppColors.onPrimary.withValues(
                                 alpha: 0.15,
                               ),
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(8.r),
                             ),
                             child: Text(
                               user?.department ?? 'Institutional Department',
@@ -156,7 +157,7 @@ class ProfileView extends ConsumerWidget {
                                   ),
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          SizedBox(height: 6.h),
                           Text(
                             user?.email.isNotEmpty == true
                                 ? user!.email
@@ -174,14 +175,14 @@ class ProfileView extends ConsumerWidget {
             ),
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           // Active Class Card
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.w),
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLowest,
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: BorderRadius.circular(24.r),
               border: Border.all(
                 color: AppColors.outlineVariant.withValues(alpha: 0.4),
               ),
@@ -193,18 +194,18 @@ class ProfileView extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10.w),
                       decoration: BoxDecoration(
                         color: AppColors.primaryContainer,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.class_rounded,
                         color: AppColors.primary,
                         size: 22,
                       ),
                     ),
-                    const SizedBox(width: 14),
+                    SizedBox(width: 14.w),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,7 +221,7 @@ class ProfileView extends ConsumerWidget {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(height: 2),
+                          SizedBox(height: 2.h),
                           Text(
                             currentClass != null
                                 ? '${currentClass.name} · ${currentClass.section}'
@@ -238,15 +239,15 @@ class ProfileView extends ConsumerWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 14,
-                    vertical: 10,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 14.w,
+                    vertical: 10.h,
                   ),
                   decoration: BoxDecoration(
                     color: AppColors.surfaceContainerLow,
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: BorderRadius.circular(14.r),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -269,17 +270,17 @@ class ProfileView extends ConsumerWidget {
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: const Text(
+                                content: Text(
                                   'Class invite code copied to clipboard!',
                                 ),
                                 behavior: SnackBarBehavior.floating,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.r),
                                 ),
                               ),
                             );
                           },
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.copy_rounded,
                             size: 18,
                             color: AppColors.primary,
@@ -291,13 +292,13 @@ class ProfileView extends ConsumerWidget {
                   ),
                 ),
                 if (currentClass != null) ...[
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Center(
                     child: Container(
-                      padding: const EdgeInsets.all(12),
+                      padding: EdgeInsets.all(12.w),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.3,
@@ -309,30 +310,30 @@ class ProfileView extends ConsumerWidget {
                         version: QrVersions.auto,
                         size: 140.0,
                         gapless: false,
-                        eyeStyle: const QrEyeStyle(
+                        eyeStyle: QrEyeStyle(
                           eyeShape: QrEyeShape.square,
                           color: AppColors.primary,
                         ),
-                        dataModuleStyle: const QrDataModuleStyle(
+                        dataModuleStyle: QrDataModuleStyle(
                           dataModuleShape: QrDataModuleShape.square,
                           color: AppColors.primary,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 8),
-                  const Center(
+                  SizedBox(height: 8.h),
+                  Center(
                     child: Text(
                       'Scan this QR code to join this class instantly',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: AppColors.textSecondary,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                 ],
-                const SizedBox(height: 16),
+                SizedBox(height: 16.h),
                 SizedBox(
                   width: double.infinity,
                   child: OutlinedButton.icon(
@@ -341,14 +342,14 @@ class ProfileView extends ConsumerWidget {
                     },
                     style: OutlinedButton.styleFrom(
                       foregroundColor: AppColors.primary,
-                      side: const BorderSide(color: AppColors.primary),
-                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      side: BorderSide(color: AppColors.primary),
+                      padding: EdgeInsets.symmetric(vertical: 12.h),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14),
+                        borderRadius: BorderRadius.circular(14.r),
                       ),
                     ),
-                    icon: const Icon(Icons.swap_horiz_rounded, size: 20),
-                    label: const Text(
+                    icon: Icon(Icons.swap_horiz_rounded, size: 20),
+                    label: Text(
                       'Switch or Join Another Class',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -358,7 +359,7 @@ class ProfileView extends ConsumerWidget {
             ),
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           // Academic Summary Grid
           Text(
@@ -369,11 +370,11 @@ class ProfileView extends ConsumerWidget {
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           GridView.count(
             crossAxisCount: 2,
             shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
+            physics: NeverScrollableScrollPhysics(),
             crossAxisSpacing: 14,
             mainAxisSpacing: 14,
             childAspectRatio: 1.15,
@@ -409,7 +410,7 @@ class ProfileView extends ConsumerWidget {
             ],
           ),
 
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
 
           // Menu Navigation Section
           Text(
@@ -420,11 +421,11 @@ class ProfileView extends ConsumerWidget {
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           Container(
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLowest,
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: BorderRadius.circular(24.r),
               border: Border.all(
                 color: AppColors.outlineVariant.withValues(alpha: 0.3),
               ),
@@ -438,11 +439,11 @@ class ProfileView extends ConsumerWidget {
                   subtitle: 'Configure 10-min & 15-min alerts before classes',
                   onTap: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                      MaterialPageRoute(builder: (_) => SettingsScreen()),
                     );
                   },
                 ),
-                const Divider(height: 1, indent: 60, endIndent: 20),
+                Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
                   icon: Icons.person_search_rounded,
                   iconColor: AppColors.primary,
@@ -451,12 +452,12 @@ class ProfileView extends ConsumerWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => const EditProfileScreen(),
+                        builder: (_) => EditProfileScreen(),
                       ),
                     );
                   },
                 ),
-                const Divider(height: 1, indent: 60, endIndent: 20),
+                Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
                   icon: Icons.tune_rounded,
                   iconColor: AppColors.secondary,
@@ -464,11 +465,11 @@ class ProfileView extends ConsumerWidget {
                   subtitle: 'Appearance, offline cache, and preferences',
                   onTap: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                      MaterialPageRoute(builder: (_) => SettingsScreen()),
                     );
                   },
                 ),
-                const Divider(height: 1, indent: 60, endIndent: 20),
+                Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
                   icon: Icons.share_rounded,
                   iconColor: AppColors.tertiary,
@@ -480,12 +481,12 @@ class ProfileView extends ConsumerWidget {
                     );
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: const Text(
+                        content: Text(
                           'Invite link copied! Share with your classmates.',
                         ),
                         behavior: SnackBarBehavior.floating,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12.r),
                         ),
                       ),
                     );
@@ -495,7 +496,7 @@ class ProfileView extends ConsumerWidget {
             ),
           ),
 
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
 
           // Sign Out Action Button
           ElevatedButton.icon(
@@ -504,16 +505,16 @@ class ProfileView extends ConsumerWidget {
                 context: context,
                 builder: (ctx) => AlertDialog(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(24),
+                    borderRadius: BorderRadius.circular(24.r),
                   ),
-                  title: const Text('Sign Out of Campusly?'),
-                  content: const Text(
+                  title: Text('Sign Out of Campusly?'),
+                  content: Text(
                     'Your offline timetable will stay preserved locally on this device until you sign back in.',
                   ),
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.of(ctx).pop(false),
-                      child: const Text('Cancel'),
+                      child: Text('Cancel'),
                     ),
                     ElevatedButton(
                       onPressed: () => Navigator.of(ctx).pop(true),
@@ -522,7 +523,7 @@ class ProfileView extends ConsumerWidget {
                         foregroundColor: AppColors.onPrimary,
                         elevation: 0,
                       ),
-                      child: const Text('Sign Out'),
+                      child: Text('Sign Out'),
                     ),
                   ],
                 ),
@@ -536,12 +537,12 @@ class ProfileView extends ConsumerWidget {
               backgroundColor: AppColors.error.withValues(alpha: 0.1),
               foregroundColor: AppColors.error,
               elevation: 0,
-              minimumSize: const Size(double.infinity, 56),
+              minimumSize: Size(double.infinity, 56),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18),
+                borderRadius: BorderRadius.circular(18.r),
               ),
             ),
-            icon: const Icon(Icons.logout_rounded, size: 22),
+            icon: Icon(Icons.logout_rounded, size: 22),
             label: Text(
               'Sign Out of Account',
               style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -550,7 +551,7 @@ class ProfileView extends ConsumerWidget {
               ),
             ),
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40.h),
         ],
       ),
     );
@@ -564,10 +565,10 @@ class ProfileView extends ConsumerWidget {
     required String subtitle,
   }) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: EdgeInsets.all(12.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.3),
         ),
@@ -580,14 +581,14 @@ class ProfileView extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.all(8),
+                padding: EdgeInsets.all(8.w),
                 decoration: BoxDecoration(
                   color: color.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10.r),
                 ),
                 child: Icon(icon, color: color, size: 20),
               ),
-              const SizedBox(width: 8),
+              SizedBox(width: 8.w),
               Flexible(
                 child: Text(
                   value,
@@ -612,12 +613,12 @@ class ProfileView extends ConsumerWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: 2.h),
               Text(
                 subtitle,
                 style: AppTypography.textTheme.bodySmall?.copyWith(
                   color: AppColors.onSurfaceVariant,
-                  fontSize: 11,
+                  fontSize: 11.sp,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -637,12 +638,12 @@ class ProfileView extends ConsumerWidget {
     required VoidCallback onTap,
   }) {
     return ListTile(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
       leading: Container(
-        padding: const EdgeInsets.all(12),
+        padding: EdgeInsets.all(12.w),
         decoration: BoxDecoration(
           color: iconColor.withValues(alpha: 0.1),
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(14.r),
         ),
         child: Icon(icon, color: iconColor, size: 24),
       ),
@@ -659,7 +660,7 @@ class ProfileView extends ConsumerWidget {
           color: AppColors.onSurfaceVariant,
         ),
       ),
-      trailing: const Icon(
+      trailing: Icon(
         Icons.chevron_right_rounded,
         color: AppColors.onSurfaceVariant,
       ),

@@ -52,16 +52,16 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(
         path: '/splash',
-        builder: (context, state) => const SplashScreen(),
+        builder: (context, state) => SplashScreen(),
       ),
-      GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
+      GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
       GoRoute(
         path: '/signup',
-        builder: (context, state) => const SignUpScreen(),
+        builder: (context, state) => SignUpScreen(),
       ),
       GoRoute(
         path: '/forgot-password',
-        builder: (context, state) => const ForgotPasswordScreen(),
+        builder: (context, state) => ForgotPasswordScreen(),
       ),
       GoRoute(
         path: '/verify-email',
@@ -72,28 +72,28 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/complete-profile',
-        builder: (context, state) => const CompleteProfileScreen(),
+        builder: (context, state) => CompleteProfileScreen(),
       ),
       GoRoute(
         path: '/join-class-choice',
-        builder: (context, state) => const JoinOrSearchClassScreen(),
+        builder: (context, state) => JoinOrSearchClassScreen(),
       ),
       GoRoute(
         path: '/join-by-code',
-        builder: (context, state) => const JoinByCodeScreen(),
+        builder: (context, state) => JoinByCodeScreen(),
       ),
       GoRoute(
         path: '/search-class',
-        builder: (context, state) => const SearchClassScreen(),
+        builder: (context, state) => SearchClassScreen(),
       ),
       GoRoute(
         path: '/create-class',
-        builder: (context, state) => const CreateClassScreen(),
+        builder: (context, state) => CreateClassScreen(),
       ),
-      GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+      GoRoute(path: '/home', builder: (context, state) => HomeScreen()),
       GoRoute(
         path: '/events',
-        builder: (context, state) => const EventsHomeScreen(),
+        builder: (context, state) => EventsHomeScreen(),
       ),
       GoRoute(
         path: '/events/detail',
@@ -104,7 +104,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/notifications',
-        builder: (context, state) => const NotificationInboxScreen(),
+        builder: (context, state) => NotificationInboxScreen(),
       ),
       GoRoute(
         path: '/notifications/alert',
@@ -115,9 +115,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/notifications/settings',
-        builder: (context, state) => const NotificationSettingsScreen(),
+        builder: (context, state) => NotificationSettingsScreen(),
       ),
-      GoRoute(path: '/inbox', builder: (context, state) => const InboxScreen()),
+      GoRoute(path: '/inbox', builder: (context, state) => InboxScreen()),
       GoRoute(
         path: '/chat/:id',
         builder: (context, state) {
@@ -128,41 +128,41 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/create-group',
-        builder: (context, state) => const CreateGroupScreen(),
+        builder: (context, state) => CreateGroupScreen(),
       ),
       GoRoute(
         path: '/people-directory',
-        builder: (context, state) => const PeopleDirectoryScreen(),
+        builder: (context, state) => PeopleDirectoryScreen(),
       ),
       GoRoute(
         path: '/campus-presence',
-        builder: (context, state) => const CampusPresenceScreen(),
+        builder: (context, state) => CampusPresenceScreen(),
       ),
       GoRoute(
         path: '/profile-edit',
-        builder: (context, state) => const ProfileEditScreen(),
+        builder: (context, state) => ProfileEditScreen(),
       ),
       GoRoute(
         path: '/exam-timetables',
-        builder: (context, state) => const ExamTimeTablesScreen(),
+        builder: (context, state) => ExamTimeTablesScreen(),
       ),
       GoRoute(
         path: '/exam-venues',
-        builder: (context, state) => const ExamVenuesScreen(),
+        builder: (context, state) => ExamVenuesScreen(),
       ),
       GoRoute(
         path: '/announcements',
-        builder: (context, state) => const AnnouncementsScreen(),
+        builder: (context, state) => AnnouncementsScreen(),
       ),
       GoRoute(
         path: '/campus-map',
-        builder: (context, state) => const CampusMapScreen(),
+        builder: (context, state) => CampusMapScreen(),
       ),
       GoRoute(
         path: '/helpdesk',
-        builder: (context, state) => const HelpdeskScreen(),
+        builder: (context, state) => HelpdeskScreen(),
       ),
-      GoRoute(path: '/about', builder: (context, state) => const AboutScreen()),
+      GoRoute(path: '/about', builder: (context, state) => AboutScreen()),
       GoRoute(
         path: '/form/:token',
         builder: (context, state) {
@@ -172,7 +172,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/updates',
-        builder: (context, state) => const UpdatesScreen(),
+        builder: (context, state) => UpdatesScreen(),
       ),
     ],
     redirect: (BuildContext context, GoRouterState state) {

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:package_info_plus/package_info_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/services/notification_service.dart';
@@ -99,10 +97,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           });
         },
       ),
-      const SchedulePlannerView(),
-      const CoursesShellView(),
-      const AttendanceDashboardView(),
-      const ProfileView(),
+      SchedulePlannerView(),
+      CoursesShellView(),
+      AttendanceDashboardView(),
+      ProfileView(),
     ];
 
     return Scaffold(
@@ -121,7 +119,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         scrolledUnderElevation: 0,
         leading: Builder(
           builder: (ctx) => IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.menu_rounded,
               color: AppColors.primary,
               size: 26,
@@ -133,18 +131,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         title: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(8.w),
               decoration: BoxDecoration(
                 color: AppColors.primary,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.school_rounded,
                 color: AppColors.onPrimary,
                 size: 20,
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,7 +175,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         actions: [
           // Global Sync Status
           Center(child: SyncStatusIndicator()),
-          const SizedBox(width: 8),
+          SizedBox(width: 8.w),
 
           // Class switcher button
           IconButton(
@@ -186,12 +184,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             },
             tooltip: 'Switch or Join Class',
             icon: Container(
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(8.w),
               decoration: BoxDecoration(
                 color: AppColors.primary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.swap_horiz_rounded,
                 color: AppColors.primary,
                 size: 20,
@@ -207,7 +205,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             icon: Stack(
               clipBehavior: Clip.none,
               children: [
-                const Icon(
+                Icon(
                   Icons.notifications_none_rounded,
                   color: AppColors.onSurfaceVariant,
                   size: 26,
@@ -217,19 +215,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     right: -2,
                     top: -2,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 4,
-                        vertical: 1,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 4.w,
+                        vertical: 1.h,
                       ),
                       decoration: BoxDecoration(
                         color: AppColors.error,
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(8.r),
                       ),
                       child: Text(
                         unreadCount > 9 ? '9+' : '$unreadCount',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.white,
-                          fontSize: 9,
+                          fontSize: 9.sp,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -238,7 +236,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ],
             ),
           ),
-          const SizedBox(width: 4),
+          SizedBox(width: 4.w),
           // Profile Avatar
           GestureDetector(
             onTap: () {
@@ -247,7 +245,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               });
             },
             child: Padding(
-              padding: const EdgeInsets.only(right: 16.0),
+              padding: EdgeInsets.only(right: 16.0.w),
               child: CircleAvatar(
                 radius: 18,
                 backgroundColor: AppColors.primary,
@@ -273,7 +271,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.onPrimary,
         elevation: 4,
-        child: const Icon(Icons.chat_bubble_outline_rounded),
+        child: Icon(Icons.chat_bubble_outline_rounded),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
@@ -295,7 +293,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           elevation: 0,
           indicatorColor: AppColors.primary.withValues(alpha: 0.12),
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-          destinations: const [
+          destinations: [
             NavigationDestination(
               icon: Icon(
                 Icons.home_outlined,

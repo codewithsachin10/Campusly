@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -7,7 +8,7 @@ import '../../domain/models/curriculum_item.dart';
 import 'subject_details_screen.dart';
 
 class CurriculumScreen extends ConsumerWidget {
-  const CurriculumScreen({Key? key}) : super(key: key);
+  const CurriculumScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -17,7 +18,7 @@ class CurriculumScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.surface,
       appBar: AppBar(
-        title: const Text('Curriculum'),
+        title: Text('Curriculum'),
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: false,
@@ -39,54 +40,54 @@ class CurriculumScreen extends ConsumerWidget {
           double progress = (totalCredits / totalRequiredCredits).clamp(0.0, 1.0);
 
           return CustomScrollView(
-            physics: const BouncingScrollPhysics(),
+            physics: BouncingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  padding: EdgeInsets.symmetric(horizontal: 24.0.w),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       Text(
                         curriculumData.departmentName,
                         style: AppTypography.textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.w900,
                           color: AppColors.onSurface,
-                          height: 1.2,
+                          height: 1.2.h,
                         ),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: 8.h),
                       Text(
                         '${curriculumData.batchName} • Semester ${curriculumData.currentSemester}',
                         style: AppTypography.textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       Row(
                         children: [
                           Container(
-                            width: 8,
-                            height: 8,
-                            decoration: const BoxDecoration(
+                            width: 8.w,
+                            height: 8.h,
+                            decoration: BoxDecoration(
                               color: Colors.blue,
                               shape: BoxShape.circle,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8.w),
                           Text(
                             'CURRENTLY STUDYING SEMESTER ${curriculumData.currentSemester}'.toUpperCase(),
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Colors.blue,
                               fontWeight: FontWeight.bold,
-                              fontSize: 10,
+                              fontSize: 10.sp,
                               letterSpacing: 1.2,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       
                       // Gradient Card
                       _buildGradientCard(
@@ -99,17 +100,17 @@ class CurriculumScreen extends ConsumerWidget {
                         progress: progress,
                       ),
                       
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
                       
                       // Semester Pills
                       _buildSemesterPills(context, ref, selectedSemester),
                       
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
                       
                       // Stats Grid
                       GridView.count(
                         shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
+                        physics: NeverScrollableScrollPhysics(),
                         crossAxisCount: 2,
                         mainAxisSpacing: 12,
                         crossAxisSpacing: 12,
@@ -122,7 +123,7 @@ class CurriculumScreen extends ConsumerWidget {
                         ],
                       ),
                       
-                      const SizedBox(height: 32),
+                      SizedBox(height: 32.h),
                       
                       // Subjects Header & Search
                       Row(
@@ -135,7 +136,7 @@ class CurriculumScreen extends ConsumerWidget {
                             ),
                           ),
                           Container(
-                            padding: const EdgeInsets.all(8),
+                            padding: EdgeInsets.all(8.w),
                             decoration: BoxDecoration(
                               color: AppColors.primary.withValues(alpha: 0.1),
                               shape: BoxShape.circle,
@@ -144,14 +145,14 @@ class CurriculumScreen extends ConsumerWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       
                       // Search Bar
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        padding: EdgeInsets.symmetric(horizontal: 16.w),
                         decoration: BoxDecoration(
                           color: AppColors.surfaceContainerLowest,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12.r),
                           border: Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.3)),
                         ),
                         child: TextField(
@@ -164,7 +165,7 @@ class CurriculumScreen extends ConsumerWidget {
                         ),
                       ),
                       
-                      const SizedBox(height: 32),
+                      SizedBox(height: 32.h),
                     ],
                   ),
                 ),
@@ -174,11 +175,11 @@ class CurriculumScreen extends ConsumerWidget {
               if (coreCourses.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 8.0.h),
                     child: Text(
                       'CORE COURSES',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.2,
                         color: Colors.blue.shade700,
@@ -189,7 +190,7 @@ class CurriculumScreen extends ConsumerWidget {
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (context, index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                      padding: EdgeInsets.symmetric(horizontal: 24.0.w),
                       child: _buildSubjectCard(context, coreCourses[index]),
                     ),
                     childCount: coreCourses.length,
@@ -201,11 +202,11 @@ class CurriculumScreen extends ConsumerWidget {
               if (laboratoryCourses.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 24.0, right: 24.0, top: 24.0, bottom: 8.0),
+                    padding: EdgeInsets.only(left: 24.0.w, right: 24.0.w, top: 24.0.h, bottom: 8.0.h),
                     child: Text(
                       'LABORATORY',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.2,
                         color: Colors.purple.shade600,
@@ -216,7 +217,7 @@ class CurriculumScreen extends ConsumerWidget {
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
                     (context, index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                      padding: EdgeInsets.symmetric(horizontal: 24.0.w),
                       child: _buildSubjectCard(context, laboratoryCourses[index]),
                     ),
                     childCount: laboratoryCourses.length,
@@ -224,14 +225,14 @@ class CurriculumScreen extends ConsumerWidget {
                 ),
               ],
               
-              const SliverToBoxAdapter(child: SizedBox(height: 48)),
+              SliverToBoxAdapter(child: SizedBox(height: 48.h)),
             ],
           );
         },
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Center(child: CircularProgressIndicator()),
         error: (e, st) => Center(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0.w),
             child: Text(
               'Failed to load curriculum:\n$e',
               style: TextStyle(color: AppColors.error),
@@ -245,11 +246,11 @@ class CurriculumScreen extends ConsumerWidget {
 
   Widget _buildEmptyState(BuildContext context, WidgetRef ref, int selectedSemester) {
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(24.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             'My Curriculum',
             style: AppTypography.textTheme.headlineMedium?.copyWith(
@@ -257,14 +258,14 @@ class CurriculumScreen extends ConsumerWidget {
               color: AppColors.onSurface,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             'View your subjects and credits for the selected semester.',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           _buildSemesterPills(context, ref, selectedSemester),
           Expanded(
             child: Center(
@@ -272,7 +273,7 @@ class CurriculumScreen extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.library_books_rounded, size: 64, color: AppColors.outlineVariant),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Text(
                     'No curriculum data found for Semester $selectedSemester',
                     style: TextStyle(color: AppColors.onSurfaceVariant),
@@ -296,19 +297,19 @@ class CurriculumScreen extends ConsumerWidget {
     required double progress,
   }) {
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(24.w),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        borderRadius: BorderRadius.circular(20.r),
+        gradient: LinearGradient(
           colors: [Color(0xFF3B28CC), Color(0xFF7442F5)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF5A35E0).withValues(alpha: 0.4),
+            color: Color(0xFF5A35E0).withValues(alpha: 0.4),
             blurRadius: 16,
-            offset: const Offset(0, 8),
+            offset: Offset(0, 8),
           ),
         ],
       ),
@@ -321,9 +322,9 @@ class CurriculumScreen extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'Semester $semester',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
                   ),
                   overflow: TextOverflow.ellipsis,
@@ -334,9 +335,9 @@ class CurriculumScreen extends ConsumerWidget {
                   children: [
                     TextSpan(
                       text: earnedCredits.toString().replaceAll('.0', ''),
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -344,15 +345,15 @@ class CurriculumScreen extends ConsumerWidget {
                       text: ' / $totalCredits',
                       style: TextStyle(
                         color: Colors.white.withValues(alpha: 0.7),
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    const TextSpan(
+                    TextSpan(
                       text: '\nCREDITS',
                       style: TextStyle(
                         color: Colors.white70,
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1,
                       ),
@@ -367,27 +368,27 @@ class CurriculumScreen extends ConsumerWidget {
             '$coursesCount Courses • $theoryCount Theory • $labsCount Labs',
             style: TextStyle(
               color: Colors.white.withValues(alpha: 0.8),
-              fontSize: 13,
+              fontSize: 13.sp,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           ClipRRect(
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(4.r),
             child: LinearProgressIndicator(
               value: progress,
               backgroundColor: Colors.white.withValues(alpha: 0.2),
-              valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
               minHeight: 8,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Align(
             alignment: Alignment.centerRight,
             child: Text(
               '${(progress * 100).toInt()}% Completed',
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 10,
+                fontSize: 10.sp,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -400,18 +401,18 @@ class CurriculumScreen extends ConsumerWidget {
   Widget _buildSemesterPills(BuildContext context, WidgetRef ref, int selectedSemester) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      physics: const BouncingScrollPhysics(),
+      physics: BouncingScrollPhysics(),
       child: Row(
         children: List.generate(8, (index) => index + 1).map((sem) {
           final isSelected = sem == selectedSemester;
           return GestureDetector(
             onTap: () => ref.read(selectedSemesterProvider.notifier).setSemester(sem),
             child: Container(
-              margin: const EdgeInsets.only(right: 12),
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: EdgeInsets.only(right: 12.w),
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
               decoration: BoxDecoration(
-                color: isSelected ? const Color(0xFF5A35E0) : AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                color: isSelected ? Color(0xFF5A35E0) : AppColors.surfaceContainerLowest,
+                borderRadius: BorderRadius.circular(24.r),
                 border: isSelected ? null : Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.3)),
               ),
               child: Row(
@@ -424,21 +425,21 @@ class CurriculumScreen extends ConsumerWidget {
                     ),
                   ),
                   if (isSelected) ...[
-                    const SizedBox(width: 6),
+                    SizedBox(width: 6.w),
                     Container(
-                      width: 4,
-                      height: 4,
-                      decoration: const BoxDecoration(
+                      width: 4.w,
+                      height: 4.h,
+                      decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
                     ),
-                    const SizedBox(width: 4),
-                    const Text(
+                    SizedBox(width: 4.w),
+                    Text(
                       'CURRENT',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.5,
                       ),
@@ -457,7 +458,7 @@ class CurriculumScreen extends ConsumerWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.2)),
       ),
       child: Column(
@@ -466,16 +467,16 @@ class CurriculumScreen extends ConsumerWidget {
           Text(
             value,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 24.sp,
               fontWeight: FontWeight.w900,
               color: valueColor,
             ),
           ),
-          const SizedBox(height: 2),
+          SizedBox(height: 2.h),
           Text(
             label,
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 12.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.onSurfaceVariant,
             ),
@@ -504,17 +505,17 @@ class CurriculumScreen extends ConsumerWidget {
         );
       },
       child: Container(
-        margin: const EdgeInsets.only(bottom: 12),
-        padding: const EdgeInsets.all(16),
+        margin: EdgeInsets.only(bottom: 12.h),
+        padding: EdgeInsets.all(16.w),
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16.r),
           border: Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.3)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withValues(alpha: 0.02),
               blurRadius: 10,
-              offset: const Offset(0, 4),
+              offset: Offset(0, 4),
             ),
           ],
         ),
@@ -525,15 +526,15 @@ class CurriculumScreen extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                   decoration: BoxDecoration(
                     color: tagBgColor,
-                    borderRadius: BorderRadius.circular(6),
+                    borderRadius: BorderRadius.circular(6.r),
                   ),
                   child: Text(
                     item.subjectCode,
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 10.sp,
                       fontWeight: FontWeight.bold,
                       color: tagTextColor,
                     ),
@@ -546,14 +547,14 @@ class CurriculumScreen extends ConsumerWidget {
                       item.credits.toString().replaceAll('.0', ''),
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         color: tagTextColor,
                       ),
                     ),
-                    const Text(
+                    Text(
                       'Credits',
                       style: TextStyle(
-                        fontSize: 8,
+                        fontSize: 8.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -561,16 +562,16 @@ class CurriculumScreen extends ConsumerWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Text(
               item.subjectName,
               style: AppTypography.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.onSurface,
-                height: 1.2,
+                height: 1.2.h,
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Row(
               children: [
                 Icon(
@@ -578,11 +579,11 @@ class CurriculumScreen extends ConsumerWidget {
                   size: 14,
                   color: AppColors.onSurfaceVariant,
                 ),
-                const SizedBox(width: 6),
+                SizedBox(width: 6.w),
                 Text(
                   item.type,
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     fontWeight: FontWeight.w600,
                     color: AppColors.onSurfaceVariant,
                   ),

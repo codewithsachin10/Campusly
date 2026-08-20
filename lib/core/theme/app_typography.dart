@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
@@ -7,74 +8,74 @@ class AppTypography {
     return TextTheme(
       // display-lg (48px, 800, -0.04em)
       displayLarge: GoogleFonts.bricolageGrotesque(
-        fontSize: 48,
+        fontSize: 48.sp,
         fontWeight: FontWeight.w800,
-        height: 1.1,
+        height: 1.1.h,
         letterSpacing: -0.04 * 48,
         color: AppColors.onSurface,
       ),
       // headline-lg (32px, 700, -0.02em)
       headlineLarge: GoogleFonts.bricolageGrotesque(
-        fontSize: 32,
+        fontSize: 32.sp,
         fontWeight: FontWeight.w700,
-        height: 1.2,
+        height: 1.2.h,
         letterSpacing: -0.02 * 32,
         color: AppColors.onSurface,
       ),
       // headline-lg-mobile (28px, 700)
       headlineMedium: GoogleFonts.bricolageGrotesque(
-        fontSize: 28,
+        fontSize: 28.sp,
         fontWeight: FontWeight.w700,
-        height: 1.2,
+        height: 1.2.h,
         color: AppColors.onSurface,
       ),
       // headline-md (24px, 600)
       headlineSmall: GoogleFonts.bricolageGrotesque(
-        fontSize: 24,
+        fontSize: 24.sp,
         fontWeight: FontWeight.w600,
-        height: 1.3,
+        height: 1.3.h,
         color: AppColors.onSurface,
       ),
       // headline-sm (20px, 600)
       titleLarge: GoogleFonts.bricolageGrotesque(
-        fontSize: 20,
+        fontSize: 20.sp,
         fontWeight: FontWeight.w600,
-        height: 1.4,
+        height: 1.4.h,
         color: AppColors.onSurface,
       ),
       // body-lg (18px, 400)
       bodyLarge: GoogleFonts.plusJakartaSans(
-        fontSize: 18,
+        fontSize: 18.sp,
         fontWeight: FontWeight.w400,
-        height: 1.6,
+        height: 1.6.h,
         color: AppColors.onSurface,
       ),
       // body-md (16px, 400)
       bodyMedium: GoogleFonts.plusJakartaSans(
-        fontSize: 16,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w400,
-        height: 1.5,
+        height: 1.5.h,
         color: AppColors.onSurface,
       ),
       // body-sm / caption (14px, 400)
       bodySmall: GoogleFonts.plusJakartaSans(
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w400,
-        height: 1.4,
+        height: 1.4.h,
         color: AppColors.onSurfaceVariant,
       ),
       // label-md (14px, 600, uppercase 0.05em)
       labelLarge: GoogleFonts.plusJakartaSans(
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w600,
-        height: 1.0,
+        height: 1.0.h,
         letterSpacing: 0.05 * 14,
         color: AppColors.onSurface,
       ),
       labelMedium: GoogleFonts.plusJakartaSans(
-        fontSize: 12,
+        fontSize: 12.sp,
         fontWeight: FontWeight.w600,
-        height: 1.0,
+        height: 1.0.h,
         letterSpacing: 0.05 * 12,
         color: AppColors.onSurfaceVariant,
       ),

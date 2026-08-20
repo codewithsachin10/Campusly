@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -21,7 +22,7 @@ class SettingsScreen extends ConsumerWidget {
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
-          icon: const Icon(
+          icon: Icon(
             Icons.arrow_back_ios_new_rounded,
             color: AppColors.onSurface,
             size: 20,
@@ -37,7 +38,7 @@ class SettingsScreen extends ConsumerWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(24.0.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -47,11 +48,11 @@ class SettingsScreen extends ConsumerWidget {
               'Class Reminders & Alerts',
               AppColors.primary,
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
@@ -70,21 +71,21 @@ class SettingsScreen extends ConsumerWidget {
                     isHeader: true,
                   ),
                   if (notifPrefs.masterEnabled) ...[
-                    const Divider(height: 1, indent: 20, endIndent: 20),
+                    Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
                       title: '15 Minutes Before Class',
                       subtitle: 'Alert to check materials and room location',
                       value: notifPrefs.remind15Min,
                       onChanged: (val) => notifNotifier.setRemind15Min(val),
                     ),
-                    const Divider(height: 1, indent: 20, endIndent: 20),
+                    Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
                       title: '10 Minutes Before Class',
                       subtitle: 'Alert to wrap up break and head to classroom',
                       value: notifPrefs.remind10Min,
                       onChanged: (val) => notifNotifier.setRemind10Min(val),
                     ),
-                    const Divider(height: 1, indent: 20, endIndent: 20),
+                    Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
                       title: 'Daily Morning Briefing',
                       subtitle:
@@ -92,7 +93,7 @@ class SettingsScreen extends ConsumerWidget {
                       value: notifPrefs.morningBriefing,
                       onChanged: (val) => notifNotifier.setMorningBriefing(val),
                     ),
-                    const Divider(height: 1, indent: 20, endIndent: 20),
+                    Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
                       title: 'Sound & Vibration',
                       subtitle: 'Play high priority notification alert tone',
@@ -104,10 +105,10 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 20.h),
             // Test Notification simulation card
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20.w),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -117,7 +118,7 @@ class SettingsScreen extends ConsumerWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.primary.withValues(alpha: 0.2),
                 ),
@@ -128,18 +129,18 @@ class SettingsScreen extends ConsumerWidget {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(8),
+                        padding: EdgeInsets.all(8.w),
                         decoration: BoxDecoration(
                           color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12.r),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           Icons.bolt_rounded,
                           color: AppColors.onPrimary,
                           size: 20,
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +163,7 @@ class SettingsScreen extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Row(
                     children: [
                       Expanded(
@@ -174,12 +175,12 @@ class SettingsScreen extends ConsumerWidget {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: const Text(
+                                  content: Text(
                                     'Sent simulated 15-min class alert!',
                                   ),
                                   behavior: SnackBarBehavior.floating,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.r),
                                   ),
                                 ),
                               );
@@ -187,23 +188,23 @@ class SettingsScreen extends ConsumerWidget {
                           },
                           style: OutlinedButton.styleFrom(
                             foregroundColor: AppColors.primary,
-                            side: const BorderSide(color: AppColors.primary),
-                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            side: BorderSide(color: AppColors.primary),
+                            padding: EdgeInsets.symmetric(vertical: 12.h),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14.r),
                             ),
                           ),
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.notifications_active_outlined,
                             size: 18,
                           ),
-                          label: const Text(
+                          label: Text(
                             'Test 15-Min',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12.w),
                       Expanded(
                         child: ElevatedButton.icon(
                           onPressed: () async {
@@ -213,12 +214,12 @@ class SettingsScreen extends ConsumerWidget {
                             if (context.mounted) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: const Text(
+                                  content: Text(
                                     'Sent simulated 10-min urgent class alert!',
                                   ),
                                   behavior: SnackBarBehavior.floating,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.r),
                                   ),
                                 ),
                               );
@@ -228,13 +229,13 @@ class SettingsScreen extends ConsumerWidget {
                             backgroundColor: AppColors.primary,
                             foregroundColor: AppColors.onPrimary,
                             elevation: 0,
-                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            padding: EdgeInsets.symmetric(vertical: 12.h),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(14.r),
                             ),
                           ),
-                          icon: const Icon(Icons.timer_outlined, size: 18),
-                          label: const Text(
+                          icon: Icon(Icons.timer_outlined, size: 18),
+                          label: Text(
                             'Test 10-Min',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
@@ -246,18 +247,18 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32.h),
             // Section 2: Appearance & Display
             _buildSectionHeader(
               Icons.palette_outlined,
               'Appearance & Display',
               AppColors.secondary,
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
@@ -265,17 +266,17 @@ class SettingsScreen extends ConsumerWidget {
               child: Column(
                 children: [
                   ListTile(
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 8,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20.w,
+                      vertical: 8.h,
                     ),
                     leading: Container(
-                      padding: const EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10.w),
                       decoration: BoxDecoration(
                         color: AppColors.secondary.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
-                      child: const Icon(
+                      child: Icon(
                         Icons.dark_mode_rounded,
                         color: AppColors.secondary,
                         size: 22,
@@ -293,25 +294,25 @@ class SettingsScreen extends ConsumerWidget {
                         color: AppColors.onSurfaceVariant,
                       ),
                     ),
-                    trailing: const Icon(
+                    trailing: Icon(
                       Icons.chevron_right_rounded,
                       color: AppColors.onSurfaceVariant,
                     ),
                     onTap: () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: const Text(
+                          content: Text(
                             'System Dynamic & Dark mode are matched to your device settings.',
                           ),
                           behavior: SnackBarBehavior.floating,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.r),
                           ),
                         ),
                       );
                     },
                   ),
-                  const Divider(height: 1, indent: 20, endIndent: 20),
+                  Divider(height: 1.h, indent: 20, endIndent: 20),
                   _buildSwitchTile(
                     title: 'Compact Schedule Cards',
                     subtitle:
@@ -323,19 +324,19 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32.h),
             // Section 3: Offline Data & Sync
             _buildSectionHeader(
               Icons.cloud_sync_outlined,
               'Offline-First & Cloud Sync',
               AppColors.tertiary,
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
@@ -345,18 +346,18 @@ class SettingsScreen extends ConsumerWidget {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10.w),
                         decoration: BoxDecoration(
                           color: AppColors.tertiary.withValues(alpha: 0.1),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12.r),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           Icons.verified_rounded,
                           color: AppColors.tertiary,
                           size: 22,
                         ),
                       ),
-                      const SizedBox(width: 16),
+                      SizedBox(width: 16.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -382,19 +383,19 @@ class SettingsScreen extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton.icon(
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: const Text(
+                            content: Text(
                               'Offline cache verified and refreshed!',
                             ),
                             behavior: SnackBarBehavior.floating,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.r),
                             ),
                           ),
                         );
@@ -406,31 +407,31 @@ class SettingsScreen extends ConsumerWidget {
                             alpha: 0.6,
                           ),
                         ),
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: 14.h),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14),
+                          borderRadius: BorderRadius.circular(14.r),
                         ),
                       ),
-                      icon: const Icon(Icons.cached_rounded, size: 20),
-                      label: const Text('Refresh Offline Timetable Cache'),
+                      icon: Icon(Icons.cached_rounded, size: 20),
+                      label: Text('Refresh Offline Timetable Cache'),
                     ),
                   ),
                 ],
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: 32.h),
             // Section 4: About & Legal
             _buildSectionHeader(
               Icons.info_outline_rounded,
               'About Campusly',
               AppColors.onSurfaceVariant,
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Container(
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
@@ -445,9 +446,9 @@ class SettingsScreen extends ConsumerWidget {
                           : 'Loading...';
                           
                       return ListTile(
-                        contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 4,
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20.w,
+                          vertical: 4.h,
                         ),
                         title: Text(
                           'Check for Updates',
@@ -459,7 +460,7 @@ class SettingsScreen extends ConsumerWidget {
                           'Current version: $versionStr',
                           style: AppTypography.textTheme.bodySmall,
                         ),
-                        trailing: const Icon(
+                        trailing: Icon(
                           Icons.system_update_alt_rounded,
                           color: AppColors.primary,
                         ),
@@ -469,17 +470,17 @@ class SettingsScreen extends ConsumerWidget {
                       );
                     }
                   ),
-                  const Divider(height: 1, indent: 20, endIndent: 20),
+                  Divider(height: 1.h, indent: 20, endIndent: 20),
                   ListTile(
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 4,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20.w,
+                      vertical: 4.h,
                     ),
                     title: Text(
                       'Terms of Service & Privacy',
                       style: AppTypography.textTheme.bodyMedium,
                     ),
-                    trailing: const Icon(
+                    trailing: Icon(
                       Icons.chevron_right_rounded,
                       color: AppColors.onSurfaceVariant,
                     ),
@@ -488,7 +489,7 @@ class SettingsScreen extends ConsumerWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            SizedBox(height: 40.h),
           ],
         ),
       ),
@@ -499,7 +500,7 @@ class SettingsScreen extends ConsumerWidget {
     return Row(
       children: [
         Icon(icon, color: color, size: 20),
-        const SizedBox(width: 10),
+        SizedBox(width: 10.w),
         Expanded(
           child: Text(
             title.toUpperCase(),
@@ -523,7 +524,7 @@ class SettingsScreen extends ConsumerWidget {
     bool isHeader = false,
   }) {
     return SwitchListTile(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
       title: Text(
         title,
         style: AppTypography.textTheme.titleMedium?.copyWith(

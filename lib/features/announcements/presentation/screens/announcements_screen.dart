@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -46,7 +47,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Notice Board & Circulars',
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
@@ -57,7 +58,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
         children: [
           // Search & Filter Header
           Container(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 16),
+            padding: EdgeInsets.fromLTRB(20, 10, 20, 16),
             color: AppColors.surface,
             child: Column(
               children: [
@@ -65,24 +66,24 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                   onChanged: (value) => setState(() => _searchQuery = value),
                   decoration: InputDecoration(
                     hintText: 'Search official circulars & notices...',
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       LucideIcons.search,
                       size: 20,
                       color: AppColors.textSecondary,
                     ),
                     filled: true,
                     fillColor: AppColors.surfaceContainerLow,
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12,
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 16.w,
+                      vertical: 12.h,
                     ),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.circular(14.r),
                       borderSide: BorderSide.none,
                     ),
                   ),
                 ),
-                const SizedBox(height: 14),
+                SizedBox(height: 14.h),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -96,7 +97,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                         ].map((filter) {
                           final isSelected = _selectedFilter == filter;
                           return Padding(
-                            padding: const EdgeInsets.only(right: 8),
+                            padding: EdgeInsets.only(right: 8.w),
                             child: FilterChip(
                               selected: isSelected,
                               label: Text(
@@ -108,7 +109,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                                   fontWeight: isSelected
                                       ? FontWeight.bold
                                       : FontWeight.normal,
-                                  fontSize: 12,
+                                  fontSize: 12.sp,
                                 ),
                               ),
                               onSelected: (_) =>
@@ -117,7 +118,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                               selectedColor: AppColors.primary,
                               checkmarkColor: Colors.white,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(20.r),
                               ),
                               side: BorderSide(
                                 color: isSelected
@@ -136,7 +137,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
           // Announcements List
           Expanded(
             child: announcementsAsync.when(
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (err, stack) => Center(
                 child: Text(
                   'Failed to load notices: $err',
@@ -176,7 +177,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                           size: 48,
                           color: AppColors.textSecondary.withValues(alpha: 0.5),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           'No circulars or notices found',
                           style: AppTypography.titleMedium.copyWith(
@@ -193,18 +194,18 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                     ref.invalidate(announcementsStreamProvider);
                   },
                   child: ListView.separated(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20.w),
                     itemCount: filtered.length,
-                    separatorBuilder: (ctx, idx) => const SizedBox(height: 14),
+                    separatorBuilder: (ctx, idx) => SizedBox(height: 14.h),
                     itemBuilder: (context, index) {
                       final item = filtered[index];
                       final isHigh = item.priority.toLowerCase() == 'high';
 
                       return Container(
-                        padding: const EdgeInsets.all(18),
+                        padding: EdgeInsets.all(18.w),
                         decoration: BoxDecoration(
                           color: AppColors.surfaceContainerLowest,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                           border: Border.all(
                             color: isHigh
                                 ? AppColors.error.withValues(alpha: 0.5)
@@ -217,7 +218,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                             BoxShadow(
                               color: Colors.black.withValues(alpha: 0.03),
                               blurRadius: 10,
-                              offset: const Offset(0, 4),
+                              offset: Offset(0, 4),
                             ),
                           ],
                         ),
@@ -231,13 +232,13 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                                   child: Row(
                                     children: [
                                       Container(
-                                        padding: const EdgeInsets.all(8),
+                                        padding: EdgeInsets.all(8.w),
                                         decoration: BoxDecoration(
                                           color: isHigh
                                               ? AppColors.errorContainer
                                               : AppColors.primaryContainer
                                                     .withValues(alpha: 0.15),
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10.r),
                                         ),
                                         child: Icon(
                                           isHigh
@@ -249,7 +250,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                                           size: 18,
                                         ),
                                       ),
-                                      const SizedBox(width: 10),
+                                      SizedBox(width: 10.w),
                                       Expanded(
                                         child: Text(
                                           item.author,
@@ -266,17 +267,17 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                                     ],
                                   ),
                                 ),
-                                const SizedBox(width: 10),
+                                SizedBox(width: 10.w),
                                 Text(
                                   _formatDate(item.createdAt),
                                   style: AppTypography.bodySmall.copyWith(
                                     color: AppColors.textSecondary,
-                                    fontSize: 11,
+                                    fontSize: 11.sp,
                                   ),
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 12),
+                            SizedBox(height: 12.h),
                             Text(
                               item.title,
                               style: AppTypography.titleMedium.copyWith(
@@ -284,12 +285,12 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                                 color: AppColors.onSurface,
                               ),
                             ),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8.h),
                             Text(
                               item.message,
                               style: AppTypography.bodyMedium.copyWith(
                                 color: AppColors.textSecondary,
-                                height: 1.4,
+                                height: 1.4.h,
                               ),
                             ),
                           ],

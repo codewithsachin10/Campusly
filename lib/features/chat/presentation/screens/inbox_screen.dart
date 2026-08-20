@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -39,7 +40,7 @@ class InboxScreen extends ConsumerWidget {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.group_rounded, color: AppColors.primary),
+            icon: Icon(Icons.group_rounded, color: AppColors.primary),
             tooltip: 'Create Group',
             onPressed: () {
               context.push('/create-group');
@@ -52,7 +53,7 @@ class InboxScreen extends ConsumerWidget {
           if (chats.isEmpty) {
             return Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                padding: EdgeInsets.symmetric(horizontal: 32.0.w),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -61,7 +62,7 @@ class InboxScreen extends ConsumerWidget {
                       size: 64,
                       color: AppColors.primary.withValues(alpha: 0.3),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     Text(
                       'No Messages Yet',
                       style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -69,7 +70,7 @@ class InboxScreen extends ConsumerWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     Text(
                       'Connect with people or check your class communities.',
                       textAlign: TextAlign.center,
@@ -84,7 +85,7 @@ class InboxScreen extends ConsumerWidget {
           }
 
           return ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
             itemCount: chats.length,
             itemBuilder: (context, index) {
               final chat = chats[index];
@@ -92,7 +93,7 @@ class InboxScreen extends ConsumerWidget {
             },
           );
         },
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Center(child: CircularProgressIndicator()),
         error: (e, st) => Center(child: Text('Error: $e')),
       ),
       floatingActionButton: FloatingActionButton(
@@ -100,7 +101,7 @@ class InboxScreen extends ConsumerWidget {
           context.push('/people-directory');
         },
         backgroundColor: AppColors.primary,
-        child: const Icon(Icons.chat_rounded, color: Colors.white),
+        child: Icon(Icons.chat_rounded, color: Colors.white),
       ),
     );
   }
@@ -157,14 +158,14 @@ class _ChatListTile extends ConsumerWidget {
 
     return Card(
       elevation: 0,
-      margin: const EdgeInsets.only(bottom: 8),
+      margin: EdgeInsets.only(bottom: 8.h),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         side: BorderSide(color: AppColors.outline.withValues(alpha: 0.1)),
       ),
       color: AppColors.surface,
       child: ListTile(
-        contentPadding: const EdgeInsets.all(12),
+        contentPadding: EdgeInsets.all(12.w),
         leading: CircleAvatar(
           radius: 28,
           backgroundColor: iconColor.withValues(alpha: 0.15),
@@ -172,15 +173,15 @@ class _ChatListTile extends ConsumerWidget {
         ),
         title: Text(
           title,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
         subtitle: Padding(
-          padding: const EdgeInsets.only(top: 4.0),
+          padding: EdgeInsets.only(top: 4.0.h),
           child: Text(
             chat.lastMessage ?? 'Say hi!',
-            style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
+            style: TextStyle(color: Colors.grey.shade600, fontSize: 14.sp),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
@@ -188,7 +189,7 @@ class _ChatListTile extends ConsumerWidget {
         trailing: timeStr.isNotEmpty
             ? Text(
                 timeStr,
-                style: const TextStyle(color: Colors.grey, fontSize: 12),
+                style: TextStyle(color: Colors.grey, fontSize: 12.sp),
               )
             : null,
         onTap: () {

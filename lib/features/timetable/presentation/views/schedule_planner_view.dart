@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -51,32 +52,32 @@ class SchedulePlannerView extends ConsumerWidget {
       {
         'code': 'tue',
         'label': 'Tue',
-        'date': '${mondayOfThisWeek.add(const Duration(days: 1)).day}',
+        'date': '${mondayOfThisWeek.add(Duration(days: 1)).day}',
       },
       {
         'code': 'wed',
         'label': 'Wed',
-        'date': '${mondayOfThisWeek.add(const Duration(days: 2)).day}',
+        'date': '${mondayOfThisWeek.add(Duration(days: 2)).day}',
       },
       {
         'code': 'thu',
         'label': 'Thu',
-        'date': '${mondayOfThisWeek.add(const Duration(days: 3)).day}',
+        'date': '${mondayOfThisWeek.add(Duration(days: 3)).day}',
       },
       {
         'code': 'fri',
         'label': 'Fri',
-        'date': '${mondayOfThisWeek.add(const Duration(days: 4)).day}',
+        'date': '${mondayOfThisWeek.add(Duration(days: 4)).day}',
       },
       {
         'code': 'sat',
         'label': 'Sat',
-        'date': '${mondayOfThisWeek.add(const Duration(days: 5)).day}',
+        'date': '${mondayOfThisWeek.add(Duration(days: 5)).day}',
       },
     ];
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -84,27 +85,27 @@ class SchedulePlannerView extends ConsumerWidget {
           Text(
             'Planner',
             style: AppTypography.textTheme.headlineLarge?.copyWith(
-              fontSize: 32,
+              fontSize: 32.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.onSurface,
             ),
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Text(
             headerDateText,
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
 
           // Horizontal Day Selector
           SizedBox(
-            height: 104,
+            height: 104.h,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: days.length,
-              separatorBuilder: (context, index) => const SizedBox(width: 12),
+              separatorBuilder: (context, index) => SizedBox(width: 12.w),
               itemBuilder: (context, index) {
                 final day = days[index];
                 final isSelected = day['code'] == selectedDay;
@@ -114,9 +115,9 @@ class SchedulePlannerView extends ConsumerWidget {
                     ref.read(selectedDayProvider.notifier).select(day['code']!);
                   },
                   child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 200),
+                    duration: Duration(milliseconds: 200),
                     curve: Curves.easeOut,
-                    width: 76,
+                    width: 76.w,
                     height: isSelected ? 96 : 88,
                     transform: isSelected
                         ? Matrix4.translationValues(0.0, -4.0, 0.0)
@@ -125,13 +126,13 @@ class SchedulePlannerView extends ConsumerWidget {
                       color: isSelected
                           ? AppColors.primary
                           : AppColors.surfaceContainerLow,
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: BorderRadius.circular(32.r),
                       boxShadow: isSelected
                           ? [
                               BoxShadow(
                                 color: AppColors.primary.withValues(alpha: 0.3),
                                 blurRadius: 20,
-                                offset: const Offset(0, 10),
+                                offset: Offset(0, 10),
                               ),
                             ]
                           : null,
@@ -148,7 +149,7 @@ class SchedulePlannerView extends ConsumerWidget {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: 6.h),
                         Text(
                           day['date']!,
                           style: AppTypography.textTheme.headlineSmall
@@ -157,7 +158,7 @@ class SchedulePlannerView extends ConsumerWidget {
                                     ? AppColors.onPrimary
                                     : AppColors.onSurface,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 22,
+                                fontSize: 22.sp,
                               ),
                         ),
                       ],
@@ -167,12 +168,12 @@ class SchedulePlannerView extends ConsumerWidget {
               },
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
 
           // Daily Schedule Content List
           dailyScheduleAsync.when(
-            loading: () => const Padding(
-              padding: EdgeInsets.symmetric(vertical: 60.0),
+            loading: () => Padding(
+              padding: EdgeInsets.symmetric(vertical: 60.0.h),
               child: Center(
                 child: CircularProgressIndicator(color: AppColors.primary),
               ),
@@ -188,11 +189,11 @@ class SchedulePlannerView extends ConsumerWidget {
               }
 
               return ListView.separated(
-                physics: const NeverScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: items.length,
                 separatorBuilder: (context, index) =>
-                    const SizedBox(width: 16, height: 16),
+                    SizedBox(width: 16.w, height: 16.h),
                 itemBuilder: (context, index) {
                   final item = items[index];
                   if (item.isBreak) {
@@ -203,7 +204,7 @@ class SchedulePlannerView extends ConsumerWidget {
               );
             },
           ),
-          const SizedBox(height: 40),
+          SizedBox(height: 40.h),
         ],
       ),
     );
@@ -211,11 +212,11 @@ class SchedulePlannerView extends ConsumerWidget {
 
   Widget _buildNoClassJoinedState(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
+      padding: EdgeInsets.symmetric(vertical: 64.h, horizontal: 24.w),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.2),
         ),
@@ -223,19 +224,19 @@ class SchedulePlannerView extends ConsumerWidget {
       child: Column(
         children: [
           Container(
-            width: 80,
-            height: 80,
+            width: 80.w,
+            height: 80.h,
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLow,
               shape: BoxShape.circle,
             ),
-            child: const Icon(
+            child: Icon(
               LucideIcons.graduationCap,
               size: 40,
               color: AppColors.primary,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           Text(
             'No Class Joined',
             style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -243,7 +244,7 @@ class SchedulePlannerView extends ConsumerWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 6),
+          SizedBox(height: 6.h),
           Text(
             'Join or search for an academic section to see your schedule.',
             textAlign: TextAlign.center,
@@ -251,17 +252,17 @@ class SchedulePlannerView extends ConsumerWidget {
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           FilledButton.icon(
             onPressed: () => context.push('/join-class-choice'),
-            icon: const Icon(LucideIcons.search, size: 18),
-            label: const Text('Find a Class'),
+            icon: Icon(LucideIcons.search, size: 18),
+            label: Text('Find a Class'),
             style: FilledButton.styleFrom(
               backgroundColor: AppColors.primary,
               foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
           ),
@@ -272,11 +273,11 @@ class SchedulePlannerView extends ConsumerWidget {
 
   Widget _buildEmptyState() {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 64, horizontal: 24),
+      padding: EdgeInsets.symmetric(vertical: 64.h, horizontal: 24.w),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.2),
         ),
@@ -284,19 +285,19 @@ class SchedulePlannerView extends ConsumerWidget {
       child: Column(
         children: [
           Container(
-            width: 80,
-            height: 80,
+            width: 80.w,
+            height: 80.h,
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLow,
               shape: BoxShape.circle,
             ),
-            child: const Icon(
+            child: Icon(
               Icons.event_busy_rounded,
               size: 40,
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           Text(
             'No classes scheduled for today.',
             style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -304,7 +305,7 @@ class SchedulePlannerView extends ConsumerWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 6),
+          SizedBox(height: 6.h),
           Text(
             'Enjoy your free day or work on self-paced projects!',
             textAlign: TextAlign.center,
@@ -325,36 +326,36 @@ class SchedulePlannerView extends ConsumerWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLow.withValues(alpha: 0.5),
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         border: Border.all(
           color: AppColors.outlineVariant,
           style: BorderStyle.solid,
-          width: 1,
+          width: 1.w,
         ),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         child: Container(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24.w),
           decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: accentColor, width: 6)),
+            border: Border(left: BorderSide(color: accentColor, width: 6.w)),
           ),
           child: Row(
             children: [
               Container(
-                width: 48,
-                height: 48,
+                width: 48.w,
+                height: 48.h,
                 decoration: BoxDecoration(
                   color: AppColors.surfaceContainerHigh,
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(14.r),
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.restaurant_rounded,
                   color: AppColors.onSurfaceVariant,
                   size: 24,
                 ),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -366,7 +367,7 @@ class SchedulePlannerView extends ConsumerWidget {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    const SizedBox(height: 2),
+                    SizedBox(height: 2.h),
                     Text(
                       item.title,
                       style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -414,7 +415,7 @@ class SchedulePlannerView extends ConsumerWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.3),
         ),
@@ -422,16 +423,16 @@ class SchedulePlannerView extends ConsumerWidget {
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.02),
             blurRadius: 15,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(32),
+        borderRadius: BorderRadius.circular(32.r),
         child: Container(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24.w),
           decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: accentColor, width: 6)),
+            border: Border(left: BorderSide(color: accentColor, width: 6.w)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -447,13 +448,13 @@ class SchedulePlannerView extends ConsumerWidget {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 12.w,
+                      vertical: 6.h,
                     ),
                     decoration: BoxDecoration(
                       color: badgeBg,
-                      borderRadius: BorderRadius.circular(999),
+                      borderRadius: BorderRadius.circular(999.r),
                     ),
                     child: Text(
                       item.category.toUpperCase(),
@@ -466,18 +467,18 @@ class SchedulePlannerView extends ConsumerWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Text(
                 item.title,
                 style: AppTypography.textTheme.headlineSmall?.copyWith(
                   color: AppColors.onSurface,
                   fontWeight: FontWeight.bold,
-                  height: 1.3,
+                  height: 1.3.h,
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               Container(
-                padding: const EdgeInsets.only(top: 14),
+                padding: EdgeInsets.only(top: 14.h),
                 decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
@@ -492,7 +493,7 @@ class SchedulePlannerView extends ConsumerWidget {
                       size: 18,
                       color: AppColors.onSurfaceVariant,
                     ),
-                    const SizedBox(width: 6),
+                    SizedBox(width: 6.w),
                     Expanded(
                       child: Text(
                         item.instructor,
@@ -503,13 +504,13 @@ class SchedulePlannerView extends ConsumerWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    const SizedBox(width: 12),
+                    SizedBox(width: 12.w),
                     Icon(
                       Icons.location_on_outlined,
                       size: 18,
                       color: AppColors.onSurfaceVariant,
                     ),
-                    const SizedBox(width: 6),
+                    SizedBox(width: 6.w),
                     Flexible(
                       child: Text(
                         item.room,

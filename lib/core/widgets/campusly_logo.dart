@@ -30,7 +30,7 @@ class CampuslyLogo extends StatelessWidget {
             width: size,
             height: size,
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
+              gradient: LinearGradient(
                 colors: [Color(0xFF4A42EC), Color(0xFF2D31FA)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -60,7 +60,7 @@ class CampuslyLogo extends StatelessWidget {
         boxShadow: addShadow
             ? [
                 BoxShadow(
-                  color: const Color(0xFF3D5AFE).withValues(alpha: 0.25),
+                  color: Color(0xFF3D5AFE).withValues(alpha: 0.25),
                   blurRadius: size * 0.25,
                   offset: Offset(0, size * 0.08),
                 ),

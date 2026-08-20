@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -65,23 +66,23 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
     showDialog(
       context: context,
       builder: (dialogContext) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.r)),
         backgroundColor: AppColors.surfaceContainerLowest,
         title: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.w),
               decoration: BoxDecoration(
                 color: AppColors.primaryContainer.withValues(alpha: 0.3),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.class_rounded,
                 color: AppColors.primary,
                 size: 28,
               ),
             ),
-            const SizedBox(width: 14),
+            SizedBox(width: 14.w),
             Expanded(
               child: Text(
                 'Confirm Class Join',
@@ -103,12 +104,12 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 color: AppColors.onSurface,
               ),
             ),
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLow,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                 ),
@@ -119,13 +120,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 4,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8.w,
+                          vertical: 4.h,
                         ),
                         decoration: BoxDecoration(
                           color: AppColors.primaryContainer,
-                          borderRadius: BorderRadius.circular(6),
+                          borderRadius: BorderRadius.circular(6.r),
                         ),
                         child: Text(
                           classModel.code,
@@ -135,7 +136,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                           ),
                         ),
                       ),
-                      const Spacer(),
+                      Spacer(),
                       Text(
                         classModel.section,
                         style: AppTypography.textTheme.labelLarge?.copyWith(
@@ -145,7 +146,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Text(
                     classModel.name,
                     style: AppTypography.textTheme.titleLarge?.copyWith(
@@ -153,7 +154,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  SizedBox(height: 6.h),
                   Text(
                     'Department: ${classModel.department}',
                     style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -169,21 +170,21 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.sync_rounded,
                   size: 20,
                   color: AppColors.primary,
                 ),
-                const SizedBox(width: 10),
+                SizedBox(width: 10.w),
                 Expanded(
                   child: Text(
                     'Once confirmed, your personal timetable and reminders will switch to this class until you change it.',
                     style: AppTypography.textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
-                      height: 1.4,
+                      height: 1.4.h,
                     ),
                   ),
                 ),
@@ -191,9 +192,9 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             ),
           ],
         ),
-        actionsPadding: const EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 18,
+        actionsPadding: EdgeInsets.symmetric(
+          horizontal: 24.w,
+          vertical: 18.h,
         ),
         actions: [
           TextButton(
@@ -211,9 +212,9 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primary,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(14.r),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
             ),
             child: Text(
               'Yes, Join Class',
@@ -255,7 +256,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -271,7 +272,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           children: [
             // Search Bar & Filter Header
             Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: EdgeInsets.all(24.0.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -281,13 +282,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                     style: AppTypography.textTheme.bodyMedium,
                     decoration: InputDecoration(
                       hintText: 'Search by course name, department, or code...',
-                      prefixIcon: const Icon(
+                      prefixIcon: Icon(
                         Icons.search_rounded,
                         color: AppColors.onSurfaceVariant,
                       ),
                       suffixIcon: _searchController.text.isNotEmpty
                           ? IconButton(
-                              icon: const Icon(Icons.clear_rounded, size: 20),
+                              icon: Icon(Icons.clear_rounded, size: 20),
                               onPressed: () {
                                 _searchController.clear();
                                 _onSearchChanged('');
@@ -297,7 +298,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                       filled: true,
                       fillColor: AppColors.surfaceContainerLowest,
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         borderSide: BorderSide(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.6,
@@ -305,7 +306,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         borderSide: BorderSide(
                           color: AppColors.outlineVariant.withValues(
                             alpha: 0.6,
@@ -313,22 +314,22 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide: const BorderSide(
+                        borderRadius: BorderRadius.circular(16.r),
+                        borderSide: BorderSide(
                           color: AppColors.primary,
-                          width: 2,
+                          width: 2.w,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: _departments.map((dept) {
                         final isSelected = _selectedDepartment == dept;
                         return Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
+                          padding: EdgeInsets.only(right: 8.0.w),
                           child: FilterChip(
                             label: Text(dept),
                             selected: isSelected,
@@ -345,7 +346,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                                 ),
                             backgroundColor: AppColors.surfaceContainerLow,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(999),
+                              borderRadius: BorderRadius.circular(999.r),
                               side: BorderSide(
                                 color: isSelected
                                     ? AppColors.primary
@@ -366,7 +367,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             // Class Results List
             Expanded(
               child: classesAsync.when(
-                loading: () => const Center(
+                loading: () => Center(
                   child: CircularProgressIndicator(color: AppColors.primary),
                 ),
                 error: (error, stack) => Center(child: Text('Error: $error')),
@@ -381,13 +382,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                             size: 64,
                             color: AppColors.outlineVariant,
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                           Text(
                             'No classes found',
                             style: AppTypography.textTheme.headlineSmall
                                 ?.copyWith(color: AppColors.onSurfaceVariant),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Text(
                             'Try adjusting your search terms or filters.',
                             style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -400,13 +401,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   }
 
                   return ListView.separated(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24.0,
-                      vertical: 8.0,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 24.0.w,
+                      vertical: 8.0.h,
                     ),
                     itemCount: classes.length,
                     separatorBuilder: (context, index) =>
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                     itemBuilder: (context, index) {
                       final c = classes[index];
                       return _buildClassCard(c);
@@ -423,10 +424,10 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
 
   Widget _buildClassCard(ClassModel c) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(20.w),
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.35),
         ),
@@ -434,7 +435,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 15,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -445,13 +446,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 4,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.w,
+                  vertical: 4.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.primaryContainer.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: Text(
                   c.department,
@@ -462,13 +463,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 4,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.w,
+                  vertical: 4.h,
                 ),
                 decoration: BoxDecoration(
                   color: AppColors.tertiaryContainer,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
                 child: Text(
                   c.section,
@@ -480,7 +481,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           Text(
             c.name,
             style: AppTypography.textTheme.titleLarge?.copyWith(
@@ -490,28 +491,28 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Text(
             'Code: ${c.code} · ${c.enrolledCount} enrolled',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 16),
-          const Divider(height: 1),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
+          Divider(height: 1.h),
+          SizedBox(height: 16.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.schedule_rounded,
                       size: 18,
                       color: AppColors.onSurfaceVariant,
                     ),
-                    const SizedBox(width: 6),
+                    SizedBox(width: 6.w),
                     Expanded(
                       child: Text(
                         c.scheduleSummary,
@@ -524,17 +525,17 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
+              SizedBox(width: 8.w),
               ElevatedButton(
                 onPressed: () => _handleJoin(c),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20.w,
+                    vertical: 10.h,
                   ),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                 ),
                 child: Text(

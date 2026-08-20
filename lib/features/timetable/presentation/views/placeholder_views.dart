@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -58,47 +59,47 @@ class CoursesShellView extends ConsumerWidget {
     List<_CourseData> coursesList = coursesMap.values.toList();
 
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(24.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'My Courses',
             style: AppTypography.textTheme.headlineLarge?.copyWith(
-              fontSize: 32,
+              fontSize: 32.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.onSurface,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             'Enrolled in ${currentClass?.name ?? 'B.Tech CSBS - Section B'}',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
           Expanded(
             child: (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty))
                 ? Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(24.0),
+                      padding: EdgeInsets.all(24.0.w),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(
+                          Icon(
                             LucideIcons.graduationCap,
                             size: 64,
                             color: AppColors.primary,
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                           Text(
                             'No Class Joined',
                             style: AppTypography.titleLarge.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: 8.h),
                           Text(
                             'Join or search for an academic section to see your courses.',
                             textAlign: TextAlign.center,
@@ -106,17 +107,17 @@ class CoursesShellView extends ConsumerWidget {
                               color: AppColors.textSecondary,
                             ),
                           ),
-                          const SizedBox(height: 24),
+                          SizedBox(height: 24.h),
                           FilledButton.icon(
                             onPressed: () => context.push('/join-class-choice'),
-                            icon: const Icon(LucideIcons.search, size: 18),
-                            label: const Text('Find a Class'),
+                            icon: Icon(LucideIcons.search, size: 18),
+                            label: Text('Find a Class'),
                             style: FilledButton.styleFrom(
                               backgroundColor: AppColors.primary,
                               foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.r),
                               ),
                             ),
                           ),
@@ -136,7 +137,7 @@ class CoursesShellView extends ConsumerWidget {
                             alpha: 0.5,
                           ),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           'No courses found for this class.',
                           style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -144,7 +145,7 @@ class CoursesShellView extends ConsumerWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: 6.h),
                         Text(
                           'Subjects will appear once classes are scheduled in your timetable.',
                           textAlign: TextAlign.center,
@@ -157,7 +158,7 @@ class CoursesShellView extends ConsumerWidget {
                   )
                 : ListView.separated(
                     itemCount: coursesList.length,
-                    separatorBuilder: (_, _) => const SizedBox(height: 16),
+                    separatorBuilder: (_, _) => SizedBox(height: 16.h),
                     itemBuilder: (context, index) {
                       final course = coursesList[index];
                       return _buildCourseItem(context, course);
@@ -174,12 +175,12 @@ class CoursesShellView extends ConsumerWidget {
       onTap: () {
         SubjectDetailPage.navigate(context, course.item);
       },
-      borderRadius: BorderRadius.circular(24),
+      borderRadius: BorderRadius.circular(24.r),
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.w),
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(24.r),
           border: Border.all(
             color: AppColors.outlineVariant.withValues(alpha: 0.3),
           ),
@@ -187,11 +188,11 @@ class CoursesShellView extends ConsumerWidget {
         child: Row(
           children: [
             Container(
-              width: 54,
-              height: 54,
+              width: 54.w,
+              height: 54.h,
               decoration: BoxDecoration(
                 color: course.color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
               ),
               child: Icon(
                 Icons.menu_book_rounded,
@@ -199,7 +200,7 @@ class CoursesShellView extends ConsumerWidget {
                 size: 28,
               ),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: 16.w),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,7 +212,7 @@ class CoursesShellView extends ConsumerWidget {
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4.h),
                   Text(
                     '${course.instructor} · ${course.details}',
                     style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -234,26 +235,26 @@ class TasksShellView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(24.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Tasks & Deadlines',
             style: AppTypography.textTheme.headlineLarge?.copyWith(
-              fontSize: 32,
+              fontSize: 32.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.onSurface,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             'Stay on top of assignments and lab reports',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
           Expanded(
             child: Center(
               child: Column(
@@ -264,7 +265,7 @@ class TasksShellView extends StatelessWidget {
                     size: 48,
                     color: AppColors.onSurfaceVariant.withValues(alpha: 0.5),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Text(
                     'No tasks or deadlines assigned right now.',
                     style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -272,7 +273,7 @@ class TasksShellView extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  SizedBox(height: 6.h),
                   Text(
                     'When instructors publish assignments or lab submissions, they will appear here.',
                     textAlign: TextAlign.center,
@@ -299,10 +300,10 @@ class ProfileShellView extends ConsumerWidget {
     final currentClass = ref.watch(currentClassProvider);
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(24.0.w),
       child: Column(
         children: [
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           CircleAvatar(
             radius: 50,
             backgroundColor: AppColors.primary,
@@ -310,31 +311,31 @@ class ProfileShellView extends ConsumerWidget {
               user?.name.isNotEmpty == true ? user!.name[0].toUpperCase() : 'S',
               style: AppTypography.textTheme.headlineLarge?.copyWith(
                 color: AppColors.onPrimary,
-                fontSize: 36,
+                fontSize: 36.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             user?.name ?? 'Sachin Gopalakrishnan',
             style: AppTypography.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Text(
             user?.email ?? 'sachin@campusly.edu',
             style: AppTypography.textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           Container(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.w),
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLowest,
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: BorderRadius.circular(24.r),
               border: Border.all(
                 color: AppColors.outlineVariant.withValues(alpha: 0.3),
               ),
@@ -346,13 +347,13 @@ class ProfileShellView extends ConsumerWidget {
                   'Active Class',
                   currentClass?.name ?? 'B.Tech CSE - Section A',
                 ),
-                const Divider(height: 32),
+                Divider(height: 32.h),
                 _buildProfileRow(
                   Icons.pin_outlined,
                   'Class Code',
                   currentClass?.code ?? 'CAMPUS-B7K2',
                 ),
-                const Divider(height: 32),
+                Divider(height: 32.h),
                 _buildProfileRow(
                   Icons.apartment_rounded,
                   'Department',
@@ -361,7 +362,7 @@ class ProfileShellView extends ConsumerWidget {
               ],
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: 32.h),
           ElevatedButton.icon(
             onPressed: () async {
               await ref.read(authControllerProvider.notifier).signOut();
@@ -370,12 +371,12 @@ class ProfileShellView extends ConsumerWidget {
               backgroundColor: AppColors.error.withValues(alpha: 0.1),
               foregroundColor: AppColors.error,
               elevation: 0,
-              minimumSize: const Size(double.infinity, 54),
+              minimumSize: Size(double.infinity, 54),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
               ),
             ),
-            icon: const Icon(Icons.logout_rounded),
+            icon: Icon(Icons.logout_rounded),
             label: Text(
               'Sign Out',
               style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -393,14 +394,14 @@ class ProfileShellView extends ConsumerWidget {
     return Row(
       children: [
         Icon(icon, color: AppColors.primary, size: 22),
-        const SizedBox(width: 16),
+        SizedBox(width: 16.w),
         Text(
           label,
           style: AppTypography.textTheme.bodyMedium?.copyWith(
             color: AppColors.onSurfaceVariant,
           ),
         ),
-        const Spacer(),
+        Spacer(),
         Text(
           value,
           style: AppTypography.textTheme.bodyMedium?.copyWith(

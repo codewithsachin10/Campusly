@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -50,19 +51,19 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
     final shouldPop = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Complete Profile Required'),
-        content: const Text('You must complete your profile to continue using the app.'),
+        title: Text('Complete Profile Required'),
+        content: Text('You must complete your profile to continue using the app.'),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('OK'),
+            child: Text('OK'),
           ),
           TextButton(
             onPressed: () async {
               Navigator.of(context).pop(true);
               await ref.read(authControllerProvider.notifier).signOut();
             },
-            child: const Text('Log Out', style: TextStyle(color: AppColors.error)),
+            child: Text('Log Out', style: TextStyle(color: AppColors.error)),
           ),
         ],
       ),
@@ -89,7 +90,7 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
             SnackBar(
               content: Text(
                 AppErrorHandler.getErrorMessage(authState.error),
-                style: const TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white),
               ),
               backgroundColor: AppColors.error,
               behavior: SnackBarBehavior.floating,
@@ -119,7 +120,7 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             'Complete Your Profile',
             style: TextStyle(color: AppColors.primary),
           ),
@@ -129,7 +130,7 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
         ),
         body: SafeArea(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0.w),
             child: Form(
               key: _formKey,
               child: Column(
@@ -139,53 +140,53 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
                     'Almost there!',
                     style: AppTypography.textTheme.headlineMedium,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8.h),
                   Text(
                     'Please provide a few more details to complete your account setup.',
                     style: AppTypography.textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32.h),
 
                   // Roll Number
                   TextFormField(
                     controller: _rollNumberController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Roll Number *',
                       prefixIcon: Icon(Icons.badge_outlined),
                     ),
                     validator: (value) => value == null || value.trim().isEmpty ? 'Required' : null,
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
                   // Section
                   TextFormField(
                     controller: _sectionController,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Section (e.g. A, B, C) *',
                       prefixIcon: Icon(Icons.class_outlined),
                     ),
                     validator: (value) => value == null || value.trim().isEmpty ? 'Required' : null,
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
                   // Phone Number
                   TextFormField(
                     controller: _phoneController,
                     keyboardType: TextInputType.phone,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Phone Number',
                       prefixIcon: Icon(Icons.phone_outlined),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
                   // Gender Dropdown
                   DropdownButtonFormField<String>(
-                    value: _gender,
+                    initialValue: _gender,
                     isExpanded: true,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Gender',
                       prefixIcon: Icon(Icons.person_outline),
                     ),
@@ -194,17 +195,17 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
                     }).toList(),
                     onChanged: (val) => setState(() => _gender = val),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
 
                   // Date of Birth
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(_dob == null ? 'Select Date of Birth' : 'DOB: ${_dob!.toLocal().toString().split(' ')[0]}'),
-                    leading: const Icon(Icons.calendar_today_outlined),
+                    leading: Icon(Icons.calendar_today_outlined),
                     onTap: () async {
                       final picked = await showDatePicker(
                         context: context,
-                        initialDate: DateTime.now().subtract(const Duration(days: 365 * 18)),
+                        initialDate: DateTime.now().subtract(Duration(days: 365 * 18)),
                         firstDate: DateTime(1990),
                         lastDate: DateTime.now(),
                       );
@@ -213,20 +214,20 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
                       }
                     },
                   ),
-                  const Divider(),
-                  const SizedBox(height: 20),
+                  Divider(),
+                  SizedBox(height: 20.h),
 
                   // Emergency Contact
                   TextFormField(
                     controller: _emergencyContactController,
                     keyboardType: TextInputType.phone,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Emergency Contact Number',
                       prefixIcon: Icon(Icons.warning_amber_rounded),
                     ),
                   ),
                   
-                  const SizedBox(height: 40),
+                  SizedBox(height: 40.h),
                   ThreeDPushableButton(
                     text: 'Complete Setup',
                     isLoading: isLoading,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:intl/intl.dart';
@@ -15,7 +16,7 @@ class UpdatesScreen extends ConsumerStatefulWidget {
 }
 
 class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
-  DownloadState _downloadState = const DownloadState();
+  DownloadState _downloadState = DownloadState();
 
   @override
   void initState() {
@@ -29,13 +30,13 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     if (release.downloadUrl.isEmpty) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No download URL available for this release.')),
+        SnackBar(content: Text('No download URL available for this release.')),
       );
       return;
     }
 
     setState(() {
-      _downloadState = const DownloadState(status: DownloadStatus.downloading, progress: 0.0);
+      _downloadState = DownloadState(status: DownloadStatus.downloading, progress: 0.0);
     });
 
     try {
@@ -88,7 +89,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     final downloadService = ref.read(apkDownloadServiceProvider);
     downloadService.cancelDownload();
     setState(() {
-      _downloadState = const DownloadState(status: DownloadStatus.idle);
+      _downloadState = DownloadState(status: DownloadStatus.idle);
     });
   }
 
@@ -124,33 +125,33 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     return Scaffold(
       backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
-        title: const Text('Updates Center'),
+        title: Text('Updates Center'),
         centerTitle: true,
         backgroundColor: theme.colorScheme.surface,
         elevation: 0,
       ),
       body: updateState.isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? Center(child: CircularProgressIndicator())
           : RefreshIndicator(
               onRefresh: () =>
                   ref.read(updateNotifierProvider.notifier).checkForUpdates(),
               child: ListView(
-                padding: const EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(16.0.w),
                 children: [
                   _buildStatusHeader(context, updateState),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   if (updateState.latestRelease != null)
                     _buildLatestReleaseCard(
                         context, updateState.latestRelease!, updateState),
-                  const SizedBox(height: 24),
-                  const Text(
+                  SizedBox(height: 24.h),
+                  Text(
                     'Previous Releases',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   _buildPreviousReleasesList(context),
                 ],
               ),
@@ -166,16 +167,16 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     final title = isUpToDate ? 'You\'re up to date!' : 'Update Available';
 
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(24.w),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Column(
         children: [
           Icon(icon, size: 48, color: color),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           Text(
             title,
             style: theme.textTheme.titleLarge?.copyWith(
@@ -183,7 +184,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
               color: color,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           Text(
             'Current Version: ${state.currentVersion ?? 'Unknown'}',
             style: theme.textTheme.bodyMedium?.copyWith(
@@ -203,16 +204,16 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     return Card(
       elevation: 0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         side: BorderSide(
           color: isCritical
               ? Colors.red.withValues(alpha: 0.5)
               : theme.dividerColor,
-          width: 1,
+          width: 1.w,
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -222,27 +223,27 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
                 Expanded(
                   child: Text(
                     'Version ${release.version}',
-                    style: const TextStyle(
-                      fontSize: 20,
+                    style: TextStyle(
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.bold,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8.w),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
                   decoration: BoxDecoration(
                     color: isCritical
                         ? Colors.red.withValues(alpha: 0.1)
                         : theme.colorScheme.primary.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                   ),
                   child: Text(
                     isCritical ? 'Critical Update' : 'Latest Release',
                     style: TextStyle(
                       color: isCritical ? Colors.red : theme.colorScheme.primary,
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -250,26 +251,26 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
               ],
             ),
             if (release.publishedAt != null) ...[
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Text(
                 'Released ${DateFormat.yMMMd().format(release.publishedAt!)}',
                 style: TextStyle(
                   color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
               ),
             ],
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             if (release.description != null) ...[
               Text(
                 release.description!,
                 style: theme.textTheme.bodyMedium,
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
             ],
             if (release.releaseNotes.isNotEmpty)
               ...release.releaseNotes.map((note) => _buildReleaseNoteItem(note)),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             // ── Download / Install Button Area ──
             _buildDownloadButton(context, release, state),
           ],
@@ -292,16 +293,16 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
             onPressed: state.isUpdateAvailable
                 ? () => _startDownloadAndInstall(release)
                 : null,
-            icon: const Icon(LucideIcons.download, size: 20),
+            icon: Icon(LucideIcons.download, size: 20),
             label: Text(
               state.isUpdateAvailable ? 'Download & Install' : 'Already Installed',
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
             ),
             style: FilledButton.styleFrom(
               backgroundColor: buttonColor,
-              padding: const EdgeInsets.symmetric(vertical: 16),
+              padding: EdgeInsets.symmetric(vertical: 16.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
           ),
@@ -312,7 +313,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
         return Column(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.r),
               child: LinearProgressIndicator(
                 value: _downloadState.progress,
                 minHeight: 8,
@@ -320,7 +321,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
                 valueColor: AlwaysStoppedAnimation<Color>(buttonColor),
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -333,7 +334,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
                 ),
                 TextButton(
                   onPressed: _cancelDownload,
-                  child: const Text('Cancel'),
+                  child: Text('Cancel'),
                 ),
               ],
             ),
@@ -345,16 +346,16 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
           width: double.infinity,
           child: FilledButton.icon(
             onPressed: _retryInstall,
-            icon: const Icon(LucideIcons.packageOpen, size: 20),
-            label: const Text(
+            icon: Icon(LucideIcons.packageOpen, size: 20),
+            label: Text(
               'Install Now',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
             ),
             style: FilledButton.styleFrom(
               backgroundColor: Colors.green,
-              padding: const EdgeInsets.symmetric(vertical: 16),
+              padding: EdgeInsets.symmetric(vertical: 16.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
           ),
@@ -365,20 +366,20 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
           width: double.infinity,
           child: FilledButton.icon(
             onPressed: null,
-            icon: const SizedBox(
-              width: 20,
-              height: 20,
+            icon: SizedBox(
+              width: 20.w,
+              height: 20.h,
               child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
             ),
-            label: const Text(
+            label: Text(
               'Installing...',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
             ),
             style: FilledButton.styleFrom(
               backgroundColor: Colors.green,
-              padding: const EdgeInsets.symmetric(vertical: 16),
+              padding: EdgeInsets.symmetric(vertical: 16.h),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.r),
               ),
             ),
           ),
@@ -389,40 +390,40 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
           children: [
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.w),
               decoration: BoxDecoration(
                 color: Colors.red.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.r),
                 border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
               ),
               child: Row(
                 children: [
-                  const Icon(LucideIcons.alertCircle, color: Colors.red, size: 20),
-                  const SizedBox(width: 8),
+                  Icon(LucideIcons.alertCircle, color: Colors.red, size: 20),
+                  SizedBox(width: 8.w),
                   Expanded(
                     child: Text(
                       'Download failed. Please try again.',
-                      style: TextStyle(color: Colors.red.shade700, fontSize: 13),
+                      style: TextStyle(color: Colors.red.shade700, fontSize: 13.sp),
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             SizedBox(
               width: double.infinity,
               child: FilledButton.icon(
                 onPressed: () => _startDownloadAndInstall(release),
-                icon: const Icon(LucideIcons.refreshCw, size: 20),
-                label: const Text(
+                icon: Icon(LucideIcons.refreshCw, size: 20),
+                label: Text(
                   'Retry Download',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
                 ),
                 style: FilledButton.styleFrom(
                   backgroundColor: buttonColor,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  padding: EdgeInsets.symmetric(vertical: 16.h),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                 ),
               ),
@@ -468,22 +469,22 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
     }
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12.0),
+      padding: EdgeInsets.only(bottom: 12.0.h),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 2, right: 12),
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            margin: EdgeInsets.only(top: 2.h, right: 12.w),
+            padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
             decoration: BoxDecoration(
               color: getCategoryColor().withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.circular(4.r),
               border: Border.all(color: getCategoryColor().withValues(alpha: 0.3)),
             ),
             child: Text(
               getCategoryLabel(),
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 10.sp,
                 fontWeight: FontWeight.bold,
                 color: getCategoryColor(),
               ),
@@ -496,13 +497,13 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
                 if (note.title != null)
                   Text(
                     note.title!,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 Text(
                   note.description,
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.8),
-                    height: 1.4,
+                    height: 1.4.h,
                   ),
                 ),
               ],
@@ -518,7 +519,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
       future: ref.read(updateNotifierProvider.notifier).getPreviousReleases(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return Center(child: CircularProgressIndicator());
         }
 
         if (snapshot.hasError) {
@@ -527,9 +528,9 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
 
         final releases = snapshot.data ?? [];
         if (releases.length <= 1) {
-          return const Center(
+          return Center(
             child: Padding(
-              padding: EdgeInsets.all(24.0),
+              padding: EdgeInsets.all(24.0.w),
               child: Text('No previous releases found.'),
             ),
           );
@@ -540,21 +541,21 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
 
         return ListView.separated(
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          physics: NeverScrollableScrollPhysics(),
           itemCount: previousReleases.length,
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => Divider(),
           itemBuilder: (context, index) {
             final release = previousReleases[index];
             return ListTile(
               contentPadding: EdgeInsets.zero,
               title: Text(
                 'Version ${release.version}',
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Text(release.publishedAt != null
                   ? DateFormat.yMMMd().format(release.publishedAt!)
                   : 'Unknown date'),
-              trailing: const Icon(LucideIcons.chevronRight, size: 20),
+              trailing: Icon(LucideIcons.chevronRight, size: 20),
               onTap: () {
                 _showReleaseDetails(context, release);
               },
@@ -575,25 +576,25 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
           height: MediaQuery.of(context).size.height * 0.8,
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.surface,
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24.r)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Center(
                 child: Container(
-                  width: 40,
-                  height: 4,
+                  width: 40.w,
+                  height: 4.h,
                   decoration: BoxDecoration(
                     color: Colors.grey.withValues(alpha: 0.3),
-                    borderRadius: BorderRadius.circular(2),
+                    borderRadius: BorderRadius.circular(2.r),
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 24.0.w),
                 child: Text(
                   'Version ${release.version}',
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -605,7 +606,7 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
               ),
               if (release.publishedAt != null)
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 8.h),
                   child: Text(
                     'Released ${DateFormat.yMMMd().format(release.publishedAt!)}',
                     style: TextStyle(
@@ -613,20 +614,20 @@ class _UpdatesScreenState extends ConsumerState<UpdatesScreen> {
                     ),
                   ),
                 ),
-              const Divider(),
+              Divider(),
               Expanded(
                 child: ListView(
-                  padding: const EdgeInsets.all(24.0),
+                  padding: EdgeInsets.all(24.0.w),
                   children: [
                     if (release.description != null) ...[
                       Text(
                         release.description!,
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
-                      const SizedBox(height: 24),
+                      SizedBox(height: 24.h),
                     ],
                     if (release.releaseNotes.isEmpty)
-                      const Text('No detailed release notes available.')
+                      Text('No detailed release notes available.')
                     else
                       ...release.releaseNotes
                           .map((note) => _buildReleaseNoteItem(note)),

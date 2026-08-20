@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -66,10 +67,10 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: const Row(
+        content: Row(
           children: [
             Icon(LucideIcons.checkCircle2, color: Colors.white),
-            SizedBox(width: 12),
+            SizedBox(width: 12.w),
             Expanded(
               child: Text(
                 'Profile details updated successfully!',
@@ -81,7 +82,7 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
         ),
         backgroundColor: AppColors.success,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
       ),
     );
     Navigator.of(context).pop();
@@ -95,7 +96,7 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Edit Student Profile',
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
@@ -105,12 +106,12 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
           IconButton(
             onPressed: _isLoading ? null : _saveProfile,
             icon: _isLoading
-                ? const SizedBox(
-                    width: 20,
-                    height: 20,
+                ? SizedBox(
+                    width: 20.w,
+                    height: 20.h,
                     child: CircularProgressIndicator(strokeWidth: 2),
                   )
-                : const Icon(
+                : Icon(
                     LucideIcons.check,
                     color: AppColors.primary,
                     size: 28,
@@ -119,7 +120,7 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.w),
         child: Form(
           key: _formKey,
           child: Column(
@@ -142,16 +143,16 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                       ),
                     ),
                     Positioned(
-                      bottom: 0,
-                      right: 0,
+                      bottom: 0.h,
+                      right: 0.w,
                       child: Container(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10.w),
                         decoration: BoxDecoration(
                           color: AppColors.primary,
                           shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white, width: 3),
+                          border: Border.all(color: Colors.white, width: 3.w),
                         ),
-                        child: const Icon(
+                        child: Icon(
                           LucideIcons.camera,
                           color: Colors.white,
                           size: 18,
@@ -161,13 +162,13 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
 
               Container(
-                padding: const EdgeInsets.all(18),
+                padding: EdgeInsets.all(18.w),
                 decoration: BoxDecoration(
                   color: AppColors.primary.withValues(alpha: 0.06),
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.r),
                   border: Border.all(
                     color: AppColors.primary.withValues(alpha: 0.2),
                   ),
@@ -177,12 +178,12 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                   children: [
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           LucideIcons.shieldCheck,
                           color: AppColors.primary,
                           size: 20,
                         ),
-                        const SizedBox(width: 10),
+                        SizedBox(width: 10.w),
                         Expanded(
                           child: Text(
                             'Verified Institutional Account',
@@ -195,24 +196,24 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12.h),
                     _buildReadOnlyField(
                       'Roll Number',
                       user?.rollNumber ?? 'N/A',
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     _buildReadOnlyField(
                       'Email Address',
                       user?.email.isNotEmpty == true
                           ? user!.email
                           : 'No email associated',
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     _buildReadOnlyField(
                       'Department',
                       user?.department ?? 'General',
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8.h),
                     _buildReadOnlyField(
                       'Academic Year',
                       user?.year ?? 'N/A',
@@ -220,7 +221,7 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
 
               Text(
                 'Editable Information',
@@ -228,11 +229,11 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
 
               TextFormField(
                 controller: _nameController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Full Name',
                   prefixIcon: Icon(LucideIcons.user),
                 ),
@@ -240,41 +241,41 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
                     ? 'Please enter your full name'
                     : null,
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
 
               TextFormField(
                 controller: _phoneController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Phone Number',
                   prefixIcon: Icon(LucideIcons.phone),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               
               TextFormField(
                 controller: _emergencyContactController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Emergency Contact Number',
                   prefixIcon: Icon(LucideIcons.shieldAlert),
                 ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
 
               TextFormField(
                 controller: _sectionController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Class Section / Group',
                   prefixIcon: Icon(LucideIcons.users),
                 ),
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
 
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
                   onPressed: _isLoading ? null : _saveProfile,
-                  icon: const Icon(LucideIcons.save),
-                  label: const Text(
+                  icon: Icon(LucideIcons.save),
+                  label: Text(
                     'Save Changes',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -297,7 +298,7 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
             color: AppColors.textSecondary,
           ),
         ),
-        const SizedBox(width: 12),
+        SizedBox(width: 12.w),
         Expanded(
           child: Text(
             value,

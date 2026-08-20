@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -34,33 +35,33 @@ class EventsHomeScreen extends ConsumerWidget {
           children: [
             // Header Bar
             _buildHeader(context, ref),
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
             // Category Pill Chips
             _buildCategorySelector(ref, activeCategory),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             // Events List
             Expanded(
               child: filteredAsync.when(
-                loading: () => const Center(
+                loading: () => Center(
                   child: CircularProgressIndicator(color: AppColors.primary),
                 ),
                 error: (error, stack) => Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(
+                      Icon(
                         LucideIcons.alertTriangle,
                         color: AppColors.error,
                         size: 48,
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       Text(
                         'Failed to load events',
                         style: AppTypography.titleMedium.copyWith(
                           color: AppColors.textPrimary,
                         ),
                       ),
-                      const SizedBox(height: 6),
+                      SizedBox(height: 6.h),
                       Text(
                         AppErrorHandler.getErrorMessage(error),
                         style: AppTypography.bodySmall.copyWith(
@@ -68,11 +69,11 @@ class EventsHomeScreen extends ConsumerWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16.h),
                       ElevatedButton.icon(
                         onPressed: () => ref.refresh(eventsStreamProvider),
-                        icon: const Icon(LucideIcons.refreshCw, size: 16),
-                        label: const Text('Retry'),
+                        icon: Icon(LucideIcons.refreshCw, size: 16),
+                        label: Text('Retry'),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,
                           foregroundColor: AppColors.onPrimary,
@@ -88,18 +89,18 @@ class EventsHomeScreen extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            padding: const EdgeInsets.all(24),
+                            padding: EdgeInsets.all(24.w),
                             decoration: BoxDecoration(
                               color: AppColors.surfaceContainerLowest,
                               shape: BoxShape.circle,
                             ),
-                            child: const Icon(
+                            child: Icon(
                               LucideIcons.calendarX,
                               size: 48,
                               color: AppColors.textSecondary,
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                           Text(
                             'No events found',
                             style: AppTypography.titleMedium.copyWith(
@@ -107,7 +108,7 @@ class EventsHomeScreen extends ConsumerWidget {
                               color: AppColors.textPrimary,
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          SizedBox(height: 6.h),
                           Text(
                             activeCategory == 'All'
                                 ? 'There are no upcoming campus events at the moment.'
@@ -129,13 +130,13 @@ class EventsHomeScreen extends ConsumerWidget {
                     },
                     color: AppColors.primary,
                     child: ListView.separated(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 8,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20.w,
+                        vertical: 8.h,
                       ),
                       itemCount: items.length,
                       separatorBuilder: (context, index) =>
-                          const SizedBox(height: 16),
+                          SizedBox(height: 16.h),
                       itemBuilder: (context, index) {
                         return _buildEventCard(context, items[index]);
                       },
@@ -152,7 +153,7 @@ class EventsHomeScreen extends ConsumerWidget {
 
   Widget _buildHeader(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+      padding: EdgeInsets.fromLTRB(20, 16, 20, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -160,18 +161,18 @@ class EventsHomeScreen extends ConsumerWidget {
             children: [
               IconButton(
                 onPressed: () => context.pop(),
-                icon: const Icon(
+                icon: Icon(
                   LucideIcons.arrowLeft,
                   color: AppColors.onSurface,
                 ),
                 style: IconButton.styleFrom(
                   backgroundColor: AppColors.surfaceContainerLowest,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                 ),
               ),
-              const SizedBox(width: 12),
+              SizedBox(width: 12.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,7 +195,7 @@ class EventsHomeScreen extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16.h),
           // Search Bar
           TextField(
             onChanged: (val) =>
@@ -204,31 +205,31 @@ class EventsHomeScreen extends ConsumerWidget {
               hintStyle: AppTypography.bodyMedium.copyWith(
                 color: AppColors.textSecondary,
               ),
-              prefixIcon: const Icon(
+              prefixIcon: Icon(
                 LucideIcons.search,
                 size: 20,
                 color: AppColors.textSecondary,
               ),
               filled: true,
               fillColor: AppColors.surfaceContainerLowest,
-              contentPadding: const EdgeInsets.symmetric(vertical: 14),
+              contentPadding: EdgeInsets.symmetric(vertical: 14.h),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
                 borderSide: BorderSide(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16.r),
                 borderSide: BorderSide(
                   color: AppColors.outlineVariant.withValues(alpha: 0.3),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(
+                borderRadius: BorderRadius.circular(16.r),
+                borderSide: BorderSide(
                   color: AppColors.primary,
-                  width: 1.5,
+                  width: 1.5.w,
                 ),
               ),
             ),
@@ -240,12 +241,12 @@ class EventsHomeScreen extends ConsumerWidget {
 
   Widget _buildCategorySelector(WidgetRef ref, String activeCategory) {
     return SizedBox(
-      height: 46,
+      height: 46.h,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         itemCount: _categories.length,
-        separatorBuilder: (context, index) => const SizedBox(width: 8),
+        separatorBuilder: (context, index) => SizedBox(width: 8.w),
         itemBuilder: (context, index) {
           final cat = _categories[index];
           final isSelected = cat == activeCategory;
@@ -266,7 +267,7 @@ class EventsHomeScreen extends ConsumerWidget {
             selectedColor: AppColors.primary,
             backgroundColor: AppColors.surfaceContainerLowest,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               side: BorderSide(
                 color: isSelected
                     ? AppColors.primary
@@ -295,27 +296,27 @@ class EventsHomeScreen extends ConsumerWidget {
     IconData categoryIcon = LucideIcons.calendar;
     switch (event.type.toLowerCase()) {
       case 'hackathon':
-        categoryColor = const Color(0xFF8B5CF6);
+        categoryColor = Color(0xFF8B5CF6);
         categoryIcon = LucideIcons.code2;
         break;
       case 'workshop':
-        categoryColor = const Color(0xFF06B6D4);
+        categoryColor = Color(0xFF06B6D4);
         categoryIcon = LucideIcons.wrench;
         break;
       case 'cultural event':
-        categoryColor = const Color(0xFFEC4899);
+        categoryColor = Color(0xFFEC4899);
         categoryIcon = LucideIcons.music;
         break;
       case 'symposium':
-        categoryColor = const Color(0xFF3B82F6);
+        categoryColor = Color(0xFF3B82F6);
         categoryIcon = LucideIcons.presentation;
         break;
       case 'sports event':
-        categoryColor = const Color(0xFF10B981);
+        categoryColor = Color(0xFF10B981);
         categoryIcon = LucideIcons.trophy;
         break;
       case 'club event':
-        categoryColor = const Color(0xFFF59E0B);
+        categoryColor = Color(0xFFF59E0B);
         categoryIcon = LucideIcons.users;
         break;
     }
@@ -324,11 +325,11 @@ class EventsHomeScreen extends ConsumerWidget {
       onTap: () {
         context.push('/events/detail', extra: event);
       },
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(20.r),
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(20.r),
           border: Border.all(
             color: isRegistered
                 ? AppColors.primary.withValues(alpha: 0.5)
@@ -339,7 +340,7 @@ class EventsHomeScreen extends ConsumerWidget {
             BoxShadow(
               color: Colors.black.withValues(alpha: 0.03),
               blurRadius: 12,
-              offset: const Offset(0, 4),
+              offset: Offset(0, 4),
             ),
           ],
         ),
@@ -349,7 +350,7 @@ class EventsHomeScreen extends ConsumerWidget {
           children: [
             // Banner Top Area
             Container(
-              height: 110,
+              height: 110.h,
               width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -365,16 +366,16 @@ class EventsHomeScreen extends ConsumerWidget {
                 children: [
                   // Type Badge
                   Positioned(
-                    top: 12,
-                    left: 14,
+                    top: 12.h,
+                    left: 14.w,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 5,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 10.w,
+                        vertical: 5.h,
                       ),
                       decoration: BoxDecoration(
                         color: categoryColor.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: categoryColor.withValues(alpha: 0.4),
                         ),
@@ -383,7 +384,7 @@ class EventsHomeScreen extends ConsumerWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(categoryIcon, size: 14, color: categoryColor),
-                          const SizedBox(width: 6),
+                          SizedBox(width: 6.w),
                           Text(
                             event.type.toUpperCase(),
                             style: AppTypography.labelSmall.copyWith(
@@ -398,27 +399,27 @@ class EventsHomeScreen extends ConsumerWidget {
                   ),
                   // Registration Badge or Status
                   Positioned(
-                    top: 12,
-                    right: 14,
+                    top: 12.h,
+                    right: 14.w,
                     child: isRegistered
                         ? Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10,
-                              vertical: 5,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 10.w,
+                              vertical: 5.h,
                             ),
                             decoration: BoxDecoration(
                               color: AppColors.primary,
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(20.r),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                const Icon(
+                                Icon(
                                   LucideIcons.checkCircle2,
                                   size: 14,
                                   color: AppColors.onPrimary,
                                 ),
-                                const SizedBox(width: 4),
+                                SizedBox(width: 4.w),
                                 Text(
                                   'REGISTERED',
                                   style: AppTypography.labelSmall.copyWith(
@@ -430,15 +431,15 @@ class EventsHomeScreen extends ConsumerWidget {
                             ),
                           )
                         : Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                              vertical: 4,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 8.w,
+                              vertical: 4.h,
                             ),
                             decoration: BoxDecoration(
                               color: isOpen
                                   ? AppColors.success.withValues(alpha: 0.15)
                                   : AppColors.error.withValues(alpha: 0.15),
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(20.r),
                             ),
                             child: Text(
                               isOpen ? 'REGISTRATION OPEN' : 'CLOSED',
@@ -447,24 +448,24 @@ class EventsHomeScreen extends ConsumerWidget {
                                     ? AppColors.success
                                     : AppColors.error,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 10,
+                                fontSize: 10.sp,
                               ),
                             ),
                           ),
                   ),
                   // Organizer Label at Bottom
                   Positioned(
-                    bottom: 10,
-                    left: 14,
-                    right: 14,
+                    bottom: 10.h,
+                    left: 14.w,
+                    right: 14.w,
                     child: Row(
                       children: [
-                        const Icon(
+                        Icon(
                           LucideIcons.userCheck,
                           size: 14,
                           color: AppColors.textSecondary,
                         ),
-                        const SizedBox(width: 6),
+                        SizedBox(width: 6.w),
                         Expanded(
                           child: Text(
                             event.organizer,
@@ -484,7 +485,7 @@ class EventsHomeScreen extends ConsumerWidget {
             ),
             // Content Info Area
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -497,15 +498,15 @@ class EventsHomeScreen extends ConsumerWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         LucideIcons.calendar,
                         size: 15,
                         color: AppColors.primary,
                       ),
-                      const SizedBox(width: 6),
+                      SizedBox(width: 6.w),
                       Expanded(
                         child: Text(
                           '${event.date} • ${event.startTime} - ${event.endTime}',
@@ -519,15 +520,15 @@ class EventsHomeScreen extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 6),
+                  SizedBox(height: 6.h),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         LucideIcons.mapPin,
                         size: 15,
                         color: AppColors.textSecondary,
                       ),
-                      const SizedBox(width: 6),
+                      SizedBox(width: 6.w),
                       Expanded(
                         child: Text(
                           event.venue,
@@ -540,24 +541,24 @@ class EventsHomeScreen extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 14),
+                  SizedBox(height: 14.h),
                   Divider(
                     color: AppColors.outlineVariant.withValues(alpha: 0.3),
-                    height: 1,
+                    height: 1.h,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: Row(
                           children: [
-                            const Icon(
+                            Icon(
                               LucideIcons.users,
                               size: 15,
                               color: AppColors.textSecondary,
                             ),
-                            const SizedBox(width: 6),
+                            SizedBox(width: 6.w),
                             Flexible(
                               child: Text(
                                 '${event.participantCount}/${event.registrationSettings.maxParticipants} Registered',
@@ -572,7 +573,7 @@ class EventsHomeScreen extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8.w),
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -583,8 +584,8 @@ class EventsHomeScreen extends ConsumerWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(width: 4),
-                          const Icon(
+                          SizedBox(width: 4.w),
+                          Icon(
                             LucideIcons.chevronRight,
                             size: 16,
                             color: AppColors.primary,

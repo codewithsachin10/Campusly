@@ -79,7 +79,7 @@ class AppColors {
     String? subjectCode, {
     bool isBreak = false,
   }) {
-    if (isBreak) return const Color(0xFF8D6E63);
+    if (isBreak) return Color(0xFF8D6E63);
     if (subjectCode == null) return primary;
     
     // If the subject code is actually a hex color code (from custom timetables)
@@ -94,19 +94,19 @@ class AppColors {
     
     switch (subjectCode.toUpperCase()) {
       case 'CS23333':
-        return const Color(0xFF00E5FF); // Bright Cyan / Sky Blue
+        return Color(0xFF00E5FF); // Bright Cyan / Sky Blue
       case 'CB23333':
-        return const Color(0xFFFFB300); // Vibrant Amber / Gold
+        return Color(0xFFFFB300); // Vibrant Amber / Gold
       case 'CB23311':
-        return const Color(0xFFFF9800); // Warm Orange
+        return Color(0xFFFF9800); // Warm Orange
       case 'CB23332':
-        return const Color(0xFFAB47BC); // Purple / Lavender
+        return Color(0xFFAB47BC); // Purple / Lavender
       case 'CB23331':
-        return const Color(0xFFEF5350); // Rose / Red
+        return Color(0xFFEF5350); // Rose / Red
       case 'MC23313':
-        return const Color(0xFF26A69A); // Teal / Green
+        return Color(0xFF26A69A); // Teal / Green
       case 'CB23312':
-        return const Color(0xFF42A5F5); // Deep Blue / Indigo
+        return Color(0xFF42A5F5); // Deep Blue / Indigo
       default:
         return primary;
     }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -24,7 +25,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
     final name = _nameController.text.trim();
     if (name.isEmpty || _selectedUserIds.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
+        SnackBar(
           content: Text('Please enter a name and select at least 1 member'),
         ),
       );
@@ -67,21 +68,21 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text(
+        title: Text(
           'Create Group',
           style: TextStyle(color: AppColors.primary),
         ),
-        leading: const BackButton(color: AppColors.primary),
+        leading: BackButton(color: AppColors.primary),
         actions: [
           TextButton(
             onPressed: _isLoading ? null : _createGroup,
             child: _isLoading
-                ? const SizedBox(
-                    width: 20,
-                    height: 20,
+                ? SizedBox(
+                    width: 20.w,
+                    height: 20.h,
                     child: CircularProgressIndicator(strokeWidth: 2),
                   )
-                : const Text(
+                : Text(
                     'Create',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -91,18 +92,18 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0.w),
             child: TextField(
               controller: _nameController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Group Name',
                 border: OutlineInputBorder(),
               ),
             ),
           ),
-          const Divider(),
+          Divider(),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0.w),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -121,7 +122,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
                     .toList();
 
                 if (friends.isEmpty) {
-                  return const Center(
+                  return Center(
                     child: Text('You need connections to create a group.'),
                   );
                 }
@@ -156,7 +157,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
                   },
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (e, st) =>
                   Center(child: Text('Error loading connections: $e')),
             ),

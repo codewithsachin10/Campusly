@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -38,7 +39,7 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(LucideIcons.bell, color: AppColors.primary),
+            icon: Icon(LucideIcons.bell, color: AppColors.primary),
             onPressed: () {},
           ),
         ],
@@ -47,26 +48,26 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+            padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('My Support Tickets', style: AppTypography.headlineMedium),
-                const SizedBox(height: 8),
+                SizedBox(height: 8.h),
                 Text(
                   'Track and manage your requests.',
                   style: AppTypography.bodyLarge.copyWith(color: AppColors.textSecondary),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16.r),
                     boxShadow: [
                       BoxShadow(
                         color: AppColors.primary.withOpacity(0.1),
                         blurRadius: 20,
-                        offset: const Offset(0, 10),
+                        offset: Offset(0, 10),
                       ),
                     ],
                   ),
@@ -78,15 +79,15 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                       hintStyle: TextStyle(color: AppColors.primary.withOpacity(0.5)),
                       prefixIcon: Icon(LucideIcons.search, color: AppColors.primary.withOpacity(0.5)),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         borderSide: BorderSide(color: AppColors.primary.withOpacity(0.2)),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         borderSide: BorderSide(color: AppColors.primary.withOpacity(0.2)),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                         borderSide: BorderSide(color: AppColors.primary),
                       ),
                     ),
@@ -105,11 +106,11 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                 }).toList();
 
                 if (filtered.isEmpty) {
-                  return const Center(child: Text('No tickets found.'));
+                  return Center(child: Text('No tickets found.'));
                 }
 
                 return ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.h),
                   itemCount: filtered.length,
                   itemBuilder: (context, index) {
                     final ticket = filtered[index];
@@ -123,11 +124,11 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                         );
                       },
                       child: Container(
-                        margin: const EdgeInsets.only(bottom: 16),
-                        padding: const EdgeInsets.all(20),
+                        margin: EdgeInsets.only(bottom: 16.h),
+                        padding: EdgeInsets.all(20.w),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                           boxShadow: [
                             BoxShadow(
                               color: ticket.status == 'Resolved' || ticket.status == 'Closed'
@@ -136,7 +137,7 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                                       ? Colors.orange.withOpacity(0.05)
                                       : AppColors.primary.withOpacity(0.05),
                               blurRadius: 20,
-                              offset: const Offset(0, 10),
+                              offset: Offset(0, 10),
                             ),
                           ],
                         ),
@@ -147,31 +148,31 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                  padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
                                   decoration: BoxDecoration(
                                     color: AppColors.primary.withOpacity(0.1),
-                                    borderRadius: BorderRadius.circular(8),
+                                    borderRadius: BorderRadius.circular(8.r),
                                   ),
                                   child: Text(
                                     ticket.ticketNumber.length > 7 ? ticket.ticketNumber.substring(0, 7) : ticket.ticketNumber,
                                     style: TextStyle(
                                       color: AppColors.primary,
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 12,
+                                      fontSize: 12.sp,
                                     ),
                                   ),
                                 ),
                                 TicketStatusBadge(status: ticket.status),
                               ],
                             ),
-                            const SizedBox(height: 16),
+                            SizedBox(height: 16.h),
                             Text(
                               ticket.subject,
                               style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            const SizedBox(height: 8),
+                            SizedBox(height: 8.h),
                             Text(
                               'Last updated: ${DateFormat('MMM d, y, h:mm a').format(ticket.updatedAt)}',
                               style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
@@ -183,7 +184,7 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                   },
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (e, st) => Center(child: Text('Error loading tickets: $e')),
             ),
           ),

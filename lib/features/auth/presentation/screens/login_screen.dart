@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -62,24 +63,24 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0.w),
             child: Container(
               width: double.infinity,
-              constraints: const BoxConstraints(maxWidth: 480),
-              padding: const EdgeInsets.all(32.0),
+              constraints: BoxConstraints(maxWidth: 480),
+              padding: EdgeInsets.all(32.0.w),
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.primaryContainer.withValues(alpha: 0.08),
                     blurRadius: 24,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
-                  width: 1,
+                  width: 1.w,
                 ),
               ),
               child: Form(
@@ -93,12 +94,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const CampuslyLogo(size: 80, borderRadius: 20),
-                          const SizedBox(width: 16),
+                          CampuslyLogo(size: 80, borderRadius: 20),
+                          SizedBox(width: 16.w),
                           Text(
                             'Campusly',
                             style: GoogleFonts.plusJakartaSans(
-                              fontSize: 42,
+                              fontSize: 42.sp,
                               fontWeight: FontWeight.w800,
                               letterSpacing: -1.5,
                               color: AppColors.primary,
@@ -107,14 +108,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                     // Header Title & Subtitle
                     Text(
                       'Welcome back 👋',
                       style: AppTypography.textTheme.headlineLarge,
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 6),
+                    SizedBox(height: 6.h),
                     Text(
                       "Let's get your day organized.",
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
@@ -122,7 +123,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     // Email Field
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,13 +135,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             letterSpacing: 1.2,
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         TextFormField(
                           controller: _emailController,
                           keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
                           style: AppTypography.textTheme.bodyMedium,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             hintText: 'Enter your email',
                             prefixIcon: Icon(
                               Icons.mail_outline_rounded,
@@ -159,7 +160,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     // Password Field
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +179,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8.w),
                             InkWell(
                               onTap: () => context.push('/forgot-password'),
                               child: Text(
@@ -189,7 +190,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: 8.h),
                         TextFormField(
                           controller: _passwordController,
                           obscureText: _obscurePassword,
@@ -198,7 +199,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           style: AppTypography.textTheme.bodyMedium,
                           decoration: InputDecoration(
                             hintText: 'Enter your password',
-                            prefixIcon: const Icon(
+                            prefixIcon: Icon(
                               Icons.lock_outline_rounded,
                               size: 20,
                             ),
@@ -226,34 +227,34 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 28),
+                    SizedBox(height: 28.h),
                     // Log In Button
                     ThreeDPushableButton(
                       text: 'Log In',
                       isLoading: isLoading,
                       onPressed: isLoading ? null : _handleLogin,
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                     // Divider
                     Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                           child: Divider(color: AppColors.outlineVariant),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                           child: Text(
                             'OR CONTINUE WITH',
                             style: AppTypography.textTheme.labelMedium
-                                ?.copyWith(fontSize: 11, letterSpacing: 1.0),
+                                ?.copyWith(fontSize: 11.sp, letterSpacing: 1.0),
                           ),
                         ),
-                        const Expanded(
+                        Expanded(
                           child: Divider(color: AppColors.outlineVariant),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 24),
+                    SizedBox(height: 24.h),
                     // Social Google Auth Button
                     SizedBox(
                       width: double.infinity,
@@ -262,13 +263,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const GoogleLogo(size: 22),
-                            const SizedBox(width: 10),
+                            GoogleLogo(size: 22),
+                            SizedBox(width: 10.w),
                             Flexible(
                               child: Text(
                                 'Continue with Google',
                                 style: AppTypography.textTheme.labelLarge
-                                    ?.copyWith(fontSize: 15),
+                                    ?.copyWith(fontSize: 15.sp),
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
@@ -276,7 +277,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 32),
+                    SizedBox(height: 32.h),
                     // Footer Sign Up Link
                     Wrap(
                       alignment: WrapAlignment.center,
@@ -294,7 +295,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             'Create account',
                             style: AppTypography.textTheme.labelLarge?.copyWith(
                               color: AppColors.primary,
-                              fontSize: 16,
+                              fontSize: 16.sp,
                             ),
                           ),
                         ),

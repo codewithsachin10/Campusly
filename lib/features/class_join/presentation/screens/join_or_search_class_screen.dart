@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -27,12 +28,12 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
         title: Row(
           children: [
             IconButton(
-              icon: const Icon(Icons.menu_rounded, color: AppColors.primary),
+              icon: Icon(Icons.menu_rounded, color: AppColors.primary),
               onPressed: () {
                 // Future navigation drawer
               },
             ),
-            const SizedBox(width: 4),
+            SizedBox(width: 4.w),
             Text(
               'Campusly',
               style: AppTypography.textTheme.headlineMedium?.copyWith(
@@ -44,15 +45,15 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20.0),
+            padding: EdgeInsets.only(right: 20.0.w),
             child: Container(
-              width: 40,
-              height: 40,
+              width: 40.w,
+              height: 40.h,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: AppColors.primary.withValues(alpha: 0.1),
-                  width: 2,
+                  width: 2.w,
                 ),
                 color: AppColors.primaryContainer.withValues(alpha: 0.2),
               ),
@@ -75,12 +76,12 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 24.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0.w,
+              vertical: 24.0.h,
             ),
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 800),
+              constraints: BoxConstraints(maxWidth: 800),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -89,13 +90,13 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                     'Find your class',
                     textAlign: TextAlign.center,
                     style: AppTypography.textTheme.displayLarge?.copyWith(
-                      fontSize: 40,
+                      fontSize: 40.sp,
                       color: AppColors.onSurface,
                     ),
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12.h),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                     child: Text(
                       'Connect with your peers and sync your academic schedule in just a few taps.',
                       textAlign: TextAlign.center,
@@ -104,7 +105,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32.h),
 
                   // Choice Grid (LayoutBuilder for Responsive 1 or 2 col)
                   LayoutBuilder(
@@ -117,7 +118,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                             Expanded(
                               child: _buildChoiceCard(context, isJoin: true),
                             ),
-                            const SizedBox(width: 16),
+                            SizedBox(width: 16.w),
                             Expanded(
                               child: _buildChoiceCard(context, isJoin: false),
                             ),
@@ -127,7 +128,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                         return Row(
                           children: [
                             Expanded(child: _buildChoiceCard(context, isJoin: true)),
-                            const SizedBox(width: 16),
+                            SizedBox(width: 16.w),
                             Expanded(child: _buildChoiceCard(context, isJoin: false)),
                           ],
                         );
@@ -135,25 +136,25 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                     },
                   ),
 
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32.h),
 
                   // My Timetable Section
                   _buildMyTimetableSection(context, currentClass, joinedCustomTimetablesAsync),
 
-                  const SizedBox(height: 32),
+                  SizedBox(height: 32.h),
 
                   // Secondary Navigation
                   InkWell(
                     onTap: () => context.push('/create-class'),
-                    borderRadius: BorderRadius.circular(999),
+                    borderRadius: BorderRadius.circular(999.r),
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 12,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 24.w,
+                        vertical: 12.h,
                       ),
                       decoration: BoxDecoration(
                         color: AppColors.primary.withValues(alpha: 0.06),
-                        borderRadius: BorderRadius.circular(999),
+                        borderRadius: BorderRadius.circular(999.r),
                       ),
                       child: Text(
                         "Can't find your class? Create one",
@@ -164,7 +165,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Text(
                     'Academic Year 2024 • Term 2',
                     style: AppTypography.textTheme.labelMedium?.copyWith(
@@ -196,22 +197,22 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: () => context.push(route),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          padding: const EdgeInsets.all(16),
+          duration: Duration(milliseconds: 200),
+          padding: EdgeInsets.all(16.w),
           decoration: BoxDecoration(
             color: AppColors.surfaceContainerLowest,
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(16.r),
             border: Border.all(
               color: AppColors.outlineVariant.withValues(alpha: 0.35),
-              width: 1.5,
+              width: 1.5.w,
             ),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withValues(alpha: 0.04),
                 blurRadius: 10,
-                offset: const Offset(0, 4),
+                offset: Offset(0, 4),
               ),
             ],
           ),
@@ -220,15 +221,15 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 40,
-                height: 40,
+                width: 40.w,
+                height: 40.h,
                 decoration: BoxDecoration(
                   color: iconBgColor,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Icon(icon, color: iconColor, size: 20),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               Text(
                 title,
                 style: AppTypography.textTheme.titleMedium?.copyWith(
@@ -236,12 +237,12 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   color: AppColors.onSurface,
                 ),
               ),
-              const SizedBox(height: 6),
+              SizedBox(height: 6.h),
               Text(
                 desc,
                 style: AppTypography.textTheme.bodySmall?.copyWith(
                   color: AppColors.onSurfaceVariant,
-                  height: 1.4,
+                  height: 1.4.h,
                 ),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
@@ -263,8 +264,8 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
       children: [
         Row(
           children: [
-            const Icon(Icons.class_rounded, size: 24, color: AppColors.primary),
-            const SizedBox(width: 8),
+            Icon(Icons.class_rounded, size: 24, color: AppColors.primary),
+            SizedBox(width: 8.w),
             Text(
               'My Timetables',
               style: AppTypography.textTheme.titleLarge?.copyWith(
@@ -274,13 +275,13 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             ),
           ],
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: 16.h),
         if (currentClass == null && !joinedCustomTimetablesAsync.isLoading && (joinedCustomTimetablesAsync.value?.isEmpty ?? true))
           Container(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(24.w),
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLowest,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(16.r),
               border: Border.all(color: AppColors.outlineVariant.withValues(alpha: 0.2)),
             ),
             alignment: Alignment.center,
@@ -303,16 +304,16 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             ),
           
           if (currentClass != null && (joinedCustomTimetablesAsync.value?.isNotEmpty == true))
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
 
           // Show Custom Timetables
           joinedCustomTimetablesAsync.when(
             data: (customTimetables) {
-              if (customTimetables.isEmpty) return const SizedBox.shrink();
+              if (customTimetables.isEmpty) return SizedBox.shrink();
               return Column(
                 children: customTimetables.map((ct) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 12.0),
+                    padding: EdgeInsets.only(bottom: 12.0.h),
                     child: _buildJoinedClassCard(
                       context,
                       title: ct.title,
@@ -323,7 +324,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                 }).toList(),
               );
             },
-            loading: () => const Center(child: CircularProgressIndicator(strokeWidth: 2)),
+            loading: () => Center(child: CircularProgressIndicator(strokeWidth: 2)),
             error: (err, _) => Text('Error loading custom timetables', style: TextStyle(color: AppColors.error)),
           ),
         ],
@@ -340,14 +341,14 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
   }) {
     return Material(
       color: AppColors.surfaceContainerLowest,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.r),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         child: Container(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16.w),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(16.r),
             border: Border.all(
               color: AppColors.outlineVariant.withValues(alpha: 0.25),
             ),
@@ -355,15 +356,15 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
           child: Row(
             children: [
               Container(
-                width: 48,
-                height: 48,
+                width: 48.w,
+                height: 48.h,
                 decoration: BoxDecoration(
                   color: AppColors.primaryContainer.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Icon(icon, color: AppColors.primary, size: 24),
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -378,7 +379,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     if (subtitle != null) ...[
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4.h),
                       Text(
                         subtitle,
                         style: AppTypography.textTheme.bodySmall?.copyWith(
@@ -391,8 +392,8 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
-              const Icon(
+              SizedBox(width: 8.w),
+              Icon(
                 Icons.chevron_right_rounded,
                 color: AppColors.outline,
               ),

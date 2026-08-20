@@ -1,5 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,7 +18,7 @@ class CampusMapScreen extends ConsumerStatefulWidget {
 
 class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
   final MapController _mapController = MapController();
-  final LatLng _campusCenter = const LatLng(
+  final LatLng _campusCenter = LatLng(
     13.00831,
     80.00331,
   ); // Rajalakshmi Engineering College
@@ -76,8 +77,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               locationName: 'CS Block, Seminar Hall',
               latitude: 13.00850,
               longitude: 80.00350,
-              startTime: DateTime.now().add(const Duration(hours: 2)),
-              endTime: DateTime.now().add(const Duration(hours: 24)),
+              startTime: DateTime.now().add(Duration(hours: 2)),
+              endTime: DateTime.now().add(Duration(hours: 24)),
               category: 'Tech',
             ),
             CampusEvent(
@@ -86,8 +87,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               locationName: 'Sports Ground',
               latitude: 13.00750,
               longitude: 80.00250,
-              startTime: DateTime.now().add(const Duration(hours: 5)),
-              endTime: DateTime.now().add(const Duration(hours: 7)),
+              startTime: DateTime.now().add(Duration(hours: 5)),
+              endTime: DateTime.now().add(Duration(hours: 7)),
               category: 'Sports',
             ),
           ];
@@ -119,10 +120,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
       context: context,
       backgroundColor: Colors.transparent,
       builder: (context) => Container(
-        padding: const EdgeInsets.all(24),
-        decoration: const BoxDecoration(
+        padding: EdgeInsets.all(24.w),
+        decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24.r)),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -132,20 +133,20 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               backgroundColor: profile['color'] as Color,
               child: Text(
                 name[0],
-                style: const TextStyle(fontSize: 32, color: Colors.white),
+                style: TextStyle(fontSize: 32.sp, color: Colors.white),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             Text(
               name,
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             Text(
               '📍 ${presence.location}',
-              style: const TextStyle(fontSize: 16, color: Colors.grey),
+              style: TextStyle(fontSize: 16.sp, color: Colors.grey),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -156,19 +157,19 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                       backgroundColor: AppColors.primary,
                       foregroundColor: Colors.white,
                     ),
-                    child: const Text('Message'),
+                    child: Text('Message'),
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16.w),
                 Expanded(
                   child: OutlinedButton(
                     onPressed: () {},
-                    child: const Text('View Profile'),
+                    child: Text('View Profile'),
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
           ],
         ),
       ),
@@ -203,8 +204,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
             _userProfiles[first.userId] ?? {'name': '?', 'color': Colors.grey};
         return Marker(
           point: point,
-          width: 60,
-          height: 60,
+          width: 60.w,
+          height: 60.h,
           child: GestureDetector(
             onTap: () => _moveToFriend(first),
             child: Column(
@@ -215,23 +216,23 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                   backgroundColor: profile['color'] as Color,
                   child: Text(
                     (profile['name'] as String)[0],
-                    style: const TextStyle(color: Colors.white, fontSize: 14),
+                    style: TextStyle(color: Colors.white, fontSize: 14.sp),
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 2),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 4,
-                    vertical: 2,
+                  margin: EdgeInsets.only(top: 2.h),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 4.w,
+                    vertical: 2.h,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(4),
+                    borderRadius: BorderRadius.circular(4.r),
                   ),
                   child: Text(
                     profile['name'] as String,
-                    style: const TextStyle(
-                      fontSize: 10,
+                    style: TextStyle(
+                      fontSize: 10.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -243,8 +244,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
       } else {
         return Marker(
           point: point,
-          width: 60,
-          height: 60,
+          width: 60.w,
+          height: 60.h,
           child: GestureDetector(
             onTap: () {
               // Zoom in on cluster
@@ -255,7 +256,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               backgroundColor: AppColors.primary,
               child: Text(
                 '👥 ${list.length}',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -279,8 +280,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
     }).map((event) {
       return Marker(
         point: LatLng(event.latitude, event.longitude),
-        width: 100,
-        height: 60,
+        width: 100.w,
+        height: 60.h,
         child: GestureDetector(
           onTap: () {
             _showEventCard(event);
@@ -289,8 +290,8 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                padding: const EdgeInsets.all(4),
-                decoration: const BoxDecoration(
+                padding: EdgeInsets.all(4.w),
+                decoration: BoxDecoration(
                   color: Colors.orange,
                   shape: BoxShape.circle,
                   boxShadow: [
@@ -301,22 +302,22 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                     ),
                   ],
                 ),
-                child: const Icon(Icons.event, color: Colors.white, size: 20),
+                child: Icon(Icons.event, color: Colors.white, size: 20),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 2),
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                margin: EdgeInsets.only(top: 2.h),
+                padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 2.h),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: const [
+                  borderRadius: BorderRadius.circular(8.r),
+                  boxShadow: [
                     BoxShadow(color: Colors.black12, blurRadius: 2),
                   ],
                 ),
                 child: Text(
                   event.title,
-                  style: const TextStyle(
-                    fontSize: 10,
+                  style: TextStyle(
+                    fontSize: 10.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.orange,
                   ),
@@ -336,10 +337,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
       context: context,
       backgroundColor: Colors.transparent,
       builder: (context) => Container(
-        padding: const EdgeInsets.all(24),
-        decoration: const BoxDecoration(
+        padding: EdgeInsets.all(24.w),
+        decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(24.r)),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -348,33 +349,33 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
             Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(12.w),
                   decoration: BoxDecoration(
                     color: Colors.orange.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16.r),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.event,
                     color: Colors.orange,
                     size: 32,
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16.w),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         event.title,
-                        style: const TextStyle(
-                          fontSize: 20,
+                        style: TextStyle(
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4.h),
                       Text(
                         event.category ?? 'Event',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.orange,
                           fontWeight: FontWeight.w600,
                         ),
@@ -384,40 +385,40 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             Row(
               children: [
-                const Icon(Icons.location_on, color: Colors.grey, size: 20),
-                const SizedBox(width: 8),
+                Icon(Icons.location_on, color: Colors.grey, size: 20),
+                SizedBox(width: 8.w),
                 Expanded(
                   child: Text(
                     event.locationName,
-                    style: const TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 16.sp),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8.h),
             Row(
               children: [
-                const Icon(Icons.access_time, color: Colors.grey, size: 20),
-                const SizedBox(width: 8),
+                Icon(Icons.access_time, color: Colors.grey, size: 20),
+                SizedBox(width: 8.w),
                 Text(
                   '${event.startTime.hour}:${event.startTime.minute.toString().padLeft(2, '0')} - ${event.endTime.hour}:${event.endTime.minute.toString().padLeft(2, '0')}',
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 16.sp),
                 ),
               ],
             ),
             if (event.description != null) ...[
-              const SizedBox(height: 16),
+              SizedBox(height: 16.h),
               Text(
                 event.description!,
-                style: const TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16.sp, color: Colors.grey),
               ),
             ],
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -425,18 +426,18 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  padding: EdgeInsets.symmetric(vertical: 16.h),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16.r),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'View Event Details',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
           ],
         ),
       ),
@@ -474,25 +475,25 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+                  padding: EdgeInsets.only(top: 16.h, left: 16.w, right: 16.w),
                   child: CampusSearchBar(
                     onSearch: (query) {
                       setState(() => _searchQuery = query);
                     },
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 SizedBox(
-                  height: 40,
+                  height: 40.h,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     itemCount: _filters.length,
                     itemBuilder: (context, index) {
                       final filter = _filters[index];
                       final isSelected = filter == _selectedFilter;
                       return Padding(
-                        padding: const EdgeInsets.only(right: 8),
+                        padding: EdgeInsets.only(right: 8.w),
                         child: FilterChip(
                           selected: isSelected,
                           label: Text(
@@ -521,19 +522,19 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
 
           // Top Right Action Buttons
           Positioned(
-            top: 100,
-            right: 16,
+            top: 100.h,
+            right: 16.w,
             child: Column(
               children: [
                 InkWell(
                   onTap: () {},
                   child: Container(
-                    width: 48,
-                    height: 48,
+                    width: 48.w,
+                    height: 48.h,
                     decoration: BoxDecoration(
                       color: Colors.white.withValues(alpha: 0.95),
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: const [
+                      borderRadius: BorderRadius.circular(16.r),
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 8,
@@ -541,24 +542,24 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.layers_outlined,
                       color: Colors.black87,
                     ),
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 InkWell(
                   onTap: () {
                     _mapController.move(_campusCenter, 16.5);
                   },
                   child: Container(
-                    width: 48,
-                    height: 48,
+                    width: 48.w,
+                    height: 48.h,
                     decoration: BoxDecoration(
                       color: AppColors.primary,
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: const [
+                      borderRadius: BorderRadius.circular(16.r),
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 8,
@@ -566,7 +567,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                         ),
                       ],
                     ),
-                    child: const Icon(Icons.my_location, color: Colors.white),
+                    child: Icon(Icons.my_location, color: Colors.white),
                   ),
                 ),
               ],
@@ -574,10 +575,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
           ),
 
           if (_isLoading)
-            const Center(
+            Center(
               child: Card(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0.w),
                   child: CircularProgressIndicator(),
                 ),
               ),
@@ -585,9 +586,9 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
 
           // Bottom Info Area
           Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
+            bottom: 0.h,
+            left: 0.w,
+            right: 0.w,
             child: SafeArea(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -595,16 +596,16 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                 children: [
                   // Next Class Floating Card
                   Container(
-                    margin: const EdgeInsets.only(
-                      left: 16,
-                      right: 16,
-                      bottom: 16,
+                    margin: EdgeInsets.only(
+                      left: 16.w,
+                      right: 16.w,
+                      bottom: 16.h,
                     ),
-                    padding: const EdgeInsets.all(12),
+                    padding: EdgeInsets.all(12.w),
                     decoration: BoxDecoration(
                       color: AppColors.primary.withValues(alpha: 0.95),
-                      borderRadius: BorderRadius.circular(16),
-                      boxShadow: const [
+                      borderRadius: BorderRadius.circular(16.r),
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black26,
                           blurRadius: 10,
@@ -615,15 +616,15 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                     child: Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(8),
+                          padding: EdgeInsets.all(8.w),
                           decoration: BoxDecoration(
                             color: Colors.white.withValues(alpha: 0.2),
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.r),
                           ),
-                          child: const Icon(Icons.class_, color: Colors.white),
+                          child: Icon(Icons.class_, color: Colors.white),
                         ),
-                        const SizedBox(width: 12),
-                        const Expanded(
+                        SizedBox(width: 12.w),
+                        Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -631,7 +632,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                 'NEXT CLASS IN 15 MINS',
                                 style: TextStyle(
                                   color: Colors.white70,
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0.5,
                                 ),
@@ -641,7 +642,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                  fontSize: 16.sp,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
@@ -650,7 +651,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                 'CS Block • Lab 3',
                                 style: TextStyle(
                                   color: Colors.white70,
-                                  fontSize: 13,
+                                  fontSize: 13.sp,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
@@ -664,10 +665,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                             backgroundColor: Colors.white,
                             foregroundColor: AppColors.primary,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.r),
                             ),
                           ),
-                          child: const Text(
+                          child: Text(
                             'Directions',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
@@ -678,12 +679,12 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
 
                   // "YOU ARE AT" Card
                   Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 16),
-                    padding: const EdgeInsets.all(12),
+                    margin: EdgeInsets.symmetric(horizontal: 16.w),
+                    padding: EdgeInsets.all(12.w),
                     decoration: BoxDecoration(
                       color: Colors.white.withValues(alpha: 0.95),
-                      borderRadius: BorderRadius.circular(24),
-                      boxShadow: const [
+                      borderRadius: BorderRadius.circular(24.r),
+                      boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 15,
@@ -694,19 +695,19 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                     child: Row(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.r),
                           child: Container(
-                            width: 60,
-                            height: 60,
+                            width: 60.w,
+                            height: 60.h,
                             color: Colors.blue[50],
-                            child: const Icon(
+                            child: Icon(
                               Icons.business,
                               color: AppColors.primary,
                               size: 32,
                             ),
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -714,39 +715,39 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                               Row(
                                 children: [
                                   Container(
-                                    width: 8,
-                                    height: 8,
-                                    decoration: const BoxDecoration(
+                                    width: 8.w,
+                                    height: 8.h,
+                                    decoration: BoxDecoration(
                                       color: AppColors.primary,
                                       shape: BoxShape.circle,
                                     ),
                                   ),
-                                  const SizedBox(width: 6),
-                                  const Text(
+                                  SizedBox(width: 6.w),
+                                  Text(
                                     'YOU ARE AT',
                                     style: TextStyle(
                                       color: AppColors.primary,
-                                      fontSize: 11,
+                                      fontSize: 11.sp,
                                       fontWeight: FontWeight.bold,
                                       letterSpacing: 0.5,
                                     ),
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 4),
-                              const Text(
+                              SizedBox(height: 4.h),
+                              Text(
                                 'Main Science Libr...',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                  fontSize: 16.sp,
                                   color: Colors.black87,
                                 ),
                               ),
-                              const SizedBox(height: 2),
+                              SizedBox(height: 2.h),
                               Text(
                                 'Level 1 • Deep Focus Zone',
                                 style: TextStyle(
-                                  fontSize: 12,
+                                  fontSize: 12.sp,
                                   color: Colors.grey[600],
                                 ),
                               ),
@@ -754,13 +755,13 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                           ),
                         ),
                         Container(
-                          width: 44,
-                          height: 44,
+                          width: 44.w,
+                          height: 44.h,
                           decoration: BoxDecoration(
                             color: AppColors.primary,
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14.r),
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.directions,
                             color: Colors.white,
                           ),
@@ -771,19 +772,19 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
 
                   // "Friends Nearby" label
                   Transform.translate(
-                    offset: const Offset(32, -12),
+                    offset: Offset(32, -12),
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 6,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 16.w,
+                        vertical: 6.h,
                       ),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                         border: Border.all(
                           color: AppColors.primary.withValues(alpha: 0.2),
                         ),
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             color: Colors.black12,
                             blurRadius: 4,
@@ -791,12 +792,12 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                           ),
                         ],
                       ),
-                      child: const Text(
+                      child: Text(
                         'Friends Nearby',
                         style: TextStyle(
                           color: AppColors.primary,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13,
+                          fontSize: 13.sp,
                         ),
                       ),
                     ),
@@ -805,10 +806,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                   // Friends List
                   if (_presences.isNotEmpty) ...[
                     SizedBox(
-                      height: 100,
+                      height: 100.h,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        padding: EdgeInsets.symmetric(horizontal: 16.w),
                         itemCount: _presences.length,
                         itemBuilder: (context, index) {
                           final p = _presences[index];
@@ -819,19 +820,19 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                           final color = profile['color'] as Color;
 
                           return Container(
-                            margin: const EdgeInsets.only(right: 16),
-                            width: 70,
+                            margin: EdgeInsets.only(right: 16.w),
+                            width: 70.w,
                             child: Column(
                               children: [
                                 Stack(
                                   children: [
                                     Container(
-                                      padding: const EdgeInsets.all(3),
+                                      padding: EdgeInsets.all(3.w),
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         border: Border.all(
                                           color: AppColors.primary,
-                                          width: 2,
+                                          width: 2.w,
                                         ),
                                       ),
                                       child: CircleAvatar(
@@ -841,20 +842,20 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                           name.isNotEmpty
                                               ? name[0].toUpperCase()
                                               : '?',
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 24,
+                                            fontSize: 24.sp,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
                                     ),
                                     Positioned(
-                                      right: 0,
-                                      bottom: 0,
+                                      right: 0.w,
+                                      bottom: 0.h,
                                       child: Container(
-                                        padding: const EdgeInsets.all(4),
-                                        decoration: const BoxDecoration(
+                                        padding: EdgeInsets.all(4.w),
+                                        decoration: BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle,
                                           boxShadow: [
@@ -864,7 +865,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                             ),
                                           ],
                                         ),
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.coffee,
                                           size: 12,
                                           color: Colors.brown,
@@ -873,12 +874,12 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 8),
+                                SizedBox(height: 8.h),
                                 Text(
                                   name,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 13,
+                                    fontSize: 13.sp,
                                   ),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -890,10 +891,10 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                       ),
                     ),
                   ] else ...[
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 32,
-                        vertical: 8,
+                        horizontal: 32.w,
+                        vertical: 8.h,
                       ),
                       child: Text(
                         'No friends nearby right now.',
@@ -901,7 +902,7 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
                       ),
                     ),
                   ],
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                 ],
               ),
             ),

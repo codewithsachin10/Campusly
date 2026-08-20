@@ -25,7 +25,7 @@ class _GoogleLogoPainter extends CustomPainter {
     final Paint paint = Paint()..style = PaintingStyle.fill;
 
     // Blue (#4285F4)
-    paint.color = const Color(0xFF4285F4);
+    paint.color = Color(0xFF4285F4);
     final Path bluePath = Path()
       ..moveTo(23.49, 12.27)
       ..cubicTo(23.49, 11.48, 23.42, 10.73, 23.3, 10.0)
@@ -40,7 +40,7 @@ class _GoogleLogoPainter extends CustomPainter {
     canvas.drawPath(bluePath, paint);
 
     // Green (#34A853)
-    paint.color = const Color(0xFF34A853);
+    paint.color = Color(0xFF34A853);
     final Path greenPath = Path()
       ..moveTo(12.0, 24.0)
       ..cubicTo(15.24, 24.0, 17.96, 22.92, 19.94, 21.09)
@@ -54,7 +54,7 @@ class _GoogleLogoPainter extends CustomPainter {
     canvas.drawPath(greenPath, paint);
 
     // Yellow (#FBBC05)
-    paint.color = const Color(0xFFFBBC05);
+    paint.color = Color(0xFFFBBC05);
     final Path yellowPath = Path()
       ..moveTo(5.27, 14.29)
       ..cubicTo(5.02, 13.57, 4.89, 12.8, 4.89, 12.0)
@@ -68,7 +68,7 @@ class _GoogleLogoPainter extends CustomPainter {
     canvas.drawPath(yellowPath, paint);
 
     // Red (#EA4335)
-    paint.color = const Color(0xFFEA4335);
+    paint.color = Color(0xFFEA4335);
     final Path redPath = Path()
       ..moveTo(12.0, 4.75)
       ..cubicTo(13.77, 4.75, 15.35, 5.36, 16.6, 6.55)

@@ -63,6 +63,7 @@ dependencies:
   crypto: ^3.0.5
   open_filex: ^4.5.0
   logger: ^2.7.0
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +80,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+  supabase: any
 flutter:
 
   # The following line ensures that the Material Icons font is

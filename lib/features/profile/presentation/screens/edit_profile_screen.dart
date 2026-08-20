@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
@@ -81,23 +82,23 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Edit Social Profile',
           style: TextStyle(color: AppColors.primary),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const BackButton(color: AppColors.primary),
+        leading: BackButton(color: AppColors.primary),
         actions: [
           TextButton(
             onPressed: _isLoading ? null : _save,
             child: _isLoading
-                ? const SizedBox(
-                    width: 20,
-                    height: 20,
+                ? SizedBox(
+                    width: 20.w,
+                    height: 20.h,
                     child: CircularProgressIndicator(strokeWidth: 2),
                   )
-                : const Text(
+                : Text(
                     'Save',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -105,44 +106,44 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.w),
         children: [
-          const Text(
+          Text(
             'Skills (comma separated)',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           TextField(
             controller: _skillsController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               hintText: 'e.g. Flutter, Dart, UI/UX',
               border: OutlineInputBorder(),
             ),
           ),
-          const SizedBox(height: 24),
-          const Text(
+          SizedBox(height: 24.h),
+          Text(
             'Interests (comma separated)',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           TextField(
             controller: _interestsController,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               hintText: 'e.g. Hackathons, Coding, Music',
               border: OutlineInputBorder(),
             ),
           ),
-          const SizedBox(height: 24),
-          const Text(
+          SizedBox(height: 24.h),
+          Text(
             'Profile Visibility',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           DropdownButtonFormField<String>(
             initialValue: _privacySetting,
             isExpanded: true,
-            decoration: const InputDecoration(border: OutlineInputBorder()),
-            items: const [
+            decoration: InputDecoration(border: OutlineInputBorder()),
+            items: [
               DropdownMenuItem(
                 value: 'public',
                 child: Text('Public (Everyone in college)'),
@@ -157,17 +158,17 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
               if (val != null) setState(() => _privacySetting = val);
             },
           ),
-          const SizedBox(height: 24),
-          const Text(
+          SizedBox(height: 24.h),
+          Text(
             'Default Location Visibility',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8.h),
           DropdownButtonFormField<String>(
             initialValue: _locationVisibility,
             isExpanded: true,
-            decoration: const InputDecoration(border: OutlineInputBorder()),
-            items: const [
+            decoration: InputDecoration(border: OutlineInputBorder()),
+            items: [
               DropdownMenuItem(
                 value: 'Everyone',
                 child: Text('Everyone in college'),

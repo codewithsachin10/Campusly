@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../domain/models/campus_location.dart';
 
 class LocationBottomSheet extends StatelessWidget {
@@ -14,10 +15,10 @@ class LocationBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
-      decoration: const BoxDecoration(
+      padding: EdgeInsets.all(24.w),
+      decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24.r)),
       ),
       child: SingleChildScrollView(
         child: Column(
@@ -30,24 +31,24 @@ class LocationBottomSheet extends StatelessWidget {
                 Expanded(
                   child: Text(
                     location.name,
-                    style: const TextStyle(
-                      fontSize: 24,
+                    style: TextStyle(
+                      fontSize: 24.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 12.w,
+                    vertical: 6.h,
                   ),
                   decoration: BoxDecoration(
                     color: Colors.blue.withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                   ),
                   child: Text(
                     location.category,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w600,
                     ),
@@ -56,21 +57,21 @@ class LocationBottomSheet extends StatelessWidget {
               ],
             ),
             if (location.description != null) ...[
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Text(
                 location.description!,
-                style: TextStyle(color: Colors.grey[600], fontSize: 16),
+                style: TextStyle(color: Colors.grey[600], fontSize: 16.sp),
               ),
             ],
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
 
-            const SizedBox(height: 24),
+            SizedBox(height: 24.h),
             if (location.rooms != null && location.rooms!.isNotEmpty) ...[
-              const Text(
+              Text(
                 'Rooms',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
@@ -82,7 +83,7 @@ class LocationBottomSheet extends StatelessWidget {
                   );
                 }).toList(),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24.h),
             ],
             SizedBox(
               width: double.infinity,
@@ -91,18 +92,18 @@ class LocationBottomSheet extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  padding: EdgeInsets.symmetric(vertical: 16.h),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16.r),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   'Get Directions',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
           ],
         ),
       ),

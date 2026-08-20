@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -53,7 +54,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         backgroundColor: AppColors.surface,
         elevation: 1,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -67,7 +68,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.more_vert, color: AppColors.onSurface),
+            icon: Icon(Icons.more_vert, color: AppColors.onSurface),
             onPressed: () {},
           ),
         ],
@@ -78,7 +79,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             child: messagesAsync.when(
               data: (messages) {
                 if (messages.isEmpty) {
-                  return const Center(child: Text('No messages here yet.'));
+                  return Center(child: Text('No messages here yet.'));
                 }
 
                 // Mark unread messages as read
@@ -95,9 +96,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
                 return ListView.builder(
                   reverse: true, // Newest at the bottom
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 8,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 16.w,
+                    vertical: 8.h,
                   ),
                   itemCount: messages.length,
                   itemBuilder: (context, index) {
@@ -108,7 +109,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   },
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(child: CircularProgressIndicator()),
               error: (e, st) => Center(child: Text('Error: $e')),
             ),
           ),
@@ -121,14 +122,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   Widget _buildMessageInput() {
     return Container(
       color: AppColors.surface,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 12,
+      padding: EdgeInsets.symmetric(
+        horizontal: 8.w,
+        vertical: 12.h,
       ).copyWith(bottom: MediaQuery.of(context).padding.bottom + 12),
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.add_circle_outline,
               color: AppColors.primary,
             ),
@@ -143,12 +144,12 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 hintText: 'Type a message...',
                 filled: true,
                 fillColor: AppColors.background,
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 16.w,
+                  vertical: 12.h,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(24),
+                  borderRadius: BorderRadius.circular(24.r),
                   borderSide: BorderSide.none,
                 ),
               ),
@@ -159,7 +160,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             ),
           ),
           IconButton(
-            icon: const Icon(Icons.send_rounded, color: AppColors.primary),
+            icon: Icon(Icons.send_rounded, color: AppColors.primary),
             onPressed: _sendMessage,
           ),
         ],
@@ -179,20 +180,20 @@ class _MessageBubble extends StatelessWidget {
     return Align(
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
       child: Container(
-        margin: const EdgeInsets.only(bottom: 8, top: 4),
+        margin: EdgeInsets.only(bottom: 8.h, top: 4.h),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.75,
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
         decoration: BoxDecoration(
           color: isMe ? AppColors.primary : AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(16).copyWith(
+          borderRadius: BorderRadius.circular(16.r).copyWith(
             bottomRight: isMe
-                ? const Radius.circular(4)
-                : const Radius.circular(16),
+                ? Radius.circular(4.r)
+                : Radius.circular(16.r),
             bottomLeft: isMe
-                ? const Radius.circular(16)
-                : const Radius.circular(4),
+                ? Radius.circular(16.r)
+                : Radius.circular(4.r),
           ),
           border: isMe
               ? null
@@ -205,10 +206,10 @@ class _MessageBubble extends StatelessWidget {
               message.text,
               style: TextStyle(
                 color: isMe ? AppColors.onPrimary : AppColors.onSurface,
-                fontSize: 15,
+                fontSize: 15.sp,
               ),
             ),
-            if (isMe) ...[const SizedBox(height: 2), _buildStatusIcon()],
+            if (isMe) ...[SizedBox(height: 2.h), _buildStatusIcon()],
           ],
         ),
       ),

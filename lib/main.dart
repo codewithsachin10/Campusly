@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/router/app_router.dart';
@@ -38,7 +39,7 @@ void main() async {
     debugPrint('Push Notification initialization failed: $e');
   }
 
-  runApp(const ProviderScope(child: CampuslyApp()));
+  runApp(ProviderScope(child: CampuslyApp()));
 }
 
 class CampuslyApp extends ConsumerWidget {
@@ -61,18 +62,18 @@ class CampuslyApp extends ConsumerWidget {
           return Scaffold(
             body: Center(
               child: Padding(
-                padding: const EdgeInsets.all(24.0),
+                padding: EdgeInsets.all(24.0.w),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.error_outline, color: Colors.red, size: 48),
-                    const SizedBox(height: 16),
-                    const Text(
+                    Icon(Icons.error_outline, color: Colors.red, size: 48),
+                    SizedBox(height: 16.h),
+                    Text(
                       'Something went wrong.',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
+                    SizedBox(height: 8.h),
+                    Text(
                       'We apologize for the inconvenience. Please try again.',
                       textAlign: TextAlign.center,
                     ),

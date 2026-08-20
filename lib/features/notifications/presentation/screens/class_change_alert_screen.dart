@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -56,61 +57,61 @@ class ClassChangeAlertScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Class Alert'),
+        title: Text('Class Alert'),
         leading: IconButton(
-          icon: const Icon(LucideIcons.x),
+          icon: Icon(LucideIcons.x),
           onPressed: () => context.pop(),
         ),
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(24.0.w),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 40),
+                SizedBox(height: 40.h),
                 Container(
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(24.w),
                   decoration: BoxDecoration(
                     color: color.withOpacity(0.1),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(icon, size: 64, color: color),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 28,
+                  style: TextStyle(
+                    fontSize: 28.sp,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8.h),
                 Text(
                   subject,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  style: TextStyle(
+                    fontSize: 20.sp,
                     color: Colors.grey,
                   ),
                 ),
-                const SizedBox(height: 40),
+                SizedBox(height: 40.h),
                 
                 if (changeType == 'VENUE_CHANGED') _buildChangeRow(LucideIcons.doorOpen, "Old Venue", oldData?['room'] ?? '-', "New Venue", newData?['room'] ?? '-'),
                 if (changeType == 'TIME_CHANGED') _buildChangeRow(LucideIcons.clock, "Old Time", "${oldData?['start_time']} - ${oldData?['end_time']}", "New Time", "${newData?['start_time']} - ${newData?['end_time']}"),
                 if (changeType == 'FACULTY_CHANGED') _buildChangeRow(LucideIcons.user, "Old Faculty", oldData?['faculty'] ?? '-', "New Faculty", newData?['faculty'] ?? '-'),
                 if (changeType == 'CANCELLED') 
                   Container(
-                    padding: const EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
                       color: Colors.red.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: Colors.red.withOpacity(0.3)),
                     ),
-                    child: const Row(
+                    child: Row(
                       children: [
                         Icon(LucideIcons.alertTriangle, color: Colors.red),
-                        SizedBox(width: 12),
+                        SizedBox(width: 12.w),
                         Expanded(
                           child: Text(
                             "This class has been cancelled. Enjoy your free time!",
@@ -121,16 +122,16 @@ class ClassChangeAlertScreen extends ConsumerWidget {
                     ),
                   ),
 
-                const SizedBox(height: 32),
+                SizedBox(height: 32.h),
                 SizedBox(
                   width: double.infinity,
-                  height: 56,
+                  height: 56.h,
                   child: FilledButton(
                     onPressed: () {
                       context.pop();
                       // Optionally, trigger a refresh of the timetable here
                     },
-                    child: const Text('Acknowledge', style: TextStyle(fontSize: 16)),
+                    child: Text('Acknowledge', style: TextStyle(fontSize: 16.sp)),
                   ),
                 ),
               ],
@@ -143,10 +144,10 @@ class ClassChangeAlertScreen extends ConsumerWidget {
 
   Widget _buildChangeRow(IconData icon, String oldLabel, String oldValue, String newLabel, String newValue) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: Colors.grey.withOpacity(0.2)),
       ),
       child: Column(
@@ -154,23 +155,23 @@ class ClassChangeAlertScreen extends ConsumerWidget {
           Row(
             children: [
               Icon(icon, color: Colors.grey),
-              const SizedBox(width: 12),
+              SizedBox(width: 12.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(oldLabel, style: const TextStyle(fontSize: 12, color: Colors.grey)),
-                    Text(oldValue, style: const TextStyle(fontSize: 16, decoration: TextDecoration.lineThrough, color: Colors.grey)),
+                    Text(oldLabel, style: TextStyle(fontSize: 12.sp, color: Colors.grey)),
+                    Text(oldValue, style: TextStyle(fontSize: 16.sp, decoration: TextDecoration.lineThrough, color: Colors.grey)),
                   ],
                 ),
               ),
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 8),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 8.h),
             child: Row(
               children: [
-                SizedBox(width: 6),
+                SizedBox(width: 6.w),
                 Icon(LucideIcons.arrowDown, size: 16, color: Colors.blue),
               ],
             ),
@@ -178,13 +179,13 @@ class ClassChangeAlertScreen extends ConsumerWidget {
           Row(
             children: [
               Icon(icon, color: Colors.blue),
-              const SizedBox(width: 12),
+              SizedBox(width: 12.w),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(newLabel, style: const TextStyle(fontSize: 12, color: Colors.blue)),
-                    Text(newValue, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.blue)),
+                    Text(newLabel, style: TextStyle(fontSize: 12.sp, color: Colors.blue)),
+                    Text(newValue, style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold, color: Colors.blue)),
                   ],
                 ),
               ),

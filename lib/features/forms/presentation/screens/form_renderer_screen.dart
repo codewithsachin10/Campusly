@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class FormRendererScreen extends StatelessWidget {
   final String formToken;
 
-  const FormRendererScreen({Key? key, required this.formToken})
-      : super(key: key);
+  const FormRendererScreen({super.key, required this.formToken});
 
   void _openWebForm() async {
     // Attempt to open the web form in a browser
@@ -21,32 +21,32 @@ class FormRendererScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Campusly Forms'),
+        title: Text('Campusly Forms'),
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.description, size: 80, color: Colors.blue),
-              const SizedBox(height: 16),
-              const Text(
+              Icon(Icons.description, size: 80, color: Colors.blue),
+              SizedBox(height: 16.h),
+              Text(
                 'Student Form',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Text(
                 'Form Token: $formToken',
-                style: const TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16.sp, color: Colors.grey),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 32),
+              SizedBox(height: 32.h),
               ElevatedButton.icon(
                 onPressed: _openWebForm,
-                icon: const Icon(Icons.open_in_browser),
-                label: const Text('Open Form in Browser'),
+                icon: Icon(Icons.open_in_browser),
+                label: Text('Open Form in Browser'),
               ),
             ],
           ),

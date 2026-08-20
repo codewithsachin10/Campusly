@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -42,10 +43,10 @@ class SubjectDetailPage extends ConsumerWidget {
 
     final asyncAtt = attKey != null
         ? ref.watch(attendanceProvider(attKey))
-        : const AsyncValue.data(null);
+        : AsyncValue.data(null);
     final asyncNotes = notesKey != null
         ? ref.watch(notesProvider(notesKey))
-        : const AsyncValue.data(null);
+        : AsyncValue.data(null);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -61,13 +62,13 @@ class SubjectDetailPage extends ConsumerWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Subject Header Card
             Container(
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(24.w),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -77,12 +78,12 @@ class SubjectDetailPage extends ConsumerWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.primary.withValues(alpha: 0.3),
                     blurRadius: 16,
-                    offset: const Offset(0, 8),
+                    offset: Offset(0, 8),
                   ),
                 ],
               ),
@@ -94,13 +95,13 @@ class SubjectDetailPage extends ConsumerWidget {
                     children: [
                       Flexible(
                         child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 6,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 12.w,
+                            vertical: 6.h,
                           ),
                           decoration: BoxDecoration(
                             color: Colors.white.withValues(alpha: 0.2),
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Text(
                             (item.subjectCode != null &&
@@ -115,24 +116,24 @@ class SubjectDetailPage extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8.w),
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 6,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 12.w,
+                          vertical: 6.h,
                         ),
                         decoration: BoxDecoration(
                           color: Colors.black.withValues(alpha: 0.25),
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.r),
                         ),
                         child: Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.location_on_rounded,
                               color: Colors.white,
                               size: 14,
                             ),
-                            const SizedBox(width: 6),
+                            SizedBox(width: 6.w),
                             Text(
                               item.room.isNotEmpty ? item.room : 'Room TBA',
                               style: AppTypography.labelMedium.copyWith(
@@ -144,7 +145,7 @@ class SubjectDetailPage extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Text(
                     item.title,
                     style: AppTypography.headlineMedium.copyWith(
@@ -152,16 +153,16 @@ class SubjectDetailPage extends ConsumerWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  const Divider(color: Colors.white24),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 16.h),
+                  Divider(color: Colors.white24),
+                  SizedBox(height: 8.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: Row(
                           children: [
-                            const CircleAvatar(
+                            CircleAvatar(
                               radius: 16,
                               backgroundColor: Colors.white24,
                               child: Icon(
@@ -170,7 +171,7 @@ class SubjectDetailPage extends ConsumerWidget {
                                 size: 18,
                               ),
                             ),
-                            const SizedBox(width: 10),
+                            SizedBox(width: 10.w),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +199,7 @@ class SubjectDetailPage extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: 12.w),
                       TextButton.icon(
                         onPressed: () {
                           FacultyProfileSheet.show(
@@ -209,12 +210,12 @@ class SubjectDetailPage extends ConsumerWidget {
                             fallbackName: item.instructor,
                           );
                         },
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.phone_rounded,
                           color: Colors.white,
                           size: 16,
                         ),
-                        label: const Text(
+                        label: Text(
                           'Contact Details',
                           style: TextStyle(
                             color: Colors.white,
@@ -224,7 +225,7 @@ class SubjectDetailPage extends ConsumerWidget {
                         style: TextButton.styleFrom(
                           backgroundColor: Colors.white.withValues(alpha: 0.2),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(10.r),
                           ),
                         ),
                       ),
@@ -233,7 +234,7 @@ class SubjectDetailPage extends ConsumerWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 28),
+            SizedBox(height: 28.h),
 
             Text(
               'Interactive Tools & Tracking',
@@ -241,7 +242,7 @@ class SubjectDetailPage extends ConsumerWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
 
             // 1. Attendance & Bunk Predictor Card
             InkWell(
@@ -253,18 +254,18 @@ class SubjectDetailPage extends ConsumerWidget {
                     : item.title,
                 subjectName: item.title,
               ),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20.w),
                 decoration: BoxDecoration(
                   color: AppColors.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   border: Border.all(color: AppColors.border),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.04),
                       blurRadius: 10,
-                      offset: const Offset(0, 4),
+                      offset: Offset(0, 4),
                     ),
                   ],
                 ),
@@ -274,18 +275,18 @@ class SubjectDetailPage extends ConsumerWidget {
                     Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(12),
+                          padding: EdgeInsets.all(12.w),
                           decoration: BoxDecoration(
                             color: AppColors.primary.withValues(alpha: 0.12),
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14.r),
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.calendar_today_rounded,
                             color: AppColors.primary,
                             size: 26,
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,15 +306,15 @@ class SubjectDetailPage extends ConsumerWidget {
                             ],
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.chevron_right_rounded,
                           color: AppColors.textSecondary,
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     asyncAtt.when(
-                      loading: () => const LinearProgressIndicator(),
+                      loading: () => LinearProgressIndicator(),
                       error: (err, _) => Text(
                         'Error loading attendance',
                         style: AppTypography.bodySmall,
@@ -328,10 +329,10 @@ class SubjectDetailPage extends ConsumerWidget {
                             pct < 75.0;
 
                         return Container(
-                          padding: const EdgeInsets.all(14),
+                          padding: EdgeInsets.all(14.w),
                           decoration: BoxDecoration(
                             color: AppColors.background,
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14.r),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -346,7 +347,7 @@ class SubjectDetailPage extends ConsumerWidget {
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                    const SizedBox(height: 4),
+                                    SizedBox(height: 4.h),
                                     Text(
                                       risk
                                           ? '⚠️ Warning: Risk < 75%!'
@@ -364,9 +365,9 @@ class SubjectDetailPage extends ConsumerWidget {
                                 ),
                               ),
                               Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                  vertical: 8,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 12.w,
+                                  vertical: 8.h,
                                 ),
                                 decoration: BoxDecoration(
                                   color:
@@ -374,7 +375,7 @@ class SubjectDetailPage extends ConsumerWidget {
                                               ? AppColors.error
                                               : AppColors.success)
                                           .withValues(alpha: 0.15),
-                                  borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12.r),
                                 ),
                                 child: Text(
                                   '${pct.toStringAsFixed(1)}%',
@@ -395,7 +396,7 @@ class SubjectDetailPage extends ConsumerWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
 
             // 2. Subject Notes Hub Card
             InkWell(
@@ -407,18 +408,18 @@ class SubjectDetailPage extends ConsumerWidget {
                     : item.title,
                 subjectName: item.title,
               ),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20.w),
                 decoration: BoxDecoration(
                   color: AppColors.surface,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(20.r),
                   border: Border.all(color: AppColors.border),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.04),
                       blurRadius: 10,
-                      offset: const Offset(0, 4),
+                      offset: Offset(0, 4),
                     ),
                   ],
                 ),
@@ -428,18 +429,18 @@ class SubjectDetailPage extends ConsumerWidget {
                     Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.all(12),
+                          padding: EdgeInsets.all(12.w),
                           decoration: BoxDecoration(
                             color: AppColors.secondary.withValues(alpha: 0.12),
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14.r),
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.description_rounded,
                             color: AppColors.secondary,
                             size: 26,
                           ),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -459,15 +460,15 @@ class SubjectDetailPage extends ConsumerWidget {
                             ],
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.chevron_right_rounded,
                           color: AppColors.textSecondary,
                         ),
                       ],
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     asyncNotes.when(
-                      loading: () => const LinearProgressIndicator(),
+                      loading: () => LinearProgressIndicator(),
                       error: (err, _) => Text(
                         'Error loading notes',
                         style: AppTypography.bodySmall,
@@ -479,23 +480,23 @@ class SubjectDetailPage extends ConsumerWidget {
                             : 'No notes written yet. Tap to create one!';
 
                         return Container(
-                          padding: const EdgeInsets.all(14),
+                          padding: EdgeInsets.all(14.w),
                           decoration: BoxDecoration(
                             color: AppColors.background,
-                            borderRadius: BorderRadius.circular(14),
+                            borderRadius: BorderRadius.circular(14.r),
                           ),
                           child: Row(
                             children: [
                               Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 6,
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 10.w,
+                                  vertical: 6.h,
                                 ),
                                 decoration: BoxDecoration(
                                   color: AppColors.secondary.withValues(
                                     alpha: 0.15,
                                   ),
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(10.r),
                                 ),
                                 child: Text(
                                   '$count Notes',
@@ -505,7 +506,7 @@ class SubjectDetailPage extends ConsumerWidget {
                                   ),
                                 ),
                               ),
-                              const SizedBox(width: 12),
+                              SizedBox(width: 12.w),
                               Expanded(
                                 child: Text(
                                   latest,

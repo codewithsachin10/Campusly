@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -22,7 +23,7 @@ class ConnectionsScreen extends ConsumerWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -47,7 +48,7 @@ class ConnectionsScreen extends ConsumerWidget {
               .toList();
 
           return ListView(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16.w),
             children: [
               if (pending.isNotEmpty) ...[
                 Text(
@@ -57,13 +58,13 @@ class ConnectionsScreen extends ConsumerWidget {
                     color: AppColors.primary,
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12.h),
                 ...pending.map(
                   (c) => _ConnectionItem(connection: c, isPending: true),
                 ),
-                const SizedBox(height: 24),
-                const Divider(),
-                const SizedBox(height: 24),
+                SizedBox(height: 24.h),
+                Divider(),
+                SizedBox(height: 24.h),
               ],
               Text(
                 'My Friends (${friends.length})',
@@ -72,11 +73,11 @@ class ConnectionsScreen extends ConsumerWidget {
                   color: AppColors.primary,
                 ),
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12.h),
               if (friends.isEmpty)
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(32.0),
+                    padding: EdgeInsets.all(32.0.w),
                     child: Text(
                       'No connections yet.\nGo to the directory to find friends!',
                       textAlign: TextAlign.center,
@@ -90,7 +91,7 @@ class ConnectionsScreen extends ConsumerWidget {
             ],
           );
         },
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Center(child: CircularProgressIndicator()),
         error: (e, st) => Center(child: Text('Error loading connections: $e')),
       ),
     );
@@ -111,16 +112,16 @@ class _ConnectionItem extends ConsumerWidget {
         : connection.requesterId;
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(12),
+      margin: EdgeInsets.only(bottom: 12.h),
+      padding: EdgeInsets.all(12.w),
       decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
@@ -128,25 +129,25 @@ class _ConnectionItem extends ConsumerWidget {
         children: [
           CircleAvatar(
             backgroundColor: AppColors.primary.withValues(alpha: 0.2),
-            child: const Icon(Icons.person, color: AppColors.primary),
+            child: Icon(Icons.person, color: AppColors.primary),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'User $otherUserId', // In real app, fetch user details or cache them locally
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                   ),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   isPending ? 'Wants to connect' : 'Connected',
-                  style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
+                  style: TextStyle(color: Colors.grey.shade600, fontSize: 12.sp),
                 ),
               ],
             ),
@@ -156,13 +157,13 @@ class _ConnectionItem extends ConsumerWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  icon: const Icon(Icons.close, color: Colors.red),
+                  icon: Icon(Icons.close, color: Colors.red),
                   onPressed: () {
                     // reject/delete
                   },
                 ),
                 IconButton(
-                  icon: const Icon(Icons.check, color: Colors.green),
+                  icon: Icon(Icons.check, color: Colors.green),
                   onPressed: () {
                     ref
                         .read(connectionsRepositoryProvider)
@@ -176,7 +177,7 @@ class _ConnectionItem extends ConsumerWidget {
             )
           else
             IconButton(
-              icon: const Icon(Icons.message, color: AppColors.primary),
+              icon: Icon(Icons.message, color: AppColors.primary),
               onPressed: () {
                 context.push('/inbox');
               },

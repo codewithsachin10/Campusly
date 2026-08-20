@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -96,7 +97,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
   void _onSearchChanged(String val) {
     _searchQuery = val;
     // Simple debounce
-    Future.delayed(const Duration(milliseconds: 500), () {
+    Future.delayed(Duration(milliseconds: 500), () {
       if (mounted && _searchQuery == val) {
         _fetchUsers();
       }
@@ -114,7 +115,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: AppColors.primary),
+          icon: Icon(Icons.arrow_back_rounded, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
         title: Text(
@@ -129,7 +130,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
           labelColor: AppColors.primary,
           unselectedLabelColor: AppColors.onSurfaceVariant,
           indicatorColor: AppColors.primary,
-          tabs: const [
+          tabs: [
             Tab(text: 'My Class'),
             Tab(text: 'My Dept'),
             Tab(text: 'College'),
@@ -139,26 +140,26 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0.w),
             child: TextField(
               controller: _searchController,
               onChanged: _onSearchChanged,
               decoration: InputDecoration(
                 hintText: 'Search by name or email...',
-                prefixIcon: const Icon(Icons.search, color: Color(0xFF1E3A8A)),
+                prefixIcon: Icon(Icons.search, color: Color(0xFF1E3A8A)),
                 filled: true,
                 fillColor: AppColors.surfaceContainerLowest,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(16.r),
                   borderSide: BorderSide.none,
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 16),
+                contentPadding: EdgeInsets.symmetric(vertical: 16.h),
               ),
             ),
           ),
           Expanded(
             child: _isLoading
-                ? const Center(child: CircularProgressIndicator())
+                ? Center(child: CircularProgressIndicator())
                 : _users.isEmpty
                 ? Center(
                     child: Text(
@@ -169,7 +170,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
                     ),
                   )
                 : ListView.builder(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     itemCount: _users.length,
                     itemBuilder: (context, index) {
                       final student = _users[index];
@@ -206,11 +207,11 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
     ConnectionModel? connection,
     String? currentUserId,
   ) {
-    Widget actionWidget = const SizedBox();
+    Widget actionWidget = SizedBox();
 
     if (connection == null) {
       actionWidget = IconButton(
-        icon: const Icon(Icons.person_add_rounded, color: Color(0xFF1E3A8A)),
+        icon: Icon(Icons.person_add_rounded, color: Color(0xFF1E3A8A)),
         onPressed: () {
           if (currentUserId != null) {
             ref
@@ -221,7 +222,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
       );
     } else if (connection.status == ConnectionStatus.pending) {
       if (connection.requesterId == currentUserId) {
-        actionWidget = const Text(
+        actionWidget = Text(
           'Requested',
           style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
         );
@@ -232,12 +233,12 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
                 .read(connectionsRepositoryProvider)
                 .updateStatus(connection.id, ConnectionStatus.connected);
           },
-          child: const Text('Accept'),
+          child: Text('Accept'),
         );
       }
     } else if (connection.status == ConnectionStatus.connected) {
       actionWidget = IconButton(
-        icon: const Icon(Icons.chat_bubble_rounded, color: Color(0xFF1E3A8A)),
+        icon: Icon(Icons.chat_bubble_rounded, color: Color(0xFF1E3A8A)),
         onPressed: () async {
           if (currentUserId != null) {
             final chatId = await ref
@@ -254,16 +255,16 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
     }
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(12),
+      margin: EdgeInsets.only(bottom: 12.h),
+      padding: EdgeInsets.all(12.w),
       decoration: BoxDecoration(
         color: AppColors.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16.r),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
@@ -274,29 +275,29 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
             backgroundColor: AppColors.primary.withValues(alpha: 0.2),
             child: Text(
               student.name.isNotEmpty ? student.name[0].toUpperCase() : 'S',
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: AppColors.primary,
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12.w),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   student.name,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                   ),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   '${student.department ?? "Dept"} - ${student.year ?? "Year"} - ${student.section ?? "Sec"}',
-                  style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
+                  style: TextStyle(color: Colors.grey.shade600, fontSize: 12.sp),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),

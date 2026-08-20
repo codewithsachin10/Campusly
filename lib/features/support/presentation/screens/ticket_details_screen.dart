@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -27,7 +28,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
     if (_scrollController.hasClients) {
       _scrollController.animateTo(
         _scrollController.position.maxScrollExtent,
-        duration: const Duration(milliseconds: 300),
+        duration: Duration(milliseconds: 300),
         curve: Curves.easeOut,
       );
     }
@@ -78,19 +79,19 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(LucideIcons.arrowLeft, color: AppColors.textPrimary),
+          icon: Icon(LucideIcons.arrowLeft, color: AppColors.textPrimary),
           onPressed: () => Navigator.pop(context),
         ),
         title: GradientText(
           'Ticket #${widget.ticket.ticketNumber.length > 7 ? widget.ticket.ticketNumber.substring(0, 7) : widget.ticket.ticketNumber}',
-          gradient: const LinearGradient(
+          gradient: LinearGradient(
             colors: [Color(0xFF4285F4), Color(0xFFE91E63)],
           ),
           style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
-            icon: const Icon(LucideIcons.moreVertical, color: AppColors.textPrimary),
+            icon: Icon(LucideIcons.moreVertical, color: AppColors.textPrimary),
             onPressed: () {},
           ),
         ],
@@ -100,28 +101,28 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
           Expanded(
             child: SingleChildScrollView(
               controller: _scrollController,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Main Glow Card
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20.w),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(20.r),
                       border: Border.all(color: AppColors.primary.withOpacity(0.1)),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xFFE91E63).withOpacity(0.08),
+                          color: Color(0xFFE91E63).withOpacity(0.08),
                           blurRadius: 40,
-                          offset: const Offset(-10, 10),
+                          offset: Offset(-10, 10),
                         ),
                         BoxShadow(
-                          color: const Color(0xFF4285F4).withOpacity(0.08),
+                          color: Color(0xFF4285F4).withOpacity(0.08),
                           blurRadius: 40,
-                          offset: const Offset(10, 10),
+                          offset: Offset(10, 10),
                         ),
                       ],
                     ),
@@ -138,64 +139,64 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: 16.h),
                         Text(
                           widget.ticket.subject,
                           style: AppTypography.headlineSmall.copyWith(fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(height: 12),
+                        SizedBox(height: 12.h),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFCE4EC),
-                            borderRadius: BorderRadius.circular(16),
+                            color: Color(0xFFFCE4EC),
+                            borderRadius: BorderRadius.circular(16.r),
                           ),
                           child: Text(
                             widget.ticket.categoryId ?? 'General',
-                            style: const TextStyle(color: Color(0xFF880E4F), fontSize: 12),
+                            style: TextStyle(color: Color(0xFF880E4F), fontSize: 12.sp),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   
                   // Student Details Box
                   Container(
-                    padding: const EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                       border: Border.all(color: AppColors.surfaceVariant),
                     ),
                     child: Row(
                       children: [
                         CircleAvatar(
                           radius: 24,
-                          backgroundColor: const Color(0xFF5C6BC0),
-                          child: Text(initials, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                          backgroundColor: Color(0xFF5C6BC0),
+                          child: Text(initials, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                         ),
-                        const SizedBox(width: 16),
+                        SizedBox(width: 16.w),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(studentName, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
-                              Text('Student', style: TextStyle(color: const Color(0xFF7E57C2), fontSize: 12)),
+                              Text('Student', style: TextStyle(color: Color(0xFF7E57C2), fontSize: 12.sp)),
                             ],
                           ),
                         ),
                         Container(
-                          width: 1,
-                          height: 40,
+                          width: 1.w,
+                          height: 40.h,
                           color: AppColors.surfaceVariant,
-                          margin: const EdgeInsets.symmetric(horizontal: 16),
+                          margin: EdgeInsets.symmetric(horizontal: 16.w),
                         ),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Roll', style: TextStyle(color: AppColors.textSecondary, fontSize: 12)),
+                              Text('Roll', style: TextStyle(color: AppColors.textSecondary, fontSize: 12.sp)),
                               Text(rollNo, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                             ],
                           ),
@@ -203,23 +204,23 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
 
                   // Description
-                  const Text('DESCRIPTION', style: TextStyle(color: Color(0xFF4285F4), fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-                  const SizedBox(height: 12),
+                  Text('DESCRIPTION', style: TextStyle(color: Color(0xFF4285F4), fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+                  SizedBox(height: 12.h),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.all(16),
+                    padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: AppColors.surfaceVariant),
                       boxShadow: [
                         BoxShadow(
                           color: AppColors.primary.withOpacity(0.05),
                           blurRadius: 10,
-                          offset: const Offset(4, 0), // left border effect
+                          offset: Offset(4, 0), // left border effect
                         ),
                       ],
                     ),
@@ -227,13 +228,13 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       child: Row(
                         children: [
                           Container(
-                            width: 4,
+                            width: 4.w,
                             decoration: BoxDecoration(
-                              color: const Color(0xFFAB47BC),
-                              borderRadius: BorderRadius.circular(4),
+                              color: Color(0xFFAB47BC),
+                              borderRadius: BorderRadius.circular(4.r),
                             ),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12.w),
                           Expanded(
                             child: Text(
                               widget.ticket.description,
@@ -244,13 +245,13 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
 
                   // Activity
-                  const Text('ACTIVITY', style: TextStyle(color: Color(0xFFE91E63), fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-                  const SizedBox(height: 12),
+                  Text('ACTIVITY', style: TextStyle(color: Color(0xFFE91E63), fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+                  SizedBox(height: 12.h),
                   ActivityTimeline(currentStatus: widget.ticket.status),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 24.h),
                   
                   // Chat Messages Timeline
                   messagesStream.when(
@@ -258,7 +259,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       final messages = messagesRaw.where((m) => m['is_internal'] != true).toList();
                       
                       return ListView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: messages.length,
                         itemBuilder: (context, index) {
@@ -273,37 +274,37 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                                 Column(
                                   children: [
                                     Container(
-                                      width: 24,
-                                      height: 24,
+                                      width: 24.w,
+                                      height: 24.h,
                                       decoration: BoxDecoration(
-                                        color: isAdmin ? const Color(0xFFEDE7F6) : const Color(0xFFF3E5F5),
+                                        color: isAdmin ? Color(0xFFEDE7F6) : Color(0xFFF3E5F5),
                                         shape: BoxShape.circle,
                                       ),
                                       child: Center(
                                         child: Icon(
                                           isAdmin ? LucideIcons.userCheck : LucideIcons.sparkles, 
                                           size: 12, 
-                                          color: isAdmin ? const Color(0xFF5E35B1) : const Color(0xFF8E24AA)
+                                          color: isAdmin ? Color(0xFF5E35B1) : Color(0xFF8E24AA)
                                         ),
                                       ),
                                     ),
                                     if (index != messages.length - 1)
                                       Expanded(
                                         child: Container(
-                                          width: 2,
-                                          color: const Color(0xFFF3E5F5),
+                                          width: 2.w,
+                                          color: Color(0xFFF3E5F5),
                                         ),
                                       ),
                                   ],
                                 ),
-                                const SizedBox(width: 12),
+                                SizedBox(width: 12.w),
                                 Expanded(
                                   child: Container(
-                                    margin: const EdgeInsets.only(bottom: 24),
-                                    padding: const EdgeInsets.all(16),
+                                    margin: EdgeInsets.only(bottom: 24.h),
+                                    padding: EdgeInsets.all(16.w),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
-                                      borderRadius: BorderRadius.circular(16),
+                                      borderRadius: BorderRadius.circular(16.r),
                                       border: Border.all(color: AppColors.surfaceVariant),
                                     ),
                                     child: IntrinsicHeight(
@@ -311,12 +312,12 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                                         children: [
                                           if (isAdmin)
                                             Container(
-                                              width: 4,
+                                              width: 4.w,
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF7E57C2),
-                                                borderRadius: BorderRadius.circular(4),
+                                                color: Color(0xFF7E57C2),
+                                                borderRadius: BorderRadius.circular(4.r),
                                               ),
-                                              margin: const EdgeInsets.only(right: 12),
+                                              margin: EdgeInsets.only(right: 12.w),
                                             ),
                                           Expanded(
                                             child: Column(
@@ -329,20 +330,20 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                                                       child: Text(
                                                         isAdmin ? 'Admin (IT Support)' : 'Ticket created by System',
                                                         style: TextStyle(
-                                                          color: isAdmin ? const Color(0xFF7E57C2) : AppColors.textPrimary,
+                                                          color: isAdmin ? Color(0xFF7E57C2) : AppColors.textPrimary,
                                                           fontWeight: FontWeight.bold,
                                                         ),
                                                         overflow: TextOverflow.ellipsis,
                                                       ),
                                                     ),
-                                                    const SizedBox(width: 8),
+                                                    SizedBox(width: 8.w),
                                                     Text(
                                                       _timeAgo(DateTime.parse(msg['created_at'])),
-                                                      style: TextStyle(color: AppColors.textSecondary, fontSize: 10),
+                                                      style: TextStyle(color: AppColors.textSecondary, fontSize: 10.sp),
                                                     ),
                                                   ],
                                                 ),
-                                                const SizedBox(height: 8),
+                                                SizedBox(height: 8.h),
                                                 Text(msg['message'], style: AppTypography.bodyMedium),
                                               ],
                                             ),
@@ -358,7 +359,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                         },
                       );
                     },
-                    loading: () => const Center(child: CircularProgressIndicator()),
+                    loading: () => Center(child: CircularProgressIndicator()),
                     error: (e, _) => Center(child: Text('Error: $e')),
                   ),
                 ],
@@ -369,30 +370,30 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
           // Bottom Chat Input
           if (widget.ticket.status != 'Closed' && widget.ticket.status != 'Resolved')
             Container(
-              padding: const EdgeInsets.all(16).copyWith(bottom: MediaQuery.of(context).padding.bottom + 16),
+              padding: EdgeInsets.all(16.w).copyWith(bottom: MediaQuery.of(context).padding.bottom + 16),
               decoration: BoxDecoration(
-                color: const Color(0xFFF8F9FA),
-                border: const Border(top: BorderSide(color: AppColors.border)),
+                color: Color(0xFFF8F9FA),
+                border: Border(top: BorderSide(color: AppColors.border)),
               ),
               child: Row(
                 children: [
                   IconButton(
-                    icon: const Icon(LucideIcons.paperclip, color: Color(0xFF9C27B0)),
+                    icon: Icon(LucideIcons.paperclip, color: Color(0xFF9C27B0)),
                     onPressed: () {},
                   ),
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(24),
+                        borderRadius: BorderRadius.circular(24.r),
                         border: Border.all(color: AppColors.surfaceVariant),
                       ),
                       child: TextField(
                         controller: _messageController,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           hintText: 'Type your reply...',
                           border: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
                         ),
                         maxLines: null,
                         textInputAction: TextInputAction.send,
@@ -400,24 +401,24 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  SizedBox(width: 8.w),
                   Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [Color(0xFF4285F4), Color(0xFF9C27B0)],
                       ),
                       shape: BoxShape.circle,
                     ),
                     child: _isSending 
-                      ? const Padding(
-                          padding: EdgeInsets.all(12.0),
+                      ? Padding(
+                          padding: EdgeInsets.all(12.0.w),
                           child: SizedBox(
-                            width: 24, height: 24,
+                            width: 24.w, height: 24.h,
                             child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
                           ),
                         )
                       : IconButton(
-                          icon: const Icon(LucideIcons.send, color: Colors.white, size: 20),
+                          icon: Icon(LucideIcons.send, color: Colors.white, size: 20),
                           onPressed: _sendMessage,
                         ),
                   ),
@@ -426,9 +427,9 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
             )
           else 
             Container(
-              padding: const EdgeInsets.all(24).copyWith(bottom: MediaQuery.of(context).padding.bottom + 24),
-              color: const Color(0xFFF8F9FA),
-              child: const Center(
+              padding: EdgeInsets.all(24.w).copyWith(bottom: MediaQuery.of(context).padding.bottom + 24),
+              color: Color(0xFFF8F9FA),
+              child: Center(
                 child: Text('This ticket is closed.'),
               ),
             )
