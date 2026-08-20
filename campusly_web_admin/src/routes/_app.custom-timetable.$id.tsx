@@ -118,6 +118,7 @@ function CustomTimetableEditorPage() {
   }));
 
   const [draft, setDraft] = useState<CustomTimetablePeriod[]>([]);
+  const [editDetailsOpen, setEditDetailsOpen] = useState(false);
   const [dirty, setDirty] = useState(false);
   const [editing, setEditing] = useState<{ period?: CustomTimetablePeriod; day: Weekday } | null>(null);
   
@@ -246,6 +247,9 @@ function CustomTimetableEditorPage() {
         crumbs={[{ label: "Timetables", to: "/custom-timetables" }, { label: "Editor" }]}
         actions={
           <div className="flex gap-2">
+            <Button variant="outline" onClick={() => setEditDetailsOpen(true)}>
+              <Edit2 className="size-4 mr-2" /> Edit Details
+            </Button>
             <Button variant="outline" onClick={() => navigate({ to: "/timetable", search: { tab: "custom" } })}>
               <ArrowLeft className="size-4 mr-2" /> Back
             </Button>
@@ -426,6 +430,54 @@ function CustomTimetableEditorPage() {
               <Button onClick={() => handleConfirmSave(true)}>Save & Notify</Button>
             </div>
           </DialogFooter>
+        </DialogContent>
+      </Dialog>
+      <Dialog open={editDetailsOpen} onOpenChange={setEditDetailsOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Edit Timetable Details</DialogTitle>
+          </DialogHeader>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const fd = new FormData(e.currentTarget);
+              api.customTimetables.update(id, {
+                name: fd.get("name"),
+                department: fd.get("department") || null,
+                academic_year: fd.get("academic_year") || null,
+                description: fd.get("description") || null,
+              }).then(() => {
+                qc.invalidateQueries({ queryKey: ["customTimetableDetail", id] });
+                qc.invalidateQueries({ queryKey: ["customTimetables"] });
+                setEditDetailsOpen(false);
+                toast.success("Details updated");
+              }).catch(() => toast.error("Failed to update"));
+            }}
+            className="space-y-4"
+          >
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Timetable Name</label>
+              <input required name="name" defaultValue={tt.name} className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm" />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Department (Optional)</label>
+                <input name="department" defaultValue={tt.department || ""} placeholder="e.g. CSBS" className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Year (Optional)</label>
+                <input name="academic_year" defaultValue={tt.academic_year || ""} placeholder="e.g. 3rd Year" className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm" />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm font-medium">Description (Optional)</label>
+              <input name="description" defaultValue={tt.description || ""} className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm" />
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setEditDetailsOpen(false)}>Cancel</Button>
+              <Button type="submit">Save Changes</Button>
+            </DialogFooter>
+          </form>
         </DialogContent>
       </Dialog>
     </div>
