@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import {
   Eye,
   EyeOff,
@@ -370,6 +370,13 @@ function LoginPage() {
                     Protected admin environment
                   </div>
                   <span>Access is restricted to authorized Campusly administrators.</span>
+                  
+                  <div className="mt-4 pt-4 border-t border-zinc-200 w-full text-center">
+                    <span className="text-zinc-500 mr-2">Are you a student?</span>
+                    <Link to="/download" className="text-blue-600 font-medium hover:underline hover:text-blue-700">
+                      Download the App
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>

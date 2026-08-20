@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/_app'
+import { Route as DownloadRouteImport } from './routes/download'
 import { Route as VerifyOtpRouteImport } from './routes/verify-otp'
 import { Route as AppModuleRouteImport } from './routes/_app.$module'
 import { Route as AppAdminsRouteImport } from './routes/_app.admins'
@@ -53,6 +54,11 @@ const IndexRoute = IndexRouteImport.update({
 } as any)
 const AppRoute = AppRouteImport.update({
   id: '/_app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadRoute = DownloadRouteImport.update({
+  id: '/download',
+  path: '/download',
   getParentRoute: () => rootRouteImport,
 } as any)
 const VerifyOtpRoute = VerifyOtpRouteImport.update({
@@ -230,6 +236,7 @@ const AppFormsResponsesFormIdRoute = AppFormsResponsesFormIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/download': typeof DownloadRoute
   '/verify-otp': typeof VerifyOtpRoute
   '/$module': typeof AppModuleRoute
   '/admins': typeof AppAdminsRouteWithChildren
@@ -267,6 +274,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/download': typeof DownloadRoute
   '/verify-otp': typeof VerifyOtpRoute
   '/$module': typeof AppModuleRoute
   '/assignments': typeof AppAssignmentsRoute
@@ -305,6 +313,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_app': typeof AppRouteWithChildren
+  '/download': typeof DownloadRoute
   '/verify-otp': typeof VerifyOtpRoute
   '/_app/$module': typeof AppModuleRoute
   '/_app/admins': typeof AppAdminsRouteWithChildren
@@ -344,6 +353,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/download'
     | '/verify-otp'
     | '/$module'
     | '/admins'
@@ -381,6 +391,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/download'
     | '/verify-otp'
     | '/$module'
     | '/assignments'
@@ -418,6 +429,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_app'
+    | '/download'
     | '/verify-otp'
     | '/_app/$module'
     | '/_app/admins'
@@ -457,6 +469,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
+  DownloadRoute: typeof DownloadRoute
   VerifyOtpRoute: typeof VerifyOtpRoute
   FormTokenRoute: typeof FormTokenRoute
   InviteResponseRoute: typeof InviteResponseRoute
@@ -476,6 +489,13 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: '/'
       preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/download': {
+      id: '/download'
+      path: '/download'
+      fullPath: '/download'
+      preLoaderRoute: typeof DownloadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/verify-otp': {
@@ -802,6 +822,7 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
+  DownloadRoute: DownloadRoute,
   VerifyOtpRoute: VerifyOtpRoute,
   FormTokenRoute: FormTokenRoute,
   InviteResponseRoute: InviteResponseRoute,
