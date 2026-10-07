@@ -23,14 +23,23 @@ void main() async {
     return true; // Prevent default crash behavior
   };
 
-  try {
-    await Supabase.initialize(
-      url: 'https://jvrxoyswzjuhsofqnqym.supabase.co',
-      publishableKey:
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2cnhveXN3emp1aHNvZnFucXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5MjU3NDMsImV4cCI6MjEwMTUwMTc0M30.ulsZel_C1qz2BvTxgSoZNiuDBPNC-a8UP42_aAYXvqc',
+  const supabaseUrl = String.fromEnvironment('SUPABASE_URL');
+  const supabaseAnonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
+
+  if (supabaseUrl.isNotEmpty && supabaseAnonKey.isNotEmpty) {
+    try {
+      await Supabase.initialize(
+        url: supabaseUrl,
+        publishableKey: supabaseAnonKey,
+      );
+    } catch (e) {
+      debugPrint('Supabase initialization failed: $e');
+    }
+  } else {
+    debugPrint(
+      'WARNING: SUPABASE_URL and SUPABASE_ANON_KEY must be passed via --dart-define:\n'
+      'flutter run --dart-define=SUPABASE_URL=<URL> --dart-define=SUPABASE_ANON_KEY=<KEY>',
     );
-  } catch (e) {
-    debugPrint('Supabase initialization failed: $e');
   }
 
   try {

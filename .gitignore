@@ -71,4 +71,12 @@ implementation_plan.md
 .agents/
 skills-lock.json
 
+# Cache, Backups & Build Binaries
+npm-cache/
+android/build/
+campusly_web_admin/public/*.apk
+.firebase/
+*.bak
+
+
 
