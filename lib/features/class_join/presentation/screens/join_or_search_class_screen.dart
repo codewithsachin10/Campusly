@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../../timetable/domain/models/custom_timetable_membership.dart';
@@ -36,7 +35,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             SizedBox(width: 4.w),
             Text(
               'Campusly',
-              style: AppTypography.textTheme.headlineMedium?.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.primary,
               ),
@@ -62,7 +61,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   child: Text(
                     (user?.name.isNotEmpty == true ? user!.name[0] : 'S')
                         .toUpperCase(),
-                    style: AppTypography.textTheme.titleMedium?.copyWith(
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,
                     ),
@@ -89,7 +88,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   Text(
                     'Find your class',
                     textAlign: TextAlign.center,
-                    style: AppTypography.textTheme.displayLarge?.copyWith(
+                    style: Theme.of(context).textTheme.displayLarge?.copyWith(
                       fontSize: 40.sp,
                       color: AppColors.onSurface,
                     ),
@@ -100,7 +99,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                     child: Text(
                       'Connect with your peers and sync your academic schedule in just a few taps.',
                       textAlign: TextAlign.center,
-                      style: AppTypography.textTheme.bodyLarge?.copyWith(
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                       ),
                     ),
@@ -158,7 +157,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                       ),
                       child: Text(
                         "Can't find your class? Create one",
-                        style: AppTypography.textTheme.labelLarge?.copyWith(
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           color: AppColors.primary,
                           fontWeight: FontWeight.w600,
                         ),
@@ -168,7 +167,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   SizedBox(height: 16.h),
                   Text(
                     'Academic Year 2024 • Term 2',
-                    style: AppTypography.textTheme.labelMedium?.copyWith(
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: AppColors.outline,
                     ),
                   ),
@@ -232,7 +231,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
               SizedBox(height: 12.h),
               Text(
                 title,
-                style: AppTypography.textTheme.titleMedium?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w700,
                   color: AppColors.onSurface,
                 ),
@@ -240,7 +239,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
               SizedBox(height: 6.h),
               Text(
                 desc,
-                style: AppTypography.textTheme.bodySmall?.copyWith(
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   height: 1.4.h,
                 ),
@@ -268,7 +267,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             SizedBox(width: 8.w),
             Text(
               'My Timetables',
-              style: AppTypography.textTheme.titleLarge?.copyWith(
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.onSurface,
               ),
@@ -287,7 +286,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
             alignment: Alignment.center,
             child: Text(
               "You haven't joined any classes yet.",
-              style: AppTypography.textTheme.bodyMedium?.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 color: AppColors.onSurfaceVariant,
               ),
             ),
@@ -371,7 +370,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                   children: [
                     Text(
                       title,
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.onSurface,
                       ),
@@ -382,7 +381,7 @@ class JoinOrSearchClassScreen extends ConsumerWidget {
                       SizedBox(height: 4.h),
                       Text(
                         subtitle,
-                        style: AppTypography.textTheme.bodySmall?.copyWith(
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                         maxLines: 1,

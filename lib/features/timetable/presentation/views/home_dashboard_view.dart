@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../events/presentation/providers/events_provider.dart';
 import '../../../notifications/presentation/providers/notifications_provider.dart';
@@ -117,7 +116,7 @@ class HomeDashboardView extends ConsumerWidget {
                     children: [
                       Text(
                         'Good morning, ${user?.name.trim().isNotEmpty == true ? user!.name.trim().split(' ').first : 'Student'} 👋',
-                        style: AppTypography.textTheme.headlineLarge?.copyWith(
+                        style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                           fontSize: 28.sp,
                           color: AppColors.onSurface,
                         ),
@@ -125,7 +124,7 @@ class HomeDashboardView extends ConsumerWidget {
                       SizedBox(height: 4.h),
                       Text(
                         headerDateText,
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                       ),
@@ -241,7 +240,7 @@ class HomeDashboardView extends ConsumerWidget {
                     SizedBox(height: 16.h),
                     Text(
                       isWeekend ? 'Weekend Free Day! 🎉' : 'No Classes Today! 🎉',
-                      style: AppTypography.textTheme.headlineSmall?.copyWith(
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.w800,
                       ),
@@ -252,7 +251,7 @@ class HomeDashboardView extends ConsumerWidget {
                           ? "It's the weekend! Relax, recharge, or catch up on self-paced projects."
                           : "You have no scheduled lectures for today. Enjoy your free time!",
                       textAlign: TextAlign.center,
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         height: 1.4.h,
                       ),
@@ -314,7 +313,7 @@ class HomeDashboardView extends ConsumerWidget {
                               children: [
                                 Text(
                                   '$classCount',
-                                  style: AppTypography.textTheme.headlineLarge
+                                  style: Theme.of(context).textTheme.headlineLarge
                                       ?.copyWith(
                                         fontSize: 28.sp,
                                         color: AppColors.onSurface,
@@ -324,7 +323,7 @@ class HomeDashboardView extends ConsumerWidget {
                                 SizedBox(height: 2.h),
                                 Text(
                                   'Classes',
-                                  style: AppTypography.textTheme.labelMedium
+                                  style: Theme.of(context).textTheme.labelMedium
                                       ?.copyWith(
                                         color: AppColors.onSurfaceVariant,
                                       ),
@@ -379,7 +378,7 @@ class HomeDashboardView extends ConsumerWidget {
                               children: [
                                 Text(
                                   '$breakCount',
-                                  style: AppTypography.textTheme.headlineLarge
+                                  style: Theme.of(context).textTheme.headlineLarge
                                       ?.copyWith(
                                         fontSize: 28.sp,
                                         color: AppColors.onSurface,
@@ -389,7 +388,7 @@ class HomeDashboardView extends ConsumerWidget {
                                 SizedBox(height: 2.h),
                                 Text(
                                   'Free Periods',
-                                  style: AppTypography.textTheme.labelMedium
+                                  style: Theme.of(context).textTheme.labelMedium
                                       ?.copyWith(
                                         color: AppColors.onSurfaceVariant,
                                       ),
@@ -413,7 +412,7 @@ class HomeDashboardView extends ConsumerWidget {
               children: [
                 Text(
                   "Today's Schedule",
-                  style: AppTypography.textTheme.titleLarge?.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     color: AppColors.onSurface,
                     fontWeight: FontWeight.bold,
                   ),
@@ -430,7 +429,7 @@ class HomeDashboardView extends ConsumerWidget {
                       children: [
                         Text(
                           'Full Calendar',
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             color: AppColors.primary,
                             fontWeight: FontWeight.bold,
                           ),
@@ -473,7 +472,7 @@ class HomeDashboardView extends ConsumerWidget {
                     SizedBox(height: 16.h),
                     Text(
                       'No classes scheduled for today.',
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.bold,
                       ),
@@ -481,7 +480,7 @@ class HomeDashboardView extends ConsumerWidget {
                     SizedBox(height: 4.h),
                     Text(
                       'Tap Full Calendar to explore your weekly timetable.',
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                       ),
                     ),
@@ -650,7 +649,7 @@ class HomeDashboardView extends ConsumerWidget {
           SizedBox(height: 16.h),
           Text(
             'No timetable chosen',
-            style: AppTypography.textTheme.headlineSmall?.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
@@ -659,7 +658,7 @@ class HomeDashboardView extends ConsumerWidget {
           Text(
             'You haven\'t selected or joined any class timetable yet.',
             textAlign: TextAlign.center,
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),

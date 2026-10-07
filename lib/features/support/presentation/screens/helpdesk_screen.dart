@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../providers/support_provider.dart';
 import '../widgets/gradient_text.dart';
@@ -83,7 +82,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
         title: GradientText(
           'Student Helpdesk',
           gradient: LinearGradient(colors: [Color(0xFF4285F4), Color(0xFFE91E63)]),
-          style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.w700),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -129,13 +128,6 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                     color: Colors.white.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(24.r),
                     border: Border.all(color: Colors.white, width: 2.w),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFFE91E63).withValues(alpha: 0.1),
-                        blurRadius: 20,
-                        offset: Offset(0, 10),
-                      ),
-                    ],
                   ),
                   child: Column(
                     children: [
@@ -146,7 +138,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                       SizedBox(height: 16.h),
                       Text(
                         'IT & Academic Helpdesk',
-                        style: AppTypography.titleMedium.copyWith(color: Color(0xFF5E35B1)),
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Color(0xFF5E35B1)),
                       ),
                       SizedBox(height: 8.h),
                       Row(
@@ -160,7 +152,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                           SizedBox(width: 8.w),
                           Text(
                             'Support Available',
-                            style: AppTypography.labelMedium.copyWith(color: Color(0xFF4CAF50), fontWeight: FontWeight.bold),
+                            style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Color(0xFF4CAF50), fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -173,7 +165,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                           Flexible(
                             child: Text(
                               'support@rec.edu.in | Ext: 4400 / 4401', 
-                              style: AppTypography.bodySmall.copyWith(color: Colors.black87),
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black87),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
@@ -188,21 +180,21 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                           Flexible(
                             child: Text(
                               'Admin Block - Room 102', 
-                              style: AppTypography.bodySmall.copyWith(color: Colors.black87),
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black87),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
                         ],
                       ),
                       SizedBox(height: 6.h),
-                      Text('(08:30 AM - 05:00 PM)', style: AppTypography.bodySmall.copyWith(color: Colors.black54)),
+                      Text('(08:30 AM - 05:00 PM)', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54)),
                     ],
                   ),
                 ),
                 SizedBox(height: 32.h),
 
                 // Raise Ticket Section
-                Text('Raise Support Ticket', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
+                Text('Raise Support Ticket', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.black87)),
                 SizedBox(height: 16.h),
 
                 Container(
@@ -211,20 +203,13 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                     color: Colors.white.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(20.r),
                     border: Border.all(color: Colors.white, width: 2.w),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFF4285F4).withValues(alpha: 0.05),
-                        blurRadius: 20,
-                        offset: Offset(0, 10),
-                      ),
-                    ],
                   ),
                   child: Form(
                     key: _formKey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Issue Category', style: AppTypography.labelMedium.copyWith(color: Colors.black87)),
+                        Text('Issue Category', style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black87)),
                         SizedBox(height: 8.h),
                         DropdownButtonFormField<String>(
                           isExpanded: true,
@@ -236,7 +221,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
                             enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12.r), borderSide: BorderSide(color: Color(0xFFF3E5F5))),
                           ),
-                          items: _categories.map((cat) => DropdownMenuItem(value: cat, child: Text(cat, style: AppTypography.bodyMedium))).toList(),
+                          items: _categories.map((cat) => DropdownMenuItem(value: cat, child: Text(cat, style: Theme.of(context).textTheme.bodyMedium))).toList(),
                           onChanged: (val) {
                             if (val != null) setState(() => _selectedCategory = val);
                           },
@@ -289,7 +274,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             children: [
                               Icon(LucideIcons.paperclip, color: Color(0xFFAB47BC)),
                               SizedBox(height: 8.h),
-                              Text('Add screenshot (PNG, JPG • Max 5 MB)', style: AppTypography.bodySmall.copyWith(color: Colors.black87)),
+                              Text('Add screenshot (PNG, JPG • Max 5 MB)', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black87)),
                             ],
                           ),
                         ),
@@ -327,7 +312,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                         SizedBox(height: 16.h),
                         Text(
                           'Campusly automatically includes your student profile and device details with this ticket.',
-                          style: AppTypography.labelMedium.copyWith(color: Colors.black54),
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.black54),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -337,7 +322,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                 SizedBox(height: 32.h),
 
                 // FAQs Section
-                Text('Frequently Asked Questions', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
+                Text('Frequently Asked Questions', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.black87)),
                 SizedBox(height: 16.h),
 
                 faqsAsync.when(
@@ -351,19 +336,16 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             color: Colors.white.withValues(alpha: 0.9),
                             borderRadius: BorderRadius.circular(14.r),
                             border: Border.all(color: Colors.white, width: 2.w),
-                            boxShadow: [
-                              BoxShadow(color: Color(0xFFE91E63).withValues(alpha: 0.05), blurRadius: 10, offset: Offset(0, 4)),
-                            ],
                           ),
                           child: ExpansionTile(
                             shape: Border(),
                             collapsedShape: Border(),
                             iconColor: Color(0xFF7E57C2),
                             collapsedIconColor: Color(0xFF7E57C2),
-                            title: Text(faq['question'], style: AppTypography.bodyMedium.copyWith(fontWeight: FontWeight.w600, color: Colors.black87)),
+                            title: Text(faq['question'], style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600, color: Colors.black87)),
                             childrenPadding: EdgeInsets.fromLTRB(16, 0, 16, 16),
                             children: [
-                              Text(faq['answer'], style: AppTypography.bodySmall.copyWith(height: 1.5.h, color: Colors.black54)),
+                              Text(faq['answer'], style: Theme.of(context).textTheme.bodySmall?.copyWith(height: 1.5.h, color: Colors.black54)),
                             ],
                           ),
                         );
@@ -378,7 +360,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                 Center(
                   child: Text(
                     'View All FAQs', 
-                    style: AppTypography.labelLarge.copyWith(color: Color(0xFF9C27B0), fontWeight: FontWeight.bold)
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Color(0xFF9C27B0), fontWeight: FontWeight.bold)
                   )
                 ),
                 SizedBox(height: 32.h),
@@ -390,19 +372,12 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                     color: Colors.white.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(20.r),
                     border: Border.all(color: Colors.white, width: 2.w),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xFF4285F4).withValues(alpha: 0.05),
-                        blurRadius: 20,
-                        offset: Offset(0, 10),
-                      ),
-                    ],
                   ),
                   child: Column(
                     children: [
-                      Text('Still Need Help?', style: AppTypography.bodyMedium.copyWith(color: Colors.black87)),
+                      Text('Still Need Help?', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.black87)),
                       SizedBox(height: 8.h),
-                      Text('Still need help? Can\'t find what you\'re looking for?', style: AppTypography.bodySmall.copyWith(color: Colors.black54), textAlign: TextAlign.center),
+                      Text('Still need help? Can\'t find what you\'re looking for?', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54), textAlign: TextAlign.center),
                       SizedBox(height: 24.h),
                       Container(
                         decoration: BoxDecoration(
@@ -415,7 +390,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                             Navigator.push(context, MaterialPageRoute(builder: (_) => MyTicketsScreen()));
                           },
                           icon: Text('🎫'),
-                          label: Text('My Support Tickets', style: AppTypography.labelLarge.copyWith(color: Colors.black87)),
+                          label: Text('My Support Tickets', style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.black87)),
                           style: OutlinedButton.styleFrom(
                             minimumSize: Size(double.infinity, 50),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
@@ -433,7 +408,7 @@ class _HelpdeskScreenState extends ConsumerState<HelpdeskScreen> {
                         child: OutlinedButton.icon(
                           onPressed: () {},
                           icon: Text('📧'),
-                          label: Text('Contact Support', style: AppTypography.labelLarge.copyWith(color: Colors.black87)),
+                          label: Text('Contact Support', style: Theme.of(context).textTheme.labelLarge?.copyWith(color: Colors.black87)),
                           style: OutlinedButton.styleFrom(
                             minimumSize: Size(double.infinity, 50),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),

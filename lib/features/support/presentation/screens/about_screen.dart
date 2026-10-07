@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -36,9 +35,9 @@ class AboutScreen extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.3),
-                    blurRadius: 20,
-                    offset: Offset(0, 8),
+                    color: AppColors.primary.withValues(alpha: 0.15),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
                   ),
                 ],
               ),
@@ -52,7 +51,7 @@ class AboutScreen extends StatelessWidget {
 
             Text(
               'CAMPUSLY',
-              style: AppTypography.textTheme.headlineLarge?.copyWith(
+              style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                 fontWeight: FontWeight.w900,
                 color: AppColors.primary,
                 letterSpacing: 2.0,
@@ -67,7 +66,7 @@ class AboutScreen extends StatelessWidget {
               ),
               child: Text(
                 'Version 2.4.0 (Build 2026.07 - Stable)',
-                style: AppTypography.labelMedium.copyWith(
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.bold,
                 ),
@@ -78,7 +77,7 @@ class AboutScreen extends StatelessWidget {
             Text(
               'Next-Generation Smart Campus Experience & Unified Academic Operating System tailored for Rajalakshmi Engineering College (REC).',
               textAlign: TextAlign.center,
-              style: AppTypography.bodyMedium.copyWith(
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 color: AppColors.textSecondary,
                 height: 1.5.h,
               ),
@@ -87,24 +86,29 @@ class AboutScreen extends StatelessWidget {
 
             // Feature Highlights
             _buildInfoSection(
+              context,
               title: 'Core Ecosystem Features',
               items: [
                 _buildInfoTile(
+                  context,
                   LucideIcons.calendarClock,
                   'Intelligent Timetable',
                   'Real-time lecture schedules, room swaps & live attendance tracking.',
                 ),
                 _buildInfoTile(
+                  context,
                   LucideIcons.zap,
                   'Hackathons & Events Hub',
                   'One-tap registrations and live countdowns for technical fests.',
                 ),
                 _buildInfoTile(
+                  context,
                   LucideIcons.bellRing,
                   'Targeted Push Alerts',
                   'Department and section-level instant notices & circulars.',
                 ),
                 _buildInfoTile(
+                  context,
                   LucideIcons.map,
                   'Interactive Campus Map',
                   'Real-time floor directory & indoor navigation across academic blocks.',
@@ -115,19 +119,23 @@ class AboutScreen extends StatelessWidget {
 
             // Institution & Credits
             _buildInfoSection(
+              context,
               title: 'Institution & Developers',
               items: [
                 _buildInfoTile(
+                  context,
                   LucideIcons.building,
                   'Institution',
                   'Rajalakshmi Engineering College (Autonomous), Chennai.',
                 ),
                 _buildInfoTile(
+                  context,
                   LucideIcons.code2,
                   'Designed & Engineered by',
                   'Sachin Gopalakrishnan (CSBS Dept) & Campusly Core Team.',
                 ),
                 _buildInfoTile(
+                  context,
                   LucideIcons.shieldCheck,
                   'Security & Privacy',
                   'End-to-end encrypted student records with Supabase PostgreSQL infrastructure.',
@@ -139,7 +147,7 @@ class AboutScreen extends StatelessWidget {
             Text(
               '© 2026 Campusly Systems. All rights reserved.\nMade with ❤️ for students & faculty.',
               textAlign: TextAlign.center,
-              style: AppTypography.bodySmall.copyWith(
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color: AppColors.textSecondary,
                 height: 1.5.h,
               ),
@@ -151,7 +159,8 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildInfoSection({
+  Widget _buildInfoSection(
+    BuildContext context, {
     required String title,
     required List<Widget> items,
   }) {
@@ -164,20 +173,13 @@ class AboutScreen extends StatelessWidget {
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.5),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: 10,
-            offset: Offset(0, 4),
-          ),
-        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
-            style: AppTypography.titleMedium.copyWith(
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.w800,
             ),
           ),
@@ -188,7 +190,7 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildInfoTile(IconData icon, String title, String subtitle) {
+  Widget _buildInfoTile(BuildContext context, IconData icon, String title, String subtitle) {
     return Padding(
       padding: EdgeInsets.only(bottom: 14.h),
       child: Row(
@@ -209,7 +211,7 @@ class AboutScreen extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: AppTypography.labelLarge.copyWith(
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppColors.onSurface,
                   ),
@@ -217,7 +219,7 @@ class AboutScreen extends StatelessWidget {
                 SizedBox(height: 2.h),
                 Text(
                   subtitle,
-                  style: AppTypography.bodySmall.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: AppColors.textSecondary,
                     height: 1.3.h,
                   ),

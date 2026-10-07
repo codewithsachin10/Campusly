@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../data/models/support_ticket.dart';
 import '../providers/support_provider.dart';
 import '../widgets/gradient_text.dart';
@@ -87,7 +86,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
           gradient: LinearGradient(
             colors: [Color(0xFF4285F4), Color(0xFFE91E63)],
           ),
-          style: AppTypography.titleLarge.copyWith(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -113,18 +112,6 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.r),
                       border: Border.all(color: AppColors.primary.withValues(alpha: 0.1)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFFE91E63).withValues(alpha: 0.08),
-                          blurRadius: 40,
-                          offset: const Offset(-10, 10),
-                        ),
-                        BoxShadow(
-                          color: const Color(0xFF4285F4).withValues(alpha: 0.08),
-                          blurRadius: 40,
-                          offset: const Offset(10, 10),
-                        ),
-                      ],
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -135,14 +122,14 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                             TicketStatusBadge(status: widget.ticket.status),
                             Text(
                               _timeAgo(widget.ticket.createdAt),
-                              style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppColors.textSecondary),
                             ),
                           ],
                         ),
                         SizedBox(height: 16.h),
                         Text(
                           widget.ticket.subject,
-                          style: AppTypography.headlineSmall.copyWith(fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 12.h),
                         Container(
@@ -181,7 +168,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(studentName, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
+                              Text(studentName, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                               Text('Student', style: TextStyle(color: Color(0xFF7E57C2), fontSize: 12.sp)),
                             ],
                           ),
@@ -197,7 +184,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Roll', style: TextStyle(color: AppColors.textSecondary, fontSize: 12.sp)),
-                              Text(rollNo, style: AppTypography.titleMedium.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
+                              Text(rollNo, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                             ],
                           ),
                         ),
@@ -216,13 +203,6 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: AppColors.surfaceVariant),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.primary.withValues(alpha: 0.05),
-                          blurRadius: 10,
-                          offset: const Offset(4, 0), // left border effect
-                        ),
-                      ],
                     ),
                     child: IntrinsicHeight(
                       child: Row(
@@ -238,7 +218,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                           Expanded(
                             child: Text(
                               widget.ticket.description,
-                              style: AppTypography.bodyMedium,
+                              style: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ),
                         ],
@@ -344,7 +324,7 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                                                   ],
                                                 ),
                                                 SizedBox(height: 8.h),
-                                                Text(msg['message'], style: AppTypography.bodyMedium),
+                                                Text(msg['message'], style: Theme.of(context).textTheme.bodyMedium),
                                               ],
                                             ),
                                           ),

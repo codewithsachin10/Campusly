@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/widgets/pressable_scale.dart';
 import '../../domain/models/timetable_item.dart';
 import '../screens/subject_detail_page.dart';
@@ -61,7 +60,7 @@ class DynamicScheduleCard extends StatelessWidget {
                       Expanded(
                         child: Text(
                           item.title,
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.w600,
                             color: AppColors.onSurfaceVariant,
                           ),
@@ -71,7 +70,7 @@ class DynamicScheduleCard extends StatelessWidget {
                       SizedBox(width: 8.w),
                       Text(
                         item.timeRange,
-                        style: AppTypography.textTheme.labelMedium?.copyWith(
+                        style: Theme.of(context).textTheme.labelMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                       ),
@@ -151,7 +150,7 @@ class DynamicScheduleCard extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 item.title,
-                                style: AppTypography.textTheme.bodyLarge?.copyWith(
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   color: isCurrent
                                       ? AppColors.primary
@@ -163,7 +162,7 @@ class DynamicScheduleCard extends StatelessWidget {
                             SizedBox(width: 8.w),
                             Text(
                               item.timeRange,
-                              style: AppTypography.textTheme.labelMedium?.copyWith(
+                              style: Theme.of(context).textTheme.labelMedium?.copyWith(
                                 fontWeight: isCurrent
                                     ? FontWeight.bold
                                     : FontWeight.normal,
@@ -177,7 +176,7 @@ class DynamicScheduleCard extends StatelessWidget {
                         SizedBox(height: 4.h),
                         Text(
                           '${item.room} • ${item.instructor}',
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                         ),
@@ -195,7 +194,7 @@ class DynamicScheduleCard extends StatelessWidget {
                             ),
                             child: Text(
                               item.category.toUpperCase(),
-                              style: AppTypography.textTheme.labelSmall?.copyWith(
+                              style: Theme.of(context).textTheme.labelSmall?.copyWith(
                                 color: AppColors.primary,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 10.sp,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../providers/curriculum_provider.dart';
 import '../../domain/models/curriculum_item.dart';
 import 'subject_details_screen.dart';
@@ -51,7 +50,7 @@ class CurriculumScreen extends ConsumerWidget {
                       SizedBox(height: 16.h),
                       Text(
                         curriculumData.departmentName,
-                        style: AppTypography.textTheme.headlineSmall?.copyWith(
+                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.w900,
                           color: AppColors.onSurface,
                           height: 1.2.h,
@@ -60,7 +59,7 @@ class CurriculumScreen extends ConsumerWidget {
                       SizedBox(height: 8.h),
                       Text(
                         '${curriculumData.batchName} • Semester ${curriculumData.currentSemester}',
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                       ),
@@ -131,7 +130,7 @@ class CurriculumScreen extends ConsumerWidget {
                         children: [
                           Text(
                             'Subjects',
-                            style: AppTypography.textTheme.titleLarge?.copyWith(
+                            style: Theme.of(context).textTheme.titleLarge?.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -253,7 +252,7 @@ class CurriculumScreen extends ConsumerWidget {
           SizedBox(height: 16.h),
           Text(
             'My Curriculum',
-            style: AppTypography.textTheme.headlineMedium?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.onSurface,
             ),
@@ -261,7 +260,7 @@ class CurriculumScreen extends ConsumerWidget {
           SizedBox(height: 8.h),
           Text(
             'View your subjects and credits for the selected semester.',
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
@@ -565,7 +564,7 @@ class CurriculumScreen extends ConsumerWidget {
             SizedBox(height: 12.h),
             Text(
               item.subjectName,
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.onSurface,
                 height: 1.2.h,

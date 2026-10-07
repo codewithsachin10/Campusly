@@ -5,7 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../../settings/presentation/screens/settings_screen.dart';
@@ -31,7 +30,7 @@ class ProfileView extends ConsumerWidget {
               Expanded(
                 child: Text(
                   'Student Profile',
-                  style: AppTypography.textTheme.headlineLarge?.copyWith(
+                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                     fontSize: 32.sp,
                     fontWeight: FontWeight.w800,
                     color: AppColors.onSurface,
@@ -74,9 +73,9 @@ class ProfileView extends ConsumerWidget {
               borderRadius: BorderRadius.circular(32.r),
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.primary.withValues(alpha: 0.3),
-                  blurRadius: 20,
-                  offset: Offset(0, 10),
+                  color: AppColors.primary.withValues(alpha: 0.15),
+                  blurRadius: 12,
+                  offset: const Offset(0, 4),
                 ),
               ],
             ),
@@ -100,7 +99,7 @@ class ProfileView extends ConsumerWidget {
                         user?.name.isNotEmpty == true
                             ? user!.name[0].toUpperCase()
                             : 'S',
-                        style: AppTypography.textTheme.headlineLarge?.copyWith(
+                        style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                           color: AppColors.onPrimary,
                           fontSize: 36.sp,
                           fontWeight: FontWeight.bold,
@@ -119,7 +118,7 @@ class ProfileView extends ConsumerWidget {
                                   user?.name.isNotEmpty == true
                                       ? user!.name
                                       : 'Student Profile',
-                                  style: AppTypography.textTheme.headlineSmall
+                                  style: Theme.of(context).textTheme.headlineSmall
                                       ?.copyWith(
                                         color: AppColors.onPrimary,
                                         fontWeight: FontWeight.bold,
@@ -150,7 +149,7 @@ class ProfileView extends ConsumerWidget {
                             ),
                             child: Text(
                               user?.department ?? 'Institutional Department',
-                              style: AppTypography.textTheme.labelMedium
+                              style: Theme.of(context).textTheme.labelMedium
                                   ?.copyWith(
                                     color: AppColors.onPrimary,
                                     fontWeight: FontWeight.bold,
@@ -162,7 +161,7 @@ class ProfileView extends ConsumerWidget {
                             user?.email.isNotEmpty == true
                                 ? user!.email
                                 : 'No email address',
-                            style: AppTypography.textTheme.bodySmall?.copyWith(
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: AppColors.onPrimary.withValues(alpha: 0.8),
                             ),
                           ),
@@ -212,7 +211,7 @@ class ProfileView extends ConsumerWidget {
                         children: [
                           Text(
                             'ENROLLED ACADEMIC SECTION',
-                            style: AppTypography.textTheme.labelSmall
+                            style: Theme.of(context).textTheme.labelSmall
                                 ?.copyWith(
                                   color: AppColors.onSurfaceVariant,
                                   fontWeight: FontWeight.bold,
@@ -226,7 +225,7 @@ class ProfileView extends ConsumerWidget {
                             currentClass != null
                                 ? '${currentClass.name} · ${currentClass.section}'
                                 : 'No active class enrolled',
-                            style: AppTypography.textTheme.titleMedium
+                            style: Theme.of(context).textTheme.titleMedium
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   color: AppColors.onSurface,
@@ -255,7 +254,7 @@ class ProfileView extends ConsumerWidget {
                       Expanded(
                         child: Text(
                           'Invite Code: ${currentClass?.code ?? "Not enrolled"}',
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             fontWeight: FontWeight.w800,
                             color: AppColors.primary,
                           ),
@@ -364,7 +363,7 @@ class ProfileView extends ConsumerWidget {
           // Academic Summary Grid
           Text(
             'ACADEMIC OVERVIEW',
-            style: AppTypography.textTheme.labelMedium?.copyWith(
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
               fontWeight: FontWeight.w800,
               letterSpacing: 1.2,
               color: AppColors.onSurfaceVariant,
@@ -380,6 +379,7 @@ class ProfileView extends ConsumerWidget {
             childAspectRatio: 1.15,
             children: [
               _buildStatCard(
+                context,
                 icon: Icons.fact_check_rounded,
                 color: AppColors.secondary,
                 label: 'Attendance Target',
@@ -387,6 +387,7 @@ class ProfileView extends ConsumerWidget {
                 subtitle: 'On Track (18/20 classes)',
               ),
               _buildStatCard(
+                context,
                 icon: Icons.auto_stories_rounded,
                 color: AppColors.primary,
                 label: 'Enrolled Subjects',
@@ -394,6 +395,7 @@ class ProfileView extends ConsumerWidget {
                 subtitle: 'Plus 2 Lab Practicals',
               ),
               _buildStatCard(
+                context,
                 icon: Icons.schedule_rounded,
                 color: AppColors.tertiary,
                 label: 'Weekly Workload',
@@ -401,6 +403,7 @@ class ProfileView extends ConsumerWidget {
                 subtitle: 'Mon — Fri Timetable',
               ),
               _buildStatCard(
+                context,
                 icon: Icons.cloud_done_rounded,
                 color: AppColors.onSurfaceVariant,
                 label: 'Offline Engine',
@@ -415,7 +418,7 @@ class ProfileView extends ConsumerWidget {
           // Menu Navigation Section
           Text(
             'ACCOUNT & PREFERENCES',
-            style: AppTypography.textTheme.labelMedium?.copyWith(
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
               fontWeight: FontWeight.w800,
               letterSpacing: 1.2,
               color: AppColors.onSurfaceVariant,
@@ -433,6 +436,7 @@ class ProfileView extends ConsumerWidget {
             child: Column(
               children: [
                 _buildMenuTile(
+                  context,
                   icon: Icons.notifications_active_outlined,
                   iconColor: AppColors.primary,
                   title: 'System Notifications & Reminders',
@@ -445,6 +449,7 @@ class ProfileView extends ConsumerWidget {
                 ),
                 Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
+                  context,
                   icon: Icons.person_search_rounded,
                   iconColor: AppColors.primary,
                   title: 'Edit Social Profile',
@@ -459,6 +464,7 @@ class ProfileView extends ConsumerWidget {
                 ),
                 Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
+                  context,
                   icon: Icons.tune_rounded,
                   iconColor: AppColors.secondary,
                   title: 'App Settings & Themes',
@@ -471,6 +477,7 @@ class ProfileView extends ConsumerWidget {
                 ),
                 Divider(height: 1.h, indent: 60, endIndent: 20),
                 _buildMenuTile(
+                  context,
                   icon: Icons.share_rounded,
                   iconColor: AppColors.tertiary,
                   title: 'Share Class Community',
@@ -545,7 +552,7 @@ class ProfileView extends ConsumerWidget {
             icon: Icon(Icons.logout_rounded, size: 22),
             label: Text(
               'Sign Out of Account',
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppColors.error,
                 fontWeight: FontWeight.bold,
               ),
@@ -557,7 +564,8 @@ class ProfileView extends ConsumerWidget {
     );
   }
 
-  Widget _buildStatCard({
+  Widget _buildStatCard(
+    BuildContext context, {
     required IconData icon,
     required Color color,
     required String label,
@@ -592,7 +600,7 @@ class ProfileView extends ConsumerWidget {
               Flexible(
                 child: Text(
                   value,
-                  style: AppTypography.textTheme.titleLarge?.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.w800,
                     color: AppColors.onSurface,
                   ),
@@ -606,7 +614,7 @@ class ProfileView extends ConsumerWidget {
             children: [
               Text(
                 label,
-                style: AppTypography.textTheme.labelLarge?.copyWith(
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppColors.onSurface,
                 ),
@@ -616,7 +624,7 @@ class ProfileView extends ConsumerWidget {
               SizedBox(height: 2.h),
               Text(
                 subtitle,
-                style: AppTypography.textTheme.bodySmall?.copyWith(
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   fontSize: 11.sp,
                 ),
@@ -630,7 +638,8 @@ class ProfileView extends ConsumerWidget {
     );
   }
 
-  Widget _buildMenuTile({
+  Widget _buildMenuTile(
+    BuildContext context, {
     required IconData icon,
     required Color iconColor,
     required String title,
@@ -649,14 +658,14 @@ class ProfileView extends ConsumerWidget {
       ),
       title: Text(
         title,
-        style: AppTypography.textTheme.titleMedium?.copyWith(
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
           fontWeight: FontWeight.bold,
           color: AppColors.onSurface,
         ),
       ),
       subtitle: Text(
         subtitle,
-        style: AppTypography.textTheme.bodySmall?.copyWith(
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
           color: AppColors.onSurfaceVariant,
         ),
       ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
+import '../../../../core/theme/app_shadows.dart';
 import '../../../../core/widgets/pressable_scale.dart';
 import '../providers/timetable_provider.dart';
 import '../screens/subject_detail_page.dart';
@@ -26,9 +26,6 @@ class OngoingClassCard extends ConsumerWidget {
       error: (error, stackTrace) => const SizedBox.shrink(),
       data: (ongoing) {
         if (ongoing == null) return const SizedBox.shrink();
-
-        // Fine-grained live countdown tick: only this card updates each second
-        ref.watch(liveTickerProvider);
 
         final now = DateTime.now();
         final currentMin = now.hour * 60 + now.minute;
@@ -58,16 +55,7 @@ class OngoingClassCard extends ConsumerWidget {
             decoration: BoxDecoration(
               color: AppColors.surfaceContainerLowest,
               borderRadius: BorderRadius.circular(20.r),
-              border: Border.all(
-                color: AppColors.outlineVariant.withValues(alpha: 0.3),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: badgeColor.withValues(alpha: 0.06),
-                  blurRadius: 20,
-                  offset: const Offset(0, 6),
-                ),
-              ],
+              boxShadow: AppShadows.cardShadow,
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20.r),
@@ -112,7 +100,7 @@ class OngoingClassCard extends ConsumerWidget {
                                 ongoing.isBreak
                                     ? 'ONGOING BREAK'
                                     : 'ONGOING CLASS',
-                                style: AppTypography.textTheme.labelMedium?.copyWith(
+                                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                                   color: badgeColor,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1.0,
@@ -123,7 +111,7 @@ class OngoingClassCard extends ConsumerWidget {
                         ),
                         Text(
                           'Ends in $minsLeft mins',
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                             fontWeight: FontWeight.w600,
                           ),
@@ -133,7 +121,7 @@ class OngoingClassCard extends ConsumerWidget {
                     SizedBox(height: 16.h),
                     Text(
                       ongoing.title,
-                      style: AppTypography.textTheme.headlineSmall?.copyWith(
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.bold,
                         height: 1.3.h,
@@ -150,7 +138,7 @@ class OngoingClassCard extends ConsumerWidget {
                         SizedBox(width: 6.w),
                         Text(
                           ongoing.timeRange,
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                         ),
@@ -164,7 +152,7 @@ class OngoingClassCard extends ConsumerWidget {
                         Expanded(
                           child: Text(
                             ongoing.room,
-                            style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: AppColors.onSurfaceVariant,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -180,13 +168,13 @@ class OngoingClassCard extends ConsumerWidget {
                           ongoing.isBreak
                               ? 'Break Progress'
                               : 'Course Progress',
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                         ),
                         Text(
                           '${progress.toInt()}%',
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             color: badgeColor,
                             fontWeight: FontWeight.bold,
                           ),

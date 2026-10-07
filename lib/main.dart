@@ -9,12 +9,14 @@ import 'core/theme/theme_provider.dart';
 import 'core/services/push_notification_service.dart';
 import 'core/services/error_reporter.dart';
 import 'core/widgets/connectivity_banner.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'core/widgets/error_state.dart';
 
 import 'dart:ui';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  GoogleFonts.config.allowRuntimeFetching = false;
 
   // Global Error Handling
   FlutterError.onError = ErrorReporter.recordFlutterError;

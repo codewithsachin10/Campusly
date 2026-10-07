@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/presence_model.dart';
 import '../../data/location_repository.dart';
@@ -110,7 +109,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
         ),
         title: Text(
           'Campus Now',
-          style: AppTypography.textTheme.titleMedium?.copyWith(
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -127,7 +126,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
               children: [
                 Text(
                   'Share your location',
-                  style: AppTypography.textTheme.titleMedium?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -268,6 +267,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                 }
 
                 return ListView(
+                  cacheExtent: 300,
                   padding: EdgeInsets.all(16.w),
                   children: grouped.entries.map((entry) {
                     if (entry.value.isEmpty) return SizedBox.shrink();
@@ -276,7 +276,7 @@ class _CampusPresenceScreenState extends ConsumerState<CampusPresenceScreen> {
                       children: [
                         Text(
                           entry.key,
-                          style: AppTypography.textTheme.titleMedium?.copyWith(
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppColors.primary,
                           ),

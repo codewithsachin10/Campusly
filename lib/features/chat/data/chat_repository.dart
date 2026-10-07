@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,7 +11,11 @@ import '../domain/models/message_model.dart';
 final chatRepositoryProvider = Provider<ChatRepository>((ref) {
   final dbService = ref.watch(databaseServiceProvider);
   final syncService = ref.watch(syncEngineProvider);
-  return ChatRepository(Supabase.instance.client, dbService, syncService);
+  final repo = ChatRepository(Supabase.instance.client, dbService, syncService);
+  ref.onDispose(() {
+    repo.dispose();
+  });
+  return repo;
 });
 
 class ChatRepository {
@@ -18,66 +23,42 @@ class ChatRepository {
   final DatabaseService _dbService;
   final SyncEngineService _syncService;
 
+  StreamSubscription? _chatsSubscription;
+  final Map<String, StreamSubscription> _messagesSubscriptions = {};
+
   ChatRepository(this._supabase, this._dbService, this._syncService);
 
-  // --- Offline First Reads ---
-
-  Stream<List<ChatModel>> streamUserChats(String userId) async* {
-    // 1. Yield from local DB initially
-    yield await _getLocalChats(userId);
-
-    // 2. Start a Supabase listener that updates local DB
-    _supabase.from('chats').stream(primaryKey: ['id']).listen((data) async {
-      final db = await _dbService.database;
-      for (var row in data) {
-        final participants = List<String>.from(row['participants'] ?? []);
-        if (!participants.contains(userId)) continue;
-
-        await db.insert('chats', {
-          'id': row['id'],
-          'data': jsonEncode(row),
-          'lastUpdated': DateTime.now().millisecondsSinceEpoch,
-        }, conflictAlgorithm: ConflictAlgorithm.replace);
-      }
-      _dbService.notifyTableUpdated('chats');
-    });
-
-    // 3. Yield whenever local DB updates
-    await for (final _ in _dbService.onTableUpdated) {
-      yield await _getLocalChats(userId);
-    }
+  void _ensureChatsSubscription(String userId) {
+    if (_chatsSubscription != null) return;
+    _chatsSubscription = _supabase
+        .from('chats')
+        .stream(primaryKey: ['id'])
+        .listen((data) async {
+          final db = await _dbService.database;
+          final batch = db.batch();
+          for (var row in data) {
+            final participants = List<String>.from(row['participants'] ?? []);
+            batch.insert('chats', {
+              'id': row['id'],
+              'data': jsonEncode(row),
+              'participants': participants.join(','),
+              'lastUpdated': DateTime.now().millisecondsSinceEpoch,
+            }, conflictAlgorithm: ConflictAlgorithm.replace);
+          }
+          await batch.commit(noResult: true);
+          _dbService.notifyTableUpdated('chats');
+        });
   }
 
-  Future<List<ChatModel>> _getLocalChats(String userId) async {
-    final db = await _dbService.database;
-    final results = await db.query('chats');
-
-    final chats = results.map((row) {
-      final data = jsonDecode(row['data'] as String);
-      return ChatModel.fromJson(data);
-    }).toList();
-
-    // Filter locally and sort
-    final filtered = chats
-        .where((c) => c.participants.contains(userId))
-        .toList();
-    filtered.sort(
-      (a, b) => (b.lastMessageTime ?? DateTime.now()).compareTo(
-        a.lastMessageTime ?? DateTime.now(),
-      ),
-    );
-    return filtered;
-  }
-
-  Stream<List<MessageModel>> streamMessages(String chatId) async* {
-    yield await _getLocalMessages(chatId);
-
-    _supabase
+  void _ensureMessagesSubscription(String chatId) {
+    if (_messagesSubscriptions.containsKey(chatId)) return;
+    _messagesSubscriptions[chatId] = _supabase
         .from('messages')
         .stream(primaryKey: ['id'])
         .eq('chatId', chatId)
         .listen((data) async {
           final db = await _dbService.database;
+          final batch = db.batch();
           for (var row in data) {
             final timestamp =
                 DateTime.tryParse(
@@ -85,7 +66,7 @@ class ChatRepository {
                 )?.millisecondsSinceEpoch ??
                 0;
 
-            await db.insert('messages', {
+            batch.insert('messages', {
               'id': row['id'],
               'chatId': chatId,
               'data': jsonEncode(row),
@@ -93,8 +74,57 @@ class ChatRepository {
               'timestamp': timestamp,
             }, conflictAlgorithm: ConflictAlgorithm.replace);
           }
+          await batch.commit(noResult: true);
           _dbService.notifyTableUpdated('messages_$chatId');
         });
+  }
+
+  void cancelMessagesSubscription(String chatId) {
+    _messagesSubscriptions[chatId]?.cancel();
+    _messagesSubscriptions.remove(chatId);
+  }
+
+  void dispose() {
+    _chatsSubscription?.cancel();
+    _chatsSubscription = null;
+    for (final sub in _messagesSubscriptions.values) {
+      sub.cancel();
+    }
+    _messagesSubscriptions.clear();
+  }
+
+  // --- Offline First Reads ---
+
+  Stream<List<ChatModel>> streamUserChats(String userId) async* {
+    _ensureChatsSubscription(userId);
+    yield await _getLocalChats(userId);
+
+    await for (final update in _dbService.onTableUpdated) {
+      if (update == 'chats') {
+        yield await _getLocalChats(userId);
+      }
+    }
+  }
+
+  Future<List<ChatModel>> _getLocalChats(String userId) async {
+    final db = await _dbService.database;
+    // Indexed WHERE query on participants column instead of loading all rows
+    final results = await db.query(
+      'chats',
+      where: 'participants LIKE ?',
+      whereArgs: ['%$userId%'],
+      orderBy: 'lastUpdated DESC',
+    );
+
+    return results.map((row) {
+      final data = jsonDecode(row['data'] as String);
+      return ChatModel.fromJson(data);
+    }).toList();
+  }
+
+  Stream<List<MessageModel>> streamMessages(String chatId) async* {
+    _ensureMessagesSubscription(chatId);
+    yield await _getLocalMessages(chatId);
 
     await for (final update in _dbService.onTableUpdated) {
       if (update == 'messages_$chatId') {

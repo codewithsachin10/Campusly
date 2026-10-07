@@ -1,15 +1,12 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/services/notification_service.dart';
+import '../../../../core/services/home_widget_service.dart';
 import '../../../../core/services/system_notifications_watcher.dart';
-import '../../../auth/presentation/providers/auth_provider.dart';
-import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../../profile/presentation/views/profile_view.dart';
-import '../../../notifications/presentation/providers/notifications_provider.dart';
 import '../views/home_dashboard_view.dart';
 import '../views/schedule_planner_view.dart';
 import '../views/placeholder_views.dart';
@@ -17,10 +14,17 @@ import '../views/attendance_dashboard_view.dart';
 import '../widgets/campusly_side_drawer.dart';
 import '../providers/timetable_provider.dart';
 import '../../domain/models/timetable_item.dart';
-import '../../../chat/presentation/widgets/sync_status_indicator.dart';
 import '../../../../core/services/sync_engine_service.dart';
 import '../../../../core/services/presence_service.dart';
 import '../../../../core/services/app_haptics.dart';
+import '../../../../core/widgets/lazy_indexed_stack.dart';
+import '../widgets/home_app_bar.dart';
+
+final _appServicesInitProvider = Provider<void>((ref) {
+  ref.watch(syncEngineProvider);
+  ref.watch(presenceServiceProvider);
+  ref.watch(systemNotificationsWatcherProvider);
+});
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -31,6 +35,13 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _selectedIndex = 0;
+  Timer? _homeWidgetDebounceTimer;
+
+  @override
+  void dispose() {
+    _homeWidgetDebounceTimer?.cancel();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -50,20 +61,47 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     });
   }
 
+  Widget _buildTab(BuildContext context, int index) {
+    switch (index) {
+      case 0:
+        return HomeDashboardView(
+          onNavigateToSchedule: () {
+            if (_selectedIndex != 1) {
+              AppHaptics.selectionClick();
+              setState(() {
+                _selectedIndex = 1;
+              });
+            }
+          },
+        );
+      case 1:
+        return const SchedulePlannerView();
+      case 2:
+        return const CoursesShellView();
+      case 3:
+        return const AttendanceDashboardView();
+      case 4:
+        return const ProfileView();
+      default:
+        return const SizedBox.shrink();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final user = ref.watch(authControllerProvider).value;
-    final currentClass = ref.watch(currentClassProvider);
-    final unreadCount = ref.watch(unreadNotificationsCountProvider);
+    // Keep background sync, presence, and system notification engines alive without rebuilding shell
+    ref.listen(_appServicesInitProvider, (previous, next) {});
 
-    // Initialize SyncEngine (offline background processing)
-    ref.watch(syncEngineProvider);
-
-    // Initialize Realtime Presence Tracking
-    ref.watch(presenceServiceProvider);
-
-    // Watch real-time system notifications engine (triggers status bar alerts for new notices)
-    ref.watch(systemNotificationsWatcherProvider);
+    // Debounced HomeWidget update on schedule snapshot change
+    ref.listen(widgetScheduleSnapshotProvider, (previous, next) {
+      _homeWidgetDebounceTimer?.cancel();
+      _homeWidgetDebounceTimer = Timer(const Duration(milliseconds: 500), () {
+        HomeWidgetService().updateWidgetData(
+          ongoingClass: next.ongoing,
+          nextClass: next.next,
+        );
+      });
+    });
 
     // Schedule notifications whenever weekly schedule or preferences change
     ref.listen<AsyncValue<List<TimetableItem>>>(weeklyScheduleProvider, (
@@ -90,20 +128,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       }
     });
 
-    final views = [
-      HomeDashboardView(
-        onNavigateToSchedule: () {
-          setState(() {
-            _selectedIndex = 1;
-          });
-        },
-      ),
-      SchedulePlannerView(),
-      CoursesShellView(),
-      AttendanceDashboardView(),
-      ProfileView(),
-    ];
-
     return Scaffold(
       backgroundColor: AppColors.background,
       drawer: CampuslySideDrawer(
@@ -117,160 +141,22 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         },
       ),
       drawerEdgeDragWidth: MediaQuery.of(context).size.width * 0.45,
-      appBar: AppBar(
-        backgroundColor: AppColors.surface.withValues(alpha: 0.9),
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        leading: Builder(
-          builder: (ctx) => IconButton(
-            icon: Icon(
-              Icons.menu_rounded,
-              color: AppColors.primary,
-              size: 26,
-            ),
-            tooltip: 'Open Side Navigation Drawer',
-            onPressed: () => Scaffold.of(ctx).openDrawer(),
-          ),
-        ),
-        title: Row(
-          children: [
-            Container(
-              padding: EdgeInsets.all(8.w),
-              decoration: BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: BorderRadius.circular(12.r),
-              ),
-              child: Icon(
-                Icons.school_rounded,
-                color: AppColors.onPrimary,
-                size: 20,
-              ),
-            ),
-            SizedBox(width: 12.w),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Campusly',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTypography.textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.onSurface,
-                      letterSpacing: -0.5,
-                    ),
-                  ),
-                  if (currentClass != null)
-                    Text(
-                      currentClass.code,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.textTheme.labelSmall?.copyWith(
-                        color: AppColors.primary,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          // Global Sync Status
-          Center(child: SyncStatusIndicator()),
-          SizedBox(width: 8.w),
-
-          // Class switcher button
-          IconButton(
-            onPressed: () {
-              context.push('/join-class-choice');
-            },
-            tooltip: 'Switch or Join Class',
-            icon: Container(
-              padding: EdgeInsets.all(8.w),
-              decoration: BoxDecoration(
-                color: AppColors.primary.withValues(alpha: 0.1),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(
-                Icons.swap_horiz_rounded,
-                color: AppColors.primary,
-                size: 20,
-              ),
-            ),
-          ),
-          // Notification icon
-          IconButton(
-            onPressed: () {
-              context.push('/notifications');
-            },
-            tooltip: 'Notification Center',
-            icon: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Icon(
-                  Icons.notifications_none_rounded,
-                  color: AppColors.onSurfaceVariant,
-                  size: 26,
-                ),
-                if (unreadCount > 0)
-                  Positioned(
-                    right: -2,
-                    top: -2,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 4.w,
-                        vertical: 1.h,
-                      ),
-                      decoration: BoxDecoration(
-                        color: AppColors.error,
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Text(
-                        unreadCount > 9 ? '9+' : '$unreadCount',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 9.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-              ],
-            ),
-          ),
-          SizedBox(width: 4.w),
-          // Profile Avatar
-          GestureDetector(
-            onTap: () {
-              if (_selectedIndex != 4) {
-                AppHaptics.selectionClick();
-                setState(() {
-                  _selectedIndex = 4; // Navigate to Profile tab
-                });
-              }
-            },
-            child: Padding(
-              padding: EdgeInsets.only(right: 16.0.w),
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: AppColors.primary,
-                child: Text(
-                  (user?.name.trim().isNotEmpty == true)
-                      ? user!.name.trim()[0].toUpperCase()
-                      : 'S',
-                  style: AppTypography.textTheme.labelLarge?.copyWith(
-                    color: AppColors.onPrimary,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+      appBar: HomeAppBar(
+        onOpenDrawer: () => Scaffold.of(context).openDrawer(),
+        onOpenProfile: () {
+          if (_selectedIndex != 4) {
+            AppHaptics.selectionClick();
+            setState(() {
+              _selectedIndex = 4;
+            });
+          }
+        },
       ),
-      body: IndexedStack(index: _selectedIndex, children: views),
+      body: LazyIndexedStack(
+        index: _selectedIndex,
+        itemCount: 5,
+        itemBuilder: _buildTab,
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           context.push('/inbox');

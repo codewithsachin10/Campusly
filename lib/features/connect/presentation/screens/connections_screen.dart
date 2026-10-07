@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../providers/connections_provider.dart';
 import '../../domain/models/connection_model.dart';
@@ -28,7 +27,7 @@ class ConnectionsScreen extends ConsumerWidget {
         ),
         title: Text(
           'My Connections',
-          style: AppTypography.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
@@ -48,12 +47,13 @@ class ConnectionsScreen extends ConsumerWidget {
               .toList();
 
           return ListView(
+            cacheExtent: 300,
             padding: EdgeInsets.all(16.w),
             children: [
               if (pending.isNotEmpty) ...[
                 Text(
                   'Pending Requests (${pending.length})',
-                  style: AppTypography.textTheme.titleMedium?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
                   ),
@@ -68,7 +68,7 @@ class ConnectionsScreen extends ConsumerWidget {
               ],
               Text(
                 'My Friends (${friends.length})',
-                style: AppTypography.textTheme.titleMedium?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppColors.primary,
                 ),

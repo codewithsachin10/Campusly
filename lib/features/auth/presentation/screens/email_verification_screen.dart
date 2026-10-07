@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../providers/auth_provider.dart';
 
@@ -96,13 +95,6 @@ class _EmailVerificationScreenState
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
                 borderRadius: BorderRadius.circular(24.r),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primaryContainer.withValues(alpha: 0.08),
-                    blurRadius: 24,
-                    offset: Offset(0, 8),
-                  ),
-                ],
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                   width: 1.w,
@@ -128,14 +120,14 @@ class _EmailVerificationScreenState
                   // Title
                   Text(
                     'Verify your college email',
-                    style: AppTypography.textTheme.headlineLarge,
+                    style: Theme.of(context).textTheme.headlineLarge,
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 12.h),
                   // Subtitle
                   Text(
                     "We've sent a verification link to your inbox. Please click the link to activate your Campusly account.",
-                    style: AppTypography.textTheme.bodyMedium?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                     textAlign: TextAlign.center,
@@ -164,7 +156,7 @@ class _EmailVerificationScreenState
                         Flexible(
                           child: Text(
                             displayEmail,
-                            style: AppTypography.textTheme.labelLarge?.copyWith(
+                            style: Theme.of(context).textTheme.labelLarge?.copyWith(
                               color: AppColors.onSurface,
                               fontSize: 14.sp,
                             ),
@@ -186,7 +178,7 @@ class _EmailVerificationScreenState
                       },
                       child: Text(
                         "I've Verified My Email",
-                        style: AppTypography.textTheme.labelLarge?.copyWith(
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           color: AppColors.onPrimary,
                           fontSize: 16.sp,
                         ),
@@ -201,7 +193,7 @@ class _EmailVerificationScreenState
                     children: [
                       Text(
                         "Didn't receive the email? ",
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                       ),
@@ -211,7 +203,7 @@ class _EmailVerificationScreenState
                           _resendCountdown > 0
                               ? 'Resend in ${_resendCountdown}s'
                               : 'Resend Now',
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             color: _resendCountdown > 0
                                 ? AppColors.outline
                                 : AppColors.primary,

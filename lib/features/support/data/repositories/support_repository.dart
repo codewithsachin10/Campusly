@@ -21,7 +21,8 @@ class SupportRepository {
         .from('support_tickets')
         .select('*, students(*)')
         .eq('student_id', _currentUserId)
-        .order('created_at', ascending: false);
+        .order('created_at', ascending: false)
+        .limit(50);
 
     return (response as List).map((json) => SupportTicket.fromJson(json)).toList();
   }
@@ -80,7 +81,7 @@ class SupportRepository {
   Future<List<SupportMessage>> getMessages(String ticketId) async {
     final response = await _supabase
         .from('support_ticket_messages')
-        .select()
+        .select('id, ticket_id, sender_id, sender_type, message, is_internal, created_at')
         .eq('ticket_id', ticketId)
         .order('created_at', ascending: true);
 
@@ -115,7 +116,7 @@ class SupportRepository {
   Future<List<Map<String, dynamic>>> getFAQs() async {
     final response = await _supabase
         .from('support_faqs')
-        .select()
+        .select('id, question, answer, is_published, category_id, created_at')
         .eq('is_published', true)
         .order('created_at', ascending: true);
         

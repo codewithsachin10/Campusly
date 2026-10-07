@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../connect/presentation/providers/connections_provider.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../data/chat_repository.dart';
@@ -108,7 +107,7 @@ class _CreateGroupScreenState extends ConsumerState<CreateGroupScreen> {
               alignment: Alignment.centerLeft,
               child: Text(
                 'Select Members (${_selectedUserIds.length})',
-                style: AppTypography.textTheme.titleMedium?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),

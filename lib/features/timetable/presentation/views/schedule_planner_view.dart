@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/timetable_item.dart';
 import '../providers/timetable_provider.dart';
@@ -84,7 +83,7 @@ class SchedulePlannerView extends ConsumerWidget {
           // Planner Header
           Text(
             'Planner',
-            style: AppTypography.textTheme.headlineLarge?.copyWith(
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
               fontSize: 32.sp,
               fontWeight: FontWeight.w800,
               color: AppColors.onSurface,
@@ -93,7 +92,7 @@ class SchedulePlannerView extends ConsumerWidget {
           SizedBox(height: 4.h),
           Text(
             headerDateText,
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
@@ -130,9 +129,9 @@ class SchedulePlannerView extends ConsumerWidget {
                       boxShadow: isSelected
                           ? [
                               BoxShadow(
-                                color: AppColors.primary.withValues(alpha: 0.3),
-                                blurRadius: 20,
-                                offset: Offset(0, 10),
+                                color: AppColors.primary.withValues(alpha: 0.2),
+                                blurRadius: 12,
+                                offset: const Offset(0, 4),
                               ),
                             ]
                           : null,
@@ -142,7 +141,7 @@ class SchedulePlannerView extends ConsumerWidget {
                       children: [
                         Text(
                           day['label']!,
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             color: isSelected
                                 ? AppColors.onPrimary.withValues(alpha: 0.8)
                                 : AppColors.onSurfaceVariant,
@@ -152,7 +151,7 @@ class SchedulePlannerView extends ConsumerWidget {
                         SizedBox(height: 6.h),
                         Text(
                           day['date']!,
-                          style: AppTypography.textTheme.headlineSmall
+                          style: Theme.of(context).textTheme.headlineSmall
                               ?.copyWith(
                                 color: isSelected
                                     ? AppColors.onPrimary
@@ -185,7 +184,7 @@ class SchedulePlannerView extends ConsumerWidget {
                 return _buildNoClassJoinedState(context);
               }
               if (items.isEmpty) {
-                return _buildEmptyState();
+                return _buildEmptyState(context);
               }
 
               return ListView.separated(
@@ -197,9 +196,9 @@ class SchedulePlannerView extends ConsumerWidget {
                 itemBuilder: (context, index) {
                   final item = items[index];
                   if (item.isBreak) {
-                    return _buildBreakCard(item);
+                    return _buildBreakCard(context, item);
                   }
-                  return _buildClassCard(item);
+                  return _buildClassCard(context, item);
                 },
               );
             },
@@ -239,7 +238,7 @@ class SchedulePlannerView extends ConsumerWidget {
           SizedBox(height: 20.h),
           Text(
             'No Class Joined',
-            style: AppTypography.textTheme.titleMedium?.copyWith(
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
@@ -248,7 +247,7 @@ class SchedulePlannerView extends ConsumerWidget {
           Text(
             'Join or search for an academic section to see your schedule.',
             textAlign: TextAlign.center,
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
@@ -271,7 +270,7 @@ class SchedulePlannerView extends ConsumerWidget {
     );
   }
 
-  Widget _buildEmptyState() {
+  Widget _buildEmptyState(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 64.h, horizontal: 24.w),
       alignment: Alignment.center,
@@ -300,7 +299,7 @@ class SchedulePlannerView extends ConsumerWidget {
           SizedBox(height: 20.h),
           Text(
             'No classes scheduled for today.',
-            style: AppTypography.textTheme.titleMedium?.copyWith(
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
@@ -309,7 +308,7 @@ class SchedulePlannerView extends ConsumerWidget {
           Text(
             'Enjoy your free day or work on self-paced projects!',
             textAlign: TextAlign.center,
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
@@ -318,7 +317,7 @@ class SchedulePlannerView extends ConsumerWidget {
     );
   }
 
-  Widget _buildBreakCard(TimetableItem item) {
+  Widget _buildBreakCard(BuildContext context, TimetableItem item) {
     final accentColor = AppColors.getSubjectAccentColor(
       item.subjectCode,
       isBreak: true,
@@ -362,7 +361,7 @@ class SchedulePlannerView extends ConsumerWidget {
                   children: [
                     Text(
                       '${item.startTime} — ${item.endTime}',
-                      style: AppTypography.textTheme.labelMedium?.copyWith(
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         fontWeight: FontWeight.w600,
                       ),
@@ -370,7 +369,7 @@ class SchedulePlannerView extends ConsumerWidget {
                     SizedBox(height: 2.h),
                     Text(
                       item.title,
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.bold,
                       ),
@@ -385,7 +384,7 @@ class SchedulePlannerView extends ConsumerWidget {
     );
   }
 
-  Widget _buildClassCard(TimetableItem item) {
+  Widget _buildClassCard(BuildContext context, TimetableItem item) {
     Color badgeBg;
     Color badgeText;
 
@@ -419,13 +418,6 @@ class SchedulePlannerView extends ConsumerWidget {
         border: Border.all(
           color: AppColors.outlineVariant.withValues(alpha: 0.3),
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.02),
-            blurRadius: 15,
-            offset: Offset(0, 4),
-          ),
-        ],
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(32.r),
@@ -442,7 +434,7 @@ class SchedulePlannerView extends ConsumerWidget {
                 children: [
                   Text(
                     item.timeRange,
-                    style: AppTypography.textTheme.labelLarge?.copyWith(
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,
                     ),
@@ -458,7 +450,7 @@ class SchedulePlannerView extends ConsumerWidget {
                     ),
                     child: Text(
                       item.category.toUpperCase(),
-                      style: AppTypography.textTheme.labelSmall?.copyWith(
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
                         color: badgeText,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.8,
@@ -470,10 +462,10 @@ class SchedulePlannerView extends ConsumerWidget {
               SizedBox(height: 12.h),
               Text(
                 item.title,
-                style: AppTypography.textTheme.headlineSmall?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   color: AppColors.onSurface,
                   fontWeight: FontWeight.bold,
-                  height: 1.3.h,
+                  height: 1.3,
                 ),
               ),
               SizedBox(height: 16.h),
@@ -497,7 +489,7 @@ class SchedulePlannerView extends ConsumerWidget {
                     Expanded(
                       child: Text(
                         item.instructor,
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           fontWeight: FontWeight.w500,
                         ),
@@ -514,7 +506,7 @@ class SchedulePlannerView extends ConsumerWidget {
                     Flexible(
                       child: Text(
                         item.room,
-                        style: AppTypography.textTheme.bodyMedium?.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.onSurfaceVariant,
                           fontWeight: FontWeight.w500,
                         ),

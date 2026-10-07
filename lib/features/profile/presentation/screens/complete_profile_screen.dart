@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../shared/widgets/three_d_pushable_button.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../../core/utils/error_handler.dart';
@@ -138,12 +137,12 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
                 children: [
                   Text(
                     'Almost there!',
-                    style: AppTypography.textTheme.headlineMedium,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   SizedBox(height: 8.h),
                   Text(
                     'Please provide a few more details to complete your account setup.',
-                    style: AppTypography.textTheme.bodyMedium?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),

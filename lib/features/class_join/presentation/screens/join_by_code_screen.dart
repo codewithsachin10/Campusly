@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/class_model.dart';
@@ -197,13 +196,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       children: [
                         Text(
                           'Scan Class QR Code',
-                          style: AppTypography.textTheme.titleLarge?.copyWith(
+                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           'Point your camera at the QR code displayed by your professor or peer',
-                          style: AppTypography.textTheme.bodySmall?.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                         ),
@@ -220,13 +219,6 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(24.r),
                   border: Border.all(color: AppColors.primary, width: 3.w),
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.primary.withValues(alpha: 0.1),
-                      blurRadius: 20,
-                      spreadRadius: 2,
-                    ),
-                  ],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(21.r),
@@ -273,7 +265,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               SizedBox(height: 24.h),
               Text(
                 'Simulate QR Scan (Test Codes):',
-                style: AppTypography.textTheme.labelMedium?.copyWith(
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                   fontWeight: FontWeight.bold,
                 ),
@@ -326,7 +318,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
         color: AppColors.primary,
       ),
       label: Text('$label ($code)'),
-      labelStyle: AppTypography.textTheme.labelSmall?.copyWith(
+      labelStyle: Theme.of(context).textTheme.labelSmall?.copyWith(
         color: AppColors.primary,
         fontWeight: FontWeight.bold,
       ),
@@ -373,7 +365,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             Expanded(
               child: Text(
                 'Confirm Class Join',
-                style: AppTypography.textTheme.headlineSmall?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -386,7 +378,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
           children: [
             Text(
               'Do you want to join this class?',
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w700,
                 color: AppColors.onSurface,
               ),
@@ -417,7 +409,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                         ),
                         child: Text(
                           classModel.code,
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppColors.onPrimaryContainer,
                           ),
@@ -426,7 +418,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       Spacer(),
                       Text(
                         classModel.section,
-                        style: AppTypography.textTheme.labelLarge?.copyWith(
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
                         ),
@@ -436,7 +428,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   SizedBox(height: 10.h),
                   Text(
                     classModel.name,
-                    style: AppTypography.textTheme.titleLarge?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: AppColors.onSurface,
                     ),
@@ -444,13 +436,13 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   SizedBox(height: 6.h),
                   Text(
                     'Department: ${classModel.department}',
-                    style: AppTypography.textTheme.bodyMedium?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),
                   Text(
                     'Institution: ${classModel.institution}',
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),
@@ -469,7 +461,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 Expanded(
                   child: Text(
                     'Once confirmed, your personal timetable and reminders will switch to this class until you change it.',
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
                       height: 1.4.h,
                     ),
@@ -489,7 +481,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             style: TextButton.styleFrom(
               foregroundColor: AppColors.onSurfaceVariant,
             ),
-            child: Text('Cancel', style: AppTypography.textTheme.titleMedium),
+            child: Text('Cancel', style: Theme.of(context).textTheme.titleMedium),
           ),
           ElevatedButton(
             onPressed: () {
@@ -505,7 +497,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             ),
             child: Text(
               'Yes, Join Class',
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppColors.onPrimary,
                 fontWeight: FontWeight.bold,
               ),
@@ -540,7 +532,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
         ),
         title: Text(
           'Campusly',
-          style: AppTypography.textTheme.headlineMedium?.copyWith(
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
@@ -564,7 +556,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   child: Text(
                     (user?.name.isNotEmpty == true ? user!.name[0] : 'S')
                         .toUpperCase(),
-                    style: AppTypography.textTheme.titleMedium?.copyWith(
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,
                     ),
@@ -626,7 +618,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                                   SizedBox(width: 8.w),
                                   Text(
                                     'Scan QR Code',
-                                    style: AppTypography.textTheme.titleSmall
+                                    style: Theme.of(context).textTheme.titleSmall
                                         ?.copyWith(
                                           color: _selectedModeIndex == 0
                                               ? AppColors.onPrimary
@@ -666,7 +658,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                                   SizedBox(width: 8.w),
                                   Text(
                                     'Join via Code',
-                                    style: AppTypography.textTheme.titleSmall
+                                    style: Theme.of(context).textTheme.titleSmall
                                         ?.copyWith(
                                           color: _selectedModeIndex == 1
                                               ? AppColors.onPrimary
@@ -688,7 +680,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   Text(
                     'Enter class code',
                     textAlign: TextAlign.center,
-                    style: AppTypography.textTheme.headlineLarge?.copyWith(
+                    style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                       color: AppColors.onSurface,
                     ),
                   ),
@@ -696,7 +688,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                   Text(
                     'Join your academic group by entering the unique 10-character code or scanning the class QR code.',
                     textAlign: TextAlign.center,
-                    style: AppTypography.textTheme.bodyLarge?.copyWith(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: AppColors.onSurfaceVariant,
                       height: 1.5.h,
                     ),
@@ -720,7 +712,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                             controller: _codeController,
                             textCapitalization: TextCapitalization.characters,
                             textAlign: TextAlign.center,
-                            style: AppTypography.textTheme.headlineMedium
+                            style: Theme.of(context).textTheme.headlineMedium
                                 ?.copyWith(
                                   letterSpacing: 3.0,
                                   color: AppColors.primary,
@@ -776,7 +768,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                             )
                           : Text(
                               'Preview Class',
-                              style: AppTypography.textTheme.titleMedium
+                              style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(
                                     color: AppColors.onPrimary,
                                     fontWeight: FontWeight.bold,
@@ -789,7 +781,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                     SizedBox(height: 16.h),
                     Text(
                       _errorMessage!,
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.error,
                       ),
                     ),
@@ -814,7 +806,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                       Flexible(
                         child: Text(
                           'Need help? Contact your department administrator.',
-                          style: AppTypography.textTheme.bodySmall?.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                           overflow: TextOverflow.ellipsis,
@@ -842,13 +834,6 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
           color: AppColors.outlineVariant.withValues(alpha: 0.35),
           width: 1.5.w,
         ),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.06),
-            blurRadius: 30,
-            offset: Offset(0, 10),
-          ),
-        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -868,7 +853,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 ),
                 child: Text(
                   'PREVIEWING',
-                  style: AppTypography.textTheme.labelSmall?.copyWith(
+                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: AppColors.onSecondaryFixed,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.0,
@@ -886,7 +871,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 ),
                 child: Text(
                   classModel.section,
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
+                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
                     color: AppColors.onTertiaryContainer,
                     fontWeight: FontWeight.bold,
                   ),
@@ -897,7 +882,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
           SizedBox(height: 16.h),
           Text(
             'CLASS CODE',
-            style: AppTypography.textTheme.labelSmall?.copyWith(
+            style: Theme.of(context).textTheme.labelSmall?.copyWith(
               color: AppColors.primary.withValues(alpha: 0.6),
               letterSpacing: 2.0,
               fontWeight: FontWeight.w700,
@@ -906,7 +891,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
           SizedBox(height: 2.h),
           Text(
             classModel.code,
-            style: AppTypography.textTheme.headlineLarge?.copyWith(
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
               color: AppColors.primary,
               fontWeight: FontWeight.w800,
               letterSpacing: 1.5,
@@ -917,7 +902,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
           SizedBox(height: 16.h),
           Text(
             classModel.name,
-            style: AppTypography.textTheme.headlineMedium?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
@@ -962,7 +947,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
                 ),
                 child: Text(
                   'View',
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
+                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
                     color: AppColors.primary,
                     fontWeight: FontWeight.bold,
                   ),
@@ -992,7 +977,7 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
               ),
               child: Text(
                 'Join This Class',
-                style: AppTypography.textTheme.titleMedium?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   color: AppColors.onPrimary,
                   fontWeight: FontWeight.bold,
                 ),
@@ -1028,14 +1013,14 @@ class _JoinByCodeScreenState extends ConsumerState<JoinByCodeScreen> {
             children: [
               Text(
                 label,
-                style: AppTypography.textTheme.labelMedium?.copyWith(
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                 ),
               ),
               SizedBox(height: 2.h),
               Text(
                 value,
-                style: AppTypography.textTheme.bodyLarge?.copyWith(
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.onSurface,
                   fontWeight: FontWeight.bold,
                 ),

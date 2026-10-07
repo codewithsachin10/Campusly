@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../class_join/domain/models/class_model.dart';
 import '../../../timetable/domain/models/custom_timetable_membership.dart';
 import '../../../timetable/presentation/providers/timetable_provider.dart';
@@ -121,7 +120,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                     // Header Section
                     Text(
                       title,
-                      style: AppTypography.textTheme.headlineMedium?.copyWith(
+                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.onSurface,
                       ),
@@ -130,7 +129,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                     SizedBox(height: 8.h),
                     Text(
                       subtitle,
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                       ),
                       textAlign: TextAlign.center,
@@ -192,7 +191,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                     SizedBox(height: 40.h),
                     Text(
                       'Full Timetable',
-                      style: AppTypography.textTheme.titleLarge?.copyWith(
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.onSurface,
                       ),
@@ -229,7 +228,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
                                   padding: EdgeInsets.symmetric(vertical: 8.0.h),
                                   child: Text(
                                     entry.key.toUpperCase(),
-                                    style: AppTypography.textTheme.labelLarge?.copyWith(
+                                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
                                       color: AppColors.primary,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -405,7 +404,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
               SizedBox(width: 8.w),
               Text(
                 title,
-                style: AppTypography.textTheme.labelMedium?.copyWith(
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                   color: AppColors.onSurfaceVariant,
                 ),
               ),
@@ -414,7 +413,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
           SizedBox(height: 8.h),
           Text(
             value,
-            style: AppTypography.textTheme.titleMedium?.copyWith(
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.onSurface,
             ),
@@ -441,8 +440,9 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
 }
 
 // Temporary localized provider
-final _sheetScheduleProvider = FutureProvider.family<List<TimetableItem>, String>((ref, code) async {
-  if (code.isEmpty) return [];
-  final repository = ref.watch(timetableRepositoryProvider);
-  return repository.getWeeklySchedule(code);
-});
+final _sheetScheduleProvider =
+    FutureProvider.autoDispose.family<List<TimetableItem>, String>((ref, code) async {
+      if (code.isEmpty) return [];
+      final repository = ref.watch(timetableRepositoryProvider);
+      return repository.getWeeklySchedule(code);
+    });

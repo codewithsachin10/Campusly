@@ -450,23 +450,25 @@ class _CampusMapScreenState extends ConsumerState<CampusMapScreen> {
       backgroundColor: AppColors.background,
       body: Stack(
         children: [
-          FlutterMap(
-            mapController: _mapController,
-            options: MapOptions(
-              initialCenter: _campusCenter,
-              initialZoom: 15.5,
-              maxZoom: 19.0,
-              minZoom: 10.0,
+          RepaintBoundary(
+            child: FlutterMap(
+              mapController: _mapController,
+              options: MapOptions(
+                initialCenter: _campusCenter,
+                initialZoom: 15.5,
+                maxZoom: 19.0,
+                minZoom: 10.0,
+              ),
+              children: [
+                TileLayer(
+                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  userAgentPackageName: 'com.campusly.app',
+                ),
+                MarkerLayer(
+                  markers: [..._buildEventMarkers(), ..._buildMarkers()],
+                ),
+              ],
             ),
-            children: [
-              TileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.campusly.app',
-              ),
-              MarkerLayer(
-                markers: [..._buildEventMarkers(), ..._buildMarkers()],
-              ),
-            ],
           ),
 
           // Top Search Bar and Filters

@@ -133,18 +133,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               color: const Color(0xFFE2E8F0),
                               width: 1.2,
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: const Color(0x080F172A),
-                                blurRadius: 4,
-                                offset: const Offset(0, 1),
-                              ),
-                              BoxShadow(
-                                color: const Color(0x0C0F172A),
-                                blurRadius: 24,
-                                offset: const Offset(0, 12),
-                              ),
-                            ],
                           ),
                           child: Form(
                             key: _formKey,

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../providers/auth_provider.dart';
 
@@ -75,13 +74,6 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
               decoration: BoxDecoration(
                 color: AppColors.surfaceContainerLowest,
                 borderRadius: BorderRadius.circular(24.r),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primaryContainer.withValues(alpha: 0.08),
-                    blurRadius: 24,
-                    offset: Offset(0, 8),
-                  ),
-                ],
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                   width: 1.w,
@@ -108,13 +100,13 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                         SizedBox(height: 24.h),
                         Text(
                           'Check your email',
-                          style: AppTypography.textTheme.headlineLarge,
+                          style: Theme.of(context).textTheme.headlineLarge,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 12.h),
                         Text(
                           "We've sent a password recovery link to ${_emailController.text.trim()}",
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                           textAlign: TextAlign.center,
@@ -126,7 +118,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                             onPressed: () => context.pop(),
                             child: Text(
                               'Return to Log In',
-                              style: AppTypography.textTheme.labelLarge
+                              style: Theme.of(context).textTheme.labelLarge
                                   ?.copyWith(color: AppColors.onPrimary),
                             ),
                           ),
@@ -159,12 +151,12 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                           // Heading
                           Text(
                             'Reset your password',
-                            style: AppTypography.textTheme.headlineLarge,
+                            style: Theme.of(context).textTheme.headlineLarge,
                           ),
                           SizedBox(height: 8.h),
                           Text(
                             "Enter the email address linked to your Campusly account and we'll send you a recovery link.",
-                            style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: AppColors.onSurfaceVariant,
                             ),
                           ),
@@ -172,7 +164,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                           // Email Field
                           Text(
                             'EMAIL ADDRESS',
-                            style: AppTypography.textTheme.labelLarge?.copyWith(
+                            style: Theme.of(context).textTheme.labelLarge?.copyWith(
                               color: AppColors.onSurfaceVariant,
                               letterSpacing: 1.2,
                             ),
@@ -183,7 +175,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                             keyboardType: TextInputType.emailAddress,
                             textInputAction: TextInputAction.done,
                             onFieldSubmitted: (_) => _handleReset(),
-                            style: AppTypography.textTheme.bodyMedium,
+                            style: Theme.of(context).textTheme.bodyMedium,
                             decoration: InputDecoration(
                               hintText: 'Enter your account email',
                               prefixIcon: Icon(
@@ -218,7 +210,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
                                     )
                                   : Text(
                                       'Send Reset Link',
-                                      style: AppTypography.textTheme.labelLarge
+                                      style: Theme.of(context).textTheme.labelLarge
                                           ?.copyWith(
                                             color: AppColors.onPrimary,
                                             fontSize: 16.sp,

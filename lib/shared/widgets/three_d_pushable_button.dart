@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/services/app_haptics.dart';
 import '../../core/theme/app_colors.dart';
-import '../../core/theme/app_typography.dart';
 
 class ThreeDPushableButton extends StatefulWidget {
   final String text;
@@ -145,7 +144,7 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
                         )
                       : Text(
                           widget.text,
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
+                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             color: Colors.white,
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w600,

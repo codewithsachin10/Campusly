@@ -30,7 +30,7 @@ class DatabaseService {
 
     return await openDatabase(
       path,
-      version: 1,
+      version: 2,
       onCreate: _createDB,
       onUpgrade: _upgradeDB,
     );
@@ -51,8 +51,13 @@ class DatabaseService {
       CREATE TABLE chats(
         id TEXT PRIMARY KEY,
         data TEXT NOT NULL,
+        participants TEXT NOT NULL DEFAULT '',
         lastUpdated INTEGER NOT NULL
       )
+    ''');
+
+    await db.execute('''
+      CREATE INDEX idx_chats_participants ON chats(participants)
     ''');
 
     // Messages Table
@@ -95,6 +100,13 @@ class DatabaseService {
   }
 
   Future<void> _upgradeDB(Database db, int oldVersion, int newVersion) async {
-    // Handle migrations here if version increases
+    if (oldVersion < 2) {
+      await db.execute(
+        "ALTER TABLE chats ADD COLUMN participants TEXT NOT NULL DEFAULT ''",
+      );
+      await db.execute(
+        "CREATE INDEX IF NOT EXISTS idx_chats_participants ON chats(participants)",
+      );
+    }
   }
 }

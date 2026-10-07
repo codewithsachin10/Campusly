@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../providers/chat_providers.dart';
 import '../../domain/models/chat_model.dart';
 
@@ -33,7 +32,7 @@ class InboxScreen extends ConsumerWidget {
         elevation: 0,
         title: Text(
           'Messages',
-          style: AppTypography.textTheme.headlineSmall?.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
@@ -65,7 +64,7 @@ class InboxScreen extends ConsumerWidget {
                     SizedBox(height: 16.h),
                     Text(
                       'No Messages Yet',
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.bold,
                       ),
@@ -74,7 +73,7 @@ class InboxScreen extends ConsumerWidget {
                     Text(
                       'Connect with people or check your class communities.',
                       textAlign: TextAlign.center,
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                       ),
                     ),

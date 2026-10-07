@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../../domain/models/class_model.dart';
 import '../providers/class_provider.dart';
@@ -86,7 +85,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             Expanded(
               child: Text(
                 'Confirm Class Join',
-                style: AppTypography.textTheme.headlineSmall?.copyWith(
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -99,7 +98,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           children: [
             Text(
               'Do you want to join this class?',
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w700,
                 color: AppColors.onSurface,
               ),
@@ -130,7 +129,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                         ),
                         child: Text(
                           classModel.code,
-                          style: AppTypography.textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppColors.onPrimaryContainer,
                           ),
@@ -139,7 +138,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                       Spacer(),
                       Text(
                         classModel.section,
-                        style: AppTypography.textTheme.labelLarge?.copyWith(
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
                         ),
@@ -149,7 +148,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   SizedBox(height: 10.h),
                   Text(
                     classModel.name,
-                    style: AppTypography.textTheme.titleLarge?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: AppColors.onSurface,
                     ),
@@ -157,13 +156,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   SizedBox(height: 6.h),
                   Text(
                     'Department: ${classModel.department}',
-                    style: AppTypography.textTheme.bodyMedium?.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),
                   Text(
                     'Institution: ${classModel.institution}',
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
                     ),
                   ),
@@ -182,7 +181,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 Expanded(
                   child: Text(
                     'Once confirmed, your personal timetable and reminders will switch to this class until you change it.',
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.onSurfaceVariant,
                       height: 1.4.h,
                     ),
@@ -202,7 +201,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             style: TextButton.styleFrom(
               foregroundColor: AppColors.onSurfaceVariant,
             ),
-            child: Text('Cancel', style: AppTypography.textTheme.titleMedium),
+            child: Text('Cancel', style: Theme.of(context).textTheme.titleMedium),
           ),
           ElevatedButton(
             onPressed: () {
@@ -218,7 +217,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
             ),
             child: Text(
               'Yes, Join Class',
-              style: AppTypography.textTheme.titleMedium?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppColors.onPrimary,
                 fontWeight: FontWeight.bold,
               ),
@@ -261,7 +260,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
         ),
         title: Text(
           'Search Class Directory',
-          style: AppTypography.textTheme.headlineSmall?.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
@@ -279,7 +278,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                   TextField(
                     controller: _searchController,
                     onChanged: _onSearchChanged,
-                    style: AppTypography.textTheme.bodyMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                     decoration: InputDecoration(
                       hintText: 'Search by course name, department, or code...',
                       prefixIcon: Icon(
@@ -335,7 +334,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                             selected: isSelected,
                             onSelected: (_) => _onDeptChanged(dept),
                             selectedColor: AppColors.primary,
-                            labelStyle: AppTypography.textTheme.labelMedium
+                            labelStyle: Theme.of(context).textTheme.labelMedium
                                 ?.copyWith(
                                   color: isSelected
                                       ? AppColors.onPrimary
@@ -385,13 +384,13 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                           SizedBox(height: 16.h),
                           Text(
                             'No classes found',
-                            style: AppTypography.textTheme.headlineSmall
+                            style: Theme.of(context).textTheme.headlineSmall
                                 ?.copyWith(color: AppColors.onSurfaceVariant),
                           ),
                           SizedBox(height: 8.h),
                           Text(
                             'Try adjusting your search terms or filters.',
-                            style: AppTypography.textTheme.bodyMedium?.copyWith(
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: AppColors.onSurfaceVariant,
                             ),
                           ),
@@ -456,7 +455,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 ),
                 child: Text(
                   c.department,
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
+                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
                     color: AppColors.primary,
                     fontWeight: FontWeight.bold,
                   ),
@@ -473,7 +472,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 ),
                 child: Text(
                   c.section,
-                  style: AppTypography.textTheme.labelMedium?.copyWith(
+                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
                     color: AppColors.onTertiaryContainer,
                     fontWeight: FontWeight.bold,
                   ),
@@ -484,7 +483,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           SizedBox(height: 12.h),
           Text(
             c.name,
-            style: AppTypography.textTheme.titleLarge?.copyWith(
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: AppColors.onSurface,
               fontWeight: FontWeight.bold,
             ),
@@ -494,7 +493,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
           SizedBox(height: 4.h),
           Text(
             'Code: ${c.code} · ${c.enrolledCount} enrolled',
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
             ),
           ),
@@ -516,7 +515,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                     Expanded(
                       child: Text(
                         c.scheduleSummary,
-                        style: AppTypography.textTheme.bodySmall?.copyWith(
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppColors.onSurfaceVariant,
                         ),
                         overflow: TextOverflow.ellipsis,
@@ -540,7 +539,7 @@ class _SearchClassScreenState extends ConsumerState<SearchClassScreen> {
                 ),
                 child: Text(
                   'Join Class',
-                  style: AppTypography.textTheme.labelLarge?.copyWith(
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     color: AppColors.onPrimary,
                   ),
                 ),

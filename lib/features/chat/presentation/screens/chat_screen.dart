@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../providers/chat_providers.dart';
 import '../../domain/models/message_model.dart';
 import '../../data/chat_repository.dart';
@@ -59,7 +58,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         ),
         title: Text(
           widget.chatTitle,
-          style: AppTypography.textTheme.titleMedium?.copyWith(
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
             fontWeight: FontWeight.bold,
             color: AppColors.onSurface,
           ),

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
 import '../providers/class_provider.dart';
 
@@ -103,7 +102,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
         ),
         title: Text(
           'Create New Class',
-          style: AppTypography.textTheme.headlineSmall?.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),
@@ -122,13 +121,6 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                 border: Border.all(
                   color: AppColors.outlineVariant.withValues(alpha: 0.4),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primaryContainer.withValues(alpha: 0.08),
-                    blurRadius: 24,
-                    offset: Offset(0, 8),
-                  ),
-                ],
               ),
               child: Form(
                 key: _formKey,
@@ -137,14 +129,14 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                   children: [
                     Text(
                       'Create your class community',
-                      style: AppTypography.textTheme.headlineLarge?.copyWith(
+                      style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                         color: AppColors.onSurface,
                       ),
                     ),
                     SizedBox(height: 8.h),
                     Text(
                       'Set up the shared academic space for your section. Every student enrolled will share the same timetable structure.',
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         height: 1.5.h,
                       ),
@@ -154,7 +146,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     // Course / Class Name
                     Text(
                       'CLASS / COURSE NAME',
-                      style: AppTypography.textTheme.labelLarge?.copyWith(
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         letterSpacing: 1.2,
                       ),
@@ -163,7 +155,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     TextFormField(
                       controller: _nameController,
                       textInputAction: TextInputAction.next,
-                      style: AppTypography.textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       decoration: InputDecoration(
                         hintText: 'e.g. Database Management Systems',
                         prefixIcon: Icon(Icons.class_outlined, size: 20),
@@ -184,7 +176,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                             children: [
                               Text(
                                 'SECTION',
-                                style: AppTypography.textTheme.labelLarge
+                                style: Theme.of(context).textTheme.labelLarge
                                     ?.copyWith(
                                       color: AppColors.onSurfaceVariant,
                                       letterSpacing: 1.2,
@@ -194,7 +186,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                               TextFormField(
                                 controller: _sectionController,
                                 textInputAction: TextInputAction.next,
-                                style: AppTypography.textTheme.bodyMedium,
+                                style: Theme.of(context).textTheme.bodyMedium,
                                 decoration: InputDecoration(
                                   hintText: 'e.g. B or Sec A',
                                   prefixIcon: Icon(
@@ -217,7 +209,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                             children: [
                               Text(
                                 'DEPARTMENT',
-                                style: AppTypography.textTheme.labelLarge
+                                style: Theme.of(context).textTheme.labelLarge
                                     ?.copyWith(
                                       color: AppColors.onSurfaceVariant,
                                       letterSpacing: 1.2,
@@ -227,7 +219,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                               DropdownButtonFormField<String>(
                                 initialValue: _selectedDepartment,
                                 isExpanded: true,
-                                style: AppTypography.textTheme.bodyMedium,
+                                style: Theme.of(context).textTheme.bodyMedium,
                                 decoration: InputDecoration(
                                   prefixIcon: Icon(
                                     Icons.school_outlined,
@@ -253,7 +245,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     // Institution
                     Text(
                       'INSTITUTION',
-                      style: AppTypography.textTheme.labelLarge?.copyWith(
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         letterSpacing: 1.2,
                       ),
@@ -262,7 +254,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     TextFormField(
                       controller: _institutionController,
                       textInputAction: TextInputAction.next,
-                      style: AppTypography.textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.apartment_rounded, size: 20),
                       ),
@@ -276,7 +268,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     // Schedule Summary
                     Text(
                       'DEFAULT SCHEDULE DAYS',
-                      style: AppTypography.textTheme.labelLarge?.copyWith(
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
                         color: AppColors.onSurfaceVariant,
                         letterSpacing: 1.2,
                       ),
@@ -285,7 +277,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                     TextFormField(
                       controller: _scheduleController,
                       textInputAction: TextInputAction.done,
-                      style: AppTypography.textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       decoration: InputDecoration(
                         hintText: 'e.g. Mon, Wed, Fri',
                         prefixIcon: Icon(
@@ -318,7 +310,7 @@ class _CreateClassScreenState extends ConsumerState<CreateClassScreen> {
                               )
                             : Text(
                                 'Create & Generate Code',
-                                style: AppTypography.textTheme.titleMedium
+                                style: Theme.of(context).textTheme.titleMedium
                                     ?.copyWith(
                                       color: AppColors.onPrimary,
                                       fontWeight: FontWeight.bold,

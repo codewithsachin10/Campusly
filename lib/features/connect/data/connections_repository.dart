@@ -36,7 +36,7 @@ class ConnectionsRepository {
     }
 
     try {
-      final data = await query;
+      final data = await query.limit(50);
       final users = data.map((row) {
         final map = Map<String, dynamic>.from(row);
         map['id'] =
@@ -82,47 +82,54 @@ class ConnectionsRepository {
 
   // --- Connections ---
 
-  Stream<List<ConnectionModel>> streamConnections(String userId) async* {
-    final requesterStream = _supabase
-        .from('connections')
-        .stream(primaryKey: ['id'])
-        .eq('requesterId', userId);
+  Stream<List<ConnectionModel>> streamConnections(String userId) {
+    StreamSubscription? requesterSub;
+    StreamSubscription? receiverSub;
+    late StreamController<List<ConnectionModel>> controller;
 
-    final receiverStream = _supabase
-        .from('connections')
-        .stream(primaryKey: ['id'])
-        .eq('receiverId', userId);
+    controller = StreamController<List<ConnectionModel>>(
+      onListen: () {
+        List<Map<String, dynamic>> requesterData = [];
+        List<Map<String, dynamic>> receiverData = [];
 
-    List<Map<String, dynamic>> requesterData = [];
-    List<Map<String, dynamic>> receiverData = [];
+        void update() {
+          final combined = [...requesterData, ...receiverData];
+          final uniqueMap = <String, Map<String, dynamic>>{};
+          for (var row in combined) {
+            uniqueMap[row['id']] = row;
+          }
+          if (!controller.isClosed) {
+            controller.add(
+              uniqueMap.values.map((row) => ConnectionModel.fromJson(row)).toList(),
+            );
+          }
+        }
 
-    final controller = StreamController<List<ConnectionModel>>();
+        requesterSub = _supabase
+            .from('connections')
+            .stream(primaryKey: ['id'])
+            .eq('requesterId', userId)
+            .listen((data) {
+              requesterData = data;
+              update();
+            });
 
-    requesterStream.listen((data) {
-      requesterData = data;
-      final combined = [...requesterData, ...receiverData];
-      final uniqueMap = <String, Map<String, dynamic>>{};
-      for (var row in combined) {
-        uniqueMap[row['id']] = row;
-      }
-      controller.add(
-        uniqueMap.values.map((row) => ConnectionModel.fromJson(row)).toList(),
-      );
-    });
+        receiverSub = _supabase
+            .from('connections')
+            .stream(primaryKey: ['id'])
+            .eq('receiverId', userId)
+            .listen((data) {
+              receiverData = data;
+              update();
+            });
+      },
+      onCancel: () {
+        requesterSub?.cancel();
+        receiverSub?.cancel();
+      },
+    );
 
-    receiverStream.listen((data) {
-      receiverData = data;
-      final combined = [...requesterData, ...receiverData];
-      final uniqueMap = <String, Map<String, dynamic>>{};
-      for (var row in combined) {
-        uniqueMap[row['id']] = row;
-      }
-      controller.add(
-        uniqueMap.values.map((row) => ConnectionModel.fromJson(row)).toList(),
-      );
-    });
-
-    yield* controller.stream;
+    return controller.stream;
   }
 
   Future<void> sendRequest(String requesterId, String receiverId) async {

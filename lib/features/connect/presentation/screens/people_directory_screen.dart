@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../data/connections_repository.dart';
 import '../../../chat/data/chat_repository.dart';
@@ -127,7 +126,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
         ),
         title: Text(
           'People Directory',
-          style: AppTypography.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.primary,
           ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../../../core/services/notification_service.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:go_router/go_router.dart';
@@ -31,7 +30,7 @@ class SettingsScreen extends ConsumerWidget {
         ),
         title: Text(
           'Settings & Preferences',
-          style: AppTypography.textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.w800,
             color: AppColors.onSurface,
           ),
@@ -44,6 +43,7 @@ class SettingsScreen extends ConsumerWidget {
           children: [
             // Section 1: System Notifications & Class Reminders
             _buildSectionHeader(
+              context,
               Icons.notifications_active_rounded,
               'Class Reminders & Alerts',
               AppColors.primary,
@@ -60,6 +60,7 @@ class SettingsScreen extends ConsumerWidget {
               child: Column(
                 children: [
                   _buildSwitchTile(
+                    context,
                     title: 'Master Class Reminders',
                     subtitle:
                         'Enable or disable all automated pre-class alerts',
@@ -73,6 +74,7 @@ class SettingsScreen extends ConsumerWidget {
                   if (notifPrefs.masterEnabled) ...[
                     Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
+                      context,
                       title: '15 Minutes Before Class',
                       subtitle: 'Alert to check materials and room location',
                       value: notifPrefs.remind15Min,
@@ -80,6 +82,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
+                      context,
                       title: '10 Minutes Before Class',
                       subtitle: 'Alert to wrap up break and head to classroom',
                       value: notifPrefs.remind10Min,
@@ -87,6 +90,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
+                      context,
                       title: 'Daily Morning Briefing',
                       subtitle:
                           'Receive an 8:00 AM summary of today\'s schedule',
@@ -95,6 +99,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     Divider(height: 1.h, indent: 20, endIndent: 20),
                     _buildSwitchTile(
+                      context,
                       title: 'Sound & Vibration',
                       subtitle: 'Play high priority notification alert tone',
                       value: notifPrefs.soundAndVibrate,
@@ -147,7 +152,7 @@ class SettingsScreen extends ConsumerWidget {
                           children: [
                             Text(
                               'Test System Notifications',
-                              style: AppTypography.textTheme.titleMedium
+                              style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.onSurface,
@@ -155,7 +160,7 @@ class SettingsScreen extends ConsumerWidget {
                             ),
                             Text(
                               'Verify reminders appear right on your device',
-                              style: AppTypography.textTheme.labelMedium
+                              style: Theme.of(context).textTheme.labelMedium
                                   ?.copyWith(color: AppColors.onSurfaceVariant),
                             ),
                           ],
@@ -250,6 +255,7 @@ class SettingsScreen extends ConsumerWidget {
             SizedBox(height: 32.h),
             // Section 2: Appearance & Display
             _buildSectionHeader(
+              context,
               Icons.palette_outlined,
               'Appearance & Display',
               AppColors.secondary,
@@ -284,13 +290,13 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     title: Text(
                       'Color Theme',
-                      style: AppTypography.textTheme.titleMedium?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     subtitle: Text(
                       'System Default (Editorial Indigo)',
-                      style: AppTypography.textTheme.bodySmall?.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.onSurfaceVariant,
                       ),
                     ),
@@ -314,6 +320,7 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   Divider(height: 1.h, indent: 20, endIndent: 20),
                   _buildSwitchTile(
+                    context,
                     title: 'Compact Schedule Cards',
                     subtitle:
                         'Show denser timetable items without room thumbnails',
@@ -327,6 +334,7 @@ class SettingsScreen extends ConsumerWidget {
             SizedBox(height: 32.h),
             // Section 3: Offline Data & Sync
             _buildSectionHeader(
+              context,
               Icons.cloud_sync_outlined,
               'Offline-First & Cloud Sync',
               AppColors.tertiary,
@@ -364,7 +372,7 @@ class SettingsScreen extends ConsumerWidget {
                           children: [
                             Text(
                               'Real-time Cloud Sync Active',
-                              style: AppTypography.textTheme.titleMedium
+                              style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.onSurface,
@@ -372,7 +380,7 @@ class SettingsScreen extends ConsumerWidget {
                             ),
                             Text(
                               'Supabase PostgreSQL · Region: ap-south-1',
-                              style: AppTypography.textTheme.labelMedium
+                              style: Theme.of(context).textTheme.labelMedium
                                   ?.copyWith(
                                     color: AppColors.tertiary,
                                     fontWeight: FontWeight.w600,
@@ -423,6 +431,7 @@ class SettingsScreen extends ConsumerWidget {
             SizedBox(height: 32.h),
             // Section 4: About & Legal
             _buildSectionHeader(
+              context,
               Icons.info_outline_rounded,
               'About Campusly',
               AppColors.onSurfaceVariant,
@@ -452,13 +461,13 @@ class SettingsScreen extends ConsumerWidget {
                         ),
                         title: Text(
                           'Check for Updates',
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Current version: $versionStr',
-                          style: AppTypography.textTheme.bodySmall,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                         trailing: Icon(
                           Icons.system_update_alt_rounded,
@@ -478,7 +487,7 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     title: Text(
                       'Terms of Service & Privacy',
-                      style: AppTypography.textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     trailing: Icon(
                       Icons.chevron_right_rounded,
@@ -496,7 +505,12 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildSectionHeader(IconData icon, String title, Color color) {
+  Widget _buildSectionHeader(
+    BuildContext context,
+    IconData icon,
+    String title,
+    Color color,
+  ) {
     return Row(
       children: [
         Icon(icon, color: color, size: 20),
@@ -504,7 +518,7 @@ class SettingsScreen extends ConsumerWidget {
         Expanded(
           child: Text(
             title.toUpperCase(),
-            style: AppTypography.textTheme.labelMedium?.copyWith(
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
               fontWeight: FontWeight.w800,
               letterSpacing: 1.2,
               color: color,
@@ -516,7 +530,8 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildSwitchTile({
+  Widget _buildSwitchTile(
+    BuildContext context, {
     required String title,
     required String subtitle,
     required bool value,
@@ -527,14 +542,14 @@ class SettingsScreen extends ConsumerWidget {
       contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
       title: Text(
         title,
-        style: AppTypography.textTheme.titleMedium?.copyWith(
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
           fontWeight: isHeader ? FontWeight.w800 : FontWeight.bold,
           color: isHeader && value ? AppColors.primary : AppColors.onSurface,
         ),
       ),
       subtitle: Text(
         subtitle,
-        style: AppTypography.textTheme.bodySmall?.copyWith(
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
           color: AppColors.onSurfaceVariant,
         ),
       ),

@@ -5,7 +5,7 @@ import '../../domain/models/timetable_item.dart';
 import '../../domain/models/custom_timetable_membership.dart';
 import '../../domain/repositories/timetable_repository.dart';
 import '../../data/repositories/supabase_timetable_repository.dart';
-import '../../../../core/services/home_widget_service.dart';
+import 'package:flutter/widgets.dart';
 
 final timetableRepositoryProvider = Provider<TimetableRepository>((ref) {
   return SupabaseTimetableRepository();
@@ -97,23 +97,94 @@ final dailyScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
 final ongoingClassProvider = FutureProvider<TimetableItem?>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
   final repository = ref.watch(timetableRepositoryProvider);
-  final item = await repository.getOngoingItem(currentClass?.code ?? "");
-  HomeWidgetService().updateWidgetData(ongoingClass: item);
-  return item;
+  return repository.getOngoingItem(currentClass?.code ?? "");
 });
 
 // Next Class
 final nextClassProvider = FutureProvider<TimetableItem?>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
   final repository = ref.watch(timetableRepositoryProvider);
-  final item = await repository.getNextItem(currentClass?.code ?? "");
-  HomeWidgetService().updateWidgetData(nextClass: item);
-  return item;
+  return repository.getNextItem(currentClass?.code ?? "");
 });
 
+// Snapshot of ongoing + next class for debounced widget updates
+final widgetScheduleSnapshotProvider =
+    Provider<({TimetableItem? ongoing, TimetableItem? next})>((ref) {
+      final ongoing = ref.watch(ongoingClassProvider).value;
+      final next = ref.watch(nextClassProvider).value;
+      return (ongoing: ongoing, next: next);
+    });
+
+class _TickerLifecycleObserver extends WidgetsBindingObserver {
+  final VoidCallback onResumed;
+  final VoidCallback onPaused;
+
+  _TickerLifecycleObserver({required this.onResumed, required this.onPaused});
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      onResumed();
+    } else {
+      onPaused();
+    }
+  }
+}
+
 // Live ticker stream provider updating every second for countdown timers
-final liveTickerProvider = StreamProvider<int>((ref) {
-  return Stream.periodic(const Duration(seconds: 1), (count) => count);
+// AutoDisposed, aligned to second boundaries, pauses when app is paused
+final liveTickerProvider = StreamProvider.autoDispose<int>((ref) {
+  final controller = StreamController<int>();
+  Timer? timer;
+  Timer? initialTimer;
+  var count = 0;
+  var isResumed =
+      WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed;
+
+  void stopTimers() {
+    initialTimer?.cancel();
+    initialTimer = null;
+    timer?.cancel();
+    timer = null;
+  }
+
+  void startPeriodic() {
+    stopTimers();
+    final msUntilNextSecond = 1000 - DateTime.now().millisecond;
+    initialTimer = Timer(Duration(milliseconds: msUntilNextSecond), () {
+      if (controller.isClosed || !isResumed) return;
+      controller.add(count++);
+      timer = Timer.periodic(const Duration(seconds: 1), (_) {
+        if (controller.isClosed || !isResumed) return;
+        controller.add(count++);
+      });
+    });
+  }
+
+  final observer = _TickerLifecycleObserver(
+    onResumed: () {
+      isResumed = true;
+      startPeriodic();
+    },
+    onPaused: () {
+      isResumed = false;
+      stopTimers();
+    },
+  );
+
+  WidgetsBinding.instance.addObserver(observer);
+  if (isResumed || WidgetsBinding.instance.lifecycleState == null) {
+    isResumed = true;
+    startPeriodic();
+  }
+
+  ref.onDispose(() {
+    WidgetsBinding.instance.removeObserver(observer);
+    stopTimers();
+    controller.close();
+  });
+
+  return controller.stream;
 });
 
 // Joined custom timetables for the user

@@ -13,7 +13,10 @@ final userChatsStreamProvider = StreamProvider<List<ChatModel>>((ref) {
 });
 
 final chatMessagesStreamProvider =
-    StreamProvider.family<List<MessageModel>, String>((ref, chatId) {
+    StreamProvider.autoDispose.family<List<MessageModel>, String>((ref, chatId) {
       final repository = ref.watch(chatRepositoryProvider);
+      ref.onDispose(() {
+        repository.cancelMessagesSubscription(chatId);
+      });
       return repository.streamMessages(chatId);
     });

@@ -12,16 +12,15 @@ final eventsStreamProvider = StreamProvider<List<EventModel>>((ref) {
   return repo.getEventsStream();
 });
 
-final myRegistrationsProvider = StreamProvider<List<EventRegistrationModel>>((
-  ref,
-) {
-  final user = ref.watch(authControllerProvider).value;
-  final repo = ref.watch(eventsRepositoryProvider);
-  if (user == null || user.id.isEmpty) {
-    return Stream.value([]);
-  }
-  return repo.getMyRegistrationsStream(user.id);
-});
+final myRegistrationsProvider =
+    StreamProvider.autoDispose<List<EventRegistrationModel>>((ref) {
+      final user = ref.watch(authControllerProvider).value;
+      final repo = ref.watch(eventsRepositoryProvider);
+      if (user == null || user.id.isEmpty) {
+        return Stream.value([]);
+      }
+      return repo.getMyRegistrationsStream(user.id);
+    });
 
 class EventsCategoryNotifier extends Notifier<String> {
   @override

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
 import '../../domain/models/curriculum_item.dart';
 
 class SubjectDetailsScreen extends StatelessWidget {
@@ -52,7 +51,7 @@ class SubjectDetailsScreen extends StatelessWidget {
             // Title
             Text(
               subject.subjectName,
-              style: AppTypography.textTheme.headlineMedium?.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: AppColors.onSurface,
                 height: 1.2.h,
@@ -63,7 +62,7 @@ class SubjectDetailsScreen extends StatelessWidget {
             // Subtitle (Mocked Prof / Fall)
             Text(
               'Prof. Sarah Jenkins • Fall 2024',
-              style: AppTypography.textTheme.bodyLarge?.copyWith(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 color: AppColors.onSurfaceVariant,
               ),
             ),
@@ -88,6 +87,7 @@ class SubjectDetailsScreen extends StatelessWidget {
             
             // Prerequisites
             _buildSectionCard(
+              context,
               icon: Icons.account_tree_outlined,
               title: 'Prerequisites',
               content: subject.prerequisites,
@@ -97,6 +97,7 @@ class SubjectDetailsScreen extends StatelessWidget {
             
             // Description
             _buildSectionCard(
+              context,
               icon: Icons.info_outline_rounded,
               title: 'Description',
               content: subject.description,
@@ -118,7 +119,7 @@ class SubjectDetailsScreen extends StatelessWidget {
                     padding: EdgeInsets.all(16.0.w),
                     child: Text(
                       'Resources',
-                      style: AppTypography.textTheme.titleLarge?.copyWith(
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -185,7 +186,7 @@ class SubjectDetailsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildSectionCard({required IconData icon, required String title, required String content, required Color iconColor}) {
+  Widget _buildSectionCard(BuildContext context, {required IconData icon, required String title, required String content, required Color iconColor}) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(20.w),
@@ -211,7 +212,7 @@ class SubjectDetailsScreen extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: AppTypography.textTheme.titleMedium?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                   overflow: TextOverflow.ellipsis,
@@ -222,7 +223,7 @@ class SubjectDetailsScreen extends StatelessWidget {
           SizedBox(height: 12.h),
           Text(
             content,
-            style: AppTypography.textTheme.bodyMedium?.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.onSurfaceVariant,
               height: 1.6.h,
             ),
