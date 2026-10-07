@@ -250,8 +250,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 radius: 18,
                 backgroundColor: AppColors.primary,
                 child: Text(
-                  user?.name.isNotEmpty == true
-                      ? user!.name[0].toUpperCase()
+                  (user?.name.trim().isNotEmpty == true)
+                      ? user!.name.trim()[0].toUpperCase()
                       : 'S',
                   style: AppTypography.textTheme.labelLarge?.copyWith(
                     color: AppColors.onPrimary,

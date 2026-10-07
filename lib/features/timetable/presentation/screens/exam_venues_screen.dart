@@ -5,33 +5,104 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../auth/presentation/providers/auth_provider.dart';
+import 'package:intl/intl.dart';
+
+final examVenuesProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((ref) async {
+  final user = ref.watch(authStateChangesProvider).value;
+  if (user == null) return [];
+
+  final response = await Supabase.instance.client
+      .from('exam_schedules')
+      .select('*, exam_papers(*)')
+      .eq('department_id', user.department ?? '')
+      .eq('academic_year', user.year ?? '')
+      .eq('semester', user.semester ?? 0)
+      .eq('status', 'venues_published') // ONLY venues_published
+      .order('created_at', ascending: false);
+
+  List<Map<String, dynamic>> allVenues = [];
+
+  for (var schedule in response) {
+    final papers = schedule['exam_papers'] as List<dynamic>? ?? [];
+    for (var paper in papers) {
+      // Find venue for this user's section
+      final venuesMap = paper['venues'] as Map<String, dynamic>? ?? {};
+      final myVenue = venuesMap[user.section ?? ''];
+      
+      String room = myVenue != null && myVenue['room'] != null ? myVenue['room'] : 'Not Allocated';
+      String seatNo = myVenue != null && myVenue['seatNo'] != null ? myVenue['seatNo'] : 'Not Allocated';
+
+      allVenues.add({
+        'schedule_name': schedule['schedule_name'],
+        'exam_type': schedule['exam_type'],
+        'subject': paper['subject'],
+        'exam_date': paper['exam_date'],
+        'start_time': paper['start_time'],
+        'end_time': paper['end_time'],
+        'room': room,
+        'seatNo': seatNo,
+      });
+    }
+  }
+
+  // Sort by date ascending
+  allVenues.sort((a, b) {
+    if (a['exam_date'] == null) return 1;
+    if (b['exam_date'] == null) return -1;
+    return a['exam_date'].compareTo(b['exam_date']);
+  });
+
+  return allVenues;
+});
 
 class ExamVenuesScreen extends ConsumerWidget {
   const ExamVenuesScreen({super.key});
 
+  String _formatDate(String? dateStr) {
+    if (dateStr == null || dateStr.isEmpty) return 'Upcoming';
+    try {
+      final date = DateTime.parse(dateStr);
+      return DateFormat('MMM dd, yyyy').format(date);
+    } catch (e) {
+      return dateStr;
+    }
+  }
+
+  String _formatTime(String? timeStr) {
+    if (timeStr == null || timeStr.isEmpty) return '';
+    try {
+      final parts = timeStr.split(':');
+      if (parts.length >= 2) {
+        final hour = int.parse(parts[0]);
+        final min = int.parse(parts[1]);
+        final dt = DateTime(2000, 1, 1, hour, min);
+        return DateFormat('h:mm a').format(dt);
+      }
+      return timeStr;
+    } catch (e) {
+      return timeStr;
+    }
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final venuesAsync = ref.watch(examVenuesProvider);
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         title: Text(
-          'Exam Venues & Seating',
+          'Exam Venues',
           style: TextStyle(fontWeight: FontWeight.w800),
         ),
         backgroundColor: AppColors.surface,
         elevation: 0,
       ),
-      body: StreamBuilder<List<Map<String, dynamic>>>(
-        stream: Supabase.instance.client
-            .from('exams')
-            .stream(primaryKey: ['id']),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
-
-          final docs = snapshot.data ?? [];
-
+      body: venuesAsync.when(
+        loading: () => Center(child: CircularProgressIndicator()),
+        error: (err, stack) => Center(child: Text('Error loading venues: $err')),
+        data: (venues) {
           return SingleChildScrollView(
             padding: EdgeInsets.all(20.w),
             child: Column(
@@ -41,7 +112,7 @@ class ExamVenuesScreen extends ConsumerWidget {
                   padding: EdgeInsets.all(20.w),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xFF0058BE), Color(0xFF2170E4)],
+                      colors: [Color(0xFF0058BE), Color(0xFF0075FF)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -56,7 +127,7 @@ class ExamVenuesScreen extends ConsumerWidget {
                           borderRadius: BorderRadius.circular(16.r),
                         ),
                         child: Icon(
-                          LucideIcons.mapPin,
+                          LucideIcons.building2,
                           color: Colors.white,
                           size: 32,
                         ),
@@ -75,7 +146,7 @@ class ExamVenuesScreen extends ConsumerWidget {
                             ),
                             SizedBox(height: 4.h),
                             Text(
-                              'Ensure you bring your physical ID Card and Hall Ticket to the examination hall.',
+                              'Your assigned halls and seat numbers for upcoming examinations.',
                               style: AppTypography.bodySmall.copyWith(
                                 color: Colors.white.withValues(alpha: 0.9),
                               ),
@@ -88,7 +159,7 @@ class ExamVenuesScreen extends ConsumerWidget {
                 ),
                 SizedBox(height: 24.h),
 
-                if (docs.isEmpty)
+                if (venues.isEmpty)
                   Center(
                     child: Padding(
                       padding: EdgeInsets.only(top: 40.h),
@@ -96,27 +167,26 @@ class ExamVenuesScreen extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            LucideIcons.mapPinOff,
+                            LucideIcons.building,
                             size: 56,
-                            color: AppColors.onSurfaceVariant.withValues(
-                              alpha: 0.4,
-                            ),
+                            color: AppColors.textSecondary.withValues(alpha: 0.3),
                           ),
                           SizedBox(height: 16.h),
                           Text(
-                            'No Seating Venues Allotted Yet',
+                            'No Venues Allocated Yet',
                             style: AppTypography.titleMedium.copyWith(
                               fontWeight: FontWeight.bold,
-                              color: AppColors.onSurfaceVariant,
+                              color: AppColors.textSecondary,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 8.h),
                           Text(
-                            'Hall numbers, seating arrangements, and reporting instructions will appear once assigned.',
-                            textAlign: TextAlign.center,
+                            'Seating arrangements are usually published 1-2 days prior to the examination date.',
                             style: AppTypography.bodySmall.copyWith(
                               color: AppColors.textSecondary,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -124,16 +194,14 @@ class ExamVenuesScreen extends ConsumerWidget {
                   )
                 else ...[
                   Text(
-                    'Allotted Venues (${docs.length})',
+                    'Allotted Venues (${venues.length})',
                     style: AppTypography.titleMedium.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 16.h),
-                  ...docs.map((data) {
-                    final colorHex =
-                        data['colorHex'] as String? ?? '0xFF0058BE';
-                    final color = Color(int.tryParse(colorHex) ?? 0xFF0058BE);
+                  ...venues.map((data) {
+                    final color = Color(0xFF0058BE);
 
                     return Container(
                       margin: EdgeInsets.only(bottom: 16.h),
@@ -178,25 +246,18 @@ class ExamVenuesScreen extends ConsumerWidget {
                                     SizedBox(width: 12.w),
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            data['hall'] as String? ??
-                                                data['room'] as String? ??
-                                                'Examination Hall',
-                                            style: AppTypography.titleMedium
-                                                .copyWith(
-                                                  fontWeight: FontWeight.w800,
-                                                  color: AppColors.onSurface,
-                                                ),
+                                            data['room'] as String? ?? 'Examination Hall',
+                                            style: AppTypography.titleMedium.copyWith(
+                                              fontWeight: FontWeight.w800,
+                                              color: AppColors.onSurface,
+                                            ),
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                           Text(
-                                            data['block'] as String? ??
-                                                (data['departmentId'] != null
-                                                    ? '${data['departmentId']} Block'
-                                                    : 'Academic Block'),
+                                            data['schedule_name'] as String? ?? 'Exam',
                                             style: AppTypography.bodySmall.copyWith(
                                               color: AppColors.textSecondary,
                                             ),
@@ -226,10 +287,7 @@ class ExamVenuesScreen extends ConsumerWidget {
                               _buildVenueDetail(
                                 LucideIcons.clock,
                                 'Reporting Time',
-                                data['reportingTime'] as String? ??
-                                    (data['startTime'] != null
-                                        ? '15m prior (${data['startTime']})'
-                                        : '09:00 AM'),
+                                "15m prior (${_formatTime(data['start_time'])})",
                                 AppColors.onSurface,
                               ),
                             ],
@@ -240,18 +298,9 @@ class ExamVenuesScreen extends ConsumerWidget {
                             children: [
                               _buildVenueDetail(
                                 LucideIcons.bookOpen,
-                                'Papers',
-                                data['subjects'] as String? ??
-                                    data['name'] as String? ??
-                                    'All Assigned Papers',
+                                'Paper / Subject',
+                                "${data['subject']} (${_formatDate(data['exam_date'])})",
                                 AppColors.onSurface,
-                              ),
-                              _buildVenueDetail(
-                                LucideIcons.userCheck,
-                                'Invigilators',
-                                data['invigilator'] as String? ??
-                                    'Assigned Staff',
-                                AppColors.textSecondary,
                               ),
                             ],
                           ),

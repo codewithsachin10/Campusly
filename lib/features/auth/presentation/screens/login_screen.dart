@@ -3,12 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/widgets/campusly_logo.dart';
 import '../../../../core/widgets/google_logo.dart';
 import '../../../../core/utils/error_handler.dart';
-import '../../../../shared/widgets/three_d_pushable_button.dart';
 import '../providers/auth_provider.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
@@ -23,6 +21,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _rememberMe = true;
 
   @override
   void dispose() {
@@ -33,9 +32,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   Future<void> _handleLogin() async {
     if (_formKey.currentState?.validate() ?? false) {
-      await ref
-          .read(authControllerProvider.notifier)
-          .signIn(
+      await ref.read(authControllerProvider.notifier).signIn(
             email: _emailController.text.trim(),
             password: _passwordController.text,
           );
@@ -60,251 +57,574 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     });
 
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(24.0.w),
+      backgroundColor: const Color(0xFFF8FAFC),
+      body: Stack(
+        children: [
+          // Ambient Glow Backdrop (React / Aceternity style background mesh)
+          Positioned(
+            top: -100.h,
+            left: -80.w,
             child: Container(
-              width: double.infinity,
-              constraints: BoxConstraints(maxWidth: 480),
-              padding: EdgeInsets.all(32.0.w),
+              width: 320.w,
+              height: 320.h,
               decoration: BoxDecoration(
-                color: AppColors.surfaceContainerLowest,
-                borderRadius: BorderRadius.circular(24.r),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.primaryContainer.withValues(alpha: 0.08),
-                    blurRadius: 24,
-                    offset: Offset(0, 8),
-                  ),
-                ],
-                border: Border.all(
-                  color: AppColors.outlineVariant.withValues(alpha: 0.4),
-                  width: 1.w,
-                ),
-              ),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          CampuslyLogo(size: 80, borderRadius: 20),
-                          SizedBox(width: 16.w),
-                          Text(
-                            'Campusly',
-                            style: GoogleFonts.plusJakartaSans(
-                              fontSize: 42.sp,
-                              fontWeight: FontWeight.w800,
-                              letterSpacing: -1.5,
-                              color: AppColors.primary,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 24.h),
-                    // Header Title & Subtitle
-                    Text(
-                      'Welcome back 👋',
-                      style: AppTypography.textTheme.headlineLarge,
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 6.h),
-                    Text(
-                      "Let's get your day organized.",
-                      style: AppTypography.textTheme.bodyMedium?.copyWith(
-                        color: AppColors.onSurfaceVariant,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 32.h),
-                    // Email Field
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'EMAIL',
-                          style: AppTypography.textTheme.labelLarge?.copyWith(
-                            color: AppColors.onSurfaceVariant,
-                            letterSpacing: 1.2,
-                          ),
-                        ),
-                        SizedBox(height: 8.h),
-                        TextFormField(
-                          controller: _emailController,
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.next,
-                          style: AppTypography.textTheme.bodyMedium,
-                          decoration: InputDecoration(
-                            hintText: 'Enter your email',
-                            prefixIcon: Icon(
-                              Icons.mail_outline_rounded,
-                              size: 20,
-                            ),
-                          ),
-                          validator: (value) {
-                            if (value == null || value.trim().isEmpty) {
-                              return 'Please enter your email';
-                            }
-                            if (!value.contains('@')) {
-                              return 'Please enter a valid email';
-                            }
-                            return null;
-                          },
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20.h),
-                    // Password Field
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                'PASSWORD',
-                                style: AppTypography.textTheme.labelLarge
-                                    ?.copyWith(
-                                      color: AppColors.onSurfaceVariant,
-                                      letterSpacing: 1.2,
-                                    ),
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            SizedBox(width: 8.w),
-                            InkWell(
-                              onTap: () => context.push('/forgot-password'),
-                              child: Text(
-                                'Forgot password?',
-                                style: AppTypography.textTheme.labelLarge
-                                    ?.copyWith(color: AppColors.primary),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 8.h),
-                        TextFormField(
-                          controller: _passwordController,
-                          obscureText: _obscurePassword,
-                          textInputAction: TextInputAction.done,
-                          onFieldSubmitted: (_) => _handleLogin(),
-                          style: AppTypography.textTheme.bodyMedium,
-                          decoration: InputDecoration(
-                            hintText: 'Enter your password',
-                            prefixIcon: Icon(
-                              Icons.lock_outline_rounded,
-                              size: 20,
-                            ),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                _obscurePassword
-                                    ? Icons.visibility_outlined
-                                    : Icons.visibility_off_outlined,
-                                size: 20,
-                                color: AppColors.onSurfaceVariant,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _obscurePassword = !_obscurePassword;
-                                });
-                              },
-                            ),
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter your password';
-                            }
-                            return null;
-                          },
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 28.h),
-                    // Log In Button
-                    ThreeDPushableButton(
-                      text: 'Log In',
-                      isLoading: isLoading,
-                      onPressed: isLoading ? null : _handleLogin,
-                    ),
-                    SizedBox(height: 24.h),
-                    // Divider
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Divider(color: AppColors.outlineVariant),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-                          child: Text(
-                            'OR CONTINUE WITH',
-                            style: AppTypography.textTheme.labelMedium
-                                ?.copyWith(fontSize: 11.sp, letterSpacing: 1.0),
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(color: AppColors.outlineVariant),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 24.h),
-                    // Social Google Auth Button
-                    SizedBox(
-                      width: double.infinity,
-                      child: OutlinedButton(
-                        onPressed: isLoading ? null : _handleGoogleLogin,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GoogleLogo(size: 22),
-                            SizedBox(width: 10.w),
-                            Flexible(
-                              child: Text(
-                                'Continue with Google',
-                                style: AppTypography.textTheme.labelLarge
-                                    ?.copyWith(fontSize: 15.sp),
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 32.h),
-                    // Footer Sign Up Link
-                    Wrap(
-                      alignment: WrapAlignment.center,
-                      crossAxisAlignment: WrapCrossAlignment.center,
-                      children: [
-                        Text(
-                          "Don't have an account? ",
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
-                            color: AppColors.onSurfaceVariant,
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () => context.push('/signup'),
-                          child: Text(
-                            'Create account',
-                            style: AppTypography.textTheme.labelLarge?.copyWith(
-                              color: AppColors.primary,
-                              fontSize: 16.sp,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    const Color(0xFF4F46E5).withValues(alpha: 0.12),
+                    const Color(0xFF4F46E5).withValues(alpha: 0.0),
                   ],
                 ),
               ),
             ),
+          ),
+          Positioned(
+            bottom: -60.h,
+            right: -60.w,
+            child: Container(
+              width: 280.w,
+              height: 280.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    const Color(0xFF38BDF8).withValues(alpha: 0.10),
+                    const Color(0xFF38BDF8).withValues(alpha: 0.0),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+          SafeArea(
+            child: Center(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 20.h),
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0.0, end: 1.0),
+                  duration: const Duration(milliseconds: 650),
+                  curve: Curves.easeOutCubic,
+                  builder: (context, value, child) {
+                    return Transform.translate(
+                      offset: Offset(0, 24 * (1 - value)),
+                      child: Opacity(
+                        opacity: value,
+                        child: child,
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    constraints: BoxConstraints(maxWidth: 400.w),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // Pro React Card
+                        Container(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 24.0.w,
+                            vertical: 28.0.h,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20.r),
+                            border: Border.all(
+                              color: const Color(0xFFE2E8F0),
+                              width: 1.2,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0x080F172A),
+                                blurRadius: 4,
+                                offset: const Offset(0, 1),
+                              ),
+                              BoxShadow(
+                                color: const Color(0x0C0F172A),
+                                blurRadius: 24,
+                                offset: const Offset(0, 12),
+                              ),
+                            ],
+                          ),
+                          child: Form(
+                            key: _formKey,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                // Top Status Pill (React Badge component)
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 10.w,
+                                      vertical: 4.5.h,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFEEF2FF),
+                                      borderRadius: BorderRadius.circular(20.r),
+                                      border: Border.all(
+                                        color: const Color(0xFFC7D2FE),
+                                        width: 1,
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Container(
+                                          width: 6.r,
+                                          height: 6.r,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF10B981),
+                                            shape: BoxShape.circle,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: const Color(0xFF10B981)
+                                                    .withValues(alpha: 0.5),
+                                                blurRadius: 4,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(width: 6.w),
+                                        Text(
+                                          'STUDENT SECURE ACCESS',
+                                          style: GoogleFonts.plusJakartaSans(
+                                            fontSize: 9.5.sp,
+                                            fontWeight: FontWeight.w700,
+                                            letterSpacing: 0.6,
+                                            color: const Color(0xFF4338CA),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 18.h),
+
+                                // Logo & Title Row
+                                Row(
+                                  children: [
+                                    CampuslyLogo(
+                                      size: 40,
+                                      borderRadius: 10,
+                                      addShadow: false,
+                                    ),
+                                    SizedBox(width: 12.w),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Campusly',
+                                          style: GoogleFonts.plusJakartaSans(
+                                            fontSize: 18.sp,
+                                            fontWeight: FontWeight.w800,
+                                            letterSpacing: -0.6,
+                                            color: const Color(0xFF0F172A),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Academic Management',
+                                          style: GoogleFonts.plusJakartaSans(
+                                            fontSize: 11.sp,
+                                            fontWeight: FontWeight.w500,
+                                            color: const Color(0xFF64748B),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 22.h),
+
+                                // Card Header
+                                Text(
+                                  'Sign in to account',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 17.sp,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: -0.4,
+                                    color: const Color(0xFF0F172A),
+                                  ),
+                                ),
+                                SizedBox(height: 4.h),
+                                Text(
+                                  'Enter your student credentials to view your timetable & events.',
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 12.5.sp,
+                                    height: 1.4,
+                                    color: const Color(0xFF64748B),
+                                  ),
+                                ),
+                                SizedBox(height: 22.h),
+
+                                // Email Input Field (React-like Input)
+                                _buildFieldLabel('Email address'),
+                                SizedBox(height: 6.h),
+                                TextFormField(
+                                  controller: _emailController,
+                                  keyboardType: TextInputType.emailAddress,
+                                  textInputAction: TextInputAction.next,
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 13.5.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color(0xFF0F172A),
+                                  ),
+                                  decoration: _buildInputDecoration(
+                                    hintText: 'student@college.edu',
+                                    prefixIcon: LucideIcons.mail,
+                                  ),
+                                  validator: (value) {
+                                    if (value == null || value.trim().isEmpty) {
+                                      return 'Please enter your email';
+                                    }
+                                    if (!value.contains('@')) {
+                                      return 'Please enter a valid email address';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                SizedBox(height: 16.h),
+
+                                // Password Input Field
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    _buildFieldLabel('Password'),
+                                    InkWell(
+                                      onTap: () => context.push('/forgot-password'),
+                                      child: Text(
+                                        'Forgot password?',
+                                        style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 11.5.sp,
+                                          fontWeight: FontWeight.w600,
+                                          color: const Color(0xFF4F46E5),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 6.h),
+                                TextFormField(
+                                  controller: _passwordController,
+                                  obscureText: _obscurePassword,
+                                  textInputAction: TextInputAction.done,
+                                  onFieldSubmitted: (_) => _handleLogin(),
+                                  style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 13.5.sp,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color(0xFF0F172A),
+                                  ),
+                                  decoration: _buildInputDecoration(
+                                    hintText: '••••••••••••',
+                                    prefixIcon: LucideIcons.lock,
+                                    suffix: IconButton(
+                                      icon: Icon(
+                                        _obscurePassword
+                                            ? LucideIcons.eye
+                                            : LucideIcons.eyeOff,
+                                        size: 16,
+                                        color: const Color(0xFF94A3B8),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          _obscurePassword = !_obscurePassword;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Please enter your password';
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                SizedBox(height: 14.h),
+
+                                // Remember Me Option (React Checkbox)
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      height: 20.r,
+                                      width: 20.r,
+                                      child: Checkbox(
+                                        value: _rememberMe,
+                                        onChanged: (val) {
+                                          setState(() {
+                                            _rememberMe = val ?? true;
+                                          });
+                                        },
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(4.r),
+                                        ),
+                                        side: const BorderSide(
+                                          color: Color(0xFFCBD5E1),
+                                          width: 1.2,
+                                        ),
+                                        activeColor: const Color(0xFF4F46E5),
+                                        materialTapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                    ),
+                                    SizedBox(width: 8.w),
+                                    Text(
+                                      'Remember this device',
+                                      style: GoogleFonts.plusJakartaSans(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w500,
+                                        color: const Color(0xFF475569),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 20.h),
+
+                                // React Pro Button (Primary Sign In)
+                                _buildPrimaryButton(isLoading),
+                                SizedBox(height: 20.h),
+
+                                // Divider
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Divider(
+                                        color: const Color(0xFFE2E8F0),
+                                        thickness: 1,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 12.w),
+                                      child: Text(
+                                        'or continue with',
+                                        style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 11.sp,
+                                          fontWeight: FontWeight.w500,
+                                          color: const Color(0xFF94A3B8),
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Divider(
+                                        color: const Color(0xFFE2E8F0),
+                                        thickness: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 18.h),
+
+                                // Google Auth Button (OAuth Component)
+                                OutlinedButton(
+                                  onPressed: isLoading ? null : _handleGoogleLogin,
+                                  style: OutlinedButton.styleFrom(
+                                    padding: EdgeInsets.symmetric(vertical: 11.h),
+                                    backgroundColor: Colors.white,
+                                    side: const BorderSide(
+                                      color: Color(0xFFE2E8F0),
+                                      width: 1.2,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.r),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      GoogleLogo(size: 18),
+                                      SizedBox(width: 10.w),
+                                      Text(
+                                        'Continue with Google',
+                                        style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 13.sp,
+                                          fontWeight: FontWeight.w600,
+                                          color: const Color(0xFF334155),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 22.h),
+
+                                // Create Account Row
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Don't have an account? ",
+                                      style: GoogleFonts.plusJakartaSans(
+                                        fontSize: 12.5.sp,
+                                        color: const Color(0xFF64748B),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      onTap: () => context.push('/signup'),
+                                      child: Text(
+                                        'Create account',
+                                        style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 12.5.sp,
+                                          fontWeight: FontWeight.w700,
+                                          color: const Color(0xFF4F46E5),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 16.h),
+
+                        // Security Trust Badge beneath card
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              LucideIcons.shieldCheck,
+                              size: 13,
+                              color: const Color(0xFF94A3B8),
+                            ),
+                            SizedBox(width: 6.w),
+                            Text(
+                              '256-bit encrypted • Campusly Student Gateway',
+                              style: GoogleFonts.plusJakartaSans(
+                                fontSize: 10.5.sp,
+                                fontWeight: FontWeight.w500,
+                                color: const Color(0xFF94A3B8),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFieldLabel(String label) {
+    return Text(
+      label,
+      style: GoogleFonts.plusJakartaSans(
+        fontSize: 12.sp,
+        fontWeight: FontWeight.w600,
+        color: const Color(0xFF334155),
+      ),
+    );
+  }
+
+  InputDecoration _buildInputDecoration({
+    required String hintText,
+    required IconData prefixIcon,
+    Widget? suffix,
+  }) {
+    return InputDecoration(
+      hintText: hintText,
+      hintStyle: GoogleFonts.plusJakartaSans(
+        fontSize: 13.sp,
+        fontWeight: FontWeight.w400,
+        color: const Color(0xFF94A3B8),
+      ),
+      filled: true,
+      fillColor: const Color(0xFFF8FAFC),
+      contentPadding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
+      prefixIcon: Icon(
+        prefixIcon,
+        size: 16,
+        color: const Color(0xFF94A3B8),
+      ),
+      suffixIcon: suffix,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: const BorderSide(
+          color: Color(0xFFE2E8F0),
+          width: 1.2,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: const BorderSide(
+          color: Color(0xFF4F46E5),
+          width: 1.5,
+        ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: const BorderSide(
+          color: Color(0xFFEF4444),
+          width: 1.2,
+        ),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: const BorderSide(
+          color: Color(0xFFEF4444),
+          width: 1.5,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPrimaryButton(bool isLoading) {
+    return Container(
+      height: 44.h,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r),
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFF4F46E5),
+            Color(0xFF3730A3),
+          ],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF4F46E5).withValues(alpha: 0.28),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(10.r),
+          onTap: isLoading ? null : _handleLogin,
+          child: Center(
+            child: isLoading
+                ? SizedBox(
+                    width: 18.r,
+                    height: 18.r,
+                    child: const CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: Colors.white,
+                    ),
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Sign in to Campusly',
+                        style: GoogleFonts.plusJakartaSans(
+                          fontSize: 13.5.sp,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(width: 8.w),
+                      const Icon(
+                        LucideIcons.arrowRight,
+                        size: 15,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
           ),
         ),
       ),

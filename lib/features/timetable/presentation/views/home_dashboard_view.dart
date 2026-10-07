@@ -27,6 +27,8 @@ class HomeDashboardView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(authControllerProvider).value;
+    final isAuthLoading = ref.watch(authControllerProvider).isLoading;
+    final isClassLoading = ref.watch(isCurrentClassLoadingProvider);
     final ongoingAsync = ref.watch(ongoingClassProvider);
     final nextAsync = ref.watch(nextClassProvider);
     final todayScheduleAsync = ref.watch(todayScheduleProvider);
@@ -41,7 +43,9 @@ class HomeDashboardView extends ConsumerWidget {
         if (latest.priority.toLowerCase() == 'high' && !_shownAlerts.contains(latest.id)) {
           _shownAlerts.add(latest.id);
           WidgetsBinding.instance.addPostFrameCallback((_) {
-            _showUrgentNoticePopup(context, latest);
+            if (context.mounted) {
+              _showUrgentNoticePopup(context, latest);
+            }
           });
         }
       }
@@ -74,9 +78,12 @@ class HomeDashboardView extends ConsumerWidget {
     final headerDateText =
         '${weekdays[now.weekday - 1]}, ${months[now.month - 1]} ${now.day}';
 
-    final isWeekendOrEmpty =
-        todayScheduleAsync.value == null || todayScheduleAsync.value!.isEmpty;
+    final isScheduleLoading =
+        todayScheduleAsync.isLoading && !todayScheduleAsync.hasValue;
     final todayItems = todayScheduleAsync.value ?? [];
+    final isWeekend =
+        now.weekday == DateTime.saturday || now.weekday == DateTime.sunday;
+    final isWeekendOrEmpty = !isScheduleLoading && todayItems.isEmpty;
     final classCount = todayItems.where((i) => !i.isBreak).length;
     final breakCount = todayItems.where((i) => i.isBreak).length;
 
@@ -110,7 +117,7 @@ class HomeDashboardView extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Good morning, ${user?.name.isNotEmpty == true ? user!.name.split(' ').first : 'Student'} 👋',
+                        'Good morning, ${user?.name.trim().isNotEmpty == true ? user!.name.trim().split(' ').first : 'Student'} 👋',
                         style: AppTypography.textTheme.headlineLarge?.copyWith(
                           fontSize: 28.sp,
                           color: AppColors.onSurface,
@@ -179,14 +186,18 @@ class HomeDashboardView extends ConsumerWidget {
             SizedBox(height: 16.h),
             EventsPromoBanner(onTap: () => context.push('/events')),
             SizedBox(height: 16.h),
-            _buildCampusPresenceBanner(context),
-            SizedBox(height: 16.h),
             AnnouncementsBanner(),
             SizedBox(height: 16.h),
 
-            if (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty))
-              _buildNoTimetableState(context)
-            else ...[
+            if (isClassLoading || isAuthLoading) ...[
+              _buildDashboardSkeleton(),
+            ] else if (currentClass == null &&
+                (joinedCustomTimetablesAsync.value == null ||
+                    joinedCustomTimetablesAsync.value!.isEmpty)) ...[
+              _buildNoTimetableState(context),
+            ] else if (isScheduleLoading) ...[
+              _buildDashboardSkeleton(),
+            ] else ...[
               // Weekend / No Classes Today Banner
               if (isWeekendOrEmpty) ...[
               Container(
@@ -223,14 +234,14 @@ class HomeDashboardView extends ConsumerWidget {
                         ],
                       ),
                       child: Icon(
-                        Icons.weekend_rounded,
+                        isWeekend ? Icons.weekend_rounded : Icons.event_available_rounded,
                         color: AppColors.primary,
                         size: 32,
                       ),
                     ),
                     SizedBox(height: 16.h),
                     Text(
-                      'No Classes Today! 🎉',
+                      isWeekend ? 'Weekend Free Day! 🎉' : 'No Classes Today! 🎉',
                       style: AppTypography.textTheme.headlineSmall?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.w800,
@@ -238,7 +249,9 @@ class HomeDashboardView extends ConsumerWidget {
                     ),
                     SizedBox(height: 6.h),
                     Text(
-                      "It's a free day or the weekend! Relax, recharge, or catch up on self-paced projects.",
+                      isWeekend
+                          ? "It's the weekend! Relax, recharge, or catch up on self-paced projects."
+                          : "You have no scheduled lectures for today. Enjoy your free time!",
                       textAlign: TextAlign.center,
                       style: AppTypography.textTheme.bodyMedium?.copyWith(
                         color: AppColors.onSurfaceVariant,
@@ -255,7 +268,10 @@ class HomeDashboardView extends ConsumerWidget {
             if (!isWeekendOrEmpty) ...[
               ongoingAsync.when(
                 loading: () => Center(
-                  child: CircularProgressIndicator(color: AppColors.primary),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.h),
+                    child: CircularProgressIndicator(color: AppColors.primary),
+                  ),
                 ),
                 error: (error, stackTrace) => SizedBox.shrink(),
                 data: (ongoing) {
@@ -564,85 +580,79 @@ class HomeDashboardView extends ConsumerWidget {
                         ),
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            children: [
-                              Container(
-                                width: 44.w,
-                                height: 44.h,
-                                decoration: BoxDecoration(
-                                  color: AppColors.primary.withValues(
-                                    alpha: 0.1,
-                                  ),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.timer_outlined,
-                                  color: AppColors.primary,
-                                  size: 24,
-                                ),
+                          Container(
+                            width: 44.w,
+                            height: 44.h,
+                            decoration: BoxDecoration(
+                              color: AppColors.primary.withValues(
+                                alpha: 0.1,
                               ),
-                              SizedBox(width: 14.w),
-                              Flexible(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      isToday && diffSecs > 0
-                                          ? 'NEXT CLASS IN'
-                                          : 'UPCOMING CLASS ON',
-                                      style: AppTypography.textTheme.labelSmall
-                                          ?.copyWith(
-                                            color: AppColors.primary.withValues(
-                                              alpha: 0.7,
-                                            ),
-                                            fontWeight: FontWeight.bold,
-                                            letterSpacing: 1.0,
-                                          ),
-                                    ),
-                                    SizedBox(height: 2.h),
-                                    Text(
-                                      timerOrDateDisplay,
-                                      style: AppTypography.textTheme.headlineSmall
-                                          ?.copyWith(
-                                            color: AppColors.primary,
-                                            fontWeight: FontWeight.w800,
-                                            fontSize: (isToday && diffSecs > 0)
-                                                ? 22
-                                                : 16,
-                                          ),
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.timer_outlined,
+                              color: AppColors.primary,
+                              size: 24,
+                            ),
                           ),
+                          SizedBox(width: 12.w),
                           Expanded(
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Upcoming',
+                                  isToday && diffSecs > 0
+                                      ? 'NEXT CLASS IN'
+                                      : 'UPCOMING CLASS ON',
                                   style: AppTypography.textTheme.labelSmall
                                       ?.copyWith(
-                                        color: AppColors.onSurfaceVariant,
+                                        color: AppColors.primary.withValues(
+                                          alpha: 0.7,
+                                        ),
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 1.0,
                                       ),
                                 ),
                                 SizedBox(height: 2.h),
                                 Text(
-                                  next.shortTitle,
-                                  style: AppTypography.textTheme.bodyMedium
+                                  timerOrDateDisplay,
+                                  style: AppTypography.textTheme.headlineSmall
                                       ?.copyWith(
-                                        color: AppColors.onSurface,
-                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.primary,
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: (isToday && diffSecs > 0)
+                                            ? 20.sp
+                                            : 15.sp,
                                       ),
-                                  textAlign: TextAlign.end,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
+                          ),
+                          SizedBox(width: 12.w),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                'Upcoming',
+                                style: AppTypography.textTheme.labelSmall
+                                    ?.copyWith(
+                                      color: AppColors.onSurfaceVariant,
+                                    ),
+                              ),
+                              SizedBox(height: 2.h),
+                              Text(
+                                next.shortTitle,
+                                style: AppTypography.textTheme.bodyMedium
+                                    ?.copyWith(
+                                      color: AppColors.onSurface,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                textAlign: TextAlign.end,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -1101,6 +1111,116 @@ class HomeDashboardView extends ConsumerWidget {
       ),
     );
   }
+  Widget _buildDashboardSkeleton() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: double.infinity,
+          height: 140.h,
+          padding: EdgeInsets.all(20.w),
+          decoration: BoxDecoration(
+            color: AppColors.surfaceContainerLowest,
+            borderRadius: BorderRadius.circular(20.r),
+            border: Border.all(
+              color: AppColors.outlineVariant.withValues(alpha: 0.2),
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 110.w,
+                    height: 16.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceContainerHigh.withValues(alpha: 0.6),
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                  ),
+                  Container(
+                    width: 70.w,
+                    height: 14.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceContainerHigh.withValues(alpha: 0.6),
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                width: 200.w,
+                height: 22.h,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceContainerHigh.withValues(alpha: 0.6),
+                  borderRadius: BorderRadius.circular(8.r),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 8.h,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceContainerHigh.withValues(alpha: 0.4),
+                  borderRadius: BorderRadius.circular(4.r),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 16.h),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                height: 80.h,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceContainerLowest,
+                  borderRadius: BorderRadius.circular(16.r),
+                  border: Border.all(
+                    color: AppColors.outlineVariant.withValues(alpha: 0.2),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(width: 16.w),
+            Expanded(
+              child: Container(
+                height: 80.h,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceContainerLowest,
+                  borderRadius: BorderRadius.circular(16.r),
+                  border: Border.all(
+                    color: AppColors.outlineVariant.withValues(alpha: 0.2),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 24.h),
+        ...List.generate(
+          2,
+          (index) => Padding(
+            padding: EdgeInsets.only(bottom: 12.0.h),
+            child: Container(
+              height: 72.h,
+              decoration: BoxDecoration(
+                color: AppColors.surfaceContainerLowest,
+                borderRadius: BorderRadius.circular(16.r),
+                border: Border.all(
+                  color: AppColors.outlineVariant.withValues(alpha: 0.2),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildNoTimetableState(BuildContext context) {
     return Container(
       width: double.infinity,
@@ -1156,60 +1276,6 @@ class HomeDashboardView extends ConsumerWidget {
     );
   }
 
-  Widget _buildCampusPresenceBanner(BuildContext context) {
-    return InkWell(
-      onTap: () => context.push('/campus-presence'),
-      borderRadius: BorderRadius.circular(16.r),
-      child: Container(
-        padding: EdgeInsets.all(16.w),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue.shade100, Colors.blue.shade50],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(16.r),
-          border: Border.all(color: Colors.blue.shade200),
-        ),
-        child: Row(
-          children: [
-            Container(
-              padding: EdgeInsets.all(12.w),
-              decoration: BoxDecoration(
-                color: Colors.blue.shade200.withValues(alpha: 0.5),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(LucideIcons.mapPin, color: Colors.blue),
-            ),
-            SizedBox(width: 16.w),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Campus Presence',
-                    style: AppTypography.textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue.shade900,
-                    ),
-                  ),
-                  SizedBox(height: 4.h),
-                  Text(
-                    'See where your friends are and check-in!',
-                    style: AppTypography.textTheme.bodySmall?.copyWith(
-                      color: Colors.blue.shade800,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Icon(Icons.chevron_right_rounded, color: Colors.blue.shade900),
-          ],
-        ),
-      ),
-    );
-  }
-
   String _getDayStr(int weekday) {
     switch (weekday) {
       case DateTime.monday:
@@ -1253,6 +1319,8 @@ class HomeDashboardView extends ConsumerWidget {
   }
 
   void _showUrgentNoticePopup(BuildContext context, AnnouncementModel ann) {
+    if (!context.mounted) return;
+
     String? subjectName;
     String? oldVenue;
     String? newVenue;
@@ -1337,7 +1405,7 @@ class HomeDashboardView extends ConsumerWidget {
 
                 // Subtitle (Subject)
                 Text(
-                  subjectName!,
+                  subjectName ?? '-',
                   style: TextStyle(
                     fontSize: 15.sp,
                     color: Colors.grey.shade600,
@@ -1392,7 +1460,7 @@ class HomeDashboardView extends ConsumerWidget {
                                 style: TextStyle(fontSize: 11.sp, color: Colors.grey.shade500, fontWeight: FontWeight.w600, letterSpacing: 0.5),
                               ),
                               Text(
-                                oldVenue!,
+                                oldVenue ?? '-',
                                 style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600, color: Color(0xFF1C1C1E)),
                               ),
                             ],
@@ -1459,7 +1527,7 @@ class HomeDashboardView extends ConsumerWidget {
                                           style: TextStyle(fontSize: 11.sp, color: Color(0xFFE57E00), fontWeight: FontWeight.bold, letterSpacing: 0.5),
                                         ),
                                         Text(
-                                          newVenue!,
+                                          newVenue ?? '-',
                                           style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, color: Color(0xFF1C1C1E)),
                                         ),
                                       ],

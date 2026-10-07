@@ -5,12 +5,82 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../auth/presentation/providers/auth_provider.dart';
+import 'package:intl/intl.dart';
+
+final examSchedulesProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((ref) async {
+  final user = ref.watch(authStateChangesProvider).value;
+  if (user == null) return [];
+
+  // Fetch the latest exam schedules for the student's department, year, semester
+  final response = await Supabase.instance.client
+      .from('exam_schedules')
+      .select('*, exam_papers(*)')
+      .eq('department_id', user.department ?? '')
+      .eq('academic_year', user.year ?? '')
+      .eq('semester', user.semester ?? 0)
+      .inFilter('status', ['published', 'venues_published'])
+      .order('created_at', ascending: false);
+
+  List<Map<String, dynamic>> allPapers = [];
+
+  for (var schedule in response) {
+    final papers = schedule['exam_papers'] as List<dynamic>? ?? [];
+    for (var paper in papers) {
+      allPapers.add({
+        'schedule_name': schedule['schedule_name'],
+        'exam_type': schedule['exam_type'],
+        'subject': paper['subject'],
+        'exam_date': paper['exam_date'],
+        'start_time': paper['start_time'],
+        'end_time': paper['end_time'],
+      });
+    }
+  }
+
+  // Sort by date ascending
+  allPapers.sort((a, b) {
+    if (a['exam_date'] == null) return 1;
+    if (b['exam_date'] == null) return -1;
+    return a['exam_date'].compareTo(b['exam_date']);
+  });
+
+  return allPapers;
+});
 
 class ExamTimeTablesScreen extends ConsumerWidget {
   const ExamTimeTablesScreen({super.key});
 
+  String _formatDate(String? dateStr) {
+    if (dateStr == null || dateStr.isEmpty) return 'Upcoming';
+    try {
+      final date = DateTime.parse(dateStr);
+      return DateFormat('MMM dd, yyyy (EEEE)').format(date);
+    } catch (e) {
+      return dateStr;
+    }
+  }
+
+  String _formatTime(String? timeStr) {
+    if (timeStr == null || timeStr.isEmpty) return '';
+    try {
+      final parts = timeStr.split(':');
+      if (parts.length >= 2) {
+        final hour = int.parse(parts[0]);
+        final min = int.parse(parts[1]);
+        final dt = DateTime(2000, 1, 1, hour, min);
+        return DateFormat('h:mm a').format(dt);
+      }
+      return timeStr;
+    } catch (e) {
+      return timeStr;
+    }
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final examsAsync = ref.watch(examSchedulesProvider);
+
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -21,17 +91,10 @@ class ExamTimeTablesScreen extends ConsumerWidget {
         backgroundColor: AppColors.surface,
         elevation: 0,
       ),
-      body: StreamBuilder<List<Map<String, dynamic>>>(
-        stream: Supabase.instance.client
-            .from('exams')
-            .stream(primaryKey: ['id']),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
-
-          final docs = snapshot.data ?? [];
-
+      body: examsAsync.when(
+        loading: () => Center(child: CircularProgressIndicator()),
+        error: (err, stack) => Center(child: Text('Error loading exams: $err')),
+        data: (papers) {
           return SingleChildScrollView(
             padding: EdgeInsets.all(20.w),
             child: Column(
@@ -88,7 +151,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                 ),
                 SizedBox(height: 24.h),
 
-                if (docs.isEmpty)
+                if (papers.isEmpty)
                   Center(
                     child: Padding(
                       padding: EdgeInsets.only(top: 40.h),
@@ -98,42 +161,32 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                           Icon(
                             LucideIcons.calendarClock,
                             size: 56,
-                            color: AppColors.onSurfaceVariant.withValues(
-                              alpha: 0.4,
-                            ),
+                            color: AppColors.textSecondary.withValues(alpha: 0.3),
                           ),
                           SizedBox(height: 16.h),
                           Text(
                             'No Exam Timetable Published Yet',
                             style: AppTypography.titleMedium.copyWith(
                               fontWeight: FontWeight.bold,
-                              color: AppColors.onSurfaceVariant,
+                              color: AppColors.textSecondary,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 8.h),
                           Text(
                             'Examination papers, dates, and times will appear here as soon as they are published.',
-                            textAlign: TextAlign.center,
                             style: AppTypography.bodySmall.copyWith(
                               color: AppColors.textSecondary,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
                     ),
                   )
-                else ...[
-                  Text(
-                    'Scheduled Papers (${docs.length})',
-                    style: AppTypography.titleMedium.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 16.h),
-                  ...docs.map((data) {
-                    final colorHex =
-                        data['colorHex'] as String? ?? '0xFF3525CD';
-                    final color = Color(int.tryParse(colorHex) ?? 0xFF3525CD);
+                else
+                  ...papers.map((data) {
+                    final color = Color(0xFF3525CD);
 
                     return Container(
                       margin: EdgeInsets.only(bottom: 16.h),
@@ -166,8 +219,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
                                     padding: EdgeInsets.symmetric(
@@ -179,9 +231,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                       borderRadius: BorderRadius.circular(20.r),
                                     ),
                                     child: Text(
-                                      data['code'] as String? ??
-                                          data['subjectId'] as String? ??
-                                          'EXAM',
+                                      data['exam_type'] as String? ?? 'EXAM',
                                       style: TextStyle(
                                         color: color,
                                         fontWeight: FontWeight.bold,
@@ -200,7 +250,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                       borderRadius: BorderRadius.circular(20.r),
                                     ),
                                     child: Text(
-                                      data['status'] as String? ?? 'Scheduled',
+                                      'Scheduled',
                                       style: TextStyle(
                                         color: AppColors.primary,
                                         fontWeight: FontWeight.bold,
@@ -212,9 +262,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                               ),
                               SizedBox(height: 12.h),
                               Text(
-                                data['subject'] as String? ??
-                                    data['name'] as String? ??
-                                    'Examination',
+                                data['subject'] as String? ?? 'Examination',
                                 style: AppTypography.titleMedium.copyWith(
                                   fontWeight: FontWeight.w800,
                                   color: AppColors.onSurface,
@@ -222,7 +270,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                               ),
                               SizedBox(height: 6.h),
                               Text(
-                                data['type'] as String? ?? 'Theory Examination',
+                                data['schedule_name'] as String? ?? 'Theory Examination',
                                 style: AppTypography.bodySmall.copyWith(
                                   color: AppColors.textSecondary,
                                 ),
@@ -232,8 +280,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                 child: Divider(height: 1.h),
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Expanded(
                                     child: Row(
@@ -246,9 +293,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                         SizedBox(width: 6.w),
                                         Expanded(
                                           child: Text(
-                                            data['day'] != null
-                                                ? '${data['date'] ?? ''} (${data['day']})'
-                                                : '${data['date'] ?? 'Upcoming'}',
+                                            _formatDate(data['exam_date'] as String?),
                                             style: AppTypography.bodySmall.copyWith(
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -268,11 +313,7 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                                       ),
                                       SizedBox(width: 6.w),
                                       Text(
-                                        data['time'] as String? ??
-                                            (data['startTime'] != null &&
-                                                    data['endTime'] != null
-                                                ? '${data['startTime']} - ${data['endTime']}'
-                                                : '09:30 AM - 12:30 PM'),
+                                        "${_formatTime(data['start_time'] as String?)} - ${_formatTime(data['end_time'] as String?)}",
                                         style: AppTypography.bodySmall.copyWith(
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -287,7 +328,6 @@ class ExamTimeTablesScreen extends ConsumerWidget {
                       ),
                     );
                   }),
-                ],
               ],
             ),
           );

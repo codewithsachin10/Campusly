@@ -50,7 +50,12 @@ class CampuslyApp extends ConsumerWidget {
     final router = ref.watch(routerProvider);
     final themeMode = ref.watch(themeModeProvider);
 
-    return MaterialApp.router(
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
       title: 'Campusly',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
@@ -62,17 +67,17 @@ class CampuslyApp extends ConsumerWidget {
           return Scaffold(
             body: Center(
               child: Padding(
-                padding: EdgeInsets.all(24.0.w),
+                padding: EdgeInsets.all(24.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(Icons.error_outline, color: Colors.red, size: 48),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 16.0),
                     Text(
                       'Something went wrong.',
-                      style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 8.h),
+                    SizedBox(height: 8.0),
                     Text(
                       'We apologize for the inconvenience. Please try again.',
                       textAlign: TextAlign.center,
@@ -84,6 +89,8 @@ class CampuslyApp extends ConsumerWidget {
           );
         };
         return child!;
+      },
+    );
       },
     );
   }

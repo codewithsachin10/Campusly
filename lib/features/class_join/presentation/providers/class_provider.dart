@@ -5,9 +5,23 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../domain/models/class_model.dart';
 import '../../domain/repositories/class_repository.dart';
 import '../../data/repositories/supabase_class_repository.dart';
+import '../../../auth/presentation/providers/auth_provider.dart';
 
 final classRepositoryProvider = Provider<ClassRepository>((ref) {
   return SupabaseClassRepository();
+});
+
+// Tracks if initial class loading from local cache/prefs is in progress
+class IsCurrentClassLoadingNotifier extends Notifier<bool> {
+  @override
+  bool build() => true;
+
+  void setLoading(bool val) => state = val;
+}
+
+final isCurrentClassLoadingProvider =
+    NotifierProvider<IsCurrentClassLoadingNotifier, bool>(() {
+  return IsCurrentClassLoadingNotifier();
 });
 
 // Holds the currently active joined class for the user with SharedPreferences persistence
@@ -17,7 +31,6 @@ class CurrentClassNotifier extends Notifier<ClassModel?> {
 
   @override
   ClassModel? build() {
-    // Load saved class synchronously from local JSON right away for instant offline UI
     _loadSavedClass();
     return null;
   }
@@ -48,13 +61,34 @@ class CurrentClassNotifier extends Notifier<ClassModel?> {
           );
         }
       }
+
+      // 3. Fallback: If no class is saved locally, check user profile's section
+      if (state == null) {
+        final user = ref.read(authControllerProvider).value;
+        final sectionCode = user?.section?.trim();
+        if (sectionCode != null && sectionCode.isNotEmpty) {
+          final repository = ref.read(classRepositoryProvider);
+          final classModel = await repository.getClassByCode(sectionCode);
+          if (classModel != null) {
+            state = classModel;
+            await prefs.setString(_storageKey, classModel.code);
+            await prefs.setString(
+              _jsonStorageKey,
+              jsonEncode(classModel.toJson()),
+            );
+          }
+        }
+      }
     } catch (e) {
       debugPrint('Error loading saved class from SharedPreferences: $e');
+    } finally {
+      ref.read(isCurrentClassLoadingProvider.notifier).setLoading(false);
     }
   }
 
   Future<void> joinClass(ClassModel classModel) async {
     state = classModel;
+    ref.read(isCurrentClassLoadingProvider.notifier).setLoading(false);
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(_storageKey, classModel.code);
@@ -66,6 +100,7 @@ class CurrentClassNotifier extends Notifier<ClassModel?> {
 
   Future<void> leaveClass() async {
     state = null;
+    ref.read(isCurrentClassLoadingProvider.notifier).setLoading(false);
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove(_storageKey);

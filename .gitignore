@@ -60,3 +60,15 @@ campusly_web_admin/*.local
 firebase-key.json
 firebase-adminsdk-*.json
 
+# Scratch, test scripts and local agent configs
+*.cjs
+*.js
+!campusly_web_admin/src/**
+!campusly_web_admin/*.config.js
+!campusly_web_admin/*.config.ts
+fix_*.dart
+implementation_plan.md
+.agents/
+skills-lock.json
+
+

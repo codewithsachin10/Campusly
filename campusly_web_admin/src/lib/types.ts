@@ -238,3 +238,25 @@ export interface AcademicBatch {
   promotion_date: string;
   created_at: string;
 }
+
+export interface ExamSchedule {
+  id: string;
+  name: string;
+  department_id: string;
+  academic_year: string;
+  semester: number;
+  exam_type: "CAT-1" | "CAT-2" | "SEMESTER";
+  status: "draft" | "published" | "venues_published";
+  created_at: string;
+}
+
+export interface ExamPaper {
+  id: string;
+  schedule_id: string;
+  subject: string;
+  exam_date: string;
+  start_time: string;
+  end_time: string;
+  venue?: string;
+  created_at: string;
+}

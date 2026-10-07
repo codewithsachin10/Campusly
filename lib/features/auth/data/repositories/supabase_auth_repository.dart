@@ -49,6 +49,7 @@ class SupabaseAuthRepository implements AuthRepository {
           phone: data['phone'] as String?,
           section: data['section'] as String?,
           year: data['academicYear'] as String?,
+          semester: data['semester'] as int?,
           rollNumber: data['rollNumber'] as String?,
           status: data['status'] as String?,
           isProfileCompleted: data['is_profile_completed'] as bool? ?? false,

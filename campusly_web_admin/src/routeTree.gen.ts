@@ -18,9 +18,9 @@ import { Route as AppAdminsRouteImport } from './routes/_app.admins'
 import { Route as AppAssignmentsRouteImport } from './routes/_app.assignments'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
 import { Route as AppDepartmentsRouteImport } from './routes/_app.departments'
-import { Route as AppExamScheduleRouteImport } from './routes/_app.exam-schedule'
 import { Route as AppFacultyRouteImport } from './routes/_app.faculty'
 import { Route as AppProfileRouteImport } from './routes/_app.profile'
+import { Route as AppPromotionsRouteImport } from './routes/_app.promotions'
 import { Route as AppSessionsRouteImport } from './routes/_app.sessions'
 import { Route as AppSettingsRouteImport } from './routes/_app.settings'
 import { Route as AppStudentsRouteImport } from './routes/_app.students'
@@ -34,11 +34,14 @@ import { Route as AppAdminsAuditRouteImport } from './routes/_app.admins.audit'
 import { Route as AppAdminsListRouteImport } from './routes/_app.admins.list'
 import { Route as AppAdminsRolesRouteImport } from './routes/_app.admins.roles'
 import { Route as AppAdminsSecurityRouteImport } from './routes/_app.admins.security'
+import { Route as AppBannersIndexRouteImport } from './routes/_app.banners.index'
 import { Route as AppCurriculumIndexRouteImport } from './routes/_app.curriculum.index'
 import { Route as AppCurriculumRegulationIdRouteImport } from './routes/_app.curriculum.$regulationId'
 import { Route as AppCurriculumBatchImportRouteImport } from './routes/_app.curriculum.batch-import'
 import { Route as AppCurriculumImportRouteImport } from './routes/_app.curriculum.import'
 import { Route as AppCustomTimetableIdRouteImport } from './routes/_app.custom-timetable.$id'
+import { Route as AppExamScheduleIndexRouteImport } from './routes/_app.exam-schedule.index'
+import { Route as AppExamScheduleIdRouteImport } from './routes/_app.exam-schedule.$id'
 import { Route as AppFormsIndexRouteImport } from './routes/_app.forms.index'
 import { Route as AppSupportIndexRouteImport } from './routes/_app.support.index'
 import { Route as AppSupportTicketIdRouteImport } from './routes/_app.support.$ticketId'
@@ -92,11 +95,6 @@ const AppDepartmentsRoute = AppDepartmentsRouteImport.update({
   path: '/departments',
   getParentRoute: () => AppRoute,
 } as any)
-const AppExamScheduleRoute = AppExamScheduleRouteImport.update({
-  id: '/exam-schedule',
-  path: '/exam-schedule',
-  getParentRoute: () => AppRoute,
-} as any)
 const AppFacultyRoute = AppFacultyRouteImport.update({
   id: '/faculty',
   path: '/faculty',
@@ -105,6 +103,11 @@ const AppFacultyRoute = AppFacultyRouteImport.update({
 const AppProfileRoute = AppProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPromotionsRoute = AppPromotionsRouteImport.update({
+  id: '/promotions',
+  path: '/promotions',
   getParentRoute: () => AppRoute,
 } as any)
 const AppSessionsRoute = AppSessionsRouteImport.update({
@@ -172,6 +175,11 @@ const AppAdminsSecurityRoute = AppAdminsSecurityRouteImport.update({
   path: '/security',
   getParentRoute: () => AppAdminsRoute,
 } as any)
+const AppBannersIndexRoute = AppBannersIndexRouteImport.update({
+  id: '/banners/',
+  path: '/banners/',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppCurriculumIndexRoute = AppCurriculumIndexRouteImport.update({
   id: '/curriculum/',
   path: '/curriculum/',
@@ -197,6 +205,16 @@ const AppCurriculumImportRoute = AppCurriculumImportRouteImport.update({
 const AppCustomTimetableIdRoute = AppCustomTimetableIdRouteImport.update({
   id: '/custom-timetable/$id',
   path: '/custom-timetable/$id',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppExamScheduleIndexRoute = AppExamScheduleIndexRouteImport.update({
+  id: '/exam-schedule/',
+  path: '/exam-schedule/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppExamScheduleIdRoute = AppExamScheduleIdRouteImport.update({
+  id: '/exam-schedule/$id',
+  path: '/exam-schedule/$id',
   getParentRoute: () => AppRoute,
 } as any)
 const AppFormsIndexRoute = AppFormsIndexRouteImport.update({
@@ -249,9 +267,9 @@ export interface FileRoutesByFullPath {
   '/assignments': typeof AppAssignmentsRoute
   '/dashboard': typeof AppDashboardRoute
   '/departments': typeof AppDepartmentsRoute
-  '/exam-schedule': typeof AppExamScheduleRoute
   '/faculty': typeof AppFacultyRoute
   '/profile': typeof AppProfileRoute
+  '/promotions': typeof AppPromotionsRoute
   '/sessions': typeof AppSessionsRoute
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
@@ -268,11 +286,14 @@ export interface FileRoutesByFullPath {
   '/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/curriculum/import': typeof AppCurriculumImportRoute
   '/custom-timetable/$id': typeof AppCustomTimetableIdRoute
+  '/exam-schedule/$id': typeof AppExamScheduleIdRoute
   '/support/$ticketId': typeof AppSupportTicketIdRoute
   '/updates/create': typeof AppUpdatesCreateRoute
   '/updates/releases': typeof AppUpdatesReleasesRoute
   '/admins/': typeof AppAdminsIndexRoute
+  '/banners/': typeof AppBannersIndexRoute
   '/curriculum/': typeof AppCurriculumIndexRoute
+  '/exam-schedule/': typeof AppExamScheduleIndexRoute
   '/forms/': typeof AppFormsIndexRoute
   '/support/': typeof AppSupportIndexRoute
   '/updates/': typeof AppUpdatesIndexRoute
@@ -287,9 +308,9 @@ export interface FileRoutesByTo {
   '/assignments': typeof AppAssignmentsRoute
   '/dashboard': typeof AppDashboardRoute
   '/departments': typeof AppDepartmentsRoute
-  '/exam-schedule': typeof AppExamScheduleRoute
   '/faculty': typeof AppFacultyRoute
   '/profile': typeof AppProfileRoute
+  '/promotions': typeof AppPromotionsRoute
   '/sessions': typeof AppSessionsRoute
   '/settings': typeof AppSettingsRoute
   '/students': typeof AppStudentsRoute
@@ -306,11 +327,14 @@ export interface FileRoutesByTo {
   '/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/curriculum/import': typeof AppCurriculumImportRoute
   '/custom-timetable/$id': typeof AppCustomTimetableIdRoute
+  '/exam-schedule/$id': typeof AppExamScheduleIdRoute
   '/support/$ticketId': typeof AppSupportTicketIdRoute
   '/updates/create': typeof AppUpdatesCreateRoute
   '/updates/releases': typeof AppUpdatesReleasesRoute
   '/admins': typeof AppAdminsIndexRoute
+  '/banners': typeof AppBannersIndexRoute
   '/curriculum': typeof AppCurriculumIndexRoute
+  '/exam-schedule': typeof AppExamScheduleIndexRoute
   '/forms': typeof AppFormsIndexRoute
   '/support': typeof AppSupportIndexRoute
   '/updates': typeof AppUpdatesIndexRoute
@@ -328,9 +352,9 @@ export interface FileRoutesById {
   '/_app/assignments': typeof AppAssignmentsRoute
   '/_app/dashboard': typeof AppDashboardRoute
   '/_app/departments': typeof AppDepartmentsRoute
-  '/_app/exam-schedule': typeof AppExamScheduleRoute
   '/_app/faculty': typeof AppFacultyRoute
   '/_app/profile': typeof AppProfileRoute
+  '/_app/promotions': typeof AppPromotionsRoute
   '/_app/sessions': typeof AppSessionsRoute
   '/_app/settings': typeof AppSettingsRoute
   '/_app/students': typeof AppStudentsRoute
@@ -347,11 +371,14 @@ export interface FileRoutesById {
   '/_app/curriculum/batch-import': typeof AppCurriculumBatchImportRoute
   '/_app/curriculum/import': typeof AppCurriculumImportRoute
   '/_app/custom-timetable/$id': typeof AppCustomTimetableIdRoute
+  '/_app/exam-schedule/$id': typeof AppExamScheduleIdRoute
   '/_app/support/$ticketId': typeof AppSupportTicketIdRoute
   '/_app/updates/create': typeof AppUpdatesCreateRoute
   '/_app/updates/releases': typeof AppUpdatesReleasesRoute
   '/_app/admins/': typeof AppAdminsIndexRoute
+  '/_app/banners/': typeof AppBannersIndexRoute
   '/_app/curriculum/': typeof AppCurriculumIndexRoute
+  '/_app/exam-schedule/': typeof AppExamScheduleIndexRoute
   '/_app/forms/': typeof AppFormsIndexRoute
   '/_app/support/': typeof AppSupportIndexRoute
   '/_app/updates/': typeof AppUpdatesIndexRoute
@@ -369,9 +396,9 @@ export interface FileRouteTypes {
     | '/assignments'
     | '/dashboard'
     | '/departments'
-    | '/exam-schedule'
     | '/faculty'
     | '/profile'
+    | '/promotions'
     | '/sessions'
     | '/settings'
     | '/students'
@@ -388,11 +415,14 @@ export interface FileRouteTypes {
     | '/curriculum/batch-import'
     | '/curriculum/import'
     | '/custom-timetable/$id'
+    | '/exam-schedule/$id'
     | '/support/$ticketId'
     | '/updates/create'
     | '/updates/releases'
     | '/admins/'
+    | '/banners/'
     | '/curriculum/'
+    | '/exam-schedule/'
     | '/forms/'
     | '/support/'
     | '/updates/'
@@ -407,9 +437,9 @@ export interface FileRouteTypes {
     | '/assignments'
     | '/dashboard'
     | '/departments'
-    | '/exam-schedule'
     | '/faculty'
     | '/profile'
+    | '/promotions'
     | '/sessions'
     | '/settings'
     | '/students'
@@ -426,11 +456,14 @@ export interface FileRouteTypes {
     | '/curriculum/batch-import'
     | '/curriculum/import'
     | '/custom-timetable/$id'
+    | '/exam-schedule/$id'
     | '/support/$ticketId'
     | '/updates/create'
     | '/updates/releases'
     | '/admins'
+    | '/banners'
     | '/curriculum'
+    | '/exam-schedule'
     | '/forms'
     | '/support'
     | '/updates'
@@ -447,9 +480,9 @@ export interface FileRouteTypes {
     | '/_app/assignments'
     | '/_app/dashboard'
     | '/_app/departments'
-    | '/_app/exam-schedule'
     | '/_app/faculty'
     | '/_app/profile'
+    | '/_app/promotions'
     | '/_app/sessions'
     | '/_app/settings'
     | '/_app/students'
@@ -466,11 +499,14 @@ export interface FileRouteTypes {
     | '/_app/curriculum/batch-import'
     | '/_app/curriculum/import'
     | '/_app/custom-timetable/$id'
+    | '/_app/exam-schedule/$id'
     | '/_app/support/$ticketId'
     | '/_app/updates/create'
     | '/_app/updates/releases'
     | '/_app/admins/'
+    | '/_app/banners/'
     | '/_app/curriculum/'
+    | '/_app/exam-schedule/'
     | '/_app/forms/'
     | '/_app/support/'
     | '/_app/updates/'
@@ -552,13 +588,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppDepartmentsRouteImport
       parentRoute: typeof AppRoute
     }
-    '/_app/exam-schedule': {
-      id: '/_app/exam-schedule'
-      path: '/exam-schedule'
-      fullPath: '/exam-schedule'
-      preLoaderRoute: typeof AppExamScheduleRouteImport
-      parentRoute: typeof AppRoute
-    }
     '/_app/faculty': {
       id: '/_app/faculty'
       path: '/faculty'
@@ -571,6 +600,13 @@ declare module '@tanstack/react-router' {
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/promotions': {
+      id: '/_app/promotions'
+      path: '/promotions'
+      fullPath: '/promotions'
+      preLoaderRoute: typeof AppPromotionsRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/sessions': {
@@ -664,6 +700,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppAdminsSecurityRouteImport
       parentRoute: typeof AppAdminsRoute
     }
+    '/_app/banners/': {
+      id: '/_app/banners/'
+      path: '/banners'
+      fullPath: '/banners/'
+      preLoaderRoute: typeof AppBannersIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/curriculum/': {
       id: '/_app/curriculum/'
       path: '/curriculum'
@@ -697,6 +740,20 @@ declare module '@tanstack/react-router' {
       path: '/custom-timetable/$id'
       fullPath: '/custom-timetable/$id'
       preLoaderRoute: typeof AppCustomTimetableIdRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/exam-schedule/': {
+      id: '/_app/exam-schedule/'
+      path: '/exam-schedule'
+      fullPath: '/exam-schedule/'
+      preLoaderRoute: typeof AppExamScheduleIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/exam-schedule/$id': {
+      id: '/_app/exam-schedule/$id'
+      path: '/exam-schedule/$id'
+      fullPath: '/exam-schedule/$id'
+      preLoaderRoute: typeof AppExamScheduleIdRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/forms/': {
@@ -786,9 +843,9 @@ interface AppRouteChildren {
   AppAssignmentsRoute: typeof AppAssignmentsRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppDepartmentsRoute: typeof AppDepartmentsRoute
-  AppExamScheduleRoute: typeof AppExamScheduleRoute
   AppFacultyRoute: typeof AppFacultyRoute
   AppProfileRoute: typeof AppProfileRoute
+  AppPromotionsRoute: typeof AppPromotionsRoute
   AppSessionsRoute: typeof AppSessionsRoute
   AppSettingsRoute: typeof AppSettingsRoute
   AppStudentsRoute: typeof AppStudentsRoute
@@ -798,10 +855,13 @@ interface AppRouteChildren {
   AppCurriculumBatchImportRoute: typeof AppCurriculumBatchImportRoute
   AppCurriculumImportRoute: typeof AppCurriculumImportRoute
   AppCustomTimetableIdRoute: typeof AppCustomTimetableIdRoute
+  AppExamScheduleIdRoute: typeof AppExamScheduleIdRoute
   AppSupportTicketIdRoute: typeof AppSupportTicketIdRoute
   AppUpdatesCreateRoute: typeof AppUpdatesCreateRoute
   AppUpdatesReleasesRoute: typeof AppUpdatesReleasesRoute
+  AppBannersIndexRoute: typeof AppBannersIndexRoute
   AppCurriculumIndexRoute: typeof AppCurriculumIndexRoute
+  AppExamScheduleIndexRoute: typeof AppExamScheduleIndexRoute
   AppFormsIndexRoute: typeof AppFormsIndexRoute
   AppSupportIndexRoute: typeof AppSupportIndexRoute
   AppUpdatesIndexRoute: typeof AppUpdatesIndexRoute
@@ -815,9 +875,9 @@ const AppRouteChildren: AppRouteChildren = {
   AppAssignmentsRoute: AppAssignmentsRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppDepartmentsRoute: AppDepartmentsRoute,
-  AppExamScheduleRoute: AppExamScheduleRoute,
   AppFacultyRoute: AppFacultyRoute,
   AppProfileRoute: AppProfileRoute,
+  AppPromotionsRoute: AppPromotionsRoute,
   AppSessionsRoute: AppSessionsRoute,
   AppSettingsRoute: AppSettingsRoute,
   AppStudentsRoute: AppStudentsRoute,
@@ -827,10 +887,13 @@ const AppRouteChildren: AppRouteChildren = {
   AppCurriculumBatchImportRoute: AppCurriculumBatchImportRoute,
   AppCurriculumImportRoute: AppCurriculumImportRoute,
   AppCustomTimetableIdRoute: AppCustomTimetableIdRoute,
+  AppExamScheduleIdRoute: AppExamScheduleIdRoute,
   AppSupportTicketIdRoute: AppSupportTicketIdRoute,
   AppUpdatesCreateRoute: AppUpdatesCreateRoute,
   AppUpdatesReleasesRoute: AppUpdatesReleasesRoute,
+  AppBannersIndexRoute: AppBannersIndexRoute,
   AppCurriculumIndexRoute: AppCurriculumIndexRoute,
+  AppExamScheduleIndexRoute: AppExamScheduleIndexRoute,
   AppFormsIndexRoute: AppFormsIndexRoute,
   AppSupportIndexRoute: AppSupportIndexRoute,
   AppUpdatesIndexRoute: AppUpdatesIndexRoute,

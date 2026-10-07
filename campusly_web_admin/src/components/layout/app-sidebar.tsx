@@ -57,6 +57,7 @@ const groups = [
       { title: "Curriculum", url: "/curriculum", icon: BookOpen, permission: "view_curriculum" },
       { title: "Courses", url: "/courses", icon: BookOpen, permission: "view_curriculum" },
       { title: "Academic Sessions", url: "/sessions", icon: CalendarRange, permission: "view_curriculum" },
+      { title: "Batch Promotions", url: "/promotions", icon: Users, permission: "view_curriculum" },
       { title: "Academic Years", url: "/academic-years", icon: CalendarRange, permission: "view_curriculum" },
       { title: "Semesters", url: "/semesters", icon: Layers, permission: "view_curriculum" },
       { title: "Sections", url: "/sections", icon: SquareStack, permission: "view_curriculum" },
@@ -89,6 +90,7 @@ const groups = [
     label: "Campus Life",
     items: [
       { title: "Events", url: "/events", icon: PartyPopper, permission: "manage_settings" },
+      { title: "Banners", url: "/banners", icon: Megaphone, permission: "manage_settings" },
       { title: "Clubs", url: "/clubs", icon: Users, permission: "manage_settings" },
       { title: "Notifications", url: "/notifications", icon: Megaphone, permission: "manage_settings" },
     ],

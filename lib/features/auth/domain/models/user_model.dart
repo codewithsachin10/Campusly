@@ -11,6 +11,7 @@ class UserModel {
   final String? year;
   final String? rollNumber;
   final String? status;
+  final int? semester;
   
   // Profile onboarding fields
   final bool isProfileCompleted;
@@ -38,6 +39,7 @@ class UserModel {
     this.year,
     this.rollNumber,
     this.status,
+    this.semester,
     this.isProfileCompleted = false,
     this.gender,
     this.dob,
@@ -62,6 +64,7 @@ class UserModel {
     String? year,
     String? rollNumber,
     String? status,
+    int? semester,
     bool? isProfileCompleted,
     String? gender,
     DateTime? dob,
@@ -85,6 +88,7 @@ class UserModel {
       year: year ?? this.year,
       rollNumber: rollNumber ?? this.rollNumber,
       status: status ?? this.status,
+      semester: semester ?? this.semester,
       isProfileCompleted: isProfileCompleted ?? this.isProfileCompleted,
       gender: gender ?? this.gender,
       dob: dob ?? this.dob,
@@ -111,6 +115,7 @@ class UserModel {
       'year': year,
       'rollNumber': rollNumber,
       'status': status,
+      'semester': semester,
       'is_profile_completed': isProfileCompleted,
       'gender': gender,
       'dob': dob?.toIso8601String(),
@@ -137,6 +142,7 @@ class UserModel {
       year: json['year'] as String?,
       rollNumber: json['rollNumber'] as String?,
       status: json['status'] as String?,
+      semester: json['semester'] as int?,
       isProfileCompleted: json['is_profile_completed'] as bool? ?? false,
       gender: json['gender'] as String?,
       dob: json['dob'] != null ? DateTime.parse(json['dob'] as String) : null,

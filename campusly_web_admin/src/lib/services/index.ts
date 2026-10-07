@@ -7,6 +7,36 @@ import type { AppSettings, College, Department, Faculty, Student, TimetableSlot,
  */
 
 export const api = {
+
+  promoBanners: {
+    list: async () => {
+      const { data, error } = await supabase.from("promo_banners").select("*").order("display_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+    create: async (payload: any) => {
+      const { data, error } = await supabase.from("promo_banners").insert([payload]).select().single();
+      if (error) throw error;
+      return data;
+    },
+    update: async (id: string, payload: any) => {
+      const { data, error } = await supabase.from("promo_banners").update(payload).eq("id", id).select().single();
+      if (error) throw error;
+      return data;
+    },
+    delete: async (id: string) => {
+      const { error } = await supabase.from("promo_banners").delete().eq("id", id);
+      if (error) throw error;
+      return id;
+    },
+    reorder: async (banners: {id: string, display_order: number}[]) => {
+      // Upsert the array to update display orders
+      const { data, error } = await supabase.from("promo_banners").upsert(banners);
+      if (error) throw error;
+      return data;
+    }
+  },
+
   dashboard: {
     stats: async () => {
       const [
@@ -116,6 +146,25 @@ export const api = {
       const { data, error } = await supabase.from("students").select("*");
       if (error || !data) return [];
       return data as Student[];
+    },
+    promoteBatch: async (studentIds: string[], nextYear: string, nextSemester: number, defaultSection?: string) => {
+      const updateData: any = { academicYear: nextYear, semester: nextSemester };
+      if (defaultSection) updateData.section = defaultSection;
+      const { data, error } = await supabase
+        .from("students")
+        .update(updateData)
+        .in("id", studentIds)
+        .select();
+      if (error) throw error;
+      return data;
+    },
+    updateSectionBulk: async (updates: { id: string, section: string }[]) => {
+      // Supabase js bulk update requires Promise.all or an RPC.
+      // We will do Promise.all for simplicity.
+      const promises = updates.map(u => 
+        supabase.from("students").update({ section: u.section }).eq("id", u.id)
+      );
+      await Promise.all(promises);
     },
     create: async (payload: Omit<Student, "id">) => {
       const { data, error } = await supabase.from("students").insert([payload]).select().single();
@@ -392,6 +441,54 @@ export const api = {
   },
 
   // --- EXAMS ---
+  
+  examSchedules: {
+    list: async () => {
+      const { data, error } = await supabase.from("exam_schedules").select("*").order("created_at", { ascending: false });
+      if (error) throw error;
+      return data as any[];
+    },
+    get: async (id: string) => {
+      const { data, error } = await supabase.from("exam_schedules").select("*").eq("id", id).single();
+      if (error) throw error;
+      return data;
+    },
+    create: async (payload: any) => {
+      const { data, error } = await supabase.from("exam_schedules").insert([payload]).select().single();
+      if (error) throw error;
+      return data;
+    },
+    update: async (id: string, payload: any) => {
+      const { data, error } = await supabase.from("exam_schedules").update(payload).eq("id", id).select().single();
+      if (error) throw error;
+      return data;
+    },
+    delete: async (id: string) => {
+      const { error } = await supabase.from("exam_schedules").delete().eq("id", id);
+      if (error) throw error;
+    }
+  },
+  examPapers: {
+    listBySchedule: async (scheduleId: string) => {
+      const { data, error } = await supabase.from("exam_papers").select("*").eq("schedule_id", scheduleId).order("exam_date", { ascending: true });
+      if (error) throw error;
+      return data as any[];
+    },
+    saveAll: async (scheduleId: string, papers: any[]) => {
+      // clear old
+      await supabase.from("exam_papers").delete().eq("schedule_id", scheduleId);
+      // insert new
+      if (papers.length > 0) {
+        const newPapers = papers.map(p => {
+          const { id, ...rest } = p;
+          return { ...rest, schedule_id: scheduleId };
+        });
+        const { error } = await supabase.from("exam_papers").insert(newPapers);
+        if (error) throw error;
+      }
+    }
+  },
+
   exams: {
     list: async () => {
       const { data, error } = await supabase.from("exams").select("*").order("created_at", { ascending: false });
@@ -463,6 +560,23 @@ export const api = {
     },
     listSemesters: async (regulationId: string) => {
       const { data, error } = await supabase.from("academic_semesters").select("*").eq("regulation_id", regulationId).order("semester_number", { ascending: true });
+      if (error) throw new Error(error.message);
+      return data;
+    },
+    
+    
+    getSubjectsForExamSchedule: async (departmentId: string, semesterNum: number) => {
+      const { data: reg } = await supabase.from("academic_regulations").select("id").eq("department_id", departmentId).order("created_at", { ascending: false }).limit(1).single();
+      if (!reg) return [];
+      
+      const { data: sem } = await supabase.from("academic_semesters").select("id").eq("regulation_id", reg.id).eq("semester_number", semesterNum).single();
+      if (!sem) return [];
+      
+      const { data: subjects } = await supabase.from("curriculum_subjects").select("*").eq("semester_id", sem.id);
+      return subjects || [];
+    },
+    listAllSubjects: async () => {
+      const { data, error } = await supabase.from("curriculum_subjects").select("*");
       if (error) throw new Error(error.message);
       return data;
     },
@@ -704,4 +818,9 @@ export const examQueries = {
 export const curriculumQueries = {
   listRegulations: () => queryOptions({ queryKey: ["regulations"], queryFn: api.curriculum.listRegulations }),
   regulationDetails: (id: string) => queryOptions({ queryKey: ["regulation", id], queryFn: () => api.curriculum.getRegulationDetails(id) }),
+};
+
+
+export const promoBannersQueries = {
+  list: () => queryOptions({ queryKey: ["promoBanners"], queryFn: api.promoBanners.list }),
 };
