@@ -28,7 +28,7 @@ class TicketStatusBadge extends StatelessWidget {
       case 'open':
       default:
         dotColor = AppColors.primary;
-        bgColor = AppColors.primary.withOpacity(0.1);
+        bgColor = AppColors.primary.withValues(alpha: 0.1);
         textColor = AppColors.primary;
         break;
     }

@@ -90,14 +90,8 @@ class ExamVenuesScreen extends ConsumerWidget {
     final venuesAsync = ref.watch(examVenuesProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(
-          'Exam Venues',
-          style: TextStyle(fontWeight: FontWeight.w800),
-        ),
-        backgroundColor: AppColors.surface,
-        elevation: 0,
+        title: const Text('Exam Venues'),
       ),
       body: venuesAsync.when(
         loading: () => Center(child: CircularProgressIndicator()),

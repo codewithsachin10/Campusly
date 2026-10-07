@@ -65,9 +65,9 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                     borderRadius: BorderRadius.circular(16.r),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.primary.withOpacity(0.1),
+                        color: AppColors.primary.withValues(alpha: 0.1),
                         blurRadius: 20,
-                        offset: Offset(0, 10),
+                        offset: const Offset(0, 10),
                       ),
                     ],
                   ),
@@ -76,19 +76,19 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                     onChanged: (val) => setState(() => _searchQuery = val),
                     decoration: InputDecoration(
                       hintText: 'Search by ID or subject...',
-                      hintStyle: TextStyle(color: AppColors.primary.withOpacity(0.5)),
-                      prefixIcon: Icon(LucideIcons.search, color: AppColors.primary.withOpacity(0.5)),
+                      hintStyle: TextStyle(color: AppColors.primary.withValues(alpha: 0.5)),
+                      prefixIcon: Icon(LucideIcons.search, color: AppColors.primary.withValues(alpha: 0.5)),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16.r),
-                        borderSide: BorderSide(color: AppColors.primary.withOpacity(0.2)),
+                        borderSide: BorderSide(color: AppColors.primary.withValues(alpha: 0.2)),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16.r),
-                        borderSide: BorderSide(color: AppColors.primary.withOpacity(0.2)),
+                        borderSide: BorderSide(color: AppColors.primary.withValues(alpha: 0.2)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(16.r),
-                        borderSide: BorderSide(color: AppColors.primary),
+                        borderSide: const BorderSide(color: AppColors.primary),
                       ),
                     ),
                   ),
@@ -132,12 +132,12 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: ticket.status == 'Resolved' || ticket.status == 'Closed'
-                                  ? Colors.green.withOpacity(0.05)
+                                  ? Colors.green.withValues(alpha: 0.05)
                                   : ticket.status == 'In Progress'
-                                      ? Colors.orange.withOpacity(0.05)
-                                      : AppColors.primary.withOpacity(0.05),
+                                      ? Colors.orange.withValues(alpha: 0.05)
+                                      : AppColors.primary.withValues(alpha: 0.05),
                               blurRadius: 20,
-                              offset: Offset(0, 10),
+                              offset: const Offset(0, 10),
                             ),
                           ],
                         ),
@@ -150,7 +150,7 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                                 Container(
                                   padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
                                   decoration: BoxDecoration(
-                                    color: AppColors.primary.withOpacity(0.1),
+                                    color: AppColors.primary.withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(8.r),
                                   ),
                                   child: Text(

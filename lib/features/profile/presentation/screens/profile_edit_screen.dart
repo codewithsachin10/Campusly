@@ -5,7 +5,6 @@ import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
-import '../../../class_join/presentation/providers/class_provider.dart';
 
 class ProfileEditScreen extends ConsumerStatefulWidget {
   const ProfileEditScreen({super.key});
@@ -91,17 +90,10 @@ class _ProfileEditScreenState extends ConsumerState<ProfileEditScreen> {
   @override
   Widget build(BuildContext context) {
     final user = ref.watch(authControllerProvider).value;
-    final currentClass = ref.watch(currentClassProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(
-          'Edit Student Profile',
-          style: TextStyle(fontWeight: FontWeight.w800),
-        ),
-        backgroundColor: AppColors.surface,
-        elevation: 0,
+        title: const Text('Edit Student Profile'),
         actions: [
           IconButton(
             onPressed: _isLoading ? null : _saveProfile,

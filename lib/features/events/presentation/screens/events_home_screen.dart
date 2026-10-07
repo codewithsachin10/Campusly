@@ -29,7 +29,7 @@ class EventsHomeScreen extends ConsumerWidget {
     final filteredAsync = ref.watch(filteredEventsProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Column(
           children: [

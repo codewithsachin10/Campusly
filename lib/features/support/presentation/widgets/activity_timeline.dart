@@ -74,7 +74,7 @@ class ActivityTimeline extends StatelessWidget {
                       color: isCompleted ? AppColors.primary : AppColors.surfaceVariant,
                       shape: BoxShape.circle,
                       border: isCurrent
-                          ? Border.all(color: AppColors.primary.withOpacity(0.3), width: 4.w)
+                          ? Border.all(color: AppColors.primary.withValues(alpha: 0.3), width: 4.w)
                           : null,
                     ),
                     child: isCompleted && !isCurrent

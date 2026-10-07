@@ -65,7 +65,7 @@ class _ClassDetailsSheetState extends ConsumerState<ClassDetailsSheet> {
           
       if (mounted) {
         setState(() {
-          _memberCount = count.count ?? 0;
+          _memberCount = count.count;
           _isLoadingMembers = false;
         });
       }

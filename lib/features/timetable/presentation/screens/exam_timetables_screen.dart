@@ -82,14 +82,8 @@ class ExamTimeTablesScreen extends ConsumerWidget {
     final examsAsync = ref.watch(examSchedulesProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: Text(
-          'Exam TimeTables',
-          style: TextStyle(fontWeight: FontWeight.w800),
-        ),
-        backgroundColor: AppColors.surface,
-        elevation: 0,
+        title: const Text('Exam TimeTables'),
       ),
       body: examsAsync.when(
         loading: () => Center(child: CircularProgressIndicator()),

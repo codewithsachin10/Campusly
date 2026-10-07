@@ -69,8 +69,6 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
     final studentName = studentData['name'] ?? 'Unknown Student';
     final rollNo = studentData['roll_no'] ?? 'N/A';
     final initials = studentName.isNotEmpty ? studentName.substring(0, 2).toUpperCase() : '??';
-    final branch = studentData['branch'] ?? 'Unknown';
-    final section = studentData['section'] ?? '';
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -112,17 +110,17 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.r),
-                      border: Border.all(color: AppColors.primary.withOpacity(0.1)),
+                      border: Border.all(color: AppColors.primary.withValues(alpha: 0.1)),
                       boxShadow: [
                         BoxShadow(
-                          color: Color(0xFFE91E63).withOpacity(0.08),
+                          color: const Color(0xFFE91E63).withValues(alpha: 0.08),
                           blurRadius: 40,
-                          offset: Offset(-10, 10),
+                          offset: const Offset(-10, 10),
                         ),
                         BoxShadow(
-                          color: Color(0xFF4285F4).withOpacity(0.08),
+                          color: const Color(0xFF4285F4).withValues(alpha: 0.08),
                           blurRadius: 40,
-                          offset: Offset(10, 10),
+                          offset: const Offset(10, 10),
                         ),
                       ],
                     ),
@@ -218,9 +216,9 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
                       border: Border.all(color: AppColors.surfaceVariant),
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.primary.withOpacity(0.05),
+                          color: AppColors.primary.withValues(alpha: 0.05),
                           blurRadius: 10,
-                          offset: Offset(4, 0), // left border effect
+                          offset: const Offset(4, 0), // left border effect
                         ),
                       ],
                     ),
