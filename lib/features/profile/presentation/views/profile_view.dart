@@ -380,47 +380,53 @@ class ProfileView extends ConsumerWidget {
             ),
           ),
           SizedBox(height: 12.h),
-          GridView.count(
-            crossAxisCount: 2,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            crossAxisSpacing: 14,
-            mainAxisSpacing: 14,
-            childAspectRatio: 1.15,
-            children: [
-              _buildStatCard(
-                context,
-                icon: Icons.fact_check_rounded,
-                color: AppColors.secondary,
-                label: 'Attendance Target',
-                value: '85.0%',
-                subtitle: 'On Track (18/20 classes)',
+          Container(
+            decoration: BoxDecoration(
+              color: AppColors.surfaceContainerLowest,
+              borderRadius: BorderRadius.circular(24.r),
+              border: Border.all(
+                color: AppColors.outlineVariant.withValues(alpha: 0.3),
               ),
-              _buildStatCard(
-                context,
-                icon: Icons.auto_stories_rounded,
-                color: AppColors.primary,
-                label: 'Enrolled Subjects',
-                value: '6 Core',
-                subtitle: 'Plus 2 Lab Practicals',
-              ),
-              _buildStatCard(
-                context,
-                icon: Icons.schedule_rounded,
-                color: AppColors.tertiary,
-                label: 'Weekly Workload',
-                value: '24 Hrs',
-                subtitle: 'Mon — Fri Timetable',
-              ),
-              _buildStatCard(
-                context,
-                icon: Icons.cloud_done_rounded,
-                color: AppColors.onSurfaceVariant,
-                label: 'Offline Engine',
-                value: 'Ready',
-                subtitle: 'Local SQLite/Storage Sync',
-              ),
-            ],
+            ),
+            child: Column(
+              children: [
+                _buildStatTile(
+                  context,
+                  icon: Icons.fact_check_rounded,
+                  color: AppColors.secondary,
+                  label: 'Attendance Target',
+                  value: '85.0%',
+                  subtitle: 'On Track (18/20 classes)',
+                ),
+                Divider(height: 1.h, indent: 64.w, endIndent: 20.w),
+                _buildStatTile(
+                  context,
+                  icon: Icons.auto_stories_rounded,
+                  color: AppColors.primary,
+                  label: 'Enrolled Subjects',
+                  value: '6 Core',
+                  subtitle: 'Plus 2 Lab Practicals',
+                ),
+                Divider(height: 1.h, indent: 64.w, endIndent: 20.w),
+                _buildStatTile(
+                  context,
+                  icon: Icons.schedule_rounded,
+                  color: AppColors.tertiary,
+                  label: 'Weekly Workload',
+                  value: '24 Hrs',
+                  subtitle: 'Mon — Fri Timetable',
+                ),
+                Divider(height: 1.h, indent: 64.w, endIndent: 20.w),
+                _buildStatTile(
+                  context,
+                  icon: Icons.cloud_done_rounded,
+                  color: AppColors.mint,
+                  label: 'Offline Engine',
+                  value: 'Ready',
+                  subtitle: 'Local SQLite/Storage Sync',
+                ),
+              ],
+            ),
           ),
 
           SizedBox(height: 32.h),
@@ -577,7 +583,7 @@ class ProfileView extends ConsumerWidget {
 );
   }
 
-  Widget _buildStatCard(
+  Widget _buildStatTile(
     BuildContext context, {
     required IconData icon,
     required Color color,
@@ -585,66 +591,55 @@ class ProfileView extends ConsumerWidget {
     required String value,
     required String subtitle,
   }) {
-    return Container(
-      padding: EdgeInsets.all(12.w),
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(20.r),
-        border: Border.all(
-          color: AppColors.outlineVariant.withValues(alpha: 0.3),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
+      child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: EdgeInsets.all(8.w),
-                decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-                child: Icon(icon, color: color, size: 20),
-              ),
-              SizedBox(width: 8.w),
-              Flexible(
-                child: Text(
-                  value,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.w800,
+          Container(
+            padding: EdgeInsets.all(10.w),
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(12.r),
+            ),
+            child: Icon(icon, color: color, size: 22),
+          ),
+          SizedBox(width: 14.w),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  label,
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
                     color: AppColors.onSurface,
                   ),
-                  overflow: TextOverflow.ellipsis,
                 ),
-              ),
-            ],
+                SizedBox(height: 2.h),
+                Text(
+                  subtitle,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.onSurfaceVariant,
+                    fontSize: 11.sp,
+                  ),
+                ),
+              ],
+            ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                label,
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.onSurface,
-                ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(8.r),
+            ),
+            child: Text(
+              value,
+              style: TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: 13.sp,
+                color: color,
               ),
-              SizedBox(height: 2.h),
-              Text(
-                subtitle,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppColors.onSurfaceVariant,
-                  fontSize: 11.sp,
-                ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
+            ),
           ),
         ],
       ),

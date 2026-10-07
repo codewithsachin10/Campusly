@@ -5,9 +5,9 @@ import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
-import '../../domain/models/timetable_item.dart';
 import '../providers/timetable_provider.dart';
 import '../widgets/more_bottom_sheet.dart';
+import '../widgets/dynamic_schedule_card.dart';
 
 class SchedulePlannerView extends ConsumerWidget {
   const SchedulePlannerView({super.key});
@@ -137,67 +137,68 @@ class SchedulePlannerView extends ConsumerWidget {
                 ),
                 SizedBox(height: 20.h),
 
-          // Horizontal Day Selector
+          // Horizontal Day Selector (Clean text tabs, no heavy cards)
           SizedBox(
-            height: 104.h,
+            height: 48.h,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: days.length,
-              separatorBuilder: (context, index) => SizedBox(width: 12.w),
+              separatorBuilder: (context, index) => SizedBox(width: 8.w),
               itemBuilder: (context, index) {
                 final day = days[index];
                 final isSelected = day['code'] == selectedDay;
 
-                return GestureDetector(
+                return InkWell(
                   onTap: () {
                     ref.read(selectedDayProvider.notifier).select(day['code']!);
                   },
+                  borderRadius: BorderRadius.circular(12.r),
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 200),
-                    curve: Curves.easeOut,
-                    width: 76.w,
-                    height: isSelected ? 96 : 88,
-                    transform: isSelected
-                        ? Matrix4.translationValues(0.0, -4.0, 0.0)
-                        : Matrix4.identity(),
+                    duration: const Duration(milliseconds: 180),
+                    curve: Curves.easeOutCubic,
+                    padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 8.h),
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? AppColors.primary
-                          : AppColors.surfaceContainerLow,
-                      borderRadius: BorderRadius.circular(32.r),
-                      boxShadow: isSelected
-                          ? [
-                              BoxShadow(
-                                color: AppColors.primary.withValues(alpha: 0.2),
-                                blurRadius: 12,
-                                offset: const Offset(0, 4),
-                              ),
-                            ]
-                          : null,
+                          ? (isDark
+                              ? AppColors.primary.withValues(alpha: 0.2)
+                              : AppColors.primary.withValues(alpha: 0.1))
+                          : Colors.transparent,
+                      borderRadius: BorderRadius.circular(12.r),
+                      border: isSelected
+                          ? Border.all(
+                              color: AppColors.primary.withValues(alpha: 0.5),
+                              width: 1.2,
+                            )
+                          : Border.all(
+                              color: isDark
+                                  ? AppColors.darkOutlineVariant.withValues(alpha: 0.25)
+                                  : AppColors.outlineVariant.withValues(alpha: 0.3),
+                              width: 1.0,
+                            ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
                           day['label']!,
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                          style: theme.textTheme.labelMedium?.copyWith(
                             color: isSelected
-                                ? AppColors.onPrimary.withValues(alpha: 0.8)
+                                ? AppColors.primary
                                 : AppColors.onSurfaceVariant,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                            fontSize: 13.sp,
                           ),
                         ),
-                        SizedBox(height: 6.h),
+                        SizedBox(width: 6.w),
                         Text(
                           day['date']!,
-                          style: Theme.of(context).textTheme.headlineSmall
-                              ?.copyWith(
-                                color: isSelected
-                                    ? AppColors.onPrimary
-                                    : AppColors.onSurface,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22.sp,
-                              ),
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            color: isSelected
+                                ? AppColors.primary
+                                : AppColors.onSurface,
+                            fontWeight: isSelected ? FontWeight.w900 : FontWeight.w600,
+                            fontSize: 14.sp,
+                          ),
                         ),
                       ],
                     ),
@@ -206,13 +207,13 @@ class SchedulePlannerView extends ConsumerWidget {
               },
             ),
           ),
-          SizedBox(height: 32.h),
+          SizedBox(height: 24.h),
 
           // Daily Schedule Content List
           dailyScheduleAsync.when(
             loading: () => Padding(
               padding: EdgeInsets.symmetric(vertical: 60.0.h),
-              child: Center(
+              child: const Center(
                 child: CircularProgressIndicator(color: AppColors.primary),
               ),
             ),
@@ -226,18 +227,26 @@ class SchedulePlannerView extends ConsumerWidget {
                 return _buildEmptyState(context);
               }
 
-              return ListView.separated(
-                physics: NeverScrollableScrollPhysics(),
+              return ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: items.length,
-                separatorBuilder: (context, index) =>
-                    SizedBox(width: 16.w, height: 16.h),
                 itemBuilder: (context, index) {
                   final item = items[index];
-                  if (item.isBreak) {
-                    return _buildBreakCard(context, item);
-                  }
-                  return _buildClassCard(context, item);
+                  final currentMin = now.hour * 60 + now.minute;
+                  final startMin = item.startHour * 60 + item.startMinute;
+                  final endMin = item.endHour * 60 + item.endMinute;
+                  final isToday = weekdays[now.weekday - 1].toLowerCase().startsWith(selectedDay.toLowerCase());
+                  final isCompleted = isToday && currentMin >= endMin;
+                  final isCurrent = isToday && currentMin >= startMin && currentMin < endMin;
+
+                  return DynamicScheduleCard(
+                    item: item,
+                    isCompleted: isCompleted,
+                    isCurrent: isCurrent,
+                    isFirst: index == 0,
+                    isLast: index == items.length - 1,
+                  );
                 },
               );
             },
@@ -359,209 +368,5 @@ class SchedulePlannerView extends ConsumerWidget {
     );
   }
 
-  Widget _buildBreakCard(BuildContext context, TimetableItem item) {
-    final accentColor = AppColors.getSubjectAccentColor(
-      item.subjectCode,
-      isBreak: true,
-    );
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLow.withValues(alpha: 0.5),
-        borderRadius: BorderRadius.circular(32.r),
-        border: Border.all(
-          color: AppColors.outlineVariant,
-          style: BorderStyle.solid,
-          width: 1.w,
-        ),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(32.r),
-        child: Container(
-          padding: EdgeInsets.all(24.w),
-          decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: accentColor, width: 6.w)),
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 48.w,
-                height: 48.h,
-                decoration: BoxDecoration(
-                  color: AppColors.surfaceContainerHigh,
-                  borderRadius: BorderRadius.circular(14.r),
-                ),
-                child: Icon(
-                  Icons.restaurant_rounded,
-                  color: AppColors.onSurfaceVariant,
-                  size: 24,
-                ),
-              ),
-              SizedBox(width: 16.w),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '${item.startTime} — ${item.endTime}',
-                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        color: AppColors.onSurfaceVariant,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    SizedBox(height: 2.h),
-                    Text(
-                      item.title,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: AppColors.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
-  Widget _buildClassCard(BuildContext context, TimetableItem item) {
-    Color badgeBg;
-    Color badgeText;
-
-    switch (item.category.toLowerCase()) {
-      case 'lab':
-        badgeBg = AppColors.primary.withValues(alpha: 0.1);
-        badgeText = AppColors.primary;
-        break;
-      case 'major':
-        badgeBg = AppColors.secondary.withValues(alpha: 0.1);
-        badgeText = AppColors.secondary;
-        break;
-      case 'elective':
-        badgeBg = AppColors.tertiary.withValues(alpha: 0.1);
-        badgeText = AppColors.tertiary;
-        break;
-      default:
-        badgeBg = AppColors.surfaceContainerHigh;
-        badgeText = AppColors.onSurface;
-    }
-
-    final accentColor = AppColors.getSubjectAccentColor(
-      item.subjectCode,
-      isBreak: item.isBreak,
-    );
-
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.surfaceContainerLowest,
-        borderRadius: BorderRadius.circular(32.r),
-        border: Border.all(
-          color: AppColors.outlineVariant.withValues(alpha: 0.3),
-        ),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(32.r),
-        child: Container(
-          padding: EdgeInsets.all(24.w),
-          decoration: BoxDecoration(
-            border: Border(left: BorderSide(color: accentColor, width: 6.w)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    item.timeRange,
-                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 12.w,
-                      vertical: 6.h,
-                    ),
-                    decoration: BoxDecoration(
-                      color: badgeBg,
-                      borderRadius: BorderRadius.circular(999.r),
-                    ),
-                    child: Text(
-                      item.category.toUpperCase(),
-                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                        color: badgeText,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.8,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 12.h),
-              Text(
-                item.title,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  color: AppColors.onSurface,
-                  fontWeight: FontWeight.bold,
-                  height: 1.3,
-                ),
-              ),
-              SizedBox(height: 16.h),
-              Container(
-                padding: EdgeInsets.only(top: 14.h),
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(
-                      color: AppColors.outlineVariant.withValues(alpha: 0.2),
-                    ),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.person_outline_rounded,
-                      size: 18,
-                      color: AppColors.onSurfaceVariant,
-                    ),
-                    SizedBox(width: 6.w),
-                    Expanded(
-                      child: Text(
-                        item.instructor,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.onSurfaceVariant,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    SizedBox(width: 12.w),
-                    Icon(
-                      Icons.location_on_outlined,
-                      size: 18,
-                      color: AppColors.onSurfaceVariant,
-                    ),
-                    SizedBox(width: 6.w),
-                    Flexible(
-                      child: Text(
-                        item.room,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.onSurfaceVariant,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 }

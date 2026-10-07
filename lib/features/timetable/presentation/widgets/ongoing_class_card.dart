@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_shadows.dart';
 import '../../../../core/widgets/pressable_scale.dart';
 import '../providers/timetable_provider.dart';
 import '../screens/subject_detail_page.dart';
@@ -27,6 +26,7 @@ class OngoingClassCard extends ConsumerWidget {
       data: (ongoing) {
         if (ongoing == null) return const SizedBox.shrink();
 
+        final isDark = Theme.of(context).brightness == Brightness.dark;
         final now = DateTime.now();
         final currentMin = now.hour * 60 + now.minute;
         final endMin = ongoing.endHour * 60 + ongoing.endMinute;
@@ -53,9 +53,25 @@ class OngoingClassCard extends ConsumerWidget {
               : null,
           child: Container(
             decoration: BoxDecoration(
-              color: AppColors.surfaceContainerLowest,
+              color: isDark
+                  ? AppColors.darkSurfaceContainer
+                  : AppColors.surfaceContainerLowest,
               borderRadius: BorderRadius.circular(20.r),
-              boxShadow: AppShadows.cardShadow,
+              border: Border.all(
+                color: ongoing.isBreak
+                    ? (isDark ? AppColors.darkOutlineVariant : AppColors.outlineVariant)
+                    : AppColors.coral,
+                width: 1.5,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: ongoing.isBreak
+                      ? Colors.black.withValues(alpha: 0.03)
+                      : AppColors.coral.withValues(alpha: 0.18),
+                  blurRadius: 16,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20.r),

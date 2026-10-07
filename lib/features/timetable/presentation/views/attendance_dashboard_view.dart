@@ -322,22 +322,44 @@ class _AttendanceListContent extends ConsumerWidget {
           ),
           SizedBox(height: 12.h),
 
-          // List of subject cards
-          ListView.separated(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: subjects.length,
-            separatorBuilder: (_, _) => SizedBox(height: 12.h),
-            itemBuilder: (context, index) {
-              final code = subjects.keys.elementAt(index);
-              final name = subjects[code]!;
+          // Editorial list of subjects
+          Container(
+            decoration: BoxDecoration(
+              color: isDark
+                  ? AppColors.darkSurfaceContainerLow
+                  : AppColors.surfaceContainerLowest,
+              borderRadius: BorderRadius.circular(24.r),
+              border: Border.all(
+                color: isDark
+                    ? AppColors.darkOutlineVariant
+                    : AppColors.outlineVariant.withValues(alpha: 0.35),
+                width: 1,
+              ),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero,
+              itemCount: subjects.length,
+              separatorBuilder: (_, _) => Divider(
+                height: 1,
+                thickness: 1,
+                color: isDark
+                    ? AppColors.darkOutlineVariant.withValues(alpha: 0.6)
+                    : AppColors.outlineVariant.withValues(alpha: 0.25),
+              ),
+              itemBuilder: (context, index) {
+                final code = subjects.keys.elementAt(index);
+                final name = subjects[code]!;
 
-              return _SubjectAttendanceCard(
-                userId: userId,
-                subjectCode: code,
-                subjectName: name,
-              );
-            },
+                return _SubjectAttendanceCard(
+                  userId: userId,
+                  subjectCode: code,
+                  subjectName: name,
+                );
+              },
+            ),
           ),
           SizedBox(height: 100.h),
         ],
@@ -368,15 +390,11 @@ class _SubjectAttendanceCard extends ConsumerWidget {
       subjectName: subjectName,
     );
     final asyncAtt = ref.watch(attendanceProvider(key));
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
 
-    return Card(
-      margin: EdgeInsets.zero,
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.r),
-        side: BorderSide(color: AppColors.border),
-      ),
-      color: AppColors.surface,
+    return Material(
+      color: Colors.transparent,
       child: InkWell(
         onTap: () {
           AttendanceDetailsSheet.show(
@@ -385,27 +403,41 @@ class _SubjectAttendanceCard extends ConsumerWidget {
             subjectName: subjectName,
           );
         },
-        borderRadius: BorderRadius.circular(20.r),
         child: Padding(
-          padding: EdgeInsets.all(18.0.w),
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
           child: asyncAtt.when(
-            loading: () => Center(child: CircularProgressIndicator()),
-            error: (err, _) => Text('Error: $err'),
+            loading: () => SizedBox(
+              height: 52.h,
+              child: const Center(
+                child: SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+              ),
+            ),
+            error: (err, _) => Padding(
+              padding: EdgeInsets.symmetric(vertical: 8.h),
+              child: Text(
+                'Error: $err',
+                style: AppTypography.bodySmall.copyWith(color: AppColors.error),
+              ),
+            ),
             data: (att) {
               final pct = att.totalCount > 0
                   ? (att.presentCount / att.totalCount) * 100
                   : 0.0;
-              final isUnderTarget = pct < 75.0;
+              final isUnderTarget = pct < 75.0 && att.totalCount > 0;
+              final subjectColor = SubjectColors.forSubject(subjectCode);
 
               // Calculate Bunk Predictor Text
               String bunkStatus = "";
               Color bunkBadgeColor = Colors.grey;
               if (att.totalCount == 0) {
                 bunkStatus = "No classes logged yet";
-                bunkBadgeColor = Colors.grey.shade600;
+                bunkBadgeColor = AppColors.textSecondary;
               } else {
                 if (pct >= 75.0) {
-                  // Calculate how many we can miss
                   int safeBunks = 0;
                   while (true) {
                     final nextTotal = att.totalCount + safeBunks + 1;
@@ -417,14 +449,13 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                   }
                   if (safeBunks > 0) {
                     bunkStatus =
-                        "Safe to miss next $safeBunks class${safeBunks > 1 ? 'es' : ''}!";
-                    bunkBadgeColor = AppColors.success;
+                        "Safe to miss $safeBunks class${safeBunks > 1 ? 'es' : ''}";
+                    bunkBadgeColor = AppColors.mint;
                   } else {
-                    bunkStatus = "⚠️ Cannot miss today's class!";
+                    bunkStatus = "Cannot miss next class";
                     bunkBadgeColor = AppColors.warning;
                   }
                 } else {
-                  // Calculate how many to attend
                   int requiredAttends = 0;
                   while (true) {
                     final nextPresent = att.presentCount + requiredAttends;
@@ -436,8 +467,8 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                     }
                   }
                   bunkStatus =
-                      "Must attend next $requiredAttends class${requiredAttends > 1 ? 'es' : ''} to reach 75%";
-                  bunkBadgeColor = AppColors.error;
+                      "Attend next $requiredAttends to reach 75%";
+                  bunkBadgeColor = AppColors.coral;
                 }
               }
 
@@ -445,129 +476,136 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      // Subject color accent bar
+                      Container(
+                        width: 4.w,
+                        height: 38.h,
+                        decoration: BoxDecoration(
+                          color: subjectColor,
+                          borderRadius: BorderRadius.circular(2.r),
+                        ),
+                      ),
+                      SizedBox(width: 12.w),
+                      // Title & Code
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 8.w,
-                                vertical: 4.h,
-                              ),
-                              decoration: BoxDecoration(
-                                color: AppColors.getSubjectAccentColor(
-                                  subjectCode,
-                                ).withValues(alpha: 0.15),
-                                borderRadius: BorderRadius.circular(8.r),
-                              ),
-                              child: Text(
-                                subjectCode,
-                                style: AppTypography.labelSmall.copyWith(
-                                  color: AppColors.getSubjectAccentColor(
-                                    subjectCode,
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 6.w,
+                                    vertical: 2.h,
                                   ),
-                                  fontWeight: FontWeight.bold,
+                                  decoration: BoxDecoration(
+                                    color: subjectColor.withValues(alpha: 0.12),
+                                    borderRadius: BorderRadius.circular(6.r),
+                                  ),
+                                  child: Text(
+                                    subjectCode,
+                                    style: AppTypography.labelSmall.copyWith(
+                                      color: subjectColor,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 10.sp,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                SizedBox(width: 8.w),
+                                Text(
+                                  '${att.presentCount}/${att.totalCount} attended',
+                                  style: AppTypography.bodySmall.copyWith(
+                                    color: AppColors.textSecondary,
+                                    fontSize: 11.sp,
+                                  ),
+                                ),
+                              ],
                             ),
-                            SizedBox(height: 8.h),
+                            SizedBox(height: 4.h),
                             Text(
                               subjectName,
-                              style: AppTypography.titleMedium.copyWith(
-                                fontWeight: FontWeight.bold,
+                              style: AppTypography.titleSmall.copyWith(
+                                fontWeight: FontWeight.w700,
                                 color: AppColors.onSurface,
                               ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
+                      SizedBox(width: 12.w),
+                      // Progress ring & percentage
+                      Stack(
+                        alignment: Alignment.center,
                         children: [
-                          Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              SizedBox(
-                                width: 44.w,
-                                height: 44.h,
-                                child: CircularProgressIndicator(
-                                  value: att.totalCount > 0
-                                      ? (pct / 100).clamp(0.0, 1.0)
-                                      : 0.0,
-                                  strokeWidth: 4.5,
-                                  backgroundColor: AppColors.outlineVariant.withValues(alpha: 0.2),
-                                  color: isUnderTarget
-                                      ? AppColors.error
-                                      : SubjectColors.forSubject(subjectCode),
-                                  strokeCap: StrokeCap.round,
-                                ),
-                              ),
-                              Text(
-                                att.totalCount > 0 ? '${pct.toInt()}%' : '0%',
-                                style: AppTypography.labelSmall.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.onSurface,
-                                ),
-                              ),
-                            ],
+                          SizedBox(
+                            width: 42.w,
+                            height: 42.h,
+                            child: CircularProgressIndicator(
+                              value: att.totalCount > 0
+                                  ? (pct / 100).clamp(0.0, 1.0)
+                                  : 0.0,
+                              strokeWidth: 4,
+                              backgroundColor: isDark
+                                  ? AppColors.darkOutlineVariant
+                                  : AppColors.outlineVariant.withValues(alpha: 0.3),
+                              color: isUnderTarget
+                                  ? AppColors.coral
+                                  : (att.totalCount == 0
+                                      ? AppColors.textSecondary
+                                      : subjectColor),
+                              strokeCap: StrokeCap.round,
+                            ),
                           ),
-                          SizedBox(width: 10.w),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                '${att.presentCount}/${att.totalCount}',
-                                style: AppTypography.titleSmall.copyWith(
-                                  fontWeight: FontWeight.w800,
-                                  color: isUnderTarget
-                                      ? AppColors.error
-                                      : AppColors.onSurface,
-                                ),
-                              ),
-                              Text(
-                                'attended',
-                                style: AppTypography.labelSmall.copyWith(
-                                  color: AppColors.textSecondary,
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                            ],
+                          Text(
+                            att.totalCount > 0 ? '${pct.toInt()}%' : '—',
+                            style: AppTypography.labelSmall.copyWith(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 11.sp,
+                              color: AppColors.onSurface,
+                            ),
                           ),
                         ],
                       ),
+                      SizedBox(width: 8.w),
+                      Icon(
+                        Icons.chevron_right_rounded,
+                        size: 18,
+                        color: AppColors.textSecondary.withValues(alpha: 0.5),
+                      ),
                     ],
                   ),
-                  SizedBox(height: 14.h),
+                  SizedBox(height: 10.h),
+                  // Status chip
                   Container(
-                    width: double.infinity,
                     padding: EdgeInsets.symmetric(
-                      horizontal: 12.w,
-                      vertical: 10.h,
+                      horizontal: 10.w,
+                      vertical: 4.h,
                     ),
                     decoration: BoxDecoration(
-                      color: bunkBadgeColor.withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(12.r),
+                      color: bunkBadgeColor.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(8.r),
                     ),
                     child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
-                          pct >= 75.0
+                          pct >= 75.0 || att.totalCount == 0
                               ? LucideIcons.checkCircle
                               : LucideIcons.alertTriangle,
                           color: bunkBadgeColor,
-                          size: 16,
+                          size: 13,
                         ),
-                        SizedBox(width: 8.w),
-                        Expanded(
-                          child: Text(
-                            bunkStatus,
-                            style: AppTypography.labelSmall.copyWith(
-                              color: bunkBadgeColor,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        SizedBox(width: 6.w),
+                        Text(
+                          bunkStatus,
+                          style: AppTypography.labelSmall.copyWith(
+                            color: bunkBadgeColor,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 11.sp,
                           ),
                         ),
                       ],
