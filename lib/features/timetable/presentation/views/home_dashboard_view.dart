@@ -8,11 +8,13 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../events/presentation/providers/events_provider.dart';
 import '../../../notifications/presentation/providers/notifications_provider.dart';
-import '../../domain/models/timetable_item.dart';
 import '../providers/announcements_provider.dart';
 import '../providers/timetable_provider.dart';
-import '../screens/subject_detail_page.dart';
 import '../widgets/announcements_banner.dart';
+import '../widgets/ongoing_class_card.dart';
+import '../widgets/next_class_card.dart';
+import '../widgets/dynamic_schedule_card.dart';
+import '../../../../core/widgets/fade_slide_in.dart';
 import '../../../events/presentation/widgets/events_promo_banner.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/announcement_model.dart';
@@ -27,15 +29,12 @@ class HomeDashboardView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(authControllerProvider).value;
-    final isAuthLoading = ref.watch(authControllerProvider).isLoading;
+    final isAuthLoading = ref.watch(authControllerProvider.select((a) => a.isLoading));
     final isClassLoading = ref.watch(isCurrentClassLoadingProvider);
-    final ongoingAsync = ref.watch(ongoingClassProvider);
-    final nextAsync = ref.watch(nextClassProvider);
     final todayScheduleAsync = ref.watch(todayScheduleProvider);
     final joinedCustomTimetablesAsync = ref.watch(joinedCustomTimetablesProvider);
     final unreadCount = ref.watch(unreadNotificationsCountProvider);
     final currentClass = ref.watch(currentClassProvider);
-    ref.watch(liveTickerProvider);
 
     ref.listen<AsyncValue<List<AnnouncementModel>>>(announcementsStreamProvider, (previous, next) {
       if (next.hasValue && next.value != null && next.value!.isNotEmpty) {
@@ -262,405 +261,14 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ),
               SizedBox(height: 24.h),
-            ],
-
-            // Ongoing Class Card (Most Prominent)
+                   // Ongoing Class Card (Most Prominent)
             if (!isWeekendOrEmpty) ...[
-              ongoingAsync.when(
-                loading: () => Center(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 20.h),
-                    child: CircularProgressIndicator(color: AppColors.primary),
-                  ),
-                ),
-                error: (error, stackTrace) => SizedBox.shrink(),
-                data: (ongoing) {
-                  if (ongoing == null) return SizedBox.shrink();
-
-                  final currentMin = now.hour * 60 + now.minute;
-                  final endMin = ongoing.endHour * 60 + ongoing.endMinute;
-                  final minsLeft = (endMin - currentMin).clamp(0, 999);
-
-                  final startMin = ongoing.startHour * 60 + ongoing.startMinute;
-                  final totalDur = endMin - startMin;
-                  final elapsed = currentMin - startMin;
-                  final progress = totalDur > 0
-                      ? (elapsed / totalDur * 100).clamp(0.0, 100.0)
-                      : 0.0;
-
-                  final badgeColor = ongoing.isBreak
-                      ? Color(0xFF26A69A)
-                      : AppColors.primary;
-                  final accentBorderColor = AppColors.getSubjectAccentColor(
-                    ongoing.subjectCode,
-                    isBreak: ongoing.isBreak,
-                  );
-
-                  return InkWell(
-                    onTap: () => !ongoing.isBreak
-                        ? SubjectDetailPage.navigate(context, ongoing)
-                        : null,
-                    borderRadius: BorderRadius.circular(20.r),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: AppColors.surfaceContainerLowest,
-                        borderRadius: BorderRadius.circular(20.r),
-                        border: Border.all(
-                          color: AppColors.outlineVariant.withValues(
-                            alpha: 0.3,
-                          ),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: badgeColor.withValues(alpha: 0.06),
-                            blurRadius: 20,
-                            offset: Offset(0, 6),
-                          ),
-                        ],
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20.r),
-                        child: Container(
-                          padding: EdgeInsets.all(24.w),
-                          decoration: BoxDecoration(
-                            border: Border(
-                              left: BorderSide(
-                                color: accentBorderColor,
-                                width: 6.w,
-                              ),
-                            ),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 12.w,
-                                      vertical: 6.h,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: badgeColor.withValues(alpha: 0.1),
-                                      borderRadius: BorderRadius.circular(999.r),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Container(
-                                          width: 8.w,
-                                          height: 8.h,
-                                          decoration: BoxDecoration(
-                                            color: badgeColor,
-                                            shape: BoxShape.circle,
-                                          ),
-                                        ),
-                                        SizedBox(width: 8.w),
-                                        Text(
-                                          ongoing.isBreak
-                                              ? 'ONGOING BREAK'
-                                              : 'ONGOING CLASS',
-                                          style: AppTypography
-                                              .textTheme
-                                              .labelMedium
-                                              ?.copyWith(
-                                                color: badgeColor,
-                                                fontWeight: FontWeight.bold,
-                                                letterSpacing: 1.0,
-                                              ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Text(
-                                    'Ends in $minsLeft mins',
-                                    style: AppTypography.textTheme.labelMedium
-                                        ?.copyWith(
-                                          color: AppColors.onSurfaceVariant,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 16.h),
-                              Text(
-                                ongoing.title,
-                                style: AppTypography.textTheme.headlineSmall
-                                    ?.copyWith(
-                                      color: AppColors.onSurface,
-                                      fontWeight: FontWeight.bold,
-                                      height: 1.3.h,
-                                    ),
-                              ),
-                              SizedBox(height: 14.h),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.schedule_rounded,
-                                    size: 18,
-                                    color: badgeColor,
-                                  ),
-                                  SizedBox(width: 6.w),
-                                  Text(
-                                    ongoing.timeRange,
-                                    style: AppTypography.textTheme.bodyMedium
-                                        ?.copyWith(
-                                          color: AppColors.onSurfaceVariant,
-                                        ),
-                                  ),
-                                  SizedBox(width: 16.w),
-                                  Icon(
-                                    Icons.location_on_rounded,
-                                    size: 18,
-                                    color: badgeColor,
-                                  ),
-                                  SizedBox(width: 6.w),
-                                  Expanded(
-                                    child: Text(
-                                      ongoing.room,
-                                      style: AppTypography.textTheme.bodyMedium
-                                          ?.copyWith(
-                                            color: AppColors.onSurfaceVariant,
-                                          ),
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 20.h),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    ongoing.isBreak
-                                        ? 'Break Progress'
-                                        : 'Course Progress',
-                                    style: AppTypography.textTheme.labelMedium
-                                        ?.copyWith(
-                                          color: AppColors.onSurfaceVariant,
-                                        ),
-                                  ),
-                                  Text(
-                                    '${progress.toInt()}%',
-                                    style: AppTypography.textTheme.labelMedium
-                                        ?.copyWith(
-                                          color: badgeColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8.h),
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(999.r),
-                                child: LinearProgressIndicator(
-                                  value: progress / 100.0,
-                                  backgroundColor: AppColors.surfaceContainer,
-                                  color: badgeColor,
-                                  minHeight: 8,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
+              const OngoingClassCard(),
               SizedBox(height: 16.h),
 
               // Next Class Timer Box
-              nextAsync.when(
-                loading: () => SizedBox.shrink(),
-                error: (error, stackTrace) => SizedBox.shrink(),
-                data: (next) {
-                  final ongoing = ongoingAsync.value;
-                  if (next == null) {
-                    if (ongoing == null && todayItems.isNotEmpty) {
-                      // All classes completed for today
-                      return Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(20.w),
-                        decoration: BoxDecoration(
-                          color: AppColors.primary.withValues(alpha: 0.06),
-                          borderRadius: BorderRadius.circular(16.r),
-                          border: Border.all(
-                            color: AppColors.primary.withValues(alpha: 0.15),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 44.w,
-                              height: 44.h,
-                              decoration: BoxDecoration(
-                                color: AppColors.primary.withValues(
-                                  alpha: 0.12,
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.task_alt_rounded,
-                                color: AppColors.primary,
-                                size: 24,
-                              ),
-                            ),
-                            SizedBox(width: 14.w),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'ALL CLASSES COMPLETED TODAY! 🌟',
-                                    style: AppTypography.textTheme.labelSmall
-                                        ?.copyWith(
-                                          color: AppColors.primary,
-                                          fontWeight: FontWeight.bold,
-                                          letterSpacing: 0.8,
-                                        ),
-                                  ),
-                                  SizedBox(height: 2.h),
-                                  Text(
-                                    'Great job! Have a restful evening.',
-                                    style: AppTypography.textTheme.bodyMedium
-                                        ?.copyWith(
-                                          color: AppColors.onSurfaceVariant,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }
-                    return SizedBox.shrink();
-                  }
-
-                  // Compute countdown or display day
-                  final currentSecs =
-                      now.hour * 3600 + now.minute * 60 + now.second;
-                  final startSecs =
-                      next.startHour * 3600 + next.startMinute * 60;
-                  final isToday =
-                      next.dayOfWeek.toLowerCase() == _getDayStr(now.weekday);
-                  final diffSecs = startSecs - currentSecs;
-
-                  String timerOrDateDisplay;
-                  if (isToday && diffSecs > 0) {
-                    final h = (diffSecs ~/ 3600).toString().padLeft(2, '0');
-                    final m = ((diffSecs % 3600) ~/ 60).toString().padLeft(
-                      2,
-                      '0',
-                    );
-                    final s = (diffSecs % 60).toString().padLeft(2, '0');
-                    timerOrDateDisplay = '$h:$m:$s';
-                  } else {
-                    timerOrDateDisplay =
-                        '${_getDayLabel(next.dayOfWeek).toUpperCase()} • ${next.startTime}';
-                  }
-
-                  return InkWell(
-                    onTap: () => !next.isBreak
-                        ? SubjectDetailPage.navigate(context, next)
-                        : null,
-                    borderRadius: BorderRadius.circular(16.r),
-                    child: Container(
-                      padding: EdgeInsets.all(16.w),
-                      decoration: BoxDecoration(
-                        color: AppColors.primary.withValues(alpha: 0.05),
-                        borderRadius: BorderRadius.circular(16.r),
-                        border: Border.all(
-                          color: AppColors.primary.withValues(alpha: 0.1),
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 44.w,
-                            height: 44.h,
-                            decoration: BoxDecoration(
-                              color: AppColors.primary.withValues(
-                                alpha: 0.1,
-                              ),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.timer_outlined,
-                              color: AppColors.primary,
-                              size: 24,
-                            ),
-                          ),
-                          SizedBox(width: 12.w),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  isToday && diffSecs > 0
-                                      ? 'NEXT CLASS IN'
-                                      : 'UPCOMING CLASS ON',
-                                  style: AppTypography.textTheme.labelSmall
-                                      ?.copyWith(
-                                        color: AppColors.primary.withValues(
-                                          alpha: 0.7,
-                                        ),
-                                        fontWeight: FontWeight.bold,
-                                        letterSpacing: 1.0,
-                                      ),
-                                ),
-                                SizedBox(height: 2.h),
-                                Text(
-                                  timerOrDateDisplay,
-                                  style: AppTypography.textTheme.headlineSmall
-                                      ?.copyWith(
-                                        color: AppColors.primary,
-                                        fontWeight: FontWeight.w800,
-                                        fontSize: (isToday && diffSecs > 0)
-                                            ? 20.sp
-                                            : 15.sp,
-                                      ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 12.w),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                'Upcoming',
-                                style: AppTypography.textTheme.labelSmall
-                                    ?.copyWith(
-                                      color: AppColors.onSurfaceVariant,
-                                    ),
-                              ),
-                              SizedBox(height: 2.h),
-                              Text(
-                                next.shortTitle,
-                                style: AppTypography.textTheme.bodyMedium
-                                    ?.copyWith(
-                                      color: AppColors.onSurface,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                textAlign: TextAlign.end,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-              SizedBox(height: 24.h),
+              NextClassCard(hasTodayItems: todayItems.isNotEmpty),
+            ],
 
               // Overview Section (2 Horizontal Cards)
               Row(
@@ -881,7 +489,9 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ),
             ] else ...[
-              ...todayItems.map((item) {
+              ...todayItems.asMap().entries.map((entry) {
+                final index = entry.key;
+                final item = entry.value;
                 final currentMin = now.hour * 60 + now.minute;
                 final startMin = item.startHour * 60 + item.startMinute;
                 final endMin = item.endHour * 60 + item.endMinute;
@@ -890,11 +500,13 @@ class HomeDashboardView extends ConsumerWidget {
 
                 return Padding(
                   padding: EdgeInsets.only(bottom: 12.0.h),
-                  child: _buildDynamicScheduleCard(
-                    context: context,
-                    item: item,
-                    isCompleted: isCompleted,
-                    isCurrent: isCurrent,
+                  child: FadeSlideIn(
+                    index: index,
+                    child: DynamicScheduleCard(
+                      item: item,
+                      isCompleted: isCompleted,
+                      isCurrent: isCurrent,
+                    ),
                   ),
                 );
               }),
@@ -907,210 +519,6 @@ class HomeDashboardView extends ConsumerWidget {
     );
   }
 
-  Widget _buildDynamicScheduleCard({
-    required BuildContext context,
-    required TimetableItem item,
-    bool isCompleted = false,
-    bool isCurrent = false,
-  }) {
-    final accentBorderColor = AppColors.getSubjectAccentColor(
-      item.subjectCode,
-      isBreak: item.isBreak,
-    );
-
-    if (item.isBreak) {
-      return Container(
-        decoration: BoxDecoration(
-          color: AppColors.surfaceContainerLow.withValues(alpha: 0.5),
-          borderRadius: BorderRadius.circular(16.r),
-          border: Border.all(
-            color: AppColors.outlineVariant,
-            style: BorderStyle.solid,
-            width: 1.w,
-          ),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16.r),
-          child: Container(
-            padding: EdgeInsets.all(16.w),
-            decoration: BoxDecoration(
-              border: Border(
-                left: BorderSide(color: accentBorderColor, width: 6.w),
-              ),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.restaurant_rounded,
-                  color: AppColors.onSurfaceVariant,
-                  size: 24,
-                ),
-                SizedBox(width: 16.w),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          item.title,
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.onSurfaceVariant,
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      SizedBox(width: 8.w),
-                      Text(
-                        item.timeRange,
-                        style: AppTypography.textTheme.labelMedium?.copyWith(
-                          color: AppColors.onSurfaceVariant,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    }
-
-    return InkWell(
-      onTap: () =>
-          !item.isBreak ? SubjectDetailPage.navigate(context, item) : null,
-      borderRadius: BorderRadius.circular(16.r),
-      child: Container(
-        decoration: BoxDecoration(
-          color: isCurrent
-              ? AppColors.primary.withValues(alpha: 0.05)
-              : AppColors.surfaceContainerLowest,
-          borderRadius: BorderRadius.circular(16.r),
-          border: Border.all(
-            color: isCurrent
-                ? AppColors.primary
-                : AppColors.outlineVariant.withValues(alpha: 0.2),
-            width: isCurrent ? 2.0 : 1.0,
-          ),
-          boxShadow: isCurrent
-              ? [
-                  BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.06),
-                    blurRadius: 10,
-                    offset: Offset(0, 4),
-                  ),
-                ]
-              : null,
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(16.r),
-          child: Container(
-            padding: EdgeInsets.all(16.w),
-            decoration: BoxDecoration(
-              border: Border(
-                left: BorderSide(color: accentBorderColor, width: 6.w),
-              ),
-            ),
-            child: Opacity(
-              opacity: isCompleted ? 0.6 : 1.0,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 2.0.h),
-                    child: Icon(
-                      isCompleted
-                          ? Icons.check_circle_rounded
-                          : isCurrent
-                          ? Icons.play_circle_filled_rounded
-                          : Icons.schedule_rounded,
-                      color: isCompleted
-                          ? AppColors.onSurfaceVariant
-                          : isCurrent
-                          ? AppColors.primary
-                          : accentBorderColor,
-                      size: 24,
-                    ),
-                  ),
-                  SizedBox(width: 16.w),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(
-                              child: Text(
-                                item.title,
-                                style: AppTypography.textTheme.bodyLarge
-                                    ?.copyWith(
-                                      fontWeight: FontWeight.bold,
-                                      color: isCurrent
-                                          ? AppColors.primary
-                                          : AppColors.onSurface,
-                                    ),
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            SizedBox(width: 8.w),
-                            Text(
-                              item.timeRange,
-                              style: AppTypography.textTheme.labelMedium
-                                  ?.copyWith(
-                                    fontWeight: isCurrent
-                                        ? FontWeight.bold
-                                        : FontWeight.normal,
-                                    color: isCurrent
-                                        ? AppColors.primary
-                                        : AppColors.onSurfaceVariant,
-                                  ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 4.h),
-                        Text(
-                          '${item.room} • ${item.instructor}',
-                          style: AppTypography.textTheme.bodyMedium?.copyWith(
-                            color: AppColors.onSurfaceVariant,
-                          ),
-                        ),
-                        if (item.category.isNotEmpty &&
-                            item.category != 'Lecture') ...[
-                          SizedBox(height: 8.h),
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 8.w,
-                              vertical: 2.h,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColors.primary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(6.r),
-                            ),
-                            child: Text(
-                              item.category.toUpperCase(),
-                              style: AppTypography.textTheme.labelSmall
-                                  ?.copyWith(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10.sp,
-                                    letterSpacing: 0.8,
-                                  ),
-                            ),
-                          ),
-                        ],
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
   Widget _buildDashboardSkeleton() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1274,48 +682,6 @@ class HomeDashboardView extends ConsumerWidget {
         ],
       ),
     );
-  }
-
-  String _getDayStr(int weekday) {
-    switch (weekday) {
-      case DateTime.monday:
-        return 'mon';
-      case DateTime.tuesday:
-        return 'tue';
-      case DateTime.wednesday:
-        return 'wed';
-      case DateTime.thursday:
-        return 'thu';
-      case DateTime.friday:
-        return 'fri';
-      case DateTime.saturday:
-        return 'sat';
-      case DateTime.sunday:
-        return 'sun';
-      default:
-        return 'mon';
-    }
-  }
-
-  String _getDayLabel(String code) {
-    switch (code.toLowerCase()) {
-      case 'mon':
-        return 'Monday';
-      case 'tue':
-        return 'Tuesday';
-      case 'wed':
-        return 'Wednesday';
-      case 'thu':
-        return 'Thursday';
-      case 'fri':
-        return 'Friday';
-      case 'sat':
-        return 'Saturday';
-      case 'sun':
-        return 'Sunday';
-      default:
-        return 'Monday';
-    }
   }
 
   void _showUrgentNoticePopup(BuildContext context, AnnouncementModel ann) {

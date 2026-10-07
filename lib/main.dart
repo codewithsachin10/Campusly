@@ -18,6 +18,32 @@ void main() async {
     debugPrint('Global FlutterError: ${details.exception}');
   };
 
+  ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+    return const Scaffold(
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.error_outline, color: Colors.red, size: 48),
+              SizedBox(height: 16.0),
+              Text(
+                'Something went wrong.',
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                'We apologize for the inconvenience. Please try again.',
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  };
+
   PlatformDispatcher.instance.onError = (error, stack) {
     debugPrint('Global Async Error: $error\n$stack');
     return true; // Prevent default crash behavior
@@ -65,41 +91,13 @@ class CampuslyApp extends ConsumerWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
-      title: 'Campusly',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: themeMode,
-      routerConfig: router,
-      builder: (context, child) {
-        ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-          return Scaffold(
-            body: Center(
-              child: Padding(
-                padding: EdgeInsets.all(24.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.error_outline, color: Colors.red, size: 48),
-                    SizedBox(height: 16.0),
-                    Text(
-                      'Something went wrong.',
-                      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 8.0),
-                    Text(
-                      'We apologize for the inconvenience. Please try again.',
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        };
-        return child!;
-      },
-    );
+          title: 'Campusly',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: themeMode,
+          routerConfig: router,
+        );
       },
     );
   }

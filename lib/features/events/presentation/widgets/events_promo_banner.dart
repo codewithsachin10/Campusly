@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../providers/promo_banners_provider.dart';
@@ -97,17 +98,29 @@ class _EventsPromoBannerState extends ConsumerState<EventsPromoBanner> {
                         fit: StackFit.expand,
                         children: [
                           if (hasImage)
-                            Image.network(
-                              banner.imageUrl!,
+                            CachedNetworkImage(
+                              imageUrl: banner.imageUrl!,
                               fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) =>
-                                  Container(
-                                    color: AppColors.primary,
-                                    child: const Icon(
-                                      Icons.error,
-                                      color: Colors.white,
+                              fadeInDuration: const Duration(milliseconds: 250),
+                              placeholder: (context, url) => Container(
+                                color: AppColors.surfaceContainerLow,
+                                child: const Center(
+                                  child: SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
                                     ),
                                   ),
+                                ),
+                              ),
+                              errorWidget: (context, url, error) => Container(
+                                color: AppColors.primary,
+                                child: const Icon(
+                                  Icons.error_outline_rounded,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
 
                           // Dark overlay for text readability
