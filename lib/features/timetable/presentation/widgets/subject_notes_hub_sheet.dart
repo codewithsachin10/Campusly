@@ -6,6 +6,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/note_model.dart';
+import '../../../../core/theme/subject_colors.dart';
 import '../providers/notes_provider.dart';
 
 class SubjectNotesHubSheet extends ConsumerStatefulWidget {
@@ -164,12 +165,12 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
               Container(
                 padding: EdgeInsets.all(12.w),
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withValues(alpha: 0.15),
+                  color: SubjectColors.containerForSubject(widget.subjectCode),
                   borderRadius: BorderRadius.circular(14.r),
                 ),
                 child: Icon(
                   LucideIcons.fileText,
-                  color: AppColors.primary,
+                  color: SubjectColors.forSubject(widget.subjectCode),
                   size: 26,
                 ),
               ),
@@ -254,7 +255,15 @@ class _SubjectNotesHubSheetState extends ConsumerState<SubjectNotesHubSheet> {
                       decoration: BoxDecoration(
                         color: AppColors.background,
                         borderRadius: BorderRadius.circular(16.r),
-                        border: Border.all(color: AppColors.border),
+                        border: Border(
+                          left: BorderSide(
+                            color: SubjectColors.forSubject(widget.subjectCode),
+                            width: 4.w,
+                          ),
+                          top: BorderSide(color: AppColors.border),
+                          right: BorderSide(color: AppColors.border),
+                          bottom: BorderSide(color: AppColors.border),
+                        ),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

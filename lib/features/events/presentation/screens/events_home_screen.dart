@@ -12,6 +12,7 @@ import '../../../../core/widgets/animated_state_switcher.dart';
 import '../../../../core/widgets/empty_state.dart';
 import '../../../../core/widgets/error_state.dart';
 import '../../../../core/widgets/pressable_scale.dart';
+import '../../../../core/theme/subject_colors.dart';
 import '../providers/events_provider.dart';
 
 class EventsHomeScreen extends ConsumerWidget {
@@ -265,31 +266,25 @@ class EventsHomeScreen extends ConsumerWidget {
         event.status != 'Registration Closed' &&
         event.status != 'Completed';
 
-    Color categoryColor = AppColors.primary;
+    final categoryColor = SubjectColors.forCategory(event.type);
     IconData categoryIcon = LucideIcons.calendar;
     switch (event.type.toLowerCase()) {
       case 'hackathon':
-        categoryColor = Color(0xFF8B5CF6);
         categoryIcon = LucideIcons.code2;
         break;
       case 'workshop':
-        categoryColor = Color(0xFF06B6D4);
         categoryIcon = LucideIcons.wrench;
         break;
       case 'cultural event':
-        categoryColor = Color(0xFFEC4899);
         categoryIcon = LucideIcons.music;
         break;
       case 'symposium':
-        categoryColor = Color(0xFF3B82F6);
         categoryIcon = LucideIcons.presentation;
         break;
       case 'sports event':
-        categoryColor = Color(0xFF10B981);
         categoryIcon = LucideIcons.trophy;
         break;
       case 'club event':
-        categoryColor = Color(0xFFF59E0B);
         categoryIcon = LucideIcons.users;
         break;
     }

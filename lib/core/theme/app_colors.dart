@@ -1,94 +1,110 @@
 import 'package:flutter/material.dart';
+import 'subject_colors.dart';
 
 class AppColors {
-  // Light Palette
-  static const Color primary = Color(0xFF3525CD);
+  // Brand & Accent Colors
+  static const Color primary = Color(0xFF4F46E5); // Indigo brand
   static const Color onPrimary = Color(0xFFFFFFFF);
-  static const Color primaryContainer = Color(0xFF4F46E5);
-  static const Color onPrimaryContainer = Color(0xFFDAD7FF);
-  static const Color primaryFixed = Color(0xFFE2DFFF);
-  static const Color primaryFixedDim = Color(0xFFC3C0FF);
-  static const Color onPrimaryFixed = Color(0xFF0F0069);
-  static const Color onPrimaryFixedVariant = Color(0xFF3323CC);
+  static const Color primaryContainer = Color(0xFF4338CA);
+  static const Color onPrimaryContainer = Color(0xFFEEF2FF);
+  static const Color primaryFixed = Color(0xFFE0E7FF);
+  static const Color primaryFixedDim = Color(0xFFC7D2FE);
+  static const Color onPrimaryFixed = Color(0xFF1E1B4B);
+  static const Color onPrimaryFixedVariant = Color(0xFF3730A3);
 
-  // Secondary
-  static const Color secondary = Color(0xFF0058BE);
-  static const Color onSecondary = Color(0xFFFFFFFF);
-  static const Color secondaryContainer = Color(0xFF2170E4);
-  static const Color onSecondaryContainer = Color(0xFFFEFCFF);
-  static const Color secondaryFixed = Color(0xFFD8E2FF);
-  static const Color secondaryFixedDim = Color(0xFFADC6FF);
-  static const Color onSecondaryFixed = Color(0xFF001A42);
-  static const Color onSecondaryFixedVariant = Color(0xFF004395);
+  // Warm Accent: Coral (#FF6B4A) for CTAs & "Now" states
+  static const Color coral = Color(0xFFFF6B4A);
+  static const Color onCoral = Color(0xFFFFFFFF);
+  static const Color coralContainer = Color(0xFFFFE8E3);
+  static const Color onCoralContainer = Color(0xFF6E1B08);
 
-  // Tertiary
-  static const Color tertiary = Color(0xFF571AC0);
-  static const Color onTertiary = Color(0xFFFFFFFF);
-  static const Color tertiaryContainer = Color(0xFF6F3DD9);
-  static const Color onTertiaryContainer = Color(0xFFE3D5FF);
-  static const Color tertiaryFixed = Color(0xFFE9DDFF);
-  static const Color tertiaryFixedDim = Color(0xFFD0BCFF);
-  static const Color onTertiaryFixed = Color(0xFF23005C);
-  static const Color onTertiaryFixedVariant = Color(0xFF5516BE);
+  // Mint Success (#10B981)
+  static const Color mint = Color(0xFF10B981);
+  static const Color onMint = Color(0xFFFFFFFF);
+  static const Color mintContainer = Color(0xFFD1FAE5);
+  static const Color onMintContainer = Color(0xFF064E3B);
+
+  // Secondary maps to Coral accent
+  static const Color secondary = coral;
+  static const Color onSecondary = onCoral;
+  static const Color secondaryContainer = coralContainer;
+  static const Color onSecondaryContainer = onCoralContainer;
+  static const Color secondaryFixed = Color(0xFFFFD4CB);
+  static const Color secondaryFixedDim = Color(0xFFFFB4A4);
+  static const Color onSecondaryFixed = Color(0xFF3E0A00);
+  static const Color onSecondaryFixedVariant = Color(0xFF9C2910);
+
+  // Tertiary maps to Mint success
+  static const Color tertiary = mint;
+  static const Color onTertiary = onMint;
+  static const Color tertiaryContainer = mintContainer;
+  static const Color onTertiaryContainer = onMintContainer;
+  static const Color tertiaryFixed = Color(0xFFA7F3D0);
+  static const Color tertiaryFixedDim = Color(0xFF6EE7B7);
+  static const Color onTertiaryFixed = Color(0xFF022C22);
+  static const Color onTertiaryFixedVariant = Color(0xFF047857);
 
   // Error
-  static const Color error = Color(0xFFBA1A1A);
+  static const Color error = Color(0xFFEF4444);
   static const Color onError = Color(0xFFFFFFFF);
-  static const Color errorContainer = Color(0xFFFFDAD6);
-  static const Color onErrorContainer = Color(0xFF93000A);
+  static const Color errorContainer = Color(0xFFFEE2E2);
+  static const Color onErrorContainer = Color(0xFF991B1B);
 
   // Surface & Background (Light)
-  static const Color surface = Color(0xFFFAF9F8);
-  static const Color onSurface = Color(0xFF1A1C1C);
-  static const Color surfaceVariant = Color(0xFFE3E2E1);
-  static const Color onSurfaceVariant = Color(0xFF464555);
-  static const Color surfaceBright = Color(0xFFFAF9F8);
-  static const Color surfaceDim = Color(0xFFDADAD9);
-  static const Color surfaceTint = Color(0xFF4D44E3);
+  static const Color surface = Color(0xFFF8FAFC);
+  static const Color onSurface = Color(0xFF0F172A);
+  static const Color surfaceVariant = Color(0xFFF1F5F9);
+  static const Color onSurfaceVariant = Color(0xFF475569);
+  static const Color surfaceBright = Color(0xFFFFFFFF);
+  static const Color surfaceDim = Color(0xFFE2E8F0);
+  static const Color surfaceTint = Color(0xFF4F46E5);
 
   // Surface Containers (Light)
   static const Color surfaceContainerLowest = Color(0xFFFFFFFF);
-  static const Color surfaceContainerLow = Color(0xFFF4F3F2);
-  static const Color surfaceContainer = Color(0xFFEEEEED);
-  static const Color surfaceContainerHigh = Color(0xFFE9E8E7);
-  static const Color surfaceContainerHighest = Color(0xFFE3E2E1);
+  static const Color surfaceContainerLow = Color(0xFFF8FAFC);
+  static const Color surfaceContainer = Color(0xFFF1F5F9);
+  static const Color surfaceContainerHigh = Color(0xFFE2E8F0);
+  static const Color surfaceContainerHighest = Color(0xFFCBD5E1);
 
   // Inverse (Light)
-  static const Color inverseSurface = Color(0xFF2F3130);
-  static const Color inverseOnSurface = Color(0xFFF1F0F0);
-  static const Color inversePrimary = Color(0xFFC3C0FF);
+  static const Color inverseSurface = Color(0xFF0F172A);
+  static const Color inverseOnSurface = Color(0xFFF8FAFC);
+  static const Color inversePrimary = Color(0xFFC7D2FE);
 
   // Outlines (Light)
-  static const Color outline = Color(0xFF777587);
-  static const Color outlineVariant = Color(0xFFC7C4D8);
+  static const Color outline = Color(0xFF94A3B8);
+  static const Color outlineVariant = Color(0xFFE2E8F0);
 
   // Background (Light)
-  static const Color background = Color(0xFFFAF9F8);
-  static const Color onBackground = Color(0xFF1A1C1C);
+  static const Color background = Color(0xFFF8FAFC);
+  static const Color onBackground = Color(0xFF0F172A);
 
-  // Dark Palette Tokens
-  static const Color darkBackground = Color(0xFF0F1117);
-  static const Color darkSurface = Color(0xFF151821);
-  static const Color darkSurfaceContainerLow = Color(0xFF1B1E29);
-  static const Color darkSurfaceContainer = Color(0xFF222634);
-  static const Color darkSurfaceContainerHigh = Color(0xFF2B3041);
-  static const Color darkSurfaceContainerHighest = Color(0xFF343A4E);
-  static const Color darkOnSurface = Color(0xFFE5E7EB);
-  static const Color darkOnSurfaceVariant = Color(0xFF9CA3AF);
+  // Dark Palette Tokens: Near-black (#0B0B14) with subtly tinted surfaces
+  static const Color darkBackground = Color(0xFF0B0B14);
+  static const Color darkSurface = Color(0xFF11111E);
+  static const Color darkSurfaceContainerLowest = Color(0xFF07070D);
+  static const Color darkSurfaceContainerLow = Color(0xFF141424);
+  static const Color darkSurfaceContainer = Color(0xFF18182B);
+  static const Color darkSurfaceContainerHigh = Color(0xFF1F1F36);
+  static const Color darkSurfaceContainerHighest = Color(0xFF262642);
+  static const Color darkOnSurface = Color(0xFFF1F1F8);
+  static const Color darkOnSurfaceVariant = Color(0xFF9E9EB8);
   static const Color darkPrimary = Color(0xFF818CF8);
   static const Color darkPrimaryContainer = Color(0xFF4F46E5);
   static const Color darkOnPrimary = Color(0xFFFFFFFF);
-  static const Color darkSecondary = Color(0xFF60A5FA);
-  static const Color darkOutline = Color(0xFF4B5563);
-  static const Color darkOutlineVariant = Color(0xFF374151);
+  static const Color darkSecondary = Color(0xFFFF6B4A); // Coral
+  static const Color darkTertiary = Color(0xFF34D399); // Mint
+  static const Color darkOutline = Color(0xFF2E2E48);
+  static const Color darkOutlineVariant = Color(0xFF202034);
   static const Color darkError = Color(0xFFF87171);
+  static const Color darkSuccess = Color(0xFF34D399);
 
   // Semantic Colors
-  static const Color success = Color(0xFF16A34A);
-  static const Color warning = Color(0xFFD97706);
+  static const Color success = mint;
+  static const Color warning = Color(0xFFF59E0B);
   static const Color border = Color(0xFFE2E8F0);
-  static const Color textPrimary = Color(0xFF1A1C1C);
-  static const Color textSecondary = Color(0xFF464555);
+  static const Color textPrimary = Color(0xFF0F172A);
+  static const Color textSecondary = Color(0xFF64748B);
   static const Color divider = Color(0xFFE2E8F0);
 
   // Subject & Card Accent Colors
@@ -97,35 +113,7 @@ class AppColors {
     bool isBreak = false,
   }) {
     if (isBreak) return const Color(0xFF8D6E63);
-    if (subjectCode == null) return primary;
-
-    if (subjectCode.startsWith('#')) {
-      try {
-        final hex = subjectCode.replaceFirst('#', '0xFF');
-        return Color(int.parse(hex));
-      } catch (_) {
-        return primary;
-      }
-    }
-
-    switch (subjectCode.toUpperCase()) {
-      case 'CS23333':
-        return const Color(0xFF0284C7); // Sky Blue
-      case 'CB23333':
-        return const Color(0xFFD97706); // Amber / Gold
-      case 'CB23311':
-        return const Color(0xFFEA580C); // Warm Orange
-      case 'CB23332':
-        return const Color(0xFF9333EA); // Purple
-      case 'CB23331':
-        return const Color(0xFFE11D48); // Rose
-      case 'MC23313':
-        return const Color(0xFF0D9488); // Teal
-      case 'CB23312':
-        return const Color(0xFF2563EB); // Royal Blue
-      default:
-        return primary;
-    }
+    return SubjectColors.forSubject(subjectCode);
   }
 }
 
@@ -140,6 +128,8 @@ class AppCustomColors extends ThemeExtension<AppCustomColors> {
   final Color shimmerBase;
   final Color shimmerHighlight;
   final Color chipBackground;
+  final Color coral;
+  final Color mint;
 
   const AppCustomColors({
     required this.cardBackground,
@@ -150,28 +140,34 @@ class AppCustomColors extends ThemeExtension<AppCustomColors> {
     required this.shimmerBase,
     required this.shimmerHighlight,
     required this.chipBackground,
+    required this.coral,
+    required this.mint,
   });
 
   static const light = AppCustomColors(
     cardBackground: Color(0xFFFFFFFF),
     cardBorder: Color(0xFFE2E8F0),
     subtleText: Color(0xFF64748B),
-    success: Color(0xFF16A34A),
-    warning: Color(0xFFD97706),
+    success: Color(0xFF10B981),
+    warning: Color(0xFFF59E0B),
     shimmerBase: Color(0xFFE2E8F0),
     shimmerHighlight: Color(0xFFF8FAFC),
     chipBackground: Color(0xFFF1F5F9),
+    coral: Color(0xFFFF6B4A),
+    mint: Color(0xFF10B981),
   );
 
   static const dark = AppCustomColors(
-    cardBackground: Color(0xFF181B24),
-    cardBorder: Color(0xFF282D3B),
-    subtleText: Color(0xFF9CA3AF),
-    success: Color(0xFF22C55E),
+    cardBackground: Color(0xFF11111E),
+    cardBorder: Color(0xFF202034),
+    subtleText: Color(0xFF9E9EB8),
+    success: Color(0xFF34D399),
     warning: Color(0xFFF59E0B),
-    shimmerBase: Color(0xFF1F2432),
-    shimmerHighlight: Color(0xFF2C3345),
-    chipBackground: Color(0xFF222634),
+    shimmerBase: Color(0xFF18182B),
+    shimmerHighlight: Color(0xFF262642),
+    chipBackground: Color(0xFF18182B),
+    coral: Color(0xFFFF6B4A),
+    mint: Color(0xFF34D399),
   );
 
   @override
@@ -184,6 +180,8 @@ class AppCustomColors extends ThemeExtension<AppCustomColors> {
     Color? shimmerBase,
     Color? shimmerHighlight,
     Color? chipBackground,
+    Color? coral,
+    Color? mint,
   }) {
     return AppCustomColors(
       cardBackground: cardBackground ?? this.cardBackground,
@@ -194,6 +192,8 @@ class AppCustomColors extends ThemeExtension<AppCustomColors> {
       shimmerBase: shimmerBase ?? this.shimmerBase,
       shimmerHighlight: shimmerHighlight ?? this.shimmerHighlight,
       chipBackground: chipBackground ?? this.chipBackground,
+      coral: coral ?? this.coral,
+      mint: mint ?? this.mint,
     );
   }
 
@@ -209,6 +209,8 @@ class AppCustomColors extends ThemeExtension<AppCustomColors> {
       shimmerBase: Color.lerp(shimmerBase, other.shimmerBase, t)!,
       shimmerHighlight: Color.lerp(shimmerHighlight, other.shimmerHighlight, t)!,
       chipBackground: Color.lerp(chipBackground, other.chipBackground, t)!,
+      coral: Color.lerp(coral, other.coral, t)!,
+      mint: Color.lerp(mint, other.mint, t)!,
     );
   }
 }

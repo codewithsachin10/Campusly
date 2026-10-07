@@ -41,7 +41,7 @@ class OngoingClassCard extends ConsumerWidget {
 
         final badgeColor = ongoing.isBreak
             ? const Color(0xFF26A69A)
-            : AppColors.primary;
+            : AppColors.coral;
         final accentBorderColor = AppColors.getSubjectAccentColor(
           ongoing.subjectCode,
           isBreak: ongoing.isBreak,

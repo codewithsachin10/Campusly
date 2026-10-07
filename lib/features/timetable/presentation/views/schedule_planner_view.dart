@@ -7,6 +7,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/timetable_item.dart';
 import '../providers/timetable_provider.dart';
+import '../widgets/more_bottom_sheet.dart';
 
 class SchedulePlannerView extends ConsumerWidget {
   const SchedulePlannerView({super.key});
@@ -75,28 +76,66 @@ class SchedulePlannerView extends ConsumerWidget {
       },
     ];
 
-    return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Planner Header
-          Text(
-            'Planner',
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-              fontSize: 32.sp,
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return CustomScrollView(
+      physics: const AlwaysScrollableScrollPhysics(),
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: isDark ? AppColors.darkSurface : AppColors.surface,
+          scrolledUnderElevation: 0,
+          pinned: true,
+          floating: false,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.menu_rounded,
+              color: AppColors.primary,
+              size: 26,
+            ),
+            tooltip: 'More options',
+            onPressed: () => MoreBottomSheet.show(context),
+          ),
+          title: Text(
+            'Schedule',
+            style: theme.textTheme.headlineLarge?.copyWith(
               fontWeight: FontWeight.w800,
-              color: AppColors.onSurface,
+              letterSpacing: -0.5,
             ),
           ),
-          SizedBox(height: 4.h),
-          Text(
-            headerDateText,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: AppColors.onSurfaceVariant,
+          actions: [
+            IconButton(
+              onPressed: () => context.push('/join-class-choice'),
+              tooltip: 'Switch or Join Class',
+              icon: Container(
+                padding: EdgeInsets.all(7.w),
+                decoration: BoxDecoration(
+                  color: AppColors.primary.withValues(alpha: 0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  Icons.swap_horiz_rounded,
+                  color: AppColors.primary,
+                  size: 19,
+                ),
+              ),
             ),
-          ),
-          SizedBox(height: 24.h),
+            SizedBox(width: 8.w),
+          ],
+        ),
+        SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  headerDateText,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: AppColors.onSurfaceVariant,
+                  ),
+                ),
+                SizedBox(height: 20.h),
 
           // Horizontal Day Selector
           SizedBox(
@@ -203,10 +242,13 @@ class SchedulePlannerView extends ConsumerWidget {
               );
             },
           ),
-          SizedBox(height: 40.h),
+          SizedBox(height: 100.h),
         ],
       ),
-    );
+    ),
+  ),
+],
+);
   }
 
   Widget _buildNoClassJoinedState(BuildContext context) {

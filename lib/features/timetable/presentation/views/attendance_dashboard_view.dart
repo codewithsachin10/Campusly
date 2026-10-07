@@ -10,6 +10,8 @@ import '../../../class_join/presentation/providers/class_provider.dart';
 import '../providers/attendance_provider.dart';
 import '../providers/timetable_provider.dart';
 import '../widgets/attendance_details_sheet.dart';
+import '../../../../core/theme/subject_colors.dart';
+import '../widgets/more_bottom_sheet.dart';
 
 class AttendanceDashboardView extends ConsumerWidget {
   const AttendanceDashboardView({super.key});
@@ -167,22 +169,41 @@ class _AttendanceListContent extends ConsumerWidget {
       overallPercentage = (totalPresent / totalClasses) * 100;
     }
 
-    return SingleChildScrollView(
-      padding: EdgeInsets.all(24.0.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Attendance Hub',
-            style: AppTypography.headlineLarge.copyWith(
-              fontSize: 32.sp,
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return CustomScrollView(
+      physics: const AlwaysScrollableScrollPhysics(),
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: isDark ? AppColors.darkSurface : AppColors.surface,
+          scrolledUnderElevation: 0,
+          pinned: true,
+          floating: false,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.menu_rounded,
+              color: AppColors.primary,
+              size: 26,
+            ),
+            tooltip: 'More options',
+            onPressed: () => MoreBottomSheet.show(context),
+          ),
+          title: Text(
+            'Attendance',
+            style: theme.textTheme.headlineLarge?.copyWith(
               fontWeight: FontWeight.w800,
-              color: AppColors.onSurface,
+              letterSpacing: -0.5,
             ),
           ),
-          SizedBox(height: 20.h),
-
-          // Overall Summary Card
+        ),
+        SliverPadding(
+          padding: EdgeInsets.all(24.0.w),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Overall Summary Card
           Container(
             padding: EdgeInsets.all(24.w),
             decoration: BoxDecoration(
@@ -318,9 +339,13 @@ class _AttendanceListContent extends ConsumerWidget {
               );
             },
           ),
+          SizedBox(height: 100.h),
         ],
       ),
-    );
+    ),
+  ),
+],
+);
   }
 }
 
@@ -459,26 +484,57 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      SizedBox(width: 12.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text(
-                            att.totalCount > 0
-                                ? '${pct.toStringAsFixed(1)}%'
-                                : '0.0%',
-                            style: AppTypography.headlineMedium.copyWith(
-                              color: isUnderTarget
-                                  ? AppColors.error
-                                  : AppColors.primary,
-                              fontWeight: FontWeight.w800,
-                            ),
+                          Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              SizedBox(
+                                width: 44.w,
+                                height: 44.h,
+                                child: CircularProgressIndicator(
+                                  value: att.totalCount > 0
+                                      ? (pct / 100).clamp(0.0, 1.0)
+                                      : 0.0,
+                                  strokeWidth: 4.5,
+                                  backgroundColor: AppColors.outlineVariant.withValues(alpha: 0.2),
+                                  color: isUnderTarget
+                                      ? AppColors.error
+                                      : SubjectColors.forSubject(subjectCode),
+                                  strokeCap: StrokeCap.round,
+                                ),
+                              ),
+                              Text(
+                                att.totalCount > 0 ? '${pct.toInt()}%' : '0%',
+                                style: AppTypography.labelSmall.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.onSurface,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            '${att.presentCount}/${att.totalCount} classes',
-                            style: AppTypography.bodySmall.copyWith(
-                              color: AppColors.textSecondary,
-                            ),
+                          SizedBox(width: 10.w),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                '${att.presentCount}/${att.totalCount}',
+                                style: AppTypography.titleSmall.copyWith(
+                                  fontWeight: FontWeight.w800,
+                                  color: isUnderTarget
+                                      ? AppColors.error
+                                      : AppColors.onSurface,
+                                ),
+                              ),
+                              Text(
+                                'attended',
+                                style: AppTypography.labelSmall.copyWith(
+                                  color: AppColors.textSecondary,
+                                  fontSize: 10.sp,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

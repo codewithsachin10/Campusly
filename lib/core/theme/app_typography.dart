@@ -13,6 +13,20 @@ abstract final class AppTypography {
       letterSpacing: -0.04 * 48,
       color: AppColors.onSurface,
     ),
+    displayMedium: GoogleFonts.bricolageGrotesque(
+      fontSize: 40.0,
+      fontWeight: FontWeight.w800,
+      height: 1.15,
+      letterSpacing: -0.03 * 40,
+      color: AppColors.onSurface,
+    ),
+    displaySmall: GoogleFonts.bricolageGrotesque(
+      fontSize: 34.0,
+      fontWeight: FontWeight.w800,
+      height: 1.2,
+      letterSpacing: -0.02 * 34,
+      color: AppColors.onSurface,
+    ),
     // headline-lg (32px, 700, -0.02em)
     headlineLarge: GoogleFonts.bricolageGrotesque(
       fontSize: 32.0,
@@ -99,6 +113,8 @@ abstract final class AppTypography {
   );
 
   static TextStyle get displayLarge => textTheme.displayLarge!;
+  static TextStyle get displayMedium => textTheme.displayMedium!;
+  static TextStyle get displaySmall => textTheme.displaySmall!;
   static TextStyle get headlineLarge => textTheme.headlineLarge!;
   static TextStyle get headlineMedium => textTheme.headlineMedium!;
   static TextStyle get headlineSmall => textTheme.headlineSmall!;

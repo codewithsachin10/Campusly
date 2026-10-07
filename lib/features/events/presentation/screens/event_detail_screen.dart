@@ -7,6 +7,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/event_model.dart';
+import '../../../../core/theme/subject_colors.dart';
 import '../providers/events_provider.dart';
 
 class EventDetailScreen extends ConsumerStatefulWidget {
@@ -259,31 +260,25 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
         widget.event.participantCount >=
         widget.event.registrationSettings.maxParticipants;
 
-    Color categoryColor = AppColors.primary;
+    final categoryColor = SubjectColors.forCategory(widget.event.type);
     IconData categoryIcon = LucideIcons.calendar;
     switch (widget.event.type.toLowerCase()) {
       case 'hackathon':
-        categoryColor = Color(0xFF8B5CF6);
         categoryIcon = LucideIcons.code2;
         break;
       case 'workshop':
-        categoryColor = Color(0xFF06B6D4);
         categoryIcon = LucideIcons.wrench;
         break;
       case 'cultural event':
-        categoryColor = Color(0xFFEC4899);
         categoryIcon = LucideIcons.music;
         break;
       case 'symposium':
-        categoryColor = Color(0xFF3B82F6);
         categoryIcon = LucideIcons.presentation;
         break;
       case 'sports event':
-        categoryColor = Color(0xFF10B981);
         categoryIcon = LucideIcons.trophy;
         break;
       case 'club event':
-        categoryColor = Color(0xFFF59E0B);
         categoryIcon = LucideIcons.users;
         break;
     }

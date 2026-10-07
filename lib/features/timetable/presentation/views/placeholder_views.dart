@@ -9,6 +9,8 @@ import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/timetable_item.dart';
 import '../providers/timetable_provider.dart';
 import '../screens/subject_detail_page.dart';
+import '../../../../core/theme/subject_colors.dart';
+import '../widgets/more_bottom_sheet.dart';
 
 class _CourseData {
   final TimetableItem item;
@@ -36,8 +38,6 @@ class CoursesShellView extends ConsumerWidget {
 
     final items = weeklyScheduleAsync.value ?? [];
     final Map<String, _CourseData> coursesMap = {};
-    final colors = [AppColors.primary, AppColors.secondary, AppColors.tertiary];
-    int colorIndex = 0;
 
     for (final item in items) {
       if (item.isBreak) continue;
@@ -49,38 +49,57 @@ class CoursesShellView extends ConsumerWidget {
         coursesMap[item.title] = _CourseData(
           item: item,
           details: '$count Units • $category',
-          color: colors[colorIndex % colors.length],
+          color: SubjectColors.forSubject(item.title),
         );
-        colorIndex++;
       }
     }
 
     List<_CourseData> coursesList = coursesMap.values.toList();
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
 
-    return Padding(
-      padding: EdgeInsets.all(24.0.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'My Courses',
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-              fontSize: 32.sp,
+    return CustomScrollView(
+      physics: const AlwaysScrollableScrollPhysics(),
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: isDark ? AppColors.darkSurface : AppColors.surface,
+          scrolledUnderElevation: 0,
+          pinned: true,
+          floating: false,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.menu_rounded,
+              color: AppColors.primary,
+              size: 26,
+            ),
+            tooltip: 'More options',
+            onPressed: () => MoreBottomSheet.show(context),
+          ),
+          title: Text(
+            'Courses',
+            style: theme.textTheme.headlineLarge?.copyWith(
               fontWeight: FontWeight.w800,
-              color: AppColors.onSurface,
+              letterSpacing: -0.5,
             ),
           ),
-          SizedBox(height: 8.h),
-          Text(
-            'Enrolled in ${currentClass?.name ?? 'B.Tech CSBS - Section B'}',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: AppColors.onSurfaceVariant,
-            ),
-          ),
-          SizedBox(height: 32.h),
-          Expanded(
-            child: (currentClass == null && (joinedCustomTimetablesAsync.value == null || joinedCustomTimetablesAsync.value!.isEmpty))
-                ? Center(
+        ),
+        SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Enrolled in ${currentClass?.name ?? 'B.Tech CSBS - Section B'}',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: AppColors.onSurfaceVariant,
+                  ),
+                ),
+                SizedBox(height: 20.h),
+                if (currentClass == null &&
+                    (joinedCustomTimetablesAsync.value == null ||
+                        joinedCustomTimetablesAsync.value!.isEmpty))
+                  Center(
                     child: Padding(
                       padding: EdgeInsets.all(24.0.w),
                       child: Column(
@@ -109,8 +128,8 @@ class CoursesShellView extends ConsumerWidget {
                           SizedBox(height: 24.h),
                           FilledButton.icon(
                             onPressed: () => context.push('/join-class-choice'),
-                            icon: Icon(LucideIcons.search, size: 18),
-                            label: Text('Find a Class'),
+                            icon: const Icon(LucideIcons.search, size: 18),
+                            label: const Text('Find a Class'),
                             style: FilledButton.styleFrom(
                               backgroundColor: AppColors.primary,
                               foregroundColor: Colors.white,
@@ -124,38 +143,44 @@ class CoursesShellView extends ConsumerWidget {
                       ),
                     ),
                   )
-                : coursesList.isEmpty
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.menu_book_rounded,
-                          size: 48,
-                          color: AppColors.onSurfaceVariant.withValues(
-                            alpha: 0.5,
+                else if (coursesList.isEmpty)
+                  Center(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 40.h),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.menu_book_rounded,
+                            size: 48,
+                            color: AppColors.onSurfaceVariant.withValues(
+                              alpha: 0.5,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 16.h),
-                        Text(
-                          'No courses found for this class.',
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: AppColors.onSurfaceVariant,
-                            fontWeight: FontWeight.bold,
+                          SizedBox(height: 16.h),
+                          Text(
+                            'No courses found for this class.',
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              color: AppColors.onSurfaceVariant,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 6.h),
-                        Text(
-                          'Subjects will appear once classes are scheduled in your timetable.',
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppColors.onSurfaceVariant,
+                          SizedBox(height: 6.h),
+                          Text(
+                            'Subjects will appear once classes are scheduled in your timetable.',
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.onSurfaceVariant,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   )
-                : ListView.separated(
+                else
+                  ListView.separated(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: coursesList.length,
                     separatorBuilder: (_, _) => SizedBox(height: 16.h),
                     itemBuilder: (context, index) {
@@ -163,9 +188,12 @@ class CoursesShellView extends ConsumerWidget {
                       return _buildCourseItem(context, course);
                     },
                   ),
+                SizedBox(height: 100.h),
+              ],
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

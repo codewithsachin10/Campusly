@@ -85,18 +85,17 @@ class CountdownText extends ConsumerWidget {
           Text(
             isCountdown ? 'NEXT CLASS IN' : 'UPCOMING CLASS ON',
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: AppColors.primary.withValues(alpha: 0.7),
+              color: AppColors.coral,
               fontWeight: FontWeight.bold,
               letterSpacing: 1.0,
             ),
           ),
-          SizedBox(height: 2.h),
+          SizedBox(height: 4.h),
           Text(
             timerOrDateDisplay,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              color: AppColors.primary,
+            style: Theme.of(context).textTheme.displaySmall?.copyWith(
+              color: AppColors.coral,
               fontWeight: FontWeight.w800,
-              fontSize: isCountdown ? 20.sp : 15.sp,
             ),
             overflow: TextOverflow.ellipsis,
           ),

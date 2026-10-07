@@ -17,6 +17,8 @@ import '../../../../core/widgets/fade_slide_in.dart';
 import '../../../events/presentation/widgets/events_promo_banner.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/announcement_model.dart';
+import '../widgets/home_app_bar.dart';
+import '../widgets/more_bottom_sheet.dart';
 
 final Set<String> _shownAlerts = {};
 
@@ -99,12 +101,19 @@ class HomeDashboardView extends ConsumerWidget {
         ref.invalidate(eventsStreamProvider);
         await Future.delayed(Duration(milliseconds: 600));
       },
-      child: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
-        padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+      child: CustomScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        slivers: [
+          HomeSliverAppBar(
+            onOpenMore: () => MoreBottomSheet.show(context),
+            onOpenProfile: () => context.push('/profile-edit'),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
+            sliver: SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
             // Welcome Header Row with Notification Bell
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,9 +125,9 @@ class HomeDashboardView extends ConsumerWidget {
                     children: [
                       Text(
                         'Good morning, ${user?.name.trim().isNotEmpty == true ? user!.name.trim().split(' ').first : 'Student'} 👋',
-                        style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                          fontSize: 28.sp,
+                        style: Theme.of(context).textTheme.displaySmall?.copyWith(
                           color: AppColors.onSurface,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                       SizedBox(height: 4.h),
@@ -511,11 +520,14 @@ class HomeDashboardView extends ConsumerWidget {
               }),
             ],
             ],
-            SizedBox(height: 24.h),
+            SizedBox(height: 100.h),
           ],
         ),
       ),
-    );
+    ),
+  ],
+),
+);
   }
 
   Widget _buildDashboardSkeleton() {

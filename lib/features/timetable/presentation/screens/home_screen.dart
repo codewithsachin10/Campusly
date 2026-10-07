@@ -11,14 +11,13 @@ import '../views/home_dashboard_view.dart';
 import '../views/schedule_planner_view.dart';
 import '../views/placeholder_views.dart';
 import '../views/attendance_dashboard_view.dart';
-import '../widgets/campusly_side_drawer.dart';
+import '../widgets/floating_pill_nav_bar.dart';
 import '../providers/timetable_provider.dart';
 import '../../domain/models/timetable_item.dart';
 import '../../../../core/services/sync_engine_service.dart';
 import '../../../../core/services/presence_service.dart';
 import '../../../../core/services/app_haptics.dart';
 import '../../../../core/widgets/lazy_indexed_stack.dart';
-import '../widgets/home_app_bar.dart';
 
 final _appServicesInitProvider = Provider<void>((ref) {
   ref.watch(syncEngineProvider);
@@ -130,8 +129,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.background,
-      drawer: CampuslySideDrawer(
-        onSelectTab: (index) {
+      extendBody: true,
+      body: LazyIndexedStack(
+        index: _selectedIndex,
+        itemCount: 5,
+        itemBuilder: _buildTab,
+      ),
+      bottomNavigationBar: FloatingPillNavBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) {
           if (_selectedIndex != index) {
             AppHaptics.selectionClick();
             setState(() {
@@ -139,111 +145,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             });
           }
         },
-      ),
-      drawerEdgeDragWidth: MediaQuery.of(context).size.width * 0.45,
-      appBar: HomeAppBar(
-        onOpenDrawer: () => Scaffold.of(context).openDrawer(),
-        onOpenProfile: () {
-          if (_selectedIndex != 4) {
-            AppHaptics.selectionClick();
-            setState(() {
-              _selectedIndex = 4;
-            });
-          }
-        },
-      ),
-      body: LazyIndexedStack(
-        index: _selectedIndex,
-        itemCount: 5,
-        itemBuilder: _buildTab,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.push('/inbox');
-        },
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.onPrimary,
-        elevation: 4,
-        child: Icon(Icons.chat_bubble_outline_rounded),
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: AppColors.surfaceContainerLowest,
-          border: Border(
-            top: BorderSide(
-              color: AppColors.outlineVariant.withValues(alpha: 0.3),
-            ),
+        items: const [
+          FloatingPillNavItem(
+            icon: Icons.home_outlined,
+            selectedIcon: Icons.home_rounded,
+            label: 'Home',
           ),
-        ),
-        child: NavigationBar(
-          selectedIndex: _selectedIndex,
-          onDestinationSelected: (index) {
-            if (_selectedIndex != index) {
-              AppHaptics.selectionClick();
-              setState(() {
-                _selectedIndex = index;
-              });
-            }
-          },
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          indicatorColor: AppColors.primary.withValues(alpha: 0.12),
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-          destinations: [
-            NavigationDestination(
-              icon: Icon(
-                Icons.home_outlined,
-                color: AppColors.onSurfaceVariant,
-              ),
-              selectedIcon: Icon(Icons.home_rounded, color: AppColors.primary),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.calendar_today_outlined,
-                color: AppColors.onSurfaceVariant,
-              ),
-              selectedIcon: Icon(
-                Icons.calendar_today_rounded,
-                color: AppColors.primary,
-              ),
-              label: 'Schedule',
-            ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.menu_book_outlined,
-                color: AppColors.onSurfaceVariant,
-              ),
-              selectedIcon: Icon(
-                Icons.menu_book_rounded,
-                color: AppColors.primary,
-              ),
-              label: 'Courses',
-            ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.fact_check_outlined,
-                color: AppColors.onSurfaceVariant,
-              ),
-              selectedIcon: Icon(
-                Icons.fact_check_rounded,
-                color: AppColors.primary,
-              ),
-              label: 'Attendance',
-            ),
-            NavigationDestination(
-              icon: Icon(
-                Icons.person_outline_rounded,
-                color: AppColors.onSurfaceVariant,
-              ),
-              selectedIcon: Icon(
-                Icons.person_rounded,
-                color: AppColors.primary,
-              ),
-              label: 'Profile',
-            ),
-          ],
-        ),
+          FloatingPillNavItem(
+            icon: Icons.calendar_today_outlined,
+            selectedIcon: Icons.calendar_today_rounded,
+            label: 'Schedule',
+          ),
+          FloatingPillNavItem(
+            icon: Icons.menu_book_outlined,
+            selectedIcon: Icons.menu_book_rounded,
+            label: 'Courses',
+          ),
+          FloatingPillNavItem(
+            icon: Icons.fact_check_outlined,
+            selectedIcon: Icons.fact_check_rounded,
+            label: 'Attendance',
+          ),
+          FloatingPillNavItem(
+            icon: Icons.person_outline_rounded,
+            selectedIcon: Icons.person_rounded,
+            label: 'Profile',
+          ),
+        ],
       ),
     );
   }

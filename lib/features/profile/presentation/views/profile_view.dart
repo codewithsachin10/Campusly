@@ -9,6 +9,7 @@ import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../../settings/presentation/screens/settings_screen.dart';
 import '../screens/edit_profile_screen.dart';
+import '../../../timetable/presentation/widgets/more_bottom_sheet.dart';
 
 class ProfileView extends ConsumerWidget {
   const ProfileView({super.key});
@@ -17,46 +18,55 @@ class ProfileView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(authControllerProvider).value;
     final currentClass = ref.watch(currentClassProvider);
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
 
-    return SingleChildScrollView(
-      padding: EdgeInsets.all(24.0.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Top Bar & Title
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Text(
-                  'Student Profile',
-                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    fontSize: 32.sp,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.onSurface,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => SettingsScreen()),
-                  );
-                },
-                style: IconButton.styleFrom(
-                  backgroundColor: AppColors.surfaceContainerLow,
-                  padding: EdgeInsets.all(12.w),
-                ),
-                icon: Icon(
-                  Icons.settings_rounded,
-                  color: AppColors.primary,
-                ),
-                tooltip: 'Settings & Notifications',
-              ),
-            ],
+    return CustomScrollView(
+      physics: const AlwaysScrollableScrollPhysics(),
+      slivers: [
+        SliverAppBar.large(
+          backgroundColor: isDark ? AppColors.darkSurface : AppColors.surface,
+          scrolledUnderElevation: 0,
+          pinned: true,
+          floating: false,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.menu_rounded,
+              color: AppColors.primary,
+              size: 26,
+            ),
+            tooltip: 'More options',
+            onPressed: () => MoreBottomSheet.show(context),
           ),
-          SizedBox(height: 24.h),
+          title: Text(
+            'Profile',
+            style: theme.textTheme.headlineLarge?.copyWith(
+              fontWeight: FontWeight.w800,
+              letterSpacing: -0.5,
+            ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                );
+              },
+              icon: const Icon(
+                Icons.settings_rounded,
+                color: AppColors.primary,
+              ),
+              tooltip: 'Settings & Notifications',
+            ),
+            SizedBox(width: 8.w),
+          ],
+        ),
+        SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
 
           // Hero Profile Card
           Container(
@@ -558,10 +568,13 @@ class ProfileView extends ConsumerWidget {
               ),
             ),
           ),
-          SizedBox(height: 40.h),
+          SizedBox(height: 100.h),
         ],
       ),
-    );
+    ),
+  ),
+],
+);
   }
 
   Widget _buildStatCard(
