@@ -8,9 +8,10 @@ final connectivityServiceProvider = Provider<ConnectivityService>((ref) {
   return service;
 });
 
-final connectivityStatusProvider = StreamProvider<bool>((ref) {
+final connectivityStatusProvider = StreamProvider<bool>((ref) async* {
   final service = ref.watch(connectivityServiceProvider);
-  return service.connectionStatusStream;
+  yield service.isOnline;
+  yield* service.connectionStatusStream;
 });
 
 class ConnectivityService {

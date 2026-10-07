@@ -446,8 +446,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                 SizedBox(height: 22.h),
 
                                 // Create Account Row
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                Wrap(
+                                  alignment: WrapAlignment.center,
+                                  crossAxisAlignment: WrapCrossAlignment.center,
                                   children: [
                                     Text(
                                       "Don't have an account? ",
@@ -476,8 +477,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         SizedBox(height: 16.h),
 
                         // Security Trust Badge beneath card
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Wrap(
+                          alignment: WrapAlignment.center,
+                          crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
                             Icon(
                               LucideIcons.shieldCheck,

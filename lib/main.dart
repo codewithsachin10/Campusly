@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,6 +7,9 @@ import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 import 'core/services/push_notification_service.dart';
+import 'core/services/error_reporter.dart';
+import 'core/widgets/connectivity_banner.dart';
+import 'core/widgets/error_state.dart';
 
 import 'dart:ui';
 
@@ -13,39 +17,28 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Global Error Handling
-  FlutterError.onError = (FlutterErrorDetails details) {
-    FlutterError.presentError(details);
-    debugPrint('Global FlutterError: ${details.exception}');
-  };
+  FlutterError.onError = ErrorReporter.recordFlutterError;
 
   ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-    return const Scaffold(
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(24.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.error_outline, color: Colors.red, size: 48),
-              SizedBox(height: 16.0),
-              Text(
-                'Something went wrong.',
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8.0),
-              Text(
-                'We apologize for the inconvenience. Please try again.',
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
+    return Scaffold(
+      body: SafeArea(
+        child: ErrorState(
+          title: 'Something went wrong',
+          message: kReleaseMode
+              ? 'An unexpected error occurred. Please try again.'
+              : errorDetails.exceptionAsString(),
         ),
       ),
     );
   };
 
   PlatformDispatcher.instance.onError = (error, stack) {
-    debugPrint('Global Async Error: $error\n$stack');
+    ErrorReporter.recordError(
+      error,
+      stack,
+      reason: 'Global unhandled async exception',
+      severity: ErrorSeverity.fatal,
+    );
     return true; // Prevent default crash behavior
   };
 
@@ -74,7 +67,12 @@ void main() async {
     debugPrint('Push Notification initialization failed: $e');
   }
 
-  runApp(ProviderScope(child: CampuslyApp()));
+  runApp(
+    const ProviderScope(
+      observers: [AppProviderObserver()],
+      child: CampuslyApp(),
+    ),
+  );
 }
 
 class CampuslyApp extends ConsumerWidget {
@@ -97,6 +95,11 @@ class CampuslyApp extends ConsumerWidget {
           darkTheme: AppTheme.darkTheme,
           themeMode: themeMode,
           routerConfig: router,
+          builder: (context, routerChild) {
+            return ConnectivityBanner(
+              child: routerChild ?? const SizedBox.shrink(),
+            );
+          },
         );
       },
     );

@@ -44,7 +44,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
 
     _controller.forward();
 
-    _navigateNext();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        _navigateNext();
+      }
+    });
   }
 
   Future<void> _navigateNext() async {

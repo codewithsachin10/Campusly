@@ -9,5 +9,9 @@ void main() {
 
     // Verify that the splash screen title or logo renders without crashing.
     expect(find.text('Campusly'), findsOneWidget);
+
+    // Pump past splash delay to clean up timer
+    await tester.pump(const Duration(milliseconds: 2500));
+    await tester.pumpAndSettle();
   });
 }

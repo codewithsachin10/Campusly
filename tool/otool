@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/otool "$@" | sed 's/(TimeTable App)/_TimeTable_App_/g'
