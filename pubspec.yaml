@@ -64,6 +64,9 @@ dependencies:
   open_filex: ^4.5.0
   logger: ^2.7.0
   flutter_screenutil: ^5.9.3
+  flutter_animate: ^4.5.2
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:

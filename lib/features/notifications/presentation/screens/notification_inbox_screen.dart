@@ -6,6 +6,11 @@ import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/error_handler.dart';
+import '../../../../core/widgets/app_shimmer.dart';
+import '../../../../core/widgets/fade_slide_in.dart';
+import '../../../../core/widgets/animated_state_switcher.dart';
+import '../../../../core/widgets/empty_state.dart';
+import '../../../../core/widgets/error_state.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../domain/models/notification_item_model.dart';
 import '../providers/notifications_provider.dart';
@@ -46,109 +51,78 @@ class NotificationInboxScreen extends ConsumerWidget {
             SizedBox(height: 16.h),
             // Notifications List
             Expanded(
-              child: filteredAsync.when(
-                loading: () => Center(
-                  child: CircularProgressIndicator(color: AppColors.primary),
-                ),
-                error: (error, stack) => Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        LucideIcons.alertTriangle,
-                        color: AppColors.error,
-                        size: 48,
-                      ),
-                      SizedBox(height: 12.h),
-                      Text(
-                        'Failed to load notifications',
-                        style: AppTypography.titleMedium.copyWith(
-                          color: AppColors.textPrimary,
+              child: AnimatedStateSwitcher(
+                child: filteredAsync.when(
+                  loading: () => KeyedSubtree(
+                    key: const ValueKey('notif_loading'),
+                    child: AppShimmer(
+                      child: ListView.separated(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 20.w,
+                          vertical: 8.h,
                         ),
+                        itemCount: 6,
+                        separatorBuilder: (context, index) =>
+                            SizedBox(height: 12.h),
+                        itemBuilder: (context, index) =>
+                            const SkeletonListTile(),
                       ),
-                      SizedBox(height: 6.h),
-                      Text(
-                        AppErrorHandler.getErrorMessage(error),
-                        style: AppTypography.bodySmall.copyWith(
-                          color: AppColors.textSecondary,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 16.h),
-                      ElevatedButton.icon(
-                        onPressed: () =>
-                            ref.refresh(notificationsStreamProvider),
-                        icon: Icon(LucideIcons.refreshCw, size: 16),
-                        label: Text('Retry'),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                data: (items) {
-                  if (items.isEmpty) {
-                    return Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(24.w),
-                            decoration: BoxDecoration(
-                              color: AppColors.surfaceContainerLowest,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              LucideIcons.bellOff,
-                              size: 48,
-                              color: AppColors.textSecondary,
-                            ),
+                  error: (error, stack) => KeyedSubtree(
+                    key: const ValueKey('notif_error'),
+                    child: ErrorState(
+                      title: 'Failed to load notifications',
+                      message: AppErrorHandler.getErrorMessage(error),
+                      onRetry: () =>
+                          ref.refresh(notificationsStreamProvider),
+                    ),
+                  ),
+                  data: (items) {
+                    if (items.isEmpty) {
+                      return KeyedSubtree(
+                        key: const ValueKey('notif_empty'),
+                        child: EmptyState(
+                          icon: LucideIcons.bellOff,
+                          title: 'No notifications right now',
+                          subtitle: activeCategory == 'All'
+                              ? 'You are completely caught up on all alerts and notices!'
+                              : 'No alerts in the "$activeCategory" category.',
+                        ),
+                      );
+                    }
+
+                    return KeyedSubtree(
+                      key: const ValueKey('notif_list'),
+                      child: RefreshIndicator(
+                        onRefresh: () async {
+                          ref.invalidate(notificationsStreamProvider);
+                        },
+                        color: AppColors.primary,
+                        child: ListView.separated(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20.w,
+                            vertical: 8.h,
                           ),
-                          SizedBox(height: 16.h),
-                          Text(
-                            'No notifications right now',
-                            style: AppTypography.titleMedium.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.textPrimary,
-                            ),
-                          ),
-                          SizedBox(height: 6.h),
-                          Text(
-                            activeCategory == 'All'
-                                ? 'You are completely caught up on all alerts and notices!'
-                                : 'No alerts in the "$activeCategory" category.',
-                            style: AppTypography.bodyMedium.copyWith(
-                              color: AppColors.textSecondary,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                          itemCount: items.length,
+                          separatorBuilder: (context, index) =>
+                              SizedBox(height: 12.h),
+                          itemBuilder: (context, index) {
+                            return FadeSlideIn(
+                              index: index,
+                              child: _buildNotificationCard(
+                                context,
+                                ref,
+                                items[index],
+                                user?.id ?? '',
+                              ),
+                            );
+                          },
+                        ),
                       ),
                     );
-                  }
-
-                  return RefreshIndicator(
-                    onRefresh: () async {
-                      ref.invalidate(notificationsStreamProvider);
-                    },
-                    color: AppColors.primary,
-                    child: ListView.separated(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 20.w,
-                        vertical: 8.h,
-                      ),
-                      itemCount: items.length,
-                      separatorBuilder: (context, index) =>
-                          SizedBox(height: 12.h),
-                      itemBuilder: (context, index) {
-                        return _buildNotificationCard(
-                          context,
-                          ref,
-                          items[index],
-                          user?.id ?? '',
-                        );
-                      },
-                    ),
-                  );
-                },
+                  },
+                ),
               ),
             ),
           ],

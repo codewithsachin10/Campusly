@@ -46,9 +46,11 @@ class _TicketDetailsScreenState extends ConsumerState<TicketDetailsScreen> {
       _messageController.clear();
       _scrollToBottom();
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to send message: $e')),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to send message: $e')),
+        );
+      }
     } finally {
       if (mounted) setState(() => _isSending = false);
     }

@@ -4,6 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/widgets/app_shimmer.dart';
+import '../../../../core/widgets/fade_slide_in.dart';
+import '../../../../core/widgets/animated_state_switcher.dart';
+import '../../../../core/widgets/empty_state.dart';
+import '../../../../core/widgets/error_state.dart';
 import '../../../timetable/presentation/providers/announcements_provider.dart';
 
 class AnnouncementsScreen extends ConsumerStatefulWidget {
@@ -136,73 +141,82 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
 
           // Announcements List
           Expanded(
-            child: announcementsAsync.when(
-              loading: () => Center(child: CircularProgressIndicator()),
-              error: (err, stack) => Center(
-                child: Text(
-                  'Failed to load notices: $err',
-                  style: AppTypography.bodyMedium,
-                ),
-              ),
-              data: (list) {
-                var filtered = list.where((item) {
-                  final queryMatch =
-                      item.title.toLowerCase().contains(
-                        _searchQuery.toLowerCase(),
-                      ) ||
-                      item.message.toLowerCase().contains(
-                        _searchQuery.toLowerCase(),
-                      ) ||
-                      item.author.toLowerCase().contains(
-                        _searchQuery.toLowerCase(),
-                      );
-
-                  if (!queryMatch) return false;
-                  if (_selectedFilter == 'All') return true;
-                  if (_selectedFilter == 'High Priority') {
-                    return item.priority.toLowerCase() == 'high';
-                  }
-                  return item.author.toLowerCase().contains(
-                    _selectedFilter.toLowerCase(),
-                  );
-                }).toList();
-
-                if (filtered.isEmpty) {
-                  return Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          LucideIcons.bellOff,
-                          size: 48,
-                          color: AppColors.textSecondary.withValues(alpha: 0.5),
-                        ),
-                        SizedBox(height: 16.h),
-                        Text(
-                          'No circulars or notices found',
-                          style: AppTypography.titleMedium.copyWith(
-                            color: AppColors.textSecondary,
-                          ),
-                        ),
-                      ],
+            child: AnimatedStateSwitcher(
+              child: announcementsAsync.when(
+                loading: () => KeyedSubtree(
+                  key: const ValueKey('announcements_loading'),
+                  child: AppShimmer(
+                    child: ListView.separated(
+                      padding: EdgeInsets.all(20.w),
+                      itemCount: 4,
+                      separatorBuilder: (ctx, idx) => SizedBox(height: 14.h),
+                      itemBuilder: (context, index) => SkeletonCard(
+                        height: 140.h,
+                        borderRadius: BorderRadius.circular(16.r),
+                      ),
                     ),
-                  );
-                }
+                  ),
+                ),
+                error: (err, stack) => KeyedSubtree(
+                  key: const ValueKey('announcements_error'),
+                  child: ErrorState(
+                    title: 'Failed to load notices',
+                    message: err.toString(),
+                    onRetry: () => ref.refresh(announcementsStreamProvider),
+                  ),
+                ),
+                data: (list) {
+                  var filtered = list.where((item) {
+                    final queryMatch =
+                        item.title.toLowerCase().contains(
+                          _searchQuery.toLowerCase(),
+                        ) ||
+                        item.message.toLowerCase().contains(
+                          _searchQuery.toLowerCase(),
+                        ) ||
+                        item.author.toLowerCase().contains(
+                          _searchQuery.toLowerCase(),
+                        );
 
-                return RefreshIndicator(
-                  onRefresh: () async {
-                    ref.invalidate(announcementsStreamProvider);
-                  },
-                  child: ListView.separated(
-                    padding: EdgeInsets.all(20.w),
-                    itemCount: filtered.length,
-                    separatorBuilder: (ctx, idx) => SizedBox(height: 14.h),
-                    itemBuilder: (context, index) {
-                      final item = filtered[index];
-                      final isHigh = item.priority.toLowerCase() == 'high';
+                    if (!queryMatch) return false;
+                    if (_selectedFilter == 'All') return true;
+                    if (_selectedFilter == 'High Priority') {
+                      return item.priority.toLowerCase() == 'high';
+                    }
+                    return item.author.toLowerCase().contains(
+                      _selectedFilter.toLowerCase(),
+                    );
+                  }).toList();
 
-                      return Container(
-                        padding: EdgeInsets.all(18.w),
+                  if (filtered.isEmpty) {
+                    return KeyedSubtree(
+                      key: const ValueKey('announcements_empty'),
+                      child: const EmptyState(
+                        icon: LucideIcons.bellOff,
+                        title: 'No circulars or notices found',
+                        subtitle: 'Check back later or try adjusting your search filters.',
+                      ),
+                    );
+                  }
+
+                  return KeyedSubtree(
+                    key: const ValueKey('announcements_list'),
+                    child: RefreshIndicator(
+                      onRefresh: () async {
+                        ref.invalidate(announcementsStreamProvider);
+                      },
+                      child: ListView.separated(
+                        padding: EdgeInsets.all(20.w),
+                        itemCount: filtered.length,
+                        separatorBuilder: (ctx, idx) => SizedBox(height: 14.h),
+                        itemBuilder: (context, index) {
+                          final item = filtered[index];
+                          final isHigh = item.priority.toLowerCase() == 'high';
+
+                          return FadeSlideIn(
+                            index: index,
+                            child: Container(
+                              padding: EdgeInsets.all(18.w),
                         decoration: BoxDecoration(
                           color: AppColors.surfaceContainerLowest,
                           borderRadius: BorderRadius.circular(16.r),
@@ -295,13 +309,16 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen> {
                             ),
                           ],
                         ),
-                      );
-                    },
-                  ),
-                );
-              },
-            ),
-          ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    ),
         ],
       ),
     );

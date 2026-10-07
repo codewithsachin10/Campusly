@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/support_ticket.dart';
 import '../models/support_message.dart';
@@ -55,7 +56,7 @@ class SupportRepository {
         });
       }
     } catch (e) {
-      print('Auto-heal failed: $e');
+      debugPrint('Auto-heal failed: $e');
       // If it still fails, the ticket insertion will throw the FK error
     }
 

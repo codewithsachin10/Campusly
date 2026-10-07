@@ -11,6 +11,12 @@ import '../../../auth/domain/models/user_model.dart';
 import '../providers/connections_provider.dart';
 import '../../domain/models/connection_model.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
+import '../../../../core/services/app_haptics.dart';
+import '../../../../core/widgets/app_shimmer.dart';
+import '../../../../core/widgets/fade_slide_in.dart';
+import '../../../../core/widgets/animated_state_switcher.dart';
+import '../../../../core/widgets/empty_state.dart';
 
 class PeopleDirectoryScreen extends ConsumerStatefulWidget {
   const PeopleDirectoryScreen({super.key});
@@ -43,6 +49,7 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
 
   void _onTabChanged() {
     if (!_tabController.indexIsChanging) {
+      AppHaptics.selectionClick();
       _fetchUsers();
     }
   }
@@ -158,43 +165,65 @@ class _PeopleDirectoryScreenState extends ConsumerState<PeopleDirectoryScreen>
             ),
           ),
           Expanded(
-            child: _isLoading
-                ? Center(child: CircularProgressIndicator())
-                : _users.isEmpty
-                ? Center(
-                    child: Text(
-                      'No students found.',
-                      style: AppTypography.textTheme.bodyLarge?.copyWith(
-                        color: AppColors.onSurfaceVariant,
+            child: AnimatedStateSwitcher(
+              child: _isLoading
+                  ? KeyedSubtree(
+                      key: const ValueKey('people_loading'),
+                      child: AppShimmer(
+                        child: ListView.separated(
+                          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                          itemCount: 8,
+                          separatorBuilder: (context, index) =>
+                              SizedBox(height: 10.h),
+                          itemBuilder: (context, index) =>
+                              const SkeletonListTile(),
+                        ),
+                      ),
+                    )
+                  : _users.isEmpty
+                  ? KeyedSubtree(
+                      key: const ValueKey('people_empty'),
+                      child: const EmptyState(
+                        icon: LucideIcons.users,
+                        title: 'No students found',
+                        subtitle: 'Try searching with a different name or checking another tab.',
+                      ),
+                    )
+                  : KeyedSubtree(
+                      key: const ValueKey('people_list'),
+                      child: ListView.separated(
+                        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                        itemCount: _users.length,
+                        separatorBuilder: (context, index) =>
+                            SizedBox(height: 10.h),
+                        itemBuilder: (context, index) {
+                          final student = _users[index];
+
+                          // Determine connection status
+                          ConnectionModel? conn;
+                          connectionsAsync.whenData((list) {
+                            try {
+                              conn = list.firstWhere(
+                                (c) =>
+                                    c.requesterId == student.id ||
+                                    c.receiverId == student.id,
+                              );
+                            } catch (_) {}
+                          });
+
+                          return FadeSlideIn(
+                            index: index,
+                            child: _buildStudentCard(
+                              context,
+                              student,
+                              conn,
+                              currentUserId,
+                            ),
+                          );
+                        },
                       ),
                     ),
-                  )
-                : ListView.builder(
-                    padding: EdgeInsets.symmetric(horizontal: 16.w),
-                    itemCount: _users.length,
-                    itemBuilder: (context, index) {
-                      final student = _users[index];
-
-                      // Determine connection status
-                      ConnectionModel? conn;
-                      connectionsAsync.whenData((list) {
-                        try {
-                          conn = list.firstWhere(
-                            (c) =>
-                                c.requesterId == student.id ||
-                                c.receiverId == student.id,
-                          );
-                        } catch (_) {}
-                      });
-
-                      return _buildStudentCard(
-                        context,
-                        student,
-                        conn,
-                        currentUserId,
-                      );
-                    },
-                  ),
+            ),
           ),
         ],
       ),

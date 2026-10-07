@@ -110,10 +110,10 @@ class _CompleteProfileScreenState extends ConsumerState<CompleteProfileScreen> {
 
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, result) async {
         if (didPop) return;
         final shouldPop = await _onWillPop();
-        if (shouldPop && mounted) {
+        if (shouldPop && context.mounted) {
           context.pop();
         }
       },

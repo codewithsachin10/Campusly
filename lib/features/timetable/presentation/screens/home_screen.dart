@@ -20,6 +20,7 @@ import '../../domain/models/timetable_item.dart';
 import '../../../chat/presentation/widgets/sync_status_indicator.dart';
 import '../../../../core/services/sync_engine_service.dart';
 import '../../../../core/services/presence_service.dart';
+import '../../../../core/services/app_haptics.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -107,9 +108,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       backgroundColor: AppColors.background,
       drawer: CampuslySideDrawer(
         onSelectTab: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
+          if (_selectedIndex != index) {
+            AppHaptics.selectionClick();
+            setState(() {
+              _selectedIndex = index;
+            });
+          }
         },
       ),
       drawerEdgeDragWidth: MediaQuery.of(context).size.width * 0.45,
@@ -240,9 +244,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           // Profile Avatar
           GestureDetector(
             onTap: () {
-              setState(() {
-                _selectedIndex = 4; // Navigate to Profile tab
-              });
+              if (_selectedIndex != 4) {
+                AppHaptics.selectionClick();
+                setState(() {
+                  _selectedIndex = 4; // Navigate to Profile tab
+                });
+              }
             },
             child: Padding(
               padding: EdgeInsets.only(right: 16.0.w),
@@ -285,9 +292,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: NavigationBar(
           selectedIndex: _selectedIndex,
           onDestinationSelected: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
+            if (_selectedIndex != index) {
+              AppHaptics.selectionClick();
+              setState(() {
+                _selectedIndex = index;
+              });
+            }
           },
           backgroundColor: Colors.transparent,
           elevation: 0,

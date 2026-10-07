@@ -313,7 +313,9 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
               ),
             ),
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
+              background: Hero(
+                tag: 'event-banner-${widget.event.id}',
+                child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -403,6 +405,7 @@ class _EventDetailScreenState extends ConsumerState<EventDetailScreen> {
                 ),
               ),
             ),
+          ),
           ),
 
           // Content

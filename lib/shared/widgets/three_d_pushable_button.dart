@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../core/services/app_haptics.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_typography.dart';
 
@@ -68,6 +69,7 @@ class _ThreeDPushableButtonState extends State<ThreeDPushableButton> {
             ? null
             : (_) {
                 setState(() => _isPressed = false);
+                AppHaptics.lightImpact();
                 widget.onPressed?.call();
               },
         onTapCancel: _isDisabled

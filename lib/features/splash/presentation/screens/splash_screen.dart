@@ -48,8 +48,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   }
 
   Future<void> _navigateNext() async {
-    // Show the splash screen for at least 2.5 seconds
-    await Future.delayed(Duration(milliseconds: 2500));
+    final disableMotion =
+        MediaQuery.maybeOf(context)?.disableAnimations ?? false;
+    final delayMs = disableMotion ? 200 : 2200;
+    await Future.delayed(Duration(milliseconds: delayMs));
 
     if (!mounted) return;
 

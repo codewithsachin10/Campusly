@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../domain/models/curriculum_item.dart';
 import '../../domain/models/curriculum_data.dart';
@@ -139,7 +140,7 @@ class CurriculumRepository {
         currentSemester: semester,
       );
     } catch (e) {
-      print('Failed to load curriculum from DB: $e');
+      debugPrint('Failed to load curriculum from DB: $e');
       return null;
     }
   }
