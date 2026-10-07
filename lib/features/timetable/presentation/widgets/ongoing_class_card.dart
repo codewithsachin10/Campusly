@@ -91,84 +91,92 @@ class OngoingClassCard extends ConsumerWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 12.w,
-                            vertical: 6.h,
-                          ),
-                          decoration: BoxDecoration(
-                            color: badgeColor.withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.circular(999.r),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Container(
-                                width: 8.w,
-                                height: 8.h,
-                                decoration: BoxDecoration(
-                                  color: badgeColor,
-                                  shape: BoxShape.circle,
+                        Flexible(
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 10.w,
+                              vertical: 5.h,
+                            ),
+                            decoration: BoxDecoration(
+                              color: badgeColor.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(999.r),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Container(
+                                  width: 8.w,
+                                  height: 8.h,
+                                  decoration: BoxDecoration(
+                                    color: badgeColor,
+                                    shape: BoxShape.circle,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: 8.w),
-                              Text(
-                                ongoing.isBreak
-                                    ? 'ONGOING BREAK'
-                                    : 'ONGOING CLASS',
-                                style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                                  color: badgeColor,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1.0,
+                                SizedBox(width: 6.w),
+                                Flexible(
+                                  child: Text(
+                                    ongoing.isBreak
+                                        ? 'ONGOING BREAK'
+                                        : 'ONGOING CLASS',
+                                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                                      color: badgeColor,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 0.8,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
+                        SizedBox(width: 8.w),
                         Text(
                           'Ends in $minsLeft mins',
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                          style: Theme.of(context).textTheme.labelSmall?.copyWith(
                             color: AppColors.onSurfaceVariant,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 14.h),
                     Text(
                       ongoing.title,
                       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.onSurface,
                         fontWeight: FontWeight.bold,
-                        height: 1.3.h,
+                        height: 1.3,
                       ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    SizedBox(height: 14.h),
+                    SizedBox(height: 12.h),
                     Row(
                       children: [
                         Icon(
                           Icons.schedule_rounded,
-                          size: 18,
+                          size: 16,
                           color: badgeColor,
                         ),
-                        SizedBox(width: 6.w),
+                        SizedBox(width: 4.w),
                         Text(
                           ongoing.timeRange,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.onSurfaceVariant,
                           ),
                         ),
-                        SizedBox(width: 16.w),
+                        SizedBox(width: 12.w),
                         Icon(
                           Icons.location_on_rounded,
-                          size: 18,
+                          size: 16,
                           color: badgeColor,
                         ),
-                        SizedBox(width: 6.w),
+                        SizedBox(width: 4.w),
                         Expanded(
                           child: Text(
                             ongoing.room,
-                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: AppColors.onSurfaceVariant,
                             ),
                             overflow: TextOverflow.ellipsis,

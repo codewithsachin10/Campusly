@@ -125,10 +125,13 @@ class HomeDashboardView extends ConsumerWidget {
                     children: [
                       Text(
                         'Good morning, ${user?.name.trim().isNotEmpty == true ? user!.name.trim().split(' ').first : 'Student'} 👋',
-                        style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                           color: AppColors.onSurface,
                           fontWeight: FontWeight.w800,
+                          fontSize: 26.sp,
                         ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 4.h),
                       Text(
@@ -419,13 +422,17 @@ class HomeDashboardView extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Today's Schedule",
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: AppColors.onSurface,
-                    fontWeight: FontWeight.bold,
+                Expanded(
+                  child: Text(
+                    "Today's Schedule",
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: AppColors.onSurface,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
+                SizedBox(width: 8.w),
                 InkWell(
                   onTap: onNavigateToSchedule,
                   borderRadius: BorderRadius.circular(8.r),

@@ -42,24 +42,27 @@ class HomeSliverAppBar extends ConsumerWidget {
         tooltip: 'More options',
         onPressed: onOpenMore,
       ),
-      title: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            padding: EdgeInsets.all(7.w),
-            decoration: BoxDecoration(
-              color: AppColors.primary,
-              borderRadius: BorderRadius.circular(10.r),
+      titleSpacing: 0,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: EdgeInsets.all(6.w),
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(9.r),
+              ),
+              child: const Icon(
+                Icons.school_rounded,
+                color: AppColors.onPrimary,
+                size: 17,
+              ),
             ),
-            child: const Icon(
-              Icons.school_rounded,
-              color: AppColors.onPrimary,
-              size: 18,
-            ),
-          ),
-          SizedBox(width: 10.w),
-          Flexible(
-            child: Column(
+            SizedBox(width: 8.w),
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -67,7 +70,7 @@ class HomeSliverAppBar extends ConsumerWidget {
                   'Campusly',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.titleLarge?.copyWith(
+                  style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w800,
                     letterSpacing: -0.5,
                   ),
@@ -80,24 +83,28 @@ class HomeSliverAppBar extends ConsumerWidget {
                     style: theme.textTheme.labelSmall?.copyWith(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,
+                      fontSize: 10.sp,
                     ),
                   ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       actions: [
         // Global Sync Status
         const Center(child: SyncStatusIndicator()),
-        SizedBox(width: 4.w),
+        SizedBox(width: 2.w),
 
         // Class switcher button
         IconButton(
           onPressed: () => context.push('/join-class-choice'),
           tooltip: 'Switch or Join Class',
+          visualDensity: VisualDensity.compact,
+          padding: EdgeInsets.zero,
+          constraints: BoxConstraints.tightFor(width: 32.w, height: 32.w),
           icon: Container(
-            padding: EdgeInsets.all(7.w),
+            padding: EdgeInsets.all(6.w),
             decoration: BoxDecoration(
               color: AppColors.primary.withValues(alpha: 0.1),
               shape: BoxShape.circle,
@@ -105,7 +112,7 @@ class HomeSliverAppBar extends ConsumerWidget {
             child: const Icon(
               Icons.swap_horiz_rounded,
               color: AppColors.primary,
-              size: 19,
+              size: 17,
             ),
           ),
         ),
@@ -114,8 +121,11 @@ class HomeSliverAppBar extends ConsumerWidget {
         IconButton(
           onPressed: () => context.push('/inbox'),
           tooltip: 'Chat & Messages',
+          visualDensity: VisualDensity.compact,
+          padding: EdgeInsets.zero,
+          constraints: BoxConstraints.tightFor(width: 32.w, height: 32.w),
           icon: Container(
-            padding: EdgeInsets.all(7.w),
+            padding: EdgeInsets.all(6.w),
             decoration: BoxDecoration(
               color: AppColors.primary.withValues(alpha: 0.1),
               shape: BoxShape.circle,
@@ -123,7 +133,7 @@ class HomeSliverAppBar extends ConsumerWidget {
             child: const Icon(
               Icons.chat_bubble_outline_rounded,
               color: AppColors.primary,
-              size: 19,
+              size: 17,
             ),
           ),
         ),
@@ -132,13 +142,16 @@ class HomeSliverAppBar extends ConsumerWidget {
         IconButton(
           onPressed: () => context.push('/notifications'),
           tooltip: 'Notification Center',
+          visualDensity: VisualDensity.compact,
+          padding: EdgeInsets.zero,
+          constraints: BoxConstraints.tightFor(width: 34.w, height: 34.w),
           icon: Stack(
             clipBehavior: Clip.none,
             children: [
               const Icon(
                 Icons.notifications_none_rounded,
                 color: AppColors.onSurfaceVariant,
-                size: 24,
+                size: 22,
               ),
               if (unreadCount > 0)
                 Positioned(
@@ -172,9 +185,9 @@ class HomeSliverAppBar extends ConsumerWidget {
         GestureDetector(
           onTap: onOpenProfile,
           child: Padding(
-            padding: EdgeInsets.only(right: 14.w),
+            padding: EdgeInsets.only(right: 12.w),
             child: CircleAvatar(
-              radius: 17.r,
+              radius: 15.r,
               backgroundColor: AppColors.primary,
               child: Text(
                 (userName?.trim().isNotEmpty == true)
@@ -183,6 +196,7 @@ class HomeSliverAppBar extends ConsumerWidget {
                 style: theme.textTheme.labelMedium?.copyWith(
                   color: AppColors.onPrimary,
                   fontWeight: FontWeight.bold,
+                  fontSize: 12.sp,
                 ),
               ),
             ),
