@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import '../../data/repositories/support_repository.dart';
 import '../../data/models/support_ticket.dart';
 
@@ -39,13 +40,19 @@ class CreateTicketNotifier extends AsyncNotifier<void> {
   }) async {
     state = const AsyncLoading();
     try {
+      String appVer = '1.1.0';
+      try {
+        final info = await PackageInfo.fromPlatform();
+        appVer = '${info.version}+${info.buildNumber}';
+      } catch (_) {}
+
       await _repository.createTicket(
         subject: subject,
         description: description,
         priority: priority,
         categoryId: categoryId,
-        appVersion: '1.0.0', 
-        platform: 'Flutter',
+        appVersion: appVer, 
+        platform: 'Flutter Android',
       );
       state = const AsyncData(null);
       return true;

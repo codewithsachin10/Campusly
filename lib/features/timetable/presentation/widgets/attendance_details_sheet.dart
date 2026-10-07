@@ -618,7 +618,7 @@ class _AttendanceDetailsSheetState
     required Color color,
   }) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 12.w),
+      padding: EdgeInsets.symmetric(vertical: 14.h, horizontal: 8.w),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16.r),
@@ -637,11 +637,16 @@ class _AttendanceDetailsSheetState
             ),
           ),
           SizedBox(height: 4.h),
-          Text(
-            label,
-            style: AppTypography.labelSmall.copyWith(
-              color: AppColors.textSecondary,
-              fontWeight: FontWeight.w600,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              label,
+              style: AppTypography.labelSmall.copyWith(
+                color: AppColors.textSecondary,
+                fontWeight: FontWeight.w600,
+              ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -658,18 +663,21 @@ class _AttendanceDetailsSheetState
       onTap: onTap,
       borderRadius: BorderRadius.circular(14.r),
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 14.h),
+        padding: EdgeInsets.symmetric(vertical: 14.h, horizontal: 6.w),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: color.withValues(alpha: 0.12),
           borderRadius: BorderRadius.circular(14.r),
           border: Border.all(color: color),
         ),
-        child: Text(
-          title,
-          style: AppTypography.labelMedium.copyWith(
-            color: color,
-            fontWeight: FontWeight.bold,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            title,
+            style: AppTypography.labelMedium.copyWith(
+              color: color,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

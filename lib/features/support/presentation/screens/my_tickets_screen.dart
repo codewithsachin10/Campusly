@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_shadows.dart';
+import '../../../../core/theme/app_typography.dart';
 import '../providers/support_provider.dart';
 import '../widgets/ticket_status_badge.dart';
 import 'ticket_details_screen.dart';
@@ -22,68 +22,64 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final myTicketsAsync = ref.watch(myTicketsProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: theme.colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Campusly',
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-            color: AppColors.primary,
+          'Support Tickets',
+          style: AppTypography.titleLarge.copyWith(
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: [
-          IconButton(
-            icon: Icon(LucideIcons.bell, color: AppColors.primary),
-            onPressed: () {},
-          ),
-        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.0.w, vertical: 16.0.h),
+            padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 12.0.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('My Support Tickets', style: Theme.of(context).textTheme.headlineMedium),
-                SizedBox(height: 8.h),
                 Text(
-                  'Track and manage your requests.',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: AppColors.textSecondary),
+                  'My Support Requests',
+                  style: AppTypography.headlineSmall.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
-                SizedBox(height: 24.h),
+                SizedBox(height: 4.h),
+                Text(
+                  'Real-time status updates from campus staff and admins.',
+                  style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
+                ),
+                SizedBox(height: 16.h),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: theme.colorScheme.surface,
                     borderRadius: BorderRadius.circular(16.r),
-                    boxShadow: AppShadows.cardShadow,
+                    border: Border.all(color: AppColors.border),
                   ),
                   child: TextField(
                     controller: _searchController,
                     onChanged: (val) => setState(() => _searchQuery = val),
+                    style: AppTypography.bodyMedium,
                     decoration: InputDecoration(
-                      hintText: 'Search by ID or subject...',
-                      hintStyle: TextStyle(color: AppColors.primary.withValues(alpha: 0.5)),
-                      prefixIcon: Icon(LucideIcons.search, color: AppColors.primary.withValues(alpha: 0.5)),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.r),
-                        borderSide: BorderSide(color: AppColors.primary.withValues(alpha: 0.2)),
+                      hintText: 'Search by ticket ID or subject...',
+                      hintStyle: AppTypography.bodySmall.copyWith(
+                        color: AppColors.textSecondary.withValues(alpha: 0.6),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.r),
-                        borderSide: BorderSide(color: AppColors.primary.withValues(alpha: 0.2)),
+                      prefixIcon: Icon(
+                        LucideIcons.search,
+                        size: 18.sp,
+                        color: AppColors.textSecondary,
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16.r),
-                        borderSide: const BorderSide(color: AppColors.primary),
-                      ),
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
                     ),
                   ),
                 ),
@@ -100,11 +96,34 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                 }).toList();
 
                 if (filtered.isEmpty) {
-                  return Center(child: Text('No tickets found.'));
+                  return Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(24.w),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(LucideIcons.inbox, size: 40.sp, color: AppColors.textSecondary),
+                          SizedBox(height: 12.h),
+                          Text(
+                            'No tickets found',
+                            style: AppTypography.titleSmall.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 4.h),
+                          Text(
+                            _searchQuery.isNotEmpty
+                                ? 'No requests match "$_searchQuery"'
+                                : 'You have not submitted any support tickets yet.',
+                            style: AppTypography.bodySmall.copyWith(color: AppColors.textSecondary),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
                 }
 
                 return ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.h),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
                   itemCount: filtered.length,
                   itemBuilder: (context, index) {
                     final ticket = filtered[index];
@@ -119,12 +138,12 @@ class _MyTicketsScreenState extends ConsumerState<MyTicketsScreen> {
                           );
                         },
                         child: Container(
-                          margin: EdgeInsets.only(bottom: 16.h),
-                          padding: EdgeInsets.all(20.w),
+                          margin: EdgeInsets.only(bottom: 12.h),
+                          padding: EdgeInsets.all(18.w),
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16.r),
-                            boxShadow: AppShadows.cardShadow,
+                            color: theme.colorScheme.surface,
+                            borderRadius: BorderRadius.circular(18.r),
+                            border: Border.all(color: AppColors.border),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

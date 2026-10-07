@@ -19,6 +19,8 @@ class UpdateState {
   final String? error;
   final AppRelease? latestRelease;
   final String? currentVersion;
+  final int? currentBuildNumber;
+  final DateTime? lastCheckedAt;
   final bool isUpdateAvailable;
   final bool isMandatory;
   final bool downloadInProgress;
@@ -29,6 +31,8 @@ class UpdateState {
     this.error,
     this.latestRelease,
     this.currentVersion,
+    this.currentBuildNumber,
+    this.lastCheckedAt,
     this.isUpdateAvailable = false,
     this.isMandatory = false,
     this.downloadInProgress = false,
@@ -40,6 +44,8 @@ class UpdateState {
     String? error,
     AppRelease? latestRelease,
     String? currentVersion,
+    int? currentBuildNumber,
+    DateTime? lastCheckedAt,
     bool? isUpdateAvailable,
     bool? isMandatory,
     bool? downloadInProgress,
@@ -50,6 +56,8 @@ class UpdateState {
       error: error ?? this.error,
       latestRelease: latestRelease ?? this.latestRelease,
       currentVersion: currentVersion ?? this.currentVersion,
+      currentBuildNumber: currentBuildNumber ?? this.currentBuildNumber,
+      lastCheckedAt: lastCheckedAt ?? this.lastCheckedAt,
       isUpdateAvailable: isUpdateAvailable ?? this.isUpdateAvailable,
       isMandatory: isMandatory ?? this.isMandatory,
       downloadInProgress: downloadInProgress ?? this.downloadInProgress,
@@ -72,6 +80,8 @@ class UpdateNotifier extends Notifier<UpdateState> {
     try {
       final packageInfo = await PackageInfo.fromPlatform();
       final currentVersionStr = packageInfo.version;
+      final currentBuildStr = packageInfo.buildNumber;
+      final currentBuildNum = int.tryParse(currentBuildStr) ?? 0;
       
       final currentSemanticVersion = SemanticVersion.parse(currentVersionStr);
       
@@ -79,29 +89,49 @@ class UpdateNotifier extends Notifier<UpdateState> {
       
       if (latestRelease != null) {
         final latestSemanticVersion = SemanticVersion.parse(latestRelease.version);
-        final isUpdateAvailable = latestSemanticVersion > currentSemanticVersion;
+        
+        bool isUpdateAvailable = false;
+        if (latestSemanticVersion > currentSemanticVersion) {
+          isUpdateAvailable = true;
+        } else if (latestSemanticVersion == currentSemanticVersion) {
+          if (latestRelease.buildNumber > currentBuildNum) {
+            isUpdateAvailable = true;
+          }
+        }
+
+        // Safety check: if current version or build is >= latest, update is not available
+        if (currentSemanticVersion > latestSemanticVersion ||
+            (currentSemanticVersion == latestSemanticVersion && currentBuildNum >= latestRelease.buildNumber)) {
+          isUpdateAvailable = false;
+        }
         
         final minimumSemanticVersion = SemanticVersion.parse(latestRelease.minimumSupportedVersion);
-        final isMandatory = currentSemanticVersion < minimumSemanticVersion || latestRelease.priority == ReleasePriority.critical;
+        final isMandatory = (currentSemanticVersion < minimumSemanticVersion) ||
+            (isUpdateAvailable && latestRelease.priority == ReleasePriority.critical);
 
         state = state.copyWith(
           isLoading: false,
           latestRelease: latestRelease,
           currentVersion: currentVersionStr,
+          currentBuildNumber: currentBuildNum,
           isUpdateAvailable: isUpdateAvailable,
           isMandatory: isMandatory,
+          lastCheckedAt: DateTime.now(),
         );
       } else {
         state = state.copyWith(
           isLoading: false,
           currentVersion: currentVersionStr,
+          currentBuildNumber: currentBuildNum,
           isUpdateAvailable: false,
+          lastCheckedAt: DateTime.now(),
         );
       }
     } catch (e, _) {
       state = state.copyWith(
         isLoading: false,
         error: e.toString(),
+        lastCheckedAt: DateTime.now(),
       );
     }
   }
@@ -123,9 +153,7 @@ class UpdateService {
       final response = await _supabase
           .from('app_releases')
           .select('*, release_notes(*)')
-          .eq('status', 'PUBLISHED')
-          .eq('is_published', true)
-          .eq('channel', 'STABLE')
+          .or('status.eq.PUBLISHED,is_published.eq.true')
           .order('published_at', ascending: false)
           .limit(1)
           .maybeSingle();
@@ -145,8 +173,7 @@ class UpdateService {
       final response = await _supabase
           .from('app_releases')
           .select('*, release_notes(*)')
-          .eq('status', 'PUBLISHED')
-          .eq('is_published', true)
+          .or('status.eq.PUBLISHED,is_published.eq.true')
           .order('published_at', ascending: false)
           .limit(10);
 

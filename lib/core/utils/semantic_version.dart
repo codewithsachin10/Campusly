@@ -14,29 +14,34 @@ class SemanticVersion implements Comparable<SemanticVersion> {
   });
 
   factory SemanticVersion.parse(String versionString) {
-    if (versionString.isEmpty) {
+    final clean = versionString.trim();
+    if (clean.isEmpty) {
       return SemanticVersion();
     }
     
-    // Simple semver regex
+    // Support semver with optional 'v'/'V' prefix and optional build suffix
     final regex = RegExp(
-        r'^v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$');
+        r'^[vV]?(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\.(0|[1-9]\d*))?(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$');
     
-    final match = regex.firstMatch(versionString);
+    final match = regex.firstMatch(clean);
     if (match == null) {
-      // Fallback for simple versions like "1.0" or "2"
-      final parts = versionString.replaceAll('v', '').split('.');
+      // Fallback for simple versions like "1.0", "2", or "1.1.0+2"
+      final withoutV = clean.replaceAll(RegExp(r'^[vV]'), '');
+      final withoutBuild = withoutV.split('+')[0].split('-')[0];
+      final parts = withoutBuild.split('.');
+      final buildPart = clean.contains('+') ? clean.split('+')[1] : null;
       return SemanticVersion(
-        major: parts.isNotEmpty ? int.tryParse(parts[0]) ?? 0 : 0,
-        minor: parts.length > 1 ? int.tryParse(parts[1]) ?? 0 : 0,
-        patch: parts.length > 2 ? int.tryParse(parts[2]) ?? 0 : 0,
+        major: parts.isNotEmpty ? int.tryParse(parts[0].trim()) ?? 0 : 0,
+        minor: parts.length > 1 ? int.tryParse(parts[1].trim()) ?? 0 : 0,
+        patch: parts.length > 2 ? int.tryParse(parts[2].trim()) ?? 0 : 0,
+        buildMetadata: buildPart,
       );
     }
 
     return SemanticVersion(
       major: int.parse(match.group(1)!),
       minor: int.parse(match.group(2)!),
-      patch: int.parse(match.group(3)!),
+      patch: match.group(3) != null ? int.parse(match.group(3)!) : 0,
       preRelease: match.group(4),
       buildMetadata: match.group(5),
     );
@@ -52,9 +57,20 @@ class SemanticVersion implements Comparable<SemanticVersion> {
     if (preRelease == null && other.preRelease != null) return 1;
     if (preRelease != null && other.preRelease == null) return -1;
     
-    // Simple string comparison for prerelease for now
+    // String comparison for prerelease
     if (preRelease != null && other.preRelease != null) {
-      return preRelease!.compareTo(other.preRelease!);
+      final prCompare = preRelease!.compareTo(other.preRelease!);
+      if (prCompare != 0) return prCompare;
+    }
+
+    // Numerical/string buildMetadata comparison fallback for mobile versioning
+    if (buildMetadata != null && other.buildMetadata != null) {
+      final b1 = int.tryParse(buildMetadata!);
+      final b2 = int.tryParse(other.buildMetadata!);
+      if (b1 != null && b2 != null && b1 != b2) {
+        return b1.compareTo(b2);
+      }
+      return buildMetadata!.compareTo(other.buildMetadata!);
     }
     
     return 0;

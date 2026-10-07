@@ -239,14 +239,18 @@ class _AttendanceListContent extends ConsumerWidget {
                         ),
                       ),
                       SizedBox(height: 8.h),
-                      Text(
-                        totalClasses > 0
-                            ? '${overallPercentage.toStringAsFixed(1)}%'
-                            : '0.0%',
-                        style: AppTypography.displayLarge.copyWith(
-                          color: AppColors.onPrimary,
-                          fontSize: 42.sp,
-                          fontWeight: FontWeight.w900,
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          totalClasses > 0
+                              ? '${overallPercentage.toStringAsFixed(1)}%'
+                              : '0.0%',
+                          style: AppTypography.displayLarge.copyWith(
+                            color: AppColors.onPrimary,
+                            fontSize: 38.sp,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       ),
                       SizedBox(height: 8.h),
@@ -257,6 +261,8 @@ class _AttendanceListContent extends ConsumerWidget {
                         style: AppTypography.bodySmall.copyWith(
                           color: AppColors.onPrimary.withValues(alpha: 0.85),
                         ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 12.h),
                       Container(
@@ -268,33 +274,38 @@ class _AttendanceListContent extends ConsumerWidget {
                           color: Colors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(10.r),
                         ),
-                        child: Text(
-                          overallPercentage >= 85.0
-                              ? '🏆 Excellent target completion!'
-                              : overallPercentage >= 75.0
-                              ? '🎉 On track (Above 75% REC criterion)'
-                              : '⚠️ Below 75% REC criterion!',
-                          style: AppTypography.labelSmall.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            overallPercentage >= 85.0
+                                ? '🏆 Excellent target completion!'
+                                : overallPercentage >= 75.0
+                                ? '🎉 On track (Above 75% REC criterion)'
+                                : '⚠️ Below 75% REC criterion!',
+                            style: AppTypography.labelSmall.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            maxLines: 1,
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(width: 16.w),
+                SizedBox(width: 14.w),
                 Stack(
                   alignment: Alignment.center,
                   children: [
                     SizedBox(
-                      width: 90.w,
-                      height: 90.h,
+                      width: 80.w,
+                      height: 80.w,
                       child: CircularProgressIndicator(
                         value: totalClasses > 0
                             ? (overallPercentage / 100).clamp(0.0, 1.0)
                             : 0.0,
-                        strokeWidth: 8,
+                        strokeWidth: 7,
                         backgroundColor: Colors.white.withValues(alpha: 0.15),
                         color: Colors.white,
                         strokeCap: StrokeCap.round,
@@ -303,7 +314,7 @@ class _AttendanceListContent extends ConsumerWidget {
                     Icon(
                       LucideIcons.award,
                       color: Colors.white,
-                      size: 36,
+                      size: 32.sp,
                     ),
                   ],
                 ),
@@ -511,14 +522,20 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                                       fontWeight: FontWeight.w700,
                                       fontSize: 10.sp,
                                     ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                                 SizedBox(width: 8.w),
-                                Text(
-                                  '${att.presentCount}/${att.totalCount} attended',
-                                  style: AppTypography.bodySmall.copyWith(
-                                    color: AppColors.textSecondary,
-                                    fontSize: 11.sp,
+                                Flexible(
+                                  child: Text(
+                                    '${att.presentCount}/${att.totalCount} attended',
+                                    style: AppTypography.bodySmall.copyWith(
+                                      color: AppColors.textSecondary,
+                                      fontSize: 11.sp,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -600,12 +617,16 @@ class _SubjectAttendanceCard extends ConsumerWidget {
                           size: 13,
                         ),
                         SizedBox(width: 6.w),
-                        Text(
-                          bunkStatus,
-                          style: AppTypography.labelSmall.copyWith(
-                            color: bunkBadgeColor,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 11.sp,
+                        Flexible(
+                          child: Text(
+                            bunkStatus,
+                            style: AppTypography.labelSmall.copyWith(
+                              color: bunkBadgeColor,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 11.sp,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],
