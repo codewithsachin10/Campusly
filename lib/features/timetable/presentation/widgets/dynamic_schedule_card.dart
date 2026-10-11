@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/subject_colors.dart';
 import '../../../../core/widgets/pressable_scale.dart';
 import '../../domain/models/timetable_item.dart';
+import '../providers/timetable_provider.dart';
 import '../screens/subject_detail_page.dart';
 
-/// Editorial timeline row replacing the nested heavy cards.
+/// Editorial timeline row replacing nested cards.
 /// Displays tabular time on left with vertical connector, and class block on right.
-class DynamicScheduleCard extends StatelessWidget {
+/// When [isCurrent] is true, watches [liveTickerProvider] to dynamically display
+/// live beacon, "Ends in X mins", and course progress in real-time.
+class DynamicScheduleCard extends ConsumerWidget {
   final TimetableItem item;
   final bool isCompleted;
   final bool isCurrent;
@@ -26,11 +30,29 @@ class DynamicScheduleCard extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final subjectColor = SubjectColors.forSubject(item.subjectCode, isDark: isDark);
     final contentOpacity = isCompleted ? 0.5 : 1.0;
+
+    int minsLeft = 0;
+    int elapsed = 0;
+    int totalDur = 0;
+    double progress = 0.0;
+
+    if (isCurrent) {
+      // Re-evaluate countdown and progress when live ticker updates
+      ref.watch(liveTickerProvider);
+      final now = DateTime.now();
+      final currentMin = now.hour * 60 + now.minute;
+      final startMin = item.startHour * 60 + item.startMinute;
+      final endMin = item.endHour * 60 + item.endMinute;
+      totalDur = (endMin - startMin).clamp(1, 1440);
+      elapsed = (currentMin - startMin).clamp(0, totalDur);
+      minsLeft = (endMin - currentMin).clamp(0, 999);
+      progress = (elapsed / totalDur).clamp(0.0, 1.0);
+    }
 
     return Opacity(
       opacity: contentOpacity,
@@ -128,8 +150,25 @@ class DynamicScheduleCard extends StatelessWidget {
             // Right Column: Class Block
             Expanded(
               child: item.isBreak
-                  ? _buildBreakBlock(context, isDark)
-                  : _buildClassBlock(context, isDark, subjectColor),
+                  ? _buildBreakBlock(
+                      context,
+                      isDark,
+                      isCurrent: isCurrent,
+                      minsLeft: minsLeft,
+                      elapsed: elapsed,
+                      totalDur: totalDur,
+                      progress: progress,
+                    )
+                  : _buildClassBlock(
+                      context,
+                      isDark,
+                      subjectColor,
+                      isCurrent: isCurrent,
+                      minsLeft: minsLeft,
+                      elapsed: elapsed,
+                      totalDur: totalDur,
+                      progress: progress,
+                    ),
             ),
           ],
         ),
@@ -137,49 +176,118 @@ class DynamicScheduleCard extends StatelessWidget {
     );
   }
 
-  Widget _buildBreakBlock(BuildContext context, bool isDark) {
+  Widget _buildBreakBlock(
+    BuildContext context,
+    bool isDark, {
+    required bool isCurrent,
+    required int minsLeft,
+    required int elapsed,
+    required int totalDur,
+    required double progress,
+  }) {
     return Container(
       margin: EdgeInsets.only(bottom: 12.h),
       padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 10.h),
       decoration: BoxDecoration(
-        color: isDark
-            ? AppColors.darkSurfaceContainer.withValues(alpha: 0.35)
-            : AppColors.surfaceContainerLow.withValues(alpha: 0.4),
+        color: isCurrent
+            ? const Color(0xFF26A69A).withValues(alpha: 0.08)
+            : (isDark
+                ? AppColors.darkSurfaceContainer.withValues(alpha: 0.35)
+                : AppColors.surfaceContainerLow.withValues(alpha: 0.4)),
         borderRadius: BorderRadius.circular(14.r),
+        border: isCurrent
+            ? Border.all(
+                color: const Color(0xFF26A69A),
+                width: 1.5,
+              )
+            : null,
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(
-            LucideIcons.coffee,
-            size: 16,
-            color: AppColors.onSurfaceVariant.withValues(alpha: 0.8),
-          ),
-          SizedBox(width: 10.w),
-          Expanded(
-            child: Text(
-              item.title,
-              style: TextStyle(
-                fontSize: 13.sp,
-                fontWeight: FontWeight.w600,
-                color: AppColors.onSurfaceVariant,
+          Row(
+            children: [
+              Icon(
+                LucideIcons.coffee,
+                size: 16,
+                color: isCurrent
+                    ? const Color(0xFF26A69A)
+                    : AppColors.onSurfaceVariant.withValues(alpha: 0.8),
               ),
-              overflow: TextOverflow.ellipsis,
-            ),
+              SizedBox(width: 10.w),
+              Expanded(
+                child: Text(
+                  item.title,
+                  style: TextStyle(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w600,
+                    color: isCurrent
+                        ? (isDark ? Colors.white : AppColors.onSurface)
+                        : AppColors.onSurfaceVariant,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              if (isCurrent) ...[
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 2.h),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF26A69A).withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(6.r),
+                  ),
+                  child: Text(
+                    minsLeft <= 0 ? 'Ending now' : '$minsLeft mins left',
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.w700,
+                      color: const Color(0xFF26A69A),
+                    ),
+                  ),
+                ),
+              ] else ...[
+                Text(
+                  item.timeRange,
+                  style: TextStyle(
+                    fontSize: 11.sp,
+                    color: AppColors.onSurfaceVariant.withValues(alpha: 0.7),
+                  ),
+                ),
+              ],
+            ],
           ),
-          Text(
-            item.timeRange,
-            style: TextStyle(
-              fontSize: 11.sp,
-              color: AppColors.onSurfaceVariant.withValues(alpha: 0.7),
+          if (isCurrent && totalDur > 0) ...[
+            SizedBox(height: 6.h),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999.r),
+              child: LinearProgressIndicator(
+                value: progress,
+                backgroundColor: isDark
+                    ? AppColors.darkSurfaceContainerHighest
+                    : AppColors.surfaceContainerHigh,
+                valueColor: const AlwaysStoppedAnimation<Color>(
+                  Color(0xFF26A69A),
+                ),
+                minHeight: 3.h,
+              ),
             ),
-          ),
+          ],
         ],
       ),
     );
   }
 
-  Widget _buildClassBlock(BuildContext context, bool isDark, Color subjectColor) {
+  Widget _buildClassBlock(
+    BuildContext context,
+    bool isDark,
+    Color subjectColor, {
+    required bool isCurrent,
+    required int minsLeft,
+    required int elapsed,
+    required int totalDur,
+    required double progress,
+  }) {
     final theme = Theme.of(context);
+    final isUrgent = minsLeft <= 5;
 
     return PressableScale(
       onTap: () => SubjectDetailPage.navigate(context, item),
@@ -187,14 +295,16 @@ class DynamicScheduleCard extends StatelessWidget {
         margin: EdgeInsets.only(bottom: 12.h),
         decoration: BoxDecoration(
           color: isCurrent
-              ? AppColors.coral.withValues(alpha: 0.05)
+              ? (isDark
+                  ? AppColors.darkSurfaceContainer.withValues(alpha: 0.7)
+                  : AppColors.coral.withValues(alpha: 0.05))
               : (isDark
                   ? AppColors.darkSurfaceContainer.withValues(alpha: 0.45)
                   : AppColors.surfaceContainerLowest),
           borderRadius: BorderRadius.circular(16.r),
           border: isCurrent
               ? Border.all(
-                  color: AppColors.coral,
+                  color: isUrgent ? AppColors.coral : AppColors.coral.withValues(alpha: 0.8),
                   width: 1.5,
                 )
               : Border.all(
@@ -207,8 +317,8 @@ class DynamicScheduleCard extends StatelessWidget {
               ? [
                   BoxShadow(
                     color: AppColors.coral.withValues(alpha: 0.22),
-                    blurRadius: 12,
-                    offset: const Offset(0, 3),
+                    blurRadius: 14,
+                    offset: const Offset(0, 4),
                   ),
                 ]
               : null,
@@ -238,7 +348,7 @@ class DynamicScheduleCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Header: Title & 'NOW' badge or Category chip
+                      // Header: Title & Badges
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -256,28 +366,96 @@ class DynamicScheduleCard extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 8.w),
-                          if (isCurrent)
+                          if (isCurrent) ...[
+                            // Glowing LIVE NOW pill
                             Container(
                               padding: EdgeInsets.symmetric(
                                 horizontal: 7.w,
-                                vertical: 2.h,
+                                vertical: 3.h,
                               ),
                               decoration: BoxDecoration(
                                 color: AppColors.coral,
                                 borderRadius: BorderRadius.circular(6.r),
                               ),
-                              child: Text(
-                                'NOW',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 9.sp,
-                                  fontWeight: FontWeight.w900,
-                                  letterSpacing: 0.6,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Container(
+                                    width: 5.r,
+                                    height: 5.r,
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 4.w),
+                                  Text(
+                                    'LIVE',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 9.sp,
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 0.6,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 6.w),
+                            // Countdown pill
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 7.w,
+                                vertical: 3.h,
+                              ),
+                              decoration: BoxDecoration(
+                                color: isUrgent
+                                    ? AppColors.coral.withValues(alpha: 0.15)
+                                    : (isDark
+                                        ? AppColors.darkSurface
+                                        : AppColors.surfaceContainerLow),
+                                borderRadius: BorderRadius.circular(6.r),
+                                border: Border.all(
+                                  color: isUrgent
+                                      ? AppColors.coral.withValues(alpha: 0.5)
+                                      : (isDark
+                                          ? AppColors.darkOutlineVariant.withValues(alpha: 0.3)
+                                          : AppColors.outlineVariant.withValues(alpha: 0.3)),
+                                  width: 1,
                                 ),
                               ),
-                            )
-                          else if (item.category.isNotEmpty &&
-                              item.category != 'Lecture')
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    isUrgent
+                                        ? LucideIcons.hourglass
+                                        : LucideIcons.timer,
+                                    size: 10,
+                                    color: isUrgent
+                                        ? AppColors.coral
+                                        : AppColors.onSurfaceVariant,
+                                  ),
+                                  SizedBox(width: 3.w),
+                                  Text(
+                                    minsLeft <= 0
+                                        ? 'Ending now'
+                                        : minsLeft == 1
+                                            ? '1m left'
+                                            : '$minsLeft mins left',
+                                    style: TextStyle(
+                                      color: isUrgent
+                                          ? AppColors.coral
+                                          : AppColors.onSurface,
+                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ] else if (item.category.isNotEmpty &&
+                              item.category != 'Lecture') ...[
                             Container(
                               padding: EdgeInsets.symmetric(
                                 horizontal: 6.w,
@@ -303,6 +481,7 @@ class DynamicScheduleCard extends StatelessWidget {
                                 ),
                               ),
                             ),
+                          ],
                         ],
                       ),
                       SizedBox(height: 6.h),
@@ -364,6 +543,46 @@ class DynamicScheduleCard extends StatelessWidget {
                           ],
                         ],
                       ),
+
+                      // Progress indicator for current ongoing class
+                      if (isCurrent && totalDur > 0) ...[
+                        SizedBox(height: 8.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              '$elapsed of $totalDur mins passed',
+                              style: TextStyle(
+                                fontSize: 10.sp,
+                                color: AppColors.onSurfaceVariant,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text(
+                              '${(progress * 100).toInt()}%',
+                              style: TextStyle(
+                                fontSize: 10.sp,
+                                color: AppColors.coral,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 4.h),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(999.r),
+                          child: LinearProgressIndicator(
+                            value: progress,
+                            backgroundColor: isDark
+                                ? AppColors.darkSurfaceContainerHighest
+                                : AppColors.surfaceContainerHigh,
+                            valueColor: const AlwaysStoppedAnimation<Color>(
+                              AppColors.coral,
+                            ),
+                            minHeight: 4.h,
+                          ),
+                        ),
+                      ],
                     ],
                   ),
                 ),

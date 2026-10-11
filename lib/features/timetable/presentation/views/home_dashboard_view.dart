@@ -17,6 +17,7 @@ import '../../../../core/widgets/fade_slide_in.dart';
 import '../../../events/presentation/widgets/events_promo_banner.dart';
 import '../../../class_join/presentation/providers/class_provider.dart';
 import '../../domain/models/announcement_model.dart';
+import '../../domain/models/timetable_item.dart';
 import '../widgets/home_app_bar.dart';
 import '../widgets/more_bottom_sheet.dart';
 
@@ -272,14 +273,14 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ),
               SizedBox(height: 24.h),
-                   // Ongoing Class Card (Most Prominent)
-            if (!isWeekendOrEmpty) ...[
+            ] else ...[
+              // Ongoing Class Card (Most Prominent)
               const OngoingClassCard(),
               SizedBox(height: 16.h),
 
               // Next Class Timer Box
               NextClassCard(hasTodayItems: todayItems.isNotEmpty),
-            ],
+              SizedBox(height: 16.h),
 
               // Overview Section (2 Horizontal Cards)
               Row(
@@ -504,27 +505,7 @@ class HomeDashboardView extends ConsumerWidget {
                 ),
               ),
             ] else ...[
-              ...todayItems.asMap().entries.map((entry) {
-                final index = entry.key;
-                final item = entry.value;
-                final currentMin = now.hour * 60 + now.minute;
-                final startMin = item.startHour * 60 + item.startMinute;
-                final endMin = item.endHour * 60 + item.endMinute;
-                final isCompleted = currentMin >= endMin;
-                final isCurrent = currentMin >= startMin && currentMin < endMin;
-
-                return Padding(
-                  padding: EdgeInsets.only(bottom: 12.0.h),
-                  child: FadeSlideIn(
-                    index: index,
-                    child: DynamicScheduleCard(
-                      item: item,
-                      isCompleted: isCompleted,
-                      isCurrent: isCurrent,
-                    ),
-                  ),
-                );
-              }),
+              _TodayScheduleTimelineList(todayItems: todayItems),
             ],
             ],
             SizedBox(height: 100.h),
@@ -1008,3 +989,45 @@ class HomeDashboardView extends ConsumerWidget {
   );
 }
 }
+
+/// Isolated timeline list that watches [liveTickerProvider] so active period boundaries
+/// update automatically across minute ticks without full dashboard rebuilds.
+class _TodayScheduleTimelineList extends ConsumerWidget {
+  final List<TimetableItem> todayItems;
+
+  const _TodayScheduleTimelineList({required this.todayItems});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.watch(liveTickerProvider);
+    final now = DateTime.now();
+    final currentMin = now.hour * 60 + now.minute;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: todayItems.asMap().entries.map((entry) {
+        final index = entry.key;
+        final item = entry.value;
+        final startMin = item.startHour * 60 + item.startMinute;
+        final endMin = item.endHour * 60 + item.endMinute;
+        final isCompleted = currentMin >= endMin;
+        final isCurrent = currentMin >= startMin && currentMin < endMin;
+
+        return Padding(
+          padding: EdgeInsets.only(bottom: 12.0.h),
+          child: FadeSlideIn(
+            index: index,
+            child: DynamicScheduleCard(
+              item: item,
+              isCompleted: isCompleted,
+              isCurrent: isCurrent,
+              isFirst: index == 0,
+              isLast: index == todayItems.length - 1,
+            ),
+          ),
+        );
+      }).toList(),
+    );
+  }
+}
+

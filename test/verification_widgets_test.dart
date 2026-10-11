@@ -4,6 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:campusly/core/widgets/lazy_indexed_stack.dart';
 import 'package:campusly/features/timetable/presentation/widgets/countdown_text.dart';
+import 'package:campusly/features/timetable/presentation/widgets/ongoing_class_card.dart';
+import 'package:campusly/features/timetable/presentation/widgets/dynamic_schedule_card.dart';
+import 'package:campusly/features/timetable/presentation/providers/timetable_provider.dart';
 import 'package:campusly/features/timetable/domain/models/timetable_item.dart';
 import 'package:campusly/core/theme/app_theme.dart';
 
@@ -274,6 +277,90 @@ void main() {
         find.textContaining('10:00 AM'),
         findsOneWidget,
       );
+    });
+
+    testWidgets('OngoingClassCard renders ongoing class details with countdown and progress', (tester) async {
+      final now = DateTime.now();
+      final startHour = now.hour;
+      final startMinute = (now.minute - 10).clamp(0, 59);
+      final endHour = now.hour < 23 ? now.hour + 1 : 23;
+      final endMinute = now.hour < 23 ? now.minute : 59;
+
+      final ongoingItem = TimetableItem(
+        id: 'item-1',
+        title: 'Advanced Computer Networks',
+        shortTitle: 'ACN',
+        dayOfWeek: 'mon',
+        startTime: '08:00 AM',
+        endTime: '11:59 PM',
+        startHour: startHour,
+        startMinute: startMinute,
+        endHour: endHour,
+        endMinute: endMinute,
+        category: 'Lecture',
+        room: 'Lab 402',
+        instructor: 'Dr. Alan Turing',
+        subjectCode: 'CS401',
+      );
+
+      await tester.pumpWidget(
+        _wrapWithApp(
+          const OngoingClassCard(),
+          overrides: [
+            ongoingClassProvider.overrideWith((ref) => Future.value(ongoingItem)),
+          ],
+        ),
+      );
+      await tester.pump();
+
+      expect(find.text('CLASS IN PROGRESS'), findsOneWidget);
+      expect(find.text('Advanced Computer Networks'), findsOneWidget);
+      expect(find.text('Lab 402'), findsOneWidget);
+      expect(find.text('Dr. Alan Turing'), findsOneWidget);
+      expect(find.text('CS401'), findsOneWidget);
+      expect(find.textContaining('left'), findsOneWidget);
+    });
+
+    testWidgets('DynamicScheduleCard renders live beacon, countdown, and progress when isCurrent is true', (tester) async {
+      final now = DateTime.now();
+      final startHour = now.hour;
+      final startMinute = (now.minute - 10).clamp(0, 59);
+      final endHour = now.hour < 23 ? now.hour + 1 : 23;
+      final endMinute = now.hour < 23 ? now.minute : 59;
+
+      final currentItem = TimetableItem(
+        id: 'item-2',
+        title: 'Operating Systems',
+        shortTitle: 'OS',
+        dayOfWeek: 'mon',
+        startTime: '09:00 AM',
+        endTime: '10:00 AM',
+        startHour: startHour,
+        startMinute: startMinute,
+        endHour: endHour,
+        endMinute: endMinute,
+        category: 'Lecture',
+        room: 'LH-101',
+        instructor: 'Prof. Dennis Ritchie',
+        subjectCode: 'CS302',
+      );
+
+      await tester.pumpWidget(
+        _wrapWithApp(
+          DynamicScheduleCard(
+            item: currentItem,
+            isCurrent: true,
+            isCompleted: false,
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(find.text('Operating Systems'), findsOneWidget);
+      expect(find.text('LIVE'), findsOneWidget);
+      expect(find.textContaining('left'), findsOneWidget);
+      expect(find.text('LH-101'), findsOneWidget);
+      expect(find.text('Prof. Dennis Ritchie'), findsOneWidget);
     });
   });
 }

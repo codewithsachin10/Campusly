@@ -50,38 +50,33 @@ final weeklyScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   return repository.getWeeklySchedule(currentClass?.code ?? "");
 });
 
+String _dayStringFromWeekday(int weekday) {
+  switch (weekday) {
+    case DateTime.monday:
+      return 'mon';
+    case DateTime.tuesday:
+      return 'tue';
+    case DateTime.wednesday:
+      return 'wed';
+    case DateTime.thursday:
+      return 'thu';
+    case DateTime.friday:
+      return 'fri';
+    case DateTime.saturday:
+      return 'sat';
+    case DateTime.sunday:
+      return 'sun';
+    default:
+      return 'mon';
+  }
+}
+
 // Daily schedule for strictly TODAY (`DateTime.now().weekday`)
 final todayScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   final currentClass = ref.watch(currentClassProvider);
   final repository = ref.watch(timetableRepositoryProvider);
   final now = DateTime.now();
-  String todayStr;
-  switch (now.weekday) {
-    case DateTime.monday:
-      todayStr = 'mon';
-      break;
-    case DateTime.tuesday:
-      todayStr = 'tue';
-      break;
-    case DateTime.wednesday:
-      todayStr = 'wed';
-      break;
-    case DateTime.thursday:
-      todayStr = 'thu';
-      break;
-    case DateTime.friday:
-      todayStr = 'fri';
-      break;
-    case DateTime.saturday:
-      todayStr = 'sat';
-      break;
-    case DateTime.sunday:
-      todayStr = 'sun';
-      break;
-    default:
-      todayStr = 'mon';
-      break;
-  }
+  final todayStr = _dayStringFromWeekday(now.weekday);
   return repository.getDailySchedule(currentClass?.code ?? "", todayStr);
 });
 
@@ -93,18 +88,46 @@ final dailyScheduleProvider = FutureProvider<List<TimetableItem>>((ref) async {
   return repository.getDailySchedule(currentClass?.code ?? "", selectedDay);
 });
 
-// Ongoing Class
+// Ongoing Class - reactively recalculates with liveTickerProvider
 final ongoingClassProvider = FutureProvider<TimetableItem?>((ref) async {
+  // Watch live ticker so ongoing status recalculates reactively as time advances
+  ref.watch(liveTickerProvider);
   final currentClass = ref.watch(currentClassProvider);
+  if (currentClass == null) return null;
+
+  // Check if today's schedule is cached in memory to compute synchronously
+  final todayAsync = ref.watch(todayScheduleProvider);
+  if (todayAsync.hasValue) {
+    final now = DateTime.now();
+    final currentMinutes = now.hour * 60 + now.minute;
+    final todayStr = _dayStringFromWeekday(now.weekday);
+    final todayItems = todayAsync.value!
+        .where((i) => i.dayOfWeek.toLowerCase() == todayStr)
+        .toList();
+
+    for (final item in todayItems) {
+      final startMin = item.startHour * 60 + item.startMinute;
+      final endMin = item.endHour * 60 + item.endMinute;
+      if (currentMinutes >= startMin && currentMinutes < endMin) {
+        return item;
+      }
+    }
+    return null;
+  }
+
   final repository = ref.watch(timetableRepositoryProvider);
-  return repository.getOngoingItem(currentClass?.code ?? "");
+  return repository.getOngoingItem(currentClass.code);
 });
 
-// Next Class
+// Next Class - reactively recalculates with liveTickerProvider
 final nextClassProvider = FutureProvider<TimetableItem?>((ref) async {
+  // Watch live ticker so next class re-evaluates reactively when time advances
+  ref.watch(liveTickerProvider);
   final currentClass = ref.watch(currentClassProvider);
+  if (currentClass == null) return null;
+
   final repository = ref.watch(timetableRepositoryProvider);
-  return repository.getNextItem(currentClass?.code ?? "");
+  return repository.getNextItem(currentClass.code);
 });
 
 // Snapshot of ongoing + next class for debounced widget updates
